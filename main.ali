@@ -1,0 +1,76 @@
+V "GNAT Lib v2015"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=pentiumpro
+P SS ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		4949a43b NE OO SU IL
+W client_logic%s	client_logic.adb	client_logic.ali
+W client_ui%s		client_ui.adb		client_ui.ali
+W common_server_communicator%s  common_server_communicator.adb  common_server_communicator.ali
+W communication_objects%s  communication_objects.adb  communication_objects.ali
+W communication_objects.messages%s  communication_objects-messages.adb  communication_objects-messages.ali
+W communication_objects.messages.connect%s  communication_objects-messages-connect.adb  communication_objects-messages-connect.ali
+W communication_objects.messages.disconnect%s  communication_objects-messages-disconnect.adb  communication_objects-messages-disconnect.ali
+W communication_objects.messages.refuse%s  communication_objects-messages-refuse.adb  communication_objects-messages-refuse.ali
+W communication_objects.messages.userlist%s  communication_objects-messages-userlist.adb  communication_objects-messages-userlist.ali
+W server_logic%s	server_logic.adb	server_logic.ali
+W server_ui%s		server_ui.adb		server_ui.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D client_logic.ads	20160321133608 b763ed25 client_logic%s
+D client_ui.ads		20160321145154 80f42b28 client_ui%s
+D common_server_communicator.ads  20160321140332 aaa6cdef common_server_communicator%s
+D communication_objects.ads  20160321143206 c09b249f communication_objects%s
+D communication_objects-messages.ads  20160321144336 458de077 communication_objects.messages%s
+D communication_objects-messages-connect.ads  20160321144448 49ed9388 communication_objects.messages.connect%s
+D communication_objects-messages-disconnect.ads  20160321144822 8e4f47dc communication_objects.messages.disconnect%s
+D communication_objects-messages-refuse.ads  20160321144902 b9ee6481 communication_objects.messages.refuse%s
+D communication_objects-messages-userlist.ads  20160321144958 01b2df3b communication_objects.messages.userlist%s
+D main.adb		20160321145140 525645bb main%b
+D server_logic.ads	20160321134422 896a35dc server_logic%s
+D server_ui.ads		20160321142100 70bab050 server_ui%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+X 6 client_logic.ads
+1K9*client_logic 5e17 15|2w6
+X 7 client_ui.ads
+1K9*client_ui 5e14 15|4w6
+X 8 common_server_communicator.ads
+1K9*Common_Server_Communicator 5e31 15|1w6
+X 9 communication_objects.ads
+1K9*Communication_Objects 13e26 15|6r6 7r6 8r6 9r6
+X 10 communication_objects-messages.ads
+1K31*Messages 12e35 15|6r28 7r28 8r28 9r28
+X 11 communication_objects-messages-connect.ads
+1K40*Connect 12e46 15|7w37
+X 12 communication_objects-messages-disconnect.ads
+1K40*Disconnect 12e49 15|6w37
+X 13 communication_objects-messages-refuse.ads
+1K40*Refuse 12e45 15|8w37
+X 14 communication_objects-messages-userlist.ads
+1K40*Userlist 12e47 15|9w37
+X 15 main.adb
+11U11*main 11b11 14l5 14t9
+X 16 server_logic.ads
+1K9*Server_Logic 15|3w6 16|3e17
+X 17 server_ui.ads
+1K9*Server_Ui 15|5w6 17|3e14
+

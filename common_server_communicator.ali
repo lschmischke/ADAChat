@@ -1,0 +1,27 @@
+V "GNAT Lib v2015"
+A -gnatA
+A -mtune=generic
+A -march=pentiumpro
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U common_server_communicator%b  common_server_communicator.adb  41e90f9c NE OO PK
+
+U common_server_communicator%s  common_server_communicator.ads  aaa6cdef EE NE OO PK
+
+D common_server_communicator.ads  20160321140332 aaa6cdef common_server_communicator%s
+D common_server_communicator.adb  20160321142436 eb4fc273 common_server_communicator%b
+D system.ads		20150518132150 f4ce8c3a system%s
+X 1 common_server_communicator.ads
+1K9*Common_Server_Communicator 5l5 5e31 2|1b14 5l5 5t31
+2U14*showMessage
+3U14*setConnectionStatus
+4U14*updateChatParticipants
+X 2 common_server_communicator.adb
+2U14 showMessage
+3U14 setConnectionStatus
+4U14 updateChatParticipants
+
