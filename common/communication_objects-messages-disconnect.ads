@@ -1,12 +1,11 @@
+with Unbounded_String; use Unbounded_String;
+
 package Communication_Objects.Messages.Disconnect is
+
     procedure dummy;
 
-   type Disconnect is tagged private;
+   type Disconnect is new Communication_Objects.Messages.Message with record
+	Username: Unbounded_String;
+   end record;
 
-private
-
-type Disconnect is tagged
-record
-	x: Integer;
-end record;
    end Communication_Objects.Messages.Disconnect;

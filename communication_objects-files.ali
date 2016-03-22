@@ -1,0 +1,59 @@
+V "GNAT Lib v2015"
+A -gnatA
+A -mtune=generic
+A -march=pentiumpro
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U communication_objects.files%b  communication_objects-files.adb  b3d7b33d NE OO PK
+W communication_objects%s  communication_objects.adb  communication_objects.ali
+
+U communication_objects.files%s  communication_objects-files.ads  efe9a85d EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W communication_objects%s  communication_objects.adb  communication_objects.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D communication_objects.ads  20160322093734 52e997d3 communication_objects%s
+D communication_objects-files.ads  20160322104630 bd003f8e communication_objects.files%s
+D communication_objects-files.adb  20160322104652 0ed78cb3 communication_objects.files%b
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+X 6 communication_objects.ads
+1K9*Communication_Objects 9e26 7|1r9 8r8 8|1r14 5r8
+3H9*Communication_Object 5e14 7|2r21
+X 7 communication_objects-files.ads
+1K31*Files 6|1k9 7|8l30 8e35 8|1b36 5l30 5t35
+2R9*File<6|3R9> 4e14
+3i9*f{integer}
+6U14*dummy
+X 8 communication_objects-files.adb
+3U14 dummy
+

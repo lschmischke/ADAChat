@@ -1,12 +1,19 @@
+with Data_Types; use Data_Types;
+
 package Communication_Objects.Messages.Userlist is
-    procedure dummy;
 
-   type Userlist is tagged private;
+   type List is array (Integer) of User;
 
-private
+   type Userlist is new Communication_Objects.Messages.Message with record
 
-type Userlist is tagged
-record
-	x: Integer;
-end record;
-   end Communication_Objects.Messages.Userlist;
+        Users : List;
+
+   end record;
+
+   function getUsers(This : in Userlist) return List;
+
+   procedure addUser(This : in Userlist; User : in User);
+
+   procedure deleteUser(This : in Userlist; User : in User);
+
+end Communication_Objects.Messages.Userlist;

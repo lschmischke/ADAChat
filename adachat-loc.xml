@@ -1,408 +1,814 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_file>
+  <Project >
+    <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >C:\Users\Sebastian\src_ada\hello.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\object.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\object.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 6">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 57" line=" 9">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 6">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 6">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 8">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circle.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circle.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 6">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 6">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 3">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 8">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects-circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects-circles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 8">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\objects-circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 12">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 8">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 12">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 12">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 9">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 1">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 5">
+      <vfs_project  />
+      <vfs_file >E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 7">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 11">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 8">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 7">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 6">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 9">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 7">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 5">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 7">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 5">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 48" line=" 6">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 5">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 6">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 4">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 6">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 7">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 6">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 9">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 4">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 4">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 45" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 3">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 6">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project >E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file >E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.ads</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
+      <vfs_project />
+      <vfs_file>C:\Users\Sebastian\src_ada\hello.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\object.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\object.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 6" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 5" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 57" line=" 9" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 6" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 5" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 6" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 8" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circle.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\message.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circle.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 1" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 6" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 6" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 5" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 1" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 5" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 3" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 5" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 8" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects-circles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 1" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects-circles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 8" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\objects-circles.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.adb</vfs_file>
+    <file_marker column=" 8" line=" 12" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
+    <file_marker column=" 9" line=" 8" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.adb</vfs_file>
+    <file_marker column=" 3" line=" 12" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 17" line=" 3" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.adb</vfs_file>
+    <file_marker column=" 11" line=" 5" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads</vfs_file>
+    <file_marker column=" 3" line=" 12" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.adb</vfs_file>
+    <file_marker column=" 4" line=" 9" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.adb</vfs_file>
+    <file_marker column=" 12" line=" 5" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.adb</vfs_file>
+    <file_marker column=" 43" line=" 1" >
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
     <file_marker column=" 31" line=" 5" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.adb</vfs_file>
+      <vfs_project />
+      <vfs_file>E:\Development\Ada\Block_Projekt\anderer_scheiss\main.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\client_logic.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 4" line=" 3" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\client_ui.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\message.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\message.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\message.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 53" line=" 3" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\File.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\message.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\message.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\message.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 3" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\file.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\files.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\files.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 4" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\message.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 4" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 9" line=" 5" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 10" >
+    <file_marker column=" 1" line=" 9" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 38" line=" 9" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 14" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 11" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 3" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 2" >
+    <file_marker column=" 6" line=" 8" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 9" line=" 1" >
+    <file_marker column=" 15" line=" 7" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 6" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 9" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 7" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 5" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 7" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_object-message.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 3" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-message.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-message.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-message.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 5" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-message.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 6" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 3" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 5" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 6" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 4" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 6" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 7" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 6" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 9" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 3" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
     </file_marker>
@@ -410,21 +816,105 @@
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 53" line=" 3" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 3" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 4" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 4" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-message.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 3" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-message.adb</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 3" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 45" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 3" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 6" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\common_server_communicator.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
@@ -436,134 +926,6 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-message.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 46" line=" 12" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 13" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 12" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 11" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 11" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 45" line=" 9" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 17" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 17" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 6" line=" 9" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 44" line=" 9" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 13" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 56" line=" 5" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
@@ -572,141 +934,9 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 2" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 2" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 55" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 13" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 2" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 2" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 2" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 5" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 49" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 49" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 4" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 8" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-connect.ads</vfs_file>
     </file_marker>
@@ -718,15 +948,7 @@
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 13" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-disconnect.ads</vfs_file>
-    </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 3" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.adb</vfs_file>
     </file_marker>
@@ -734,15 +956,7 @@
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 32" line=" 12" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
-    </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 47" line=" 2" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
     </file_marker>
@@ -752,55 +966,107 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 48" line=" 8" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 5" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 5" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\client_ui.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 36" line=" 7" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 2" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 4" >
-      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 5" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 5" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 9" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 5" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 5" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 5" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 1" line=" 6" >
+    <file_marker column=" 28" line=" 5" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
-      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads</vfs_file>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-userlist.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 5" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages-refuse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads</vfs_file>
     </file_marker>
   </Project>
   <Project >
