@@ -1,9 +1,15 @@
-package Concrete_Client_Logic is
+with Server_Logic; use Server_Logic;
 
-   type Concrete_Server is new Server_Interface;
+package Concrete_Server_Logic is
 
-   procedure dummy1();
-   procedure dummy2();
-   procedure dummy3();
+   type Concrete_Server is new Server_Interface with record
+      null;
+   end record;
 
-end Concrete_Client_Logic;
+   procedure dummy1(This : in out Server_Interface);
+
+   procedure dummy2(This : in out Server_Interface);
+
+   procedure dummy3(This : in out Server_Interface);
+
+end Concrete_Server_Logic;

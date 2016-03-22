@@ -1,4 +1,4 @@
-with Unbounded_String; use Unbounded_String;
+with Ada.Strings.Unbounded;
 
 package Communication_Objects.Messages.Connect is
 

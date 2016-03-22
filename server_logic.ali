@@ -5,19 +5,44 @@ A -march=pentiumpro
 P ZX
 
 RN
+RV NO_DISPATCHING_CALLS
+RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U server_logic%b	server_logic.adb	305e873a NE OO PK
+U server_logic%s	server_logic.ads	508ced14 EE OO PK
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W communication_objects%s  communication_objects.ads  communication_objects.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
-U server_logic%s	server_logic.ads	896a35dc EE NE OO PK
-
-D server_logic.ads	20160321134422 896a35dc server_logic%s
-D server_logic.adb	20160321134414 b934b2e6 server_logic%b
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D communication_objects.ads  20160322203634 81548b0d communication_objects%s
+D server_logic.ads	20160322204346 d1d86619 server_logic%s
 D system.ads		20150518132150 f4ce8c3a system%s
-X 1 server_logic.ads
-1K9*Server_Logic 3l5 3e17 2|1b14 3l5 3t17
-2U14*dummy
-X 2 server_logic.adb
-2U14 dummy
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+X 6 communication_objects.ads
+1K9*Communication_Objects 5e26 7|1w6 1r33
+X 7 server_logic.ads
+3K9*Server_Logic 11l5 11e17
+5h9*Server_Interface 7p14 7r35 8p14 8r35 9p14 9r35
+7x14*dummy1 7=21
+7r21 This{5R9}
+8x14*dummy2 8=21
+8r21 This{5R9}
+9x14*dummy3 9=21
+9r21 This{5R9}
 
