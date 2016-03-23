@@ -1,6 +1,6 @@
 package body Communication_Objects.Messages.Userlist is
 
-   function getUsers(this : in Userlist) return Users is
+   function getUsers(This : in Userlist) return UserRecord is
    begin
       return This.UList;
    end getUsers;

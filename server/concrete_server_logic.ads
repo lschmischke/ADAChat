@@ -6,10 +6,10 @@ package Concrete_Server_Logic is
       null;
    end record;
 
-   procedure dummy1(This : in out Server_Interface);
+   overriding procedure dummy1(This : in out Server_Interface);
 
-   procedure dummy2(This : in out Server_Interface);
+   overriding procedure dummy2(This : in out Server_Interface);
 
-   procedure dummy3(This : in out Server_Interface);
+   overriding procedure dummy3(This : in out Server_Interface);
 
 end Concrete_Server_Logic;
