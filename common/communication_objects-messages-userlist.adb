@@ -1,16 +1,16 @@
 package body Communication_Objects.Messages.Userlist is
 
-   function getUsers(this : in Userlist) return List is
+   function getUsers(This : in Userlist) return UserRecord is
    begin
-      return This.Users;
+      return This.UList;
    end getUsers;
 
-   procedure addUser(This : in Userlist; User : in User) is
+   procedure addUser(This : in Userlist; U : in User) is
    begin
       null;
    end addUser;
 
-   procedure deleteUser(This : in Userlist; User : in User) is
+   procedure deleteUser(This : in Userlist; U : in User) is
    begin
       null;
    end deleteUser;

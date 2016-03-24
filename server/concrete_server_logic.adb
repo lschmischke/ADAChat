@@ -1,7 +1,10 @@
-package body Concrete_Client_Logic is
+package body Concrete_Server_Logic is
 
-   procedure dummy1() is null;
-   procedure dummy2() is null;
-   procedure dummy3() is null;
+  overriding procedure dummy1(This : in out Server_Interface) is null;
 
-end Concrete_Client_Logic;
+
+   procedure dummy2(This : in out Server_Interface) is null;
+
+   procedure dummy3(This : in out Server_Interface) is null;
+
+end Concrete_Server_Logic;

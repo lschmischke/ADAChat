@@ -2,7 +2,9 @@ with Client_Logic; use Client_Logic;
 
 package Concrete_Client_Logic is
 
-   type Concrete_Client is new Client_Interface;
+   type Concrete_Client is new Client_Interface with record
+      null;
+      end record;
 
    procedure connectToServer(This : in out Client_Interface);
    procedure disconnectFromServer(This : in out Client_Interface);

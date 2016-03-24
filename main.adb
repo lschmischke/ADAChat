@@ -1,4 +1,3 @@
-with Common_Server_Communicator;
 with client_logic;
 with Server_Logic;
 with client_ui;
@@ -9,8 +8,9 @@ with Communication_Objects.Messages.Disconnect;
 with Communication_Objects.Messages.Connect;
 with Communication_Objects.Messages.Refuse;
 with Communication_Objects.Messages.Userlist;
+with Ada.Strings.Unbounded;
 
 procedure main is
 begin
-   null;
+  null;
 end main;
