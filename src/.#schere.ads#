@@ -1,0 +1,20 @@
+with Ada.Text_IO; use Ada.Text_IO;
+
+package sspPackage is
+
+   Type schere is new gameMain.gameParent is record
+
+   end record;
+
+
+   Type choices is (Rock, Paper, Scissors);
+   package Choices_IO is new Enumeration_IO(choices);
+
+
+
+
+   procedure startGame;
+   --procedure setPlayerChoice(playerNumber : in Natural; choice : in choices);
+   --procedure evaluateWinner;
+
+end sspPackage;

@@ -1,0 +1,21 @@
+V "GNAT Lib v2015"
+A -gnatA
+A -mtune=generic
+A -march=pentiumpro
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U match%s		match.ads		5c076279 NE OO PK
+
+D match.ads		20160322112242 5c076279 match%s
+D system.ads		20150518132150 f4ce8c3a system%s
+X 1 match.ads
+1K9*Match 9l5 9e10
+2R9*Match 7e14
+3i7*matchID{natural}
+4i7*gameID{natural}
+5i7*playerAID{natural}
+6i7*playerBID{natural}
+

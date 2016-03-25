@@ -1,0 +1,89 @@
+V "GNAT Lib v2015"
+A -gnatA
+A -mtune=generic
+A -march=pentiumpro
+P ZX
+
+RN
+RV NO_ENUMERATION_MAPS
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U schere%b		schere.adb		044b98bd NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.concat_5%s	s-conca5.adb		s-conca5.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+
+U schere%s		schere.ads		e92cb3d7 EE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.enumeration_aux%s  a-tienau.adb	a-tienau.ali
+W ada.text_io.enumeration_io%s
+W system%s		system.ads		system.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W system.val_enum%s	s-valenu.adb		s-valenu.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-inteio.ads		20150518132148 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-tienau.ads		20150518132148 6a9c157b ada.text_io.enumeration_aux%s
+D a-tienio.ads		20150518132148 fc618ae6 ada.text_io.enumeration_io%s
+D a-tienio.adb		20150518132148 c9e6b5af ada.text_io.enumeration_io%b
+D a-tiinio.ads		20150518132148 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D schere.ads		20160322081946 d1414603 schere%s
+D schere.adb		20160322082740 1b2ca2ce schere%b
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-conca5.ads		20150518132148 875e432e system.concat_5%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-imenne.ads		20150518132148 614c06c0 system.img_enum_new%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-valenu.ads		20150518132150 bb1a4295 system.val_enum%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 15|1r6 1r23 16|1r6 1r23 2r6 2r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[11|46] 16|2w10 2r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 15|1w10 1r27 16|1w10 1r27
+166U14*New_Line 16|41s10
+263U14*Put_Line 16|18s7 20s10 21s10 25s10 26s10 31s13 33s13 36s13 38s13
+X 9 a-tienio.ads
+26k21*Enumeration_IO 55e31 15|7r30
+32U14*Get 16|23s21[15|7] 27s21[15|7]
+40U14*Put 16|14s18[15|7]
+X 15 schere.ads
+3K9*schere 16l5 16e11 16|5b14 48l5 48t11
+5E9*choices 5e43 6r8 7r45 16|8r18 9r18 14r22 32r28 32r61 33r45 33r95 35r16
+. 36r45 36r95 38r45 38r95
+5n21*Rock{5E9} 6r22
+5n27*Paper{5E9} 6r33
+5n34*Scissors{5E9} 6r45
+7K12*Choices_IO[9|26] 16|14r7 23r10 27r10
+12U14*startGame 16|7b14 45l8 45t17
+X 16 schere.adb
+8e7 p1choice{15|5E9} 23m25 30r13 32r17 33r59 35r29 36r109 38r59
+9e7 p2choice{15|5E9} 27m25 30r22 32r50 33r109 35r41 36r59 38r109
+

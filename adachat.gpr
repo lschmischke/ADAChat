@@ -1,4 +1,8 @@
 project ADAChat is
 
+   for Languages use ("Ada");
+   for Main use ("main.adb");
+   for Source_Dirs use ("src");
+
 end ADAChat;
 

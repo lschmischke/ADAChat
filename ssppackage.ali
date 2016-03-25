@@ -1,0 +1,71 @@
+V "GNAT Lib v2015"
+A -gnatA
+A -gnatc
+A -mtune=generic
+A -march=pentiumpro
+P NO ZX
+
+RN
+RV NO_ENUMERATION_MAPS
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U ssppackage%b		ssppackage.adb		ff94a805 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U ssppackage%s		ssppackage.ads		f7a4f96c EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.enumeration_io%s
+W gamemain%s		gamemain.ads		gamemain.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-inteio.ads		20150518132148 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-tienio.ads		20150518132148 fc618ae6 ada.text_io.enumeration_io%s
+D a-tiinio.ads		20150518132148 aa04e5d6 ada.text_io.integer_io%s
+D gamemain.ads		20160322125922 fd036426 gamemain%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D ssppackage.ads	20160322125842 32ca689e ssppackage%s
+D ssppackage.adb	20160322130014 0378bceb ssppackage%b
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 11|1r6 1r23 12|1r6 1r23 2r6 2r31
+X 2 a-inteio.ads
+18K13*Integer_Text_IO[7|46] 12|2w10 2r35
+X 5 a-textio.ads
+49K13*Text_IO 471e16 11|1w10 1r27 12|1w10 1r27
+166U14*New_Line 12|31s10
+263U14*Put_Line 12|12s7 14s10 15s10 18s10 19s10 23s13 25s13 27s13 29s13
+X 6 a-tienio.ads
+26k21*Enumeration_IO 55e31 11|7r30
+32U14*Get 12|17s21[11|7] 20s21[11|7]
+X 8 gamemain.ads
+1K9*gameMain 8e13 11|2w6 2r20 9r23
+2H9*gameParent 4e14 11|9r32
+X 11 ssppackage.ads
+4K9*sspPackage 24l5 24e15 12|5b14 38l5 38t15
+6E10*choices 6e44 7r45 10r19 11r19 12|24r33 24r71 25r45 25r100 26r16 27r45
+. 27r100 29r45 29r100
+6n22*Rock{6E10}
+6n28*Paper{6E10}
+6n35*Scissors{6E10}
+7K12*Choices_IO[6|26] 12|17r10 20r10
+9R9*schere<8|2R9> 12e14 20p14 20r38 12|7r38
+10e7*p1choice{6E10} 12|17m30 22r18 24r22 25r64 26r34 27r119 29r64
+11e7*p2choice{6E10} 12|20m30 22r32 24r60 25r119 26r51 27r64 29r119
+20U14*startGame 20=24 12|7b14 35l8 35t17
+20r24 this{9R9} 12|7b24 17m25 17r25 20m25 20r25 22r13 22r27 24r17 24r55 25r59
+. 25r114 26r29 26r46 27r59 27r114 29r59 29r114
+
