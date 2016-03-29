@@ -14,13 +14,6 @@ package Data_Types is
    function removeUser(this : in out User_ContactList; userToRem : in User) return Boolean;
 
 private
-   package Linked_List is new Doubly_Linked_Lists(Element_Type => User);
-
-   type User_ContactList is record
-      list : Linked_List.List;
-      maxSize : Ada.Containers.Count_Type := 50;
-   end record;
-
    type User_Rights is record
       isAdmin : Boolean := false;
       canKickGroupMembers : Boolean := false;
@@ -30,6 +23,18 @@ private
       username : Unbounded_String;
       password : Unbounded_String;
       userrights : User_Rights;
+      --contacts : User_ContactList;
+   end record;
+
+   package Linked_List is new Doubly_Linked_Lists(Element_Type => User);
+
+   type User_ContactList is record
+      list : Linked_List.List;
+      maxSize : Ada.Containers.Count_Type := 50;
+   end record;
+
+   type User_Data_Set is record
+      user_data : User;
       contacts : User_ContactList;
    end record;
 

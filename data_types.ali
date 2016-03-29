@@ -5,22 +5,31 @@ A -march=pentiumpro
 P SS ZX
 
 RN
+RV NO_DISPATCHING_CALLS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U data_types%b		data_types.adb		af1dcee4 NE OO PK
+U data_types%b		data_types.adb		4e702970 NE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U data_types%s		data_types.ads		7c2d81a3 EE OO PF PK
+U data_types%s		data_types.ads		cb1db534 EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
@@ -60,8 +69,8 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D data_types.ads	20160325120800 1a6ba577 data_types%s
-D data_types.adb	20160325124244 b5766b93 data_types%b
+D data_types.ads	20160329133412 ad5b91e0 data_types%s
+D data_types.adb	20160329133002 e32bb890 data_types%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
@@ -85,14 +94,21 @@ D s-ststop.ads		20150518132150 e6693757 system.strings.stream_ops%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 X 1 ada.ads
-16K9*Ada 19e8 17|1r6 1r33 2r6 2r47
+16K9*Ada 19e8 17|1r6 1r33 2r6 2r47 33r17
 X 4 a-contai.ads
-16K13*Containers 24e19 17|2r10 2r51
+16K13*Containers 24e19 17|2r10 2r51 33r21
+20I9*Count_Type<integer> 17|33r32
 X 5 a-cdlili.ads
-40+9 Element_Type 17|15r7
-45k24*Doubly_Linked_Lists 407e39 17|2w21 14r31
-49R9*List<8|43R9> 17|18r26[14]
-74V13*Is_Empty{boolean} 18|14s24[17|14]
+40+9 Element_Type 17|29r51
+45k24*Doubly_Linked_Lists 407e39 17|2w21 29r31
+49R9*List<8|43R9> 17|32r26[29]
+58R9*Cursor 18|33r26[17|29]
+72V13*Length{4|20I9} 18|10s39[17|29]
+74V13*Is_Empty{boolean} 18|5s24[17|29]
+146U14*Append 18|26s20[17|29]
+151U14*Delete 18|37s20[17|29]
+212V13*Find{58R9[17|29]} 18|36s28[17|29]
+222V13*Contains{boolean} 18|25s50[17|29]
 X 9 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[5|67]>
@@ -100,31 +116,42 @@ X 11 a-string.ads
 16K13*Strings 35e16 17|1r10 1r37
 X 13 a-strunb.ads
 76K21*Unbounded 489e26 17|1w18 1r45
-79R9*Unbounded_String<8|43R9> 473e14 17|15r23 28r18 29r18
-166V14*"="{boolean} 5|42i19
+79R9*Unbounded_String<8|43R9> 473e14 17|23r18 24r18
 X 17 data_types.ads
-4K9*Data_Types 14E12 34l5 34e15 18|1b14 20l5 20t15
-6R9*User 9r68 9r81 10r68 11r71 27c9 32e14 18|2r68 2r81 7r68 12r71
-8R9*User_ContactList 9r35 10r35 11r38 17c9 20e14 31r18 18|2r35 7r35 12r38
-9V13*getUser{6R9} 9=21 9>53 18|2b13 5l8 5t15
-9r21 this{8R9} 18|2b21
-9r53 userToGet{6R9} 18|2b53 4r14
-10V13*addUser{boolean} 10=21 10>53 18|7b13 10l8 10t15
-10r21 this{8R9} 18|7b21
-10r53 userToAdd{6R9} 18|7b53
-11V13*removeUser{boolean} 11=24 11>56 18|12b13 18l8 18t18
-11r24 this{8R9} 18|12b24 14r14
-11r56 userToRem{6R9} 18|12b56
-14K12 Linked_List[5|45] 18r14
-18r7*list{5|49R9[14]} 18|14r19
-19i7*maxSize{integer}
-22R9 User_Rights 25e14 30r20
-23b7*isAdmin{boolean}
-24b7*canKickGroupMembers{boolean}
-28r7*username{13|79R9}
-29r7*password{13|79R9}
-30r7*userrights{22R9}
-31r7*contacts{8R9}
+5K9*Data_Types 17E9 41l5 41e15 18|1b14 43l5 43t15
+7R9*User 12r68 12r81 13r68 14r71 22c9 27e14 29r67 37r19 18|13r68 13r81 23r68
+. 32r71
+9R9*User_ContactList 10r35 11r34 12r35 13r35 14r38 31c9 34e14 38r18 18|3r35
+. 8r34 13r35 23r35 32r38
+10V13*isEmpty{boolean} 10=21 18|3b13 6l8 6t15 35s14
+10r21 this{9R9} 18|3b21 5r14
+11V13*isFull{boolean} 11=20 18|8b13 11l8 11t14 25s14
+11r20 this{9R9} 18|8b20 10r14 10r29
+12V13*getUser{7R9} 12=21 12>53 18|13b13 21l8 21t15
+12r21 this{9R9} 18|13b21 16r19
+12r53 userToGet{7R9} 18|13b53 17r20
+13V13*addUser{boolean} 13=21 13>53 18|23b13 30l8 30t15
+13r21 this{9R9} 18|23b21 25m21 25r21 25r40 26m10 26r10
+13r53 userToAdd{7R9} 18|23b53 25r59 26r27
+14V13*removeUser{boolean} 14=24 14>56 18|32b13 41l8 41t18
+14r24 this{9R9} 18|32b24 35m22 35r22 36r18 37m10 37r10
+14r56 userToRem{7R9} 18|32b56 36r33
+17R9 User_Rights 20e14 25r20
+18b7*isAdmin{boolean}
+19b7*canKickGroupMembers{boolean}
+23r7*username{13|79R9}
+24r7*password{13|79R9}
+25r7*userrights{17R9}
+29K12 Linked_List[5|45] 32r14 18|33r14
+32r7*list{5|49R9[29]} 18|5r19 10r34 16r24 25r45 26m15 36r23 37m15
+33i7*maxSize{4|20I9} 18|10r19
+36R9 User_Data_Set 39e14
+37r7*user_data{7R9}
+38r7*contacts{9R9}
+X 18 data_types.adb
+14X7 Not_Found 20r13
+16r11 user{17|7R9} 17r13 17r42
+33r7 posi{5|58R9[17|29]} 36m10 37m27 37r27
 X 19 system.ads
 67M9*Address
 X 24 s-memory.ads
