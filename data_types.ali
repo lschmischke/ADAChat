@@ -9,7 +9,6 @@ RV NO_DISPATCHING_CALLS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
-RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
 RV NO_SECONDARY_STACK
@@ -19,17 +18,16 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U data_types%b		data_types.adb		4e702970 NE OO PK
+U data_types%b		data_types.adb		e08522dd NE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W system%s		system.ads		system.ali
-W system.exception_table%s  s-exctab.adb	s-exctab.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U data_types%s		data_types.ads		cb1db534 EE OO PF PK
+U data_types%s		data_types.ads		68d97f1b EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
@@ -51,7 +49,6 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
-W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
@@ -69,8 +66,8 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D data_types.ads	20160329133412 ad5b91e0 data_types%s
-D data_types.adb	20160329133002 e32bb890 data_types%b
+D data_types.ads	20160329152740 0e9f5bcf data_types%s
+D data_types.adb	20160329150512 ee1a7912 data_types%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
@@ -89,26 +86,28 @@ D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20150518132150 b16154c2 system.storage_pools%s
 D s-stposu.ads		20150518132150 97a6219c system.storage_pools.subpools%s
 D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
-D s-string.ads		20150518132150 8fe54fb7 system.strings%s
-D s-ststop.ads		20150518132150 e6693757 system.strings.stream_ops%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 X 1 ada.ads
-16K9*Ada 19e8 17|1r6 1r33 2r6 2r47 33r17
+16K9*Ada 19e8 17|1r6 1r33 2r6 2r47 53r17
 X 4 a-contai.ads
-16K13*Containers 24e19 17|2r10 2r51 33r21
-20I9*Count_Type<integer> 17|33r32
+16K13*Containers 24e19 17|2r10 2r51 53r21
+20I9*Count_Type<integer> 17|53r32
 X 5 a-cdlili.ads
-40+9 Element_Type 17|29r51
-45k24*Doubly_Linked_Lists 407e39 17|2w21 29r31
-49R9*List<8|43R9> 17|32r26[29]
-58R9*Cursor 18|33r26[17|29]
-72V13*Length{4|20I9} 18|10s39[17|29]
-74V13*Is_Empty{boolean} 18|5s24[17|29]
-146U14*Append 18|26s20[17|29]
-151U14*Delete 18|37s20[17|29]
-212V13*Find{58R9[17|29]} 18|36s28[17|29]
-222V13*Contains{boolean} 18|25s50[17|29]
+40+9 Element_Type 17|49r51
+45k24*Doubly_Linked_Lists 407e39 17|2w21 49r31
+49R9*List<8|43R9> 17|52r26[49]
+58R9*Cursor 18|92r26[17|49]
+72V13*Length{4|20I9} 18|69s47[17|49]
+74V13*Is_Empty{boolean} 18|64s28[17|49]
+146U14*Append 18|85s24[17|49]
+148p7 New_Item{17|14P9} 18|85r31[17|49]
+151U14*Delete 18|96s24[17|49]
+153r7 Position{58R9[17|49]} 18|96r31[17|49]
+212V13*Find{58R9[17|49]} 18|95s32[17|49]
+214p7 Item{17|14P9} 18|95r37[17|49]
+222V13*Contains{boolean} 18|84s62[17|49]
+224p7 Item{17|14P9} 18|84r71[17|49]
 X 9 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[5|67]>
@@ -116,42 +115,87 @@ X 11 a-string.ads
 16K13*Strings 35e16 17|1r10 1r37
 X 13 a-strunb.ads
 76K21*Unbounded 489e26 17|1w18 1r45
-79R9*Unbounded_String<8|43R9> 473e14 17|23r18 24r18
+79R9*Unbounded_String<8|43R9> 473e14 17|15r52 16r60 17r79 18r63 43r18 44r18
+. 18|24r52 29r60 34r79 40r63
 X 17 data_types.ads
-5K9*Data_Types 17E9 41l5 41e15 18|1b14 43l5 43t15
-7R9*User 12r68 12r81 13r68 14r71 22c9 27e14 29r67 37r19 18|13r68 13r81 23r68
-. 32r71
-9R9*User_ContactList 10r35 11r34 12r35 13r35 14r38 31c9 34e14 38r18 18|3r35
-. 8r34 13r35 23r35 32r38
-10V13*isEmpty{boolean} 10=21 18|3b13 6l8 6t15 35s14
-10r21 this{9R9} 18|3b21 5r14
-11V13*isFull{boolean} 11=20 18|8b13 11l8 11t14 25s14
-11r20 this{9R9} 18|8b20 10r14 10r29
-12V13*getUser{7R9} 12=21 12>53 18|13b13 21l8 21t15
-12r21 this{9R9} 18|13b21 16r19
-12r53 userToGet{7R9} 18|13b53 17r20
-13V13*addUser{boolean} 13=21 13>53 18|23b13 30l8 30t15
-13r21 this{9R9} 18|23b21 25m21 25r21 25r40 26m10 26r10
-13r53 userToAdd{7R9} 18|23b53 25r59 26r27
-14V13*removeUser{boolean} 14=24 14>56 18|32b13 41l8 41t18
-14r24 this{9R9} 18|32b24 35m22 35r22 36r18 37m10 37r10
-14r56 userToRem{7R9} 18|32b56 36r33
-17R9 User_Rights 20e14 25r20
-18b7*isAdmin{boolean}
-19b7*canKickGroupMembers{boolean}
-23r7*username{13|79R9}
-24r7*password{13|79R9}
-25r7*userrights{17R9}
-29K12 Linked_List[5|45] 32r14 18|33r14
-32r7*list{5|49R9[29]} 18|5r19 10r34 16r24 25r45 26m15 36r23 37m15
-33i7*maxSize{4|20I9} 18|10r19
-36R9 User_Data_Set 39e14
-37r7*user_data{7R9}
-38r7*contacts{9R9}
+5K9*Data_Types 37E9 61l5 61e15 18|1b14 123l5 123t15
+7R9*User_Rights 8r38 9r43 10r50 11r55 19r54 20r63 37c9 40e14 45r20 18|3r38
+. 8r43 13r50 18r55 48r54 53r63
+8V13*getIsAdminFlag{boolean} 8>28 18|3b13 6l8 6t22
+8r28 this{7R9} 18|3b28 5r14
+9U14*setIsAdminFlag 9=29 9>56 18|8b14 11l8 11t22 56s7
+9r29 this{7R9} 18|8b29 10m7 56r22
+9b56 flag{boolean} 18|8b56 10r23 56r47
+10V13*getCanKickGroupMembersFlag{boolean} 10>40 18|13b13 16l8 16t34
+10r40 this{7R9} 18|13b40 15r14
+11U14*setCanKickGroupMembersFlag 11=41 11>68 18|18b14 21l8 21t34 57s7
+11r41 this{7R9} 18|18b41 20m7 57r34
+11b68 flag{boolean} 18|18b68 20r35 57r59
+13R9*User 14r28 42c9 47e14
+14P9*User_Ptr(13R9) 15r35 16r40 17r35 17r62 18r39 18r98 19r37 20r41 20r93
+. 26r68 26r85 27r72 28r75 32r61 33r74 49r67 57r19 18|24r35 29r40 34r35 34r62
+. 40r39 40r98 48r37 53r41 53r93 72r68 72r85 73r19 82r72 91r75 103r61 108r74
+15V13*getUsername{13|79R9} 15>25 18|24b13 27l8 27t19
+15p25 this{14P9} 18|24b25 26r14
+16U14*setUsername 16=26 16>50 18|29b14 32l8 32t19
+16p26 this{14P9} 18|29b26 31r7
+16r50 name{13|79R9} 18|29b50 31r28
+17V13*getPassword{13|79R9} 17>25 17>45 18|34b13 38l8 38t19
+17p25 this{14P9} 18|34b25 37r14
+17p45 authorizedUser{14P9} 18|34b45
+18V13*setPassword{boolean} 18=25 18>49 18>81 18|40b13 46l8 46t19
+18p25 this{14P9} 18|40b25 44r7
+18r49 password{13|79R9} 18|40b49 44r28
+18p81 authorizedUser{14P9} 18|40b81
+19V13*getUserRights{7R9} 19>27 18|48b13 51l8 51t21
+19p27 this{14P9} 18|48b27 50r14
+20V13*setUserRights{boolean} 20=27 20>51 20>76 18|53b13 59l8 59t21
+20p27 this{14P9} 18|53b27 56r30 57r42
+20r51 rights{7R9} 18|53b51 56r55 57r67
+20p76 authorizedUser{14P9} 18|53b76
+22R9*User_ContactList 23r40 51c9 54e14
+23P9*User_ContactList_Ptr(22R9) 24r31 25r30 26r31 27r35 28r38 34r61 35r78
+. 58r18 18|62r31 67r30 72r31 82r35 91r38 113r61 118r78
+24V13*isEmpty{boolean} 24>21 18|62b13 65l8 65t15 94s14
+24p21 this{23P9} 18|62b21 64r14 94r22
+25V13*isFull{boolean} 25>20 18|67b13 70l8 70t14 84s14
+25p20 this{23P9} 18|67b20 69r14 69r33 84r21
+26V13*getUser{14P9} 26>21 26>53 18|72b13 80l8 80t15
+26p21 this{23P9} 18|72b21 75r16
+26p53 userToGet{14P9} 18|72b53 76r17
+27V13*addUser{boolean} 27=21 27>57 18|82b13 89l8 89t15
+27p21 this{23P9} 18|82b21 84r29 84r48 85r10
+27p57 userToAdd{14P9} 18|82b57 84r79 85r43
+28V13*removeUser{boolean} 28=24 28>60 18|91b13 100l8 100t18
+28p24 this{23P9} 18|91b24 94r30 95r18 96r10
+28p60 userToRem{14P9} 18|91b60 95r45
+30R9*User_Data_Set 31r37 56c9 59e14
+31P9*User_Data_Set_Ptr(30R9) 32r35 33r40 34r35 35r40 18|103r35 108r40 113r35
+. 118r40
+32V13*getUserData{14P9} 32>25 18|103b13 106l8 106t19
+32p25 this{31P9} 18|103b25 105r14
+33U14*setUserData 33=26 33>59 18|108b14 111l8 111t19
+33p26 this{31P9} 18|108b26 110r7
+33p59 userToSet{14P9} 18|108b59 110r29
+34V13*getContacts{23P9} 34>25 18|113b13 116l8 116t19
+34p25 this{31P9} 18|113b25 115r14
+35U14*setContacts 35=26 35>59 18|118b14 121l8 121t19
+35p26 this{31P9} 18|118b26 120r7
+35p59 contactsToSet{23P9} 18|118b59 120r28
+38b7*isAdmin{boolean} 18|5r19 10m12 56r62
+39b7*canKickGroupMembers{boolean} 18|15r19 20m12 57r74
+43r7*username{13|79R9} 18|26r23 31m16
+44r7*password{13|79R9} 18|37r23 44m16
+45r7*userrights{7R9} 18|50r23 56m35 57m47
+49K12 Linked_List[5|45] 52r14 18|92r14
+52r7*list{5|49R9[49]} 18|64r23 69r42 75r25 84r57 85m19 95r27 96m19
+53i7*maxSize{4|20I9} 18|69r23
+57p7*user_data{14P9} 18|105r23 110m16
+58p7*contacts{23P9} 18|115r23 120m16
 X 18 data_types.adb
-14X7 Not_Found 20r13
-16r11 user{17|7R9} 17r13 17r42
-33r7 posi{5|58R9[17|29]} 36m10 37m27 37r27
+73p7 Not_Found{17|14P9} 79r14
+75p11 u{17|14P9} 76r13 76r39
+92r7 posi{5|58R9[17|49]} 95m10 96m43 96r43
 X 19 system.ads
 67M9*Address
 X 24 s-memory.ads

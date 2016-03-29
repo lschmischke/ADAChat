@@ -20,7 +20,7 @@ W ada.tags%s		a-tags.adb		a-tags.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U user_databases%s	user_databases.ads	1d42f47a EE OO PF PK
+U user_databases%s	user_databases.ads	09b60ac2 EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.containers.hash_tables%s  a-cohata.ads	a-cohata.ali
@@ -76,7 +76,7 @@ D a-suhcin.ads		20150518132148 7f78b9e6 ada.strings.unbounded.hash_case_insensit
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D data_types.ads	20160325120800 1a6ba577 data_types%s
+D data_types.ads	20160329152740 0e9f5bcf data_types%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
@@ -99,36 +99,36 @@ D s-string.ads		20150518132150 8fe54fb7 system.strings%s
 D s-ststop.ads		20150518132150 e6693757 system.strings.stream_ops%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
-D user_databases.ads	20160325120826 338a1a57 user_databases%s
-D user_databases.adb	20160325120350 e878dfa4 user_databases%b
+D user_databases.ads	20160329133002 338a1a57 user_databases%s
+D user_databases.adb	20160329133002 e878dfa4 user_databases%b
 X 1 ada.ads
-16K9*Ada 19e8 49|1r6 1r33 2r6 3r6 4r6 4r39 21r15
+16K9*Ada 19e8 49|1r6 1r33 2r6 3r6 4r6 4r39 19r15
 X 4 a-contai.ads
 16K13*Containers 24e19 49|4r10 4r43
 19M9*Hash_Type
 X 11 a-cohama.ads
-41+9 Key_Type 49|19r7
-42+9 Element_Type 49|20r7
-44V18 Hash{4|19M9} 49|21r7
-45V18 Equivalent_Keys{boolean} 49|22r7
-48k24*Hashed_Maps 467e31 49|4w21 18r29
-52R9*Map<15|43R9> 49|26r25[18]
+41+9 Key_Type 49|17r7
+42+9 Element_Type 49|18r7
+44V18 Hash{4|19M9} 49|19r7
+45V18 Equivalent_Keys{boolean} 49|20r7
+48k24*Hashed_Maps 467e31 49|4w21 16r29
+52R9*Map<15|43R9> 49|24r25[16]
 X 16 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[5|67]>
 X 18 a-string.ads
-16K13*Strings 35e16 49|1r10 1r37 2r10 3r10 21r19
+16K13*Strings 35e16 49|1r10 1r37 2r10 3r10 19r19
 X 20 a-strunb.ads
-76K21*Unbounded 489e26 49|1w18 1r45 2r18 3r18 21r27
-79R9*Unbounded_String<15|43R9> 473e14 49|19r19
-166V14*"="{boolean} 5|42i19 49|22r27
+76K21*Unbounded 489e26 49|1w18 1r45 2r18 3r18 19r27
+79R9*Unbounded_String<15|43R9> 473e14 49|17r19
+166V14*"="{boolean} 49|20r27
 X 21 a-suecin.ads
 34V32*Equal_Case_Insensitive{boolean} 49|3w28
 X 22 a-suhcin.ads
-36V32*Hash_Case_Insensitive{4|19M9} 49|2w28 21r37
+36V32*Hash_Case_Insensitive{4|19M9} 49|2w28 19r37
 X 26 data_types.ads
-4K9*Data_Types 34e15 49|7w6 7r22
-6R9*User 32e14 49|13r65 13r78 14r65 15r68 20r23 50|2r65 2r78 7r65 12r68
+5K9*Data_Types 61e15 49|6w6 6r22
+13R9*User 47e14 49|11r65 11r78 12r65 13r68 18r23 50|3r65 3r78 8r65 13r68
 X 27 system.ads
 67M9*Address
 X 32 s-memory.ads
@@ -138,18 +138,18 @@ X 32 s-memory.ads
 X 39 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 X 49 user_databases.ads
-10K9*User_Databases 18E12 30l5 30e19 50|1b14 17l5 17t19
-12R9*User_Database 13r35 14r35 15r38 25c9 28e14 50|2r35 7r35 12r38
-13V13*getUser{26|6R9} 13=21 13>50 50|2b13 5l8 5t15
-13r21 this{12R9} 50|2b21
-13r50 userToGet{26|6R9} 50|2b50 4r14
-14V13*addUser{boolean} 14=21 14>50 50|7b13 10l8 10t15
-14r21 this{12R9} 50|7b21
-14r50 userToAdd{26|6R9} 50|7b50
-15V13*removeUser{boolean} 15=24 15>53 50|12b13 15l8 15t18
-15r24 this{12R9} 50|12b24
-15r53 userToRem{26|6R9} 50|12b53
-18K12 User_Maps[11|48] 23r8 26r15
-26r7*users{11|52R9[18]}
-27i7*maxSize{integer}
+8K9*User_Databases 16E12 28l5 28e19 50|1b14 18l5 18t19
+10R9*User_Database 11r35 12r35 13r38 23c9 26e14 50|3r35 8r35 13r38
+11V13*getUser{26|13R9} 11=21 11>50 50|3b13 6l8 6t15
+11r21 this{10R9} 50|3b21
+11r50 userToGet{26|13R9} 50|3b50 5r14
+12V13*addUser{boolean} 12=21 12>50 50|8b13 11l8 11t15
+12r21 this{10R9} 50|8b21
+12r50 userToAdd{26|13R9} 50|8b50
+13V13*removeUser{boolean} 13=24 13>53 50|13b13 16l8 16t18
+13r24 this{10R9} 50|13b24
+13r53 userToRem{26|13R9} 50|13b53
+16K12 User_Maps[11|48] 21r8 24r15
+24r7*users{11|52R9[16]}
+25i7*maxSize{integer}
 

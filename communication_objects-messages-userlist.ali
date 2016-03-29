@@ -25,7 +25,7 @@ W communication_objects.messages%s  communication_objects-messages.adb  communic
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U communication_objects.messages.userlist%s  communication_objects-messages-userlist.ads  641d5630 EE OO PF PK
+U communication_objects.messages.userlist%s  communication_objects-messages-userlist.ads  70e9a888 EE OO PF PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -56,11 +56,11 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D communication_objects.ads  20160322165040 81548b0d communication_objects%s
-D communication_objects-messages.ads  20160322165040 c71cf906 communication_objects.messages%s
-D communication_objects-messages-userlist.ads  20160325083744 b96a0a41 communication_objects.messages.userlist%s
-D communication_objects-messages-userlist.adb  20160325083744 8f9807ef communication_objects.messages.userlist%b
-D data_types.ads	20160325120800 1a6ba577 data_types%s
+D communication_objects.ads  20160329132938 81548b0d communication_objects%s
+D communication_objects-messages.ads  20160329132938 c71cf906 communication_objects.messages%s
+D communication_objects-messages-userlist.ads  20160329133002 b96a0a41 communication_objects.messages.userlist%s
+D communication_objects-messages-userlist.adb  20160329133002 8f9807ef communication_objects.messages.userlist%b
+D data_types.ads	20160329152740 0e9f5bcf data_types%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
@@ -86,8 +86,6 @@ D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 X 8 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[5|67]>
-X 12 a-strunb.ads
-166V14*"="{boolean} 5|42i19
 X 16 communication_objects.ads
 1K9*Communication_Objects 5e26 18|3r9 7r25 20r5 19|1r14 18r5
 X 17 communication_objects-messages.ads
@@ -96,7 +94,7 @@ X 17 communication_objects-messages.ads
 9V13*getContent{12|79R9}
 X 18 communication_objects-messages-userlist.ads
 3K40*Userlist 17|3k31 18|20l36 20e44 19|1b45 18l36 18t44
-5A9*UserRecord(20|6R9)<integer> 9r15 14r49 19|3r49
+5A9*UserRecord(20|13R9)<integer> 9r15 14r49 19|3r49
 7R9*Userlist<17|5R9> 17|9p13 18|12e14 14p13 14r32 16p14 16r32 18p14 18r35
 . 19|3r32 8r32 13r35
 9a7*UList{5A9} 19|5r19
@@ -105,13 +103,13 @@ X 18 communication_objects-messages-userlist.ads
 14r22 This{7R9} 19|3b22 5r14
 16U14*addUser 16>22 16>42 19|8b14 11l8 11t15
 16r22 This{7R9} 19|8b22
-16r42 U{20|6R9} 19|8b42
+16r42 U{20|13R9} 19|8b42
 18U14*deleteUser 18>25 18>45 19|13b14 16l8 16t18
 18r25 This{7R9} 19|13b25
-18r45 U{20|6R9} 19|13b45
+18r45 U{20|13R9} 19|13b45
 X 20 data_types.ads
-4K9*Data_Types 18|1w6 1r22 20|34e15
-6R9*User 18|5r52 16r49 18r52 19|8r49 13r52 20|32e14
+5K9*Data_Types 18|1w6 1r22 20|61e15
+13R9*User 18|5r52 16r49 18r52 19|8r49 13r52 20|47e14
 X 21 system.ads
 67M9*Address
 X 26 s-memory.ads
