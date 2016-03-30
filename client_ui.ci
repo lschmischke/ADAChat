@@ -1,0 +1,5 @@
+graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\client\client_ui.adb"
+node: { title: "client_ui__updatechatparticipants" label: "updatechatparticipants\nC:\Users\Daniel Kreck\Documents\adachat\client\client_ui.adb:4:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "client_ui__setconnectionstatus" label: "setconnectionstatus\nC:\Users\Daniel Kreck\Documents\adachat\client\client_ui.adb:3:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "client_ui__showmessage" label: "showmessage\nC:\Users\Daniel Kreck\Documents\adachat\client\client_ui.adb:2:4\n8 bytes (static)\n0 dynamic objects" }
+}

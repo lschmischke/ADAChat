@@ -2,18 +2,19 @@ with Data_Types; use Data_Types;
 
 package Communication_Objects.Messages.Userlist is
 
-   type List is array (Integer) of User;
+   type UserRecord is array (Positive range <>) of User;
 
    type Userlist is new Communication_Objects.Messages.Message with record
 
-        Users : List;
+      UList : UserRecord(1..32);
+      User_Number : Positive;
 
    end record;
 
-   function getUsers(This : in Userlist) return List;
+   function getUsers(This : in Userlist) return UserRecord;
 
-   procedure addUser(This : in Userlist; User : in User);
+   procedure addUser(This : in Userlist; U : in User);
 
-   procedure deleteUser(This : in Userlist; User : in User);
+   procedure deleteUser(This : in Userlist; U : in User);
 
 end Communication_Objects.Messages.Userlist;

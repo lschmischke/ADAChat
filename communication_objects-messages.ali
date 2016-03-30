@@ -1,5 +1,13 @@
 V "GNAT Lib v2015"
+A -fstack-check=specific
+A -fcallgraph-info=su,da
 A -gnatA
+A -gnatVa
+A -gnata
+A -gnato
+A -gnatE
+A -gnat12
+A -g
 A -mtune=generic
 A -march=pentiumpro
 P SS ZX
@@ -18,23 +26,23 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U communication_objects.messages%b  communication_objects-messages.adb  d2576684 NE OO PK
+U communication_objects.messages%b  communication_objects-messages.adb  d1833866 DE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
-W communication_objects%s  communication_objects.adb  communication_objects.ali
-W system.soft_links%s	s-soflin.adb		s-soflin.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W communication_objects%s  communication_objects.ads  communication_objects.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U communication_objects.messages%s  communication_objects-messages.ads  5aaab7d0 EE OO PF PK
+U communication_objects.messages%s  communication_objects-messages.ads  79d9a6ce DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
-W communication_objects%s  communication_objects.adb  communication_objects.ali
+W communication_objects%s  communication_objects.ads  communication_objects.ali
 W system%s		system.ads		system.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -55,9 +63,9 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D communication_objects.ads  20160322093734 52e997d3 communication_objects%s
-D communication_objects-messages.ads  20160322103642 37d2f4c6 communication_objects.messages%s
-D communication_objects-messages.adb  20160322103658 da144687 communication_objects.messages%b
+D communication_objects.ads  20160329132938 81548b0d communication_objects%s
+D communication_objects-messages.ads  20160329132938 c71cf906 communication_objects.messages%s
+D communication_objects-messages.adb  20160329132938 290e15a5 communication_objects.messages%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
@@ -85,17 +93,16 @@ X 7 a-string.ads
 16K13*Strings 35e16 14|1r10 1r37 15|1r10 1r37
 X 9 a-strunb.ads
 76K21*Unbounded 489e26 14|1w18 1r45 15|1w18 1r45
-79R9*Unbounded_String<5|43R9> 473e14 14|6r16 9r52 15|5r52
+79R9*Unbounded_String<5|43R9> 473e14 14|6r19 9r50 15|5r50
 X 13 communication_objects.ads
-1K9*Communication_Objects 9e26 14|3r9 5r24 11r5 15|3r14 10r9
-3H9*Communication_Object 5e14 14|5r46
+1K9*Communication_Objects 5e26 14|3r9 5r24 11r5 15|3r14 10r6
+3H9*Communication_Object 3e60 14|5r46
 X 14 communication_objects-messages.ads
-3K31*Messages 13|1k9 14|11l27 11e35 15|3b36 10l31 10t39
-5R9*Message<13|3R9> 7e14 9p14 9r32 15|5r32
-6r9*Name{9|79R9} 15|7r20
-9U14*getName 9>22 9<41 15|5b14 8t7
-9r22 this{5R9} 15|5b22 7r15
-9r41 name{9|79R9} 15|5b41 7m7
+3K31*Messages 13|1k9 14|11l27 11e35 15|3b36 10l28 10t36
+5R9*Message<13|3R9> 7e14 9p13 9r34 15|5r34
+6r9*Content{9|79R9} 15|7r19
+9V13*getContent{9|79R9} 9>24 15|5b13 8l8 8t18
+9r24 This{5R9} 15|5b24 7r14
 X 16 system.ads
 67M9*Address
 X 21 s-memory.ads

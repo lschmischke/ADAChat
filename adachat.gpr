@@ -1,6 +1,20 @@
 project ADAChat is
-
+	
+   for Main use ("Main.adb");
+	
    for Source_Dirs use ("./**");
+
+   package Builder is
+      for Default_Switches ("ada") use ("-s");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnatVa", "-gnata", "-gnato", "-fstack-check", "-gnatE", "-gnat12", "-fcallgraph-info=su,da", "-g");
+   end Compiler;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-g");
+   end Linker;
 
 end ADAChat;
 

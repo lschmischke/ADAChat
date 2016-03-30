@@ -1,3 +1,3 @@
 package body Communication_Objects.Messages.Refuse is
-
-   end Communication_Objects.Messages.Refuse;
+   procedure dummy is null;
+end Communication_Objects.Messages.Refuse;

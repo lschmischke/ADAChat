@@ -1,8 +1,8 @@
-with Unbounded_String; use Unbounded_String;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 
 package Communication_Objects.Messages.Refuse is
 
-    procedure dummy;
+   procedure dummy;
 
    type Refuse is new Communication_Objects.Messages.Message with record
 	Username: Unbounded_String;

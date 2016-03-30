@@ -1,0 +1,54 @@
+edge: { sourcename: "concrete_client_logic__Tconcrete_clientCFD"
+  targetname: "-9:concrete_client_logic__concrete_client,concrete_client_logic__concrete_client"
+  label: "concrete_client_logic.ads:7:9"
+}
+class {
+  classname: "concrete_client_logic__concrete_client"
+  label: "concrete_client_logic__concrete_client\concrete_client_logic.ads:7:9"
+  parent: "client_logic__client_interface"
+  virtuals: "1:concrete_client_logic__connecttoserver,1:client_logic__client_interface\n
+             2:concrete_client_logic__disconnectfromserver,2:client_logic__client_interface\n
+             3:concrete_client_logic__sendmessage,3:client_logic__client_interface\n
+             -1:concrete_client_logic___size,-1:client_logic__client_interface\n
+             -2:concrete_client_logic__concrete_clientSR,-2:client_logic__client_interface\n
+             -3:concrete_client_logic__concrete_clientSW,-3:client_logic__client_interface\n
+             -4:concrete_client_logic__concrete_clientSI,-4:client_logic__client_interface\n
+             -5:concrete_client_logic__concrete_clientSO,-5:client_logic__client_interface\n
+             -6:concrete_client_logic__Oeq,-6:client_logic__client_interface\n
+             -7:concrete_client_logic___assign,-7:client_logic__client_interface\n
+             -8:concrete_client_logic__concrete_clientDA,-8:client_logic__client_interface\n
+             -9:concrete_client_logic__concrete_clientDF,-9:client_logic__client_interface"
+}
+graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.adb"
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "ada__tags__unregister_tag" label: "Unregister_Tag\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:578:14" shape : ellipse }
+node: { title: "system__secondary_stack__ss_allocate" label: "Ss_Allocate\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:66:14" shape : ellipse }
+node: { title: "ada__tags__register_interface_offset" label: "Register_Interface_Offset\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:532:14" shape : ellipse }
+node: { title: "concrete_client_logic___elabs" label: "Concrete_Client_Logic\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:5:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "concrete_client_logic___elabs" targetname: "ada__tags__register_tag" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9" }
+edge: { sourcename: "concrete_client_logic___elabs" targetname: "ada__tags__check_tsd" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9" }
+node: { title: "concrete_client_logic__sendmessage" label: "Sendmessage\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.adb:18:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic__disconnectfromserver" label: "Disconnectfromserver\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.adb:12:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic__connecttoserver" label: "Connecttoserver\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.adb:6:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic__finalize_spec" label: "Finalize_Spec\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:5:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "concrete_client_logic__finalize_spec" targetname: "ada__tags__unregister_tag" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:5:1" }
+node: { title: "concrete_client_logic__Tconcrete_clientCFD" label: "Tconcrete_Clientcfd\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "concrete_client_logic__Tconcrete_clientCFD" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+node: { title: "concrete_client_logic__concrete_clientDF" label: "Concrete_Clientdf\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n32 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic__concrete_clientDA" label: "Concrete_Clientda\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n32 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic___assign" label: "Concrete_Client_Logic\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n448 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic__Oeq" label: "=\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic__concrete_clientSO" label: "Concrete_Clientso\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "concrete_client_logic__concrete_clientSO" targetname: "concrete_client_logic__concrete_clientSW" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9" }
+node: { title: "concrete_client_logic__concrete_clientSI" label: "Concrete_Clientsi\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "concrete_client_logic__concrete_clientSI" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9" }
+edge: { sourcename: "concrete_client_logic__concrete_clientSI" targetname: "concrete_client_logic__concrete_clientSR" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9" }
+edge: { sourcename: "concrete_client_logic__concrete_clientSI" targetname: "concrete_client_logic__concrete_clientIP" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9" }
+node: { title: "concrete_client_logic__concrete_clientSW" label: "Concrete_Clientsw\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic__concrete_clientSR" label: "Concrete_Clientsr\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic___size" label: "Concrete_Client_Logic\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_client_logic__concrete_clientIP" label: "Concrete_Clientip\nC:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "concrete_client_logic__concrete_clientIP" targetname: "ada__tags__register_interface_offset" label: "C:\Users\Daniel Kreck\Documents\adachat\client\concrete_client_logic.ads:7:9" }
+}
