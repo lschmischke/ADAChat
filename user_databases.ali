@@ -1,5 +1,13 @@
 V "GNAT Lib v2015"
+A -fstack-check=specific
+A -fcallgraph-info=su,da
 A -gnatA
+A -gnatVa
+A -gnata
+A -gnato
+A -gnatE
+A -gnat12
+A -g
 A -mtune=generic
 A -march=pentiumpro
 P SS ZX
@@ -15,12 +23,12 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U user_databases%b	user_databases.adb	dbf2c5f3 NE OO PK
+U user_databases%b	user_databases.adb	dbf2c5f3 DE NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U user_databases%s	user_databases.ads	09b60ac2 EE OO PF PK
+U user_databases%s	user_databases.ads	09b60ac2 DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.containers.hash_tables%s  a-cohata.ads	a-cohata.ali
@@ -40,6 +48,7 @@ W ada.tags%s		a-tags.adb		a-tags.ali
 Z ada.unchecked_deallocation%s
 W data_types%s		data_types.adb		data_types.ali
 W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
 W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
 W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -76,8 +85,9 @@ D a-suhcin.ads		20150518132148 7f78b9e6 ada.strings.unbounded.hash_case_insensit
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D data_types.ads	20160329152740 0e9f5bcf data_types%s
+D data_types.ads	20160329162304 0e9f5bcf data_types%s
 D system.ads		20150518132150 f4ce8c3a system%s
+D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
@@ -99,56 +109,56 @@ D s-string.ads		20150518132150 8fe54fb7 system.strings%s
 D s-ststop.ads		20150518132150 e6693757 system.strings.stream_ops%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
-D user_databases.ads	20160329133002 338a1a57 user_databases%s
-D user_databases.adb	20160329133002 e878dfa4 user_databases%b
+D user_databases.ads	20160329162304 338a1a57 user_databases%s
+D user_databases.adb	20160329162304 e878dfa4 user_databases%b
 X 1 ada.ads
-16K9*Ada 19e8 49|1r6 1r33 2r6 3r6 4r6 4r39 19r15
+16K9*Ada 19e8 50|1r6 1r33 2r6 3r6 4r6 4r39 19r15
 X 4 a-contai.ads
-16K13*Containers 24e19 49|4r10 4r43
+16K13*Containers 24e19 50|4r10 4r43
 19M9*Hash_Type
 X 11 a-cohama.ads
-41+9 Key_Type 49|17r7
-42+9 Element_Type 49|18r7
-44V18 Hash{4|19M9} 49|19r7
-45V18 Equivalent_Keys{boolean} 49|20r7
-48k24*Hashed_Maps 467e31 49|4w21 16r29
-52R9*Map<15|43R9> 49|24r25[16]
+41+9 Key_Type 50|17r7
+42+9 Element_Type 50|18r7
+44V18 Hash{4|19M9} 50|19r7
+45V18 Equivalent_Keys{boolean} 50|20r7
+48k24*Hashed_Maps 467e31 50|4w21 16r29
+52R9*Map<15|43R9> 50|24r25[16]
 X 16 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[5|67]>
 X 18 a-string.ads
-16K13*Strings 35e16 49|1r10 1r37 2r10 3r10 19r19
+16K13*Strings 35e16 50|1r10 1r37 2r10 3r10 19r19
 X 20 a-strunb.ads
-76K21*Unbounded 489e26 49|1w18 1r45 2r18 3r18 19r27
-79R9*Unbounded_String<15|43R9> 473e14 49|17r19
-166V14*"="{boolean} 49|20r27
+76K21*Unbounded 489e26 50|1w18 1r45 2r18 3r18 19r27
+79R9*Unbounded_String<15|43R9> 473e14 50|17r19
+166V14*"="{boolean} 50|20r27
 X 21 a-suecin.ads
-34V32*Equal_Case_Insensitive{boolean} 49|3w28
+34V32*Equal_Case_Insensitive{boolean} 50|3w28
 X 22 a-suhcin.ads
-36V32*Hash_Case_Insensitive{4|19M9} 49|2w28 19r37
+36V32*Hash_Case_Insensitive{4|19M9} 50|2w28 19r37
 X 26 data_types.ads
-5K9*Data_Types 61e15 49|6w6 6r22
-13R9*User 47e14 49|11r65 11r78 12r65 13r68 18r23 50|3r65 3r78 8r65 13r68
+5K9*Data_Types 61e15 50|6w6 6r22
+13R9*User 47e14 50|11r65 11r78 12r65 13r68 18r23 51|3r65 3r78 8r65 13r68
 X 27 system.ads
 67M9*Address
-X 32 s-memory.ads
+X 33 s-memory.ads
 53V13*Alloc{27|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
 76V13*Realloc{27|67M9} 105i<c,__gnat_realloc>22
-X 39 s-stalib.adb
+X 40 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
-X 49 user_databases.ads
-8K9*User_Databases 16E12 28l5 28e19 50|1b14 18l5 18t19
-10R9*User_Database 11r35 12r35 13r38 23c9 26e14 50|3r35 8r35 13r38
-11V13*getUser{26|13R9} 11=21 11>50 50|3b13 6l8 6t15
-11r21 this{10R9} 50|3b21
-11r50 userToGet{26|13R9} 50|3b50 5r14
-12V13*addUser{boolean} 12=21 12>50 50|8b13 11l8 11t15
-12r21 this{10R9} 50|8b21
-12r50 userToAdd{26|13R9} 50|8b50
-13V13*removeUser{boolean} 13=24 13>53 50|13b13 16l8 16t18
-13r24 this{10R9} 50|13b24
-13r53 userToRem{26|13R9} 50|13b53
+X 50 user_databases.ads
+8K9*User_Databases 16E12 28l5 28e19 51|1b14 18l5 18t19
+10R9*User_Database 11r35 12r35 13r38 23c9 26e14 51|3r35 8r35 13r38
+11V13*getUser{26|13R9} 11=21 11>50 51|3b13 6l8 6t15
+11r21 this{10R9} 51|3b21
+11r50 userToGet{26|13R9} 51|3b50 5r14
+12V13*addUser{boolean} 12=21 12>50 51|8b13 11l8 11t15
+12r21 this{10R9} 51|8b21
+12r50 userToAdd{26|13R9} 51|8b50
+13V13*removeUser{boolean} 13=24 13>53 51|13b13 16l8 16t18
+13r24 this{10R9} 51|13b24
+13r53 userToRem{26|13R9} 51|13b53
 16K12 User_Maps[11|48] 21r8 24r15
 24r7*users{11|52R9[16]}
 25i7*maxSize{integer}

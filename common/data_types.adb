@@ -73,7 +73,7 @@ package body Data_Types is
       Not_Found : User_Ptr := null;
    begin
       for u of this.all.list loop
-         if u = userToGet then return u;
+         if u.all = userToGet.all then return u;
          end if;
       end loop;
       return Not_Found;

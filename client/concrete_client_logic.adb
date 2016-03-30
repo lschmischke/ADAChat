@@ -3,20 +3,20 @@ with Ada.Streams; use Ada.Streams;
 
 package body Concrete_Client_Logic is
 
-   procedure connectToServer(This : in out Client_Interface) is
+   procedure connectToServer(This : in out Concrete_Client) is
 
    begin
       null;
    end connectToServer;
 
-   procedure disconnectFromServer(This : in out Client_Interface) is
+   procedure disconnectFromServer(This : in out Concrete_Client) is
 
    begin
       null;
    end disconnectFromServer;
 
-   procedure sendMessage(This : in out Client_Interface;
-                         Message : out Communication_Object) is
+   procedure sendMessage(This : in out Concrete_Client;
+                         Message : out Communication_Object'Class) is
 
    begin
       null;

@@ -9,8 +9,9 @@ with Communication_Objects.Messages.Connect;
 with Communication_Objects.Messages.Refuse;
 with Communication_Objects.Messages.Userlist;
 with Ada.Strings.Unbounded;
+with Data_Types_Test; use Data_Types_Test;
 
 procedure main is
 begin
-  null;
+  Data_Types_Test.Test;
 end main;

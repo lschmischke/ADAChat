@@ -1,5 +1,13 @@
 V "GNAT Lib v2015"
+A -fstack-check=specific
+A -fcallgraph-info=su,da
 A -gnatA
+A -gnatVa
+A -gnata
+A -gnato
+A -gnatE
+A -gnat12
+A -g
 A -mtune=generic
 A -march=pentiumpro
 P SS ZX
@@ -19,13 +27,13 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U communication_objects.messages.userlist%b  communication_objects-messages-userlist.adb  36f20dae NE OO PK
+U communication_objects.messages.userlist%b  communication_objects-messages-userlist.adb  36f20dae DE NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W communication_objects.messages%s  communication_objects-messages.adb  communication_objects-messages.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U communication_objects.messages.userlist%s  communication_objects-messages-userlist.ads  70e9a888 EE OO PF PK
+U communication_objects.messages.userlist%s  communication_objects-messages-userlist.ads  70e9a888 DE EE OO PF PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -58,9 +66,9 @@ D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D communication_objects.ads  20160329132938 81548b0d communication_objects%s
 D communication_objects-messages.ads  20160329132938 c71cf906 communication_objects.messages%s
-D communication_objects-messages-userlist.ads  20160329133002 b96a0a41 communication_objects.messages.userlist%s
-D communication_objects-messages-userlist.adb  20160329133002 8f9807ef communication_objects.messages.userlist%b
-D data_types.ads	20160329152740 0e9f5bcf data_types%s
+D communication_objects-messages-userlist.ads  20160329162304 b96a0a41 communication_objects.messages.userlist%s
+D communication_objects-messages-userlist.adb  20160329162304 8f9807ef communication_objects.messages.userlist%b
+D data_types.ads	20160329162304 0e9f5bcf data_types%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s

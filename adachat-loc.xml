@@ -1,21 +1,108 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
-    <file_marker column=" 33" line=" 6" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 2" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 37" >
+  <Project>
+    <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 9" line=" 15" >
+    <file_marker column=" 18" line=" 76" >
       <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 4" >
+      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 33" >
+      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 32" line=" 35" >
+      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 76">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 11">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 18" line=" 3">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 76">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 15">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 42" line=" 4">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 49">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 11" line=" 7">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 33" line=" 6">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 2">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 37">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 9" line=" 15">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >

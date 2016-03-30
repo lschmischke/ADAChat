@@ -1,5 +1,13 @@
 V "GNAT Lib v2015"
+A -fstack-check=specific
+A -fcallgraph-info=su,da
 A -gnatA
+A -gnatVa
+A -gnata
+A -gnato
+A -gnatE
+A -gnat12
+A -g
 A -mtune=generic
 A -march=pentiumpro
 P SS ZX
@@ -18,7 +26,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U communication_objects.messages%b  communication_objects-messages.adb  d1833866 NE OO PK
+U communication_objects.messages%b  communication_objects-messages.adb  d1833866 DE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -27,7 +35,7 @@ W communication_objects%s  communication_objects.ads  communication_objects.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U communication_objects.messages%s  communication_objects-messages.ads  79d9a6ce EE OO PF PK
+U communication_objects.messages%s  communication_objects-messages.ads  79d9a6ce DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali

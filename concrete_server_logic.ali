@@ -1,5 +1,13 @@
 V "GNAT Lib v2015"
+A -fstack-check=specific
+A -fcallgraph-info=su,da
 A -gnatA
+A -gnatVa
+A -gnata
+A -gnato
+A -gnatE
+A -gnat12
+A -g
 A -mtune=generic
 A -march=pentiumpro
 P SS ZX
@@ -13,9 +21,9 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U concrete_server_logic%b  concrete_server_logic.adb  09b9c383 NE OO PK
+U concrete_server_logic%b  concrete_server_logic.adb  09b9c383 DE NE OO PK
 
-U concrete_server_logic%s  concrete_server_logic.ads  fcf86820 EE OO PF PK
+U concrete_server_logic%s  concrete_server_logic.ads  fcf86820 DE EE OO PF PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -30,9 +38,9 @@ D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D communication_objects.ads  20160329132938 81548b0d communication_objects%s
-D concrete_server_logic.ads  20160329133002 2d200e39 concrete_server_logic%s
-D concrete_server_logic.adb  20160329133002 2499cdba concrete_server_logic%b
-D server_logic.ads	20160329133002 d1d86619 server_logic%s
+D concrete_server_logic.ads  20160329162304 2d200e39 concrete_server_logic%s
+D concrete_server_logic.adb  20160329162304 2499cdba concrete_server_logic%b
+D server_logic.ads	20160329162304 d1d86619 server_logic%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s

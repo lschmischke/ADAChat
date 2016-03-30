@@ -4,6 +4,4 @@ package Communication_Objects.Files is
 	f: Integer;
    end record;
 
-   procedure dummy;
-
-   end Communication_Objects.Files;
+end Communication_Objects.Files;

@@ -1,0 +1,35 @@
+V "GNAT Lib v2015"
+A -fstack-check=specific
+A -fcallgraph-info=su,da
+A -gnatA
+A -gnatVa
+A -gnata
+A -gnato
+A -gnatE
+A -gnat12
+A -g
+A -mtune=generic
+A -march=pentiumpro
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U client_ui%b		client_ui.adb		401d7087 DE NE OO PK IL
+
+U client_ui%s		client_ui.ads		80f42b28 DE EE NE OO PK IL
+
+D client_ui.ads		20160329132938 80f42b28 client_ui%s
+D client_ui.adb		20160329233142 c0e95baf client_ui%b
+D system.ads		20150518132150 f4ce8c3a system%s
+X 1 client_ui.ads
+1K9*client_ui 5l5 5e14 2|1b14 5l5 5t14
+2U14*showMessage
+3U14*setConnectionStatus
+4U14*updateChatParticipants
+X 2 client_ui.adb
+2U14 showMessage
+3U14 setConnectionStatus
+4U14 updateChatParticipants
+

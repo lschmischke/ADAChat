@@ -1,3 +1,5 @@
 package body client_ui is
-   procedure dummy is null;
-end server_logic;
+   procedure showMessage is null;
+   procedure setConnectionStatus is null;
+   procedure updateChatParticipants is null;
+end client_ui;
