@@ -153,7 +153,6 @@ node: { title: "system__finalization_masters__set_base_pool" label: "Set_Base_Po
 node: { title: "system__finalization_masters__initialize__2" label: "Initialize\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finmas.ads:201:25" shape : ellipse }
 node: { title: "system__finalization_masters__finalization_masterIP" label: "Finalization_Masterip\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finmas.ads:164:9" shape : ellipse }
 node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:83:14" shape : ellipse }
-node: { title: "ada__strings__unbounded__Oeq" label: "=\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:166:13" shape : ellipse }
 node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:80:13" shape : ellipse }
 node: { title: "ada__strings__unbounded___assign__2" label: "Unbounded\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:471:9" shape : ellipse }
 node: { title: "__gnat_rcheck_CE_Invalid_Data" label: "gnat_rcheck_CE_Invalid_Data\n<built-in>" shape : ellipse }
@@ -277,10 +276,6 @@ edge: { sourcename: "data_types__getuser" targetname: "__gnat_end_handler" label
 edge: { sourcename: "data_types__getuser" targetname: "__gnat_begin_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:75:30" }
 edge: { sourcename: "data_types__getuser" targetname: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:data_types__getuser__B22b___finalizer.6357" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:75:0" }
 edge: { sourcename: "data_types__getuser" targetname: "data_types__linked_list__next__2" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:75:30" }
-edge: { sourcename: "data_types__getuser" targetname: "ada__strings__unbounded__Oeq" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:76:19" }
-edge: { sourcename: "data_types__getuser" targetname: "ada__strings__unbounded__Oeq" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:76:19" }
-edge: { sourcename: "data_types__getuser" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:76:31" }
-edge: { sourcename: "data_types__getuser" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:76:15" }
 edge: { sourcename: "data_types__getuser" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:75:30" }
 edge: { sourcename: "data_types__getuser" targetname: "data_types__linked_list__get_element_access" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:75:30" }
 edge: { sourcename: "data_types__getuser" targetname: "data_types__linked_list__has_element" label: "C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb:75:30" }

@@ -291,7 +291,7 @@ package ada_main is
    pragma Export (C, u00127, "communication_objects__messages__userlistB");
    u00128 : constant Version_32 := 16#70e9a888#;
    pragma Export (C, u00128, "communication_objects__messages__userlistS");
-   u00129 : constant Version_32 := 16#0a5d4836#;
+   u00129 : constant Version_32 := 16#e08522dd#;
    pragma Export (C, u00129, "data_typesB");
    u00130 : constant Version_32 := 16#68d97f1b#;
    pragma Export (C, u00130, "data_typesS");
@@ -309,7 +309,7 @@ package ada_main is
    pragma Export (C, u00136, "system__memoryB");
    u00137 : constant Version_32 := 16#adb3ea0e#;
    pragma Export (C, u00137, "system__memoryS");
-   u00138 : constant Version_32 := 16#c6b35752#;
+   u00138 : constant Version_32 := 16#84073d23#;
    pragma Export (C, u00138, "data_types_testB");
    u00139 : constant Version_32 := 16#394a7525#;
    pragma Export (C, u00139, "data_types_testS");

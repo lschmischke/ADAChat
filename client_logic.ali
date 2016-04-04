@@ -32,8 +32,8 @@ D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D client_logic.ads	20160329132938 c75ccc4e client_logic%s
-D communication_objects.ads  20160329132938 81548b0d communication_objects%s
+D client_logic.ads	20160330002352 c75ccc4e client_logic%s
+D communication_objects.ads  20160330002352 81548b0d communication_objects%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
