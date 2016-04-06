@@ -28,6 +28,8 @@ node: { title: "system__tasking__activation_chainIP" label: "Activation_Chainip\
 node: { title: "system__tasking__stages__activate_tasks" label: "Activate_Tasks\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-tassta.ads:131:14" shape : ellipse }
 node: { title: "system__tasking__stages__complete_task" label: "Complete_Task\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-tassta.ads:161:14" shape : ellipse }
 node: { title: "gnat__sockets__empty" label: "EMPTY\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-socket.ads:1041:14" shape : ellipse }
+node: { title: "system__stream_attributes__w_c" label: "W_C\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:135:14" shape : ellipse }
+node: { title: "system__stream_attributes__i_c" label: "I_C\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:104:13" shape : ellipse }
 node: { title: "gnat__sockets__accept_socket" label: "ACCEPT_SOCKET\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-socket.ads:808:14" shape : ellipse }
 node: { title: "gnat__sockets__get" label: "GET\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-socket.ads:1044:14" shape : ellipse }
 node: { title: "__gnat_rcheck_CE_Invalid_Data" label: "gnat_rcheck_CE_Invalid_Data\n<built-in>" shape : ellipse }
@@ -85,10 +87,14 @@ edge: { sourcename: "concrete_server_logic___elabs" targetname: "__indirect_call
 node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
 node: { title: "concrete_server_logic___elabb" label: "Concrete_Server_Logic\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:1:1\n32 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "concrete_server_logic___elabb" targetname: "system__tasking__stages__activate_tasks" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:1:1" }
-node: { title: "concrete_server_logic__main_server_taskTKB" label: "Main_Server_Task\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:49:4\n12560 bytes (static)\n0 dynamic objects" }
+node: { title: "concrete_server_logic__main_server_taskTKB" label: "Main_Server_Task\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:49:4\n12576 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "_Unwind_Resume" }
-edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:concrete_server_logic__main_server_taskTK___finalizer.4511" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:150:0" }
-edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "gnat__sockets__empty" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:109:13" }
+edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:concrete_server_logic__main_server_taskTK___finalizer.4511" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:151:0" }
+edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "gnat__sockets__empty" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:110:13" }
+edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "system__stream_attributes__w_c" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:102:31" }
+edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "system__stream_attributes__i_c" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:102:58" }
+edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:102:58" }
+edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "gnat__sockets__stream" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:101:30" }
 edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "gnat__sockets__set" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:95:22" }
 edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "gnat__sockets__accept_socket" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:94:22" }
 edge: { sourcename: "concrete_server_logic__main_server_taskTKB" targetname: "gnat__sockets__get" label: "C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb:89:31" }

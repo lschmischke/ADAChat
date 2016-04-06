@@ -309,7 +309,7 @@ package ada_main is
    pragma Export (C, u00136, "system__memoryB");
    u00137 : constant Version_32 := 16#adb3ea0e#;
    pragma Export (C, u00137, "system__memoryS");
-   u00138 : constant Version_32 := 16#cc97a410#;
+   u00138 : constant Version_32 := 16#734a1750#;
    pragma Export (C, u00138, "concrete_server_logicB");
    u00139 : constant Version_32 := 16#89840f7b#;
    pragma Export (C, u00139, "concrete_server_logicS");

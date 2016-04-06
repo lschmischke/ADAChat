@@ -54,7 +54,7 @@ package body Concrete_Server_Logic is
       Receiver : Socket_Type;
       --Connection : Socket_Type;
       Client_Address : Sock_Addr_Type;
-      --Channel : Stream_Access;
+      Channel : Stream_Access;
       Sockets : Socket_Set_Type;
       Socket_Selector : Selector_Type;
       Write_Sockets : Socket_Set_Type;
@@ -94,11 +94,12 @@ package body Concrete_Server_Logic is
                      Accept_Socket(Server => Receiver, Socket => Active_Socket, Address => Client_Address);
                      Set(Item => Sockets, Socket => Active_Socket);
                   elsif Active_Socket = No_Socket then
-                     -- keiner der Sockets hat Daten zum Senden oder Empfangen
+                     -- keiner der Sockets hat Daten zum Senden oder Empfangen oder das Set war leer
                      null;
                   else
-                     -- mal schauen
-                     null;
+                     -- Kommunikationskanal für aktiven Socket erzeugen und Daten lesen, schreiben
+                     Channel := Stream(Active_Socket);
+                     Character'Output (Channel, Character'Input (Channel));
                   end if;
                end;
             else
