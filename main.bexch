@@ -16,6 +16,7 @@ C:\Users\Daniel Kreck\Documents\adachat\data_types.o
 C:\Users\Daniel Kreck\Documents\adachat\communication_objects-messages-userlist.o
 C:\Users\Daniel Kreck\Documents\adachat\data_types_test.o
 C:\Users\Daniel Kreck\Documents\adachat\server_logic.o
+C:\Users\Daniel Kreck\Documents\adachat\concrete_server_logic.o
 C:\Users\Daniel Kreck\Documents\adachat\server_ui.o
 C:\Users\Daniel Kreck\Documents\adachat\main.o
 [GENERATED SOURCE FILES]
@@ -28,5 +29,9 @@ b__main.ali
 -LD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
 -static
 -static-libgcc
+D:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
 D:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
--Wl,--stack=0x2000000
+-lws2_32
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

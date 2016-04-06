@@ -2,6 +2,8 @@ pragma Ada_95;
 pragma Source_File_Name (ada_main, Spec_File_Name => "b__main.ads");
 pragma Source_File_Name (ada_main, Body_File_Name => "b__main.adb");
 pragma Suppress (Overflow_Check);
+
+with System.Restrictions;
 with Ada.Exceptions;
 
 package body ada_main is
@@ -17,6 +19,7 @@ package body ada_main is
    E055 : Short_Integer; pragma Import (Ada, E055, "ada__tags_E");
    E083 : Short_Integer; pragma Import (Ada, E083, "ada__streams_E");
    E115 : Short_Integer; pragma Import (Ada, E115, "interfaces__c_E");
+   E145 : Short_Integer; pragma Import (Ada, E145, "interfaces__c__strings_E");
    E022 : Short_Integer; pragma Import (Ada, E022, "system__exceptions_E");
    E120 : Short_Integer; pragma Import (Ada, E120, "system__file_control_block_E");
    E106 : Short_Integer; pragma Import (Ada, E106, "ada__streams__stream_io_E");
@@ -26,12 +29,23 @@ package body ada_main is
    E088 : Short_Integer; pragma Import (Ada, E088, "system__storage_pools_E");
    E075 : Short_Integer; pragma Import (Ada, E075, "system__finalization_masters_E");
    E071 : Short_Integer; pragma Import (Ada, E071, "system__storage_pools__subpools_E");
+   E161 : Short_Integer; pragma Import (Ada, E161, "system__task_info_E");
    E133 : Short_Integer; pragma Import (Ada, E133, "system__assertions_E");
    E135 : Short_Integer; pragma Import (Ada, E135, "system__pool_global_E");
+   E210 : Short_Integer; pragma Import (Ada, E210, "gnat__sockets_E");
+   E217 : Short_Integer; pragma Import (Ada, E217, "system__pool_size_E");
    E014 : Short_Integer; pragma Import (Ada, E014, "system__secondary_stack_E");
    E044 : Short_Integer; pragma Import (Ada, E044, "ada__strings__unbounded_E");
+   E215 : Short_Integer; pragma Import (Ada, E215, "gnat__sockets__thin_common_E");
+   E213 : Short_Integer; pragma Import (Ada, E213, "gnat__sockets__thin_E");
    E104 : Short_Integer; pragma Import (Ada, E104, "system__strings__stream_ops_E");
-   E143 : Short_Integer; pragma Import (Ada, E143, "ada__text_io_E");
+   E179 : Short_Integer; pragma Import (Ada, E179, "system__tasking__initialization_E");
+   E203 : Short_Integer; pragma Import (Ada, E203, "ada__real_time_E");
+   E207 : Short_Integer; pragma Import (Ada, E207, "ada__text_io_E");
+   E187 : Short_Integer; pragma Import (Ada, E187, "system__tasking__protected_objects_E");
+   E191 : Short_Integer; pragma Import (Ada, E191, "system__tasking__protected_objects__entries_E");
+   E195 : Short_Integer; pragma Import (Ada, E195, "system__tasking__queuing_E");
+   E201 : Short_Integer; pragma Import (Ada, E201, "system__tasking__stages_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "client_ui_E");
    E097 : Short_Integer; pragma Import (Ada, E097, "communication_objects_E");
    E096 : Short_Integer; pragma Import (Ada, E096, "client_logic_E");
@@ -42,9 +56,10 @@ package body ada_main is
    E126 : Short_Integer; pragma Import (Ada, E126, "communication_objects__messages__refuse_E");
    E130 : Short_Integer; pragma Import (Ada, E130, "data_types_E");
    E128 : Short_Integer; pragma Import (Ada, E128, "communication_objects__messages__userlist_E");
-   E139 : Short_Integer; pragma Import (Ada, E139, "data_types_test_E");
-   E144 : Short_Integer; pragma Import (Ada, E144, "server_logic_E");
-   E146 : Short_Integer; pragma Import (Ada, E146, "server_ui_E");
+   E223 : Short_Integer; pragma Import (Ada, E223, "data_types_test_E");
+   E221 : Short_Integer; pragma Import (Ada, E221, "server_logic_E");
+   E139 : Short_Integer; pragma Import (Ada, E139, "concrete_server_logic_E");
+   E227 : Short_Integer; pragma Import (Ada, E227, "server_ui_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -53,103 +68,137 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E128 := E128 - 1;
+      E139 := E139 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "communication_objects__messages__userlist__finalize_spec");
+         pragma Import (Ada, F1, "concrete_server_logic__finalize_spec");
       begin
          F1;
       end;
-      E130 := E130 - 1;
+      E128 := E128 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "data_types__finalize_spec");
+         pragma Import (Ada, F2, "communication_objects__messages__userlist__finalize_spec");
       begin
          F2;
       end;
-      E126 := E126 - 1;
+      E130 := E130 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "communication_objects__messages__refuse__finalize_spec");
+         pragma Import (Ada, F3, "data_types__finalize_spec");
       begin
          F3;
       end;
-      E124 := E124 - 1;
+      E126 := E126 - 1;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "communication_objects__messages__disconnect__finalize_spec");
+         pragma Import (Ada, F4, "communication_objects__messages__refuse__finalize_spec");
       begin
          F4;
       end;
-      E122 := E122 - 1;
+      E124 := E124 - 1;
       declare
          procedure F5;
-         pragma Import (Ada, F5, "communication_objects__messages__connect__finalize_spec");
+         pragma Import (Ada, F5, "communication_objects__messages__disconnect__finalize_spec");
       begin
          F5;
       end;
-      E102 := E102 - 1;
+      E122 := E122 - 1;
       declare
          procedure F6;
-         pragma Import (Ada, F6, "communication_objects__messages__finalize_spec");
+         pragma Import (Ada, F6, "communication_objects__messages__connect__finalize_spec");
       begin
          F6;
       end;
+      E102 := E102 - 1;
       declare
          procedure F7;
-         pragma Import (Ada, F7, "communication_objects__files__finalize_spec");
+         pragma Import (Ada, F7, "communication_objects__messages__finalize_spec");
       begin
-         E100 := E100 - 1;
          F7;
       end;
-      E143 := E143 - 1;
       declare
          procedure F8;
-         pragma Import (Ada, F8, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F8, "communication_objects__files__finalize_spec");
       begin
+         E100 := E100 - 1;
          F8;
       end;
-      E044 := E044 - 1;
+      E191 := E191 - 1;
       declare
          procedure F9;
-         pragma Import (Ada, F9, "ada__strings__unbounded__finalize_spec");
+         pragma Import (Ada, F9, "system__tasking__protected_objects__entries__finalize_spec");
       begin
          F9;
       end;
+      E207 := E207 - 1;
       declare
          procedure F10;
-         pragma Import (Ada, F10, "system__file_io__finalize_body");
+         pragma Import (Ada, F10, "ada__text_io__finalize_spec");
       begin
-         E113 := E113 - 1;
          F10;
       end;
-      E075 := E075 - 1;
-      E071 := E071 - 1;
-      E135 := E135 - 1;
       declare
          procedure F11;
-         pragma Import (Ada, F11, "system__pool_global__finalize_spec");
+         pragma Import (Ada, F11, "gnat__sockets__finalize_body");
       begin
+         E210 := E210 - 1;
          F11;
       end;
+      E044 := E044 - 1;
       declare
          procedure F12;
-         pragma Import (Ada, F12, "system__storage_pools__subpools__finalize_spec");
+         pragma Import (Ada, F12, "ada__strings__unbounded__finalize_spec");
       begin
          F12;
       end;
       declare
          procedure F13;
-         pragma Import (Ada, F13, "system__finalization_masters__finalize_spec");
+         pragma Import (Ada, F13, "system__file_io__finalize_body");
       begin
+         E113 := E113 - 1;
          F13;
+      end;
+      E075 := E075 - 1;
+      E071 := E071 - 1;
+      E217 := E217 - 1;
+      declare
+         procedure F14;
+         pragma Import (Ada, F14, "system__pool_size__finalize_spec");
+      begin
+         F14;
+      end;
+      declare
+         procedure F15;
+         pragma Import (Ada, F15, "gnat__sockets__finalize_spec");
+      begin
+         F15;
+      end;
+      E135 := E135 - 1;
+      declare
+         procedure F16;
+         pragma Import (Ada, F16, "system__pool_global__finalize_spec");
+      begin
+         F16;
+      end;
+      declare
+         procedure F17;
+         pragma Import (Ada, F17, "system__storage_pools__subpools__finalize_spec");
+      begin
+         F17;
+      end;
+      declare
+         procedure F18;
+         pragma Import (Ada, F18, "system__finalization_masters__finalize_spec");
+      begin
+         F18;
       end;
       E106 := E106 - 1;
       declare
-         procedure F14;
-         pragma Import (Ada, F14, "ada__streams__stream_io__finalize_spec");
+         procedure F19;
+         pragma Import (Ada, F19, "ada__streams__stream_io__finalize_spec");
       begin
-         F14;
+         F19;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -225,6 +274,34 @@ package body ada_main is
       Locking_Policy := ' ';
       Queuing_Policy := ' ';
       Task_Dispatching_Policy := ' ';
+      System.Restrictions.Run_Time_Restrictions :=
+        (Set =>
+          (False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           True, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False),
+         Value => (0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+         Violated =>
+          (False, False, False, True, True, False, False, False, 
+           False, False, False, True, True, True, False, False, 
+           True, False, False, True, True, False, True, True, 
+           False, True, True, True, True, False, False, True, 
+           False, True, False, False, True, False, True, False, 
+           False, True, False, False, False, True, False, False, 
+           False, True, False, True, False, False, False, False, 
+           True, False, True, True, True, False, False, True, 
+           False, False, True, False, True, True, False, True, 
+           True, True, False, True, False, False, False, False, 
+           False, True, True, False, False, False),
+         Count => (0, 0, 0, 0, 0, 1, 1, 0, 0, 0),
+         Unknown => (False, False, False, False, False, False, False, False, False, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
       Num_Specific_Dispatching := 0;
@@ -254,6 +331,7 @@ package body ada_main is
       Ada.Streams'Elab_Spec;
       E083 := E083 + 1;
       Interfaces.C'Elab_Spec;
+      Interfaces.C.Strings'Elab_Spec;
       System.Exceptions'Elab_Spec;
       E022 := E022 + 1;
       System.File_Control_Block'Elab_Spec;
@@ -268,15 +346,21 @@ package body ada_main is
       E088 := E088 + 1;
       System.Finalization_Masters'Elab_Spec;
       System.Storage_Pools.Subpools'Elab_Spec;
+      System.Task_Info'Elab_Spec;
+      E161 := E161 + 1;
       System.Assertions'Elab_Spec;
       E133 := E133 + 1;
       System.Pool_Global'Elab_Spec;
       E135 := E135 + 1;
+      Gnat.Sockets'Elab_Spec;
+      System.Pool_Size'Elab_Spec;
+      E217 := E217 + 1;
       E071 := E071 + 1;
       System.Finalization_Masters'Elab_Body;
       E075 := E075 + 1;
       System.File_Io'Elab_Body;
       E113 := E113 + 1;
+      E145 := E145 + 1;
       E115 := E115 + 1;
       Ada.Tags'Elab_Body;
       E055 := E055 + 1;
@@ -289,11 +373,30 @@ package body ada_main is
       E014 := E014 + 1;
       Ada.Strings.Unbounded'Elab_Spec;
       E044 := E044 + 1;
+      Gnat.Sockets.Thin_Common'Elab_Spec;
+      E215 := E215 + 1;
+      Gnat.Sockets.Thin'Elab_Body;
+      E213 := E213 + 1;
+      Gnat.Sockets'Elab_Body;
+      E210 := E210 + 1;
       System.Strings.Stream_Ops'Elab_Body;
       E104 := E104 + 1;
+      System.Tasking.Initialization'Elab_Body;
+      E179 := E179 + 1;
+      Ada.Real_Time'Elab_Spec;
+      Ada.Real_Time'Elab_Body;
+      E203 := E203 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
-      E143 := E143 + 1;
+      E207 := E207 + 1;
+      System.Tasking.Protected_Objects'Elab_Body;
+      E187 := E187 + 1;
+      System.Tasking.Protected_Objects.Entries'Elab_Spec;
+      E191 := E191 + 1;
+      System.Tasking.Queuing'Elab_Body;
+      E195 := E195 + 1;
+      System.Tasking.Stages'Elab_Body;
+      E201 := E201 + 1;
       E099 := E099 + 1;
       Communication_Objects'Elab_Spec;
       E097 := E097 + 1;
@@ -313,10 +416,13 @@ package body ada_main is
       E130 := E130 + 1;
       Communication_Objects.Messages.Userlist'Elab_Spec;
       E128 := E128 + 1;
-      E139 := E139 + 1;
+      E223 := E223 + 1;
       Server_Logic'Elab_Spec;
-      E144 := E144 + 1;
-      E146 := E146 + 1;
+      E221 := E221 + 1;
+      Concrete_Server_Logic'Elab_Spec;
+      Concrete_Server_Logic'Elab_Body;
+      E139 := E139 + 1;
+      E227 := E227 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -364,13 +470,19 @@ package body ada_main is
    --   C:\Users\Daniel Kreck\Documents\adachat\communication_objects-messages-userlist.o
    --   C:\Users\Daniel Kreck\Documents\adachat\data_types_test.o
    --   C:\Users\Daniel Kreck\Documents\adachat\server_logic.o
+   --   C:\Users\Daniel Kreck\Documents\adachat\concrete_server_logic.o
    --   C:\Users\Daniel Kreck\Documents\adachat\server_ui.o
    --   C:\Users\Daniel Kreck\Documents\adachat\main.o
    --   -LC:\Users\Daniel Kreck\Documents\adachat\
    --   -LC:\Users\Daniel Kreck\Documents\adachat\
    --   -LD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
    --   -static
+   --   -lgnarl
    --   -lgnat
+   --   -lws2_32
+   --   -Xlinker
+   --   --stack=0x200000,0x1000
+   --   -mthreads
    --   -Wl,--stack=0x2000000
 --  END Object file/option list   
 

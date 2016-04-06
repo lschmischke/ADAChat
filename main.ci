@@ -1,9 +1,14 @@
 graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\main.adb"
 node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
-node: { title: "data_types_test__test" label: "Test\nC:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.ads:8:14" shape : ellipse }
+node: { title: "server_ui__start_server" label: "Start_Server\nC:\Users\Daniel Kreck\Documents\adachat\server\server_ui.ads:5:14" shape : ellipse }
+node: { title: "data_types_test__test" label: "Test\nC:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.ads:9:14" shape : ellipse }
 node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
-node: { title: "_ada_main" label: "main\nC:\Users\Daniel Kreck\Documents\adachat\main.adb:14:1\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "_ada_main" targetname: "data_types_test__test" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:16:18" }
-edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:16:18" }
-edge: { sourcename: "_ada_main" targetname: "__main" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:14:1" }
+node: { title: "concrete_server_logic__concrete_serverIP" label: "Concrete_Serverip\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:10:9" shape : ellipse }
+node: { title: "_ada_main" label: "main\nC:\Users\Daniel Kreck\Documents\adachat\main.adb:15:1\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "_ada_main" targetname: "server_ui__start_server" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:19:13" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:19:13" }
+edge: { sourcename: "_ada_main" targetname: "data_types_test__test" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:18:19" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:18:19" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverIP" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:16:4" }
+edge: { sourcename: "_ada_main" targetname: "__main" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:15:1" }
 }

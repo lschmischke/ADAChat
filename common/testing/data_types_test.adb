@@ -3,6 +3,13 @@ package body  Data_Types_Test is
    procedure Test is
       pragma Assertion_Policy(Check);
 
+      procedure Free_User is new Ada.Unchecked_Deallocation
+        (Object => User, Name => User_Ptr);
+
+      procedure Free_User_ContactList is new Ada.Unchecked_Deallocation
+        (Object => User_ContactList, Name => User_ContactList_Ptr);
+
+
       testRights1, testRights2 : User_Rights;
       testUser1, testUser2 : User_Ptr := new User;
       testContacts : User_ContactList_Ptr := new User_ContactList;
@@ -44,6 +51,20 @@ package body  Data_Types_Test is
       Assert(getUser(this => testContacts, userToGet => testUser1) = null, "get testUser1 successfull");
       Assert(addUser(this => testContacts, userToAdd => testUser1), "adding testUser1 failed");
       Assert(getUser(this => testContacts, userToGet => testUser1) = testUser1, "get testUser1 failed");
+
+      --------------------------------------------------------------------------
+
+      Assert(testContacts /= null, "contactlist is null");
+      Assert(testUser1 /= null, "user1 is null");
+      Assert(testUser2 /= null, "user2 is null");
+
+      Free_User_ContactList(testContacts);
+      Free_User(testUser1);
+      Free_User(testUser2);
+
+      Assert(testContacts = null, "free contactlist failed");
+      Assert(testUser1 = null, "free user1 failed");
+      Assert(testUser2 = null, "free user2 failed");
 
       end Test;
 

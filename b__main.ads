@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#fc7ec4e5#;
+   u00001 : constant Version_32 := 16#cde491de#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#fbff4c67#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -291,7 +291,7 @@ package ada_main is
    pragma Export (C, u00127, "communication_objects__messages__userlistB");
    u00128 : constant Version_32 := 16#70e9a888#;
    pragma Export (C, u00128, "communication_objects__messages__userlistS");
-   u00129 : constant Version_32 := 16#e08522dd#;
+   u00129 : constant Version_32 := 16#0a5d4836#;
    pragma Export (C, u00129, "data_typesB");
    u00130 : constant Version_32 := 16#68d97f1b#;
    pragma Export (C, u00130, "data_typesS");
@@ -309,49 +309,221 @@ package ada_main is
    pragma Export (C, u00136, "system__memoryB");
    u00137 : constant Version_32 := 16#adb3ea0e#;
    pragma Export (C, u00137, "system__memoryS");
-   u00138 : constant Version_32 := 16#84073d23#;
-   pragma Export (C, u00138, "data_types_testB");
-   u00139 : constant Version_32 := 16#394a7525#;
-   pragma Export (C, u00139, "data_types_testS");
-   u00140 : constant Version_32 := 16#9094876d#;
-   pragma Export (C, u00140, "ada__assertionsB");
-   u00141 : constant Version_32 := 16#538f1e95#;
-   pragma Export (C, u00141, "ada__assertionsS");
-   u00142 : constant Version_32 := 16#28f088c2#;
-   pragma Export (C, u00142, "ada__text_ioB");
-   u00143 : constant Version_32 := 16#1a9b0017#;
-   pragma Export (C, u00143, "ada__text_ioS");
-   u00144 : constant Version_32 := 16#508ced14#;
-   pragma Export (C, u00144, "server_logicS");
-   u00145 : constant Version_32 := 16#2e6ba377#;
-   pragma Export (C, u00145, "server_uiB");
-   u00146 : constant Version_32 := 16#1b71642f#;
-   pragma Export (C, u00146, "server_uiS");
+   u00138 : constant Version_32 := 16#cc97a410#;
+   pragma Export (C, u00138, "concrete_server_logicB");
+   u00139 : constant Version_32 := 16#89840f7b#;
+   pragma Export (C, u00139, "concrete_server_logicS");
+   u00140 : constant Version_32 := 16#30bb6e97#;
+   pragma Export (C, u00140, "system__taskingB");
+   u00141 : constant Version_32 := 16#8d6ada58#;
+   pragma Export (C, u00141, "system__taskingS");
+   u00142 : constant Version_32 := 16#01715bc2#;
+   pragma Export (C, u00142, "system__task_primitivesS");
+   u00143 : constant Version_32 := 16#f4bb5b54#;
+   pragma Export (C, u00143, "system__os_interfaceS");
+   u00144 : constant Version_32 := 16#2c7d263c#;
+   pragma Export (C, u00144, "interfaces__c__stringsB");
+   u00145 : constant Version_32 := 16#603c1c44#;
+   pragma Export (C, u00145, "interfaces__c__stringsS");
+   u00146 : constant Version_32 := 16#1716ff24#;
+   pragma Export (C, u00146, "system__win32S");
+   u00147 : constant Version_32 := 16#e2725713#;
+   pragma Export (C, u00147, "system__task_primitives__operationsB");
+   u00148 : constant Version_32 := 16#12291044#;
+   pragma Export (C, u00148, "system__task_primitives__operationsS");
+   u00149 : constant Version_32 := 16#1b28662b#;
+   pragma Export (C, u00149, "system__float_controlB");
+   u00150 : constant Version_32 := 16#1432cf06#;
+   pragma Export (C, u00150, "system__float_controlS");
+   u00151 : constant Version_32 := 16#da8ccc08#;
+   pragma Export (C, u00151, "system__interrupt_managementB");
+   u00152 : constant Version_32 := 16#c90ea50e#;
+   pragma Export (C, u00152, "system__interrupt_managementS");
+   u00153 : constant Version_32 := 16#f65595cf#;
+   pragma Export (C, u00153, "system__multiprocessorsB");
+   u00154 : constant Version_32 := 16#cc621349#;
+   pragma Export (C, u00154, "system__multiprocessorsS");
+   u00155 : constant Version_32 := 16#f4bb3578#;
+   pragma Export (C, u00155, "system__os_primitivesB");
+   u00156 : constant Version_32 := 16#441f0013#;
+   pragma Export (C, u00156, "system__os_primitivesS");
+   u00157 : constant Version_32 := 16#0881bbf8#;
+   pragma Export (C, u00157, "system__task_lockB");
+   u00158 : constant Version_32 := 16#9544bb54#;
+   pragma Export (C, u00158, "system__task_lockS");
+   u00159 : constant Version_32 := 16#1a9147da#;
+   pragma Export (C, u00159, "system__win32__extS");
+   u00160 : constant Version_32 := 16#77769007#;
+   pragma Export (C, u00160, "system__task_infoB");
+   u00161 : constant Version_32 := 16#232885cd#;
+   pragma Export (C, u00161, "system__task_infoS");
+   u00162 : constant Version_32 := 16#ab9ad34e#;
+   pragma Export (C, u00162, "system__tasking__debugB");
+   u00163 : constant Version_32 := 16#f1f2435f#;
+   pragma Export (C, u00163, "system__tasking__debugS");
+   u00164 : constant Version_32 := 16#fd83e873#;
+   pragma Export (C, u00164, "system__concat_2B");
+   u00165 : constant Version_32 := 16#f66e5bea#;
+   pragma Export (C, u00165, "system__concat_2S");
+   u00166 : constant Version_32 := 16#2b70b149#;
+   pragma Export (C, u00166, "system__concat_3B");
+   u00167 : constant Version_32 := 16#ffbed09f#;
+   pragma Export (C, u00167, "system__concat_3S");
+   u00168 : constant Version_32 := 16#d0432c8d#;
+   pragma Export (C, u00168, "system__img_enum_newB");
+   u00169 : constant Version_32 := 16#95828afa#;
+   pragma Export (C, u00169, "system__img_enum_newS");
+   u00170 : constant Version_32 := 16#118e865d#;
+   pragma Export (C, u00170, "system__stack_usageB");
+   u00171 : constant Version_32 := 16#00bc3311#;
+   pragma Export (C, u00171, "system__stack_usageS");
+   u00172 : constant Version_32 := 16#3cc73d8e#;
+   pragma Export (C, u00172, "system__tasking__rendezvousB");
+   u00173 : constant Version_32 := 16#71fce298#;
+   pragma Export (C, u00173, "system__tasking__rendezvousS");
+   u00174 : constant Version_32 := 16#100eaf58#;
+   pragma Export (C, u00174, "system__restrictionsB");
+   u00175 : constant Version_32 := 16#efa60774#;
+   pragma Export (C, u00175, "system__restrictionsS");
+   u00176 : constant Version_32 := 16#72d3cb03#;
+   pragma Export (C, u00176, "system__tasking__entry_callsB");
+   u00177 : constant Version_32 := 16#e903595c#;
+   pragma Export (C, u00177, "system__tasking__entry_callsS");
+   u00178 : constant Version_32 := 16#92d5df45#;
+   pragma Export (C, u00178, "system__tasking__initializationB");
+   u00179 : constant Version_32 := 16#d9930fa8#;
+   pragma Export (C, u00179, "system__tasking__initializationS");
+   u00180 : constant Version_32 := 16#001f972c#;
+   pragma Export (C, u00180, "system__soft_links__taskingB");
+   u00181 : constant Version_32 := 16#e47ef8be#;
+   pragma Export (C, u00181, "system__soft_links__taskingS");
+   u00182 : constant Version_32 := 16#17d21067#;
+   pragma Export (C, u00182, "ada__exceptions__is_null_occurrenceB");
+   u00183 : constant Version_32 := 16#9a9e8fd3#;
+   pragma Export (C, u00183, "ada__exceptions__is_null_occurrenceS");
+   u00184 : constant Version_32 := 16#d89f9b67#;
+   pragma Export (C, u00184, "system__tasking__task_attributesB");
+   u00185 : constant Version_32 := 16#952bcf5e#;
+   pragma Export (C, u00185, "system__tasking__task_attributesS");
+   u00186 : constant Version_32 := 16#5933ea28#;
+   pragma Export (C, u00186, "system__tasking__protected_objectsB");
+   u00187 : constant Version_32 := 16#63b50013#;
+   pragma Export (C, u00187, "system__tasking__protected_objectsS");
+   u00188 : constant Version_32 := 16#ee80728a#;
+   pragma Export (C, u00188, "system__tracesB");
+   u00189 : constant Version_32 := 16#06d3e490#;
+   pragma Export (C, u00189, "system__tracesS");
+   u00190 : constant Version_32 := 16#3ea9332d#;
+   pragma Export (C, u00190, "system__tasking__protected_objects__entriesB");
+   u00191 : constant Version_32 := 16#7671a6ef#;
+   pragma Export (C, u00191, "system__tasking__protected_objects__entriesS");
+   u00192 : constant Version_32 := 16#6f8919f6#;
+   pragma Export (C, u00192, "system__tasking__protected_objects__operationsB");
+   u00193 : constant Version_32 := 16#eb67f071#;
+   pragma Export (C, u00193, "system__tasking__protected_objects__operationsS");
+   u00194 : constant Version_32 := 16#94c4f9d9#;
+   pragma Export (C, u00194, "system__tasking__queuingB");
+   u00195 : constant Version_32 := 16#3117b7f1#;
+   pragma Export (C, u00195, "system__tasking__queuingS");
+   u00196 : constant Version_32 := 16#c6ee4b22#;
+   pragma Export (C, u00196, "system__tasking__utilitiesB");
+   u00197 : constant Version_32 := 16#ea41a805#;
+   pragma Export (C, u00197, "system__tasking__utilitiesS");
+   u00198 : constant Version_32 := 16#bd6fc52e#;
+   pragma Export (C, u00198, "system__traces__taskingB");
+   u00199 : constant Version_32 := 16#3fb127e5#;
+   pragma Export (C, u00199, "system__traces__taskingS");
+   u00200 : constant Version_32 := 16#d6fbdf05#;
+   pragma Export (C, u00200, "system__tasking__stagesB");
+   u00201 : constant Version_32 := 16#f8a082a4#;
+   pragma Export (C, u00201, "system__tasking__stagesS");
+   u00202 : constant Version_32 := 16#91613c5c#;
+   pragma Export (C, u00202, "ada__real_timeB");
+   u00203 : constant Version_32 := 16#87ade2f4#;
+   pragma Export (C, u00203, "ada__real_timeS");
+   u00204 : constant Version_32 := 16#1f99af62#;
+   pragma Export (C, u00204, "system__arith_64B");
+   u00205 : constant Version_32 := 16#d4b08bf7#;
+   pragma Export (C, u00205, "system__arith_64S");
+   u00206 : constant Version_32 := 16#28f088c2#;
+   pragma Export (C, u00206, "ada__text_ioB");
+   u00207 : constant Version_32 := 16#1a9b0017#;
+   pragma Export (C, u00207, "ada__text_ioS");
+   u00208 : constant Version_32 := 16#fd2ad2f1#;
+   pragma Export (C, u00208, "gnatS");
+   u00209 : constant Version_32 := 16#b183acf5#;
+   pragma Export (C, u00209, "gnat__socketsB");
+   u00210 : constant Version_32 := 16#d351939f#;
+   pragma Export (C, u00210, "gnat__socketsS");
+   u00211 : constant Version_32 := 16#f8b8cc5a#;
+   pragma Export (C, u00211, "gnat__sockets__linker_optionsS");
+   u00212 : constant Version_32 := 16#b0532f13#;
+   pragma Export (C, u00212, "gnat__sockets__thinB");
+   u00213 : constant Version_32 := 16#7cbf3246#;
+   pragma Export (C, u00213, "gnat__sockets__thinS");
+   u00214 : constant Version_32 := 16#0a2632e6#;
+   pragma Export (C, u00214, "gnat__sockets__thin_commonB");
+   u00215 : constant Version_32 := 16#5de24e36#;
+   pragma Export (C, u00215, "gnat__sockets__thin_commonS");
+   u00216 : constant Version_32 := 16#994daa60#;
+   pragma Export (C, u00216, "system__pool_sizeB");
+   u00217 : constant Version_32 := 16#f5e0c463#;
+   pragma Export (C, u00217, "system__pool_sizeS");
+   u00218 : constant Version_32 := 16#7ebd8839#;
+   pragma Export (C, u00218, "system__val_intB");
+   u00219 : constant Version_32 := 16#bc6ba605#;
+   pragma Export (C, u00219, "system__val_intS");
+   u00220 : constant Version_32 := 16#2e610ef3#;
+   pragma Export (C, u00220, "system__os_constantsS");
+   u00221 : constant Version_32 := 16#508ced14#;
+   pragma Export (C, u00221, "server_logicS");
+   u00222 : constant Version_32 := 16#af01ab11#;
+   pragma Export (C, u00222, "data_types_testB");
+   u00223 : constant Version_32 := 16#9f27f552#;
+   pragma Export (C, u00223, "data_types_testS");
+   u00224 : constant Version_32 := 16#9094876d#;
+   pragma Export (C, u00224, "ada__assertionsB");
+   u00225 : constant Version_32 := 16#538f1e95#;
+   pragma Export (C, u00225, "ada__assertionsS");
+   u00226 : constant Version_32 := 16#6c3536aa#;
+   pragma Export (C, u00226, "server_uiB");
+   u00227 : constant Version_32 := 16#3259cc7a#;
+   pragma Export (C, u00227, "server_uiS");
    --  BEGIN ELABORATION ORDER
    --  ada%s
    --  ada.characters%s
    --  ada.characters.latin_1%s
+   --  gnat%s
    --  interfaces%s
    --  system%s
    --  system.address_operations%s
    --  system.address_operations%b
+   --  system.arith_64%s
    --  system.atomic_counters%s
    --  system.case_util%s
    --  system.case_util%b
+   --  system.float_control%s
+   --  system.float_control%b
    --  system.htable%s
    --  system.img_bool%s
    --  system.img_bool%b
+   --  system.img_enum_new%s
+   --  system.img_enum_new%b
    --  system.img_int%s
    --  system.img_int%b
    --  system.io%s
    --  system.io%b
    --  system.machine_code%s
    --  system.atomic_counters%b
+   --  system.multiprocessors%s
+   --  system.os_primitives%s
    --  system.parameters%s
    --  system.parameters%b
    --  system.crtl%s
    --  interfaces.c_streams%s
    --  interfaces.c_streams%b
+   --  system.restrictions%s
+   --  system.restrictions%b
    --  system.standard_library%s
    --  system.exceptions_debug%s
    --  system.exceptions_debug%b
@@ -359,21 +531,32 @@ package ada_main is
    --  system.storage_elements%b
    --  system.stack_checking%s
    --  system.stack_checking%b
+   --  system.stack_usage%s
+   --  system.stack_usage%b
    --  system.string_hash%s
    --  system.string_hash%b
    --  system.htable%b
    --  system.strings%s
    --  system.strings%b
    --  system.os_lib%s
+   --  system.task_lock%s
    --  system.traceback_entries%s
    --  system.traceback_entries%b
    --  ada.exceptions%s
+   --  system.arith_64%b
+   --  ada.exceptions.is_null_occurrence%s
+   --  ada.exceptions.is_null_occurrence%b
    --  system.soft_links%s
+   --  system.task_lock%b
+   --  system.traces%s
+   --  system.traces%b
    --  system.unsigned_types%s
+   --  system.val_int%s
    --  system.val_uns%s
    --  system.val_util%s
    --  system.val_util%b
    --  system.val_uns%b
+   --  system.val_int%b
    --  system.wch_con%s
    --  system.wch_con%b
    --  system.wch_cnv%s
@@ -389,6 +572,10 @@ package ada_main is
    --  system.bit_ops%b
    --  system.compare_array_unsigned_8%s
    --  system.compare_array_unsigned_8%b
+   --  system.concat_2%s
+   --  system.concat_2%b
+   --  system.concat_3%s
+   --  system.concat_3%b
    --  system.exception_table%s
    --  system.exception_table%b
    --  ada.containers%s
@@ -401,6 +588,8 @@ package ada_main is
    --  ada.streams%s
    --  ada.streams%b
    --  interfaces.c%s
+   --  system.multiprocessors%b
+   --  interfaces.c.strings%s
    --  system.communication%s
    --  system.communication%b
    --  system.exceptions%s
@@ -414,6 +603,7 @@ package ada_main is
    --  system.finalization_root%b
    --  ada.finalization%s
    --  ada.finalization%b
+   --  system.os_constants%s
    --  system.storage_pools%s
    --  system.storage_pools%b
    --  system.finalization_masters%s
@@ -422,6 +612,23 @@ package ada_main is
    --  system.storage_pools.subpools.finalization%b
    --  system.stream_attributes%s
    --  system.stream_attributes%b
+   --  system.win32%s
+   --  system.os_interface%s
+   --  system.interrupt_management%s
+   --  system.interrupt_management%b
+   --  system.task_info%s
+   --  system.task_info%b
+   --  system.task_primitives%s
+   --  system.tasking%s
+   --  system.task_primitives.operations%s
+   --  system.tasking%b
+   --  system.tasking.debug%s
+   --  system.tasking.debug%b
+   --  system.traces.tasking%s
+   --  system.traces.tasking%b
+   --  system.win32.ext%s
+   --  system.task_primitives.operations%b
+   --  system.os_primitives%b
    --  system.assertions%s
    --  system.assertions%b
    --  ada.assertions%s
@@ -431,10 +638,15 @@ package ada_main is
    --  system.standard_library%b
    --  system.pool_global%s
    --  system.pool_global%b
+   --  gnat.sockets%s
+   --  gnat.sockets.linker_options%s
+   --  system.pool_size%s
+   --  system.pool_size%b
    --  system.secondary_stack%s
    --  system.storage_pools.subpools%b
    --  system.finalization_masters%b
    --  system.file_io%b
+   --  interfaces.c.strings%b
    --  interfaces.c%b
    --  ada.tags%b
    --  ada.strings.maps%b
@@ -444,13 +656,42 @@ package ada_main is
    --  system.address_image%b
    --  ada.strings.unbounded%s
    --  ada.strings.unbounded%b
+   --  gnat.sockets.thin_common%s
+   --  gnat.sockets.thin_common%b
+   --  gnat.sockets.thin%s
+   --  gnat.sockets.thin%b
+   --  gnat.sockets%b
+   --  system.soft_links.tasking%s
+   --  system.soft_links.tasking%b
    --  system.strings.stream_ops%s
    --  system.strings.stream_ops%b
+   --  system.tasking.entry_calls%s
+   --  system.tasking.initialization%s
+   --  system.tasking.task_attributes%s
+   --  system.tasking.task_attributes%b
+   --  system.tasking.utilities%s
    --  system.traceback%s
    --  ada.exceptions%b
    --  system.traceback%b
+   --  system.tasking.initialization%b
+   --  ada.real_time%s
+   --  ada.real_time%b
    --  ada.text_io%s
    --  ada.text_io%b
+   --  system.tasking.protected_objects%s
+   --  system.tasking.protected_objects%b
+   --  system.tasking.protected_objects.entries%s
+   --  system.tasking.protected_objects.entries%b
+   --  system.tasking.queuing%s
+   --  system.tasking.queuing%b
+   --  system.tasking.utilities%b
+   --  system.tasking.rendezvous%s
+   --  system.tasking.protected_objects.operations%s
+   --  system.tasking.protected_objects.operations%b
+   --  system.tasking.rendezvous%b
+   --  system.tasking.entry_calls%b
+   --  system.tasking.stages%s
+   --  system.tasking.stages%b
    --  client_ui%s
    --  client_ui%b
    --  communication_objects%s
@@ -471,6 +712,8 @@ package ada_main is
    --  data_types_test%s
    --  data_types_test%b
    --  server_logic%s
+   --  concrete_server_logic%s
+   --  concrete_server_logic%b
    --  server_ui%s
    --  server_ui%b
    --  main%b
