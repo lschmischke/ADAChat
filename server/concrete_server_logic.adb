@@ -54,7 +54,6 @@ package body Concrete_Server_Logic is
       Receiver : Socket_Type;
       --Connection : Socket_Type;
       Client_Address : Sock_Addr_Type;
-      Channel : Stream_Access;
       Sockets : Socket_Set_Type;
       Socket_Selector : Selector_Type;
       Write_Sockets : Socket_Set_Type;
@@ -85,6 +84,7 @@ package body Concrete_Server_Logic is
                -- Sollten dies mehr als eines sein, werden diese im nächsten Durchlauf behandelt
                declare
                   Active_Socket : Socket_Type;
+                  Channel : Stream_Access;
                begin
                   GNAT.Sockets.Get(Read_Sockets, Active_Socket);
                   if Active_Socket = Receiver then
@@ -92,14 +92,17 @@ package body Concrete_Server_Logic is
                      -- Routine zum Bestätigen der Verbindungsanfrage:
                      -- 1. neuen Socket anlegen, 2. in die globale Socketverwaltungsliste eintragen
                      Accept_Socket(Server => Receiver, Socket => Active_Socket, Address => Client_Address);
+                     Ada.Text_IO.Put_Line("Client connected from " & GNAT.Sockets.Image(Active_Socket) & " / " & Gnat.Sockets.Image(Client_Address));
+                     Ada.Text_IO.Put_Line("Clients in Set: " & GNAT.Sockets.Image(Read_Sockets));
                      Set(Item => Sockets, Socket => Active_Socket);
                   elsif Active_Socket = No_Socket then
                      -- keiner der Sockets hat Daten zum Senden oder Empfangen oder das Set war leer
                      null;
                   else
+                     Ada.Text_IO.Put_Line("Transmitting: " & Gnat.Sockets.Image(Get_Socket_Name(Active_Socket)));
                      -- Kommunikationskanal für aktiven Socket erzeugen und Daten lesen, schreiben
                      Channel := Stream(Active_Socket);
-                     Character'Output (Channel, Character'Input (Channel));
+                     Character'Output(Channel, Character'Input(Channel));
                   end if;
                end;
             else
