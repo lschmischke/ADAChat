@@ -13,8 +13,9 @@ with Ada.Strings.Unbounded;
 with Data_Types_Test; use Data_Types_Test;
 
 procedure main is
-   server : Concrete_Server;
+   server : Concrete_Server_Ptr := new Concrete_Server;
 begin
    Data_Types_Test.Test;
-   Server_Ui.Start_Server(server);
+   --Server_Ui.Start_Server(server);
+   Concrete_Server_Logic.dummy1(server);
 end main;

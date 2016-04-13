@@ -6,7 +6,7 @@ class {
   classname: "server_logic__server_interface"
   label: "server_logic__server_interface\server_logic.ads:5:9"
   virtuals: "1:server_logic__dummy1\n
-             2:server_logic__dummy2\n
+             2:server_logic__initializeserver\n
              3:server_logic__dummy3\n
              -1:server_logic___size\n
              -2:server_logic__server_interfaceSR\n

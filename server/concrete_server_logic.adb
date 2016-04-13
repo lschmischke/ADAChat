@@ -1,156 +1,169 @@
 package body Concrete_Server_Logic is
 
-   procedure dummy1(This : in out Concrete_Server) is
-      CRLF : constant String := ASCII.CR & ASCII.LF;
-      Host : constant String := "www.google.de";
+   server : Concrete_Server_Ptr;
 
-      Host_Entry : Gnat.Sockets.Host_Entry_Type
-        := GNAT.Sockets.Get_Host_By_Name(Host);
-
-      Address : GNAT.Sockets.Sock_Addr_Type;
-      Socket  : GNAT.Sockets.Socket_Type;
-      Channel : GNAT.Sockets.Stream_Access;
-      Data    : Ada.Streams.Stream_Element_Array (1..1024);
-      Size    : Ada.Streams.Stream_Element_Offset;
-      Ret     : Ada.Strings.Unbounded.Unbounded_String;
+   procedure dummy1(This : in out Concrete_Server_Ptr) is
    begin
-      -- Open a connection to the host
-      Address.Addr := GNAT.Sockets.Addresses(Host_Entry, 1);
-      Address.Port := 80;
-      GNAT.Sockets.Create_Socket (Socket);
-      GNAT.Sockets.Connect_Socket (Socket, Address);
-
-      -- Prepare stream to accept incoming data and push the
-      -- GET request
-      Channel := Gnat.Sockets.Stream (Socket);
-      String'Write (Channel, "GET /sqlrest HTTP/1.1" & CRLF &
-                      "Host: " & Host & CRLF & CRLF);
-
-      -- Receive what's in the socket, and put it into
-      -- our unbounded string
-      GNAT.Sockets.Receive_Socket(Socket,Data,Size);
-      for i in 1 .. Size loop
-         Ret := Ret & Character'Val(Data(i));
-      end loop;
-
-      -- Write it out to the console
-      Ada.Text_IO.Put_Line (Ada.Strings.Unbounded.To_String(Ret));
-
-      Main_Server_Task.Start;
+      InitializeServer(this);
    end dummy1;
 
-   procedure dummy2(This : in out Concrete_Server) is
+   procedure InitializeServer(This : in out Concrete_Server_Ptr) is
    begin
-      null;
-   end dummy2;
+      server := this;
 
-   procedure dummy3(This : in out Concrete_Server) is null;
+      Create_Socket(Socket => server.Socket);
+      --this.SocketAddress.Family := Gnat.Sockets.Family_Inet; -- Fehler!
+      server.SocketAddress.Addr := Inet_Addr("127.0.0.1");
+      server.SocketAddress.Port := 12321;
+      Bind_Socket(Socket => server.Socket, Address => server.SocketAddress);
+      Listen_Socket(Socket => server.Socket);
+
+      Ada.Text_IO.Put_Line("Server initialization successful, starting Server Listener Task...");
+      Main_Server_Task.Start;
+
+      Exception
+       when Error: Socket_Error =>
+         Put("Socket_Error: ");
+         Put_Line (Exception_Information(Error));
+       when Error: others =>
+         Put ("Unexpected exception: ");
+         Put_Line (Exception_Information(Error));
+   end InitializeServer;
+
+   procedure dummy3(This : in out Concrete_Server_Ptr) is null;
 
    task body Main_Server_Task is
-      --Address : Sock_Addr_Type;
-      --Server : Socket_Type;
-      --Socket : Socket_Type;
-      --Channel : Stream_Access;
-      Receiver : Socket_Type;
-      --Connection : Socket_Type;
-      Client_Address : Sock_Addr_Type;
-      Sockets : Socket_Set_Type;
-      Socket_Selector : Selector_Type;
-      Write_Sockets : Socket_Set_Type;
    begin
       accept Start;
 
-      -- Aufsetzen des Server-Socket - Receiver
-      Create_Socket(Socket => Receiver);
-      Set_Socket_Option(Socket => Receiver, Option => (Name => Reuse_Address, Enabled => True));
-      Bind_Socket(Socket => Receiver, Address => (Family => Family_Inet, addr => Inet_Addr("127.0.0.1"), Port => 12321));
-      Listen_Socket(Socket => Receiver);
-      Set(Item => Sockets, Socket => Receiver);
-      Create_Selector(Selector => Socket_Selector);
-
-      -- Abhörroutine auf Aktivität bzgl. neuen oder verbundenen Sockets
+      -- Abhörroutine auf Aktivität am Server-Socket
       loop
          declare
-            Read_Sockets : Socket_Set_Type;
-            SelectorStatus : Selector_Status;
+            Client : Concrete_Client_Ptr := new Concrete_Client;
+            ClientSocket : Socket_Type;
+            ClientSocketAddress : Sock_Addr_Type;
          begin
-            Copy(Source => Sockets, Target => Read_Sockets);
-            -- Warten ob etwas auf den Sockets passiert
-            Check_Selector(Selector => Socket_Selector, R_Socket_Set => Read_Sockets, W_Socket_Set => Write_Sockets, Status => SelectorStatus);
-            -- Aufruf ist zurückgekehrt => ein Socket ist bereit Daten zu lesen oder zu schreiben
-            -- Wie ist der Status?
-            if SelectorStatus = Completed then
-               -- Erfolgreich. Es gilt herauszufinden welches Socket bereit ist und dieses zu bearbeiten
-               -- Sollten dies mehr als eines sein, werden diese im nächsten Durchlauf behandelt
-               declare
-                  Active_Socket : Socket_Type;
-                  Channel : Stream_Access;
-               begin
-                  GNAT.Sockets.Get(Read_Sockets, Active_Socket);
-                  if Active_Socket = Receiver then
-                     -- der Server ist bereit => neuer Client will sich verbinden
-                     -- Routine zum Bestätigen der Verbindungsanfrage:
-                     -- 1. neuen Socket anlegen, 2. in die globale Socketverwaltungsliste eintragen
-                     Accept_Socket(Server => Receiver, Socket => Active_Socket, Address => Client_Address);
-                     Ada.Text_IO.Put_Line("Client connected from " & GNAT.Sockets.Image(Active_Socket) & " / " & Gnat.Sockets.Image(Client_Address));
-                     Ada.Text_IO.Put_Line("Clients in Set: " & GNAT.Sockets.Image(Read_Sockets));
-                     Set(Item => Sockets, Socket => Active_Socket);
-                  elsif Active_Socket = No_Socket then
-                     -- keiner der Sockets hat Daten zum Senden oder Empfangen oder das Set war leer
-                     null;
-                  else
-                     Ada.Text_IO.Put_Line("Transmitting: " & Gnat.Sockets.Image(Get_Socket_Name(Active_Socket)));
-                     -- Kommunikationskanal für aktiven Socket erzeugen und Daten lesen, schreiben
-                     Channel := Stream(Active_Socket);
-                     Character'Output(Channel, Character'Input(Channel));
-                  end if;
-               end;
-            else
-               -- Expired oder Aborted
-               null;
-            end if;
-            -- Aufräumen
-            Empty(Item => Read_Sockets);
+            -- auf Verbindungsanfrage warten, annehmen, Client-Socket erzeugen und neue Adresse an diesen binden
+            Ada.Text_IO.Put_Line("Ready to accept incoming Conncetions...");
+            Accept_Socket(Server => server.Socket , Socket => ClientSocket, Address => ClientSocketAddress); -- Blockierender Aufruf
+            Ada.Text_IO.Put_Line("Incoming Connection from " & GNAT.Sockets.Image(ClientSocketAddress) & " accepted");
+
+            -- neuen Client in globale Client Liste eintragen
+            Client.Socket := ClientSocket;
+            Client.SocketAddress := ClientSocketAddress;
+            server.Connected_Clients.Append(New_Item => Client);
+
+            -- neuen Kommunikationstask für Client hinterlegen und starten
+            Client.CommunicationTask := new Client_Task;
+            Client.CommunicationTask.Start(Socket => ClientSocket, SocketAddress => ClientSocketAddress);
          end;
       end loop;
 
-      Close_Socket(Socket => Receiver);
+      Exception
+       when Error: Socket_Error =>
+         Put("Socket_Error: ");
+         Put_Line (Exception_Information(Error));
+       when Error: others =>
+         Put ("Unexpected exception: ");
+         Put_Line (Exception_Information(Error));
 
-
-         --Accept_Socket(Server => Receiver, Socket => Connection, Address => Client);
-         --Ada.Text_IO.Put_Line("Client connected from " & GNAT.Sockets.Image(Client));
-         --Channel := GNAT.Sockets.Stream (Connection);
-         --begin
-            --loop
-               --String'Output(Channel, "Welcome");
-               --String'Output(Channel, String'Input(Channel));
-               --Character'Output (Channel, Character'Input (Channel));
-            --end loop;
-         --exception
-            --when Ada.IO_Exceptions.End_Error =>
-               --null;
-         --end;
-         --GNAT.Sockets.Close_Socket (Connection);
-      --end loop;
-      --------------------------------------------------------------------------
-      -- Get the IP-Address of localhost and assign a portnumber
-      --Address.Addr := Addresses(Get_Host_By_Name(Host_Name));
-      --Address.Port := 20000;
-
-      -- Create Socket
-      --Create_Socket(Server);
-      --Set_Socket_Option(Server, Socket_Level,(Reuse_Address, True));
-      --Bind_Socket(Server, Address);
-
-      --Listen_Socket(Server);
-
-      --Ada.Text_IO.Put_Line("Accepting Conncetions");
-      --Accept_Socket(Server, Socket, Address);
-
-   --        --  Return a stream associated to the connected socket.
-      --Ada.Text_IO.Put_Line("Writing on Channel");
-      --Channel := Stream(Socket);
-      --String'Write (Channel, "Welcome");
    end Main_Server_Task;
 
+   task body Client_Task is
+      InputChannel : Stream_Access;
+      OutputChannel : Stream_Access;
+      ClientSocket : Socket_Type;
+      ClientSocketAddress : Sock_Addr_Type;
+      MyUsername : Unbounded_String;
+   begin
+      accept Start(Socket : Socket_Type; SocketAddress : Sock_Addr_Type) do -- Info: während dieser Aktivierungsphase wird der aufrufende Task blockiert
+         ClientSocket := Socket;
+         ClientSocketAddress := SocketAddress;
+      end Start; -- Jetzt läuft er erst nebenläufig weiter!
+
+      Ada.Text_IO.Put_Line("New Client Task for " & GNAT.Sockets.Image(ClientSocketAddress) & " successfully started");
+
+      InputChannel := Stream(ClientSocket);
+
+      Ada.Text_IO.Put_Line("Waiting for incoming data from " & GNAT.Sockets.Image(ClientSocketAddress) & " ...");
+
+      loop
+         declare
+            incoming_data : Stream_Element_Array(1..4096);
+            incoming_data_size : Stream_Element_Offset;
+            incoming_message : Ada.Strings.Unbounded.Unbounded_String;
+         begin
+            Receive_Socket(Socket => ClientSocket, Item => incoming_data, Last => incoming_data_size);
+
+            for i in 1 .. incoming_data_size loop
+               incoming_message := incoming_message & Character'Val(incoming_data(i));
+            end loop;
+
+            declare
+               Substrings : GNAT.String_Split.Slice_Set;
+               Seperator : constant String := ":";
+               Sub : Unbounded_String;
+               Count : Slice_Number;
+            begin
+               GNAT.String_Split.Create(S => Substrings, From => Ada.Strings.Unbounded.To_String(incoming_message),
+                                        Separators => Seperator, Mode => GNAT.String_Split.Multiple);
+               -----------------------------------------------------------------
+               for i in 1 .. GNAT.String_Split.Slice_Count(Substrings) loop
+                  declare
+                     Sub : constant String := GNAT.String_Split.Slice(Substrings, i);
+                  begin
+                     Put_Line(GNAT.String_Split.Slice_Number'Image(i) & " -> " & Sub & " (length" & Positive'Image(Sub'Length) & ")");
+                  end;
+               end loop;
+
+               Ada.Text_IO.Put_Line(Ada.Strings.Unbounded.To_String(incoming_message));
+               -----------------------------------------------------------------
+               Count := GNAT.String_Split.Slice_Count(Substrings);
+               if Count > 1 then
+                  Sub := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 1));
+                  if sub = "connect" then
+                     if Count = 2 then
+                        Sub := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 2));
+                        for c of server.all.Connected_Clients loop
+                           if c.all.SocketAddress = ClientSocketAddress then
+                              c.all.Username := Sub;
+                              MyUsername := Sub;
+                           end if;
+                        end loop;
+                     else
+                        Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_message));
+                     end if;
+                  elsif sub = "message" then
+                     if Count = 3 then
+                        Sub := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 2));
+                        for c of server.all.Connected_Clients loop
+                           if c.all.Username = Sub then
+                              Sub := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 3));
+                              OutputChannel := Stream(c.all.Socket);
+                              String'Write(OutputChannel, Ada.Strings.Unbounded.To_String("message:" & MyUsername & ":" & Sub));
+                           end if;
+                        end loop;
+                     else
+                        Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_message));
+                     end if;
+                  elsif sub = "refuse" then
+                     null;
+                  elsif sub = "disconnect" then
+                     null;
+                  end if;
+               else
+                  Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_message));
+               end if;
+            end;
+         end;
+      end loop;
+
+      Exception
+      when Error: Socket_Error =>
+         Put("Socket_Error: ");
+         Put_Line (Exception_Information(Error));
+      when Error: others =>
+         Put ("Unexpected exception: ");
+         Put_Line (Exception_Information(Error));
+   end Client_Task;
 end Concrete_Server_Logic;
