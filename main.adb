@@ -16,6 +16,6 @@ procedure main is
    server : Concrete_Server_Ptr := new Concrete_Server;
 begin
    Data_Types_Test.Test;
-   --Server_Ui.Start_Server(server);
-   Concrete_Server_Logic.dummy1(server);
+   -- Server_Ui.Start_Server(server);
+   Concrete_Server_Logic.StartServer(server);
 end main;

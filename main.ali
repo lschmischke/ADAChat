@@ -23,7 +23,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		7370816e DE NE OO SU IL
+U main%b		main.adb		f090a2f4 DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -74,7 +74,7 @@ D communication_objects-messages-connect.ads  20160330003426 8bc7815d communicat
 D communication_objects-messages-disconnect.ads  20160330003426 99108569 communication_objects.messages.disconnect%s
 D communication_objects-messages-refuse.ads  20160330003426 04d7c206 communication_objects.messages.refuse%s
 D communication_objects-messages-userlist.ads  20160330003426 b96a0a41 communication_objects.messages.userlist%s
-D concrete_server_logic.ads  20160413185636 d3d0de8d concrete_server_logic%s
+D concrete_server_logic.ads  20160414154828 3eba4a4e concrete_server_logic%s
 D data_types.ads	20160330003426 0e9f5bcf data_types%s
 D data_types_test.ads	20160405121414 564c0ad3 data_types_test%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
@@ -85,7 +85,7 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20160413141158 1d90cf8e main%b
+D main.adb		20160414130058 731a78d7 main%b
 D server_logic.ads	20160413140942 9919e9c8 server_logic%s
 D server_ui.ads		20160405124220 e381aa63 server_ui%s
 D system.ads		20150518132150 f4ce8c3a system%s
@@ -150,16 +150,16 @@ X 27 communication_objects-messages-refuse.ads
 X 28 communication_objects-messages-userlist.ads
 3K40*Userlist 20e44 40|11w37
 X 29 concrete_server_logic.ads
-11K9*Concrete_Server_Logic 48e26 40|3w6 3r33 20r4
-29R9*Concrete_Server 33e14 40|16r40
-34P9*Concrete_Server_Ptr(29R9) 40|16r13
-37U14*dummy1 40|20s26
+11K9*Concrete_Server_Logic 71e26 40|3w6 3r33 20r4
+15R9*Concrete_Server 52e14 40|16r40
+16P9*Concrete_Server_Ptr(15R9) 40|16r13
+23U14*StartServer 40|20s26
 X 31 data_types_test.ads
 8K9*Data_Types_Test 10e20 40|13w6 13r27 18r4
 9U14*Test 40|18s20
 X 40 main.adb
 15U11*main 15b11 21l5 21t9
-16p4 server{29|34P9} 20m33 20r33
+16p4 server{29|16P9} 20m38 20r38
 X 41 server_logic.ads
 3K9*Server_Logic 40|2w6 41|11e17
 X 42 server_ui.ads
