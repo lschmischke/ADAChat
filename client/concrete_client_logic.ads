@@ -17,8 +17,10 @@ package Concrete_Client_Logic is
 
    procedure disconnectFromServer(This : in out Concrete_Client);
 
-   procedure sendMessage(This : in out Concrete_Client);
+   procedure sendMessage(This : in out Concrete_Client;
+                         Message : out Communication_Object'Class);
 
-   procedure readMessage(This : in out Concrete_Client);
+   procedure readMessage(This : in out Concrete_Client;
+                         Message : out Communication_Object'Class);
 
 end Concrete_Client_Logic;
