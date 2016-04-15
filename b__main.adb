@@ -458,24 +458,24 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\Daniel Kreck\Documents\adachat\client_ui.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\communication_objects.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\client_logic.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\communication_objects-files.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\communication_objects-messages.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\communication_objects-messages-connect.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\communication_objects-messages-disconnect.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\communication_objects-messages-refuse.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\data_types.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\communication_objects-messages-userlist.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\data_types_test.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\server_logic.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\concrete_server_logic.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\server_ui.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\main.o
-   --   -LC:\Users\Daniel Kreck\Documents\adachat\
-   --   -LC:\Users\Daniel Kreck\Documents\adachat\
-   --   -LD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+   --   E:\Development\Ada\Block_Projekt\ada_chat\client_ui.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\communication_objects.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\client_logic.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\communication_objects-files.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\communication_objects-messages.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\communication_objects-messages-connect.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\communication_objects-messages-disconnect.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\communication_objects-messages-refuse.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\data_types.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\communication_objects-messages-userlist.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\data_types_test.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\server_logic.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\concrete_server_logic.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\server_ui.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\main.o
+   --   -LE:\Development\Ada\Block_Projekt\ada_chat\
+   --   -LE:\Development\Ada\Block_Projekt\ada_chat\
+   --   -LE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
    --   -static
    --   -lgnarl
    --   -lgnat

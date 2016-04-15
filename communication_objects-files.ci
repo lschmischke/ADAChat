@@ -16,43 +16,43 @@ class {
              -8:communication_objects__files__fileDA,-8:communication_objects__communication_object\n
              -9:communication_objects__files__fileDF,-9:communication_objects__communication_object"
 }
-graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads"
-node: { title: "ada__tags__register_tag" label: "Register_Tag\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
-node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
-node: { title: "ada__tags__unregister_tag" label: "Unregister_Tag\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:578:14" shape : ellipse }
-node: { title: "communication_objects__Oeq" label: "=\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" shape : ellipse }
-node: { title: "system__secondary_stack__ss_allocate" label: "Ss_Allocate\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:66:14" shape : ellipse }
-node: { title: "system__stream_attributes__w_i" label: "W_I\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:137:14" shape : ellipse }
-node: { title: "communication_objects__communication_objectSW" label: "Communication_Objectsw\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" shape : ellipse }
-node: { title: "system__stream_attributes__i_i" label: "I_I\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:106:13" shape : ellipse }
-node: { title: "communication_objects__communication_objectSR" label: "Communication_Objectsr\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" shape : ellipse }
-node: { title: "communication_objects__communication_objectIP" label: "Communication_Objectip\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" shape : ellipse }
-node: { title: "communication_objects__files___elabs" label: "Files\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:1:1\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files___elabs" targetname: "ada__tags__register_tag" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-edge: { sourcename: "communication_objects__files___elabs" targetname: "ada__tags__check_tsd" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-node: { title: "communication_objects__files__finalize_spec" label: "Finalize_Spec\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:1:1\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files__finalize_spec" targetname: "ada__tags__unregister_tag" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:1:1" }
-node: { title: "communication_objects__files__TfileCFD" label: "Tfilecfd\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files__TfileCFD" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
+graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads"
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "ada__tags__unregister_tag" label: "Unregister_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:578:14" shape : ellipse }
+node: { title: "communication_objects__Oeq" label: "=\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9" shape : ellipse }
+node: { title: "system__secondary_stack__ss_allocate" label: "Ss_Allocate\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:66:14" shape : ellipse }
+node: { title: "system__stream_attributes__w_i" label: "W_I\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:137:14" shape : ellipse }
+node: { title: "communication_objects__communication_objectSW" label: "Communication_Objectsw\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9" shape : ellipse }
+node: { title: "system__stream_attributes__i_i" label: "I_I\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:106:13" shape : ellipse }
+node: { title: "communication_objects__communication_objectSR" label: "Communication_Objectsr\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9" shape : ellipse }
+node: { title: "communication_objects__communication_objectIP" label: "Communication_Objectip\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9" shape : ellipse }
+node: { title: "communication_objects__files___elabs" label: "Files\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:1:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+edge: { sourcename: "communication_objects__files___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+node: { title: "communication_objects__files__finalize_spec" label: "Finalize_Spec\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:1:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files__finalize_spec" targetname: "ada__tags__unregister_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:1:1" }
+node: { title: "communication_objects__files__TfileCFD" label: "Tfilecfd\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files__TfileCFD" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
 node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
-node: { title: "communication_objects__files__fileDF" label: "Filedf\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
-node: { title: "communication_objects__files__fileDA" label: "Fileda\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
-node: { title: "communication_objects__files___assign" label: "Files\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n448 bytes (static)\n0 dynamic objects" }
-node: { title: "communication_objects__files__Oeq" label: "=\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files__Oeq" targetname: "communication_objects__Oeq" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-node: { title: "communication_objects__files__fileSO" label: "Fileso\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files__fileSO" targetname: "communication_objects__files__fileSW" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-node: { title: "communication_objects__files__fileSI" label: "Filesi\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files__fileSI" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-edge: { sourcename: "communication_objects__files__fileSI" targetname: "communication_objects__files__fileSR" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-edge: { sourcename: "communication_objects__files__fileSI" targetname: "communication_objects__files__fileIP" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-node: { title: "communication_objects__files__fileSW" label: "Filesw\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files__fileSW" targetname: "system__stream_attributes__w_i" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-edge: { sourcename: "communication_objects__files__fileSW" targetname: "communication_objects__communication_objectSW" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-node: { title: "communication_objects__files__fileSR" label: "Filesr\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files__fileSR" targetname: "system__stream_attributes__i_i" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-edge: { sourcename: "communication_objects__files__fileSR" targetname: "communication_objects__communication_objectSR" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9" }
-node: { title: "communication_objects__files___size" label: "Files\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n8 bytes (static)\n0 dynamic objects" }
-node: { title: "communication_objects__files__fileIP" label: "Fileip\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "communication_objects__files__fileIP" targetname: "communication_objects__communication_objectIP" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:3:17" }
+node: { title: "communication_objects__files__fileDF" label: "Filedf\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__files__fileDA" label: "Fileda\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__files___assign" label: "Files\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n448 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__files__Oeq" label: "=\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:4\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files__Oeq" targetname: "communication_objects__Oeq" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+node: { title: "communication_objects__files__fileSO" label: "Fileso\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files__fileSO" targetname: "communication_objects__files__fileSW" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+node: { title: "communication_objects__files__fileSI" label: "Filesi\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files__fileSI" targetname: "system__secondary_stack__ss_allocate" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+edge: { sourcename: "communication_objects__files__fileSI" targetname: "communication_objects__files__fileSR" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+edge: { sourcename: "communication_objects__files__fileSI" targetname: "communication_objects__files__fileIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+node: { title: "communication_objects__files__fileSW" label: "Filesw\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files__fileSW" targetname: "system__stream_attributes__w_i" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+edge: { sourcename: "communication_objects__files__fileSW" targetname: "communication_objects__communication_objectSW" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+node: { title: "communication_objects__files__fileSR" label: "Filesr\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files__fileSR" targetname: "system__stream_attributes__i_i" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+edge: { sourcename: "communication_objects__files__fileSR" targetname: "communication_objects__communication_objectSR" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9" }
+node: { title: "communication_objects__files___size" label: "Files\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__files__fileIP" label: "Fileip\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__files__fileIP" targetname: "communication_objects__communication_objectIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-files.ads:3:17" }
 }

@@ -13,7 +13,7 @@ with Ada.Strings.Unbounded;
 with Data_Types_Test; use Data_Types_Test;
 
 procedure main is
-   server : Concrete_Server
+   server : Concrete_Server;
 
 begin
    Data_Types_Test.Test;

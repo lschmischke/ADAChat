@@ -55,27 +55,27 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client_logic.ads	20160330002352 c75ccc4e client_logic%s
-D client_ui.ads		20160330002352 80f42b28 client_ui%s
-D communication_objects.ads  20160330002352 81548b0d communication_objects%s
-D communication_objects-files.ads  20160330003426 81abdfc3 communication_objects.files%s
-D communication_objects-messages.ads  20160330002352 c71cf906 communication_objects.messages%s
-D communication_objects-messages-connect.ads  20160330003426 8bc7815d communication_objects.messages.connect%s
-D communication_objects-messages-disconnect.ads  20160330003426 99108569 communication_objects.messages.disconnect%s
-D communication_objects-messages-refuse.ads  20160330003426 04d7c206 communication_objects.messages.refuse%s
-D communication_objects-messages-userlist.ads  20160330003426 b96a0a41 communication_objects.messages.userlist%s
-D concrete_server_logic.ads  20160405135128 c11d4b0c concrete_server_logic%s
-D data_types.ads	20160330003426 0e9f5bcf data_types%s
-D data_types_test.ads	20160405121414 564c0ad3 data_types_test%s
+D client_logic.ads	20160322205854 c75ccc4e client_logic%s
+D client_ui.ads		20160321145154 80f42b28 client_ui%s
+D communication_objects.ads  20160322203634 81548b0d communication_objects%s
+D communication_objects-files.ads  20160412093232 81abdfc3 communication_objects.files%s
+D communication_objects-messages.ads  20160322122934 c71cf906 communication_objects.messages%s
+D communication_objects-messages-connect.ads  20160412093232 8bc7815d communication_objects.messages.connect%s
+D communication_objects-messages-disconnect.ads  20160412093232 99108569 communication_objects.messages.disconnect%s
+D communication_objects-messages-refuse.ads  20160412093232 04d7c206 communication_objects.messages.refuse%s
+D communication_objects-messages-userlist.ads  20160412093232 b96a0a41 communication_objects.messages.userlist%s
+D concrete_server_logic.ads  20160412101054 c11d4b0c concrete_server_logic%s
+D data_types.ads	20160412093232 0e9f5bcf data_types%s
+D data_types_test.ads	20160412101054 564c0ad3 data_types_test%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20160405123638 f908c56e main%b
-D server_logic.ads	20160330003426 d1d86619 server_logic%s
-D server_ui.ads		20160405124220 e381aa63 server_ui%s
+D main.adb		20160415110536 f908c56e main%b
+D server_logic.ads	20160412093232 d1d86619 server_logic%s
+D server_ui.ads		20160412101054 e381aa63 server_ui%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
@@ -141,17 +141,17 @@ X 29 concrete_server_logic.ads
 8K9*Concrete_Server_Logic 26e26 38|3w6 3r33
 10R9*Concrete_Server<39|5R9> 12e14 38|16r13
 X 31 data_types_test.ads
-8K9*Data_Types_Test 10e20 38|13w6 13r27 18r4
-9U14*Test 38|18s20
+8K9*Data_Types_Test 10e20 38|13w6 13r27 19r4
+9U14*Test 38|19s20
 X 38 main.adb
-15U11*main 15b11 20l5 20t9
-16r4 server{29|10R9} 19m27 19r27
+15U11*main 15b11 21l5 21t9
+16r4 server{29|10R9} 20m27 20r27
 X 39 server_logic.ads
 3K9*Server_Logic 38|2w6 39|11e17
 5h9*Server_Interface
 X 40 server_ui.ads
-3K9*Server_Ui 38|5w6 19r4 40|7e14
-5U14*Start_Server 38|19s14
+3K9*Server_Ui 38|5w6 20r4 40|7e14
+5U14*Start_Server 38|20s14
 X 58 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
