@@ -13,59 +13,78 @@ A -march=pentiumpro
 P SS ZX
 
 RN
+RV NO_ALLOCATORS
 RV NO_DISPATCHING_CALLS
 RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_IO
-RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
 RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_STREAMS
+RV NO_TASK_ALLOCATORS
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
-RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 RV MAX_TASK_ENTRIES=1
-RV MAX_TASKS=1
+RV MAX_TASKS=1+
 
-U concrete_server_logic%b  concrete_server_logic.adb  c796be1b DE OO PK
+U concrete_server_logic%b  concrete_server_logic.adb  054bbe32 DE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W system.concat_2%s	s-conca2.adb		s-conca2.ali
-W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.concat_6%s	s-conca6.adb		s-conca6.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
-W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
 W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U concrete_server_logic%s  concrete_server_logic.ads  89840f7b DE EE OO PF PK
+U concrete_server_logic%s  concrete_server_logic.ads  0a37e98e DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.doubly_linked_lists%s
 W ada.exceptions%s	a-except.adb		a-except.ali
-W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+Z ada.finalization%s	a-finali.adb		a-finali.ali
+Z ada.iterator_interfaces%s
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
 W gnat%s		gnat.ads		gnat.ali
 W gnat.sockets%s	g-socket.adb		g-socket.ali
+W gnat.string_split%s	g-strspl.ads		g-strspl.ali
 W server_logic%s	server_logic.ads	server_logic.ali
 W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
 W system.task_info%s	s-tasinf.adb		s-tasinf.ali
 W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
@@ -73,9 +92,13 @@ W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
 D a-chlat1.ads		20150518132148 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20150518132148 61e5e089 ada.containers%s
+D a-cdlili.ads		20150518132148 59d7f011 ada.containers.doubly_linked_lists%s
+D a-cdlili.adb		20150518132148 b44c57c3 ada.containers.doubly_linked_lists%b
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-finali.ads		20150518132148 69f99942 ada.finalization%s
 D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20150518132148 7c7305e9 ada.iterator_interfaces%s
 D a-reatim.ads		20150518132148 a5838d5a ada.real_time%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-string.ads		20150518132148 90ac6797 ada.strings%s
@@ -85,26 +108,31 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D communication_objects.ads  20160322203634 81548b0d communication_objects%s
-D concrete_server_logic.ads  20160412101054 c11d4b0c concrete_server_logic%s
-D concrete_server_logic.adb  20160412101054 068bf517 concrete_server_logic%b
+D communication_objects.ads  20160330002352 81548b0d communication_objects%s
+D concrete_server_logic.ads  20160414154828 3eba4a4e concrete_server_logic%s
+D concrete_server_logic.adb  20160414175758 3bf1f47c concrete_server_logic%b
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
+D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
+D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D server_logic.ads	20160412093232 d1d86619 server_logic%s
+D server_logic.ads	20160413140942 9919e9c8 server_logic%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-conca2.ads		20150518132148 02a0d7d0 system.concat_2%s
-D s-conca4.ads		20150518132148 7e642b20 system.concat_4%s
+D s-conca3.ads		20150518132148 0b705ca5 system.concat_3%s
+D s-conca6.ads		20150518132148 d2c72db2 system.concat_6%s
 D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
 D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
 D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
+D s-imgint.ads		20150518132150 02dbe0c2 system.img_int%s
 D s-memory.ads		20150518132150 597d6634 system.memory%s
 D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
 D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
@@ -137,137 +165,180 @@ D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
 X 1 ada.ads
-16K9*Ada 19e8 17|3r6 3r23 4r6 4r33 5r6 5r23 6r6 18|13r17 14r17 15r17 37r7
-. 37r29 95r22 96r22 102r22
-X 6 a-ioexce.ads
-18K13*IO_Exceptions 30e22 17|6w10
-X 8 a-stream.ads
-36K13*Streams 87e16 17|3w10 3r27 18|13r21 14r21
+16K9*Ada 19e8 21|3r6 3r23 4r6 4r33 5r6 5r23 6r6 6r26 7r6 7r47 22|29r7 63r13
+. 65r13 100r7 104r7 112r32 128r47 131r66 144r16 144r37 149r34 152r40 174r56
+. 177r52 182r40 187r56 192r40 197r46 199r59 203r52 217r46
+X 4 a-contai.ads
+16K13*Containers 24e19 21|7r10 7r51
+X 5 a-cdlili.ads
+40+9 Element_Type 21|45r51
+45k24*Doubly_Linked_Lists 407e39 21|7w21 45r31
+49R9*List<8|43R9> 21|51r38[45]
+146U14*Append 22|68s38[21|45]
+148p7 New_Item{21|43P9} 22|68r45[21|45]
+X 7 a-except.ads
+54K13*Exceptions 361e19 21|6w10 6r30
+104V13*Exception_Information{string} 22|41s20 44s20 79s19 82s19 226s19 229s19
+X 10 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[5|67]>
+X 12 a-stream.ads
+36K13*Streams 87e16 21|3w10 3r27
 42M9*Stream_Element
-44I9*Stream_Element_Offset<long_long_integer> 18|14r29
-54A9*Stream_Element_Array(42M9)<44I9> 18|13r29
-X 9 a-string.ads
-16K13*Strings 35e16 17|4r10 4r37 18|15r21 37r33
-X 11 a-strunb.ads
-76K21*Unbounded 489e26 17|4w18 4r45 18|15r29 37r41
-79R9*Unbounded_String<5|43R9> 473e14 18|15r39
-100V13*To_String{string} 18|37s51
-131V14*"&"{79R9} 18|33s21
-X 13 a-textio.ads
-49K13*Text_IO 471e16 17|5w10 5r27 18|37r11 95r26 96r26 102r26
-263U14*Put_Line 18|37s19 95s34 96s34 102s34
-X 17 concrete_server_logic.ads
-8K9*Concrete_Server_Logic 26l5 26e26 18|1b14 156l5 156t26
-10R9*Concrete_Server<25|5R9> 12e14 15P14 15r35 17P14 17r35 19P14 19r35 18|3r35
-. 42r35 47r35
-15U14*dummy1<25|7p14> 15=21 18|3b14 40l8 40t14
-15r21 This{10R9} 18|3b21
-17U14*dummy2<25|8p14> 17=21 18|42b14 45l8 45t14
-17r21 This{10R9} 18|42b21
-19U14*dummy3<25|9p14> 19=21
-19r21 This{10R9}
-21t9*Main_Server_Task 18|39r7 49b14 154l8 154t24
-22Y13 Start 18|39s24 61b14
-X 18 concrete_server_logic.adb
-4a7 CRLF{string} 26r56 27r41 27r48
-5a7 Host{string} 8r42 27r34
-7r7 Host_Entry{20|529R9} 18r46
-10r7 Address{20|502R9} 18m7 19m7 21r44
-11i7 Socket{20|409I9} 20m35 21r36 25r39 31r35
-12p7 Channel{20|1004P9} 25m7 26r21
-13a7 Data{8|54A9} 31m42 33r37
-14i7 Size{8|44I9} 31m47 32r21
-15r7 Ret{11|79R9} 33m10 33r17 37r61
-32i11 i<long_long_integer> 33r42
-47U14 dummy3
-47r21 This{17|10R9}
-54i7 Receiver{20|409I9} 64m31 65r35 66r29 67r31 68r38 90r38 94r46 117r30
-56r7 Client_Address{20|502R9} 94m92 95r133
-57r7 Sockets{20|1026R9} 68m19 68r19 77r28 97m34 97r34
-58r7 Socket_Selector{20|416R9} 69m35 79r40
-59r7 Write_Sockets{20|1026R9} 79m103 79r103
-74r13 Read_Sockets{20|1026R9} 77m47 79m73 79r73 89m36 89r36 96r83 113m27
-75e13 SelectorStatus{20|441E9} 79m128 82r16
-86i19 Active_Socket{20|409I9} 89m50 90r22 94m66 95r89 97r53 98r25 102r97
-. 104r40
-87p19 Channel{20|1004P9} 104m22 105r39 105r64
-X 19 gnat.ads
-34K9*GNAT 17|2r6 2r24 18|7r20 8r12 10r17 11r17 12r17 18r23 20r7 21r7 25r18
-. 31r7 89r19 95r70 95r114 96r64 102r62 19|37e9
-X 20 g-socket.ads
-55K14*Sockets 17|2w11 2r29 18|7r25 8r17 10r22 11r22 12r22 18r28 20r12 21r12
-. 25r23 31r12 89r24 95r75 95r119 96r69 102r67 20|1260e17
-409I9*Socket_Type<integer> 18|11r30 54r18 86r35
-414i4*No_Socket{409I9} 18|98r41
-416R9*Selector_Type 18|58r25 20|1161e14
-441E9*Selector_Status 18|75r30 20|441e57
-441n29*Completed{441E9} 18|82r33
-453V13*Image{string} 18|95s83
-460n25*Family_Inet{460E9} 18|66r61
+44I9*Stream_Element_Offset<long_long_integer> 22|111r34
+54A9*Stream_Element_Array(42M9)<44I9> 22|110r29
+X 13 a-string.ads
+16K13*Strings 35e16 21|4r10 4r37 22|112r36 128r51 131r70 144r41 149r38 152r44
+. 174r60 177r56 182r44 187r60 192r44 197r50 199r63 203r56 217r50
+X 15 a-strunb.ads
+76K21*Unbounded 489e26 21|4w18 4r45 22|112r44 128r59 131r78 144r49 149r46
+. 152r52 174r68 177r64 182r52 187r68 192r52 197r58 199r71 203r64 217r58
+79R9*Unbounded_String<8|43R9> 473e14 21|38r18 22|92r20 112r54 126r30 128r27
+94V13*To_Unbounded_String{79R9} 22|128s69 149s56 152s62 182s62 192s62 197s68
+100V13*To_String{string} 22|131s88 144s59 174s78 177s74 187s78 199s81 203s74
+. 217s68
+119V14*"&"{79R9} 22|168s55 187s118 199s121
+123V14*"&"{79R9} 22|168s49 187s112 199s115
+127V14*"&"{79R9} 22|187s99 199s102
+131V14*"&"{79R9} 22|119s53
+166V14*"="{boolean} 22|155s46 185s46 195s46 210s43
+170V14*"="{boolean} 22|150s34 179s37 205s37
+X 17 a-textio.ads
+49K13*Text_IO 471e16 21|5w10 5r27 22|29r11 63r17 65r17 100r11 104r11 144r20
+242U14*Put 22|40s10 43s10 78s10 81s10 225s10 228s10
+263U14*Put_Line 22|29s19 41s10 44s10 63s25 65s25 79s10 82s10 100s19 104s19
+. 140s22 144s28 177s25 203s25 217s19 226s10 229s10
+X 21 concrete_server_logic.ads
+11K9*Concrete_Server_Logic 29E14 71l5 71e26 22|1b14 232l5 232t26
+15R9*Concrete_Server 16r39 48c9 52e14
+16P9*Concrete_Server_Ptr(15R9) 23r40 57r45 59r35 22|3r13 7r40 14r45 49r35
+23U14*StartServer 23=26 22|7b14 10l8 10t19
+23p26 This{16P9} 22|7b26 9m24
+29T14 Client_Task 31e7 32r35 22|71r45 87b14 230l8 230t19
+30Y13 Start 30>19 30>41 22|72s38 95b14 98l11 98t16
+30i19 Socket{25|409I9} 22|72r44 96r26
+30r41 SocketAddress{25|502R9} 22|72r69 97r33
+32P9 Client_Task_Ptr(29T14) 41r27
+37R9 Concrete_Client 42e14 43r39 22|15r46 60r49
+38r7*Username{15|79R9} 22|155r37 165m37 168r63 185r37 195r37 210r34
+39i7*Socket{25|409I9} 22|33m41 35r42 36r37 64m70 72m61 72r61 173r58 186r58
+. 198r61 211r47
+40r7*SocketAddress{25|502R9} 22|64m96 65r90 72m93 72r93 164r37
+41p7*CommunicationTask{32P9} 22|71m20 72r20
+43P9 Concrete_Client_Ptr(37R9) 45r67 22|15r19 60r22
+45K12 Client_List[5|45] 51r26
+49i6*Socket{25|409I9} 22|21m38 25r36 26r38 64r44
+50r6*SocketAddress{25|502R9} 22|23m14 24m14 25r62 35r67
+51r6*Connected_Clients{5|49R9[45]} 22|68m20 154r45 163r45 172r45 184r45 194r45
+. 209r42
+57U14 InitializeServer 57=31 22|9s7 14b14 45l8 45t24
+57p31 This{16P9} 22|14b31 18r17
+59U14 dummy3 59=21
+59p21 This{16P9}
+67t9 Main_Server_Task 22|30r7 53b14 83l8 83t24
+68Y13 Start 22|30s24 55b14
+X 22 concrete_server_logic.adb
+3p4 Server{21|16P9} 18m7 21r31 23r7 24r7 25r29 25r55 26r31 35r60 64r37 68r13
+. 154r34 163r34 172r34 184r34 194r34 209r31
+15p7 SubServer{21|43P9} 33r31 35r32 36r27
+39r13 Error{7|63R9} 41r42
+42r13 Error{7|63R9} 44r42
+49U14 dummy3
+49p21 This{21|16P9}
+60p13 Client{21|43P9} 64r63 64r89 65r83 68r57 71r13 72r13 72r54 72r86
+77r13 Error{7|63R9} 79r41
+80r13 Error{7|63R9} 82r41
+89p7 OutputChannel{25|1004P9} 156m31 157r44 173m28 174r41 186m28 187r41 198m31
+. 199r44 206m22 207r35
+90i7 ClientSocket{25|409I9} 96m10 115r38 156r55 206r46
+91r7 ClientSocketAddress{25|502R9} 97m10 100r72 104r83 164r53
+92r7 MyUsername{15|79R9} 166m31 185r49 187r101 199r104 210r45
+95i20 Socket{25|409I9}
+95r42 SocketAddress{25|502R9}
+107L9 Continue 159r36
+110a13 incoming_data{12|54A9} 115m60 119r69
+111i13 incoming_data_size{12|44I9} 115m83 118r27
+112r13 incoming_message{15|79R9} 119m16 119r36 131r98 144r69 177r84 203r84
+. 217r78
+118i17 i<long_long_integer> 119r83
+124r16 Substrings{24|74R9[26|39]} 131m46 133r55 136r60 138r79 149r100 152r106
+. 182r106 192r106 197r112
+125a16 Seperator{string} 132r55
+126r16 MessagePart{15|79R9} 149m19 150r22 152m25 155r48 165r49 166r45 179r25
+. 182m25 187r120 192m25 195r48 197m31 199r123 205r25
+127i16 Count{24|116I9[26|39]} 133m16 148r19 151r25 180r25 190r28
+128r16 userlist{15|79R9} 168m28 168r40 174r88
+136i20 i<integer> 138r91 140r68
+138a22 MessagePart{string} 140r82 140r124
+154p29 c{21|43P9} 155r31
+163p29 c{21|43P9} 164r31 165r31 168r57
+172p29 c{21|43P9} 173r52
+184p29 c{21|43P9} 185r31 186r52
+194p29 c{21|43P9} 195r31 198r55
+209p26 c{21|43P9} 210r28 211r41
+224r12 Error{7|63R9} 226r41
+227r12 Error{7|63R9} 229r41
+X 23 gnat.ads
+34K9*GNAT 21|2r6 2r24 8r6 8r29 22|65r64 100r53 104r64 124r29 131r16 132r74
+. 133r25 136r30 138r55 140r31 149r76 152r82 182r82 192r82 197r88 23|37e9
+X 24 g-arrspl.ads
+63E9*Separator_Mode
+69n7*Multiple{63E9[26|39]} 22|132r92[26|39]
+74R9*Slice_Set<8|43R9> 22|124r47[26|39]
+82U14*Create 22|131s34[26|39]
+83r7 S{74R9[26|39]} 22|131r41[26|39]
+84a7 From{string} 22|131r58[26|39]
+85a7 Separators{string} 22|132r41[26|39]
+86e7 Mode{63E9[26|39]} 22|132r66[26|39]
+116I9*Slice_Number<integer> 22|127r24[26|39] 140r49[26|39]
+119V13*Slice_Count{116I9[26|39]} 22|133s43[26|39] 136s48[26|39]
+123V13*Slice{string} 22|138s73[26|39] 149s94[26|39] 152s100[26|39] 182s100[26|39]
+. 192s100[26|39] 197s106[26|39]
+X 25 g-socket.ads
+55K14*Sockets 21|2w11 2r29 22|65r69 100r58 104r69 25|1260e17
+409I9*Socket_Type<integer> 21|30r28 39r16 49r15 22|90r22 95r29
+448X4*Socket_Error 22|39r20 77r20 224r19
 476I9*Port_Type<integer>
-502R9*Sock_Addr_Type 18|10r30 56r24 20|505e14
-502e25*Family{460E9} 18|66m51
-503r7*Addr{485R9} 18|18m15 66m74
-504i7*Port{476I9} 18|19m15 66m106
-518V13*Image{string} 18|95s127 102s75
-521V13*Inet_Addr{485R9} 18|66s82
-529R9*Host_Entry_Type 18|7r33 20|1244e14
-546V13*Addresses{485R9} 18|18s36
-563V13*Get_Host_By_Name{529R9} 18|8s25
-680n7*Reuse_Address{678E9} 18|65r64
-696e22*Name{678E9} 18|65m56
-705b13*Enabled{boolean} 18|65m79
-802U14*Create_Socket 18|20s20 64s7
-803i7 Socket{409I9} 18|64r21
-808U14*Accept_Socket 18|94s22
-809i7 Server{409I9} 18|94r36
-810i7 Socket{409I9} 18|94r56
-811r7 Address{502R9} 18|94r81
-833U14*Bind_Socket 18|66s7
-834i7 Socket{409I9} 18|66r19
-835r7 Address{502R9} 18|66r39
-839U14*Close_Socket 18|117s7
-839i28 Socket{409I9} 18|117r20
-842U14*Connect_Socket 18|21s20
-874V13*Get_Socket_Name{502R9} 18|102s81
-884U14*Listen_Socket 18|67s7
-885i7 Socket{409I9} 18|67r21
-894U14*Receive_Socket 18|31s20
-991U14*Set_Socket_Option 18|65s7
-992i7 Socket{409I9} 18|65r25
-994r7 Option{696R9} 18|65r45
-1004P9*Stream_Access(8|39R9) 18|12r30 87r29
-1007V13*Stream{1004P9} 18|25s31 104s33
-1026R9*Socket_Set_Type 18|57r17 59r23 74r28 20|1186e14
-1038U14*Copy 18|77s13
-1038r20 Source{1026R9} 18|77r18
-1038r46 Target{1026R9} 18|77r37
-1041U14*Empty 18|113s13
-1041r21 Item{1026R9} 18|113r19
-1044U14*Get 18|89s32
-1056U14*Set 18|68s7 97s22
-1056r19 Item{1026R9} 18|68r11 97r26
-1056i50 Socket{409I9} 18|68r28 97r43
-1059V13*Image{string} 18|96s77
-1085U14*Create_Selector 18|69s7
-1085r31 Selector{416R9} 18|69r23
-1095U14*Check_Selector 18|79s13
-1096r7 Selector{416R9} 18|79r28
-1097r7 R_Socket_Set{1026R9} 18|79r57
-1098r7 W_Socket_Set{1026R9} 18|79r87
-1099e7 Status{441E9} 18|79r118
-X 25 server_logic.ads
-3K9*Server_Logic 17|1w6 1r24 25|11e17
-5h9*Server_Interface 17|10r32
-X 26 system.ads
+502R9*Sock_Addr_Type 21|30r57 40r23 50r22 22|91r29 95r58 25|505e14
+503r7*Addr{485R9} 22|23m28
+504i7*Port{476I9} 22|24m28
+518V13*Image{string} 22|65s77 100s66 104s77
+521V13*Inet_Addr{485R9} 22|23s36
+802U14*Create_Socket 22|21s7 33s7
+803i7 Socket{409I9} 22|21r21 33r21
+808U14*Accept_Socket 22|64s13
+809i7 Server{409I9} 22|64r27
+810i7 Socket{409I9} 22|64r53
+811r7 Address{502R9} 22|64r78
+833U14*Bind_Socket 22|25s7
+834i7 Socket{409I9} 22|25r19
+835r7 Address{502R9} 22|25r44
+839U14*Close_Socket 22|211s28
+842U14*Connect_Socket 22|35s7
+843i7 Socket{409I9} 22|35r22
+844r7 Server{502R9} 22|35r50
+884U14*Listen_Socket 22|26s7
+885i7 Socket{409I9} 22|26r21
+894U14*Receive_Socket 22|115s13
+895i7 Socket{409I9} 22|115r28
+896a7 Item{12|54A9} 22|115r52
+897i7 Last{12|44I9} 22|115r75
+1004P9*Stream_Access(12|39R9) 22|89r23
+1007V13*Stream{1004P9} 22|36s20 156s48 173s45 186s45 198s48 206s39
+X 26 g-strspl.ads
+39K14*String_Split[24|58] 21|8w11 8r34 22|124r34 131r21 132r79 133r30 136r35
+. 138r60 140r36 149r81 152r87 182r87 192r87 197r93
+X 31 server_logic.ads
+3K9*Server_Logic 21|1w6 1r24 31|11e17
+X 32 system.ads
 67M9*Address
-X 36 s-memory.ads
-53V13*Alloc{26|67M9} 103i<c,__gnat_malloc>22
+X 45 s-memory.ads
+53V13*Alloc{32|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{26|67M9} 105i<c,__gnat_realloc>22
-X 45 s-stausa.ads
+76V13*Realloc{32|67M9} 105i<c,__gnat_realloc>22
+X 54 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 47 s-stalib.adb
+X 56 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 

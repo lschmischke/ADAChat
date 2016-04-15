@@ -19,7 +19,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U server_logic%s	server_logic.ads	508ced14 DE EE OO PK
+U server_logic%s	server_logic.ads	184d62c5 DE EE OO PK
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W communication_objects%s  communication_objects.ads  communication_objects.ali
@@ -31,8 +31,8 @@ D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D communication_objects.ads  20160322203634 81548b0d communication_objects%s
-D server_logic.ads	20160412093232 d1d86619 server_logic%s
+D communication_objects.ads  20160330002352 81548b0d communication_objects%s
+D server_logic.ads	20160413140942 9919e9c8 server_logic%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
@@ -46,11 +46,11 @@ X 6 communication_objects.ads
 1K9*Communication_Objects 5e26 7|1w6 1r33
 X 7 server_logic.ads
 3K9*Server_Logic 11l5 11e17
-5h9*Server_Interface 7p14 7r35 8p14 8r35 9p14 9r35
+5h9*Server_Interface 7p14 7r35 8p14 8r45 9p14 9r35
 7x14*dummy1 7=21
 7r21 This{5R9}
-8x14*dummy2 8=21
-8r21 This{5R9}
+8x14*InitializeServer 8=31
+8r31 This{5R9}
 9x14*dummy3 9=21
 9r21 This{5R9}
 
