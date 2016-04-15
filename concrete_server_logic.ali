@@ -34,7 +34,7 @@ RV SPARK_05
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U concrete_server_logic%b  concrete_server_logic.adb  054bbe32 DE OO PK
+U concrete_server_logic%b  concrete_server_logic.adb  7d9d31ea DE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -55,8 +55,10 @@ W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U concrete_server_logic%s  concrete_server_logic.ads  0a37e98e DE EE OO PF PK
+U concrete_server_logic%s  concrete_server_logic.ads  1d765b03 DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.conversions%s  a-chacon.adb	a-chacon.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
 W ada.exceptions%s	a-except.adb		a-except.ali
@@ -72,6 +74,7 @@ Z ada.unchecked_deallocation%s
 W gnat%s		gnat.ads		gnat.ali
 W gnat.sockets%s	g-socket.adb		g-socket.ali
 W gnat.string_split%s	g-strspl.ads		g-strspl.ali
+W protocol%s		protocol.adb		protocol.ali
 W server_logic%s	server_logic.ads	server_logic.ali
 W system%s		system.ads		system.ali
 W system.assertions%s	s-assert.adb		s-assert.ali
@@ -91,6 +94,7 @@ W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
+D a-chacon.ads		20150518132148 5b23f5eb ada.characters.conversions%s
 D a-chlat1.ads		20150518132148 66457d31 ada.characters.latin_1%s
 D a-contai.ads		20150518132148 61e5e089 ada.containers%s
 D a-cdlili.ads		20150518132148 59d7f011 ada.containers.doubly_linked_lists%s
@@ -102,15 +106,16 @@ D a-iteint.ads		20150518132148 7c7305e9 ada.iterator_interfaces%s
 D a-reatim.ads		20150518132148 a5838d5a ada.real_time%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-string.ads		20150518132148 90ac6797 ada.strings%s
+D a-strfix.ads		20150518132148 d07c346e ada.strings.fixed%s
 D a-strmap.ads		20150518132148 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D communication_objects.ads  20160330002352 81548b0d communication_objects%s
-D concrete_server_logic.ads  20160414154828 3eba4a4e concrete_server_logic%s
-D concrete_server_logic.adb  20160414175758 3bf1f47c concrete_server_logic%b
+D communication_objects.ads  20160407125136 81548b0d communication_objects%s
+D concrete_server_logic.ads  20160415140624 5877eabc concrete_server_logic%s
+D concrete_server_logic.adb  20160415152622 25eadb56 concrete_server_logic%b
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
@@ -119,7 +124,8 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D server_logic.ads	20160413140942 9919e9c8 server_logic%s
+D protocol.ads		20160415152210 2aafe794 protocol%s
+D server_logic.ads	20160415104328 9919e9c8 server_logic%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
@@ -132,6 +138,7 @@ D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
 D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
 D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
+D s-imgcha.ads		20150518132150 9c3458e7 system.img_char%s
 D s-imgint.ads		20150518132150 02dbe0c2 system.img_int%s
 D s-memory.ads		20150518132150 597d6634 system.memory%s
 D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
@@ -165,180 +172,187 @@ D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
 X 1 ada.ads
-16K9*Ada 19e8 21|3r6 3r23 4r6 4r33 5r6 5r23 6r6 6r26 7r6 7r47 22|29r7 63r13
-. 65r13 100r7 104r7 112r32 128r47 131r66 144r16 144r37 149r34 152r40 174r56
-. 177r52 182r40 187r56 192r40 197r46 199r59 203r52 217r46
-X 4 a-contai.ads
-16K13*Containers 24e19 21|7r10 7r51
-X 5 a-cdlili.ads
-40+9 Element_Type 21|45r51
-45k24*Doubly_Linked_Lists 407e39 21|7w21 45r31
-49R9*List<8|43R9> 21|51r38[45]
-146U14*Append 22|68s38[21|45]
-148p7 New_Item{21|43P9} 22|68r45[21|45]
-X 7 a-except.ads
-54K13*Exceptions 361e19 21|6w10 6r30
-104V13*Exception_Information{string} 22|41s20 44s20 79s19 82s19 226s19 229s19
-X 10 a-iteint.ads
+16K9*Ada 19e8 23|4r6 4r23 5r6 5r33 6r6 6r23 7r6 7r26 8r6 8r47 10r6 24|29r7
+. 63r13 65r13 100r7 104r7 112r32 127r47 130r66 143r16 143r37 148r34 151r40
+. 173r56 176r52 181r40 186r56 191r40 196r46 198r59 202r52 216r46
+X 2 a-charac.ads
+16K13*Characters 18e19 23|10r10
+X 3 a-chacon.ads
+36K24*Conversions 86e31 23|10w21
+X 5 a-contai.ads
+16K13*Containers 24e19 23|8r10 8r51
+X 6 a-cdlili.ads
+40+9 Element_Type 23|47r51
+45k24*Doubly_Linked_Lists 407e39 23|8w21 47r31
+49R9*List<9|43R9> 23|53r38[47]
+146U14*Append 24|68s38[23|47]
+148p7 New_Item{23|45P9} 24|68r45[23|47]
+X 8 a-except.ads
+54K13*Exceptions 361e19 23|7w10 7r30
+104V13*Exception_Information{string} 24|41s20 44s20 79s19 82s19 225s19 228s19
+X 11 a-iteint.ads
 24h9 Forward_Iterator
-32h9 Reversible_Iterator<24R9[5|67]>
-X 12 a-stream.ads
-36K13*Streams 87e16 21|3w10 3r27
+32h9 Reversible_Iterator<24R9[6|67]>
+X 13 a-stream.ads
+36K13*Streams 87e16 23|4w10 4r27
 42M9*Stream_Element
-44I9*Stream_Element_Offset<long_long_integer> 22|111r34
-54A9*Stream_Element_Array(42M9)<44I9> 22|110r29
-X 13 a-string.ads
-16K13*Strings 35e16 21|4r10 4r37 22|112r36 128r51 131r70 144r41 149r38 152r44
-. 174r60 177r56 182r44 187r60 192r44 197r50 199r63 203r56 217r50
-X 15 a-strunb.ads
-76K21*Unbounded 489e26 21|4w18 4r45 22|112r44 128r59 131r78 144r49 149r46
-. 152r52 174r68 177r64 182r52 187r68 192r52 197r58 199r71 203r64 217r58
-79R9*Unbounded_String<8|43R9> 473e14 21|38r18 22|92r20 112r54 126r30 128r27
-94V13*To_Unbounded_String{79R9} 22|128s69 149s56 152s62 182s62 192s62 197s68
-100V13*To_String{string} 22|131s88 144s59 174s78 177s74 187s78 199s81 203s74
-. 217s68
-119V14*"&"{79R9} 22|168s55 187s118 199s121
-123V14*"&"{79R9} 22|168s49 187s112 199s115
-127V14*"&"{79R9} 22|187s99 199s102
-131V14*"&"{79R9} 22|119s53
-166V14*"="{boolean} 22|155s46 185s46 195s46 210s43
-170V14*"="{boolean} 22|150s34 179s37 205s37
-X 17 a-textio.ads
-49K13*Text_IO 471e16 21|5w10 5r27 22|29r11 63r17 65r17 100r11 104r11 144r20
-242U14*Put 22|40s10 43s10 78s10 81s10 225s10 228s10
-263U14*Put_Line 22|29s19 41s10 44s10 63s25 65s25 79s10 82s10 100s19 104s19
-. 140s22 144s28 177s25 203s25 217s19 226s10 229s10
-X 21 concrete_server_logic.ads
-11K9*Concrete_Server_Logic 29E14 71l5 71e26 22|1b14 232l5 232t26
-15R9*Concrete_Server 16r39 48c9 52e14
-16P9*Concrete_Server_Ptr(15R9) 23r40 57r45 59r35 22|3r13 7r40 14r45 49r35
-23U14*StartServer 23=26 22|7b14 10l8 10t19
-23p26 This{16P9} 22|7b26 9m24
-29T14 Client_Task 31e7 32r35 22|71r45 87b14 230l8 230t19
-30Y13 Start 30>19 30>41 22|72s38 95b14 98l11 98t16
-30i19 Socket{25|409I9} 22|72r44 96r26
-30r41 SocketAddress{25|502R9} 22|72r69 97r33
-32P9 Client_Task_Ptr(29T14) 41r27
-37R9 Concrete_Client 42e14 43r39 22|15r46 60r49
-38r7*Username{15|79R9} 22|155r37 165m37 168r63 185r37 195r37 210r34
-39i7*Socket{25|409I9} 22|33m41 35r42 36r37 64m70 72m61 72r61 173r58 186r58
-. 198r61 211r47
-40r7*SocketAddress{25|502R9} 22|64m96 65r90 72m93 72r93 164r37
-41p7*CommunicationTask{32P9} 22|71m20 72r20
-43P9 Concrete_Client_Ptr(37R9) 45r67 22|15r19 60r22
-45K12 Client_List[5|45] 51r26
-49i6*Socket{25|409I9} 22|21m38 25r36 26r38 64r44
-50r6*SocketAddress{25|502R9} 22|23m14 24m14 25r62 35r67
-51r6*Connected_Clients{5|49R9[45]} 22|68m20 154r45 163r45 172r45 184r45 194r45
-. 209r42
-57U14 InitializeServer 57=31 22|9s7 14b14 45l8 45t24
-57p31 This{16P9} 22|14b31 18r17
-59U14 dummy3 59=21
-59p21 This{16P9}
-67t9 Main_Server_Task 22|30r7 53b14 83l8 83t24
-68Y13 Start 22|30s24 55b14
-X 22 concrete_server_logic.adb
-3p4 Server{21|16P9} 18m7 21r31 23r7 24r7 25r29 25r55 26r31 35r60 64r37 68r13
-. 154r34 163r34 172r34 184r34 194r34 209r31
-15p7 SubServer{21|43P9} 33r31 35r32 36r27
-39r13 Error{7|63R9} 41r42
-42r13 Error{7|63R9} 44r42
+44I9*Stream_Element_Offset<long_long_integer> 24|111r34
+54A9*Stream_Element_Array(42M9)<44I9> 24|110r29
+X 14 a-string.ads
+16K13*Strings 35e16 23|5r10 5r37 24|112r36 127r51 130r70 143r41 148r38 151r44
+. 173r60 176r56 181r44 186r60 191r44 196r50 198r63 202r56 216r50
+X 17 a-strunb.ads
+76K21*Unbounded 489e26 23|5w18 5r45 24|112r44 127r59 130r78 143r49 148r46
+. 151r52 173r68 176r64 181r52 186r68 191r52 196r58 198r71 202r64 216r58
+79R9*Unbounded_String<9|43R9> 473e14 23|40r18 24|92r20 112r54 125r30 127r27
+94V13*To_Unbounded_String{79R9} 24|127s69 148s56 151s62 181s62 191s62 196s68
+100V13*To_String{string} 24|130s88 143s59 173s78 176s74 186s78 198s81 202s74
+. 216s68
+119V14*"&"{79R9} 24|167s61 186s135 198s138
+123V14*"&"{79R9} 24|167s49 186s123 198s126
+127V14*"&"{79R9} 24|186s110 198s113
+131V14*"&"{79R9} 24|119s53
+166V14*"="{boolean} 24|154s46 184s46 194s46 209s43
+170V14*"="{boolean} 24|149s34 178s37 204s37
+X 19 a-textio.ads
+49K13*Text_IO 471e16 23|6w10 6r27 24|29r11 63r17 65r17 100r11 104r11 143r20
+242U14*Put 24|40s10 43s10 78s10 81s10 224s10 227s10
+263U14*Put_Line 24|29s19 41s10 44s10 63s25 65s25 79s10 82s10 100s19 104s19
+. 139s22 143s28 176s25 202s25 216s19 225s10 228s10
+X 23 concrete_server_logic.ads
+13K9*Concrete_Server_Logic 31E14 73l5 73e26 24|1b14 231l5 231t26
+17R9*Concrete_Server 18r39 50c9 54e14
+18P9*Concrete_Server_Ptr(17R9) 25r40 59r45 61r35 24|3r13 7r40 14r45 49r35
+25U14*StartServer 25=26 24|7b14 10l8 10t19
+25p26 This{18P9} 24|7b26 9m24
+31T14 Client_Task 33e7 34r35 24|71r45 87b14 229l8 229t19
+32Y13 Start 32>19 32>41 24|72s38 95b14 98l11 98t16
+32i19 Socket{27|409I9} 24|72r44 96r26
+32r41 SocketAddress{27|502R9} 24|72r69 97r33
+34P9 Client_Task_Ptr(31T14) 43r27
+39R9 Concrete_Client 44e14 45r39 24|15r46 60r49
+40r7*Username{17|79R9} 24|154r37 164m37 167r69 184r37 194r37 209r34
+41i7*Socket{27|409I9} 24|33m41 35r42 36r37 64m70 72m61 72r61 172r58 185r58
+. 197r61 210r47
+42r7*SocketAddress{27|502R9} 24|64m96 65r90 72m93 72r93 163r37
+43p7*CommunicationTask{34P9} 24|71m20 72r20
+45P9 Concrete_Client_Ptr(39R9) 47r67 24|15r19 60r22
+47K12 Client_List[6|45] 53r26
+51i6*Socket{27|409I9} 24|21m38 25r36 26r38 64r44
+52r6*SocketAddress{27|502R9} 24|23m14 24m14 25r62 35r67
+53r6*Connected_Clients{6|49R9[47]} 24|68m20 153r45 162r45 171r45 183r45 193r45
+. 208r42
+59U14 InitializeServer 59=31 24|9s7 14b14 45l8 45t24
+59p31 This{18P9} 24|14b31 18r17
+61U14 dummy3 61=21
+61p21 This{18P9}
+69t9 Main_Server_Task 24|30r7 53b14 83l8 83t24
+70Y13 Start 24|30s24 55b14
+X 24 concrete_server_logic.adb
+3p4 Server{23|18P9} 18m7 21r31 23r7 24r7 25r29 25r55 26r31 35r60 64r37 68r13
+. 153r34 162r34 171r34 183r34 193r34 208r31
+15p7 SubServer{23|45P9} 33r31 35r32 36r27
+39r13 Error{8|63R9} 41r42
+42r13 Error{8|63R9} 44r42
 49U14 dummy3
-49p21 This{21|16P9}
-60p13 Client{21|43P9} 64r63 64r89 65r83 68r57 71r13 72r13 72r54 72r86
-77r13 Error{7|63R9} 79r41
-80r13 Error{7|63R9} 82r41
-89p7 OutputChannel{25|1004P9} 156m31 157r44 173m28 174r41 186m28 187r41 198m31
-. 199r44 206m22 207r35
-90i7 ClientSocket{25|409I9} 96m10 115r38 156r55 206r46
-91r7 ClientSocketAddress{25|502R9} 97m10 100r72 104r83 164r53
-92r7 MyUsername{15|79R9} 166m31 185r49 187r101 199r104 210r45
-95i20 Socket{25|409I9}
-95r42 SocketAddress{25|502R9}
-107L9 Continue 159r36
-110a13 incoming_data{12|54A9} 115m60 119r69
-111i13 incoming_data_size{12|44I9} 115m83 118r27
-112r13 incoming_message{15|79R9} 119m16 119r36 131r98 144r69 177r84 203r84
-. 217r78
+49p21 This{23|18P9}
+60p13 Client{23|45P9} 64r63 64r89 65r83 68r57 71r13 72r13 72r54 72r86
+77r13 Error{8|63R9} 79r41
+80r13 Error{8|63R9} 82r41
+89p7 OutputChannel{27|1004P9} 155m31 156r44 172m28 173r41 185m28 186r41 197m31
+. 198r44 205m22 206r35
+90i7 ClientSocket{27|409I9} 96m10 115r38 155r55 205r46
+91r7 ClientSocketAddress{27|502R9} 97m10 100r72 104r83 163r53
+92r7 MyUsername{17|79R9} 165m31 184r49 186r112 198r115 209r45
+95i20 Socket{27|409I9}
+95r42 SocketAddress{27|502R9}
+107L9 Continue 158r36
+110a13 incoming_data{13|54A9} 115m60 119r69
+111i13 incoming_data_size{13|44I9} 115m83 118r27
+112r13 incoming_message{17|79R9} 119m16 119r36 130r98 143r69 176r84 202r84
+. 216r78
 118i17 i<long_long_integer> 119r83
-124r16 Substrings{24|74R9[26|39]} 131m46 133r55 136r60 138r79 149r100 152r106
-. 182r106 192r106 197r112
-125a16 Seperator{string} 132r55
-126r16 MessagePart{15|79R9} 149m19 150r22 152m25 155r48 165r49 166r45 179r25
-. 182m25 187r120 192m25 195r48 197m31 199r123 205r25
-127i16 Count{24|116I9[26|39]} 133m16 148r19 151r25 180r25 190r28
-128r16 userlist{15|79R9} 168m28 168r40 174r88
-136i20 i<integer> 138r91 140r68
-138a22 MessagePart{string} 140r82 140r124
-154p29 c{21|43P9} 155r31
-163p29 c{21|43P9} 164r31 165r31 168r57
-172p29 c{21|43P9} 173r52
-184p29 c{21|43P9} 185r31 186r52
-194p29 c{21|43P9} 195r31 198r55
-209p26 c{21|43P9} 210r28 211r41
-224r12 Error{7|63R9} 226r41
-227r12 Error{7|63R9} 229r41
-X 23 gnat.ads
-34K9*GNAT 21|2r6 2r24 8r6 8r29 22|65r64 100r53 104r64 124r29 131r16 132r74
-. 133r25 136r30 138r55 140r31 149r76 152r82 182r82 192r82 197r88 23|37e9
-X 24 g-arrspl.ads
+124r16 Substrings{26|74R9[28|39]} 130m46 132r55 135r60 137r79 148r100 151r106
+. 181r106 191r106 196r112
+125r16 MessagePart{17|79R9} 148m19 149r22 151m25 154r48 164r49 165r45 178r25
+. 181m25 186r137 191m25 194r48 196m31 198r140 204r25
+126i16 Count{26|116I9[28|39]} 132m16 147r19 150r25 179r25 189r28
+127r16 userlist{17|79R9} 167m28 167r40 173r88
+135i20 i<integer> 137r91 139r68
+137a22 MessagePart{string} 139r82 139r124
+153p29 c{23|45P9} 154r31
+162p29 c{23|45P9} 163r31 164r31 167r63
+171p29 c{23|45P9} 172r52
+183p29 c{23|45P9} 184r31 185r52
+193p29 c{23|45P9} 194r31 197r55
+208p26 c{23|45P9} 209r28 210r41
+223r12 Error{8|63R9} 225r41
+226r12 Error{8|63R9} 228r41
+X 25 gnat.ads
+34K9*GNAT 23|3r6 3r24 9r6 9r29 24|65r64 100r53 104r64 124r29 130r16 131r74
+. 132r25 135r30 137r55 139r31 148r76 151r82 181r82 191r82 196r88 25|37e9
+X 26 g-arrspl.ads
 63E9*Separator_Mode
-69n7*Multiple{63E9[26|39]} 22|132r92[26|39]
-74R9*Slice_Set<8|43R9> 22|124r47[26|39]
-82U14*Create 22|131s34[26|39]
-83r7 S{74R9[26|39]} 22|131r41[26|39]
-84a7 From{string} 22|131r58[26|39]
-85a7 Separators{string} 22|132r41[26|39]
-86e7 Mode{63E9[26|39]} 22|132r66[26|39]
-116I9*Slice_Number<integer> 22|127r24[26|39] 140r49[26|39]
-119V13*Slice_Count{116I9[26|39]} 22|133s43[26|39] 136s48[26|39]
-123V13*Slice{string} 22|138s73[26|39] 149s94[26|39] 152s100[26|39] 182s100[26|39]
-. 192s100[26|39] 197s106[26|39]
-X 25 g-socket.ads
-55K14*Sockets 21|2w11 2r29 22|65r69 100r58 104r69 25|1260e17
-409I9*Socket_Type<integer> 21|30r28 39r16 49r15 22|90r22 95r29
-448X4*Socket_Error 22|39r20 77r20 224r19
+69n7*Multiple{63E9[28|39]} 24|131r92[28|39]
+74R9*Slice_Set<9|43R9> 24|124r47[28|39]
+82U14*Create 24|130s34[28|39]
+83r7 S{74R9[28|39]} 24|130r41[28|39]
+84a7 From{string} 24|130r58[28|39]
+85a7 Separators{string} 24|131r41[28|39]
+86e7 Mode{63E9[28|39]} 24|131r66[28|39]
+116I9*Slice_Number<integer> 24|126r24[28|39] 139r49[28|39]
+119V13*Slice_Count{116I9[28|39]} 24|132s43[28|39] 135s48[28|39]
+123V13*Slice{string} 24|137s73[28|39] 148s94[28|39] 151s100[28|39] 181s100[28|39]
+. 191s100[28|39] 196s106[28|39]
+X 27 g-socket.ads
+55K14*Sockets 23|3w11 3r29 24|65r69 100r58 104r69 27|1260e17
+409I9*Socket_Type<integer> 23|32r28 41r16 51r15 24|90r22 95r29
+448X4*Socket_Error 24|39r20 77r20 223r19
 476I9*Port_Type<integer>
-502R9*Sock_Addr_Type 21|30r57 40r23 50r22 22|91r29 95r58 25|505e14
-503r7*Addr{485R9} 22|23m28
-504i7*Port{476I9} 22|24m28
-518V13*Image{string} 22|65s77 100s66 104s77
-521V13*Inet_Addr{485R9} 22|23s36
-802U14*Create_Socket 22|21s7 33s7
-803i7 Socket{409I9} 22|21r21 33r21
-808U14*Accept_Socket 22|64s13
-809i7 Server{409I9} 22|64r27
-810i7 Socket{409I9} 22|64r53
-811r7 Address{502R9} 22|64r78
-833U14*Bind_Socket 22|25s7
-834i7 Socket{409I9} 22|25r19
-835r7 Address{502R9} 22|25r44
-839U14*Close_Socket 22|211s28
-842U14*Connect_Socket 22|35s7
-843i7 Socket{409I9} 22|35r22
-844r7 Server{502R9} 22|35r50
-884U14*Listen_Socket 22|26s7
-885i7 Socket{409I9} 22|26r21
-894U14*Receive_Socket 22|115s13
-895i7 Socket{409I9} 22|115r28
-896a7 Item{12|54A9} 22|115r52
-897i7 Last{12|44I9} 22|115r75
-1004P9*Stream_Access(12|39R9) 22|89r23
-1007V13*Stream{1004P9} 22|36s20 156s48 173s45 186s45 198s48 206s39
-X 26 g-strspl.ads
-39K14*String_Split[24|58] 21|8w11 8r34 22|124r34 131r21 132r79 133r30 136r35
-. 138r60 140r36 149r81 152r87 182r87 192r87 197r93
-X 31 server_logic.ads
-3K9*Server_Logic 21|1w6 1r24 31|11e17
-X 32 system.ads
+502R9*Sock_Addr_Type 23|32r57 42r23 52r22 24|91r29 95r58 27|505e14
+503r7*Addr{485R9} 24|23m28
+504i7*Port{476I9} 24|24m28
+518V13*Image{string} 24|65s77 100s66 104s77
+521V13*Inet_Addr{485R9} 24|23s36
+802U14*Create_Socket 24|21s7 33s7
+803i7 Socket{409I9} 24|21r21 33r21
+808U14*Accept_Socket 24|64s13
+809i7 Server{409I9} 24|64r27
+810i7 Socket{409I9} 24|64r53
+811r7 Address{502R9} 24|64r78
+833U14*Bind_Socket 24|25s7
+834i7 Socket{409I9} 24|25r19
+835r7 Address{502R9} 24|25r44
+839U14*Close_Socket 24|210s28
+842U14*Connect_Socket 24|35s7
+843i7 Socket{409I9} 24|35r22
+844r7 Server{502R9} 24|35r50
+884U14*Listen_Socket 24|26s7
+885i7 Socket{409I9} 24|26r21
+894U14*Receive_Socket 24|115s13
+895i7 Socket{409I9} 24|115r28
+896a7 Item{13|54A9} 24|115r52
+897i7 Last{13|44I9} 24|115r75
+1004P9*Stream_Access(13|39R9) 24|89r23
+1007V13*Stream{1004P9} 24|36s20 155s48 172s45 185s45 197s48 205s39
+X 28 g-strspl.ads
+39K14*String_Split[26|58] 23|9w11 9r34 24|124r34 130r21 131r79 132r30 135r35
+. 137r60 139r36 148r81 151r87 181r87 191r87 196r93
+X 33 protocol.ads
+6K9*Protocol 23|2w6 2r20 33|23e13
+8a4*Seperator{string} 24|36r58 131r55 156r71 167r51 186r100 186r125 198r103
+. 198r128 206r65
+X 34 server_logic.ads
+3K9*Server_Logic 23|1w6 1r24 34|11e17
+X 35 system.ads
 67M9*Address
-X 45 s-memory.ads
-53V13*Alloc{32|67M9} 103i<c,__gnat_malloc>22
+X 49 s-memory.ads
+53V13*Alloc{35|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{32|67M9} 105i<c,__gnat_realloc>22
-X 54 s-stausa.ads
+76V13*Realloc{35|67M9} 105i<c,__gnat_realloc>22
+X 58 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 56 s-stalib.adb
+X 60 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 

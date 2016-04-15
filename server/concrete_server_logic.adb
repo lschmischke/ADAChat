@@ -33,7 +33,7 @@ package body Concrete_Server_Logic is
       Create_Socket(Socket => SubServer.Socket);
       -- # SubServer mit Server verbinden, Server wartet mit Accept - SubServer fragt mit Connect an #
       Connect_Socket(Socket => SubServer.Socket, Server => Server.SocketAddress);
-      String'Write(Stream(SubServer.Socket), "connect:server");
+      String'Write(Stream(SubServer.Socket), "connect" & Seperator & "server");
 
       Exception
        when Error: Socket_Error =>
@@ -103,7 +103,7 @@ package body Concrete_Server_Logic is
 
       Ada.Text_IO.Put_Line("Waiting for incoming data from " & GNAT.Sockets.Image(ClientSocketAddress) & " ...");
 
-      -- # Abhoerroutine auf Aktivitaet am Client-Socket #
+      -- # Abhoerroutine2 auf Aktivitaet am Client-Socket #
       <<Continue>>
       loop
          declare
@@ -122,7 +122,6 @@ package body Concrete_Server_Logic is
             -- # Nachricht liegt vor, nun wird diese verarbeitet und interpretiert #
             declare
                Substrings : GNAT.String_Split.Slice_Set;
-               Seperator : constant String := ":";
                MessagePart : Unbounded_String;
                Count : Slice_Number;
                userlist : Unbounded_String := Ada.Strings.Unbounded.To_Unbounded_String("userlist");
@@ -154,7 +153,7 @@ package body Concrete_Server_Logic is
                         for c of server.all.Connected_Clients loop
                            if c.all.Username = MessagePart then
                               OutputChannel := Stream(ClientSocket);
-                              String'Write(OutputChannel, "refused:name already in use");
+                              String'Write(OutputChannel, "refused" & Seperator & "name already in use");
                               -- Socket wieder schlieﬂen und aus Liste austragen etc.
                               goto Continue;
                            end if;
@@ -165,7 +164,7 @@ package body Concrete_Server_Logic is
                               c.all.Username := MessagePart;
                               MyUsername := MessagePart;
                            end if;
-                           userlist := userlist & ":" & c.all.Username;
+                           userlist := userlist & Seperator & c.all.Username;
                         end loop;
 
                         -- # Userlist an alle Teilnehmer senden #
@@ -184,7 +183,7 @@ package body Concrete_Server_Logic is
                         for c of server.all.Connected_Clients loop
                            if c.all.Username /= MyUsername then -- # Der Versender der Nachricht, soll den Broadcast nicht bekommen, sonst doppelte Nachricht #
                            OutputChannel := Stream(c.all.Socket);
-                           String'Write(OutputChannel, Ada.Strings.Unbounded.To_String("message:" & MyUsername & ":" & MessagePart));
+                           String'Write(OutputChannel, Ada.Strings.Unbounded.To_String("message" & Seperator & MyUsername & Seperator & MessagePart));
                            end if;
                         end loop;
                      elsif Count = 3 then -- # Nachricht an jemand Bestimmten versenden, Format: message:<Benutzername>:<Nachricht> #
@@ -196,7 +195,7 @@ package body Concrete_Server_Logic is
                               -- # MessagePart ist hier die eigentliche Nachricht #
                               MessagePart := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 3));
                               OutputChannel := Stream(c.all.Socket);
-                              String'Write(OutputChannel, Ada.Strings.Unbounded.To_String("message:" & MyUsername & ":" & MessagePart));
+                              String'Write(OutputChannel, Ada.Strings.Unbounded.To_String("message" & Seperator & MyUsername & Seperator & MessagePart));
                            end if;
                         end loop;
                      else
@@ -204,7 +203,7 @@ package body Concrete_Server_Logic is
                      end if;
                   elsif MessagePart = "disconnect" then
                      OutputChannel := Stream(ClientSocket);
-                     String'Write(OutputChannel, "disconnect:ok");
+                     String'Write(OutputChannel, "disconnect" & Seperator & "ok");
 
                      for c of server.all.Connected_Clients loop
                         if c.all.Username = MyUsername then

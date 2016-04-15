@@ -16,8 +16,8 @@ class {
              -9:communication_objects__communication_objectDF"
 }
 graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads"
-node: { title: "ada__tags__register_tag" label: "Register_Tag\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
-node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
 node: { title: "communication_objects___elabs" label: "Communication_Objects\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:1:1\n32 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "communication_objects___elabs" targetname: "ada__tags__register_tag" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" }
 edge: { sourcename: "communication_objects___elabs" targetname: "ada__tags__check_tsd" label: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" }

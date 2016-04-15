@@ -1,4 +1,5 @@
 with Server_Logic; use Server_Logic;
+with Protocol; use Protocol;
 with GNAT.Sockets; use GNAT.Sockets;
 with Ada.Streams; use Ada.Streams;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
@@ -6,6 +7,7 @@ with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Exceptions; use Ada.Exceptions;
 with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
 with GNAT.String_Split; use GNAT.String_Split;
+with Ada.Characters.Conversions;
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is

@@ -17,14 +17,14 @@ class {
              -9:communication_objects__files__fileDF,-9:communication_objects__communication_object"
 }
 graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads"
-node: { title: "ada__tags__register_tag" label: "Register_Tag\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
-node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
-node: { title: "ada__tags__unregister_tag" label: "Unregister_Tag\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:578:14" shape : ellipse }
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "ada__tags__unregister_tag" label: "Unregister_Tag\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:578:14" shape : ellipse }
 node: { title: "communication_objects__Oeq" label: "=\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" shape : ellipse }
-node: { title: "system__secondary_stack__ss_allocate" label: "Ss_Allocate\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:66:14" shape : ellipse }
-node: { title: "system__stream_attributes__w_i" label: "W_I\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:137:14" shape : ellipse }
+node: { title: "system__secondary_stack__ss_allocate" label: "Ss_Allocate\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:66:14" shape : ellipse }
+node: { title: "system__stream_attributes__w_i" label: "W_I\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:137:14" shape : ellipse }
 node: { title: "communication_objects__communication_objectSW" label: "Communication_Objectsw\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" shape : ellipse }
-node: { title: "system__stream_attributes__i_i" label: "I_I\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:106:13" shape : ellipse }
+node: { title: "system__stream_attributes__i_i" label: "I_I\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stratt.ads:106:13" shape : ellipse }
 node: { title: "communication_objects__communication_objectSR" label: "Communication_Objectsr\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" shape : ellipse }
 node: { title: "communication_objects__communication_objectIP" label: "Communication_Objectip\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects.ads:3:9" shape : ellipse }
 node: { title: "communication_objects__files___elabs" label: "Files\nC:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads:1:1\n32 bytes (static)\n0 dynamic objects" }

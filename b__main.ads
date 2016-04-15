@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#f090a2f4#;
+   u00001 : constant Version_32 := 16#965d0206#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#fbff4c67#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -309,9 +309,9 @@ package ada_main is
    pragma Export (C, u00136, "system__memoryB");
    u00137 : constant Version_32 := 16#adb3ea0e#;
    pragma Export (C, u00137, "system__memoryS");
-   u00138 : constant Version_32 := 16#054bbe32#;
+   u00138 : constant Version_32 := 16#7d9d31ea#;
    pragma Export (C, u00138, "concrete_server_logicB");
-   u00139 : constant Version_32 := 16#0a37e98e#;
+   u00139 : constant Version_32 := 16#1d765b03#;
    pragma Export (C, u00139, "concrete_server_logicS");
    u00140 : constant Version_32 := 16#fd83e873#;
    pragma Export (C, u00140, "system__concat_2B");
@@ -457,57 +457,82 @@ package ada_main is
    pragma Export (C, u00210, "system__arith_64B");
    u00211 : constant Version_32 := 16#d4b08bf7#;
    pragma Export (C, u00211, "system__arith_64S");
-   u00212 : constant Version_32 := 16#28f088c2#;
-   pragma Export (C, u00212, "ada__text_ioB");
-   u00213 : constant Version_32 := 16#1a9b0017#;
-   pragma Export (C, u00213, "ada__text_ioS");
-   u00214 : constant Version_32 := 16#fd2ad2f1#;
-   pragma Export (C, u00214, "gnatS");
-   u00215 : constant Version_32 := 16#b183acf5#;
-   pragma Export (C, u00215, "gnat__socketsB");
-   u00216 : constant Version_32 := 16#d351939f#;
-   pragma Export (C, u00216, "gnat__socketsS");
-   u00217 : constant Version_32 := 16#f8b8cc5a#;
-   pragma Export (C, u00217, "gnat__sockets__linker_optionsS");
-   u00218 : constant Version_32 := 16#b0532f13#;
-   pragma Export (C, u00218, "gnat__sockets__thinB");
-   u00219 : constant Version_32 := 16#7cbf3246#;
-   pragma Export (C, u00219, "gnat__sockets__thinS");
-   u00220 : constant Version_32 := 16#0a2632e6#;
-   pragma Export (C, u00220, "gnat__sockets__thin_commonB");
-   u00221 : constant Version_32 := 16#5de24e36#;
-   pragma Export (C, u00221, "gnat__sockets__thin_commonS");
-   u00222 : constant Version_32 := 16#994daa60#;
-   pragma Export (C, u00222, "system__pool_sizeB");
-   u00223 : constant Version_32 := 16#f5e0c463#;
-   pragma Export (C, u00223, "system__pool_sizeS");
-   u00224 : constant Version_32 := 16#7ebd8839#;
-   pragma Export (C, u00224, "system__val_intB");
-   u00225 : constant Version_32 := 16#bc6ba605#;
-   pragma Export (C, u00225, "system__val_intS");
-   u00226 : constant Version_32 := 16#2e610ef3#;
-   pragma Export (C, u00226, "system__os_constantsS");
-   u00227 : constant Version_32 := 16#dbf24c7a#;
-   pragma Export (C, u00227, "gnat__string_splitB");
-   u00228 : constant Version_32 := 16#00425e4a#;
-   pragma Export (C, u00228, "gnat__string_splitS");
-   u00229 : constant Version_32 := 16#184d62c5#;
-   pragma Export (C, u00229, "server_logicS");
-   u00230 : constant Version_32 := 16#af01ab11#;
-   pragma Export (C, u00230, "data_types_testB");
-   u00231 : constant Version_32 := 16#9f27f552#;
-   pragma Export (C, u00231, "data_types_testS");
-   u00232 : constant Version_32 := 16#9094876d#;
-   pragma Export (C, u00232, "ada__assertionsB");
-   u00233 : constant Version_32 := 16#538f1e95#;
-   pragma Export (C, u00233, "ada__assertionsS");
-   u00234 : constant Version_32 := 16#6c3536aa#;
-   pragma Export (C, u00234, "server_uiB");
-   u00235 : constant Version_32 := 16#7a9843ab#;
-   pragma Export (C, u00235, "server_uiS");
+   u00212 : constant Version_32 := 16#e753e265#;
+   pragma Export (C, u00212, "ada__characters__conversionsB");
+   u00213 : constant Version_32 := 16#761d31b0#;
+   pragma Export (C, u00213, "ada__characters__conversionsS");
+   u00214 : constant Version_32 := 16#28f088c2#;
+   pragma Export (C, u00214, "ada__text_ioB");
+   u00215 : constant Version_32 := 16#1a9b0017#;
+   pragma Export (C, u00215, "ada__text_ioS");
+   u00216 : constant Version_32 := 16#fd2ad2f1#;
+   pragma Export (C, u00216, "gnatS");
+   u00217 : constant Version_32 := 16#b183acf5#;
+   pragma Export (C, u00217, "gnat__socketsB");
+   u00218 : constant Version_32 := 16#d351939f#;
+   pragma Export (C, u00218, "gnat__socketsS");
+   u00219 : constant Version_32 := 16#f8b8cc5a#;
+   pragma Export (C, u00219, "gnat__sockets__linker_optionsS");
+   u00220 : constant Version_32 := 16#b0532f13#;
+   pragma Export (C, u00220, "gnat__sockets__thinB");
+   u00221 : constant Version_32 := 16#7cbf3246#;
+   pragma Export (C, u00221, "gnat__sockets__thinS");
+   u00222 : constant Version_32 := 16#0a2632e6#;
+   pragma Export (C, u00222, "gnat__sockets__thin_commonB");
+   u00223 : constant Version_32 := 16#5de24e36#;
+   pragma Export (C, u00223, "gnat__sockets__thin_commonS");
+   u00224 : constant Version_32 := 16#994daa60#;
+   pragma Export (C, u00224, "system__pool_sizeB");
+   u00225 : constant Version_32 := 16#f5e0c463#;
+   pragma Export (C, u00225, "system__pool_sizeS");
+   u00226 : constant Version_32 := 16#7ebd8839#;
+   pragma Export (C, u00226, "system__val_intB");
+   u00227 : constant Version_32 := 16#bc6ba605#;
+   pragma Export (C, u00227, "system__val_intS");
+   u00228 : constant Version_32 := 16#2e610ef3#;
+   pragma Export (C, u00228, "system__os_constantsS");
+   u00229 : constant Version_32 := 16#dbf24c7a#;
+   pragma Export (C, u00229, "gnat__string_splitB");
+   u00230 : constant Version_32 := 16#00425e4a#;
+   pragma Export (C, u00230, "gnat__string_splitS");
+   u00231 : constant Version_32 := 16#53853d1b#;
+   pragma Export (C, u00231, "protocolB");
+   u00232 : constant Version_32 := 16#8e1c2cd2#;
+   pragma Export (C, u00232, "protocolS");
+   u00233 : constant Version_32 := 16#46899fd1#;
+   pragma Export (C, u00233, "system__concat_7B");
+   u00234 : constant Version_32 := 16#0809d725#;
+   pragma Export (C, u00234, "system__concat_7S");
+   u00235 : constant Version_32 := 16#4b37b589#;
+   pragma Export (C, u00235, "system__val_enumB");
+   u00236 : constant Version_32 := 16#4fd4ceaf#;
+   pragma Export (C, u00236, "system__val_enumS");
+   u00237 : constant Version_32 := 16#e5480ede#;
+   pragma Export (C, u00237, "ada__strings__fixedB");
+   u00238 : constant Version_32 := 16#a86b22b3#;
+   pragma Export (C, u00238, "ada__strings__fixedS");
+   u00239 : constant Version_32 := 16#2b93a046#;
+   pragma Export (C, u00239, "system__img_charB");
+   u00240 : constant Version_32 := 16#68fad4dd#;
+   pragma Export (C, u00240, "system__img_charS");
+   u00241 : constant Version_32 := 16#184d62c5#;
+   pragma Export (C, u00241, "server_logicS");
+   u00242 : constant Version_32 := 16#af01ab11#;
+   pragma Export (C, u00242, "data_types_testB");
+   u00243 : constant Version_32 := 16#9f27f552#;
+   pragma Export (C, u00243, "data_types_testS");
+   u00244 : constant Version_32 := 16#9094876d#;
+   pragma Export (C, u00244, "ada__assertionsB");
+   u00245 : constant Version_32 := 16#538f1e95#;
+   pragma Export (C, u00245, "ada__assertionsS");
+   u00246 : constant Version_32 := 16#6c3536aa#;
+   pragma Export (C, u00246, "server_uiB");
+   u00247 : constant Version_32 := 16#7a9843ab#;
+   pragma Export (C, u00247, "server_uiS");
    --  BEGIN ELABORATION ORDER
    --  ada%s
    --  ada.characters%s
+   --  ada.characters.conversions%s
    --  ada.characters.latin_1%s
    --  gnat%s
    --  interfaces%s
@@ -523,6 +548,8 @@ package ada_main is
    --  system.htable%s
    --  system.img_bool%s
    --  system.img_bool%b
+   --  system.img_char%s
+   --  system.img_char%b
    --  system.img_enum_new%s
    --  system.img_enum_new%b
    --  system.img_int%s
@@ -567,12 +594,14 @@ package ada_main is
    --  system.traces%s
    --  system.traces%b
    --  system.unsigned_types%s
+   --  system.val_enum%s
    --  system.val_int%s
    --  system.val_uns%s
    --  system.val_util%s
    --  system.val_util%b
    --  system.val_uns%b
    --  system.val_int%b
+   --  system.val_enum%b
    --  system.wch_con%s
    --  system.wch_con%b
    --  system.wch_cnv%s
@@ -598,12 +627,15 @@ package ada_main is
    --  system.concat_5%b
    --  system.concat_6%s
    --  system.concat_6%b
+   --  system.concat_7%s
+   --  system.concat_7%b
    --  system.exception_table%s
    --  system.exception_table%b
    --  ada.containers%s
    --  ada.io_exceptions%s
    --  ada.strings%s
    --  ada.strings.maps%s
+   --  ada.strings.fixed%s
    --  ada.strings.search%s
    --  ada.strings.search%b
    --  ada.tags%s
@@ -671,9 +703,11 @@ package ada_main is
    --  interfaces.c.strings%b
    --  interfaces.c%b
    --  ada.tags%b
+   --  ada.strings.fixed%b
    --  ada.strings.maps%b
    --  system.soft_links%b
    --  system.os_lib%b
+   --  ada.characters.conversions%b
    --  system.secondary_stack%b
    --  system.address_image%b
    --  ada.strings.unbounded%s
@@ -735,6 +769,8 @@ package ada_main is
    --  communication_objects.messages.userlist%b
    --  data_types_test%s
    --  data_types_test%b
+   --  protocol%s
+   --  protocol%b
    --  server_logic%s
    --  concrete_server_logic%s
    --  concrete_server_logic%b
