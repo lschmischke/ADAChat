@@ -38,8 +38,7 @@ package body Concrete_Client_Logic is
 
 
 
-   procedure sendMessage(This : in out Concrete_Client;
-                         Message : out Communication_Object'Class) is
+   procedure sendMessage(This : in out Concrete_Client) is
 
    begin
 
@@ -49,8 +48,7 @@ package body Concrete_Client_Logic is
 
 
 
-   procedure readMessage(This : in out Concrete_Client;
-                         Message : out Communication_Object'Class) is
+   procedure readMessage(This : in out Concrete_Client) is
 
    begin
 
