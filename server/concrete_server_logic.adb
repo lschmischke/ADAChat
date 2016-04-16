@@ -13,6 +13,7 @@ package body Concrete_Server_Logic is
 
    procedure InitializeServer(This : in out Concrete_Server_Ptr) is
       SubServer : Concrete_Client_Ptr := new Concrete_Client;
+      connectMessage : MessageObject;
    begin
       -- # Erzeugte Serverintanz global setzen, damit sie im Package ueberall bekannt ist #
       server := this;
@@ -32,8 +33,16 @@ package body Concrete_Server_Logic is
       -- # Erzeugung des SubServer-Sockets #
       Create_Socket(Socket => SubServer.Socket);
       -- # SubServer mit Server verbinden, Server wartet mit Accept - SubServer fragt mit Connect an #
+
       Connect_Socket(Socket => SubServer.Socket, Server => Server.SocketAddress);
-      String'Write(Stream(SubServer.Socket), "connect" & Seperator & "server");
+      connectMessage := createMessage(messagetype => Protocol.Connect,
+                                      sender      => To_Unbounded_String("server"),
+                                      receiver    => 0,
+                                      content     => To_Unbounded_String("passwort"));
+      String'Write(Stream(SubServer.Socket), messageObjectToString(connectMessage));
+
+      -- # Datenbank laden #
+      User_Databases.loadUserDatabase(server.UserDatabase);
 
       Exception
        when Error: Socket_Error =>
@@ -90,6 +99,7 @@ package body Concrete_Server_Logic is
       ClientSocket : Socket_Type;
       ClientSocketAddress : Sock_Addr_Type;
       MyUsername : Unbounded_String;
+      serverRoomID : Integer;
    begin
       -- # Info: waehrend dieser Aktivierungsphase wird der aufrufende Task blockiert
       accept Start(Socket : Socket_Type; SocketAddress : Sock_Addr_Type) do
@@ -107,17 +117,9 @@ package body Concrete_Server_Logic is
       <<Continue>>
       loop
          declare
-            incoming_data : Stream_Element_Array(1..4096);
-            incoming_data_size : Stream_Element_Offset;
-            incoming_message : Ada.Strings.Unbounded.Unbounded_String;
+            incoming_message : MessageObject;
          begin
-            -- # Eigehende Nachrichten lesen (blockierender Aufruf) #
-            Receive_Socket(Socket => ClientSocket, Item => incoming_data, Last => incoming_data_size);
 
-            -- # Eingegangene Nachricht aus Character-Array in String zusammebauen #
-            for i in 1 .. incoming_data_size loop
-               incoming_message := incoming_message & Character'Val(incoming_data(i));
-            end loop;
 
             -- # Nachricht liegt vor, nun wird diese verarbeitet und interpretiert #
             declare
@@ -126,22 +128,75 @@ package body Concrete_Server_Logic is
                Count : Slice_Number;
                userlist : Unbounded_String := Ada.Strings.Unbounded.To_Unbounded_String("userlist");
             begin
-               -- # Nachricht wird an definiertem Trennzeichen zerstueckelt #
-               GNAT.String_Split.Create(S => Substrings, From => Ada.Strings.Unbounded.To_String(incoming_message),
-                                        Separators => Seperator, Mode => GNAT.String_Split.Multiple);
-               Count := GNAT.String_Split.Slice_Count(Substrings);
+               -- # Nachricht wird aus String erstellt #
+               incoming_message := readMessageFromStream(ClientSocket => ClientSocket);
 
                --Kann speater raus, Nachricht und deren Laenge anzeigen---------
-               for i in 1 .. GNAT.String_Split.Slice_Count(Substrings) loop
-                  declare
-                     MessagePart : constant String := GNAT.String_Split.Slice(Substrings, i);
-                  begin
-                     Put_Line(GNAT.String_Split.Slice_Number'Image(i) & " -> " & MessagePart & " (length" & Positive'Image(MessagePart'Length) & ")");
-                  end;
-               end loop;
+               Protocol.printMessageToInfoConsole(message => incoming_message);
 
-               Ada.Text_IO.Put_Line(Ada.Strings.Unbounded.To_String(incoming_message));
+               Ada.Text_IO.Put_Line(Ada.Strings.Unbounded.To_String(incoming_string));
                -----------------------------------------------------------------
+
+
+
+               case incoming_message.messagetyp is
+                  when Protocol.Connect => -- # connect:client:0:<passwort> #
+                     -- # Pruefe, ob Name schon benutzt wird (spaeter, Pruefe ob Benutzer registriert und Passwort richtig) #
+                      for c of server.all.Connected_Clients loop
+                           if c.all.Username = incoming_message.sender then
+                              writeMessageToStream(incoming_message);
+                              -- # TODO: Socket wieder schließen und aus Liste austragen etc. #
+                              goto Continue;
+                           end if;
+                     end loop;
+
+
+                    -- # Client in Verwaltungsliste suchen und Usernamen zur speateren Kommunikation setzen #
+                     for c of server.all.Connected_Clients loop
+                           if c.all.SocketAddress = ClientSocketAddress then
+                              c.all.Username := MessagePart;
+                              MyUsername := MessagePart;
+                           end if;
+                           userlist := userlist & Seperator & c.all.Username;
+                     end loop;
+                     -- # Weise Client eine ServerRoomID zu #
+                     -- # setze Client auf online #
+                     -- # Sende online-Benachrichtigung an alle Kontakte des Clients#
+
+                  when Protocol.Chat => -- # chat:client:<ChatRoomID>:Hi #
+
+                     -- # Pruefe, ob Client in ChatRoom eingeschrieben #
+                     -- # Hole Liste aller Cients in diesem ChatRoom #
+                     -- # Sende Nachricht an alle Clients in diesem ChatRoom #
+
+
+                     null;
+                  when Protocol.Disconnect => -- # disconnect:client:<ServerRoomID>:<?> #
+                     declare
+                        disconnectMessage : MessageObject;
+                     begin
+
+                     -- # Pruefe, ob die ServerRoomID die ServerRoomID des Clients ist
+                     -- # Sende Disconnect-Bestaetigung
+                        disconnectMessage := createMessage(messagetype => Protocol.Disconnect,
+                                      sender      => To_Unbounded_String("server"),
+                                      receiver    => serverRoomID,
+                                      content     => To_Unbounded_String("ok"));
+                        writeMessageToStream(ClientSocket,disconnectMessage);
+                     -- # Schliesse Socket zu Client #
+                     -- # Setze User als offline #
+
+                     -- # Sende Offline-Status an alle Kontakte vom Client #
+                     null;
+                  when Protocol.Chatrequest => -- # chatrequest:clientA:<ServerRoomID>:clientB #
+                     null;
+                  when Protocol.Leavechat => -- # leavechat:client:<ChatRoomID>:<?> #
+                     null;
+                  when others => -- # Online/Offline/Userlist/Refused #
+                     null;
+                  end case;
+
+
 
                -- # Welche Art von Nachricht liegt vor und was soll getan werden? #
                if Count > 0 then
@@ -173,7 +228,7 @@ package body Concrete_Server_Logic is
                            String'Write(OutputChannel, Ada.Strings.Unbounded.To_String(userlist));
                         end loop;
                      else
-                        Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_message));
+                        Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_string));
                      end if;
                   elsif MessagePart = "message" then
                      if count = 2 then  -- # Nachricht an alle versenden, Format: message:<Nachricht> #
@@ -199,7 +254,7 @@ package body Concrete_Server_Logic is
                            end if;
                         end loop;
                      else
-                        Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_message));
+                        Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_string));
                      end if;
                   elsif MessagePart = "disconnect" then
                      OutputChannel := Stream(ClientSocket);
@@ -213,7 +268,7 @@ package body Concrete_Server_Logic is
                      -- aus Liste austragen und Objekt loeschen und Task beenden
                   end if;
                else
-                  Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_message));
+                  Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_string));
                end if;
             end;
          end;

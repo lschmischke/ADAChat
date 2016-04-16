@@ -8,6 +8,7 @@ with Ada.Exceptions; use Ada.Exceptions;
 with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
 with GNAT.String_Split; use GNAT.String_Split;
 with Ada.Characters.Conversions;
+with User_Databases; use User_Databases:
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is
@@ -50,7 +51,7 @@ private
    type Concrete_Server is record
      Socket : Socket_Type;
      SocketAddress : Sock_Addr_Type;
-     Connected_Clients : Client_List.List;
+     UserDatabase : User_Database;
    end record;
 
    -- Diese Prozedur nimmt eine zuvor erzeuge Serverinstanz entgegen und erstellt
