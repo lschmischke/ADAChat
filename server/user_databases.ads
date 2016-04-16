@@ -21,6 +21,10 @@ package User_Databases is
    procedure saveUserDatabase(this : in User_Database); -- writes User Database to file
    procedure loadUserDatabase(this : in out User_Database); -- loads user database from file
 
+
+
+private
+
    package User_Maps is new Hashed_Maps
      (Key_Type => Unbounded_String,
       Element_Type => UserPtr,
@@ -39,10 +43,6 @@ package User_Databases is
       Equivalent_Keys => Ada.strings.Unbounded.Equal_Case_Insensitive,
       "=" => contactNamesList."=");
    use userToContactNamesMap;
-
-private
-
-
 
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String;
    function StringToLonelyUser(inputLine : in String; database : in User_Database; contactNames : out contactNamesList.List  ) return UserPtr;
