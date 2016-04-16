@@ -24,8 +24,16 @@ package body User_Databases is
    end registerUser;
 
    function getUser(database : in User_Database; username : in Unbounded_String) return UserPtr is
+      user: UserPtr;
    begin
-      return database.users.Element(Key => username);
+      user := database.users.Element(Key => username);
+      return user;
+
+   Exception
+      when Constraint_Error =>
+         Put_Line("User '"&To_String(username)&"' not found in database");
+         return null;
+
    end getUser;
 
 
@@ -65,40 +73,54 @@ package body User_Databases is
            Name => Read_from);
       exception
          when others => --# welcher Fehler wird hier normalerweise geworfen? #
-            Put_line("Userdatabase file doesn't exist.");
+            Put_line("ERROR: Userdatabase file doesn't exist. Creating Userdatabase file with name: "& To_String(this.databaseFileName));
+            Create(File => DataFile,
+                   Mode => In_File,
+                   Name => Read_From);
             return;
       end;
 
       --#Erster Durchgang lege alle Benutzer an, Benutzer haben noch keine Kontakte
+      Put_Line("Reading from database file, first iteration.");
       begin
+
          loop
             declare
                --# lese Line aus dem File
                userLine : String := Get_Line(DataFile);
-               --# konvertiere Line in User
-               user : UserPtr := StringToLonelyUser(userLine, this, contactNames);
 
+               --# konvertiere Line in User
+               user : UserPtr;
             begin
+               Put_Line("Read from database file: "&userLine);
+               user:= StringToLonelyUser(userLine, this, contactNames);
+
                --#füge User zur Map hinzu
                this.users.Insert(Key      => getUsername(user),
                                  New_Item => user);
                 --#speichere gefundene Kontaktnamen zwischen
                userToContactNames.Insert(Key      => getUsername(user),
                                          New_Item => contactNames);
-               exit when End_Of_File(DataFile);
+               contactNames.Clear;
+
+
             end;
          end loop;
 
       Exception
-         when others =>
+         when Error:Ada.IO_Exceptions.End_Error =>
+            Close(DataFile);
+         when Error:others =>
+            Put_Line(Exception_Information(Error));
             Close(DataFile);
       end;
-      --#zweiter Durchgang: da alle User angelegt sind, können nun die Kontakte geknüpft werden
 
-      --#durchlaufe alle user (map)
+      Put_Line("Reading from database file, second iteration.");
+      --#zweiter Durchgang: da alle User angelegt sind, können nun die Kontakte geknüpft werden
       declare
          Index : userToContactNamesMap.Cursor := userToContactNames.First;
       begin
+         --#durchlaufe alle user (map)
          while Index /= userToContactNamesMap.No_Element loop
             declare
                user : UserPtr := getUser(this,username => Key (Index));
@@ -109,14 +131,18 @@ package body User_Databases is
                   declare
                      contact : UserPtr := getUser(this, contactName);
                   begin
-                     bool := addContact(user,contact);
-                  end;
+                     if contact /= null then
+                        Put_Line("Adding contact " & To_String(contactName) & " to user '"&To_String(getUsername(user))&"'");
+                        bool := addContact(user,contact);
+                     end if;
+
+                    end;
+
                end loop;
             end;
+            Index := Next(Index);
          end loop;
       end;
-
-
    end loadUserDatabase; -- loads user database from file
 
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String is
@@ -147,7 +173,7 @@ package body User_Databases is
       MessageParts : GNAT.String_Split.Slice_Set;
       MessagePart : Unbounded_String;
       Count : Slice_Number;
-      user : UserPtr;
+      newUser: UserPtr := new User;
       bool : Boolean;
 
    begin
@@ -160,16 +186,16 @@ package body User_Databases is
 
 
       --#Slice 1: username
-      setUsername(user,To_Unbounded_String(Gnat.String_Split.Slice(MessageParts, 1)));
+      setUsername(newUser,To_Unbounded_String(Gnat.String_Split.Slice(MessageParts, 1)));
       --#Slice 2: password
-      bool := setPassword(user,To_Unbounded_String(Gnat.String_split.slice(MessageParts, 2)));
+      bool := setPassword(newUser,To_Unbounded_String(Gnat.String_split.slice(MessageParts, 2)));
       --#Slice rest: contacts
       for i in 3 .. Count loop
          contactNames.Append(New_Item => To_Unbounded_String(Gnat.String_split.slice(MessageParts, i)));
       end loop;
 
 
-      return user;
+      return newUser;
 
    end StringToLonelyUser;
 

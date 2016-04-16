@@ -30,6 +30,10 @@ package body Concrete_Server_Logic is
       Ada.Text_IO.Put_Line("Server initialization successful, starting Server Listener Task...");
       Main_Server_Task.Start;
 
+      -- # Datenbank laden #
+      User_Databases.loadUserDatabase(server.UserDatabase);
+      Put_Line("User database loadad.");
+
       -- # Erzeugung des SubServer-Sockets #
       Create_Socket(Socket => SubServer.Socket);
       -- # SubServer mit Server verbinden, Server wartet mit Accept - SubServer fragt mit Connect an #
@@ -39,10 +43,10 @@ package body Concrete_Server_Logic is
                                       sender      => To_Unbounded_String("server"),
                                       receiver    => 0,
                                       content     => To_Unbounded_String("passwort"));
-      String'Write(Stream(SubServer.Socket), messageObjectToString(connectMessage));
 
-      -- # Datenbank laden #
-      User_Databases.loadUserDatabase(server.UserDatabase);
+      writeMessageToStream(SubServer.socket,connectMessage);
+
+
 
       Exception
        when Error: Socket_Error =>
@@ -94,12 +98,10 @@ package body Concrete_Server_Logic is
    -----------------------------------------------------------------------------
 
    task body Client_Task is
-      -- InputChannel : Stream_Access;
-      OutputChannel : Stream_Access;
       ClientSocket : Socket_Type;
       ClientSocketAddress : Sock_Addr_Type;
       MyUsername : Unbounded_String;
-      serverRoomID : Integer;
+      serverRoomID : Integer := 3;
    begin
       -- # Info: waehrend dieser Aktivierungsphase wird der aufrufende Task blockiert
       accept Start(Socket : Socket_Type; SocketAddress : Sock_Addr_Type) do
@@ -125,31 +127,53 @@ package body Concrete_Server_Logic is
             declare
                Substrings : GNAT.String_Split.Slice_Set;
                MessagePart : Unbounded_String;
-               Count : Slice_Number;
                userlist : Unbounded_String := Ada.Strings.Unbounded.To_Unbounded_String("userlist");
+               incoming_string : Unbounded_String;
             begin
                -- # Nachricht wird aus String erstellt #
                incoming_message := readMessageFromStream(ClientSocket => ClientSocket);
 
                --Kann speater raus, Nachricht und deren Laenge anzeigen---------
                Protocol.printMessageToInfoConsole(message => incoming_message);
-
-               Ada.Text_IO.Put_Line(Ada.Strings.Unbounded.To_String(incoming_string));
+               incoming_string:=To_Unbounded_String(messageObjectToString(incoming_message));
+               Ada.Text_IO.Put_Line(messageObjectToString(incoming_message));
                -----------------------------------------------------------------
 
 
 
-               case incoming_message.messagetyp is
+               case incoming_message.messagetype is
                   when Protocol.Connect => -- # connect:client:0:<passwort> #
-                     -- # Pruefe, ob Name schon benutzt wird (spaeter, Pruefe ob Benutzer registriert und Passwort richtig) #
-                      for c of server.all.Connected_Clients loop
-                           if c.all.Username = incoming_message.sender then
-                              writeMessageToStream(incoming_message);
-                              -- # TODO: Socket wieder schlieﬂen und aus Liste austragen etc. #
-                              goto Continue;
-                           end if;
-                     end loop;
+                                          declare
+                        user : UserPtr;
+                        userNotFoundMessage : MessageObject := createMessage(messagetype => Protocol.Refused,
+                                                                             sender      => To_Unbounded_String("server"),
+                                                                             receiver    => 0,
+                                                                             content     => To_Unbounded_String("user not found in database"));
+                        invalidPasswordMessage : MessageObject := createMessage(messagetype => Protocol.Refused,
+                                                                                sender      => To_Unbounded_String("server"),
+                                                                                receiver    => 0,
+                                                                                content     => To_Unbounded_String("invalid passwort"));
+                        connectAcceptMessage : MessageObject := createMessage(messagetype => Protocol.Connect,
+                                                                              sender      => To_Unbounded_String("server"),
+                                                                              receiver    => serverRoomID ,
+                                                                              content     => To_Unbounded_String("ok"));
+                        userpassword : Unbounded_String;
+                     begin
+                        -- # Pruefe ob Benutzer registriert und Passwort richtig #
+                        user := server.UserDatabase.getUser(username => incoming_message.sender);
 
+                        if user = null then
+                           writeMessageToStream(ClientSocket => ClientSocket,message => userNotFoundMessage);
+                        else
+                           userpassword := getPassword(user);
+                           if userpassword /= incoming_message.content then
+                              writeMessageToStream(ClientSocket,invalidPasswordMessage);
+                           else
+                              --# hole serverroomid zu diesem client vom server
+                              writeMessageToStream(clientSocket,connectAcceptMessage);
+                           end if;
+                        end if;
+                     end;
 
                     -- # Client in Verwaltungsliste suchen und Usernamen zur speateren Kommunikation setzen #
                      for c of server.all.Connected_Clients loop
@@ -186,8 +210,9 @@ package body Concrete_Server_Logic is
                      -- # Schliesse Socket zu Client #
                      -- # Setze User als offline #
 
-                     -- # Sende Offline-Status an alle Kontakte vom Client #
-                     null;
+                        -- # Sende Offline-Status an alle Kontakte vom Client # #
+
+                     end;
                   when Protocol.Chatrequest => -- # chatrequest:clientA:<ServerRoomID>:clientB #
                      null;
                   when Protocol.Leavechat => -- # leavechat:client:<ChatRoomID>:<?> #
@@ -196,80 +221,6 @@ package body Concrete_Server_Logic is
                      null;
                   end case;
 
-
-
-               -- # Welche Art von Nachricht liegt vor und was soll getan werden? #
-               if Count > 0 then
-                  MessagePart := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 1));
-                  if MessagePart = "connect" then
-                     if Count = 2 then -- # Verbindungsanfrage, Format: connect:<Benutzername> #
-                        MessagePart := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 2));
-                        -- # Anfrage auf Gueltigkeit testen #
-                        for c of server.all.Connected_Clients loop
-                           if c.all.Username = MessagePart then
-                              OutputChannel := Stream(ClientSocket);
-                              String'Write(OutputChannel, "refused" & Seperator & "name already in use");
-                              -- Socket wieder schlieﬂen und aus Liste austragen etc.
-                              goto Continue;
-                           end if;
-                        end loop;
-                        -- # Client in Verwaltungsliste suchen und Usernamen zur speateren Kommunikation setzen #
-                        for c of server.all.Connected_Clients loop
-                           if c.all.SocketAddress = ClientSocketAddress then
-                              c.all.Username := MessagePart;
-                              MyUsername := MessagePart;
-                           end if;
-                           userlist := userlist & Seperator & c.all.Username;
-                        end loop;
-
-                        -- # Userlist an alle Teilnehmer senden #
-                        for c of server.all.Connected_Clients loop
-                           OutputChannel := Stream(c.all.Socket);
-                           String'Write(OutputChannel, Ada.Strings.Unbounded.To_String(userlist));
-                        end loop;
-                     else
-                        Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_string));
-                     end if;
-                  elsif MessagePart = "message" then
-                     if count = 2 then  -- # Nachricht an alle versenden, Format: message:<Nachricht> #
-                        -- # MessagePart ist hier die eigentliche Nachricht #
-                        MessagePart := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 2));
-                        -- # An alle User aus der Verwaltungsliste, ausser an sich selbst, die Broadcast-Nachricht versenden #
-                        for c of server.all.Connected_Clients loop
-                           if c.all.Username /= MyUsername then -- # Der Versender der Nachricht, soll den Broadcast nicht bekommen, sonst doppelte Nachricht #
-                           OutputChannel := Stream(c.all.Socket);
-                           String'Write(OutputChannel, Ada.Strings.Unbounded.To_String("message" & Seperator & MyUsername & Seperator & MessagePart));
-                           end if;
-                        end loop;
-                     elsif Count = 3 then -- # Nachricht an jemand Bestimmten versenden, Format: message:<Benutzername>:<Nachricht> #
-                        -- # MessagePart ist hier der Name des Users #
-                        MessagePart := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 2));
-                        -- # Bestimmten Benutzer in Verwaltungsliste suchen und an diesen die Nachricht zustellen #
-                        for c of server.all.Connected_Clients loop
-                           if c.all.Username = MessagePart then
-                              -- # MessagePart ist hier die eigentliche Nachricht #
-                              MessagePart := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(Substrings, 3));
-                              OutputChannel := Stream(c.all.Socket);
-                              String'Write(OutputChannel, Ada.Strings.Unbounded.To_String("message" & Seperator & MyUsername & Seperator & MessagePart));
-                           end if;
-                        end loop;
-                     else
-                        Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_string));
-                     end if;
-                  elsif MessagePart = "disconnect" then
-                     OutputChannel := Stream(ClientSocket);
-                     String'Write(OutputChannel, "disconnect" & Seperator & "ok");
-
-                     for c of server.all.Connected_Clients loop
-                        if c.all.Username = MyUsername then
-                           Close_Socket(c.all.Socket); -- wirft noch Fehler
-                        end if;
-                     end loop;
-                     -- aus Liste austragen und Objekt loeschen und Task beenden
-                  end if;
-               else
-                  Put_Line("Wrong Input: " & Ada.Strings.Unbounded.To_String(incoming_string));
-               end if;
             end;
          end;
       end loop;

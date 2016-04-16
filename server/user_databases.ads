@@ -8,6 +8,8 @@ with GNAT.String_Split; use GNAT.String_Split;
 with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
 with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Strings.hash;
+with Ada.Exceptions; use Ada.Exceptions;
+with Ada.IO_Exceptions;
 
 with DataTypes; use DataTypes;
 

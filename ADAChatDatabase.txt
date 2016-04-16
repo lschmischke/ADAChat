@@ -1,0 +1,3 @@
+server:passwort
+leo:123:daniel
+daniel:bier:leo:papst
