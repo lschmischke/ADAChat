@@ -2,6 +2,7 @@ package body Protocol is
 
    function messageObjectToString(message : MessageObject) return String is
    begin
+
       return MessageTypeE'Image(message.messagetype) & Seperator & Ada.Strings.Unbounded.To_String(message.sender) &
         Seperator & Trim(Integer'Image(message.receiver), Left) & Seperator & Ada.Strings.Unbounded.To_String(message.content);
    end messageObjectToString;
@@ -27,5 +28,16 @@ package body Protocol is
 
       return newMessageObject;
    end;
+
+   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Integer; content : in Unbounded_String) return MessageObject is
+      result : MessageObject;
+   begin
+      result.messagetype := messagetype;
+      result.sender := sender;
+      result.receiver := receiver;
+      result.content := content;
+      return result;
+   end createMessage;
+
 
 end Protocol;

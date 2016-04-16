@@ -5,7 +5,8 @@ with Ada.Strings.Fixed; use Ada.Strings.Fixed;
 
 package Protocol is
 
-   Seperator : constant String := Character'Image(Character'Val(0));
+   -- Seperator : constant String := Character'Image(Character'Val(0));
+     Seperator : constant String := Character'Image(':');
 
    type MessageTypeE is (Connect, Chat, Refused, Disconnect, Online, Offline, Chatrequest, Userlist);
 
@@ -16,8 +17,10 @@ package Protocol is
       content : Unbounded_String;
    end record;
 
-   function messageObjectToString(message : MessageObject) return String;
+   function messageObjectToString(message : in MessageObject) return String;
 
    function stringToMessageObject(message : in Unbounded_String) return MessageObject;
+
+   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Integer; content : in Unbounded_String) return MessageObject;
 
 end Protocol;
