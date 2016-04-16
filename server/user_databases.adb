@@ -56,7 +56,8 @@ package body User_Databases is
    procedure loadUserDatabase(this : in out User_Database) is
       Read_From : String := To_String(this.databaseFileName);
       DataFile : File_type;
-      usermap : User_Maps.map;
+      contactNames : contactNamesList.List;
+      userToContactNames : userToContactNamesMap.Map;
    begin
        begin
       Open(File => DataFile,
@@ -68,21 +69,54 @@ package body User_Databases is
             return;
       end;
 
+      --#Erster Durchgang lege alle Benutzer an, Benutzer haben noch keine Kontakte
       begin
          loop
             declare
                --# lese Line aus dem File
                userLine : String := Get_Line(DataFile);
                --# konvertiere Line in User
-               user : UserPtr := StringToUser(userLine, this);
+               user : UserPtr := StringToLonelyUser(userLine, this, contactNames);
+
             begin
-               null;
+               --#füge User zur Map hinzu
+               this.users.Insert(Key      => getUsername(user),
+                                 New_Item => user);
+                --#speichere gefundene Kontaktnamen zwischen
+               userToContactNames.Insert(Key      => getUsername(user),
+                                         New_Item => contactNames);
+               exit when End_Of_File(DataFile);
             end;
          end loop;
+
       Exception
          when others =>
             Close(DataFile);
       end;
+      --#zweiter Durchgang: da alle User angelegt sind, können nun die Kontakte geknüpft werden
+
+      --#durchlaufe alle user (map)
+      declare
+         Index : userToContactNamesMap.Cursor := userToContactNames.First;
+      begin
+         while Index /= userToContactNamesMap.No_Element loop
+            declare
+               user : UserPtr := getUser(this,username => Key (Index));
+               bool : boolean;
+            begin
+               --# durchlaufe alle kontaktnamen eines users (liste)
+               for contactName of userToContactNames.Element(Key => key(index)) loop
+                  declare
+                     contact : UserPtr := getUser(this, contactName);
+                  begin
+                     bool := addContact(user,contact);
+                  end;
+               end loop;
+            end;
+         end loop;
+      end;
+
+
    end loadUserDatabase; -- loads user database from file
 
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String is
@@ -108,12 +142,14 @@ package body User_Databases is
       return result;
    end userToUnboundedString;
 
-   function StringToUser(inputLine : in String; database : in User_Database) return UserPtr is
+
+   function StringToLonelyUser(inputLine : in String; database : in User_Database; contactNames : out contactNamesList.List ) return UserPtr is
       MessageParts : GNAT.String_Split.Slice_Set;
       MessagePart : Unbounded_String;
       Count : Slice_Number;
       user : UserPtr;
       bool : Boolean;
+
    begin
       -- # Nachricht wird an definiertem Trennzeichen zerstueckelt #
       GNAT.String_Split.Create(S => MessageParts, From => inputLine,
@@ -129,19 +165,12 @@ package body User_Databases is
       bool := setPassword(user,To_Unbounded_String(Gnat.String_split.slice(MessageParts, 2)));
       --#Slice rest: contacts
       for i in 3 .. Count loop
-         --slice username, suche username, füge username zur contactliste hinzu
-         declare
-            contactName : Unbounded_String := To_Unbounded_String(Gnat.String_split.slice(MessageParts, i));
-            newContact : UserPtr := GetUser(database      => database ,
-                                         username => contactName);
-         begin
-            bool := addContact(this         => user,
-                       contactToAdd => newContact);
-         end;
+         contactNames.Append(New_Item => To_Unbounded_String(Gnat.String_split.slice(MessageParts, i)));
       end loop;
+
 
       return user;
 
-   end StringToUser;
+   end StringToLonelyUser;
 
 end User_Databases;

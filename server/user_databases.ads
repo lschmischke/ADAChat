@@ -5,6 +5,9 @@ with Ada.Containers.Hashed_Maps;  use Ada.Containers;
 with Ada.Text_IO; use Ada.Text_IO;
 with Protocol;
 with GNAT.String_Split; use GNAT.String_Split;
+with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
+with ada.containers.Indefinite_Hashed_Maps;
+with Ada.Strings.hash;
 
 with DataTypes; use DataTypes;
 
@@ -25,11 +28,26 @@ package User_Databases is
       Equivalent_Keys => "=");
    use User_Maps;
 
+   package contactNamesList is new Doubly_Linked_Lists(Element_Type => Unbounded_String);
+
+
+
+   package userToContactNamesMap is new Indefinite_Hashed_Maps
+     (Key_Type => Unbounded_String,
+      Element_Type => contactNamesList.List,
+      Hash => Ada.Strings.Unbounded.Hash_Case_Insensitive,
+      Equivalent_Keys => Ada.strings.Unbounded.Equal_Case_Insensitive,
+      "=" => contactNamesList."=");
+   use userToContactNamesMap;
 
 private
 
+
+
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String;
-   function StringToUser(inputLine : in String; database : in User_Database) return UserPtr;
+   function StringToLonelyUser(inputLine : in String; database : in User_Database; contactNames : out contactNamesList.List  ) return UserPtr;
+
+
 
    type User_Database is tagged record
       users : User_Maps.Map; -- # username -> userDataSet
