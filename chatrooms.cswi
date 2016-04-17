@@ -1,4 +1,4 @@
-20160417151826
+              
 -c
 -x
 ada
@@ -11,3 +11,4 @@ ada
 -gnat12
 -fcallgraph-info=su,da
 -g
+-gnatc

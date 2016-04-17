@@ -1,457 +1,656 @@
 <?xml version="1.0"?>
 <Locations >
   <Project >
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 66" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 32" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 19" line=" 9" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 22" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 11" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 11" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 64" line=" 5" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 19" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 16" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 28" line=" 3" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 16" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 3" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 12" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 12" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 4" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 14" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 55" line=" 5" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 14" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 54" line=" 5" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 36" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 6" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 5" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 37" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 5" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 26" line=" 136" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 9" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 12" line=" 43" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 9" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 18" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 48" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 144" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 48" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 43" line=" 152" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 48" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 22" line=" 120" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 129" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 126" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 47" line=" 125" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 50" line=" 68" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 67" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 133" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 18" line=" 100" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 103" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 18" line=" 100" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 109" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 18" line=" 100" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 99" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 55" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 116" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 74" line=" 104" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 116" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 87" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 116" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 59" line=" 95" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 116" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 87" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 87" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 86" line=" 94" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 116" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 101" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 116" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 86" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 116" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 7" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 10" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 3" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 98" line=" 29" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 2" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 19" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 14" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 26" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 7" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 5" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 98" line=" 16" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 3" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 5" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 9" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 28" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 16" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 69" line=" 15" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 75" line=" 20" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 91" line=" 22" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 75" line=" 20" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 50" line=" 22" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 75" line=" 20" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 76" line=" 6" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 46" line=" 4" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    <vfs_file >G:\ADAChat\adachat.gpr</vfs_file>
+    <file_marker column=" 27" line=" 245">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 134" line=" 43">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 76" line=" 3">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 12">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 12">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 19">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.ads</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 27" line=" 245" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 43" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 76" line=" 3" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 12" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 12" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\common\datatypes.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 19" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\common\datatypes.ads</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 46" line=" 41">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 60" line=" 19">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 198">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 195">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 14">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 14">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 57">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 254">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 253">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 14">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 253">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 55" line=" 251">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 246">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 259">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 237">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 253">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 26">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 178">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 10">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 4">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 46" line=" 11">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 66">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 32">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 9">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 22">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 11">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 11">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 64" line=" 5">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 19">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 16">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 3">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 16">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 3">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 12">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 12">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 4">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 14">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 55" line=" 5">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 14">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 54" line=" 5">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 36">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 6">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 5">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 37" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 5">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\server_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 136">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 9">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 43">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 9">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 18">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 48">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 144">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 48">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 152">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 48">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 120">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 129">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 126">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 125">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 50" line=" 68">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 67">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 133">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 100">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 103">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 100">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 109">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 100">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 99">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 55">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 116">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 74" line=" 104">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 116">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 87">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 116">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 59" line=" 95">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 116">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 87">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 87">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 86" line=" 94">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 116">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 101">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 116">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 86">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 116">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\communication_objects-files.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\data_types.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 7">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 10">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 3">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 98" line=" 29">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 2">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 19">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 14">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 26">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 7">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 5">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 98" line=" 16">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 3">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 5">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 9">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 28">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 16">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 69" line=" 15">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 75" line=" 20">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 91" line=" 22">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 75" line=" 20">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 50" line=" 22">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 75" line=" 20">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 76" line=" 6">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 4">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\common\protocol.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\main.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >

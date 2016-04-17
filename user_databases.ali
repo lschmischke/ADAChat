@@ -13,40 +13,64 @@ A -march=pentiumpro
 P SS ZX
 
 RN
+RV NO_ALLOCATORS
+RV NO_DISPATCHING_CALLS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U user_databases%b	user_databases.adb	dbf2c5f3 DE NE OO PK
+U user_databases%b	user_databases.adb	f80f3614 DE NE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.concat_5%s	s-conca5.adb		s-conca5.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U user_databases%s	user_databases.ads	09b60ac2 DE EE OO PF PK
+U user_databases%s	user_databases.ads	0b229ab7 DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.doubly_linked_lists%s
 Z ada.containers.hash_tables%s  a-cohata.ads	a-cohata.ali
 Z ada.containers.hash_tables.generic_keys%s
 Z ada.containers.hash_tables.generic_operations%s
 W ada.containers.hashed_maps%s
+W ada.containers.indefinite_hashed_maps%s
 Z ada.containers.prime_numbers%s  a-coprnu.adb	a-coprnu.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.finalization%s	a-finali.adb		a-finali.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
 Z ada.iterator_interfaces%s
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.hash%s	a-strhas.adb		a-strhas.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.strings.unbounded.equal_case_insensitive%s  a-suecin.adb  a-suecin.ali
 W ada.strings.unbounded.hash_case_insensitive%s  a-suhcin.adb  a-suhcin.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.unchecked_deallocation%s
-W data_types%s		data_types.adb		data_types.ali
+W datatypes%s		datatypes.adb		datatypes.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.string_split%s	g-strspl.ads		g-strspl.ali
+W protocol%s		protocol.adb		protocol.ali
 W system%s		system.ads		system.ali
 W system.assertions%s	s-assert.adb		s-assert.ali
 W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
@@ -65,6 +89,7 @@ D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
 D a-chlat1.ads		20150518132148 66457d31 ada.characters.latin_1%s
 D a-contai.ads		20150518132148 61e5e089 ada.containers%s
 D a-cdlili.ads		20150518132148 59d7f011 ada.containers.doubly_linked_lists%s
+D a-cdlili.adb		20150518132148 b44c57c3 ada.containers.doubly_linked_lists%b
 D a-cohata.ads		20150518132148 04abccc5 ada.containers.hash_tables%s
 D a-chtgke.ads		20150518132148 a7b0f3a2 ada.containers.hash_tables.generic_keys%s
 D a-chtgke.adb		20150518132148 ee7af212 ada.containers.hash_tables.generic_keys%b
@@ -72,27 +97,47 @@ D a-chtgop.ads		20150518132148 654c6672 ada.containers.hash_tables.generic_opera
 D a-chtgop.adb		20150518132148 8c01e2ed ada.containers.hash_tables.generic_operations%b
 D a-cohama.ads		20150518132148 fb1af438 ada.containers.hashed_maps%s
 D a-cohama.adb		20150518132148 1b92dc1d ada.containers.hashed_maps%b
+D a-cihama.ads		20150518132148 6f653e56 ada.containers.indefinite_hashed_maps%s
+D a-cihama.adb		20150518132148 309c8365 ada.containers.indefinite_hashed_maps%b
 D a-coprnu.ads		20150518132148 0cdf1864 ada.containers.prime_numbers%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-finali.ads		20150518132148 69f99942 ada.finalization%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
 D a-iteint.ads		20150518132148 7c7305e9 ada.iterator_interfaces%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-string.ads		20150518132148 90ac6797 ada.strings%s
+D a-strfix.ads		20150518132148 d07c346e ada.strings.fixed%s
+D a-strhas.ads		20150518132148 c71c2a52 ada.strings.hash%s
 D a-strmap.ads		20150518132148 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-suecin.ads		20150518132148 8f50d241 ada.strings.unbounded.equal_case_insensitive%s
 D a-suhcin.ads		20150518132148 7f78b9e6 ada.strings.unbounded.hash_case_insensitive%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D data_types.ads	20160329162304 0e9f5bcf data_types%s
+D datatypes.ads		20160416185506 6c7ce65e datatypes%s
+D gnat.ads		20150518132148 fd2ad2f1 gnat%s
+D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
+D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
+D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D protocol.ads		20160417084744 3dad3734 protocol%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
+D s-conca2.ads		20150518132148 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20150518132148 0b705ca5 system.concat_3%s
+D s-conca5.ads		20150518132148 875e432e system.concat_5%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
 D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
 D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
 D s-memory.ads		20150518132150 597d6634 system.memory%s
+D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
 D s-pooglo.ads		20150518132150 542f33d0 system.pool_global%s
 D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
@@ -109,57 +154,199 @@ D s-string.ads		20150518132150 8fe54fb7 system.strings%s
 D s-ststop.ads		20150518132150 e6693757 system.strings.stream_ops%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
-D user_databases.ads	20160329162304 338a1a57 user_databases%s
-D user_databases.adb	20160329162304 e878dfa4 user_databases%b
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+D user_databases.ads	20160417110610 ca918931 user_databases%s
+D user_databases.adb	20160417132214 329ebf25 user_databases%b
 X 1 ada.ads
-16K9*Ada 19e8 50|1r6 1r33 2r6 3r6 4r6 4r39 19r15
+16K9*Ada 19e8 72|1r6 1r33 2r6 3r6 4r6 4r39 5r6 5r23 8r6 8r47 9r6 10r6 11r6
+. 11r26 12r6 31r15 40r15 41r26 73|113r21
 X 4 a-contai.ads
-16K13*Containers 24e19 50|4r10 4r43
+16K13*Containers 24e19 72|4r10 4r43 8r10 8r51 9r10
 19M9*Hash_Type
-X 11 a-cohama.ads
-41+9 Key_Type 50|17r7
-42+9 Element_Type 50|18r7
-44V18 Hash{4|19M9} 50|19r7
-45V18 Equivalent_Keys{boolean} 50|20r7
-48k24*Hashed_Maps 467e31 50|4w21 16r29
-52R9*Map<15|43R9> 50|24r25[16]
-X 16 a-iteint.ads
+X 5 a-cdlili.ads
+40+9 Element_Type 72|35r56
+45k24*Doubly_Linked_Lists 407e39 72|8w21 35r36
+49R9*List<18|43R9> 72|39r40[35] 46r120[35] 73|6r30[33|8] 69r39[72|35] 153r30[33|8]
+. 174r120[72|35]
+70V14*"="{boolean} 72|42r32[35]
+76U14*Clear 73|106s29[72|35]
+146U14*Append 73|196s23[72|35]
+148r7 New_Item{26|79R9} 73|196r30[72|35]
+X 12 a-cohama.ads
+41+9 Key_Type 72|29r7
+42+9 Element_Type 72|30r7
+44V18 Hash{4|19M9} 72|31r7
+45V18 Equivalent_Keys{boolean} 72|32r7
+48k24*Hashed_Maps 467e31 72|4w21 28r29
+52R9*Map<18|43R9> 72|51r25[28] 73|45r27[72|28]
+203U14*Insert 73|14s17[72|28] 101s27[72|28]
+204r7 Container{52R9[72|28]} 73|14r24[72|28]
+205r7 Key{26|79R9} 73|15r24[72|28] 101r34[72|28]
+206p7 New_Item{33|6P9} 73|16r24[72|28] 102r34[72|28]
+282V13*Element{33|6P9} 73|31s30[72|28]
+282r39 Key{26|79R9} 73|31r38[72|28]
+X 14 a-cihama.ads
+41+9 Key_Type 72|38r7
+42+9 Element_Type 72|39r7
+44V18 Hash{4|19M9} 72|40r7
+45V18 Equivalent_Keys{boolean} 72|41r7
+46V19 "="{boolean} 72|42r8
+48k24*Indefinite_Hashed_Maps 443e42 72|9w21 37r41
+52R9*Map<18|43R9> 73|70r50[72|37]
+60R9*Cursor 73|123r40[72|37]
+67r4*No_Element{60R9[72|37]} 73|126r47[72|37]
+111V13*Key{26|79R9} 73|128s59[72|37] 132s69[72|37]
+193U14*Insert 73|104s35[72|37]
+195r7 Key{26|79R9} 73|104r42[72|37]
+196r7 New_Item{5|49R9[72|35]} 73|105r42[72|37]
+249V13*First{60R9[72|37]} 73|123s69[72|37]
+253V13*Next{60R9[72|37]} 73|145s22[72|37]
+273V13*Element{5|49R9[72|35]} 73|132s54[72|37]
+273r39 Key{26|79R9} 73|132r62[72|37]
+X 17 a-except.ads
+54K13*Exceptions 361e19 72|11w10 11r30
+104V13*Exception_Information{string} 73|116s22
+X 19 a-ioexce.ads
+18K13*IO_Exceptions 30e22 72|12w10 73|113r25
+26X4*End_Error 73|113r39
+X 20 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[5|67]>
-X 18 a-string.ads
-16K13*Strings 35e16 50|1r10 1r37 2r10 3r10 19r19
-X 20 a-strunb.ads
-76K21*Unbounded 489e26 50|1w18 1r45 2r18 3r18 19r27
-79R9*Unbounded_String<15|43R9> 473e14 50|17r19
-166V14*"="{boolean} 50|20r27
-X 21 a-suecin.ads
-34V32*Equal_Case_Insensitive{boolean} 50|3w28
-X 22 a-suhcin.ads
-36V32*Hash_Case_Insensitive{4|19M9} 50|2w28 19r37
-X 26 data_types.ads
-5K9*Data_Types 61e15 50|6w6 6r22
-13R9*User 47e14 50|11r65 11r78 12r65 13r68 18r23 51|3r65 3r78 8r65 13r68
-X 27 system.ads
+X 22 a-string.ads
+16K13*Strings 35e16 72|1r10 1r37 2r10 3r10 10r10 31r19 40r19 41r30
+X 24 a-strhas.ads
+20V22*Hash{4|19M9} 72|10w18
+X 26 a-strunb.ads
+76K21*Unbounded 489e26 72|1w18 1r45 2r18 3r18 31r27 40r27 41r38
+79R9*Unbounded_String<18|43R9> 473e14 72|20r69 20r101 21r64 29r19 35r72 38r19
+. 45r65 52r25 73|3r69 3r101 28r64 150r65 152r16 176r21
+94V13*To_Unbounded_String{79R9} 72|52s45 73|157s26 165s29 191s27 193s35 196s42
+100V13*To_String{string} 73|36s28 43s28 61s29 67s29 78s104 137s54 137s92
+107U14*Append 73|156s7 159s7 164s10 167s10
+108r7 Source{79R9} 73|156r14 159r14 164r17 167r17
+109r7 New_Item{79R9} 73|157r14 160r14 165r17 168r15
+166V14*"="{boolean} 5|42i19 72|32r27
+X 27 a-suecin.ads
+34V32*Equal_Case_Insensitive{boolean} 72|3w28 41r48
+X 28 a-suhcin.ads
+36V32*Hash_Case_Insensitive{4|19M9} 72|2w28 31r37 40r37
+X 30 a-textio.ads
+49K13*Text_IO 471e16 72|5w10 5r27
+52P9*File_Type 73|44r18 68r18
+53n23*In_File{53E9} 73|74r20 80r28
+53n32*Out_File{53E9} 73|49r20 54r28
+86U14*Create 73|53s13 79s13
+87p7 File{52P9} 73|53r20 79r20
+88e7 Mode{53E9} 73|54r20 80r20
+89a7 Name{string} 73|55r20 81r20
+92U14*Open 73|48s7 73s7
+93p7 File{52P9} 73|48r12 73r12
+94e7 Mode{53E9} 73|49r12 74r12
+95a7 Name{string} 73|50r12 75r12
+98U14*Close 73|63s7 114s13 117s13
+253V13*Get_Line{string} 73|92s37
+259U14*Put_Line 73|61s10
+263U14*Put_Line 73|36s10 78s13 86s7 97s16 116s13 120s7 137s25
+X 33 datatypes.ads
+4K9*dataTypes 30e14 72|14w6 14r21
+5R9*User 27e17 73|4r32 178r31
+6P9*UserPtr(5R9) 72|21r89 30r23 45r49 46r135 73|4r17 28r89 29r13 95r23 128r23
+. 134r32 150r49 174r134 178r16
+8K12*ContactList[5|45] 73|6r18 153r18
+10V13*getUsername{26|79R9} 73|101s46 104s54 137s102 152s36 168s27
+11U14*setUsername 73|9s7 191s7
+12V13*getPassword{26|79R9} 73|160s26
+13V13*setPassword{boolean} 73|11s15 193s15
+14V13*getContacts{5|49R9[8]} 73|153s38
+15U14*setContacts 73|12s7
+16V13*addContact{boolean} 73|138s33
+X 34 gnat.ads
+34K9*GNAT 37e9 72|7r6 7r29 73|175r22 183r7 184r74 185r16 191r47 193r55 196r62
+X 35 g-arrspl.ads
+63E9*Separator_Mode
+69n7*Multiple{63E9[37|39]} 73|184r92[37|39]
+74R9*Slice_Set<18|43R9> 73|175r40[37|39]
+82U14*Create 73|183s25[37|39]
+83r7 S{74R9[37|39]} 73|183r32[37|39]
+84a7 From{string} 73|183r51[37|39]
+85a7 Separators{string} 73|184r32[37|39]
+86e7 Mode{63E9[37|39]} 73|184r66[37|39]
+116I9*Slice_Number<integer> 73|177r15[37|39]
+119V13*Slice_Count{116I9[37|39]} 73|185s34[37|39]
+123V13*Slice{string} 73|191s65[37|39] 193s73[37|39] 196s80[37|39]
+X 37 g-strspl.ads
+39K14*String_Split[35|58] 72|7w11 7r34 73|175r27 183r12 184r79 185r21 191r52
+. 193r60 196r67
+X 41 protocol.ads
+9K9*Protocol 35e13 72|6w6 73|157r46 165r49 184r46
+12a6*Seperator{string} 73|157r55 165r58 184r55
+X 42 system.ads
 67M9*Address
-X 33 s-memory.ads
-53V13*Alloc{27|67M9} 103i<c,__gnat_malloc>22
+X 53 s-memory.ads
+53V13*Alloc{42|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{27|67M9} 105i<c,__gnat_realloc>22
-X 40 s-stalib.adb
+76V13*Realloc{42|67M9} 105i<c,__gnat_realloc>22
+X 61 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
-X 50 user_databases.ads
-8K9*User_Databases 16E12 28l5 28e19 51|1b14 18l5 18t19
-10R9*User_Database 11r35 12r35 13r38 23c9 26e14 51|3r35 8r35 13r38
-11V13*getUser{26|13R9} 11=21 11>50 51|3b13 6l8 6t15
-11r21 this{10R9} 51|3b21
-11r50 userToGet{26|13R9} 51|3b50 5r14
-12V13*addUser{boolean} 12=21 12>50 51|8b13 11l8 11t15
-12r21 this{10R9} 51|8b21
-12r50 userToAdd{26|13R9} 51|8b50
-13V13*removeUser{boolean} 13=24 13>53 51|13b13 16l8 16t18
-13r24 this{10R9} 51|13b24
-13r53 userToRem{26|13R9} 51|13b53
-16K12 User_Maps[11|48] 21r8 24r15
-24r7*users{11|52R9[16]}
-25i7*maxSize{integer}
+X 72 user_databases.ads
+16K9*User_Databases 28E12 58l5 58e19 73|1b14 204l5 204t19
+19R9*User_Database 20p13 20r40 21p13 21r35 23p14 23r41 24p14 24r45 46p13
+. 46r69 50c9 55e14 73|3r40 28r35 42r41 66r45 174r69
+20V13*registerUser{boolean} 20=26 20>55 20>87 73|3b13 26l8 26t20
+20r26 this{19R9} 73|3b26 14m37 14r37 19r32
+20r55 username{26|79R9} 73|3b55 9r28 15r37
+20r87 password{26|79R9} 73|3b87 11r36
+21V13*getUser{33|6P9} 21>21 21>50 73|28b13 39l8 39t15 128s34 134s43
+21r21 database{19R9} 73|28b21 31r15
+21r50 username{26|79R9} 73|28b50 31r45 36r38 128r47
+23U14*saveUserDatabase 23>31 73|19s7 42b14 64l8 64t24
+23r31 this{19R9} 73|19r24 42b31 43r38 45r33
+24U14*loadUserDatabase 24=31 73|66b14 148l8 148t24
+24r31 this{19R9} 73|66b31 67r39 78r114 98r52 101m16 101r16 128r42 134r51
+28K12 User_Maps[12|48] 33r8 51r15 73|14r7 45r17
+35K12 contactNamesList[5|45] 39r23 42r14 46r103 73|69r22 174r103
+37K12 userToContactNamesMap[14|48] 43r8 73|70r28 123r18 126r25
+45V13 userToUnboundedString{26|79R9} 45=35 73|61s39 150b13 171l8 171t29
+45p35 this{33|6P9} 73|61r61 150b35 152r48 153r50 160r38
+46V13 StringToLonelyUser{33|6P9} 46>32 46>55 46<84 73|98s23 174b13 202l8
+. 202t26
+46a32 inputLine{string} 73|174b32 183r59
+46r55 database{19R9} 73|174b55
+46r84 contactNames{5|49R9[35]} 73|174b84 196m10 196r10
+51r7*users{12|52R9[28]} 73|14m42 31r24 45r38 101m21
+52r7*databaseFileName{26|79R9} 73|43r43 67r44 78r119
+53i7*maxSize{integer}
+X 73 user_databases.adb
+4p7 newUser{33|6P9} 9m19 9r19 11m27 11r27 12m19 12r19 16r37
+5b7 bool{boolean} 11m7
+6r7 contacts{5|49R9[33|8]} 12r28
+29p7 user{33|6P9} 31m7 32r14
+43a7 Write_To{string} 50r20 55r28
+44p7 DataFile{30|52P9} 48m20 48r20 53m28 53r28 61r19 63m13 63r13
+45r7 usermap{12|52R9[72|28]} 58m19 58r19
+58p11 user{33|6P9} 61r69
+67a7 Read_From{string} 75r20 81r28
+68p7 DataFile{30|52P9} 73m20 73r20 79m28 79r28 92r46 114m19 114r19 117m19
+. 117r19
+69r7 contactNames{5|49R9[72|35]} 98m58 98r58 105r54 106m16 106r16
+70r7 userToContactNames{14|52R9[72|37]} 104m16 104r16 123r50 132r35
+92a16 userLine{string} 97r53 98r42
+95p16 user{33|6P9} 98m16 101r58 102r46 104r66
+113r15 Error{17|63R9}
+115r15 Error{17|63R9} 116r44
+123r10 Index{14|60R9[72|37]} 126r16 128r64 132r73 145m13 145r27
+128p16 user{33|6P9} 137r114 138m44 138r44
+129b16 bool{boolean} 138m25
+132r20 contactName{26|79R9} 134r57 137r64
+134p22 contact{33|6P9} 136r25 138r49
+152r7 result{26|79R9} 156m26 156r26 159m26 159r26 164m29 164r29 167m29 167r29
+. 170r14
+153r7 contacts{5|49R9[33|8]} 162r22
+162p11 contact{33|6P9} 168r39
+175r7 MessageParts{35|74R9[37|39]} 183m37 185r46 191r71 193r79 196r86
+176r7 MessagePart{26|79R9}
+177i7 Count{35|116I9[37|39]} 185m7 195r21
+178p7 newUser{33|6P9} 191m19 191r19 193m27 193r27 200r14
+179b7 bool{boolean} 193m7
+195i11 i<integer> 196r100
 

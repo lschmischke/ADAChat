@@ -21,7 +21,7 @@ RV SPARK_05
 U server_ui%b		server_ui.adb		6c3536aa DE NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 
-U server_ui%s		server_ui.ads		7a9843ab DE EE NE OO PK
+U server_ui%s		server_ui.ads		f8278e7d DE EE NE OO PK
 W server_logic%s	server_logic.ads	server_logic.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
@@ -29,10 +29,9 @@ D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D communication_objects.ads  20160407125136 81548b0d communication_objects%s
-D server_logic.ads	20160415104328 9919e9c8 server_logic%s
-D server_ui.ads		20160407125200 e381aa63 server_ui%s
-D server_ui.adb		20160407125200 8fb49cc9 server_ui%b
+D server_logic.ads	20160417151626 1ba6241e server_logic%s
+D server_ui.ads		20160416103510 e381aa63 server_ui%s
+D server_ui.adb		20160416103510 8fb49cc9 server_ui%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
@@ -41,12 +40,12 @@ D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
-X 7 server_logic.ads
-3K9*Server_Logic 11e17 8|1w6 1r24
-5h9*Server_Interface 8|5r43 9|3r43
-7x14*dummy1 9|5R7
-X 8 server_ui.ads
-3K9*Server_Ui 7l5 7e14 9|1b14 8l5 8t14
-5U14*Start_Server 5=27 9|3b14 6l8 6t20
-5c27 server<7|5R9> 9|3b27 5m14
+X 6 server_logic.ads
+3K9*Server_Logic 11e17 7|1w6 1r24
+5h9*Server_Interface 7|5r43 8|3r43
+7x14*dummy1 8|5R7
+X 7 server_ui.ads
+3K9*Server_Ui 7l5 7e14 8|1b14 8l5 8t14
+5U14*Start_Server 5=27 8|3b14 6l8 6t20
+5c27 server<6|5R9> 8|3b27 5m14
 
