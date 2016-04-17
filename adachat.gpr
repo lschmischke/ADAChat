@@ -1,7 +1,6 @@
 project ADAChat is
-	
+
    for Main use ("Main.adb");
-	
    for Source_Dirs use ("./**");
 
    package Builder is
@@ -15,6 +14,10 @@ project ADAChat is
    package Linker is
       for Default_Switches ("ada") use ("-g");
    end Linker;
+
+   package Pretty_Printer is
+      for Default_Switches ("ada") use ("-M130", "-l2");
+   end Pretty_Printer;
 
 end ADAChat;
 
