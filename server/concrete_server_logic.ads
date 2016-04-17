@@ -32,24 +32,30 @@ package Concrete_Server_Logic is
 
    type Client_Task is limited private;
    type Client_Task_Ptr is access Client_Task;
-   package ClientTask_List is new Doubly_Linked_Lists(Element_Type => Client_Task_Ptr);
+
+   type Concrete_Client is  private;
+   type Concrete_Client_Ptr is access Concrete_Client;
+
 
 
    type chatRoom is tagged private;
    type chatRoomPtr is access chatRoom;
 
-   procedure addClientToChatroom(room : in out ChatRoomPtr; client : in Client_Task_Ptr);
-   procedure removeClientFromChatroom(room : in out chatRoomPtr; clientToRemove : in Client_Task_Ptr);
-   function createChatRoom(server : in out Concrete_Server_Ptr; id : in Natural; firstClient : in Client_Task_Ptr) return chatRoomPtr ;
+   procedure addClientToChatroom(room : in out ChatRoomPtr; client : in Concrete_Client_Ptr);
+   procedure removeClientFromChatroom(room : in out chatRoomPtr; clientToRemove : in Concrete_Client_Ptr);
+   function createChatRoom(server : in out Concrete_Server_Ptr; id : in Natural; firstClient : in Concrete_Client_Ptr) return chatRoomPtr ;
+   function getChatRoomID(room : in chatRoomPtr) return Natural;
+   function generateUserlistMessage(room : in chatRoomPtr) return MessageObject;
+
+   package Client_List is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr);
+   function getClientList(room : in chatRoomPtr) return Client_List.List;
+   procedure broadcastToChatRoom(room : in chatRoomPtr; message : in MessageObject);
+
+   package chatRoom_List is new Doubly_Linked_Lists(Element_Type => chatRoomPtr);
+
 
 
 private
-
-    type chatRoom is tagged
-      record
-	 chatRoomID : Natural;
-	 clientList : ClientTask_List.List;
-      end record;
 
 
 
@@ -58,11 +64,21 @@ private
    -- und Port, sowieso den Benutzernamen zu dem dieser Client gehoert und
    -- den Client-Task der ihm zugeordnet ist fest.
    type Concrete_Client is record
+      user : userPtr;
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
       CommunicationTask : Client_Task_Ptr;
+      chatRoomList : chatRoom_List.List;
+
    end record;
-   type Concrete_Client_Ptr is access Concrete_Client;
+
+
+
+   type chatRoom is tagged
+      record
+	 chatRoomID : Natural;
+	 clientList : Client_List.List;
+      end record;
 
 
    -- Jede Instanz dieses Tasks ist pro Client fuer die eigentliche Kommunikation
@@ -72,8 +88,8 @@ private
    end Client_Task;
 
    function userHash (userToHash : UserPtr) return Hash_Type;
-   package Client_List is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
-							 Element_Type    => Client_Task_Ptr,
+   package userToClientMap is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
+							 Element_Type    => Concrete_Client_Ptr,
 							 Hash            => userHash,
 							 Equivalent_Keys => "=");
 
@@ -88,7 +104,7 @@ private
    type Concrete_Server is record
      Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
-      Connected_Clients : Client_List.Map;
+      Connected_Clients : userToClientMap.Map;
       UserDatabase : User_Database;
       chatRoomIDCounter : Natural:= 1;
       chatRooms : chatRoomMap.Map;
