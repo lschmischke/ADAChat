@@ -1,20 +1,22 @@
 package body User_Databases is
 
-   function registerUser(this : in out User_Database; username : in String; password : in String) return Boolean is
-      user : UserPtr;
+   function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean is
+      newUser : UserPtr := new User;
       bool : Boolean;
       contacts : ContactList.List;
 
    begin
-      setUsername(user, To_Unbounded_String(username));
+      setUsername(newUser, username);
 
-      bool := setPassword(user, To_Unbounded_String( password));
-      setContacts(user, contacts);
+      bool := setPassword(newUser, password);
+      setContacts(newUser, contacts);
 
       User_Maps.Insert(Container => this.users,
-                       Key       => To_Unbounded_String(username),
-                       New_Item  => user);
-      -- # TODO Constraint_Error, wenn Key schon vorhanden, muss abgefangen werden #
+                       Key       => username,
+                       New_Item  => newUser);
+
+      --#hard-speichern des Users
+      saveUserDatabase(this => this);
       return true;
 
    Exception

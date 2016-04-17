@@ -17,13 +17,11 @@ package User_Databases is
 -- public
 
    type User_Database is tagged private;
-   function registerUser(this : in out User_Database; username : in String; password : in String) return Boolean;
+   function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean;
    function getUser(database : in User_Database; username : in Unbounded_String) return UserPtr;
 
    procedure saveUserDatabase(this : in User_Database); -- writes User Database to file
    procedure loadUserDatabase(this : in out User_Database); -- loads user database from file
-
-
 
 private
 
@@ -35,8 +33,6 @@ private
    use User_Maps;
 
    package contactNamesList is new Doubly_Linked_Lists(Element_Type => Unbounded_String);
-
-
 
    package userToContactNamesMap is new Indefinite_Hashed_Maps
      (Key_Type => Unbounded_String,

@@ -1,3 +1,4 @@
-server:passwort
+paulo:5
 leo:123:daniel
-daniel:bier:leo:papst
+daniel:bier:leo
+server:passwort
