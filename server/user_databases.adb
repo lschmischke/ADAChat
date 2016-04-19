@@ -177,7 +177,6 @@ package body User_Databases is
       Count : Slice_Number;
       newUser: UserPtr := new User;
       bool : Boolean;
-
    begin
       -- # Nachricht wird an definiertem Trennzeichen zerstueckelt #
       GNAT.String_Split.Create(S => MessageParts, From => inputLine,

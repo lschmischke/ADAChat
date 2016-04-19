@@ -2,7 +2,6 @@ package body Protocol is
 
    function messageObjectToString(message : MessageObject) return String is
    begin
-
       return MessageTypeE'Image(message.messagetype) & Seperator & Ada.Strings.Unbounded.To_String(message.sender) &
         Seperator & Trim(Integer'Image(message.receiver), Left) & Seperator & Ada.Strings.Unbounded.To_String(message.content);
    end messageObjectToString;

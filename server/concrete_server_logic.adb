@@ -176,8 +176,9 @@ package body Concrete_Server_Logic is
                         if user = null then
                            writeMessageToStream (ClientSocket => client.Socket, message => userNotFoundMessage);
                         else
-                           userpassword := getPassword (user);
-                           if userpassword /= incoming_message.content then
+                           userpassword := getPassword(user);
+                           -- TODO: das Passwort sollte vom Client bereits verschluesselt verschickt werden!!
+                           if userpassword /= encodePassword(incoming_message.content) then
                               writeMessageToStream (client.Socket, invalidPasswordMessage);
                            else
                               --# hole serverroomid zu diesem client vom server
@@ -215,7 +216,6 @@ package body Concrete_Server_Logic is
 		  when Protocol.Chat => -- # chat:client:<ChatRoomID>:Hi #
 		     declare
 			chatRoom : chatRoomPtr;
-			clientsInRoom : Client_List.List := getClientList(chatRoom);
 			refusedMessage : MessageObject;
 		     begin
 			--# echo Nachricht an alle Clienten im Raum
@@ -223,7 +223,7 @@ package body Concrete_Server_Logic is
 			   chatRoom := server.chatRooms.Element(incoming_message.receiver);
 
 			   -- # Pruefe, ob Client in ChatRoom eingeschrieben #
-			   if(chatRoom.clientList.Contains(client)) then
+			   if(getClientList(chatRoom).Contains(client)) then
 			      broadcastToChatRoom(chatRoom,incoming_message);
 			   else
 			        refusedMessage := createMessage(messagetype => Protocol.Refused,

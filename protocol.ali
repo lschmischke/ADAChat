@@ -82,8 +82,8 @@ D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D protocol.ads		20160417084744 3dad3734 protocol%s
-D protocol.adb		20160416234048 0e8e6c9e protocol%b
+D protocol.ads		20160419185230 3dad3734 protocol%s
+D protocol.adb		20160419191922 0e8e6c9e protocol%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-conca2.ads		20150518132148 02a0d7d0 system.concat_2%s
@@ -117,62 +117,62 @@ D s-valenu.ads		20150518132150 bb1a4295 system.val_enum%s
 D s-valint.ads		20150518132150 48a52a3f system.val_int%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 19e8 23|1r6 1r33 3r6 3r23 4r6 4r29 5r6 5r23 6r6 6r23 24|6r68 7r79
-. 17r59 22r37 72r25
+16K9*Ada 19e8 23|1r6 1r33 3r6 3r23 4r6 4r29 5r6 5r23 6r6 6r23 24|5r68 6r79
+. 16r59 21r37 71r25
 X 7 a-stream.ads
 36K13*Streams 87e16 23|6w10 6r27
 42M9*Stream_Element
-44I9*Stream_Element_Offset<long_long_integer> 24|71r28
-54A9*Stream_Element_Array(42M9)<44I9> 24|70r23
+44I9*Stream_Element_Offset<long_long_integer> 24|70r28
+54A9*Stream_Element_Array(42M9)<44I9> 24|69r23
 X 8 a-string.ads
-16K13*Strings 35e16 23|1r10 1r37 3w10 3r27 4r10 4r33 24|6r72 7r83 17r63 22r41
-. 72r29
-33n24*Left{33E9} 24|7r59 52r65
+16K13*Strings 35e16 23|1r10 1r37 3w10 3r27 4r10 4r33 24|5r72 6r83 16r63 21r41
+. 71r29
+33n24*Left{33E9} 24|6r59 51r65
 X 9 a-strfix.ads
 18K21*Fixed 251e22 23|4w18 4r41
-195V13*Trim{string} 24|7s21 52s28
+195V13*Trim{string} 24|6s21 51s28
 X 11 a-strunb.ads
-76K21*Unbounded 489e26 23|1w18 1r45 24|6r80 7r91 17r71 22r49 72r37
-79R9*Unbounded_String<5|43R9> 473e14 23|18r16 20r17 25r48 27r70 27r124 24|10r48
-. 12r21 39r70 39r124 72r47
-94V13*To_Unbounded_String{79R9} 24|22s59 31s39
-100V13*To_String{string} 24|6s90 7s101 17s81 51s26 53s27 56s36 58s36
-123V14*"&"{79R9} 24|26s66 58s62 58s75 58s106
-131V14*"&"{79R9} 24|80s46
+76K21*Unbounded 489e26 23|1w18 1r45 24|5r80 6r91 16r71 21r49 71r37
+79R9*Unbounded_String<5|43R9> 473e14 23|18r16 20r17 25r48 27r70 27r124 24|9r48
+. 11r21 38r70 38r124 71r47
+94V13*To_Unbounded_String{79R9} 24|21s59 30s39
+100V13*To_String{string} 24|5s90 6s101 16s81 50s26 52s27 55s36 57s36
+123V14*"&"{79R9} 24|25s66 57s62 57s75 57s106
+131V14*"&"{79R9} 24|79s46
 X 13 a-textio.ads
 49K13*Text_IO 471e16 23|5w10 5r27
-263U14*Put_Line 24|29s10 55s7 56s7 57s7 58s7
+263U14*Put_Line 24|28s10 54s7 55s7 56s7 57s7
 X 16 gnat.ads
-34K9*GNAT 37e9 23|2r6 2r29 7r6 7r24 24|11r22 17r7 18r65 19r16 21r61 22r79
-. 23r53 25r24 26r68
+34K9*GNAT 37e9 23|2r6 2r29 7r6 7r24 24|10r22 16r7 17r65 18r16 20r61 21r79
+. 22r53 24r24 25r68
 X 17 g-arrspl.ads
 63E9*Separator_Mode
-69n7*Multiple{63E9[19|39]} 24|18r83[19|39]
-74R9*Slice_Set<5|43R9> 24|11r40[19|39]
-82U14*Create 24|17s25[19|39]
-83r7 S{74R9[19|39]} 24|17r32[19|39]
-84a7 From{string} 24|17r51[19|39]
-85a7 Separators{string} 24|18r32[19|39]
-86e7 Mode{63E9[19|39]} 24|18r57[19|39]
-116I9*Slice_Number<integer> 24|13r15[19|39]
-119V13*Slice_Count{116I9[19|39]} 24|19s34[19|39] 25s42[19|39]
-123V13*Slice{string} 24|21s79[19|39] 22s97[19|39] 23s71[19|39] 26s86[19|39]
+69n7*Multiple{63E9[19|39]} 24|17r83[19|39]
+74R9*Slice_Set<5|43R9> 24|10r40[19|39]
+82U14*Create 24|16s25[19|39]
+83r7 S{74R9[19|39]} 24|16r32[19|39]
+84a7 From{string} 24|16r51[19|39]
+85a7 Separators{string} 24|17r32[19|39]
+86e7 Mode{63E9[19|39]} 24|17r57[19|39]
+116I9*Slice_Number<integer> 24|12r15[19|39]
+119V13*Slice_Count{116I9[19|39]} 24|18s34[19|39] 24s42[19|39]
+123V13*Slice{string} 24|20s79[19|39] 21s97[19|39] 22s71[19|39] 25s86[19|39]
 X 18 g-socket.ads
 55K14*Sockets 1260e17 23|7w11 7r29
-409I9*Socket_Type<integer> 23|31r53 33r54 24|61r53 69r54
-894U14*Receive_Socket 24|76s11
-895i7 Socket{409I9} 24|76r26
-896a7 Item{7|54A9} 24|76r50
-897i7 Last{7|44I9} 24|76r73
-1004P9*Stream_Access(7|39R9) 24|62r23
-1007V13*Stream{1004P9} 24|64s24
+409I9*Socket_Type<integer> 23|31r53 33r54 24|60r53 68r54
+894U14*Receive_Socket 24|75s11
+895i7 Socket{409I9} 24|75r26
+896a7 Item{7|54A9} 24|75r50
+897i7 Last{7|44I9} 24|75r73
+1004P9*Stream_Access(7|39R9) 24|61r23
+1007V13*Stream{1004P9} 24|63s24
 X 19 g-strspl.ads
-39K14*String_Split[17|58] 23|2w11 2r34 24|11r27 17r12 18r70 19r21 21r66 22r84
-. 23r58 25r29 26r73
+39K14*String_Split[17|58] 23|2w11 2r34 24|10r27 16r12 17r70 18r21 20r66 21r84
+. 22r58 24r29 25r73
 X 23 protocol.ads
-9K9*Protocol 35l5 35e13 24|1b14 89l5 89t13
-12a6*Seperator{string} 24|6r56 7r9 7r67 18r46
-14E9*MessageTypeE 14e131 17r21 27r44 24|6r14 21r42 39r44 50r31 55r36
+9K9*Protocol 35l5 35e13 24|1b14 88l5 88t13
+12a6*Seperator{string} 24|5r56 6r9 6r67 17r46
+14E9*MessageTypeE 14e131 17r21 27r44 24|5r14 20r42 38r44 49r31 54r36
 14n26*Connect{14E9}
 14n35*Chat{14E9}
 14n41*Refused{14E9}
@@ -182,46 +182,46 @@ X 23 protocol.ads
 14n79*Chatrequest{14E9}
 14n92*Userlist{14E9}
 14n102*Leavechat{14E9}
-14n113*Invalid{14E9} 24|30r46
+14n113*Invalid{14E9} 24|29r46
 14n122*Register{14E9}
-16R9*MessageObject 21e14 23r48 25r73 27r149 29r53 31r76 33r74 24|3r45 10r73
-. 14r26 39r149 40r16 49r53 61r76 69r74
-17e7*messagetype{14E9} 24|6r41 21m27 42m14 50r58 55r63
-18r7*sender{11|79R9} 24|6r108 22m27 43m14 51r44 56r54
-19i7*receiver{integer} 24|7r48 23m27 44m14 52r55 57r57
-20r7*content{11|79R9} 24|7r119 26m30 26r58 45m14 53r45 58r54
-23V13*messageObjectToString{string} 23>35 24|3b13 8l8 8t29 65s35
-23r35 message{16R9} 24|3b35 6r33 6r100 7r40 7r111
-25V13*stringToMessageObject{16R9} 25>35 24|10b13 37t7 83s14
-25r35 message{11|79R9} 24|10b35 17r91 33r39
-27V13*createMessage{16R9} 27>27 27>58 27>88 27>111 24|30s17 39b13 47l8 47t21
-27e27 messagetype{14E9} 24|30r31 39b27 42r29
-27r58 sender{11|79R9} 24|31r24 39b58 43r24
-27i88 receiver{integer} 24|32r24 39b88 44r26
-27r111 content{11|79R9} 24|33r24 39b111 45r25
-29U14*printMessageToInfoConsole 29>40 24|49b14 59l8 59t33
-29r40 message{16R9} 24|49b40 50r50 51r36 52r47 53r37 55r55 56r46 57r49 58r46
-31U14*writeMessageToStream 31>35 31>66 24|61b14 66l8 66t28
-31i35 ClientSocket{18|409I9} 24|61b35 64r31
-31r66 message{16R9} 24|61b66 65r57
-33V13*readMessageFromStream{16R9} 33>36 24|69b13 85l8 85t29
-33i36 ClientSocket{18|409I9} 24|69b36 76r36
+16R9*MessageObject 21e14 23r48 25r73 27r149 29r53 31r76 33r74 24|3r45 9r73
+. 13r26 38r149 39r16 48r53 60r76 68r74
+17e7*messagetype{14E9} 24|5r41 20m27 41m14 49r58 54r63
+18r7*sender{11|79R9} 24|5r108 21m27 42m14 50r44 55r54
+19i7*receiver{integer} 24|6r48 22m27 43m14 51r55 56r57
+20r7*content{11|79R9} 24|6r119 25m30 25r58 44m14 52r45 57r54
+23V13*messageObjectToString{string} 23>35 24|3b13 7l8 7t29 64s35
+23r35 message{16R9} 24|3b35 5r33 5r100 6r40 6r111
+25V13*stringToMessageObject{16R9} 25>35 24|9b13 36t7 82s14
+25r35 message{11|79R9} 24|9b35 16r91 32r39
+27V13*createMessage{16R9} 27>27 27>58 27>88 27>111 24|29s17 38b13 46l8 46t21
+27e27 messagetype{14E9} 24|29r31 38b27 41r29
+27r58 sender{11|79R9} 24|30r24 38b58 42r24
+27i88 receiver{integer} 24|31r24 38b88 43r26
+27r111 content{11|79R9} 24|32r24 38b111 44r25
+29U14*printMessageToInfoConsole 29>40 24|48b14 58l8 58t33
+29r40 message{16R9} 24|48b40 49r50 50r36 51r47 52r37 54r55 55r46 56r49 57r46
+31U14*writeMessageToStream 31>35 31>66 24|60b14 65l8 65t28
+31i35 ClientSocket{18|409I9} 24|60b35 63r31
+31r66 message{16R9} 24|60b66 64r57
+33V13*readMessageFromStream{16R9} 33>36 24|68b13 84l8 84t29
+33i36 ClientSocket{18|409I9} 24|68b36 75r36
 X 24 protocol.adb
-11r7 MessageParts{17|74R9[19|39]} 17m37 19r46 21r85 22r103 23r77 25r54 26r92
-12r7 MessagePart{11|79R9}
-13i7 Count{17|116I9[19|39]} 19m7 20r10
-14r7 newMessageObject{23|16R9} 21m10 22m10 23m10 26m13 26r41 36r14
-25i14 i<integer> 26r106
-40r7 result{23|16R9} 42m7 43m7 44m7 45m7 46r14
-50a7 messageType{string} 55r106
-51a7 sender{string} 56r91
-52a7 receiver{string} 57r97
-53a7 content{string} 58r91
-62p7 OutputChannel{18|1004P9} 64m7 65r20
-70a7 incoming_data{7|54A9} 76m58 80r62
-71i7 incoming_data_size{7|44I9} 76m81 79r21
-72r7 incoming_string{11|79R9} 80m11 80r30 83r36
-79i11 i<long_long_integer> 80r76
+10r7 MessageParts{17|74R9[19|39]} 16m37 18r46 20r85 21r103 22r77 24r54 25r92
+11r7 MessagePart{11|79R9}
+12i7 Count{17|116I9[19|39]} 18m7 19r10
+13r7 newMessageObject{23|16R9} 20m10 21m10 22m10 25m13 25r41 35r14
+24i14 i<integer> 25r106
+39r7 result{23|16R9} 41m7 42m7 43m7 44m7 45r14
+49a7 messageType{string} 54r106
+50a7 sender{string} 55r91
+51a7 receiver{string} 56r97
+52a7 content{string} 57r91
+61p7 OutputChannel{18|1004P9} 63m7 64r20
+69a7 incoming_data{7|54A9} 75m58 79r62
+70i7 incoming_data_size{7|44I9} 75m81 78r21
+71r7 incoming_string{11|79R9} 79m11 79r30 82r36
+78i11 i<long_long_integer> 79r76
 X 25 system.ads
 67M9*Address
 X 37 s-memory.ads

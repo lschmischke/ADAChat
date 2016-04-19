@@ -1,5 +1,6 @@
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
+with GNAT.SHA512;
 
 package dataTypes is
    type User is tagged private;
@@ -9,6 +10,7 @@ package dataTypes is
 
    function getUsername(this : in UserPtr) return Unbounded_String;
    procedure setUsername(this : in out UserPtr; name : in Unbounded_String);
+   function encodePassword(password : in Unbounded_String) return Unbounded_String;
    function getPassword(this : in UserPtr) return Unbounded_String;
    function setPassword(this : in out UserPtr; password : in Unbounded_String) return Boolean;
    function getContacts (this : in UserPtr) return ContactList.List;

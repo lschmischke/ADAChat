@@ -11,6 +11,11 @@ package body datatypes is
       this.username := name;
    end setUserName;
 
+   function encodePassword(password : in Unbounded_String) return Unbounded_String is
+   begin
+      return To_Unbounded_String(GNAT.SHA512.Digest(To_String(password)));
+   end encodePassword;
+
    function getPassword(this : in UserPtr) return Unbounded_String is
    begin
       return this.password;
@@ -18,7 +23,7 @@ package body datatypes is
 
    function setPassword(this : in out UserPtr; password : in Unbounded_String) return Boolean is
    begin
-      this.password:= password;
+      this.password := encodePassword(password);
       return true;
    end setPassword;
 
