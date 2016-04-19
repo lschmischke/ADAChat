@@ -27,12 +27,12 @@ package body datatypes is
       return true;
    end setPassword;
 
-   function getContacts (this : in UserPtr) return ContactList.List is
+   function getContacts (this : in UserPtr) return UserList.List is
    begin
       return this.contacts;
    end getContacts;
 
-   procedure setContacts (this : in out UserPtr; contacts : in ContactList.List) is
+   procedure setContacts (this : in out UserPtr; contacts : in UserList.List) is
    begin
       this.contacts := contacts;
    end setContacts;
@@ -49,7 +49,7 @@ package body datatypes is
 
 
    function removeContact (this : in out UserPtr; contactToRemove : UserPtr) return boolean is
-      pos : ContactList.Cursor := this.contacts.Find(Item     => contactToRemove);
+      pos : UserList.Cursor := this.contacts.Find(Item     => contactToRemove);
    begin
       if this.contacts.Contains(contactToRemove) then
 

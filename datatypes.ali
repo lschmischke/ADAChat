@@ -26,7 +26,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U datatypes%b		datatypes.adb		ee3a667d DE NE OO PK IL
+U datatypes%b		datatypes.adb		72d84366 DE NE OO PK IL
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -35,7 +35,7 @@ W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U datatypes%s		datatypes.ads		f5aa98e7 DE EE OO PF PK
+U datatypes%s		datatypes.ads		06e9bbbb DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
@@ -78,8 +78,8 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D datatypes.ads		20160419194824 4e23e7f7 datatypes%s
-D datatypes.adb		20160419194552 a019818a datatypes%b
+D datatypes.ads		20160419203712 bd60c4ab datatypes%s
+D datatypes.adb		20160419203712 cfb887cd datatypes%b
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
 D g-sechas.ads		20150518132148 7a59ee39 gnat.secure_hashes%s
@@ -115,16 +115,16 @@ X 1 ada.ads
 X 4 a-contai.ads
 16K13*Containers 24e19 17|2r10 2r51
 X 5 a-cdlili.ads
-40+9 Element_Type 17|9r51
-45k24*Doubly_Linked_Lists 407e39 17|2w21 9r31
-49R9*List<8|43R9> 17|16r64[9] 17r76[9] 28r33[9] 18|30r64[17|9] 35r76[17|9]
-58R9*Cursor 18|52r25[17|9]
+40+9 Element_Type 17|9r48
+45k24*Doubly_Linked_Lists 407e39 17|2w21 9r28
+49R9*List<8|43R9> 17|16r61[9] 17r73[9] 28r30[9] 18|30r61[17|9] 35r73[17|9]
+58R9*Cursor 18|52r22[17|9]
 146U14*Append 18|43s24[17|9]
 148p7 New_Item{17|7P9} 18|43r31[17|9]
 151U14*Delete 18|56s24[17|9]
 153r7 Position{58R9[17|9]} 18|56r31[17|9]
-212V13*Find{58R9[17|9]} 18|52s49[17|9]
-214p7 Item{17|7P9} 18|52r54[17|9]
+212V13*Find{58R9[17|9]} 18|52s46[17|9]
+214p7 Item{17|7P9} 18|52r51[17|9]
 222V13*Contains{boolean} 18|42s28[17|9] 54s24[17|9]
 X 9 a-iteint.ads
 24h9 Forward_Iterator
@@ -140,9 +140,9 @@ X 13 a-strunb.ads
 X 17 datatypes.ads
 5K9*dataTypes 24E9 32l5 32e14 18|1b14 64l5 64t14
 6R9*User 7r27 24c9 29e17
-7P9*UserPtr(6R9) 9r67 11r35 12r40 14r35 15r39 16r36 17r41 18r39 18r63 19r42
+7P9*UserPtr(6R9) 9r64 11r35 12r40 14r35 15r39 16r36 17r41 18r39 18r63 19r42
 . 19r69 18|3r35 9r40 19r35 24r39 30r36 35r41 40r39 40r63 51r42 51r69
-9K12*ContactList[5|45] 16r52 17r64 28r21 18|30r52 35r64 52r13
+9K12*UserList[5|45] 16r52 17r64 28r21 18|30r52 35r64 52r13
 11V13*getUsername{13|79R9} 11>25 18|3b13 6l8 6t19
 11p25 this{7P9} 18|3b25 5r14
 12U14*setUsername 12=26 12>49 18|9b14 12l8 12t19
@@ -164,11 +164,11 @@ X 17 datatypes.ads
 18p25 this{7P9} 18|40b25 42r14 43r10
 18p48 contactToAdd{7P9} 18|40b48 42r37 43r43
 19V13*removeContact{boolean} 19=28 19>51 18|51b13 62l11 62t24
-19p28 this{7P9} 18|51b28 52r35 54r10 56r10
-19p51 contactToRemove{7P9} 18|51b51 52r66 54r33
+19p28 this{7P9} 18|51b28 52r32 54r10 56r10
+19p51 contactToRemove{7P9} 18|51b51 52r63 54r33
 26r10*username{13|79R9} 18|5r19 11m12
 27r10*password{13|79R9} 18|21r19 26m12
-28r10*contacts{5|49R9[9]} 18|32r19 37m12 42r19 43m15 52r40 54r15 56m15
+28r10*contacts{5|49R9[9]} 18|32r19 37m12 42r19 43m15 52r37 54r15 56m15
 X 18 datatypes.adb
 52r7 pos{5|58R9[17|9]} 56m43 56r43
 X 19 gnat.ads

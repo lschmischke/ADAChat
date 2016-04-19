@@ -11,7 +11,8 @@ package Protocol is
    -- Seperator : constant String := Character'Image(Character'Val(0));
      Seperator : constant String :=":";
 
-   type MessageTypeE is (Connect, Chat, Refused, Disconnect, Online, Offline, Chatrequest, Userlist, Leavechat, Invalid, Register);
+   type MessageTypeE is (Connect, Chat, Refused, Disconnect, Online, Offline, Chatrequest,
+                         Userlist, Leavechat, Invalid, Register, addContact, remContact);
 
    type MessageObject is record
       messagetype : MessageTypeE;

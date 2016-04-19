@@ -466,11 +466,11 @@ edge: { sourcename: "user_databases__loaduserdatabase__B_7__B_9___finalizer"
   label: "user_databases.adb:132:81"
 }
 edge: { sourcename: "user_databases__usertounboundedstring"
-  targetname: "1:datatypes__contactlist__list_iterator_interfaces__forward_iterator,datatypes__contactlist__list_iterator_interfaces__reversible_iterator"
+  targetname: "1:datatypes__userlist__list_iterator_interfaces__forward_iterator,datatypes__userlist__list_iterator_interfaces__reversible_iterator"
   label: "user_databases.adb:162:31"
 }
 edge: { sourcename: "user_databases__usertounboundedstring__B310b___finalizer"
-  targetname: "-9:datatypes__contactlist__list_iterator_interfaces__reversible_iterator,datatypes__contactlist__list_iterator_interfaces__reversible_iterator"
+  targetname: "-9:datatypes__userlist__list_iterator_interfaces__reversible_iterator,datatypes__userlist__list_iterator_interfaces__reversible_iterator"
   label: "user_databases.adb:162:31"
 }
 graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb"
@@ -487,16 +487,16 @@ node: { title: "gnat__string_split__slice_count" label: "Slice_Count\nD:/gnat/20
 node: { title: "gnat__string_split__create" label: "Create\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:82:14" shape : ellipse }
 node: { title: "gnat__string_split__initialize__2" label: "Initialize\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:186:14" shape : ellipse }
 node: { title: "gnat__string_split__slice_setIP" label: "Slice_Setip\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:182:9" shape : ellipse }
-node: { title: "datatypes__contactlist__next__2" label: "Next\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:206:14" shape : ellipse }
-node: { title: "datatypes__contactlist__get_element_access" label: "Get_Element_Access\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:379:13" shape : ellipse }
-node: { title: "datatypes__contactlist__has_element" label: "Has_Element\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:65:13" shape : ellipse }
-node: { title: "datatypes__contactlist__iterate" label: "Iterate\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:166:13" shape : ellipse }
-node: { title: "datatypes__contactlist__finalize__4" label: "Finalize\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:318:25" shape : ellipse }
-node: { title: "datatypes__contactlist__adjust__4" label: "Adjust\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:315:25" shape : ellipse }
-node: { title: "datatypes__contactlist__pseudo_reference" label: "Pseudo_Reference\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:370:13" shape : ellipse }
+node: { title: "datatypes__userlist__next__2" label: "Next\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:206:14" shape : ellipse }
+node: { title: "datatypes__userlist__get_element_access" label: "Get_Element_Access\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:379:13" shape : ellipse }
+node: { title: "datatypes__userlist__has_element" label: "Has_Element\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:65:13" shape : ellipse }
+node: { title: "datatypes__userlist__iterate" label: "Iterate\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:166:13" shape : ellipse }
+node: { title: "datatypes__userlist__finalize__4" label: "Finalize\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:318:25" shape : ellipse }
+node: { title: "datatypes__userlist__adjust__4" label: "Adjust\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:315:25" shape : ellipse }
+node: { title: "datatypes__userlist__pseudo_reference" label: "Pseudo_Reference\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:370:13" shape : ellipse }
 node: { title: "datatypes__getpassword" label: "Getpassword\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:14:13" shape : ellipse }
 node: { title: "ada__strings__unbounded__append" label: "Append\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:107:14" shape : ellipse }
-node: { title: "datatypes__contactlist__adjust__2" label: "Adjust\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:273:25" shape : ellipse }
+node: { title: "datatypes__userlist__adjust__2" label: "Adjust\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:273:25" shape : ellipse }
 node: { title: "datatypes__getcontacts" label: "Getcontacts\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:16:13" shape : ellipse }
 node: { title: "ada__exceptions__exception_information" label: "Exception_Information\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-except.ads:104:13" shape : ellipse }
 node: { title: "datatypes__addcontact" label: "Addcontact\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:18:13" shape : ellipse }
@@ -511,14 +511,14 @@ node: { title: "ada__text_io__open" label: "Open\nD:/gnat/2015/lib/gcc/i686-pc-m
 node: { title: "__gnat_rcheck_CE_Range_Check" label: "gnat_rcheck_CE_Range_Check\n<built-in>" shape : ellipse }
 node: { title: "ada__text_io__put_line__2" label: "Put_Line\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-textio.ads:263:14" shape : ellipse }
 node: { title: "system__concat_3__str_concat_3" label: "Str_Concat_3\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-conca3.ads:39:14" shape : ellipse }
-node: { title: "datatypes__contactlist__clear" label: "Clear\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:76:14" shape : ellipse }
+node: { title: "datatypes__userlist__clear" label: "Clear\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:76:14" shape : ellipse }
 node: { title: "datatypes__userFD" label: "Userfd\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:24:9" shape : ellipse }
 node: { title: "datatypes__setcontacts" label: "Setcontacts\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:17:14" shape : ellipse }
 node: { title: "__gnat_rcheck_CE_Invalid_Data" label: "gnat_rcheck_CE_Invalid_Data\n<built-in>" shape : ellipse }
 node: { title: "datatypes__setpassword" label: "Setpassword\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:15:13" shape : ellipse }
 node: { title: "datatypes__setusername" label: "Setusername\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:12:14" shape : ellipse }
 node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
-node: { title: "datatypes__contactlist__listIP" label: "Listip\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:264:9" shape : ellipse }
+node: { title: "datatypes__userlist__listIP" label: "Listip\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:264:9" shape : ellipse }
 node: { title: "datatypes__userDI" label: "Userdi\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:24:9" shape : ellipse }
 node: { title: "datatypes__userIP" label: "Userip\nC:\Users\Daniel Kreck\Documents\adachat\common\datatypes.ads:24:9" shape : ellipse }
 node: { title: "system__soft_links__save_library_occurrence" label: "Save_Library_Occurrence\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-soflin.ads:313:14" shape : ellipse }
@@ -821,8 +821,8 @@ edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databas
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:167:10" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:167:10" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:167:10" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:27" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:27" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:29" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:29" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:167:10" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:167:10" }
 node: { title: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B333b___finalizer.13351" label: "B333b\nC:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:164:10\n80 bytes (static)\n0 dynamic objects" }
@@ -853,10 +853,10 @@ edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databas
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "datatypes__contactlist__finalize__4" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "datatypes__userlist__finalize__4" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "datatypes__contactlist__finalize__4" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "datatypes__userlist__finalize__4" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
@@ -888,7 +888,7 @@ edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databas
 node: { title: "user_databases__usertounboundedstring" label: "Usertounboundedstring\nC:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:150:4\n336 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "_Unwind_Resume" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_end_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:0" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_begin_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:27" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_begin_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:29" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_end_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:165:0" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_begin_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:165:29" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_end_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:0" }
@@ -898,22 +898,22 @@ edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_end_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:157:0" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_begin_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:157:26" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_end_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:0" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_begin_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_begin_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_end_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:152:0" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_begin_handler" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:152:36" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:171:0" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__strings__unbounded__adjust__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:170:7" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:170:7" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__B310b___finalizer.13227" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:0" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__next__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__next__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B349b___finalizer.13370" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:0" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:27" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:27" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:27" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:29" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:29" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:29" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__strings__unbounded__append" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:167:10" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__getusername" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:27" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:27" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__getusername" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:29" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:168:29" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:167:10" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring__L_12__B333b___finalizer.13351" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:165:0" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:165:29" }
@@ -923,21 +923,21 @@ edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__st
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__strings__unbounded__to_unbounded_string" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:165:29" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:164:10" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__get_element_access" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__get_element_access" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__has_element" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__has_element" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__iterate" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__iterate" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__finalize__4" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__finalize__4" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__adjust__4" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__adjust__4" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__pseudo_reference" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__pseudo_reference" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:162:31" }
@@ -954,14 +954,14 @@ edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__st
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:157:26" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__strings__unbounded__append" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:156:7" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__strings__unbounded__to_unbounded_string" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:157:26" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__clear" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__contactlist__adjust__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:7" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__clear" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__userlist__adjust__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:7" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:7" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__getcontacts" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
-edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "datatypes__getcontacts" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
+edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:152:36" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:152:36" }
 edge: { sourcename: "user_databases__usertounboundedstring" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:152:36" }
@@ -990,10 +990,10 @@ edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databas
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:152:36" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:152:36" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:152:7" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "datatypes__contactlist__clear" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:38" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "datatypes__contactlist__clear" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:7" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "datatypes__userlist__clear" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:35" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "datatypes__userlist__clear" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:7" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:153:7" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:150:4" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__usertounboundedstring___finalizer.13114" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:150:4" }
@@ -1310,7 +1310,7 @@ edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databas
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__registeruser___finalizer.12561" targetname: "_Unwind_Resume" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__registeruser___finalizer.12561" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:3:4" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__registeruser___finalizer.12561" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:3:4" }
-edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__registeruser___finalizer.12561" targetname: "datatypes__contactlist__clear" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:6:7" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__registeruser___finalizer.12561" targetname: "datatypes__userlist__clear" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:6:7" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__registeruser___finalizer.12561" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:6:7" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__registeruser___finalizer.12561" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:3:4" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:user_databases__registeruser___finalizer.12561" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:3:4" }
@@ -1330,7 +1330,7 @@ edge: { sourcename: "user_databases__registeruser" targetname: "datatypes__setus
 edge: { sourcename: "user_databases__registeruser" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:9:7" }
 edge: { sourcename: "user_databases__registeruser" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:6:0" }
 edge: { sourcename: "user_databases__registeruser" targetname: "ada__finalization__initialize" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:6:7" }
-edge: { sourcename: "user_databases__registeruser" targetname: "datatypes__contactlist__listIP" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:6:7" }
+edge: { sourcename: "user_databases__registeruser" targetname: "datatypes__userlist__listIP" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:6:7" }
 edge: { sourcename: "user_databases__registeruser" targetname: "__indirect_call" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:6:7" }
 edge: { sourcename: "user_databases__registeruser" targetname: "datatypes__userDI" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:4:28" }
 edge: { sourcename: "user_databases__registeruser" targetname: "datatypes__userIP" label: "C:\Users\Daniel Kreck\Documents\adachat\server\user_databases.adb:4:28" }

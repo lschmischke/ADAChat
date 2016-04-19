@@ -29,7 +29,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U user_databases%b	user_databases.adb	f80f3614 DE NE OO PK
+U user_databases%b	user_databases.adb	ba09de2a DE NE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -44,7 +44,7 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U user_databases%s	user_databases.ads	297d9b1e DE EE OO PF PK
+U user_databases%s	user_databases.ads	4d7faa8b DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
@@ -116,7 +116,7 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D datatypes.ads		20160419194824 4e23e7f7 datatypes%s
+D datatypes.ads		20160419203712 bd60c4ab datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
@@ -129,7 +129,7 @@ D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D protocol.ads		20160419185230 3dad3734 protocol%s
+D protocol.ads		20160419202424 aaec25fd protocol%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
@@ -161,7 +161,7 @@ D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D user_databases.ads	20160419185232 ca918931 user_databases%s
-D user_databases.adb	20160419195732 329ebf25 user_databases%b
+D user_databases.adb	20160419210302 7098571b user_databases%b
 X 1 ada.ads
 16K9*Ada 19e8 77|1r6 1r33 2r6 3r6 4r6 4r39 5r6 5r23 8r6 8r47 9r6 10r6 11r6
 . 11r26 12r6 31r15 40r15 41r26 78|113r21
@@ -171,7 +171,7 @@ X 4 a-contai.ads
 X 5 a-cdlili.ads
 40+9 Element_Type 77|35r56
 45k24*Doubly_Linked_Lists 407e39 77|8w21 35r36
-49R9*List<18|43R9> 77|39r40[35] 46r120[35] 78|6r30[33|9] 69r39[77|35] 153r30[33|9]
+49R9*List<18|43R9> 77|39r40[35] 46r120[35] 78|6r27[33|9] 69r39[77|35] 153r27[33|9]
 . 174r120[77|35]
 70V14*"="{boolean} 77|42r32[35]
 76U14*Clear 78|106s29[77|35]
@@ -229,7 +229,7 @@ X 26 a-strunb.ads
 100V13*To_String{string} 78|36s28 43s28 61s29 67s29 78s104 137s54 137s92
 107U14*Append 78|156s7 159s7 164s10 167s10
 108r7 Source{79R9} 78|156r14 159r14 164r17 167r17
-109r7 New_Item{79R9} 78|157r14 160r14 165r17 168r15
+109r7 New_Item{79R9} 78|157r14 160r14 165r17 168r17
 166V14*"="{boolean} 5|42i19 77|32r27
 X 27 a-suecin.ads
 34V32*Equal_Case_Insensitive{boolean} 77|3w28 41r48
@@ -257,12 +257,12 @@ X 33 datatypes.ads
 6R9*User 29e17 78|4r32 178r31
 7P9*UserPtr(6R9) 77|21r89 30r23 45r49 46r135 78|4r17 28r89 29r13 95r23 128r23
 . 134r32 150r49 174r134 178r16
-9K12*ContactList[5|45] 78|6r18 153r18
-11V13*getUsername{26|79R9} 78|101s46 104s54 137s102 152s36 168s27
+9K12*UserList[5|45] 78|6r18 153r18
+11V13*getUsername{26|79R9} 78|101s46 104s54 137s102 152s36 168s29
 12U14*setUsername 78|9s7 190s7
 14V13*getPassword{26|79R9} 78|160s26
 15V13*setPassword{boolean} 78|11s15 192s15
-16V13*getContacts{5|49R9[9]} 78|153s38
+16V13*getContacts{5|49R9[9]} 78|153s35
 17U14*setContacts 78|12s7
 18V13*addContact{boolean} 78|138s33
 X 34 gnat.ads
@@ -283,7 +283,7 @@ X 42 g-strspl.ads
 39K14*String_Split[35|58] 77|7w11 7r34 78|175r27 182r12 183r79 184r21 190r52
 . 192r60 195r67
 X 46 protocol.ads
-9K9*Protocol 35e13 77|6w6 78|157r46 165r49 183r46
+9K9*Protocol 36e13 77|6w6 78|157r46 165r49 183r46
 12a6*Seperator{string} 78|157r55 165r58 183r55
 X 47 system.ads
 67M9*Address
@@ -312,7 +312,7 @@ X 77 user_databases.ads
 35K12 contactNamesList[5|45] 39r23 42r14 46r103 78|69r22 174r103
 37K12 userToContactNamesMap[14|48] 43r8 78|70r28 123r18 126r25
 45V13 userToUnboundedString{26|79R9} 45=35 78|61s39 150b13 171l8 171t29
-45p35 this{33|7P9} 78|61r61 150b35 152r48 153r50 160r38
+45p35 this{33|7P9} 78|61r61 150b35 152r48 153r47 160r38
 46V13 StringToLonelyUser{33|7P9} 46>32 46>55 46<84 78|98s23 174b13 201l8
 . 201t26
 46a32 inputLine{string} 78|174b32 182r59
@@ -347,7 +347,7 @@ X 78 user_databases.adb
 152r7 result{26|79R9} 156m26 156r26 159m26 159r26 164m29 164r29 167m29 167r29
 . 170r14
 153r7 contacts{5|49R9[33|9]} 162r22
-162p11 contact{33|7P9} 168r39
+162p11 contact{33|7P9} 168r41
 175r7 MessageParts{35|74R9[42|39]} 182m37 184r46 190r71 192r79 195r86
 176r7 MessagePart{26|79R9}
 177i7 Count{35|116I9[42|39]} 184m7 194r21

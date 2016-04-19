@@ -2,12 +2,12 @@ graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\main.adb"
 node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
 node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
 node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:83:14" shape : ellipse }
-node: { title: "concrete_server_logic__concrete_serverFD" label: "Concrete_Serverfd\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:104:9" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverFD" label: "Concrete_Serverfd\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:118:9" shape : ellipse }
 node: { title: "system__storage_pools__subpools__allocate_any_controlled" label: "Allocate_Any_Controlled\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stposu.ads:263:14" shape : ellipse }
-node: { title: "concrete_server_logic__startserver" label: "Startserver\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:31:14" shape : ellipse }
+node: { title: "concrete_server_logic__startserver" label: "Startserver\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:40:14" shape : ellipse }
 node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
-node: { title: "concrete_server_logic__concrete_serverDI" label: "Concrete_Serverdi\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:104:9" shape : ellipse }
-node: { title: "concrete_server_logic__concrete_serverIP" label: "Concrete_Serverip\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:104:9" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverDI" label: "Concrete_Serverdi\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:118:9" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverIP" label: "Concrete_Serverip\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:118:9" shape : ellipse }
 node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:80:13" shape : ellipse }
 node: { title: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:main__P5b.3033" label: "p5b\nC:\Users\Daniel Kreck\Documents\adachat\main.adb:10:36\n64 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:main__P5b.3033" targetname: "system__storage_pools__subpools__allocate_any_controlled" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:10:36" }

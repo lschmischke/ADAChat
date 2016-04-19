@@ -35,7 +35,10 @@ z.B: 	Chatnachricht 			chat:leo:42:Hi Leute
 	ungültige Nachricht 		invalid:server:0:<whole invalid message>
 	Registrierung			register:<username>:0:<userpassword>
 	registrierungsbestätigung	register:server:0:ok
-	(Kontakt hinzufügen)		addcontact:<user>:<serverroomid>:<contactToAdd>  -- muss noch diskutiert werden
+	
+	Kontakt hinzufügen		addContact:<user>:<serverroomid>:<contactToAdd>			
+	Kontakt entfernen		remContact:<user>:<serverroomid>:<contactToRemove>		
+	
 
 Ablauf:
 1. Client senden Anmeldung
