@@ -4,7 +4,7 @@ package body Concrete_Client_Logic is
    Address : Sock_Addr_Type;
    Channel : Stream_Access;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String;
                              Password : in Unbounded_String; ServerAdress : in Unbounded_String;
@@ -14,7 +14,7 @@ package body Concrete_Client_Logic is
 
    begin
 
-      --Socket initialisieren und erzeugen
+      --#Socket initialisieren und erzeugen#
       Create_Socket (Client);
       Address.Addr := Inet_Addr(To_String(ServerAdress));
       Address.Port := ServerPort;
@@ -22,19 +22,27 @@ package body Concrete_Client_Logic is
       Connect_Socket (Client, Address);
       Channel := Stream (Client);
 
-      --ConnectMessage erzeugen
+      --#ConnectMessage erzeugen#
       ConnectMessage := createMessage(messagetype => Protocol.Connect,
                                       sender      => UserName,
                                       receiver    => 0,
-                                      content     => Password);
+                                      content     => EncodePassword(Password => Password));
 
-      --ConnectMessage nach Protokoll an Server
+      --#ConnectMessage nach Protokoll an Server#
       writeMessageToStream(ClientSocket => Client,
                            message      => ConnectMessage);
 
+   exception
+      when Error : Socket_Error =>
+         Put ("Socket_Error in ConnectToServer: ");
+         Put_Line (Exception_Information (Error));
+      when Error : others =>
+         Put ("Unexpected exception in ConnectToServer: ");
+         Put_Line (Exception_Information (Error));
+
    end ConnectToServer;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    procedure DisconnectFromServer(This : in out Concrete_Client; UserName : in Unbounded_String;
                                   Msg : in Unbounded_String) is
@@ -43,22 +51,22 @@ package body Concrete_Client_Logic is
 
    begin
 
-      --DisconnectMessage erzeugen
+      --#DisconnectMessage erzeugen#
       DisconnectMessage := createMessage(messagetype => Protocol.Disconnect,
                                          sender      => UserName,
                                          receiver    => 0,
                                          content     => Msg);
 
-      --DisconnectMessage nach Protokoll an Server
+      --#DisconnectMessage nach Protokoll an Server#
       WriteMessageToStream(ClientSocket => Client,
                            message      => DisconnectMessage);
 
-      --Socket schliessen
+      --#Socket schliessen#
       Close_Socket (Client);
 
    end DisconnectFromServer;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    procedure RegisterAtServer(This : in out Concrete_Client; UserName : in Unbounded_String; Password : in Unbounded_String) is
 
@@ -76,7 +84,7 @@ package body Concrete_Client_Logic is
 
    end RegisterAtServer;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    procedure RequestChatroom(This : in out Concrete_Client; UserName : in Unbounded_String; Id_Receiver : in Integer;
                              Participant : in Unbounded_String) is
@@ -86,16 +94,16 @@ package body Concrete_Client_Logic is
    begin
 
       RequestMessage := createMessage(messagetype => Register,
-                                       sender      => UserName,
-                                       receiver    => Id_Receiver,
-                                       content     => Participant);
+                                      sender      => UserName,
+                                      receiver    => Id_Receiver,
+                                      content     => Participant);
 
       WriteMessageToStream(ClientSocket => Client,
                            message      => RequestMessage);
 
    end RequestChatroom;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    procedure LeaveChatroom(This : in out Concrete_Client; UserName : in Unbounded_String; Id_Receiver : in Integer;
                            Message : in Unbounded_String) is
@@ -105,55 +113,51 @@ package body Concrete_Client_Logic is
    begin
 
       LeaveMessage := createMessage(messagetype => Register,
-                                       sender      => UserName,
-                                       receiver    => Id_Receiver,
-                                       content     => Message);
+                                    sender      => UserName,
+                                    receiver    => Id_Receiver,
+                                    content     => Message);
 
       WriteMessageToStream(ClientSocket => Client,
                            message      => LeaveMessage);
 
    end LeaveChatroom;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    procedure SendTextMessage(This : in out Concrete_Client; Username : in Unbounded_String;
-                         Id_Receiver : in Integer; Msg : in Unbounded_String) is
+                             Id_Receiver : in Integer; Msg : in Unbounded_String) is
 
       Message : MessageObject;
 
    begin
 
-      --Message erzeugen
       Message := createMessage(messagetype => Protocol.Chat,
                                sender      => Username,
                                receiver    => Id_Receiver,
                                content     => Msg);
 
-      --Message nach Protokoll an Server
       WriteMessageToStream(ClientSocket => Client,
                            message      => Message);
 
    end SendTextMessage;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    function ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) return Unbounded_String is
 
       MsgObject : MessageObject;
-
       Msg : Unbounded_String;
 
    begin
 
       MsgObject := readMessageFromStream(ClientSocket => Client);
-
       Msg := This.ProcessMessageObject(MsgObject);
 
       return Msg;
 
    end ReadFromServer;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    function ProcessMessageObject(This : in out Concrete_Client; MsgObject : in MessageObject) return Unbounded_String is
 
@@ -162,43 +166,87 @@ package body Concrete_Client_Logic is
       case MsgObject.Messagetype is
 
          when Connect =>
-               --TODO
-            null;
+            return To_Unbounded_String("Die Verbindung wurde hergestellt!");
+
          when Chat =>
-            --TODO
-            null;
+            return MsgObject.Content;
+
          when Refused =>
-            --TODO
-            null;
+            declare
+               Message: Unbounded_String;
+            begin
+               Message := To_Unbounded_String("Connection-refused: ");
+               Append(Message, MsgObject.Content);
+               return Message;
+            end;
+
          when Disconnect =>
-            --TODO
-            null;
+            return To_Unbounded_String("Die Verbindung wurde beendet!");
+
          when Online =>
-            --TODO
-            null;
+            declare
+               Message: Unbounded_String;
+            begin
+               Message := MsgObject.Content;
+               Append(Message, " ist jetzt online!");
+               --TODOTODO refreshUserlist();
+               return Message;
+            end;
+
          when Offline =>
-            --TODO
-            null;
+            declare
+               Message: Unbounded_String;
+            begin
+               Message := MsgObject.Content;
+               Append(Message, " ist jetzt offline!");
+               --TODOTODO refreshUserlist();
+               return Message;
+            end;
+
          when Chatrequest =>
+            declare
+               Message: Unbounded_String;
+            begin
+               Message := To_Unbounded_String("Chatraum :");
+               Append(Message, Integer'Image(MsgObject.Receiver));
+               --TODO neuer Chatraum...
+               return Message;
+            end;
+
+         when Protocol.Userlist =>
             --TODO
             null;
-         when Userlist =>
-            --TODO
-            null;
+
          when Leavechat =>
-            --TODO
-            null;
+            return MsgObject.Content;
+
          when Invalid =>
-            --TODO
-            null;
+            declare
+               Message: Unbounded_String;
+            begin
+               Message := To_Unbounded_String("Invalid Message: ");
+               Append(Message, MsgObject.Content);
+               return Message;
+            end;
+
          when Register =>
             --TODO
             null;
+         when AddContact =>
+            --TODO
+            null;
+         when RemContact =>
+            --TODO
+            null;
+         when others =>
+            null;
       end case;
+
+      return To_Unbounded_String("abcdfg");
 
    end ProcessMessageObject;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
    procedure RefreshUserlist(This : in out Concrete_Client; User : in Unbounded_String) is
 
@@ -206,6 +254,6 @@ package body Concrete_Client_Logic is
       null;
    end RefreshUserlist;
 
---------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------
 
 end Concrete_Client_Logic;

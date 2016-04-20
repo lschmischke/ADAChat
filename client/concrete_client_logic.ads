@@ -4,7 +4,9 @@ with Ada.Streams; use Ada.Streams;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.IO_Exceptions;
+with Ada.Exceptions; use Ada.Exceptions;
 with Protocol; use Protocol;
+with Datatypes; use Datatypes;
 
 
 package Concrete_Client_Logic is
@@ -29,7 +31,7 @@ package Concrete_Client_Logic is
 
    -----------------------------------------------------------------------------
 
-   --Forder beim Server einen Chatroom an.
+   --Fordere beim Server einen Chatroom an.
    procedure RequestChatroom(This : in out Concrete_Client; UserName : in Unbounded_String; Id_Receiver : in Integer;
                              Participant : in Unbounded_String);
 
@@ -41,7 +43,7 @@ package Concrete_Client_Logic is
 
    --Diese Prozedur sendet eine Nachricht an den ueber Id_Receiver angegebenen Chatraum.
    procedure SendTextMessage(This : in out Concrete_Client; Username : in Unbounded_String;
-                         Id_Receiver : in Integer; Msg : in Unbounded_String);
+                             Id_Receiver : in Integer; Msg : in Unbounded_String);
 
    --Diese Funktion liest Messageobjects vom Server-Stream.
    function ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) return Unbounded_String;

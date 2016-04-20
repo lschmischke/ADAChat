@@ -16,7 +16,7 @@ begin
 
    StartServer(server);
 
-   Client.connectToServer(To_Unbounded_String("daniel"), To_Unbounded_String("bier"),
+   Client.connectToServer(To_Unbounded_String("leo"), To_Unbounded_String("123"),
                           To_Unbounded_String("127.0.0.1"), 12321);
 
    msg := readMessageFromStream(ClientSocket => Client.Socket);
