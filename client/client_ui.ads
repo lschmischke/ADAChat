@@ -1,5 +1,6 @@
 package client_ui is
    procedure showMessage;
-   procedure setConnectionStatus;
    procedure updateChatParticipants;
+   procedure setConnectionStatus;
+
 end client_ui;

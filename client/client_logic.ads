@@ -9,6 +9,6 @@ package Client_Logic is
                              ServerAdress : in Unbounded_String; ServerPort : in Port_Type) is abstract;
 
    procedure disconnectFromServer(This : in out Client_Interface; UserName : in Unbounded_String;
-                                 Id_Receiver : in Integer; Msg : in Unbounded_String) is abstract;
+                                  Msg : in Unbounded_String) is abstract;
 
 end client_logic;

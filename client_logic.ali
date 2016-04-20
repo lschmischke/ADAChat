@@ -19,7 +19,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U client_logic%s	client_logic.ads	7f7b2a35 DE EE OO PK
+U client_logic%s	client_logic.ads	0a5dd175 DE EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -42,7 +42,7 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client_logic.ads	20160420114024 2b6c6d58 client_logic%s
+D client_logic.ads	20160420195318 5e4a9618 client_logic%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
@@ -72,7 +72,7 @@ X 7 a-string.ads
 16K13*Strings 35e16 13|1r10 1r37
 X 9 a-strunb.ads
 76K21*Unbounded 489e26 13|1w18 1r45
-79R9*Unbounded_String<5|43R9> 473e14 13|8r76 8r108 9r48 11r81 12r69
+79R9*Unbounded_String<5|43R9> 473e14 13|8r76 8r108 9r48 11r81 12r44
 X 13 client_logic.ads
 4K9*Client_Logic 14l5 14e17
 6h9*Client_Interface 8p14 8r44 11p14 11r49
@@ -82,11 +82,10 @@ X 13 client_logic.ads
 8r94 Password{9|79R9}
 9r30 ServerAdress{9|79R9}
 9i66 ServerPort{15|476I9}
-11x14*disconnectFromServer 11=35 11>67 12>34 12>60
+11x14*disconnectFromServer 11=35 11>67 12>35
 11r35 This{6R9}
 11r67 UserName{9|79R9}
-12i34 Id_Receiver{integer}
-12r60 Msg{9|79R9}
+12r35 Msg{9|79R9}
 X 14 gnat.ads
 34K9*GNAT 13|2r6 2r24 14|37e9
 X 15 g-socket.ads
