@@ -28,7 +28,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		4daae0ac DE NE OO SU IL
+U main%b		main.adb		106dd600 DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -76,7 +76,7 @@ D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D client_logic.ads	20160420114024 2b6c6d58 client_logic%s
 D client_ui.ads		20160419110932 80f42b28 client_ui%s
-D concrete_client_logic.ads  20160420132158 9b839412 concrete_client_logic%s
+D concrete_client_logic.ads  20160420134126 c644a2be concrete_client_logic%s
 D concrete_server_logic.ads  20160419103438 b8597b34 concrete_server_logic%s
 D datatypes.ads		20160419103438 6c7ce65e datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s

@@ -27,7 +27,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U concrete_client_logic%b  concrete_client_logic.adb  98b6327d DE OO PK
+U concrete_client_logic%b  concrete_client_logic.adb  2ddf3200 DE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -36,7 +36,7 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-U concrete_client_logic%s  concrete_client_logic.ads  1403ec10 DE EE OO PF PK
+U concrete_client_logic%s  concrete_client_logic.ads  49c4dabc DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
@@ -70,8 +70,8 @@ D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D client_logic.ads	20160420114024 2b6c6d58 client_logic%s
-D concrete_client_logic.ads  20160420132158 9b839412 concrete_client_logic%s
-D concrete_client_logic.adb  20160420132806 0335a66f concrete_client_logic%b
+D concrete_client_logic.ads  20160420134126 c644a2be concrete_client_logic%s
+D concrete_client_logic.adb  20160420134652 eb9b90be concrete_client_logic%b
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
@@ -114,8 +114,8 @@ X 8 a-string.ads
 16K13*Strings 35e16 17|4r10 4r37
 X 11 a-strunb.ads
 76K21*Unbounded 489e26 17|4w18 4r45
-79R9*Unbounded_String<5|43R9> 473e14 17|19r75 19r107 20r48 24r80 25r70 28r71
-. 29r61 18|8r75 9r44 9r80 38r80 39r70 61r71 62r61
+79R9*Unbounded_String<5|43R9> 473e14 17|19r75 19r107 20r48 24r80 25r70 28r75
+. 29r61 18|8r75 9r44 9r80 38r80 39r70 61r75 62r61
 100V13*To_String{string} 18|18s33
 X 13 a-textio.ads
 49K13*Text_IO 471e16 17|5w10 5r27
@@ -123,9 +123,9 @@ X 16 client_logic.ads
 4K9*Client_Logic 14e17 17|1w6 1r24
 6h9*Client_Interface 17|12r32
 X 17 concrete_client_logic.ads
-10K9*Concrete_Client_Logic 37l5 37e26 18|1b14 116l5 116t26
-12R9*Concrete_Client<16|6R9> 14e14 19P14 19r44 24P14 24r49 28p14 28r40 32p14
-. 32r43 35p14 35r49 18|8r44 38r49 61r40 81r43 94r49
+10K9*Concrete_Client_Logic 37l5 37e26 18|1b14 138l5 138t26
+12R9*Concrete_Client<16|6R9> 14e14 19P14 19r44 24P14 24r49 28p14 28r44 32p14
+. 32r43 35p14 35r49 18|8r44 38r49 61r44 81r43 94r49
 13i7*Socket{21|409I9} 18|20m12
 19U14*ConnectToServer<16|8p14> 19=30 19>61 19>93 20>30 21>30 18|8b14 34l8
 . 34t23
@@ -140,15 +140,15 @@ X 17 concrete_client_logic.ads
 24r66 UserName{11|79R9} 18|38b66 47r57
 25i35 Id_Receiver{integer} 18|39b35 48r57
 25r61 Msg{11|79R9} 18|39b61 49r57
-28U14*SendMessage 28=26 28>57 29>26 29>52 18|61b14 78l8 78t19
-28r26 This{12R9} 18|61b26
-28r57 Username{11|79R9} 18|61b57 70r47
+28U14*SendChatMessage 28=30 28>61 29>26 29>52 18|61b14 78l8 78t23
+28r30 This{12R9} 18|61b30
+28r61 Username{11|79R9} 18|61b61 70r47
 29i26 Id_Receiver{integer} 18|62b26 71r47
 29r52 Msg{11|79R9} 18|62b52 72r47
 32U14*ReadFromServer 32=29 32>60 18|81b14 91l8 91t22
 32r29 This{12R9} 18|81b29 89m7 89r7
 32i60 ServerSocket{21|409I9} 18|81b60
-35U14*ProcessMessageObject 35=35 35>66 18|89s12 94b14 113l8 113t28
+35U14*ProcessMessageObject 35=35 35>66 18|89s12 94b14 135l8 135t28
 35r35 This{12R9} 18|94b35
 35r66 MsgObject{26|16R9} 18|94b66 98r12
 X 18 concrete_client_logic.adb
@@ -177,16 +177,16 @@ X 21 g-socket.ads
 X 26 protocol.ads
 9K9*Protocol 17|7w6 7r20 18|25r54 46r57 69r47 26|35e13
 14n26*Connect{14E9} 18|25r63 100r15
-14n35*Chat{14E9} 18|69r56 101r15
-14n41*Refused{14E9} 18|102r15
-14n50*Disconnect{14E9} 18|46r66 103r15
-14n62*Online{14E9} 18|104r15
-14n70*Offline{14E9} 18|105r15
-14n79*Chatrequest{14E9} 18|106r15
-14n92*Userlist{14E9} 18|107r15
-14n102*Leavechat{14E9} 18|108r15
-14n113*Invalid{14E9} 18|109r15
-14n122*Register{14E9} 18|110r15
+14n35*Chat{14E9} 18|69r56 103r15
+14n41*Refused{14E9} 18|106r15
+14n50*Disconnect{14E9} 18|46r66 109r15
+14n62*Online{14E9} 18|112r15
+14n70*Offline{14E9} 18|115r15
+14n79*Chatrequest{14E9} 18|118r15
+14n92*Userlist{14E9} 18|121r15
+14n102*Leavechat{14E9} 18|124r15
+14n113*Invalid{14E9} 18|127r15
+14n122*Register{14E9} 18|130r15
 16R9*MessageObject 17|35r81 18|12r24 41r27 64r17 83r19 94r81 26|21e14
 17e7*messagetype{14E9} 18|98r22
 27V13*createMessage{16R9} 18|25s25 46s28 69s18

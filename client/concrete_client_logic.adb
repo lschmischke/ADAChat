@@ -58,7 +58,7 @@ package body Concrete_Client_Logic is
    end DisconnectFromServer;
 
 
-   procedure SendMessage(This : in out Concrete_Client; Username : in Unbounded_String;
+   procedure SendChatMessage(This : in out Concrete_Client; Username : in Unbounded_String;
                          Id_Receiver : in Integer; Msg : in Unbounded_String) is
 
       Message : MessageObject;
@@ -75,7 +75,7 @@ package body Concrete_Client_Logic is
       WriteMessageToStream(ClientSocket => Client,
                            message      => Message);
 
-   end SendMessage;
+   end SendChatMessage;
 
 
    procedure ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) is
@@ -97,17 +97,39 @@ package body Concrete_Client_Logic is
 
       case MsgObject.Messagetype is
 
-         when Connect => null;
-         when Chat => null;
-         when Refused => null;
-         when Disconnect => null;
-         when Online => null;
-         when Offline => null;
-         when Chatrequest => null;
-         when Userlist => null;
-         when Leavechat => null;
-         when Invalid => null;
-         when Register => null;
+         when Connect =>
+               --TODO
+            null;
+         when Chat =>
+            --TODO
+            null;
+         when Refused =>
+            --TODO
+            null;
+         when Disconnect =>
+            --TODO
+            null;
+         when Online =>
+            --TODO
+            null;
+         when Offline =>
+            --TODO
+            null;
+         when Chatrequest =>
+            --TODO
+            null;
+         when Userlist =>
+            --TODO
+            null;
+         when Leavechat =>
+            --TODO
+            null;
+         when Invalid =>
+            --TODO
+            null;
+         when Register =>
+            --TODO
+            null;
       end case;
 
    end ProcessMessageObject;

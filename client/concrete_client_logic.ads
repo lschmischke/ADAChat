@@ -25,7 +25,7 @@ package Concrete_Client_Logic is
                                   Id_Receiver : in Integer; Msg : in Unbounded_String);
 
    --Diese Prozedur sendet eine Nachricht an den ueber Id_Receiver angegebenen Chatraum.
-   procedure SendMessage(This : in out Concrete_Client; Username : in Unbounded_String;
+   procedure SendChatMessage(This : in out Concrete_Client; Username : in Unbounded_String;
                          Id_Receiver : in Integer; Msg : in Unbounded_String);
 
    --Diese Prozedur liest Messageobjects vom Server-Stream und verarbeitet diese.
