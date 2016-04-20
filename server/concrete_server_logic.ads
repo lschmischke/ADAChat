@@ -14,6 +14,15 @@ with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
 
+-- TODO: Kontaktlogik umsetzen,
+--       Konakte hinzufügen und entfernen
+--       Online Offline Benachrichtigungen
+--       Sicherstellen dass man keine Fremden in Chat einladen kann nur Kontakte
+--       Disconnect, Client aus allen Chaträumen entfernen
+--       prüfen ob Kontakt beim Add bereits in Kontaktliste
+--       kontakt in datenbank noch eintragen
+--       saveUserDB in addContact methode integrieren
+
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is
@@ -69,7 +78,7 @@ private
       SocketAddress : Sock_Addr_Type;
       CommunicationTask : Client_Task_Ptr;
       chatRoomList : chatRoom_List.List;
-
+      ServerRoomID : Natural;
    end record;
 
 
@@ -98,17 +107,27 @@ private
    package chatRoomMap is new Ada.Containers.Hashed_Maps(Key_Type        => Natural,
 						     Element_Type    => chatRoomPtr,
 						     Hash            => Hash,
-						     Equivalent_Keys => "=");
+                                                         Equivalent_Keys => "=");
+
+   package userToUsersMap is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => UserPtr,
+						     Element_Type    => dataTypes.UserList.List,
+						     Hash            => userHash,
+                                                     Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
 
    -- type Concrete_Server is new Server_Interface with record
    type Concrete_Server is record
-     Socket : Socket_Type;
+      Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
       Connected_Clients : userToClientMap.Map;
       UserDatabase : User_Database;
       chatRoomIDCounter : Natural:= 1;
       chatRooms : chatRoomMap.Map;
+      ContactRequests : userToUsersMap.Map;
    end record;
+
+   function checkIfCorrespondingContactRequestExists(server : in Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;
+
+   procedure removeContactRequest (server : in out Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr);
 
    -- gibt die nächste ID für den Chatraum
    function getNextChatRoomID( server: in out Concrete_Server_Ptr) return Natural;

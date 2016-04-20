@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb"
 node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
 node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
@@ -130,4 +131,31 @@ edge: { sourcename: "_ada_main" targetname: "system__secondary_stack__ss_mark" l
 edge: { sourcename: "_ada_main" targetname: "__main" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
 node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__P5b.3045" label: "p5b\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:12:36\n64 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__P5b.3045" targetname: "system__storage_pools__subpools__allocate_any_controlled" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:12:36" }
+=======
+graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\main.adb"
+node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
+node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
+node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:83:14" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverFD" label: "Concrete_Serverfd\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:118:9" shape : ellipse }
+node: { title: "system__storage_pools__subpools__allocate_any_controlled" label: "Allocate_Any_Controlled\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stposu.ads:263:14" shape : ellipse }
+node: { title: "concrete_server_logic__startserver" label: "Startserver\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:40:14" shape : ellipse }
+node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverDI" label: "Concrete_Serverdi\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:118:9" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverIP" label: "Concrete_Serverip\nC:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads:118:9" shape : ellipse }
+node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\nD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:80:13" shape : ellipse }
+node: { title: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:main__P5b.3033" label: "p5b\nC:\Users\Daniel Kreck\Documents\adachat\main.adb:10:36\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:main__P5b.3033" targetname: "system__storage_pools__subpools__allocate_any_controlled" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:10:36" }
+node: { title: "_ada_main" label: "main\nC:\Users\Daniel Kreck\Documents\adachat\main.adb:9:1\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "_ada_main" targetname: "_Unwind_Resume" }
+edge: { sourcename: "_ada_main" targetname: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:main___finalizer.2983" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:15:0" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__startserver" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:14:25" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:14:25" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverDI" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:10:36" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverIP" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:10:36" }
+edge: { sourcename: "_ada_main" targetname: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:main__P5b.3033" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:10:36" }
+edge: { sourcename: "_ada_main" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:9:1" }
+edge: { sourcename: "_ada_main" targetname: "__main" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:9:1" }
+node: { title: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:main___finalizer.2983" label: "main\nC:\Users\Daniel Kreck\Documents\adachat\main.adb:9:1\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:main___finalizer.2983" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:9:1" }
+>>>>>>> origin/feature/server_logic
 }

@@ -176,8 +176,9 @@ package body Concrete_Server_Logic is
                         if user = null then
                            writeMessageToStream (ClientSocket => client.Socket, message => userNotFoundMessage);
                         else
-                           userpassword := getPassword (user);
-                           if userpassword /= incoming_message.content then
+                           userpassword := getPassword(user);
+                           -- TODO: das Passwort sollte vom Client bereits verschluesselt verschickt werden!!
+                           if userpassword /= encodePassword(incoming_message.content) then
                               writeMessageToStream (client.Socket, invalidPasswordMessage);
                            else
                               --# hole serverroomid zu diesem client vom server
@@ -201,7 +202,9 @@ package body Concrete_Server_Logic is
 				     New_Item => client);
 				 client.user:=user;
 
-				 client.chatRoomList.Append(chatroom);
+                                 client.chatRoomList.Append(chatroom);
+
+                                 client.ServerRoomID := serverRoomID;
 
 				 -- # setze Client auf online #
                                  -- # Sende online-Benachrichtigung an alle Kontakte des Clients#
@@ -215,7 +218,6 @@ package body Concrete_Server_Logic is
 		  when Protocol.Chat => -- # chat:client:<ChatRoomID>:Hi #
 		     declare
 			chatRoom : chatRoomPtr;
-			clientsInRoom : Client_List.List := getClientList(chatRoom);
 			refusedMessage : MessageObject;
 		     begin
 			--# echo Nachricht an alle Clienten im Raum
@@ -223,7 +225,7 @@ package body Concrete_Server_Logic is
 			   chatRoom := server.chatRooms.Element(incoming_message.receiver);
 
 			   -- # Pruefe, ob Client in ChatRoom eingeschrieben #
-			   if(chatRoom.clientList.Contains(client)) then
+			   if(getClientList(chatRoom).Contains(client)) then
 			      broadcastToChatRoom(chatRoom,incoming_message);
 			   else
 			        refusedMessage := createMessage(messagetype => Protocol.Refused,
@@ -375,6 +377,53 @@ package body Concrete_Server_Logic is
                         end if;
                      end;
 
+                     -- ### ADDCONTACT ###
+                  when Protocol.addContact =>
+                     declare
+                        requestedUser : UserPtr := getUser(server.UserDatabase, incoming_message.content);
+                        messageToRequestingUser : MessageObject;
+                        messageToRequestedUser : MessageObject;
+                        --requestingUser ist user
+                     begin
+                        -- pruefe ob es die beiden User gibt
+                        if (checkIfCorrespondingContactRequestExists(server, user, requestedUser)) then
+                           -- stelle Kontakt her
+                           --      Kontaktanfrage aus Liste rausnehmen
+                           removeContactRequest(server, requestedUser, User);
+                           --      User benachrichten
+                           messageToRequestingUser := createMessage(messagetype => Protocol.Chat,
+                                         sender      => serverStr,
+                                         receiver    => serverRoomID,
+                                         content     => To_Unbounded_String("New Contact added: " & To_String(getUsername(requestedUser))));
+                           messageToRequestedUser := createMessage(messagetype => Protocol.Chat,
+                                         sender      => serverStr,
+                                         receiver    => server.Connected_Clients.Element(requestedUser).ServerRoomID, --TODO: Element kann fehlschlagen
+                                                                   content     => To_Unbounded_String("New Contact added: " & To_String(getUsername(user))));
+                           writeMessageToStream(ClientSocket => client.Socket,
+                                                message      => messageToRequestingUser);
+                           writeMessageToStream(ClientSocket => server.Connected_Clients.Element(requestedUser).Socket,
+                                                message      => messageToRequestedUser);
+                           --  TODO:    User_Datenbank aktualisieren
+                        else
+                           declare
+                              ulist : dataTypes.UserList.List;
+                           begin
+                           -- trage Kontaktanfrage in serverliste ein
+                           -- gibt es UserKey von Requests in Map
+                              if server.ContactRequests.Contains(Key => user) then
+                                 ulist := server.ContactRequests.Element(Key => user);
+                                 ulist.Append(New_Item => requestedUser);
+                              else
+                                 -- requestedUser zur Liste hinzufuegen
+                                 ulist.Append(New_Item => requestedUser);
+                                 -- wenn nein, Key und Liste anlegen
+                                 server.ContactRequests.Insert(Key   => user,
+                                                               New_Item => ulist);
+                              end if;
+                           end;
+                        end if;
+                     end;
+
 		     -- ### OTHERS ###
                   when others => -- # Online/Offline/Userlist/Refused/Invalid/ #
                      null;
@@ -484,7 +533,33 @@ package body Concrete_Server_Logic is
       return room.chatRoomID;
    end getChatRoomID;
 
+   ----------------------------------------------------------------------------------------
 
+   function checkIfCorrespondingContactRequestExists(server : in Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) return Boolean is
+      ulist : dataTypes.UserList.List;
+   begin
+      if (server.ContactRequests.Contains(requestedUser)) then
+         ulist := server.ContactRequests.Element(requestedUser);
+         return ulist.Contains(requestingUser);
+      end if;
+      return false;
+   end checkIfCorrespondingContactRequestExists;
+
+   procedure removeContactRequest (server : in out Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) is
+      ulist : dataTypes.UserList.List;
+      pos : dataTypes.Userlist.Cursor;
+   begin
+      if server.ContactRequests.Contains(requestingUser) then
+         ulist := server.ContactRequests.Element(requestingUser);
+         pos := ulist.Find(requestedUser);
+         -- TODO: find kann fehlschalgen, noch pruefen
+         ulist.Delete(pos);
+         if ulist.Is_Empty then
+            server.ContactRequests.Delete(requestingUser);
+         end if;
+      end if;
+
+   end removeContactRequest;
 
 
 end Concrete_Server_Logic;

@@ -3,7 +3,7 @@ package body User_Databases is
    function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean is
       newUser : UserPtr := new User;
       bool : Boolean;
-      contacts : ContactList.List;
+      contacts : UserList.List;
 
    begin
       setUsername(newUser, username);
@@ -150,7 +150,7 @@ package body User_Databases is
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String is
       --result : Unbounded_String := this.user_data.username;
       result : Unbounded_String := getUsername(this);
-      contacts : ContactList.List := getContacts(this);
+      contacts : UserList.List := getContacts(this);
    begin
       --#Trennzeichen
       Append(Source   => result,
@@ -165,7 +165,7 @@ package body User_Databases is
                 New_Item => To_Unbounded_String(Protocol.Seperator));
          --#Kontaktname
          Append(Source   => result,
-              New_Item => getUsername(contact));
+                New_Item => getUsername(contact));
       end loop;
       return result;
    end userToUnboundedString;
@@ -177,7 +177,6 @@ package body User_Databases is
       Count : Slice_Number;
       newUser: UserPtr := new User;
       bool : Boolean;
-
    begin
       -- # Nachricht wird an definiertem Trennzeichen zerstueckelt #
       GNAT.String_Split.Create(S => MessageParts, From => inputLine,
