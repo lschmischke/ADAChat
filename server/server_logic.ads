@@ -1,4 +1,4 @@
-with Communication_Objects; use Communication_Objects;
+
 
 package Server_Logic is
 

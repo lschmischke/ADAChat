@@ -1,0 +1,98 @@
+V "GNAT Lib v2015"
+A -fstack-check=specific
+A -fcallgraph-info=su,da
+A -gnatA
+A -gnatVa
+A -gnata
+A -gnato
+A -gnatE
+A -gnat12
+A -g
+A -gnatc
+A -mtune=generic
+A -march=pentiumpro
+P NO ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U chatrooms%s		chatrooms.ads		a4981f30 DE EE OO PK
+W concrete_server_logic%s  concrete_server_logic.adb  concrete_server_logic.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
+D a-chacon.ads		20150518132148 5b23f5eb ada.characters.conversions%s
+D a-chlat1.ads		20150518132148 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20150518132148 61e5e089 ada.containers%s
+D a-cdlili.ads		20150518132148 59d7f011 ada.containers.doubly_linked_lists%s
+D a-cohata.ads		20150518132148 04abccc5 ada.containers.hash_tables%s
+D a-cohama.ads		20150518132148 fb1af438 ada.containers.hashed_maps%s
+D a-cihama.ads		20150518132148 6f653e56 ada.containers.indefinite_hashed_maps%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-finali.ads		20150518132148 69f99942 ada.finalization%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20150518132148 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-string.ads		20150518132148 90ac6797 ada.strings%s
+D a-strfix.ads		20150518132148 d07c346e ada.strings.fixed%s
+D a-strhas.ads		20150518132148 c71c2a52 ada.strings.hash%s
+D a-strmap.ads		20150518132148 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
+D a-suecin.ads		20150518132148 8f50d241 ada.strings.unbounded.equal_case_insensitive%s
+D a-suhcin.ads		20150518132148 7f78b9e6 ada.strings.unbounded.hash_case_insensitive%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
+D chatrooms.ads		20160417110154 fe881230 chatrooms%s
+D communication_objects.ads  20160323232200 81548b0d communication_objects%s
+D concrete_server_logic.ads  20160417105758 5a100d00 concrete_server_logic%s
+D datatypes.ads		20160416185506 6c7ce65e datatypes%s
+D gnat.ads		20150518132148 fd2ad2f1 gnat%s
+D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
+D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
+D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D protocol.ads		20160417084744 3dad3734 protocol%s
+D server_logic.ads	20160416103510 9919e9c8 server_logic%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
+D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+D user_databases.ads	20160417094120 ca918931 user_databases%s
+X 6 a-cdlili.ads
+49R9*List<11|43R9> 25|17r39[27|32]
+X 13 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[6|67]>
+X 19 a-strunb.ads
+166V14*"="{boolean} 6|42i19
+X 25 chatrooms.ads
+3K9*chatRooms 14E9 21l5 21e14
+6R9*chatRoom 7r31 14c9 18e17
+7P9*chatRoomPtr(6R9) 9r48 10r53
+9U14*addClientToChatroom 9=34 9>61
+9p34 room{7P9}
+9p61 client{27|31P9}
+10U14*removeClientFromChatroom 10=39 10>66
+10p39 room{7P9}
+10p66 clientToRemove{27|31P9}
+16i10*chatRoomID{natural}
+17r10*clientList{6|49R9[27|32]}
+X 27 concrete_server_logic.ads
+16K9*Concrete_Server_Logic 25|1w6 1r33 27|96e26
+31P9*Client_Task_Ptr(30T9) 25|9r73 10r86
+32K12*ClientTask_List[6|45] 25|17r23
+

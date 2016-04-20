@@ -15,43 +15,47 @@ P SS ZX
 
 RN
 RV NO_ALLOCATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
 RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		f090a2f4 DE NE OO SU IL
+U main%b		main.adb		4daae0ac DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W client_logic%s	client_logic.ads	client_logic.ali
 W client_ui%s		client_ui.adb		client_ui.ali
-W communication_objects%s  communication_objects.ads  communication_objects.ali
-W communication_objects.files%s  communication_objects-files.ads  communication_objects-files.ali
-W communication_objects.messages%s  communication_objects-messages.adb  communication_objects-messages.ali
-W communication_objects.messages.connect%s  communication_objects-messages-connect.adb  communication_objects-messages-connect.ali
-W communication_objects.messages.disconnect%s  communication_objects-messages-disconnect.adb  communication_objects-messages-disconnect.ali
-W communication_objects.messages.refuse%s  communication_objects-messages-refuse.adb  communication_objects-messages-refuse.ali
-W communication_objects.messages.userlist%s  communication_objects-messages-userlist.adb  communication_objects-messages-userlist.ali
+W concrete_client_logic%s  concrete_client_logic.adb  concrete_client_logic.ali
 W concrete_server_logic%s  concrete_server_logic.adb  concrete_server_logic.ali
-W data_types_test%s	data_types_test.adb	data_types_test.ali
-W server_logic%s	server_logic.ads	server_logic.ali
-W server_ui%s		server_ui.adb		server_ui.ali
+W protocol%s		protocol.adb		protocol.ali
 W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
-D a-assert.ads		20150518132148 a1febc19 ada.assertions%s
 D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
+D a-chacon.ads		20150518132148 5b23f5eb ada.characters.conversions%s
 D a-chlat1.ads		20150518132148 66457d31 ada.characters.latin_1%s
 D a-contai.ads		20150518132148 61e5e089 ada.containers%s
 D a-cdlili.ads		20150518132148 59d7f011 ada.containers.doubly_linked_lists%s
+D a-cohata.ads		20150518132148 04abccc5 ada.containers.hash_tables%s
+D a-cohama.ads		20150518132148 fb1af438 ada.containers.hashed_maps%s
+D a-cihama.ads		20150518132148 6f653e56 ada.containers.indefinite_hashed_maps%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-finali.ads		20150518132148 69f99942 ada.finalization%s
 D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
@@ -59,24 +63,22 @@ D a-iteint.ads		20150518132148 7c7305e9 ada.iterator_interfaces%s
 D a-reatim.ads		20150518132148 a5838d5a ada.real_time%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-string.ads		20150518132148 90ac6797 ada.strings%s
+D a-strfix.ads		20150518132148 d07c346e ada.strings.fixed%s
+D a-strhas.ads		20150518132148 c71c2a52 ada.strings.hash%s
 D a-strmap.ads		20150518132148 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
+D a-suecin.ads		20150518132148 8f50d241 ada.strings.unbounded.equal_case_insensitive%s
+D a-stunha.ads		20150518132148 115e053b ada.strings.unbounded.hash%s
+D a-suhcin.ads		20150518132148 7f78b9e6 ada.strings.unbounded.hash_case_insensitive%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client_logic.ads	20160330002352 c75ccc4e client_logic%s
-D client_ui.ads		20160330002352 80f42b28 client_ui%s
-D communication_objects.ads  20160330002352 81548b0d communication_objects%s
-D communication_objects-files.ads  20160330003426 81abdfc3 communication_objects.files%s
-D communication_objects-messages.ads  20160330002352 c71cf906 communication_objects.messages%s
-D communication_objects-messages-connect.ads  20160330003426 8bc7815d communication_objects.messages.connect%s
-D communication_objects-messages-disconnect.ads  20160330003426 99108569 communication_objects.messages.disconnect%s
-D communication_objects-messages-refuse.ads  20160330003426 04d7c206 communication_objects.messages.refuse%s
-D communication_objects-messages-userlist.ads  20160330003426 b96a0a41 communication_objects.messages.userlist%s
-D concrete_server_logic.ads  20160414154828 3eba4a4e concrete_server_logic%s
-D data_types.ads	20160330003426 0e9f5bcf data_types%s
-D data_types_test.ads	20160405121414 564c0ad3 data_types_test%s
+D client_logic.ads	20160420114024 2b6c6d58 client_logic%s
+D client_ui.ads		20160419110932 80f42b28 client_ui%s
+D concrete_client_logic.ads  20160420132158 9b839412 concrete_client_logic%s
+D concrete_server_logic.ads  20160419103438 b8597b34 concrete_server_logic%s
+D datatypes.ads		20160419103438 6c7ce65e datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
@@ -85,18 +87,18 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20160414130058 731a78d7 main%b
-D server_logic.ads	20160413140942 9919e9c8 server_logic%s
-D server_ui.ads		20160405124220 e381aa63 server_ui%s
+D main.adb		20160420105628 c7d4aa0b main%b
+D protocol.ads		20160419103438 3dad3734 protocol%s
+D server_logic.ads	20160419103438 1ba6241e server_logic%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
-D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
 D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
 D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
+D s-memory.ads		20150518132150 597d6634 system.memory%s
 D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
 D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
 D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
@@ -107,6 +109,7 @@ D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
 D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
 D s-stausa.ads		20150518132150 017a0a05 system.stack_usage%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stalib.adb		20150518132150 f2fe2716 system.standard_library%b
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
 D s-stopoo.ads		20150518132150 b16154c2 system.storage_pools%s
 D s-stposu.ads		20150518132150 97a6219c system.storage_pools.subpools%s
@@ -122,49 +125,55 @@ D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
+D user_databases.ads	20160419103438 ca918931 user_databases%s
 X 1 ada.ads
-16K9*Ada 19e8 40|12r6
-X 10 a-iteint.ads
+16K9*Ada 19e8 41|5r6 5r33
+X 13 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[6|67]>
-X 13 a-string.ads
-16K13*Strings 35e16 40|12r10
-X 15 a-strunb.ads
-76K21*Unbounded 489e26 40|12w18
-X 20 client_logic.ads
-3K9*Client_Logic 12e17 40|1w6
-X 21 client_ui.ads
-1K9*client_ui 5e14 40|4w6
-X 22 communication_objects.ads
-1K9*Communication_Objects 5e26 40|6r6 7r6 8r6 9r6 10r6 11r6
-X 23 communication_objects-files.ads
-1K31*Files 7e32 40|6w28
-X 24 communication_objects-messages.ads
-3K31*Messages 11e35 40|7w28 8r28 9r28 10r28 11r28
-X 25 communication_objects-messages-connect.ads
-3K40*Connect 11e46 40|9w37
-X 26 communication_objects-messages-disconnect.ads
-3K40*Disconnect 11e49 40|8w37
-X 27 communication_objects-messages-refuse.ads
-3K40*Refuse 11e45 40|10w37
-X 28 communication_objects-messages-userlist.ads
-3K40*Userlist 20e44 40|11w37
-X 29 concrete_server_logic.ads
-11K9*Concrete_Server_Logic 71e26 40|3w6 3r33 20r4
-15R9*Concrete_Server 52e14 40|16r40
-16P9*Concrete_Server_Ptr(15R9) 40|16r13
-23U14*StartServer 40|20s26
-X 31 data_types_test.ads
-8K9*Data_Types_Test 10e20 40|13w6 13r27 18r4
-9U14*Test 40|18s20
-X 40 main.adb
-15U11*main 15b11 21l5 21t9
-16p4 server{29|16P9} 20m38 20r38
-X 41 server_logic.ads
-3K9*Server_Logic 40|2w6 41|11e17
-X 42 server_ui.ads
-3K9*Server_Ui 40|5w6 42|7e14
-X 60 s-stausa.ads
+X 16 a-string.ads
+16K13*Strings 35e16 41|5r10 5r37
+X 20 a-strunb.ads
+76K21*Unbounded 489e26 41|5w18 5r45
+94V13*To_Unbounded_String{79R9} 41|19s27 19s58 20s27
+166V14*"="{boolean} 6|42i19
+X 28 client_logic.ads
+4K9*Client_Logic 14e17 41|1w6
+6h9*Client_Interface
+X 29 client_ui.ads
+1K9*client_ui 5e14 41|4w6
+X 30 concrete_client_logic.ads
+10K9*Concrete_Client_Logic 37e26 41|3w6 3r33 11r13
+12R9*Concrete_Client<28|6R9> 14e14 41|11r35
+13i7*Socket{35|409I9} 41|22r56
+19U14*ConnectToServer<28|8p14> 41|19s11
+X 31 concrete_server_logic.ads
+19K9*Concrete_Server_Logic 136e26 41|2w6 2r33
+23R9*Concrete_Server 111e14 41|12r40
+24P9*Concrete_Server_Ptr(23R9) 41|12r13
+31U14*StartServer 41|17s4
+X 35 g-socket.ads
+409I9*Socket_Type<integer>
+X 41 main.adb
+9U11*main 9b11 25l5 25t9
+11r4 Client{30|12R9} 19m4 19r4 22r49
+12p4 Server{31|24P9} 17m16 17r16
+13r4 Msg{42|16R9} 22m4 23r33
+X 42 protocol.ads
+9K9*Protocol 41|6w6 6r20 42|35e13
+16R9*MessageObject 41|13r10 42|21e14
+29U14*printMessageToInfoConsole 41|23s7
+33V13*readMessageFromStream{16R9} 41|22s11
+33i36 ClientSocket{35|409I9} 41|22r33
+X 44 system.ads
+67M9*Address
+X 52 s-memory.ads
+53V13*Alloc{44|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{44|67M9} 105i<c,__gnat_realloc>22
+X 61 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 63 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
 

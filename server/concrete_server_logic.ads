@@ -1,4 +1,5 @@
 with Server_Logic; use Server_Logic;
+with Protocol; use Protocol;
 with GNAT.Sockets; use GNAT.Sockets;
 with Ada.Streams; use Ada.Streams;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
@@ -6,6 +7,13 @@ with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Exceptions; use Ada.Exceptions;
 with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
 with GNAT.String_Split; use GNAT.String_Split;
+with Ada.Characters.Conversions;
+with User_Databases; use User_Databases;
+with dataTypes; use dataTypes;
+with ada.containers.Indefinite_Hashed_Maps;
+with Ada.Containers.Hashed_Maps;
+with Ada.Strings.Unbounded.Hash;
+
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is
@@ -22,34 +30,88 @@ package Concrete_Server_Logic is
    -- untereinander zu kommunizieren.
    procedure StartServer(This : in out Concrete_Server_Ptr);
 
+   type Client_Task is limited private;
+   type Client_Task_Ptr is access Client_Task;
+
+   type Concrete_Client is  private;
+   type Concrete_Client_Ptr is access Concrete_Client;
+
+
+
+   type chatRoom is tagged private;
+   type chatRoomPtr is access chatRoom;
+
+   procedure addClientToChatroom(room : in out ChatRoomPtr; client : in Concrete_Client_Ptr);
+   procedure removeClientFromChatroom(room : in out chatRoomPtr; clientToRemove : in Concrete_Client_Ptr);
+   function createChatRoom(server : in out Concrete_Server_Ptr; id : in Natural; firstClient : in Concrete_Client_Ptr) return chatRoomPtr ;
+   function getChatRoomID(room : in chatRoomPtr) return Natural;
+   function generateUserlistMessage(room : in chatRoomPtr) return MessageObject;
+
+   package Client_List is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr);
+   function getClientList(room : in chatRoomPtr) return Client_List.List;
+   procedure broadcastToChatRoom(room : in chatRoomPtr; message : in MessageObject);
+
+   package chatRoom_List is new Doubly_Linked_Lists(Element_Type => chatRoomPtr);
+
+
+
 private
 
-   -- Jede Instanz dieses Tasks ist pro Client fuer die eigentliche Kommunikation
-   -- zwischen den Clients und die Interpretation der Nachrichten zustaendig.
-   task type Client_Task is
-      entry Start(Socket : Socket_Type; SocketAddress : Sock_Addr_Type);
-   end;
-   type Client_Task_Ptr is access Client_Task;
+
+
 
    -- Typ einer Clientinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
    -- und Port, sowieso den Benutzernamen zu dem dieser Client gehoert und
    -- den Client-Task der ihm zugeordnet ist fest.
    type Concrete_Client is record
-      Username : Unbounded_String;
+      user : userPtr;
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
       CommunicationTask : Client_Task_Ptr;
-   end record;
-   type Concrete_Client_Ptr is access Concrete_Client;
+      chatRoomList : chatRoom_List.List;
 
-   package Client_List is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr);
+   end record;
+
+
+
+   type chatRoom is tagged
+      record
+	 chatRoomID : Natural;
+	 clientList : Client_List.List;
+      end record;
+
+
+   -- Jede Instanz dieses Tasks ist pro Client fuer die eigentliche Kommunikation
+   -- zwischen den Clients und die Interpretation der Nachrichten zustaendig.
+   task type Client_Task is
+      entry Start(newClient : Concrete_Client_Ptr);
+   end Client_Task;
+
+   function userHash (userToHash : UserPtr) return Hash_Type;
+   package userToClientMap is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
+							 Element_Type    => Concrete_Client_Ptr,
+							 Hash            => userHash,
+							 Equivalent_Keys => "=");
+
+
+   function Hash (R : Natural) return Hash_Type;
+   package chatRoomMap is new Ada.Containers.Hashed_Maps(Key_Type        => Natural,
+						     Element_Type    => chatRoomPtr,
+						     Hash            => Hash,
+						     Equivalent_Keys => "=");
 
    -- type Concrete_Server is new Server_Interface with record
    type Concrete_Server is record
      Socket : Socket_Type;
-     SocketAddress : Sock_Addr_Type;
-     Connected_Clients : Client_List.List;
+      SocketAddress : Sock_Addr_Type;
+      Connected_Clients : userToClientMap.Map;
+      UserDatabase : User_Database;
+      chatRoomIDCounter : Natural:= 1;
+      chatRooms : chatRoomMap.Map;
    end record;
+
+   -- gibt die nächste ID für den Chatraum
+   function getNextChatRoomID( server: in out Concrete_Server_Ptr) return Natural;
 
    -- Diese Prozedur nimmt eine zuvor erzeuge Serverinstanz entgegen und erstellt
    -- fuer diese einen Server-Socket, welchem eine IP-Adresse und Portnr.
@@ -68,4 +130,7 @@ private
       entry Start;
       -- entry Stop;
    end;
+
+
+
 end Concrete_Server_Logic;

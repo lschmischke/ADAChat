@@ -1,21 +1,25 @@
 with client_logic;
-with Server_Logic;
 with Concrete_Server_Logic; use Concrete_Server_Logic;
+with Concrete_Client_Logic; use Concrete_Client_Logic;
 with client_ui;
-with Server_Ui;
-with Communication_Objects.Files;
-with Communication_Objects.Messages;
-with Communication_Objects.Messages.Disconnect;
-with Communication_Objects.Messages.Connect;
-with Communication_Objects.Messages.Refuse;
-with Communication_Objects.Messages.Userlist;
-with Ada.Strings.Unbounded;
-with Data_Types_Test; use Data_Types_Test;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Protocol; use Protocol;
+
 
 procedure main is
-   server : Concrete_Server;
+
+   Client : Concrete_Client_Logic.Concrete_Client;
+   Server : Concrete_Server_Ptr := new Concrete_Server;
+   Msg : MessageObject;
 
 begin
-   Data_Types_Test.Test;
-   Server_Ui.Start_Server(server);
+
+   StartServer(server);
+
+   Client.connectToServer(To_Unbounded_String("daniel"), To_Unbounded_String("bier"),
+                          To_Unbounded_String("127.0.0.1"), 12321);
+
+   msg := readMessageFromStream(ClientSocket => Client.Socket);
+      printMessageToInfoConsole(msg);
+
 end main;

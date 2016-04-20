@@ -1,0 +1,133 @@
+graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb"
+node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
+node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
+node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:83:14" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Access_Check" label: "gnat_rcheck_CE_Access_Check\n<built-in>" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverFD" label: "Concrete_Serverfd\nE:\Development\Ada\Block_Projekt\ada_chat\server\concrete_server_logic.ads:104:9" shape : ellipse }
+node: { title: "system__storage_pools__subpools__allocate_any_controlled" label: "Allocate_Any_Controlled\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stposu.ads:263:14" shape : ellipse }
+node: { title: "__gnat_raise_from_controlled_operation" label: "Raise_From_Controlled_Operation\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-except.ads:227:14" shape : ellipse }
+node: { title: "__gnat_set_exception_parameter" label: "gnat_set_exception_parameter\n<built-in>" shape : ellipse }
+node: { title: "__gnat_reraise_zcx" label: "gnat_reraise_zcx\n<built-in>" shape : ellipse }
+node: { title: "__gnat_begin_handler" label: "gnat_begin_handler\n<built-in>" shape : ellipse }
+node: { title: "__gnat_end_handler" label: "gnat_end_handler\n<built-in>" shape : ellipse }
+node: { title: "protocol__printmessagetoinfoconsole" label: "Printmessagetoinfoconsole\nE:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:29:14" shape : ellipse }
+node: { title: "protocol__messageobjectDA" label: "Messageobjectda\nE:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:16:9" shape : ellipse }
+node: { title: "protocol__messageobjectDF" label: "Messageobjectdf\nE:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:16:9" shape : ellipse }
+node: { title: "protocol__readmessagefromstream" label: "Readmessagefromstream\nE:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:33:13" shape : ellipse }
+node: { title: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "gnat_rcheck_PE_Finalize_Raised_Exception\n<built-in>" shape : ellipse }
+node: { title: "ada__strings__unbounded__finalize__2" label: "Finalize\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:483:25" shape : ellipse }
+node: { title: "ada__exceptions__triggered_by_abort" label: "Triggered_By_Abort\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-except.ads:257:13" shape : ellipse }
+node: { title: "concrete_client_logic__connecttoserver" label: "Connecttoserver\nE:\Development\Ada\Block_Projekt\ada_chat\client\concrete_client_logic.ads:19:14" shape : ellipse }
+node: { title: "ada__strings__unbounded__to_unbounded_string" label: "To_Unbounded_String\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:94:13" shape : ellipse }
+node: { title: "concrete_server_logic__startserver" label: "Startserver\nE:\Development\Ada\Block_Projekt\ada_chat\server\concrete_server_logic.ads:31:14" shape : ellipse }
+node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
+node: { title: "system__standard_library__abort_undefer_direct" label: "Abort_Undefer_Direct\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stalib.ads:241:14" shape : ellipse }
+node: { title: "protocol__messageobjectDI" label: "Messageobjectdi\nE:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:16:9" shape : ellipse }
+node: { title: "protocol__messageobjectIP" label: "Messageobjectip\nE:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:16:9" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverDI" label: "Concrete_Serverdi\nE:\Development\Ada\Block_Projekt\ada_chat\server\concrete_server_logic.ads:104:9" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverIP" label: "Concrete_Serverip\nE:\Development\Ada\Block_Projekt\ada_chat\server\concrete_server_logic.ads:104:9" shape : ellipse }
+node: { title: "concrete_client_logic__concrete_clientIP" label: "Concrete_Clientip\nE:\Development\Ada\Block_Projekt\ada_chat\client\concrete_client_logic.ads:12:9" shape : ellipse }
+node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:80:13" shape : ellipse }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" label: "b46b\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:8\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:8" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:8" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:8" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:11" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "__gnat_rcheck_CE_Access_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:11" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:8" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:8" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" label: "b14b\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_rcheck_CE_Access_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:58" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_rcheck_CE_Access_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:58" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:20:27" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__gnat_rcheck_CE_Access_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:20:27" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" label: "main\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "system__secondary_stack__ss_release" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:4" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
+node: { title: "_ada_main" label: "main\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1\n656 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "_ada_main" targetname: "_Unwind_Resume" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:0" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:11" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_raise_from_controlled_operation" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:8" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_set_exception_parameter" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:0" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:0" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:0" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_reraise_zcx" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:4" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:4" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:4" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:0" }
+edge: { sourcename: "_ada_main" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:25:0" }
+edge: { sourcename: "_ada_main" targetname: "protocol__printmessagetoinfoconsole" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:23:7" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:23:7" }
+edge: { sourcename: "_ada_main" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B46b___finalizer.4087" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:0" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:11" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:11" }
+edge: { sourcename: "_ada_main" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:11" }
+edge: { sourcename: "_ada_main" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:0" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectDA" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:4" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:4" }
+edge: { sourcename: "_ada_main" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:8" }
+edge: { sourcename: "_ada_main" targetname: "protocol__readmessagefromstream" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:11" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:22:11" }
+edge: { sourcename: "_ada_main" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B14b___finalizer.4026" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:0" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "_ada_main" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "_ada_main" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:58" }
+edge: { sourcename: "_ada_main" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:20:27" }
+edge: { sourcename: "_ada_main" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "_ada_main" targetname: "concrete_client_logic__connecttoserver" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:10" }
+edge: { sourcename: "_ada_main" targetname: "ada__strings__unbounded__to_unbounded_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:20:27" }
+edge: { sourcename: "_ada_main" targetname: "ada__strings__unbounded__to_unbounded_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:58" }
+edge: { sourcename: "_ada_main" targetname: "ada__strings__unbounded__to_unbounded_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:19:27" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__startserver" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:17:4" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:17:4" }
+edge: { sourcename: "_ada_main" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:0" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectDI" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:4" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:4" }
+edge: { sourcename: "_ada_main" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:13:4" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverDI" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:12:36" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:12:36" }
+edge: { sourcename: "_ada_main" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__P5b.3045" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:12:36" }
+edge: { sourcename: "_ada_main" targetname: "concrete_client_logic__concrete_clientIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:11:4" }
+edge: { sourcename: "_ada_main" targetname: "system__secondary_stack__ss_mark" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
+edge: { sourcename: "_ada_main" targetname: "__main" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:1" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__P5b.3045" label: "p5b\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:12:36\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__P5b.3045" targetname: "system__storage_pools__subpools__allocate_any_controlled" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:12:36" }
+}

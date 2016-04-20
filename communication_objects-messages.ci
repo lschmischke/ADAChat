@@ -17,6 +17,7 @@ class {
              -9:communication_objects__messages__messageDF,-9:communication_objects__communication_object\n
              1:communication_objects__messages__getcontent"
 }
+<<<<<<< HEAD
 graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.adb"
 node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
 node: { title: "ada__tags__register_tag" label: "Register_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
@@ -174,4 +175,163 @@ edge: { sourcename: "communication_objects__messages__messageDA" targetname: "__
 edge: { sourcename: "communication_objects__messages__messageDA" targetname: "ada__strings__unbounded__adjust__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads:5:9" }
 edge: { sourcename: "communication_objects__messages__messageDA" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads:5:9" }
 node: { title: "communication_objects__messages__messageDI" label: "Messagedi\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects-messages.ads:5:9\n8 bytes (static)\n0 dynamic objects" }
+=======
+graph: { title: "G:\ADAChat\common\communication_objects-messages.adb"
+node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "ada__tags__unregister_tag" label: "Unregister_Tag\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:578:14" shape : ellipse }
+node: { title: "__gnat_raise_from_controlled_operation" label: "Raise_From_Controlled_Operation\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-except.ads:227:14" shape : ellipse }
+node: { title: "__gnat_set_exception_parameter" label: "gnat_set_exception_parameter\n<built-in>" shape : ellipse }
+node: { title: "ada__strings__unbounded__Oeq" label: "=\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:166:13" shape : ellipse }
+node: { title: "communication_objects__Oeq" label: "=\nG:\ADAChat\common\communication_objects.ads:3:9" shape : ellipse }
+node: { title: "system__secondary_stack__ss_allocate" label: "Ss_Allocate\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:66:14" shape : ellipse }
+node: { title: "system__strings__stream_ops__string_output_blk_io" label: "String_Output_Blk_Io\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-ststop.ads:162:14" shape : ellipse }
+node: { title: "ada__strings__unbounded__to_string" label: "To_String\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:100:13" shape : ellipse }
+node: { title: "communication_objects__communication_objectSW" label: "Communication_Objectsw\nG:\ADAChat\common\communication_objects.ads:3:9" shape : ellipse }
+node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:83:14" shape : ellipse }
+node: { title: "system__standard_library__abort_undefer_direct" label: "Abort_Undefer_Direct\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stalib.ads:241:14" shape : ellipse }
+node: { title: "ada__strings__unbounded___assign__2" label: "Unbounded\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:471:9" shape : ellipse }
+node: { title: "ada__strings__unbounded__to_unbounded_string" label: "To_Unbounded_String\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:94:13" shape : ellipse }
+node: { title: "system__strings__stream_ops__string_input_blk_io" label: "String_Input_Blk_Io\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-ststop.ads:154:13" shape : ellipse }
+node: { title: "communication_objects__communication_objectSR" label: "Communication_Objectsr\nG:\ADAChat\common\communication_objects.ads:3:9" shape : ellipse }
+node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:80:13" shape : ellipse }
+node: { title: "__gnat_reraise_zcx" label: "gnat_reraise_zcx\n<built-in>" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Overflow_Check" label: "gnat_rcheck_CE_Overflow_Check\n<built-in>" shape : ellipse }
+node: { title: "ada__strings__unbounded__initialize__2" label: "Initialize\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:481:25" shape : ellipse }
+node: { title: "ada__strings__unbounded__unbounded_stringIP" label: "Unbounded_Stringip\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:471:9" shape : ellipse }
+node: { title: "communication_objects__communication_objectIP" label: "Communication_Objectip\nG:\ADAChat\common\communication_objects.ads:3:9" shape : ellipse }
+node: { title: "ada__strings__unbounded__finalize__2" label: "Finalize\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:483:25" shape : ellipse }
+node: { title: "__gnat_end_handler" label: "gnat_end_handler\n<built-in>" shape : ellipse }
+node: { title: "__gnat_begin_handler" label: "gnat_begin_handler\n<built-in>" shape : ellipse }
+node: { title: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "gnat_rcheck_PE_Finalize_Raised_Exception\n<built-in>" shape : ellipse }
+node: { title: "ada__strings__unbounded__adjust__2" label: "Adjust\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:482:25" shape : ellipse }
+node: { title: "ada__exceptions__triggered_by_abort" label: "Triggered_By_Abort\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-except.ads:257:13" shape : ellipse }
+node: { title: "communication_objects__messages___elabs" label: "Messages\nG:\ADAChat\common\communication_objects-messages.ads:3:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages___elabs" targetname: "ada__tags__register_tag" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages___elabs" targetname: "ada__tags__check_tsd" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__getcontent" label: "Getcontent\nG:\ADAChat\common\communication_objects-messages.adb:5:4\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__getcontent" targetname: "ada__strings__unbounded__adjust__2" label: "G:\ADAChat\common\communication_objects-messages.adb:7:7" }
+edge: { sourcename: "communication_objects__messages__getcontent" targetname: "system__secondary_stack__ss_allocate" label: "G:\ADAChat\common\communication_objects-messages.adb:7:7" }
+node: { title: "communication_objects__messages__finalize_spec" label: "Finalize_Spec\nG:\ADAChat\common\communication_objects-messages.ads:3:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__finalize_spec" targetname: "ada__tags__unregister_tag" label: "G:\ADAChat\common\communication_objects-messages.ads:3:1" }
+node: { title: "communication_objects__messages__TmessageCFD" label: "Tmessagecfd\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__TmessageCFD" targetname: "__indirect_call" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+node: { title: "communication_objects__messages___assign" label: "Messages\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n464 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "__gnat_raise_from_controlled_operation" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "__gnat_set_exception_parameter" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "__gnat_begin_handler" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "__gnat_end_handler" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "communication_objects__messages__messageDA" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "communication_objects__messages__messageDF" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages___assign" targetname: "__indirect_call" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__Oeq" label: "=\nG:\ADAChat\common\communication_objects-messages.ads:5:4\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__Oeq" targetname: "ada__strings__unbounded__Oeq" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__Oeq" targetname: "communication_objects__Oeq" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__messageSO" label: "Messageso\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__messageSO" targetname: "communication_objects__messages__messageSW" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__messageSI" label: "Messagesi\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "__gnat_reraise_zcx" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "communication_objects__messages__messageDF" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "communication_objects__messages__messageDA" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "system__secondary_stack__ss_allocate" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "communication_objects__messages__messageSR" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "communication_objects__messages__messageDI" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "communication_objects__messages__messageIP" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSI" targetname: "__indirect_call" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" label: "R50s\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "__indirect_call" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "communication_objects__messages__messageDF" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "__indirect_call" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSI__R50s___finalizer.3580" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__messageSW" label: "Messagesw\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__messageSW" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageSW" targetname: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSW___finalizer.3561" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageSW" targetname: "system__strings__stream_ops__string_output_blk_io" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSW" targetname: "ada__strings__unbounded__to_string" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSW" targetname: "communication_objects__communication_objectSW" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSW" targetname: "system__secondary_stack__ss_mark" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSW___finalizer.3561" label: "Messagesw\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSW___finalizer.3561" targetname: "system__secondary_stack__ss_release" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" label: "B29s\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "__indirect_call" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "__indirect_call" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__messageSR" label: "Messagesr\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR___finalizer.3513" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR__B29s___finalizer.3526" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "ada__strings__unbounded___assign__2" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "__indirect_call" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "ada__strings__unbounded__to_unbounded_string" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "system__strings__stream_ops__string_input_blk_io" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "communication_objects__communication_objectSR" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageSR" targetname: "system__secondary_stack__ss_mark" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR___finalizer.3513" label: "Messagesr\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageSR___finalizer.3513" targetname: "system__secondary_stack__ss_release" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages___size" label: "Messages\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__messages__messageIP" label: "Messageip\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "__gnat_reraise_zcx" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "G:\ADAChat\common\communication_objects-messages.ads:6:9" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "ada__strings__unbounded__initialize__2" label: "G:\ADAChat\common\communication_objects-messages.ads:6:9" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "G:\ADAChat\common\communication_objects-messages.ads:6:9" }
+edge: { sourcename: "communication_objects__messages__messageIP" targetname: "communication_objects__communication_objectIP" label: "G:\ADAChat\common\communication_objects-messages.ads:5:20" }
+node: { title: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" label: "F14s\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "G:\ADAChat\common\communication_objects-messages.adb:communication_objects__messages__messageIP__F14s.3484" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__messageFD" label: "Messagefd\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__messageFD" targetname: "communication_objects__messages__messageDF" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__messageDF" label: "Messagedf\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__messageDF" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageDF" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageDF" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageDF" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageDF" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageDF" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageDF" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__messageDA" label: "Messageda\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__messages__messageDA" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:0" }
+edge: { sourcename: "communication_objects__messages__messageDA" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageDA" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageDA" targetname: "_Unwind_Resume" }
+edge: { sourcename: "communication_objects__messages__messageDA" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageDA" targetname: "ada__strings__unbounded__adjust__2" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+edge: { sourcename: "communication_objects__messages__messageDA" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\communication_objects-messages.ads:5:9" }
+node: { title: "communication_objects__messages__messageDI" label: "Messagedi\nG:\ADAChat\common\communication_objects-messages.ads:5:9\n8 bytes (static)\n0 dynamic objects" }
+>>>>>>> e247cafda64dfe7cc3c4b5273aefaff9a35d169b
 }

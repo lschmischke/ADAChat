@@ -10,50 +10,86 @@ A -gnat12
 A -g
 A -mtune=generic
 A -march=pentiumpro
-P ZX
+P SS ZX
 
 RN
-RV NO_DISPATCH
 RV NO_DISPATCHING_CALLS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U client_logic%s	client_logic.ads	46084743 DE EE OO PK
+U client_logic%s	client_logic.ads	7f7b2a35 DE EE OO PK
+W ada%s			ada.ads			ada.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
-W communication_objects%s  communication_objects.ads  communication_objects.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.sockets%s	g-socket.adb		g-socket.ali
 W system%s		system.ads		system.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
+D a-chlat1.ads		20150518132148 66457d31 ada.characters.latin_1%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-finali.ads		20150518132148 69f99942 ada.finalization%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-string.ads		20150518132148 90ac6797 ada.strings%s
+D a-strmap.ads		20150518132148 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D client_logic.ads	20160322205854 c75ccc4e client_logic%s
-D communication_objects.ads  20160322203634 81548b0d communication_objects%s
+D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
+D client_logic.ads	20160420114024 2b6c6d58 client_logic%s
+D gnat.ads		20150518132148 fd2ad2f1 gnat%s
+D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
 D system.ads		20150518132150 f4ce8c3a system%s
+D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
+D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
+D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-pooglo.ads		20150518132150 542f33d0 system.pool_global%s
+D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
 D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
 D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20150518132150 b16154c2 system.storage_pools%s
+D s-stposu.ads		20150518132150 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
-X 6 client_logic.ads
-3K9*Client_Logic 12l5 12e17
-5h9*Client_Interface 7p14 7r44 8p14 8r49 9p14 9r40
-7x14*connectToServer 7=30
-7r30 This{5R9}
-8x14*disconnectFromServer 8=35
-8r35 This{5R9}
-9x14*sendMessage 9=26 10<12
-9r26 This{5R9}
-10c12 Message<7|3R9>
-X 7 communication_objects.ads
-1K9*Communication_Objects 6|1w6 1r33 7|5e26
-3H9*Communication_Object 6|10r26 7|3e60
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+X 1 ada.ads
+16K9*Ada 19e8 13|1r6 1r33
+X 7 a-string.ads
+16K13*Strings 35e16 13|1r10 1r37
+X 9 a-strunb.ads
+76K21*Unbounded 489e26 13|1w18 1r45
+79R9*Unbounded_String<5|43R9> 473e14 13|8r76 8r108 9r48 11r81 12r69
+X 13 client_logic.ads
+4K9*Client_Logic 14l5 14e17
+6h9*Client_Interface 8p14 8r44 11p14 11r49
+8x14*connectToServer 8=30 8>62 8>94 9>30 9>66
+8r30 This{6R9}
+8r62 UserName{9|79R9}
+8r94 Password{9|79R9}
+9r30 ServerAdress{9|79R9}
+9i66 ServerPort{15|476I9}
+11x14*disconnectFromServer 11=35 11>67 12>34 12>60
+11r35 This{6R9}
+11r67 UserName{9|79R9}
+12i34 Id_Receiver{integer}
+12r60 Msg{9|79R9}
+X 14 gnat.ads
+34K9*GNAT 13|2r6 2r24 14|37e9
+X 15 g-socket.ads
+55K14*Sockets 13|2w11 2r29 15|1260e17
+476I9*Port_Type<integer> 13|9r82
 

@@ -8,39 +8,51 @@ A -gnato
 A -gnatE
 A -gnat12
 A -g
-A -gnatc
 A -mtune=generic
 A -march=pentiumpro
-P NO ZX
+P SS ZX
 
 RN
-RV NO_DISPATCH
 RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
 RV NO_IO
-RV NO_STREAMS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
-RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U concrete_client_logic%b  concrete_client_logic.adb  bdba4ef4 DE OO PK
-W ada%s			ada.ads			ada.ali
-W ada.streams%s		a-stream.adb		a-stream.ali
-W gnat%s		gnat.ads		gnat.ali
-W gnat.sockets%s	g-socket.adb		g-socket.ali
+U concrete_client_logic%b  concrete_client_logic.adb  98b6327d DE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-U concrete_client_logic%s  concrete_client_logic.ads  0a8ec94c DE EE OO PK
+U concrete_client_logic%s  concrete_client_logic.ads  1403ec10 DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W client_logic%s	client_logic.ads	client_logic.ali
-W communication_objects%s  communication_objects.ads  communication_objects.ali
 W gnat%s		gnat.ads		gnat.ali
 W gnat.sockets%s	g-socket.adb		g-socket.ali
+W protocol%s		protocol.adb		protocol.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
@@ -50,94 +62,149 @@ D a-finali.ads		20150518132148 69f99942 ada.finalization%s
 D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-string.ads		20150518132148 90ac6797 ada.strings%s
+D a-strfix.ads		20150518132148 d07c346e ada.strings.fixed%s
 D a-strmap.ads		20150518132148 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client_logic.ads	20160322205854 c75ccc4e client_logic%s
-D communication_objects.ads  20160322203634 81548b0d communication_objects%s
-D concrete_client_logic.ads  20160412101054 d5c7ac61 concrete_client_logic%s
-D concrete_client_logic.adb  20160412101054 1260fe8e concrete_client_logic%b
+D client_logic.ads	20160420114024 2b6c6d58 client_logic%s
+D concrete_client_logic.ads  20160420132158 9b839412 concrete_client_logic%s
+D concrete_client_logic.adb  20160420132806 0335a66f concrete_client_logic%b
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
+D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
+D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D protocol.ads		20160419103438 3dad3734 protocol%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
 D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
+D s-memory.ads		20150518132150 597d6634 system.memory%s
 D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-pooglo.ads		20150518132150 542f33d0 system.pool_global%s
+D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stalib.adb		20150518132150 f2fe2716 system.standard_library%b
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20150518132150 b16154c2 system.storage_pools%s
+D s-stposu.ads		20150518132150 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 19e8 16|4r6 4r23 5r6 5r33 6r6 6r23 7r6 17|2r6 2r23 14r13 15r13 58r7
-. 61r10
+16K9*Ada 19e8 17|3r6 3r23 4r6 4r33 5r6 5r23 6r6
 X 6 a-ioexce.ads
-18K13*IO_Exceptions 30e22 16|7w10
+18K13*IO_Exceptions 30e22 17|6w10
 X 7 a-stream.ads
-36K13*Streams 87e16 16|4w10 4r27 17|2w10 2r27 14r17 15r17 58r11
-42M9*Stream_Element
-44I9*Stream_Element_Offset<long_long_integer>
-51I12*Stream_Element_Count{44I9} 17|14r25
-54A9*Stream_Element_Array(42M9)<44I9> 17|15r25
-57x14*Read 17|58R19
+36K13*Streams 87e16 17|3w10 3r27
 X 8 a-string.ads
-16K13*Strings 35e16 16|5r10 5r37
-X 10 a-strunb.ads
-76K21*Unbounded 489e26 16|5w18 5r45
-79R9*Unbounded_String<5|43R9> 473e14 17|6r16
-X 11 a-textio.ads
-49K13*Text_IO 471e16 16|6w10 6r27 17|61r14
-208U14*Put 17|61s22
-X 14 client_logic.ads
-3K9*Client_Logic 12e17 16|1w6 1r24
-5h9*Client_Interface 16|12r32
-X 15 communication_objects.ads
-1K9*Communication_Objects 5e26 16|2w6 2r33
-3H9*Communication_Object 3e60 16|21r40 24r40 17|42r40 53r40
-X 16 concrete_client_logic.ads
-10K9*Concrete_Client_Logic 26l5 26e26 17|4b14 67l5 67t26
-12R9*Concrete_Client<14|5R9> 14e14 16P14 16r44 18P14 18r49 20P14 20r40 23p14
-. 23r40 17|17r44 33r49 41r40 52r40
-16U14*connectToServer<14|7p14> 16=30 17|17b14 29l8 29t23
-16r30 This{12R9} 17|17b30
-18U14*disconnectFromServer<14|8p14> 18=35 17|33b14 37l8 37t28
-18r35 This{12R9} 17|33b35
-20U14*sendMessage<14|9p14> 20=26 21<26 17|41b14 48l8 48t19
-20r26 This{12R9} 17|41b26
-21c26 Message<15|3R9> 17|42b26
-23U14*readMessage 23=26 24<26 17|52b14 65l8 65t19
-23r26 This{12R9} 17|52b26
-24c26 Message<15|3R9> 17|53b26
-X 17 concrete_client_logic.adb
-6r4 Server_IP{10|79R9}
-7i4 Client{19|409I9} 22m22 26r23 27r26
-8r4 Address{19|502R9} 23m7 24m7 26r31
-9p4 Channel{19|1004P9} 27m7 46r21 58r25
-11a4 Send{string} 46r73
-14i4 Offset{7|51I12} 58m44 59r17 60r21
-15a4 Data{7|54A9} 58m38 61r42
-60i11 I<long_long_integer> 61r48
-X 18 gnat.ads
-34K9*GNAT 16|3r6 3r24 17|1r6 1r24 21r7 18|37e9
-X 19 g-socket.ads
-55K14*Sockets 16|3w11 3r29 17|1w11 1r29 21r12 19|1260e17
-376U14*Initialize 17|21s20
-409I9*Socket_Type<integer> 17|7r14
-476I9*Port_Type<integer>
-502R9*Sock_Addr_Type 17|8r14 19|505e14
-503r7*Addr{485R9} 17|23m15
-504i7*Port{476I9} 17|24m15
-521V13*Inet_Addr{485R9} 17|23s23
-802U14*Create_Socket 17|22s7
-842U14*Connect_Socket 17|26s7
-1004P9*Stream_Access(7|39R9) 17|9r14
-1007V13*Stream{1004P9} 17|27s18
+16K13*Strings 35e16 17|4r10 4r37
+X 11 a-strunb.ads
+76K21*Unbounded 489e26 17|4w18 4r45
+79R9*Unbounded_String<5|43R9> 473e14 17|19r75 19r107 20r48 24r80 25r70 28r71
+. 29r61 18|8r75 9r44 9r80 38r80 39r70 61r71 62r61
+100V13*To_String{string} 18|18s33
+X 13 a-textio.ads
+49K13*Text_IO 471e16 17|5w10 5r27
+X 16 client_logic.ads
+4K9*Client_Logic 14e17 17|1w6 1r24
+6h9*Client_Interface 17|12r32
+X 17 concrete_client_logic.ads
+10K9*Concrete_Client_Logic 37l5 37e26 18|1b14 116l5 116t26
+12R9*Concrete_Client<16|6R9> 14e14 19P14 19r44 24P14 24r49 28p14 28r40 32p14
+. 32r43 35p14 35r49 18|8r44 38r49 61r40 81r43 94r49
+13i7*Socket{21|409I9} 18|20m12
+19U14*ConnectToServer<16|8p14> 19=30 19>61 19>93 20>30 21>30 18|8b14 34l8
+. 34t23
+19r30 This{12R9} 18|8b30 20m7
+19r61 UserName{11|79R9} 18|8b61 26r54
+19r93 Password{11|79R9} 18|9b30 28r54
+20r30 ServerAdress{11|79R9} 18|9b62 18r43
+21i30 ServerPort{21|476I9} 18|10b30 19r23
+24U14*DisconnectFromServer<16|11p14> 24=35 24>66 25>35 25>61 18|38b14 58l8
+. 58t28
+24r35 This{12R9} 18|38b35
+24r66 UserName{11|79R9} 18|38b66 47r57
+25i35 Id_Receiver{integer} 18|39b35 48r57
+25r61 Msg{11|79R9} 18|39b61 49r57
+28U14*SendMessage 28=26 28>57 29>26 29>52 18|61b14 78l8 78t19
+28r26 This{12R9} 18|61b26
+28r57 Username{11|79R9} 18|61b57 70r47
+29i26 Id_Receiver{integer} 18|62b26 71r47
+29r52 Msg{11|79R9} 18|62b52 72r47
+32U14*ReadFromServer 32=29 32>60 18|81b14 91l8 91t22
+32r29 This{12R9} 18|81b29 89m7 89r7
+32i60 ServerSocket{21|409I9} 18|81b60
+35U14*ProcessMessageObject 35=35 35>66 18|89s12 94b14 113l8 113t28
+35r35 This{12R9} 18|94b35
+35r66 MsgObject{26|16R9} 18|94b66 98r12
+X 18 concrete_client_logic.adb
+3i4 Client{21|409I9} 17m22 20r22 21r23 22r26 31r44 52r44 56r21 75r44 87r58
+4r4 Address{21|502R9} 18m7 19m7 21r31
+5p4 Channel{21|1004P9} 22m7
+12r7 ConnectMessage{26|16R9} 25m7 32r44
+41r7 DisconnectMessage{26|16R9} 46m7 53r44
+64r7 Message{26|16R9} 69m7 76r44
+83r7 MsgObject{26|16R9} 87m7 89r33
+X 19 gnat.ads
+34K9*GNAT 17|2r6 2r24 19|37e9
+X 21 g-socket.ads
+55K14*Sockets 17|2w11 2r29 21|1260e17
+409I9*Socket_Type<integer> 17|13r16 32r78 18|3r13 81r78
+476I9*Port_Type<integer> 17|21r46 18|10r46
+502R9*Sock_Addr_Type 18|4r14 21|505e14
+503r7*Addr{485R9} 18|18m15
+504i7*Port{476I9} 18|19m15
+521V13*Inet_Addr{485R9} 18|18s23
+802U14*Create_Socket 18|17s7
+839U14*Close_Socket 18|56s7
+842U14*Connect_Socket 18|21s7
+1004P9*Stream_Access(7|39R9) 18|5r14
+1007V13*Stream{1004P9} 18|22s18
+X 26 protocol.ads
+9K9*Protocol 17|7w6 7r20 18|25r54 46r57 69r47 26|35e13
+14n26*Connect{14E9} 18|25r63 100r15
+14n35*Chat{14E9} 18|69r56 101r15
+14n41*Refused{14E9} 18|102r15
+14n50*Disconnect{14E9} 18|46r66 103r15
+14n62*Online{14E9} 18|104r15
+14n70*Offline{14E9} 18|105r15
+14n79*Chatrequest{14E9} 18|106r15
+14n92*Userlist{14E9} 18|107r15
+14n102*Leavechat{14E9} 18|108r15
+14n113*Invalid{14E9} 18|109r15
+14n122*Register{14E9} 18|110r15
+16R9*MessageObject 17|35r81 18|12r24 41r27 64r17 83r19 94r81 26|21e14
+17e7*messagetype{14E9} 18|98r22
+27V13*createMessage{16R9} 18|25s25 46s28 69s18
+27e27 messagetype{14E9} 18|25r39 46r42 69r32
+27r58 sender{11|79R9} 18|26r39 47r42 70r32
+27i88 receiver{integer} 18|27r39 48r42 71r32
+27r111 content{11|79R9} 18|28r39 49r42 72r32
+31U14*writeMessageToStream 18|31s7 52s7 75s7
+31i35 ClientSocket{21|409I9} 18|31r28 52r28 75r28
+31r66 message{16R9} 18|32r28 53r28 76r28
+33V13*readMessageFromStream{16R9} 18|87s20
+33i36 ClientSocket{21|409I9} 18|87r42
+X 27 system.ads
+67M9*Address
+X 34 s-memory.ads
+53V13*Alloc{27|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{27|67M9} 105i<c,__gnat_realloc>22
+X 42 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
 
