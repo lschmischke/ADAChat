@@ -23,6 +23,7 @@ package dataTypes is
    function setPassword(this : in out UserPtr; password : in Unbounded_String) return Boolean;
    function getContacts (this : in UserPtr) return UserSet.Set;
    procedure setContacts (this : in out UserPtr; contacts : in UserSet.Set);
+   function UserToString(this : in UserPtr) return String;
 
 
 

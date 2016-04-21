@@ -29,7 +29,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U user_databases%b	user_databases.adb	e67fddc4 DE NE OO PK
+U user_databases%b	user_databases.adb	6da47630 DE NE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -37,7 +37,6 @@ W system%s		system.ads		system.ali
 W system.concat_2%s	s-conca2.adb		s-conca2.ali
 W system.concat_3%s	s-conca3.adb		s-conca3.ali
 W system.concat_5%s	s-conca5.adb		s-conca5.ali
-W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
@@ -45,7 +44,7 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U user_databases%s	user_databases.ads	76ad57ae DE EE OO PF PK
+U user_databases%s	user_databases.ads	e264961f DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
@@ -119,7 +118,7 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D datatypes.ads		20160421095232 e63cc8bb datatypes%s
+D datatypes.ads		20160421105200 72f5090a datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
@@ -144,7 +143,6 @@ D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
 D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
 D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
-D s-imgint.ads		20150518132150 02dbe0c2 system.img_int%s
 D s-memory.ads		20150518132150 597d6634 system.memory%s
 D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
@@ -165,228 +163,222 @@ D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D user_databases.ads	20160421101014 aa1f7804 user_databases%s
-D user_databases.adb	20160421104034 4c60a5c0 user_databases%b
+D user_databases.adb	20160421110650 c7bb0e34 user_databases%b
 X 1 ada.ads
-16K9*Ada 19e8 80|1r6 1r33 2r6 3r6 4r6 4r39 5r6 5r23 8r6 8r47 9r6 10r6 11r6
-. 11r26 12r6 34r15 43r15 44r26 81|119r21
+16K9*Ada 19e8 79|1r6 1r33 2r6 3r6 4r6 4r39 5r6 5r23 8r6 8r47 9r6 10r6 11r6
+. 11r26 12r6 34r15 43r15 44r26 80|117r21
 X 4 a-contai.ads
-16K13*Containers 24e19 80|4r10 4r43 8r10 8r51 9r10
+16K13*Containers 24e19 79|4r10 4r43 8r10 8r51 9r10
 19M9*Hash_Type
 X 5 a-cdlili.ads
-40+9 Element_Type 80|38r56
-45k24*Doubly_Linked_Lists 407e39 80|8w21 38r36
-49R9*List<20|43R9> 80|42r40[38] 49r120[38] 81|70r39[80|38] 180r120[80|38]
-70V14*"="{boolean} 80|45r32[38]
-76U14*Clear 81|112s29[80|38]
-146U14*Append 81|203s23[80|38]
-148r7 New_Item{28|79R9} 81|203r30[80|38]
+40+9 Element_Type 79|38r56
+45k24*Doubly_Linked_Lists 407e39 79|8w21 38r36
+49R9*List<20|43R9> 79|42r40[38] 49r120[38] 80|70r39[79|38] 178r120[79|38]
+70V14*"="{boolean} 79|45r32[38]
+76U14*Clear 80|110s29[79|38]
+146U14*Append 80|202s23[79|38]
+148r7 New_Item{28|79R9} 80|202r30[79|38]
 X 12 a-cohama.ads
-41+9 Key_Type 80|32r7
-42+9 Element_Type 80|33r7
-44V18 Hash{4|19M9} 80|34r7
-45V18 Equivalent_Keys{boolean} 80|35r7
-48k24*Hashed_Maps 467e31 80|4w21 31r29
-52R9*Map<20|43R9> 80|54r25[31] 81|46r27[80|31]
-203U14*Insert 81|15s17[80|31] 106s27[80|31]
-204r7 Container{52R9[80|31]} 81|15r24[80|31]
-205r7 Key{28|79R9} 81|16r24[80|31] 106r34[80|31]
-206p7 New_Item{35|9P9} 81|17r24[80|31] 107r34[80|31]
-282V13*Element{35|9P9} 81|32s30[80|31]
-282r39 Key{28|79R9} 81|32r38[80|31]
+41+9 Key_Type 79|32r7
+42+9 Element_Type 79|33r7
+44V18 Hash{4|19M9} 79|34r7
+45V18 Equivalent_Keys{boolean} 79|35r7
+48k24*Hashed_Maps 467e31 79|4w21 31r29
+52R9*Map<20|43R9> 79|54r25[31] 80|46r27[79|31]
+203U14*Insert 80|15s17[79|31] 104s27[79|31]
+204r7 Container{52R9[79|31]} 80|15r24[79|31]
+205r7 Key{28|79R9} 80|16r24[79|31] 104r34[79|31]
+206p7 New_Item{35|9P9} 80|17r24[79|31] 105r34[79|31]
+282V13*Element{35|9P9} 80|32s30[79|31]
+282r39 Key{28|79R9} 80|32r38[79|31]
 X 14 a-cihama.ads
-41+9 Key_Type 80|41r7
-42+9 Element_Type 80|42r7
-44V18 Hash{4|19M9} 80|43r7
-45V18 Equivalent_Keys{boolean} 80|44r7
-46V19 "="{boolean} 80|45r8
-48k24*Indefinite_Hashed_Maps 443e42 80|9w21 40r41
-52R9*Map<20|43R9> 81|71r50[80|40]
-60R9*Cursor 81|129r40[80|40]
-67r4*No_Element{60R9[80|40]} 81|132r47[80|40]
-111V13*Key{28|79R9} 81|134s59[80|40] 138s69[80|40]
-193U14*Insert 81|110s35[80|40]
-195r7 Key{28|79R9} 81|110r42[80|40]
-196r7 New_Item{5|49R9[80|38]} 81|111r42[80|40]
-249V13*First{60R9[80|40]} 81|129s69[80|40]
-253V13*Next{60R9[80|40]} 81|151s22[80|40]
-273V13*Element{5|49R9[80|38]} 81|138s54[80|40]
-273r39 Key{28|79R9} 81|138r62[80|40]
+41+9 Key_Type 79|41r7
+42+9 Element_Type 79|42r7
+44V18 Hash{4|19M9} 79|43r7
+45V18 Equivalent_Keys{boolean} 79|44r7
+46V19 "="{boolean} 79|45r8
+48k24*Indefinite_Hashed_Maps 443e42 79|9w21 40r41
+52R9*Map<20|43R9> 80|71r50[79|40]
+60R9*Cursor 80|127r40[79|40]
+67r4*No_Element{60R9[79|40]} 80|130r47[79|40]
+111V13*Key{28|79R9} 80|132s59[79|40] 136s69[79|40]
+193U14*Insert 80|108s35[79|40]
+195r7 Key{28|79R9} 80|108r42[79|40]
+196r7 New_Item{5|49R9[79|38]} 80|109r42[79|40]
+249V13*First{60R9[79|40]} 80|127s69[79|40]
+253V13*Next{60R9[79|40]} 80|149s22[79|40]
+273V13*Element{5|49R9[79|38]} 80|136s54[79|40]
+273r39 Key{28|79R9} 80|136r62[79|40]
 X 16 a-coorse.ads
-52R9*Set<20|43R9> 81|6r26[35|15] 159r26[35|15] 213r26[35|15] 227r26[35|15]
-59R9*Cursor 81|228r21[35|15]
-117U14*Insert 81|217s19[35|15]
-119p7 New_Item{35|9P9} 81|217r26[35|15]
-137U14*Delete 81|233s19[35|15]
-139r7 Position{59R9[35|15]} 81|233r26[35|15]
-189V13*Find{59R9[35|15]} 81|228s40[35|15]
-189p36 Item{35|9P9} 81|228r45[35|15]
-195V13*Contains{boolean} 81|216s23[35|15] 231s19[35|15]
+52R9*Set<20|43R9> 80|6r26[35|15] 157r26[35|15] 211r26[35|15] 225r26[35|15]
+59R9*Cursor 80|226r21[35|15]
+117U14*Insert 80|215s19[35|15]
+119p7 New_Item{35|9P9} 80|215r26[35|15]
+137U14*Delete 80|231s19[35|15]
+139r7 Position{59R9[35|15]} 80|231r26[35|15]
+189V13*Find{59R9[35|15]} 80|226s40[35|15]
+189p36 Item{35|9P9} 80|226r45[35|15]
+195V13*Contains{boolean} 80|214s23[35|15] 229s19[35|15]
 X 19 a-except.ads
-54K13*Exceptions 361e19 80|11w10 11r30
-104V13*Exception_Information{string} 81|122s22
+54K13*Exceptions 361e19 79|11w10 11r30
+104V13*Exception_Information{string} 80|120s22
 X 21 a-ioexce.ads
-18K13*IO_Exceptions 30e22 80|12w10 81|119r25
-26X4*End_Error 81|119r39
+18K13*IO_Exceptions 30e22 79|12w10 80|117r25
+26X4*End_Error 80|117r39
 X 22 a-iteint.ads
 24h9 Forward_Iterator
-32h9 Reversible_Iterator<24R9[16|68]>
+32h9 Reversible_Iterator<24R9[5|67]>
 X 24 a-string.ads
-16K13*Strings 35e16 80|1r10 1r37 2r10 3r10 10r10 34r19 43r19 44r30
+16K13*Strings 35e16 79|1r10 1r37 2r10 3r10 10r10 34r19 43r19 44r30
 X 26 a-strhas.ads
-20V22*Hash{4|19M9} 80|10w18
+20V22*Hash{4|19M9} 79|10w18
 X 28 a-strunb.ads
-76K21*Unbounded 489e26 80|1w18 1r45 2r18 3r18 34r27 43r27 44r38
-79R9*Unbounded_String<20|43R9> 473e14 80|20r73 20r105 21r64 32r19 38r72 41r19
-. 48r65 55r25 81|3r73 3r105 29r64 97r27 156r65 158r16 182r21
-94V13*To_Unbounded_String{79R9} 80|55s45 81|163s26 171s29 196s27 199s35 203s42
-100V13*To_String{string} 81|37s28 44s28 62s29 68s29 79s104 143s54 143s92
-. 206s32
-107U14*Append 81|162s7 165s7 170s10 173s10
-108r7 Source{79R9} 81|162r14 165r14 170r17 173r17
-109r7 New_Item{79R9} 81|163r14 166r14 171r17 174r17
-166V14*"="{boolean} 5|42i19 80|35r27
+76K21*Unbounded 489e26 79|1w18 1r45 2r18 3r18 34r27 43r27 44r38
+79R9*Unbounded_String<20|43R9> 473e14 79|20r73 20r105 21r64 32r19 38r72 41r19
+. 48r65 55r25 80|3r73 3r105 29r64 97r27 154r65 156r16 180r21
+94V13*To_Unbounded_String{79R9} 79|55s45 80|161s26 169s29 194s27 197s35 202s42
+100V13*To_String{string} 80|37s28 44s28 62s29 68s29 79s104 141s54 141s92
+107U14*Append 80|160s7 163s7 168s10 171s10
+108r7 Source{79R9} 80|160r14 163r14 168r17 171r17
+109r7 New_Item{79R9} 80|161r14 164r14 169r17 172r17
+166V14*"="{boolean} 5|42i19 79|35r27
 X 29 a-suecin.ads
-34V32*Equal_Case_Insensitive{boolean} 80|3w28 44r48
+34V32*Equal_Case_Insensitive{boolean} 79|3w28 44r48
 X 30 a-suhcin.ads
-36V32*Hash_Case_Insensitive{4|19M9} 80|2w28 34r37 43r37
+36V32*Hash_Case_Insensitive{4|19M9} 79|2w28 34r37 43r37
 X 32 a-textio.ads
-49K13*Text_IO 471e16 80|5w10 5r27
-52P9*File_Type 81|45r18 69r18
-53n23*In_File{53E9} 81|75r20 81r28
-53n32*Out_File{53E9} 81|50r20 55r28
-86U14*Create 81|54s13 80s13
-87p7 File{52P9} 81|54r20 80r20
-88e7 Mode{53E9} 81|55r20 81r20
-89a7 Name{string} 81|56r20 82r20
-92U14*Open 81|49s7 74s7
-93p7 File{52P9} 81|49r12 74r12
-94e7 Mode{53E9} 81|50r12 75r12
-95a7 Name{string} 81|51r12 76r12
-98U14*Close 81|64s7 120s13 123s13
-253V13*Get_Line{string} 81|93s37
-259U14*Put_Line 81|62s10
-263U14*Put_Line 81|37s10 79s13 87s7 99s16 102s17 104s16 122s13 126s7 143s25
-. 194s7 197s7 200s7 206s7
+49K13*Text_IO 471e16 79|5w10 5r27
+52P9*File_Type 80|45r18 69r18
+53n23*In_File{53E9} 80|75r20 81r28
+53n32*Out_File{53E9} 80|50r20 55r28
+86U14*Create 80|54s13 80s13
+87p7 File{52P9} 80|54r20 80r20
+88e7 Mode{53E9} 80|55r20 81r20
+89a7 Name{string} 80|56r20 82r20
+92U14*Open 80|49s7 74s7
+93p7 File{52P9} 80|49r12 74r12
+94e7 Mode{53E9} 80|50r12 75r12
+95a7 Name{string} 80|51r12 76r12
+98U14*Close 80|64s7 118s13 121s13
+253V13*Get_Line{string} 80|93s37
+259U14*Put_Line 80|62s10
+263U14*Put_Line 80|37s10 79s13 87s7 99s16 120s13 124s7 141s25 201s10
 X 35 datatypes.ads
-7K9*dataTypes 36e14 80|14w6 14r21
-8R9*User 35e17 81|4r32 184r31
-9P9*UserPtr(8R9) 80|21r89 26r76 26r100 27r79 27r106 33r23 48r49 49r135 81|4r17
-. 29r89 30r13 96r23 134r23 140r32 156r49 180r134 184r16 212r76 212r100 226r78
-. 226r105
-12V14*"="{boolean} 12|46i19 81|142s33
-15K12*UserSet[16|46] 81|6r18 159r18 213r18 227r18 228r13
-19V13*getUsername{28|79R9} 81|103s28 106s46 110s54 143s102 158s36 174s29
-. 206s42
-20U14*setUsername 81|9s7 196s7
-21V13*encodePassword{28|79R9} 81|12s35
-22V13*getPassword{28|79R9} 81|166s26
-23V13*setPassword{boolean} 81|12s15 199s15
-24V13*getContacts{16|52R9[15]} 81|159s33 213s33 227s33
-25U14*setContacts 81|13s7
+7K9*dataTypes 37e14 79|14w6 14r21
+8R9*User 36e17 80|4r32 182r31
+9P9*UserPtr(8R9) 79|21r89 26r76 26r100 27r79 27r106 33r23 48r49 49r135 80|4r17
+. 29r89 30r13 96r23 132r23 138r32 154r49 178r134 182r16 210r76 210r100 224r78
+. 224r105
+12V14*"="{boolean} 12|46i19 80|140s33
+15K12*UserSet[16|46] 80|6r18 157r18 211r18 225r18 226r13
+19V13*getUsername{28|79R9} 80|102s28 141s102 156s36 172s29
+20U14*setUsername 80|9s7 194s7
+21V13*encodePassword{28|79R9} 80|12s35
+22V13*getPassword{28|79R9} 80|164s26
+23V13*setPassword{boolean} 80|12s15 197s15
+24V13*getContacts{16|52R9[15]} 80|157s33 211s33 225s33
+25U14*setContacts 80|13s7
 X 36 gnat.ads
-34K9*GNAT 37e9 80|7r6 7r29 81|181r22 188r7 189r74 190r16 196r47 197r39 199r55
-. 200r33 203r62
+34K9*GNAT 37e9 79|7r6 7r29 80|179r22 187r7 188r74 189r16 194r47 197r55 202r62
 X 37 g-arrspl.ads
 63E9*Separator_Mode
-69n7*Multiple{63E9[44|39]} 81|189r92[44|39]
-74R9*Slice_Set<20|43R9> 81|181r40[44|39]
-82U14*Create 81|188s25[44|39]
-83r7 S{74R9[44|39]} 81|188r32[44|39]
-84a7 From{string} 81|188r51[44|39]
-85a7 Separators{string} 81|189r32[44|39]
-86e7 Mode{63E9[44|39]} 81|189r66[44|39]
-116I9*Slice_Number<integer> 81|183r15[44|39] 194r27[44|39]
-119V13*Slice_Count{116I9[44|39]} 81|190s34[44|39]
-123V13*Slice{string} 81|196s65[44|39] 197s57[44|39] 199s73[44|39] 200s51[44|39]
-. 203s80[44|39]
+69n7*Multiple{63E9[44|39]} 80|188r92[44|39]
+74R9*Slice_Set<20|43R9> 80|179r40[44|39]
+82U14*Create 80|187s25[44|39]
+83r7 S{74R9[44|39]} 80|187r32[44|39]
+84a7 From{string} 80|187r51[44|39]
+85a7 Separators{string} 80|188r32[44|39]
+86e7 Mode{63E9[44|39]} 80|188r66[44|39]
+116I9*Slice_Number<integer> 80|181r15[44|39]
+119V13*Slice_Count{116I9[44|39]} 80|189s34[44|39]
+123V13*Slice{string} 80|194s65[44|39] 197s73[44|39] 202s80[44|39]
 X 44 g-strspl.ads
-39K14*String_Split[37|58] 80|7w11 7r34 81|181r27 188r12 189r79 190r21 196r52
-. 197r44 199r60 200r38 203r67
+39K14*String_Split[37|58] 79|7w11 7r34 80|179r27 187r12 188r79 189r21 194r52
+. 197r60 202r67
 X 48 protocol.ads
-9K9*Protocol 36e13 80|6w6 81|163r46 171r49 189r46
-12a6*Seperator{string} 81|163r55 171r58 189r55
+9K9*Protocol 36e13 79|6w6 80|161r46 169r49 188r46
+12a6*Seperator{string} 80|161r55 169r58 188r55
 X 49 system.ads
 67M9*Address
-X 61 s-memory.ads
+X 60 s-memory.ads
 53V13*Alloc{49|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
 76V13*Realloc{49|67M9} 105i<c,__gnat_realloc>22
-X 69 s-stalib.adb
+X 68 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
-X 80 user_databases.ads
-16K9*User_Databases 31E12 61l5 61e19 81|1b14 242l5 242t19
+X 79 user_databases.ads
+16K9*User_Databases 31E12 61l5 61e19 80|1b14 240l5 240t19
 19R9*User_Database 20p13 20r44 21p13 21r35 23p14 23r41 24p14 24r45 26p13
-. 26r43 27p13 27r46 49p13 49r69 53c9 58e14 81|3r44 29r35 43r41 67r45 180r69
-. 212r43 226r46
-20V13*registerUser{boolean} 20=26 20>59 20>91 81|3b13 27l8 27t20
-20r26 thisUser{19R9} 81|3b26 15m37 15r37 20r32
-20r59 username{28|79R9} 81|3b59 9r28 16r37
-20r91 password{28|79R9} 81|3b91 12r50
-21V13*getUser{35|9P9} 21>21 21>50 81|29b13 40l8 40t15 134s34 140s43
-21r21 database{19R9} 81|29b21 32r15
-21r50 username{28|79R9} 81|29b50 32r45 37r38 134r47
-23U14*saveUserDatabase 23>31 81|20s7 43b14 65l8 65t24 218s10 234s10
-23r31 this{19R9} 81|20r24 43b31 44r38 46r33
-24U14*loadUserDatabase 24=31 81|67b14 154l8 154t24
-24r31 this{19R9} 81|67b31 68r39 79r114 100r52 106m16 106r16 134r42 140r51
-. 144m44 144r44
-26V13*addContact{boolean} 26=25 26=58 26>85 81|144s33 212b13 223l8 223t18
-26r25 database{19R9} 81|212b25 218r27
-26p58 thisUser{35|9P9} 81|212b58 213r45
-26p85 contactToAdd{35|9P9} 81|212b85 216r32 217r38
-27V13*removeContact{boolean} 27=28 27=61 27>88 81|226b13 240l8 240t21
-27r28 database{19R9} 81|226b28 234r27
-27p61 thisUser{35|9P9} 81|226b60 227r45
-27p88 contactToRemove{35|9P9} 81|226b87 228r57 231r28
-31K12 User_Maps[12|48] 36r8 54r15 81|15r7 46r17
-38K12 contactNamesList[5|45] 42r23 45r14 49r103 81|70r22 180r103
-40K12 userToContactNamesMap[14|48] 46r8 81|71r28 129r18 132r25
-48V13 userToUnboundedString{28|79R9} 48=35 81|62s39 156b13 177l8 177t29
-48p35 this{35|9P9} 81|62r61 156b35 158r48 159r45 166r38
-49V13 StringToLonelyUser{35|9P9} 49>32 49>55 49<84 81|100s23 180b13 209l8
-. 209t26
-49a32 inputLine{string} 81|180b32 188r59
-49r55 database{19R9} 81|180b55
-49r84 contactNames{5|49R9[38]} 81|180b84 203m10 203r10
-54r7*users{12|52R9[31]} 81|15m46 32r24 46r38 106m21
-55r7*databaseFileName{28|79R9} 81|44r43 68r44 79r119
+. 26r43 27p13 27r46 49p13 49r69 53c9 58e14 80|3r44 29r35 43r41 67r45 178r69
+. 210r43 224r46
+20V13*registerUser{boolean} 20=26 20>59 20>91 80|3b13 27l8 27t20
+20r26 thisUser{19R9} 80|3b26 15m37 15r37 20r32
+20r59 username{28|79R9} 80|3b59 9r28 16r37
+20r91 password{28|79R9} 80|3b91 12r50
+21V13*getUser{35|9P9} 21>21 21>50 80|29b13 40l8 40t15 132s34 138s43
+21r21 database{19R9} 80|29b21 32r15
+21r50 username{28|79R9} 80|29b50 32r45 37r38 132r47
+23U14*saveUserDatabase 23>31 80|20s7 43b14 65l8 65t24 216s10 232s10
+23r31 this{19R9} 80|20r24 43b31 44r38 46r33
+24U14*loadUserDatabase 24=31 80|67b14 152l8 152t24
+24r31 this{19R9} 80|67b31 68r39 79r114 100r52 104m16 104r16 132r42 138r51
+. 142m44 142r44
+26V13*addContact{boolean} 26=25 26=58 26>85 80|142s33 210b13 221l8 221t18
+26r25 database{19R9} 80|210b25 216r27
+26p58 thisUser{35|9P9} 80|210b58 211r45
+26p85 contactToAdd{35|9P9} 80|210b85 214r32 215r38
+27V13*removeContact{boolean} 27=28 27=61 27>88 80|224b13 238l8 238t21
+27r28 database{19R9} 80|224b28 232r27
+27p61 thisUser{35|9P9} 80|224b60 225r45
+27p88 contactToRemove{35|9P9} 80|224b87 226r57 229r28
+31K12 User_Maps[12|48] 36r8 54r15 80|15r7 46r17
+38K12 contactNamesList[5|45] 42r23 45r14 49r103 80|70r22 178r103
+40K12 userToContactNamesMap[14|48] 46r8 80|71r28 127r18 130r25
+48V13 userToUnboundedString{28|79R9} 48=35 80|62s39 154b13 175l8 175t29
+48p35 this{35|9P9} 80|62r61 154b35 156r48 157r45 164r38
+49V13 StringToLonelyUser{35|9P9} 49>32 49>55 49<84 80|100s23 178b13 207l8
+. 207t26
+49a32 inputLine{string} 80|178b32 187r59
+49r55 database{19R9} 80|178b55
+49r84 contactNames{5|49R9[38]} 80|178b84 202m10 202r10
+54r7*users{12|52R9[31]} 80|15m46 32r24 46r38 104m21
+55r7*databaseFileName{28|79R9} 80|44r43 68r44 79r119
 56i7*maxSize{integer}
-X 81 user_databases.adb
+X 80 user_databases.adb
 4p7 newUser{35|9P9} 9m19 9r19 12m27 12r27 13m19 13r19 17r37
 5b7 bool{boolean} 12m7
 6r7 contacts{16|52R9[35|15]} 13r28
 30p7 user{35|9P9} 32m7 33r14
 44a7 Write_To{string} 51r20 56r28
 45p7 DataFile{32|52P9} 49m20 49r20 54m28 54r28 62r19 64m13 64r13
-46r7 usermap{12|52R9[80|31]} 59m19 59r19
+46r7 usermap{12|52R9[79|31]} 59m19 59r19
 59p11 user{35|9P9} 62r69
 68a7 Read_From{string} 76r20 82r28
-69p7 DataFile{32|52P9} 74m20 74r20 80m28 80r28 93r46 120m19 120r19 123m19
-. 123r19
-70r7 contactNames{5|49R9[80|38]} 100m58 100r58 111r54 112m16 112r16
-71r7 userToContactNames{14|52R9[80|40]} 110m16 110r16 129r50 138r35
+69p7 DataFile{32|52P9} 74m20 74r20 80m28 80r28 93r46 118m19 118r19 121m19
+. 121r19
+70r7 contactNames{5|49R9[79|38]} 100m58 100r58 109r54 110m16 110r16
+71r7 userToContactNames{14|52R9[79|40]} 108m16 108r16 127r50 136r35
 93a16 userLine{string} 99r53 100r42
-96p16 user{35|9P9} 100m16 103r40 106r58 107r46 110r66
-97r16 userName{28|79R9} 103m16
-119r15 Error{19|63R9}
-121r15 Error{19|63R9} 122r44
-129r10 Index{14|60R9[80|40]} 132r16 134r64 138r73 151m13 151r27
-134p16 user{35|9P9} 143r114 144m50 144r50
-135b16 bool{boolean} 144m25
-138r20 contactName{28|79R9} 140r57 143r64
-140p22 contact{35|9P9} 142r25 144r55
-158r7 result{28|79R9} 162m26 162r26 165m26 165r26 170m29 170r29 173m29 173r29
-. 176r14
-159r7 contacts{16|52R9[35|15]} 168r22
-168p11 contact{35|9P9} 174r41
-181r7 MessageParts{37|74R9[44|39]} 188m37 190r46 196r71 197r63 199r79 200r57
-. 203r86
-182r7 MessagePart{28|79R9}
-183i7 Count{37|116I9[44|39]} 190m7 194r46 202r21
-184p7 newUser{35|9P9} 196m19 196r19 199m27 199r27 206r54 207r14
-185b7 bool{boolean} 199m7
-202i11 i<integer> 203r100
-213r7 contacts{16|52R9[35|15]} 216r14 217m10 217r10
-227r7 contacts{16|52R9[35|15]} 228r31 231r10 233m10 233r10
-228r7 pos{16|59R9[35|15]} 233m38 233r38
+96p16 user{35|9P9} 100m16 102r40 105r46
+97r16 userName{28|79R9} 102m16 104r46 108r54
+117r15 Error{19|63R9}
+119r15 Error{19|63R9} 120r44
+127r10 Index{14|60R9[79|40]} 130r16 132r64 136r73 149m13 149r27
+132p16 user{35|9P9} 141r114 142m50 142r50
+133b16 bool{boolean} 142m25
+136r20 contactName{28|79R9} 138r57 141r64
+138p22 contact{35|9P9} 140r25 142r55
+156r7 result{28|79R9} 160m26 160r26 163m26 163r26 168m29 168r29 171m29 171r29
+. 174r14
+157r7 contacts{16|52R9[35|15]} 166r22
+166p11 contact{35|9P9} 172r41
+179r7 MessageParts{37|74R9[44|39]} 187m37 189r46 194r71 197r79 202r86
+180r7 MessagePart{28|79R9}
+181i7 Count{37|116I9[44|39]} 189m7 200r21
+182p7 newUser{35|9P9} 194m19 194r19 197m27 197r27 205r14
+183b7 bool{boolean} 197m7
+200i11 i<integer> 202r100
+211r7 contacts{16|52R9[35|15]} 214r14 215m10 215r10
+225r7 contacts{16|52R9[35|15]} 226r31 229r10 231m10 231r10
+226r7 pos{16|59R9[35|15]} 231m38 231r38
 

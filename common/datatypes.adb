@@ -2,12 +2,13 @@ package body datatypes is
 
    function getUsername(this : in UserPtr) return Unbounded_String is
    begin
-     if(this=null) then
-	Put_Line(" FUCKING FEHLER FUCK FUCK");
-     return To_Unbounded_String("FFUCK FUFUUFUFUFUFUCK");
-     end if;
-
-      return this.username;
+     Put_Line("printing username: "& To_String(this.username));
+     if this = null then
+	 Put_Line(" FUCKING FEHLER FUCK FUCK");
+	 return this.username;
+      else
+	 return this.username;
+      end if;
    end getUsername;
 
 
@@ -67,6 +68,11 @@ package body datatypes is
 	 return false;
       end if;
    end "=";
+
+   function UserToString(this : in UserPtr) return String is
+   begin
+      return "Username: " & To_String(this.username) &", Userpassword: "& To_String(this.password);
+   end UserToString;
 
 
 end datatypes;

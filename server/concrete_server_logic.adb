@@ -173,12 +173,12 @@ package body Concrete_Server_Logic is
                      begin
                         -- # Pruefe ob Benutzer registriert und Passwort richtig #
                         user := Server.UserDatabase.getUser (username => incoming_message.sender);
-
+			Put_Line("Ausgabe nach Prüfung ob User bei Connect existiert.");
 			if user = null then
-
+			   Put_Line("Ausgabe nach if");
                            writeMessageToStream (ClientSocket => client.Socket, message => userNotFoundMessage);
 			else
-			   Put_Line("TESTESTESTESTESTETST");
+			   Put_Line("Ausgabe nach else");
                            userpassword := getPassword (user);
                            -- TODO: das Passwort sollte vom Client bereits verschluesselt verschickt werden!!
                            if userpassword /= encodePassword (incoming_message.content) then

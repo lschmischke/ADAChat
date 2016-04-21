@@ -34,7 +34,7 @@ RV SPARK_05
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U concrete_server_logic%b  concrete_server_logic.adb  a50cfa78 DE OO PK
+U concrete_server_logic%b  concrete_server_logic.adb  e9174613 DE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -52,7 +52,7 @@ W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U concrete_server_logic%s  concrete_server_logic.ads  2566ea16 DE EE OO PF PK
+U concrete_server_logic%s  concrete_server_logic.ads  b1af2ba7 DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.conversions%s  a-chacon.adb	a-chacon.ali
@@ -136,8 +136,8 @@ D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D concrete_server_logic.ads  20160421101142 ab992bfc concrete_server_logic%s
-D concrete_server_logic.adb  20160421101634 0e95d184 concrete_server_logic%b
-D datatypes.ads		20160421095232 e63cc8bb datatypes%s
+D concrete_server_logic.adb  20160421111600 428e6def concrete_server_logic%b
+D datatypes.ads		20160421105200 72f5090a datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
@@ -287,7 +287,7 @@ X 35 a-textio.ads
 49K13*Text_IO 471e16 38|6w10 6r27 39|49r11 91r17 96r17 126r11 130r11 150r20
 242U14*Put 39|68s10 71s10 106s10 109s10 476s10 479s10
 263U14*Put_Line 39|14s7 49s19 69s10 72s10 91s25 96s25 107s10 110s10 126s19
-. 130s19 150s28 181s28 477s10 480s10
+. 130s19 150s28 176s25 178s28 181s28 477s10 480s10
 X 38 concrete_server_logic.ads
 29K9*Concrete_Server_Logic 76E9 157l5 157e26 39|1b14 607l5 607t26
 33R9*Concrete_Server 34r39 120c9 128e14
@@ -448,7 +448,7 @@ X 39 concrete_server_logic.adb
 593r7 pos{17|59R9[40|15]} 597m10 599m24 599r24
 X 40 datatypes.ads
 7K9*dataTypes 38|12w6 12r21 114r91 117r78 39|447r39 582r15 592r15 593r15
-. 40|36e14
+. 40|37e14
 9P9*UserPtr(8R9) 38|77r14 100r36 101r81 113r91 130r104 130r129 132r90 132r115
 . 39|117r22 282r48 283r48 406r51 526r36 579r27 580r27 591r90 591r115
 12V14*"="{boolean} 13|46i19 38|104r78 116r92 39|177s33
