@@ -19,9 +19,9 @@ with Ada.Strings.Unbounded.Hash;
 --       Online Offline Benachrichtigungen
 --       Sicherstellen dass man keine Fremden in Chat einladen kann nur Kontakte
 --       Disconnect, Client aus allen Chaträumen entfernen
+
 --       prüfen ob Kontakt beim Add bereits in Kontaktliste
---       kontakt in datenbank noch eintragen
---       saveUserDB in addContact methode integrieren
+
 
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.

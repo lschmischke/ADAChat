@@ -231,7 +231,7 @@ package ada_main is
    pragma Export (C, u00097, "client_uiB");
    u00098 : constant Version_32 := 16#80f42b28#;
    pragma Export (C, u00098, "client_uiS");
-   u00099 : constant Version_32 := 16#a86e2957#;
+   u00099 : constant Version_32 := 16#94513ac8#;
    pragma Export (C, u00099, "concrete_server_logicB");
    u00100 : constant Version_32 := 16#32c0a319#;
    pragma Export (C, u00100, "concrete_server_logicS");
@@ -411,7 +411,7 @@ package ada_main is
    pragma Export (C, u00187, "system__stringsS");
    u00188 : constant Version_32 := 16#09511692#;
    pragma Export (C, u00188, "system__file_control_blockS");
-   u00189 : constant Version_32 := 16#72d84366#;
+   u00189 : constant Version_32 := 16#db6c0ef5#;
    pragma Export (C, u00189, "datatypesB");
    u00190 : constant Version_32 := 16#06e9bbbb#;
    pragma Export (C, u00190, "datatypesS");
@@ -521,7 +521,7 @@ package ada_main is
    pragma Export (C, u00242, "ada__strings__fixedS");
    u00243 : constant Version_32 := 16#1ba6241e#;
    pragma Export (C, u00243, "server_logicS");
-   u00244 : constant Version_32 := 16#ba09de2a#;
+   u00244 : constant Version_32 := 16#91d28976#;
    pragma Export (C, u00244, "user_databasesB");
    u00245 : constant Version_32 := 16#4d7faa8b#;
    pragma Export (C, u00245, "user_databasesS");
