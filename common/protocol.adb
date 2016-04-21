@@ -17,6 +17,7 @@ package body Protocol is
                                Separators => Seperator, Mode => GNAT.String_Split.Multiple);
       Count := GNAT.String_Split.Slice_Count(MessageParts);
       if count >=4 then
+	 -- # TODO: Fehlerbehandlung
          newMessageObject.messagetype := MessageTypeE'Value(GNAT.String_Split.Slice(MessageParts, 1));
          newMessageObject.sender := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(MessageParts, 2));
          newMessageObject.receiver := Integer'Value(GNAT.String_Split.Slice(MessageParts, 3));

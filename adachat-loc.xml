@@ -1,6 +1,186 @@
 <?xml version="1.0"?>
 <Locations >
   <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 64" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 66" line=" 114" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 26" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\common\datatypes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 42">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 121">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 25">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 3">
+      <vfs_project  />
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 11">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 24">
+      <vfs_project  />
+      <vfs_file >G:\ADAChat\common\datatypes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 59" line=" 19">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 82" line=" 114">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
     <file_marker column=" 1" line=" 48">
       <vfs_project >C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file >C:\Users\Daniel Kreck\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
@@ -251,33 +431,33 @@
     </file_marker>
   </Project>
   <Project >
-    <file_marker column=" 1" line=" 245" >
-      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
-      <vfs_file>G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    <file_marker column=" 1" line=" 245">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 47" line=" 43" >
-      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
-      <vfs_file>G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
+    <file_marker column=" 47" line=" 43">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 76" line=" 3" >
-      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
-      <vfs_file>G:\ADAChat\common\protocol.adb</vfs_file>
+    <file_marker column=" 76" line=" 3">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\protocol.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 40" line=" 12" >
-      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
-      <vfs_file>G:\ADAChat\common\protocol.ads</vfs_file>
+    <file_marker column=" 40" line=" 12">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\protocol.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 38" line=" 12" >
-      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
-      <vfs_file>G:\ADAChat\server\user_databases.adb</vfs_file>
+    <file_marker column=" 38" line=" 12">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\server\user_databases.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 8" >
-      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
-      <vfs_file>G:\ADAChat\common\datatypes.adb</vfs_file>
+    <file_marker column=" 1" line=" 8">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 1" line=" 19" >
-      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
-      <vfs_file>G:\ADAChat\common\datatypes.ads</vfs_file>
+    <file_marker current="true" column=" 1" line=" 19">
+      <vfs_project >G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file >G:\ADAChat\common\datatypes.ads</vfs_file>
     </file_marker>
   </Project>
   <Project >

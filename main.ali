@@ -24,7 +24,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		6f59f4b6 DE NE OO SU IL
+U main%b		main.adb		a0949beb DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -69,7 +69,7 @@ D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D client_logic.ads	20160417151822 104cbac2 client_logic%s
 D client_ui.ads		20160323232200 80f42b28 client_ui%s
-D concrete_server_logic.ads  20160421130910 87ed9fd6 concrete_server_logic%s
+D concrete_server_logic.ads  20160421163554 4820f08b concrete_server_logic%s
 D datatypes.ads		20160421130246 bd60c4ab datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
@@ -137,13 +137,13 @@ X 28 client_logic.ads
 X 29 client_ui.ads
 1K9*client_ui 5e14 45|4w6
 X 30 concrete_server_logic.ads
-28K9*Concrete_Server_Logic 155e26 45|3w6 3r33 14r4
-32R9*Concrete_Server 126e14 45|10r40
-33P9*Concrete_Server_Ptr(32R9) 45|10r13
-40U14*StartServer 45|14s26
+24K9*Concrete_Server_Logic 158e26 45|3w6 3r33 14r4
+28R9*Concrete_Server 129e14 45|10r40
+29P9*Concrete_Server_Ptr(28R9) 45|10r13
+36U14*StartServer 45|14s26
 X 45 main.adb
 9U11*main 9b11 15l5 15t9
-10p4 server{30|33P9} 14m38 14r38
+10p4 server{30|29P9} 14m38 14r38
 X 47 server_logic.ads
 3K9*Server_Logic 45|2w6 47|11e17
 X 48 server_ui.ads

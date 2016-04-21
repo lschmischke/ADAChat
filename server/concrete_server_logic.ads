@@ -14,14 +14,10 @@ with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
 
--- TODO: Kontaktlogik umsetzen,
---       Konakte hinzufügen und entfernen
---       Online Offline Benachrichtigungen
+
+-- # TODOs #
 --       Sicherstellen dass man keine Fremden in Chat einladen kann nur Kontakte
---       Disconnect, Client aus allen Chaträumen entfernen
-
 --       prüfen ob Kontakt beim Add bereits in Kontaktliste
-
 
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
@@ -60,7 +56,14 @@ package Concrete_Server_Logic is
    function getClientList(room : in chatRoomPtr) return Client_List.List;
    procedure broadcastToChatRoom(room : in chatRoomPtr; message : in MessageObject);
 
-   package chatRoom_List is new Doubly_Linked_Lists(Element_Type => chatRoomPtr);
+     package chatRoom_List is new Doubly_Linked_Lists(Element_Type => chatRoomPtr);
+
+   function getChatroomsOfClient(client : in Concrete_Client_Ptr) return chatRoom_List.List;
+   procedure broadcastOnlineStatusToContacts(client : in Concrete_Client_Ptr; status : MessageTypeE);
+
+   procedure disconnectClient(client : in Concrete_Client_Ptr);
+
+
 
 
 
