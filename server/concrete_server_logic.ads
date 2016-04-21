@@ -1,4 +1,3 @@
-with Server_Logic; use Server_Logic;
 with Protocol; use Protocol;
 with GNAT.Sockets; use GNAT.Sockets;
 with Ada.Streams; use Ada.Streams;
@@ -140,7 +139,6 @@ private
    -- zugewiesen wird.
    procedure InitializeServer(This : in out Concrete_Server_Ptr);
 
-   procedure dummy3(This : in out Concrete_Server_Ptr);
 
    -- Dieser Task lauscht auf einkommende Verbindungen von neuen Clients und
    -- erstellt fuer diese jeweils einen eigenen Socket und Task, in dem anschliessend

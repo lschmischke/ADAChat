@@ -1,8 +1,6 @@
 with client_logic;
-with Server_Logic;
 with Concrete_Server_Logic; use Concrete_Server_Logic;
 with client_ui;
-with Server_Ui;
 with Ada.Strings.Unbounded;
 
 

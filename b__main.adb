@@ -16,7 +16,7 @@ package body ada_main is
    E084 : Short_Integer; pragma Import (Ada, E084, "ada__io_exceptions_E");
    E005 : Short_Integer; pragma Import (Ada, E005, "ada__strings_E");
    E048 : Short_Integer; pragma Import (Ada, E048, "ada__strings__maps_E");
-   E254 : Short_Integer; pragma Import (Ada, E254, "ada__strings__maps__constants_E");
+   E253 : Short_Integer; pragma Import (Ada, E253, "ada__strings__maps__constants_E");
    E055 : Short_Integer; pragma Import (Ada, E055, "ada__tags_E");
    E083 : Short_Integer; pragma Import (Ada, E083, "ada__streams_E");
    E110 : Short_Integer; pragma Import (Ada, E110, "interfaces__c_E");
@@ -56,9 +56,7 @@ package body ada_main is
    E098 : Short_Integer; pragma Import (Ada, E098, "client_ui_E");
    E190 : Short_Integer; pragma Import (Ada, E190, "datatypes_E");
    E230 : Short_Integer; pragma Import (Ada, E230, "protocol_E");
-   E243 : Short_Integer; pragma Import (Ada, E243, "server_logic_E");
-   E262 : Short_Integer; pragma Import (Ada, E262, "server_ui_E");
-   E245 : Short_Integer; pragma Import (Ada, E245, "user_databases_E");
+   E244 : Short_Integer; pragma Import (Ada, E244, "user_databases_E");
    E100 : Short_Integer; pragma Import (Ada, E100, "concrete_server_logic_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
@@ -75,7 +73,7 @@ package body ada_main is
       begin
          F1;
       end;
-      E245 := E245 - 1;
+      E244 := E244 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "user_databases__finalize_spec");
@@ -293,7 +291,7 @@ package body ada_main is
       E005 := E005 + 1;
       Ada.Strings.Maps'Elab_Spec;
       Ada.Strings.Maps.Constants'Elab_Spec;
-      E254 := E254 + 1;
+      E253 := E253 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Streams'Elab_Spec;
       E083 := E083 + 1;
@@ -378,11 +376,8 @@ package body ada_main is
       Datatypes'Elab_Spec;
       E190 := E190 + 1;
       E230 := E230 + 1;
-      Server_Logic'Elab_Spec;
-      E243 := E243 + 1;
-      E262 := E262 + 1;
       User_Databases'Elab_Spec;
-      E245 := E245 + 1;
+      E244 := E244 + 1;
       Concrete_Server_Logic'Elab_Spec;
       Concrete_Server_Logic'Elab_Body;
       E100 := E100 + 1;
@@ -425,8 +420,6 @@ package body ada_main is
    --   G:\ADAChat\client_ui.o
    --   G:\ADAChat\datatypes.o
    --   G:\ADAChat\protocol.o
-   --   G:\ADAChat\server_logic.o
-   --   G:\ADAChat\server_ui.o
    --   G:\ADAChat\user_databases.o
    --   G:\ADAChat\concrete_server_logic.o
    --   G:\ADAChat\main.o

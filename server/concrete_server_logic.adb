@@ -74,10 +74,6 @@ package body Concrete_Server_Logic is
 
 -----------------------------------------------------------------------------
 
-   procedure dummy3 (This : in out Concrete_Server_Ptr) is null;
-
------------------------------------------------------------------------------
-
    task body Main_Server_Task is
    begin
       accept Start;
