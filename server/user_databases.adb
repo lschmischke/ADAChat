@@ -1,23 +1,22 @@
 package body User_Databases is
 
-   function registerUser(thisUser : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean is
+   function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean is
       newUser : UserPtr := new User;
       bool : Boolean;
-      contacts : UserSet.Set;
+      contacts : UserList.List;
 
    begin
       setUsername(newUser, username);
 
-      --# TODO Password sollte zukünftig vom Client gehashed ankommen
-      bool := setPassword(newUser,encodePassword(password));
+      bool := setPassword(newUser, password);
       setContacts(newUser, contacts);
 
-      User_Maps.Insert(Container => thisUser.users,
+      User_Maps.Insert(Container => this.users,
                        Key       => username,
                        New_Item  => newUser);
 
       --#hard-speichern des Users
-      saveUserDatabase(this => thisUser);
+      saveUserDatabase(this => this);
       return true;
 
    Exception
@@ -93,19 +92,16 @@ package body User_Databases is
                userLine : String := Get_Line(DataFile);
 
                --# konvertiere Line in User
-	       user : UserPtr;
-	       userName : Unbounded_String;
+               user : UserPtr;
             begin
                Put_Line("Read from database file: "&userLine);
                user:= StringToLonelyUser(userLine, this, contactNames);
 
-	       userName := getUsername(user);
                --#füge User zur Map hinzu
-               this.users.Insert(Key      => userName,
-				 New_Item => user);
-
+               this.users.Insert(Key      => getUsername(user),
+                                 New_Item => user);
                 --#speichere gefundene Kontaktnamen zwischen
-               userToContactNames.Insert(Key      => userName,
+               userToContactNames.Insert(Key      => getUsername(user),
                                          New_Item => contactNames);
                contactNames.Clear;
 
@@ -139,7 +135,7 @@ package body User_Databases is
                   begin
                      if contact /= null then
                         Put_Line("Adding contact " & To_String(contactName) & " to user '"&To_String(getUsername(user))&"'");
-                        bool := addContact(this, user,contact);
+                        bool := addContact(user,contact);
                      end if;
 
                     end;
@@ -154,7 +150,7 @@ package body User_Databases is
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String is
       --result : Unbounded_String := this.user_data.username;
       result : Unbounded_String := getUsername(this);
-      contacts : UserSet.Set := getContacts(this);
+      contacts : UserList.List := getContacts(this);
    begin
       --#Trennzeichen
       Append(Source   => result,
@@ -182,7 +178,6 @@ package body User_Databases is
       newUser: UserPtr := new User;
       bool : Boolean;
    begin
-
       -- # Nachricht wird an definiertem Trennzeichen zerstueckelt #
       GNAT.String_Split.Create(S => MessageParts, From => inputLine,
                                Separators => Protocol.Seperator, Mode => GNAT.String_Split.Multiple);
@@ -190,51 +185,19 @@ package body User_Databases is
 
       --#TODO: Pruefen, ob Nachricht richtiges Format
 
+
       --#Slice 1: username
       setUsername(newUser,To_Unbounded_String(Gnat.String_Split.Slice(MessageParts, 1)));
-      --Put_Line("Setting Username: " & GNAT.String_Split.Slice(MessageParts,1));
       --#Slice 2: password
       bool := setPassword(newUser,To_Unbounded_String(Gnat.String_split.slice(MessageParts, 2)));
-      --Put_Line("Setting PW: " & GNAT.String_Split.Slice(MessageParts,2));
       --#Slice rest: contacts
       for i in 3 .. Count loop
-	 Put_Line(" IN LOOP");
          contactNames.Append(New_Item => To_Unbounded_String(Gnat.String_split.slice(MessageParts, i)));
       end loop;
+
 
       return newUser;
 
    end StringToLonelyUser;
-
-
-   function addContact (database : in out User_Database; thisUser : in out UserPtr; contactToAdd : UserPtr) return Boolean is
-      contacts : UserSet.set := getContacts(thisUser);
-
-   begin
-      if not contacts.Contains(contactToAdd) then
-	 contacts.Insert(New_Item => contactToAdd);
-	 saveUserDatabase(database);
-         return true;
-      else return false;
-      end if;
-
-   end addContact;
-
-
-   function removeContact (database : in out User_Database;thisUser : in out UserPtr; contactToRemove : UserPtr) return boolean is
-      contacts : UserSet.set := getContacts(thisUser);
-      pos : UserSet.Cursor := contacts.Find(Item     => contactToRemove);
-
-   begin
-      if contacts.Contains(contactToRemove) then
-
-	 contacts.Delete(Position => pos);
-	 saveUserDatabase(database);
-         return true;
-      else
-         return false;
-      end if;
-
-   end removeContact;
 
 end User_Databases;
