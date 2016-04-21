@@ -1,22 +1,24 @@
 package body Concrete_Server_Logic is
 
    Server : Concrete_Server_Ptr;
+   concServer: aliased Concrete_Server;
 
 -----------------------------------------------------------------------------
 
-   procedure StartServer (This : in out Concrete_Server_Ptr) is
+   procedure StartNewServer (This :in out Concrete_Server; ip : String; port :Natural) is
    begin
       -- # Erzeugte Serverintanz global setzen, damit sie im Package ueberall bekannt ist #
-      Server := This;
+      concServer := This;
+      Server := concServer'Access;
 
       -- # Datenbank laden #
       User_Databases.loadUserDatabase (Server.UserDatabase);
       Put_Line ("User database loadad.");
 
       --#Sockets aufbauen
-      InitializeServer (This);
+      InitializeServer (Server,ip,port);
 
-   end StartServer;
+   end StartNewServer;
 
    -----------------------------------------------------------------------------
 
@@ -30,7 +32,7 @@ package body Concrete_Server_Logic is
 
 -----------------------------------------------------------------------------
 
-   procedure InitializeServer (This : in out Concrete_Server_Ptr) is
+   procedure InitializeServer (This : in out Concrete_Server_Ptr; ip : String; port :Natural) is
       SubServer      : Concrete_Client_Ptr := new Concrete_Client;
       connectMessage : MessageObject;
    begin
@@ -39,8 +41,8 @@ package body Concrete_Server_Logic is
       Initialize;
       Create_Socket (Socket => Server.Socket);
       -- this.SocketAddress.Family := Gnat.Sockets.Family_Inet; -- Diskriminanten-Fehler, ka wie loesen!
-      Server.SocketAddress.Addr := Inet_Addr ("127.0.0.1");
-      Server.SocketAddress.Port := 12321;
+      Server.SocketAddress.Addr := Inet_Addr (ip);
+      Server.SocketAddress.Port := Port_Type(port);
       Bind_Socket (Socket => Server.Socket, Address => Server.SocketAddress);
       Listen_Socket (Socket => Server.Socket);
 
@@ -723,6 +725,35 @@ package body Concrete_Server_Logic is
    end disconnectClient;
 
    ----------------------------------------------------------------------------------------
+   overriding
+   procedure startServer(thisServer : aliased in  Concrete_Server; ipAdress: String; port : Natural) is
+      serv : aliased Concrete_Server := thisServer;
+   begin
+      StartNewServer(serv,ipAdress,port);
+   end startServer;
+    ----------------------------------------------------------------------------------------
+
+   procedure kickUserWithName(thisServer : aliased in  Concrete_Server;username:String) is
+      user : UserPtr := getUser(server.UserDatabase,username => To_Unbounded_String(username));
+      client : Concrete_Client_Ptr := server.Connected_Clients.Element(user);
+   begin
+      disconnectClient(client);
+   end kickUserWithName;
+
+    ----------------------------------------------------------------------------------------
+
+   procedure stopServer(thisServer : aliased  in   Concrete_Server) is
+   begin
+      --# TODO
+      null;
+   end stopServer;
+    ----------------------------------------------------------------------------------------
+
+   function getNumberOfConnectedUsers(thisServer : aliased in Concrete_Server) return Natural is
+   begin
+      return Natural(server.Connected_Clients.Length);
+   end getNumberOfConnectedUsers;
+    ----------------------------------------------------------------------------------------
 
    ----------------------------------------------------------------------------------------
 

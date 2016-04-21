@@ -8,6 +8,7 @@ G:\ADAChat\client_logic.o
 G:\ADAChat\client_ui.o
 G:\ADAChat\datatypes.o
 G:\ADAChat\protocol.o
+G:\ADAChat\serverguicommunication.o
 G:\ADAChat\user_databases.o
 G:\ADAChat\concrete_server_logic.o
 G:\ADAChat\main.o

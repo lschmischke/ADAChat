@@ -1,26 +1,47 @@
 graph: { title: "G:\ADAChat\main.adb"
 node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
 node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
+node: { title: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "gnat_rcheck_PE_Finalize_Raised_Exception\n<built-in>" shape : ellipse }
+node: { title: "ada__exceptions__triggered_by_abort" label: "Triggered_By_Abort\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-except.ads:257:13" shape : ellipse }
 node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:83:14" shape : ellipse }
-node: { title: "concrete_server_logic__concrete_serverFD" label: "Concrete_Serverfd\nG:\ADAChat\server\concrete_server_logic.ads:120:9" shape : ellipse }
-node: { title: "system__storage_pools__subpools__allocate_any_controlled" label: "Allocate_Any_Controlled\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stposu.ads:263:14" shape : ellipse }
-node: { title: "concrete_server_logic__startserver" label: "Startserver\nG:\ADAChat\server\concrete_server_logic.ads:35:14" shape : ellipse }
+node: { title: "system__standard_library__abort_undefer_direct" label: "Abort_Undefer_Direct\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stalib.ads:241:14" shape : ellipse }
+node: { title: "__gnat_reraise_zcx" label: "gnat_reraise_zcx\n<built-in>" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverDF__2" label: "Concrete_Serverdf\nG:\ADAChat\server\concrete_server_logic.ads:118:9" shape : ellipse }
+node: { title: "__gnat_begin_handler" label: "gnat_begin_handler\n<built-in>" shape : ellipse }
+node: { title: "__gnat_end_handler" label: "gnat_end_handler\n<built-in>" shape : ellipse }
+node: { title: "concrete_server_logic__startserver__2" label: "Startserver\nG:\ADAChat\server\concrete_server_logic.ads:132:14" shape : ellipse }
 node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
-node: { title: "concrete_server_logic__concrete_serverDI" label: "Concrete_Serverdi\nG:\ADAChat\server\concrete_server_logic.ads:120:9" shape : ellipse }
-node: { title: "concrete_server_logic__concrete_serverIP" label: "Concrete_Serverip\nG:\ADAChat\server\concrete_server_logic.ads:120:9" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverDI" label: "Concrete_Serverdi\nG:\ADAChat\server\concrete_server_logic.ads:118:9" shape : ellipse }
+node: { title: "concrete_server_logic__concrete_serverIP" label: "Concrete_Serverip\nG:\ADAChat\server\concrete_server_logic.ads:118:9" shape : ellipse }
 node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:80:13" shape : ellipse }
-node: { title: "G:\ADAChat\main.adb:main__P5b.3033" label: "p5b\nG:\ADAChat\main.adb:8:36\n64 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "G:\ADAChat\main.adb:main__P5b.3033" targetname: "system__storage_pools__subpools__allocate_any_controlled" label: "G:\ADAChat\main.adb:8:36" }
-node: { title: "_ada_main" label: "main\nG:\ADAChat\main.adb:7:1\n64 bytes (static)\n0 dynamic objects" }
+node: { title: "G:\ADAChat\main.adb:main___finalizer.2975" label: "main\nG:\ADAChat\main.adb:7:1\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "__gnat_end_handler" label: "G:\ADAChat\main.adb:7:0" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "__gnat_begin_handler" label: "G:\ADAChat\main.adb:7:1" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\main.adb:7:1" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "__indirect_call" label: "G:\ADAChat\main.adb:7:1" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "concrete_server_logic__concrete_serverDF__2" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "__indirect_call" label: "G:\ADAChat\main.adb:7:1" }
+edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2975" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\main.adb:7:1" }
+node: { title: "_ada_main" label: "main\nG:\ADAChat\main.adb:7:1\n304 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "_ada_main" targetname: "_Unwind_Resume" }
-edge: { sourcename: "_ada_main" targetname: "G:\ADAChat\main.adb:main___finalizer.2983" label: "G:\ADAChat\main.adb:13:0" }
-edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__startserver" label: "G:\ADAChat\main.adb:12:25" }
-edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "G:\ADAChat\main.adb:12:25" }
-edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverDI" label: "G:\ADAChat\main.adb:8:36" }
-edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverIP" label: "G:\ADAChat\main.adb:8:36" }
-edge: { sourcename: "_ada_main" targetname: "G:\ADAChat\main.adb:main__P5b.3033" label: "G:\ADAChat\main.adb:8:36" }
-edge: { sourcename: "_ada_main" targetname: "system__secondary_stack__ss_mark" label: "G:\ADAChat\main.adb:7:1" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_reraise_zcx" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverDF__2" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "G:\ADAChat\main.adb:9:0" }
+edge: { sourcename: "_ada_main" targetname: "G:\ADAChat\main.adb:main___finalizer.2975" label: "G:\ADAChat\main.adb:15:0" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__startserver__2" label: "G:\ADAChat\main.adb:14:11" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "G:\ADAChat\main.adb:14:11" }
+edge: { sourcename: "_ada_main" targetname: "G:\ADAChat\main.adb:main__B1b___finalizer.3924" label: "G:\ADAChat\main.adb:9:0" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverDI" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverIP" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "_ada_main" targetname: "__indirect_call" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "_ada_main" targetname: "system__secondary_stack__ss_mark" label: "G:\ADAChat\main.adb:9:4" }
 edge: { sourcename: "_ada_main" targetname: "__main" label: "G:\ADAChat\main.adb:7:1" }
-node: { title: "G:\ADAChat\main.adb:main___finalizer.2983" label: "main\nG:\ADAChat\main.adb:7:1\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "G:\ADAChat\main.adb:main___finalizer.2983" targetname: "system__secondary_stack__ss_release" label: "G:\ADAChat\main.adb:7:1" }
+node: { title: "G:\ADAChat\main.adb:main__B1b___finalizer.3924" label: "b1b\nG:\ADAChat\main.adb:9:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\main.adb:main__B1b___finalizer.3924" targetname: "system__secondary_stack__ss_release" label: "G:\ADAChat\main.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\main.adb:main__B1b___finalizer.3924" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\main.adb:9:4" }
 }
