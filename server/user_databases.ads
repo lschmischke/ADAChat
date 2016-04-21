@@ -17,11 +17,14 @@ package User_Databases is
 -- public
 
    type User_Database is tagged private;
-   function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean;
+   function registerUser(thisUser : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean;
    function getUser(database : in User_Database; username : in Unbounded_String) return UserPtr;
 
    procedure saveUserDatabase(this : in User_Database); -- writes User Database to file
    procedure loadUserDatabase(this : in out User_Database); -- loads user database from file
+
+   function addContact (database : in out User_Database; thisUser : in out UserPtr; contactToAdd : UserPtr) return Boolean;
+   function removeContact (database : in out User_Database; thisUser : in out UserPtr; contactToRemove : UserPtr) return Boolean;
 
 private
 
@@ -48,7 +51,7 @@ private
 
 
    type User_Database is tagged record
-      users : User_Maps.Map; -- # username -> userDataSet
+      users : User_Maps.Map; -- # username -> userPtr
       databaseFileName: Unbounded_String := To_Unbounded_String("ADAChatDatabase.txt");
       maxSize : Integer := 1000000;
 

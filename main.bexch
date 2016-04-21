@@ -1,30 +1,30 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-C:\Users\Daniel Kreck\Documents\adachat\adachat.gpr
-20160419185230
+G:\ADAChat\adachat.gpr
+20160417090342
 [BOUND OBJECT FILES]
-C:\Users\Daniel Kreck\Documents\adachat\client_logic.o
-C:\Users\Daniel Kreck\Documents\adachat\client_ui.o
-C:\Users\Daniel Kreck\Documents\adachat\datatypes.o
-C:\Users\Daniel Kreck\Documents\adachat\protocol.o
-C:\Users\Daniel Kreck\Documents\adachat\server_logic.o
-C:\Users\Daniel Kreck\Documents\adachat\server_ui.o
-C:\Users\Daniel Kreck\Documents\adachat\user_databases.o
-C:\Users\Daniel Kreck\Documents\adachat\concrete_server_logic.o
-C:\Users\Daniel Kreck\Documents\adachat\main.o
+G:\ADAChat\client_logic.o
+G:\ADAChat\client_ui.o
+G:\ADAChat\datatypes.o
+G:\ADAChat\protocol.o
+G:\ADAChat\server_logic.o
+G:\ADAChat\server_ui.o
+G:\ADAChat\user_databases.o
+G:\ADAChat\concrete_server_logic.o
+G:\ADAChat\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LC:\Users\Daniel Kreck\Documents\adachat\
--LC:\Users\Daniel Kreck\Documents\adachat\
--LD:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+-LG:\ADAChat\
+-LG:\ADAChat\
+-LG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
 -static
 -static-libgcc
-D:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
-D:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
+G:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
+G:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
 -lws2_32
 -Xlinker
 --stack=0x200000,0x1000

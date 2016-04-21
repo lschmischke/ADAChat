@@ -19,9 +19,10 @@ with Ada.Strings.Unbounded.Hash;
 --       Online Offline Benachrichtigungen
 --       Sicherstellen dass man keine Fremden in Chat einladen kann nur Kontakte
 --       Disconnect, Client aus allen Chaträumen entfernen
+
 --       prüfen ob Kontakt beim Add bereits in Kontaktliste
---       kontakt in datenbank noch eintragen
---       saveUserDB in addContact methode integrieren
+
+
 
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
@@ -110,9 +111,10 @@ private
                                                          Equivalent_Keys => "=");
 
    package userToUsersMap is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => UserPtr,
-						     Element_Type    => dataTypes.UserList.List,
-						     Hash            => userHash,
-                                                     Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
+								       Element_Type    => dataTypes.UserSet.Set,
+								       Hash            => userHash,
+								       Equivalent_Keys => "=",
+								       "=" =>dataTypes.UserSet."=");
 
    -- type Concrete_Server is new Server_Interface with record
    type Concrete_Server is record
