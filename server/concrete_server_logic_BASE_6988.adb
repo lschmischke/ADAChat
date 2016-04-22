@@ -305,9 +305,9 @@ package body Concrete_Server_Logic is
                              sender      => serverStr,
                              receiver    => roomID,
                              content     => To_Unbounded_String ("ok"));
+                        --#TODO welcher content in requestAcceptMessage?
                         chatRoom : chatRoomPtr;
                      begin
-                        if(getContacts(user).Contains(userToAdd)) then
                         --#pruefe ob chat mit dieser Nummer bereits existiert
                         if not Server.chatRooms.Contains (incoming_message.receiver) then
                            writeMessageToStream
@@ -319,7 +319,7 @@ package body Concrete_Server_Logic is
                                    receiver    => serverRoomID,
                                    content     =>
                                      To_Unbounded_String
-                                       ("invalid roomID in chatrequest, please use your serverRoomID for new chatrequests and the specific chatrommID for invites")));
+                                       ("invalid roomID in chatrequest, please use your serverRoomID for new chatrequests and the chatrommID for invites")));
 
                         elsif incoming_message.receiver = serverRoomID then
                            --#neuer Raum
@@ -336,17 +336,7 @@ package body Concrete_Server_Logic is
                            clientToAdd.chatRoomList.Append (chatRoom);
                            --#userlist rumschicken
                            broadcastToChatRoom (chatRoom, generateUserlistMessage (chatRoom));
-                           end if;
-                        else
-                           declare
-                              noContactMessage : MessageObject := createMessage(Protocol.Refused,serverStr,client.ServerRoomID,To_Unbounded_String("You have no contact with name "&To_String(incoming_message.content)));
-                           begin
-
-                              writeMessageToStream(client.Socket,noContactMessage);
-                           end;
-                           end if;
-
-
+                        end if;
                      end;
 
                   -- ### LEAVECHAT ###
@@ -382,9 +372,10 @@ package body Concrete_Server_Logic is
                                 receiver    => serverRoomID,
                                 content     =>
                                   To_Unbounded_String
-                                    ("there is no chatroom with id" & Integer'Image (incoming_message.receiver)));
+                                    ("there is no chatroom with id " & Integer'Image (incoming_message.receiver)));
                            writeMessageToStream (client.Socket, refusedMessage);
                         end if;
+
                      end;
 
                   -- ### REGISTER ###
