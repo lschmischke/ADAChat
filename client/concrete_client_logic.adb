@@ -1,3 +1,4 @@
+with GNAT.String_Split; use GNAT.String_Split;
 package body Concrete_Client_Logic is
 
    Client : Socket_Type;
@@ -147,7 +148,7 @@ package body Concrete_Client_Logic is
    begin
 
       WriteMessageToStream(ClientSocket => Client,
-                                message      => MsgObject);
+                           message      => MsgObject);
 
    end SendMessageObject;
 
@@ -176,7 +177,7 @@ package body Concrete_Client_Logic is
       case MsgObject.Messagetype is
 
          when Connect =>
-             This.ServerRoomId := MsgObject.Receiver;
+            This.ServerRoomId := MsgObject.Receiver;
             return To_Unbounded_String("Die Verbindung wurde hergestellt!");
 
          when Chat =>
@@ -270,15 +271,25 @@ package body Concrete_Client_Logic is
                Append(Message, Integer'Image(MsgObject.Receiver));
                This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
                --##TODO Chatfenster oeffnen
-
                return Message;
             end;
 
          when Protocol.Userlist =>
-            --#TODO
-            --#Userlist Chatraum, User verwaltung...
+            declare
+               Substrings : GNAT.String_Split.Slice_Set;
+               UserSet : Userlist.Set;
+            begin
+               GNAT.String_Split.Create (S => Substrings,
+                                         From       => To_String(MsgObject.Content),
+                                         Separators => Protocol.Seperator,
+                                         Mode       => GNAT.String_Split.Single);
 
-            null;
+               for I in 1 .. GNAT.String_Split.Slice_Count (Substrings) loop
+                  UserSet.Insert(New_Item => To_Unbounded_String(GNAT.String_Split.Slice (Substrings, I)));
+               end loop;
+               This.ChatRoomParticipants.Insert(Key      => MsgObject.Receiver,
+                                                New_Item => UserSet);
+            end;
 
          when Leavechat =>
             --#TODO
@@ -317,7 +328,7 @@ package body Concrete_Client_Logic is
       return False;
    end SearchFriendList;
 
-     function Hash (R : Natural) return Hash_Type is
+   function Hash (R : Natural) return Hash_Type is
    begin
       return Hash_Type (R);
    end Hash;

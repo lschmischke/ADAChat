@@ -10,6 +10,9 @@ with Datatypes; use Datatypes;
 with Ada.Containers; use Ada.Containers;
 with Ada.Containers.Hashed_Sets;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
+with Ada.Containers.Indefinite_Hashed_Maps;
+with GNAT.String_Split; use GNAT.String_Split;
+
 
 
 package Concrete_Client_Logic is
@@ -22,8 +25,14 @@ package Concrete_Client_Logic is
    function Hash (R : Natural) return Hash_Type;
 
    package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
-                                                      Hash                => Hash,
-                                                      Equivalent_Elements => "=");
+                                                         Hash                => Hash,
+                                                         Equivalent_Elements => "=");
+
+   package ChatRoomUsers is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
+                                                                      Element_Type    => Userlist.Set,
+                                                                      Hash            => Hash,
+                                                                      Equivalent_Keys => "=",
+                                                                      "="             => Userlist."=");
 
    type Concrete_Client is new Client_Interface with record
       Socket : Socket_Type;
@@ -31,10 +40,11 @@ package Concrete_Client_Logic is
       UsersOnline : Userlist.Set;
       UsersOffline : Userlist.Set;
       ChatRoomIdSet : ChatRoomIds.Set;
+      ChatRoomParticipants : ChatRoomUsers.Map;
+
    end record;
 
    ServerID : constant Integer := 0;
-
 
    --Stellt eine Socketverbindung zum Server her und meldet den Client
    --nach Chat-Protokoll am Server an.

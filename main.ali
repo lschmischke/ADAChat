@@ -25,7 +25,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		ec2d868d DE NE OO SU IL
+U main%b		main.adb		406cf4bd DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -68,10 +68,10 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client_logic.ads	20160420195318 5e4a9618 client_logic%s
-D concrete_client_logic.ads  20160422103016 f3efce63 concrete_client_logic%s
-D concrete_server_logic.ads  20160422081628 918cc8a9 concrete_server_logic%s
-D datatypes.ads		20160420200206 bd60c4ab datatypes%s
+D client_logic.ads	20160422112140 5e4a9618 client_logic%s
+D concrete_client_logic.ads  20160422121030 5faebc53 concrete_client_logic%s
+D concrete_server_logic.ads  20160422112140 918cc8a9 concrete_server_logic%s
+D datatypes.ads		20160422112140 bd60c4ab datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
@@ -85,9 +85,9 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20160422110556 4579e767 main%b
-D protocol.ads		20160420200206 aaec25fd protocol%s
-D serverguicommunication.ads  20160422081628 69c2ab07 serverguicommunication%s
+D main.adb		20160422114018 4579e767 main%b
+D protocol.ads		20160422112140 aaec25fd protocol%s
+D serverguicommunication.ads  20160422112140 69c2ab07 serverguicommunication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
@@ -139,14 +139,14 @@ X 29 client_logic.ads
 4K9*Client_Logic 14e17 46|1w6
 6h9*Client_Interface
 X 30 concrete_client_logic.ads
-15K9*Concrete_Client_Logic 84e26 46|3w6 3r33 11r13
-28R9*Concrete_Client<29|6R9> 34e14 46|11r35
-29i7*Socket{40|409I9} 46|21r56 29r56
-41U14*ConnectToServer<29|8p14> 46|18s11
-65U14*SendTextMessage 46|24s11
-65r61 Username{21|79R9} 46|24r27
-66i30 Id_Receiver{integer} 46|25r27
-66r56 Msg{21|79R9} 46|26r27
+18K9*Concrete_Client_Logic 94e26 46|3w6 3r33 11r13
+37R9*Concrete_Client<29|6R9> 45e14 46|11r35
+38i7*Socket{40|409I9} 46|21r56 29r59
+51U14*ConnectToServer<29|8p14> 46|18s11
+75U14*SendTextMessage 46|24s11
+75r61 Username{21|79R9} 46|24r27
+76i30 Id_Receiver{integer} 46|25r27
+76r56 Msg{21|79R9} 46|26r27
 X 31 concrete_server_logic.ads
 24K9*Concrete_Server_Logic 163e26 46|2w6 2r33
 29R9*Concrete_Server<48|2R9> 126e14 46|10r14
@@ -156,14 +156,14 @@ X 40 g-socket.ads
 X 46 main.adb
 8U11*main 8b11 33l5 33t9
 10r4 cserver{31|29R9} 16r4
-11r4 Client{30|28R9} 18m4 18r4 21r49 24m4 24r4 29r49
-12r4 Msg{47|17R9} 21m4 22r30 29m4 30r33
+11r4 Client{30|37R9} 18m4 18r4 21r49 24m4 24r4 29r52
+12r4 Msg{47|17R9} 21m4 22r30 29m7 30r33
 X 47 protocol.ads
 9K9*Protocol 46|5w6 5r20 47|36e13
 17R9*MessageObject 46|12r10 47|22e14
 30U14*printMessageToInfoConsole 46|22s4 30s7
-34V13*readMessageFromStream{17R9} 46|21s11 29s11
-34i36 ClientSocket{40|409I9} 46|21r33 29r33
+34V13*readMessageFromStream{17R9} 46|21s11 29s14
+34i36 ClientSocket{40|409I9} 46|21r33 29r36
 X 48 serverguicommunication.ads
 2h9*Server
 X 49 system.ads
