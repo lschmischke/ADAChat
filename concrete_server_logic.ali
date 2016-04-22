@@ -36,7 +36,7 @@ RV SPARK_05
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U concrete_server_logic%b  concrete_server_logic.adb  70e6d347 DE OO PF PK
+U concrete_server_logic%b  concrete_server_logic.adb  85d993f3 DE OO PF PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -54,7 +54,7 @@ W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U concrete_server_logic%s  concrete_server_logic.ads  8467c908 DE EE OO PF PK
+U concrete_server_logic%s  concrete_server_logic.ads  56c57b7f DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.conversions%s  a-chacon.adb	a-chacon.ali
@@ -135,15 +135,9 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-<<<<<<< HEAD
-D concrete_server_logic.ads  20160420200206 87ed9fd6 concrete_server_logic%s
-D concrete_server_logic.adb  20160420200206 2f83b681 concrete_server_logic%b
+D concrete_server_logic.ads  20160422081628 918cc8a9 concrete_server_logic%s
+D concrete_server_logic.adb  20160422081628 14555b5a concrete_server_logic%b
 D datatypes.ads		20160420200206 bd60c4ab datatypes%s
-=======
-D concrete_server_logic.ads  20160421213908 fe032024 concrete_server_logic%s
-D concrete_server_logic.adb  20160421214730 8ee5f363 concrete_server_logic%b
-D datatypes.ads		20160421130246 bd60c4ab datatypes%s
->>>>>>> origin/feature/server_logic
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
@@ -157,13 +151,8 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-<<<<<<< HEAD
 D protocol.ads		20160420200206 aaec25fd protocol%s
-D server_logic.ads	20160419103438 1ba6241e server_logic%s
-=======
-D protocol.ads		20160421084212 aaec25fd protocol%s
-D serverguicommunication.ads  20160421212332 d4eff1fd serverguicommunication%s
->>>>>>> origin/feature/server_logic
+D serverguicommunication.ads  20160422081628 69c2ab07 serverguicommunication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
@@ -207,11 +196,7 @@ D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
-<<<<<<< HEAD
 D user_databases.ads	20160419103438 ca918931 user_databases%s
-=======
-D user_databases.ads	20160421130246 ca918931 user_databases%s
->>>>>>> origin/feature/server_logic
 X 1 ada.ads
 16K9*Ada 19e8 36|3r6 3r23 4r6 4r33 5r6 5r23 6r6 6r26 7r6 7r47 9r6 12r6 13r6
 . 14r6 100r35 107r31 112r34 37|50r7 89r13 94r13 124r7 128r7 148r16 556r13
@@ -250,7 +235,6 @@ X 13 a-cohama.ads
 45V18 Equivalent_Keys{boolean} 36|103r58 110r58
 48k24*Hashed_Maps 467e31 36|13w21 100r50 107r46
 52R9*Map<19|43R9> 36|121r43[100] 124r31[107]
-103V13*Length{5|20I9} 37|754s47[36|100]
 203U14*Insert 37|220s59[36|100] 582s24[36|107]
 205p7 Key{38|7P9} 37|220r67[36|100] 582r32[36|107]
 206p7 New_Item{36|43P9} 37|220r80[36|100] 582r43[36|107]
@@ -305,12 +289,11 @@ X 33 a-textio.ads
 263U14*Put_Line 37|16s7 50s19 71s10 74s10 89s25 94s25 105s10 108s10 124s19
 . 128s19 148s28 519s10 523s10
 X 36 concrete_server_logic.ads
-24K9*Concrete_Server_Logic 75E9 164l5 164e26 37|1b14 760l5 760t26
+24K9*Concrete_Server_Logic 75E9 163l5 163e26 37|1b14 755l5 755t26
 25K12*SGC=25:24 29r32 118r32
 29R9*Concrete_Server<53|2R9> 30r43 37p14 37r44 118c9 126e14 132P14 132r51
-. 133P14 133r56 134P14 134r51 135P13 135r62 37|4r24 8r43 729r51 730r22 736r56
-. 745r52 752r63
-30P9*Concrete_Server_Ptr(29R9) 52r44 138r66 140r52 143r47 148r45 37|3r13
+. 133P14 133r56 134P14 134r51 37|4r24 8r43 729r51 730r22 736r56 745r52
+30P9*Concrete_Server_Ptr(29R9) 52r44 137r66 139r52 142r47 147r45 37|3r13
 . 25r48 35r46 573r28 641r27 656r52
 37U14*StartNewServer 37=30 37>61 37>74 37|8b14 21l8 21t22 732s7
 37r30 This{29R9} 37|8b30 11r21
@@ -386,7 +369,7 @@ X 36 concrete_server_logic.ads
 119i7 Socket{46|409I9} 37|42m39 46r37 47r39 91r34
 120r7 SocketAddress{46|502R9} 37|44m14 45m14 46r63 58r68
 121r7 Connected_Clients{13|52R9[100]} 37|191r38 220m41 230r50 232r67 301r78
-. 412r81 482r81 688r20 690r37 723m14 738r46 754r29
+. 412r81 482r81 688r20 690r37 723m14 738r46
 122r7 UserDatabase{97|19R9} 37|15m47 184r40 299r87 300r87 399m34 411r90 428r53
 . 481r90 496r52 737r40
 123i7 chatRoomIDCounter{natural} 37|28r42 29m14 29r42
@@ -403,32 +386,29 @@ X 36 concrete_server_logic.ads
 133a72 username{string} 37|736b72 737r85
 134U14 stopServer<53|6p14> 134>25 37|745b14 749l8 749t18
 134r25 thisServer{29R9} 37|745b25
-135V13 getNumberOfConnectedUsers{natural}<53|7p13> 135>39 37|752b13 755l8
-. 755t33
-135r39 thisServer{29R9} 37|752b39
-138V13 checkIfCorrespondingContactRequestExists{boolean} 138>54 138>87 138>113
+137V13 checkIfCorrespondingContactRequestExists{boolean} 137>54 137>87 137>113
 . 37|419s29 640b13 652l8 652t48
-138p54 server{30P9} 37|641b7 647r11 648r19
-138p87 requestingUser{38|7P9} 37|642b7 649r33
-138p113 requestedUser{38|7P9} 37|643b7 647r44 648r51
-140U14 removeContactRequest 140=36 140>73 140>99 37|422s28 656b14 670l8 670t28
-140p36 server{30P9} 37|656b36 660r10 661r19 666r13
-140p73 requestingUser{38|7P9} 37|656b73 660r43 661r51 666r44
-140p99 requestedUser{38|7P9} 37|656b99 662r31
-143V13 getNextChatRoomID{natural} 143=32 37|25b13 31l8 31t25 203s74 298s71
-143p32 server{30P9} 37|25b32 28r35 29r7 29r35
-148U14 InitializeServer 148=31 148>66 148>79 37|19s7 35b14 75l8 75t24
-148p31 This{30P9} 37|35b32
-148a66 ip{string} 37|35b67 44r47
-148i79 port{natural} 37|35b80 45r46
-157t9 Main_Server_Task 37|51r7 79b14 109l8 109t24
-158Y13 Start 37|51s24 81b14
+137p54 server{30P9} 37|641b7 647r11 648r19
+137p87 requestingUser{38|7P9} 37|642b7 649r33
+137p113 requestedUser{38|7P9} 37|643b7 647r44 648r51
+139U14 removeContactRequest 139=36 139>73 139>99 37|422s28 656b14 670l8 670t28
+139p36 server{30P9} 37|656b36 660r10 661r19 666r13
+139p73 requestingUser{38|7P9} 37|656b73 660r43 661r51 666r44
+139p99 requestedUser{38|7P9} 37|656b99 662r31
+142V13 getNextChatRoomID{natural} 142=32 37|25b13 31l8 31t25 203s74 298s71
+142p32 server{30P9} 37|25b32 28r35 29r7 29r35
+147U14 InitializeServer 147=31 147>66 147>79 37|19s7 35b14 75l8 75t24
+147p31 This{30P9} 37|35b32
+147a66 ip{string} 37|35b67 44r47
+147i79 port{natural} 37|35b80 45r46
+156t9 Main_Server_Task 37|51r7 79b14 109l8 109t24
+157Y13 Start 37|51s24 81b14
 X 37 concrete_server_logic.adb
 3p4 Server{36|30P9} 12m7 15r40 19m25 19r25 42r32 44r7 45r7 46r30 46r56 47r32
 . 58r61 91r27 184r33 191r31 203m93 203r93 217m66 217r66 220r34 230r43 232r60
 . 257r29 258r40 298m90 298r90 299r80 300r80 301r71 312r32 326m66 326r66 334r40
 . 350r28 351r40 399r27 411r83 412r74 419r71 422m50 422r50 428r46 457r34 458r43
-. 464r34 481r83 482r74 496r45 688r13 690r30 723r7 737r33 738r39 754r22
+. 464r34 481r83 482r74 496r45 688r13 690r30 723r7 737r33 738r39
 4r4 concServer{36|29R9} 11m7 12m17 12r17
 26i7 id{natural} 28m7 30r14
 36p7 SubServer{36|43P9} 55r32 58r33 66r29
@@ -528,7 +508,7 @@ X 37 concrete_server_logic.adb
 X 38 datatypes.ads
 5K9*dataTypes 36|11w6 11r21 113r73 115r84 37|211r51 453r39 483r40 645r15
 . 657r15 658r15 683r21 38|32e14
-7P9*UserPtr(6R9) 36|76r14 99r36 100r81 112r91 138r104 138r129 140r90 140r115
+7P9*UserPtr(6R9) 36|76r14 99r36 100r81 112r91 137r104 137r129 139r90 139r115
 . 37|115r22 299r48 300r48 411r51 481r51 589r36 642r27 643r27 656r90 656r115
 . 737r14
 9K12*UserList[6|45] 36|113r83 115r94 37|211r61 453r49 483r50 645r25 657r25
@@ -629,7 +609,7 @@ X 52 protocol.ads
 34V13*readMessageFromStream{17R9} 37|141s36
 34i36 ClientSocket{46|409I9} 37|141r59
 X 53 serverguicommunication.ads
-1K9*ServerGUICommunication 36|15w6 25r24 53|9e27
+1K9*ServerGUICommunication 36|15w6 25r24 53|8e27
 2h9*Server 36|29r36 118r36
 X 54 system.ads
 67M9*Address

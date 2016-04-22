@@ -82,13 +82,8 @@ D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-<<<<<<< HEAD
 D protocol.ads		20160420200206 aaec25fd protocol%s
-D protocol.adb		20160420200206 0e8e6c9e protocol%b
-=======
-D protocol.ads		20160421084212 aaec25fd protocol%s
-D protocol.adb		20160421154638 0e8e6c9e protocol%b
->>>>>>> origin/feature/server_logic
+D protocol.adb		20160422081628 0e8e6c9e protocol%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-conca2.ads		20150518132148 02a0d7d0 system.concat_2%s

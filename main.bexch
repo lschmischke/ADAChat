@@ -1,7 +1,6 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-<<<<<<< HEAD
 E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr
 20160419103438
 [BOUND OBJECT FILES]
@@ -10,29 +9,15 @@ E:\Development\Ada\Block_Projekt\ada_chat\client_ui.o
 E:\Development\Ada\Block_Projekt\ada_chat\datatypes.o
 E:\Development\Ada\Block_Projekt\ada_chat\protocol.o
 E:\Development\Ada\Block_Projekt\ada_chat\concrete_client_logic.o
-E:\Development\Ada\Block_Projekt\ada_chat\server_logic.o
+E:\Development\Ada\Block_Projekt\ada_chat\serverguicommunication.o
 E:\Development\Ada\Block_Projekt\ada_chat\user_databases.o
 E:\Development\Ada\Block_Projekt\ada_chat\concrete_server_logic.o
 E:\Development\Ada\Block_Projekt\ada_chat\main.o
-=======
-G:\ADAChat\adachat.gpr
-20160417090342
-[BOUND OBJECT FILES]
-G:\ADAChat\client_logic.o
-G:\ADAChat\client_ui.o
-G:\ADAChat\datatypes.o
-G:\ADAChat\protocol.o
-G:\ADAChat\serverguicommunication.o
-G:\ADAChat\user_databases.o
-G:\ADAChat\concrete_server_logic.o
-G:\ADAChat\main.o
->>>>>>> origin/feature/server_logic
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
-<<<<<<< HEAD
 -LE:\Development\Ada\Block_Projekt\ada_chat\
 -LE:\Development\Ada\Block_Projekt\ada_chat\
 -LE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
@@ -40,15 +25,6 @@ b__main.ali
 -static-libgcc
 E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
 E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
-=======
--LG:\ADAChat\
--LG:\ADAChat\
--LG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
--static
--static-libgcc
-G:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
-G:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
->>>>>>> origin/feature/server_logic
 -lws2_32
 -Xlinker
 --stack=0x200000,0x1000
