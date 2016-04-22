@@ -16,18 +16,18 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U client_ui%b		client_ui.adb		401d7087 DE NE OO PK IL
+U client_ui%b		client_ui.adb		0ac6c829 DE NE OO PK IL
 
-U client_ui%s		client_ui.ads		80f42b28 DE EE NE OO PK IL
+U client_ui%s		client_ui.ads		ca2f9386 DE EE NE OO PK IL
 
-D client_ui.ads		20160323232200 80f42b28 client_ui%s
-D client_ui.adb		20160416103510 c0e95baf client_ui%b
+D client_ui.ads		20160420192844 ca2f9386 client_ui%s
+D client_ui.adb		20160412093232 c0e95baf client_ui%b
 D system.ads		20150518132150 f4ce8c3a system%s
 X 1 client_ui.ads
-1K9*client_ui 5l5 5e14 2|1b14 5l5 5t14
+1K9*client_ui 6l5 6e14 2|1b14 5l5 5t14
 2U14*showMessage
-3U14*setConnectionStatus
-4U14*updateChatParticipants
+3U14*updateChatParticipants
+4U14*setConnectionStatus
 X 2 client_ui.adb
 2U14 showMessage
 3U14 setConnectionStatus

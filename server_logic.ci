@@ -18,6 +18,16 @@ class {
              -8:server_logic__server_interfaceDA\n
              -9:server_logic__server_interfaceDF"
 }
+<<<<<<< HEAD
+graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads"
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "server_logic___elabs" label: "Server_Logic\nE:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads:3:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "server_logic___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads:5:9" }
+edge: { sourcename: "server_logic___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads:5:9" }
+node: { title: "server_logic__Tserver_interfaceCFD" label: "Tserver_Interfacecfd\nE:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads:5:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "server_logic__Tserver_interfaceCFD" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\server_logic.ads:5:9" }
+=======
 graph: { title: "G:\ADAChat\server\server_logic.ads"
 node: { title: "ada__tags__register_tag" label: "Register_Tag\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
 node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
@@ -26,5 +36,6 @@ edge: { sourcename: "server_logic___elabs" targetname: "ada__tags__register_tag"
 edge: { sourcename: "server_logic___elabs" targetname: "ada__tags__check_tsd" label: "G:\ADAChat\server\server_logic.ads:5:9" }
 node: { title: "server_logic__Tserver_interfaceCFD" label: "Tserver_Interfacecfd\nG:\ADAChat\server\server_logic.ads:5:9\n48 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "server_logic__Tserver_interfaceCFD" targetname: "__indirect_call" label: "G:\ADAChat\server\server_logic.ads:5:9" }
+>>>>>>> origin/feature/server_logic
 node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
 }

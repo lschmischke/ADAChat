@@ -1,10 +1,10 @@
 edge: { sourcename: "client_logic__Tclient_interfaceCFD"
   targetname: "-9:client_logic__client_interface,client_logic__client_interface"
-  label: "client_logic.ads:5:9"
+  label: "client_logic.ads:6:9"
 }
 class {
   classname: "client_logic__client_interface"
-  label: "client_logic__client_interface\client_logic.ads:5:9"
+  label: "client_logic__client_interface\client_logic.ads:6:9"
   virtuals: "1:client_logic__connecttoserver\n
              2:client_logic__disconnectfromserver\n
              -1:client_logic___size\n
@@ -17,13 +17,13 @@ class {
              -8:client_logic__client_interfaceDA\n
              -9:client_logic__client_interfaceDF"
 }
-graph: { title: "G:\ADAChat\client\client_logic.ads"
-node: { title: "ada__tags__register_tag" label: "Register_Tag\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
-node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
-node: { title: "client_logic___elabs" label: "Client_Logic\nG:\ADAChat\client\client_logic.ads:3:1\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "client_logic___elabs" targetname: "ada__tags__register_tag" label: "G:\ADAChat\client\client_logic.ads:5:9" }
-edge: { sourcename: "client_logic___elabs" targetname: "ada__tags__check_tsd" label: "G:\ADAChat\client\client_logic.ads:5:9" }
-node: { title: "client_logic__Tclient_interfaceCFD" label: "Tclient_Interfacecfd\nG:\ADAChat\client\client_logic.ads:5:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "client_logic__Tclient_interfaceCFD" targetname: "__indirect_call" label: "G:\ADAChat\client\client_logic.ads:5:9" }
+graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\client\client_logic.ads"
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "client_logic___elabs" label: "Client_Logic\nE:\Development\Ada\Block_Projekt\ada_chat\client\client_logic.ads:4:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "client_logic___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\client\client_logic.ads:6:9" }
+edge: { sourcename: "client_logic___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\client\client_logic.ads:6:9" }
+node: { title: "client_logic__Tclient_interfaceCFD" label: "Tclient_Interfacecfd\nE:\Development\Ada\Block_Projekt\ada_chat\client\client_logic.ads:6:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "client_logic__Tclient_interfaceCFD" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\client\client_logic.ads:6:9" }
 node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
 }

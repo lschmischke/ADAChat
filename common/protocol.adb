@@ -2,7 +2,6 @@ package body Protocol is
 
    function messageObjectToString(message : MessageObject) return String is
    begin
-
       return MessageTypeE'Image(message.messagetype) & Seperator & Ada.Strings.Unbounded.To_String(message.sender) &
         Seperator & Trim(Integer'Image(message.receiver), Left) & Seperator & Ada.Strings.Unbounded.To_String(message.content);
    end messageObjectToString;
@@ -18,6 +17,7 @@ package body Protocol is
                                Separators => Seperator, Mode => GNAT.String_Split.Multiple);
       Count := GNAT.String_Split.Slice_Count(MessageParts);
       if count >=4 then
+	 -- # TODO: Fehlerbehandlung
          newMessageObject.messagetype := MessageTypeE'Value(GNAT.String_Split.Slice(MessageParts, 1));
          newMessageObject.sender := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(MessageParts, 2));
          newMessageObject.receiver := Integer'Value(GNAT.String_Split.Slice(MessageParts, 3));

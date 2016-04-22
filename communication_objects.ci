@@ -15,6 +15,27 @@ class {
              -8:communication_objects__communication_objectDA\n
              -9:communication_objects__communication_objectDF"
 }
+<<<<<<< HEAD
+graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads"
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "communication_objects___elabs" label: "Communication_Objects\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:1:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9" }
+edge: { sourcename: "communication_objects___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9" }
+node: { title: "communication_objects__Tcommunication_objectCFD" label: "Tcommunication_Objectcfd\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__Tcommunication_objectCFD" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+node: { title: "communication_objects__communication_objectDF" label: "Communication_Objectdf\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__communication_objectDA" label: "Communication_Objectda\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects___assign" label: "Communication_Objects\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n448 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__Oeq" label: "=\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__communication_objectSO" label: "Communication_Objectso\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "communication_objects__communication_objectSO" targetname: "communication_objects__communication_objectSW" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9" }
+node: { title: "communication_objects__communication_objectSW" label: "Communication_Objectsw\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__communication_objectSR" label: "Communication_Objectsr\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects___size" label: "Communication_Objects\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "communication_objects__communication_objectIP" label: "Communication_Objectip\nE:\Development\Ada\Block_Projekt\ada_chat\common\communication_objects.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+=======
 graph: { title: "G:\ADAChat\common\communication_objects.ads"
 node: { title: "ada__tags__register_tag" label: "Register_Tag\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
 node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
@@ -34,4 +55,5 @@ node: { title: "communication_objects__communication_objectSW" label: "Communica
 node: { title: "communication_objects__communication_objectSR" label: "Communication_Objectsr\nG:\ADAChat\common\communication_objects.ads:3:9\n8 bytes (static)\n0 dynamic objects" }
 node: { title: "communication_objects___size" label: "Communication_Objects\nG:\ADAChat\common\communication_objects.ads:3:9\n8 bytes (static)\n0 dynamic objects" }
 node: { title: "communication_objects__communication_objectIP" label: "Communication_Objectip\nG:\ADAChat\common\communication_objects.ads:3:9\n32 bytes (static)\n0 dynamic objects" }
+>>>>>>> e247cafda64dfe7cc3c4b5273aefaff9a35d169b
 }

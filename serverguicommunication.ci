@@ -1,0 +1,30 @@
+edge: { sourcename: "serverguicommunication__TserverCFD"
+  targetname: "-9:serverguicommunication__server,serverguicommunication__server"
+  label: "serverguicommunication.ads:2:9"
+}
+class {
+  classname: "serverguicommunication__server"
+  label: "serverguicommunication__server\serverguicommunication.ads:2:9"
+  virtuals: "1:serverguicommunication__startserver\n
+             2:serverguicommunication__kickuserwithname\n
+             3:serverguicommunication__stopserver\n
+             -1:serverguicommunication___size\n
+             -2:serverguicommunication__serverSR\n
+             -3:serverguicommunication__serverSW\n
+             -4:serverguicommunication__serverSI\n
+             -5:serverguicommunication__serverSO\n
+             -6:serverguicommunication__Oeq\n
+             -7:serverguicommunication___assign\n
+             -8:serverguicommunication__serverDA\n
+             -9:serverguicommunication__serverDF"
+}
+graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\server\serverguicommunication.ads"
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "serverguicommunication___elabs" label: "Serverguicommunication\nE:\Development\Ada\Block_Projekt\ada_chat\server\serverguicommunication.ads:1:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "serverguicommunication___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\serverguicommunication.ads:2:9" }
+edge: { sourcename: "serverguicommunication___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\serverguicommunication.ads:2:9" }
+node: { title: "serverguicommunication__TserverCFD" label: "Tservercfd\nE:\Development\Ada\Block_Projekt\ada_chat\server\serverguicommunication.ads:2:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "serverguicommunication__TserverCFD" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\serverguicommunication.ads:2:9" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+}

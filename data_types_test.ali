@@ -66,9 +66,15 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
+<<<<<<< HEAD
+D data_types.ads	20160412093232 0e9f5bcf data_types%s
+D data_types_test.ads	20160412101054 564c0ad3 data_types_test%s
+D data_types_test.adb	20160412101054 f94da1c2 data_types_test%b
+=======
 D data_types.ads	20160416182854 46e98804 data_types%s
 D data_types_test.ads	20160416103510 564c0ad3 data_types_test%s
 D data_types_test.adb	20160416220124 344d0d34 data_types_test%b
+>>>>>>> e247cafda64dfe7cc3c4b5273aefaff9a35d169b
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
 D system.ads		20150518132150 f4ce8c3a system%s
