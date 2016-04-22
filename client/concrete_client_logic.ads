@@ -11,6 +11,7 @@ with Ada.Containers.Hashed_Sets;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
 with Ada.Containers.Indefinite_Hashed_Maps;
 with GNAT.String_Split; use GNAT.String_Split;
+with Gui2Client_Communication; use Gui2Client_Communication;
 
 
 
@@ -33,7 +34,7 @@ package Concrete_Client_Logic is
                                                                       Equivalent_Keys => "=",
                                                                       "="             => Userlist."=");
 
-   type Concrete_Client is new Client_Interface with record
+   type Concrete_Client is new Gui2Client_Communication.Client with record
       Socket : Socket_Type;
       ServerRoomId : Integer;
       UsersOnline : Userlist.Set;
@@ -43,6 +44,7 @@ package Concrete_Client_Logic is
 
    end record;
 
+   --#ServerID fuer register und connect
    ServerID : constant Integer := 0;
 
    --Stellt eine Socketverbindung zum Server her und meldet den Client
@@ -89,5 +91,22 @@ package Concrete_Client_Logic is
    procedure RefreshUserlist(This : in out Concrete_Client; User : in Unbounded_String);
 
    function searchFriendList(This : in out Concrete_Client; User : in Unbounded_String) return Boolean;
+
+   -----------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
+   --#Implementierung des Gui2Client_Communication interfaces
+
+   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String);
+
+   procedure DisconnectUser(This : in out Concrete_Client; Username : in Unbounded_String; Message : in Unbounded_String);
+
+   procedure RegisterUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String);
+
+   procedure InviteToGroupChat(This : in out Concrete_Client; Username : in Unbounded_String; Receiver : in Integer;
+                               Participant : in Unbounded_String);
+
+   procedure SendMessageToChat(This : in out Concrete_Client; Receiver: in Integer; Username : in Unbounded_String;
+                               Message : in Unbounded_String);
+   -----------------------------------------------------------------------------
 
 end Concrete_Client_Logic;

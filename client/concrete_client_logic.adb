@@ -333,4 +333,59 @@ package body Concrete_Client_Logic is
       return Hash_Type (R);
    end Hash;
 
+   -----------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
+
+   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
+
+   begin
+      This.ConnectToServer(UserName     => Username,
+                           Password     => Password,
+                           ServerAdress => To_Unbounded_String("127.0.0.1"),
+                           ServerPort   => 12321);
+   end LoginUser;
+
+   -----------------------------------------------------------------------------
+
+   procedure DisconnectUser(This : in out Concrete_Client; Username : in Unbounded_String; Message : in Unbounded_String) is
+
+   begin
+      This.DisconnectFromServer(UserName => Username,
+                                Msg      => Message);
+   end DisconnectUser;
+
+   -----------------------------------------------------------------------------
+
+   procedure RegisterUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
+
+   begin
+      This.RegisterAtServer(UserName => Username,
+                            Password => Password); --#TODO ENCODE EINFUEGEN
+   end RegisterUser;
+
+   -----------------------------------------------------------------------------
+
+   procedure InviteToGroupChat(This : in out Concrete_Client; Username : in Unbounded_String; Receiver : in Integer;
+                               Participant : in Unbounded_String) is
+
+   begin
+      This.RequestChatroom(UserName    => Username,
+                           Id_Receiver => Receiver,
+                           Participant => Participant);
+   end InviteToGroupChat;
+
+   -----------------------------------------------------------------------------
+
+   procedure SendMessageToChat(This : in out Concrete_Client; Receiver: in Integer; Username : in Unbounded_String;
+                               Message : in Unbounded_String) is
+
+   begin
+
+      This.SendTextMessage(Username    => Username,
+                           Id_Receiver => Receiver,
+                           Msg         => Message);
+   end SendMessageToChat;
+
+   -----------------------------------------------------------------------------
+
 end Concrete_Client_Logic;

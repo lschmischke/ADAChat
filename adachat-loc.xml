@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_file>
+  <Project >
     <file_marker column=" 33" line=" 36" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\concrete_client_logic.ads</vfs_file>
@@ -38,9 +37,41 @@
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\client2gui_communication.ads</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
       <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\gui2client_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\concrete_client_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\concrete_client_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\concrete_client_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\server_to_gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\server\user_databases.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr</vfs_project>
+      <vfs_file>E:\Development\Ada\Block_Projekt\ada_chat\client\concrete_client_logic.ads</vfs_file>
     </file_marker>
   </Project>
   <Project >
