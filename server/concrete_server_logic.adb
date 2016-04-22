@@ -164,7 +164,7 @@ package body Concrete_Server_Logic is
                             (messagetype => Protocol.Refused,
                              sender      => serverStr,
                              receiver    => 0,
-			     content     => To_Unbounded_String ("invalid passwort"));
+			     content     => To_Unbounded_String ("invalid password"));
 			alreadyLoggedInMessage : MessageObject :=
                           createMessage
                             (messagetype => Protocol.Refused,
@@ -416,7 +416,7 @@ package body Concrete_Server_Logic is
                      --requestingUser ist user
                      begin
                         -- TODO: pruefe ob es die beiden User gibt
-                        if (checkIfCorrespondingContactRequestExists (Server, user, requestedUser)) then
+                        if (checkIfContactRequestExists (Server, requestedUser, user)) then
                            -- stelle Kontakt her
                            --      Kontaktanfrage aus Liste rausnehmen
                            removeContactRequest (Server, requestedUser, user);
@@ -497,10 +497,23 @@ package body Concrete_Server_Logic is
 
 			   -- #Benachrichtige die User über Löschen des Kontakts
 			   writeMessageToStream(client.Socket,messageToRequestingUser);
-			   writeMessageToStream(client.socket,messageToRequestedUser);
-			else
-			   messageToRequestingUser := createMessage(Protocol.Refused,serverStr,client.ServerRoomID,To_Unbounded_String("There is no contact with name: " &To_String(incoming_message.content)));
-			end if;
+			   writeMessageToStream(requestedUserClient.socket,messageToRequestedUser);
+
+                          -- # Kontaktanfrage ablehnen über RemContact
+                        elsif (checkIfContactRequestExists(server         => server,
+                                                                   requestingUser => requestedUser,
+                                                                       requestedUser  => user)) then
+                           removeContactRequest(server         => server,
+                                                requestingUser => requestedUser,
+                                                requestedUser  => user);
+                           -- # User muss benachrichtigt werden, dass seine Kontaktanfrage abgelehnt wurde
+                           messageToRequestedUser := createMessage(Protocol.remContact,serverStr,requestedUserClient.ServerRoomID,getUsername(user));
+                           writeMessageToStream(requestedUserClient.Socket,messageToRequestedUser);
+                        else
+                           -- # wenn keine Kontaktanfrage zu diesem Kontakt vorhanden
+                           messageToRequestingUser := createMessage(Protocol.Refused,serverStr,client.ServerRoomID,To_Unbounded_String("There is no contact request from "&To_String(incoming_message.content)));
+                           writeMessageToStream(client.Socket, messageToRequestingUser);
+                        end if;
 
 		     end;
 
@@ -637,19 +650,19 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   function checkIfCorrespondingContactRequestExists
+   function checkIfContactRequestExists
      (server         : in Concrete_Server_Ptr;
       requestingUser :    UserPtr;
       requestedUser  :    UserPtr) return Boolean
    is
       ulist : dataTypes.UserList.List;
    begin
-      if (server.ContactRequests.Contains (requestedUser)) then
-         ulist := server.ContactRequests.Element (requestedUser);
-         return ulist.Contains (requestingUser);
+      if (server.ContactRequests.Contains (requestingUser)) then
+         ulist := server.ContactRequests.Element (requestingUser);
+         return ulist.Contains (requestedUser);
       end if;
       return False;
-   end checkIfCorrespondingContactRequestExists;
+   end checkIfContactRequestExists;
 
    ----------------------------------------------------------------------------------------
 
