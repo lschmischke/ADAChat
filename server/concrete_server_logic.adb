@@ -749,11 +749,6 @@ package body Concrete_Server_Logic is
    end stopServer;
     ----------------------------------------------------------------------------------------
 
-   function getNumberOfConnectedUsers(thisServer : aliased in Concrete_Server) return Natural is
-   begin
-      return Natural(server.Connected_Clients.Length);
-   end getNumberOfConnectedUsers;
-    ----------------------------------------------------------------------------------------
 
    ----------------------------------------------------------------------------------------
 

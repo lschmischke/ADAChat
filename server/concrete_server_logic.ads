@@ -132,7 +132,6 @@ private
    procedure startServer(thisServer :  aliased in Concrete_Server; ipAdress: String; port : Natural);
    procedure kickUserWithName(thisServer : aliased in  Concrete_Server;username:String);
    procedure stopServer(thisServer : aliased in   Concrete_Server);
-   function getNumberOfConnectedUsers(thisServer :aliased in Concrete_Server) return Natural;
    -------------------------------------------------------------------------------------------
 
    function checkIfCorrespondingContactRequestExists(server : in Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;
