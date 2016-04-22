@@ -425,16 +425,16 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\Daniel Kreck\Documents\adachat\client_logic.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\client_ui.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\datatypes.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\gui_to_server_communication.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\protocol.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\user_databases.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\concrete_server_logic.o
-   --   C:\Users\Daniel Kreck\Documents\adachat\main.o
-   --   -LC:\Users\Daniel Kreck\Documents\adachat\
-   --   -LC:\Users\Daniel Kreck\Documents\adachat\
+   --   C:\Users\Leonard\Documents\ADA\adachat\client_logic.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\client_ui.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\datatypes.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\gui_to_server_communication.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\protocol.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\user_databases.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\concrete_server_logic.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\main.o
+   --   -LC:\Users\Leonard\Documents\ADA\adachat\
+   --   -LC:\Users\Leonard\Documents\ADA\adachat\
    --   -LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
    --   -static
    --   -lgnarl

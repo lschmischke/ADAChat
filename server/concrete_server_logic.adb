@@ -774,48 +774,32 @@ package body Concrete_Server_Logic is
    end disconnectClient;
 
    ----------------------------------------------------------------------------------------
-<<<<<<< HEAD
 
-   overriding
-   procedure startServer(thisServer : aliased in  Concrete_Server; ipAdress: String; port : Natural) is
-=======
    overriding procedure startServer (thisServer : aliased in Concrete_Server; ipAdress : String; port : Natural) is
->>>>>>> 54ed3da744fe16a8afbfe5aa7c95253254fcdf39
       serv : aliased Concrete_Server := thisServer;
    begin
       StartNewServer (serv, ipAdress, port);
    end startServer;
-<<<<<<< HEAD
 
    ----------------------------------------------------------------------------------------
 
-   procedure kickUserWithName(thisServer : aliased in  Concrete_Server; username : String) is
-      user : UserPtr := getUser(server.UserDatabase,username => To_Unbounded_String(username));
-      client : Concrete_Client_Ptr := server.Connected_Clients.Element(user);
-=======
    ----------------------------------------------------------------------------------------
 
    procedure kickUserWithName (thisServer : aliased in Concrete_Server; username : String) is
       user   : UserPtr             := getUser (Server.UserDatabase, username => To_Unbounded_String (username));
       client : Concrete_Client_Ptr := Server.Connected_Clients.Element (user);
->>>>>>> 54ed3da744fe16a8afbfe5aa7c95253254fcdf39
    begin
       disconnectClient (client);
    end kickUserWithName;
 
    ----------------------------------------------------------------------------------------
 
-<<<<<<< HEAD
-   procedure stopServer(thisServer : aliased in Concrete_Server) is
-=======
    procedure stopServer (thisServer : aliased in Concrete_Server) is
->>>>>>> 54ed3da744fe16a8afbfe5aa7c95253254fcdf39
    begin
       --# TODO
       null;
    end stopServer;
    ----------------------------------------------------------------------------------------
-<<<<<<< HEAD
 
    overriding
    function loadDB(thisServer : aliased in Concrete_Server; DataFile : File_type) return Boolean is
@@ -855,8 +839,6 @@ package body Concrete_Server_Logic is
       -- TODO
       null;
    end deleteUserFromDatabase;
-=======
->>>>>>> 54ed3da744fe16a8afbfe5aa7c95253254fcdf39
 
    ----------------------------------------------------------------------------------------
 
