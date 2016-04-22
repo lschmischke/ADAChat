@@ -233,9 +233,8 @@ node: { title: "ada__finalization__initialize" label: "Initialize\nE:/programme/
 node: { title: "ada__finalization__initialize" label: "Initialize\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-finali.ads:46:14" shape : ellipse }
 node: { title: "datatypes___elabs" label: "Datatypes\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:5:1\n32 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "datatypes___elabs" targetname: "_Unwind_Resume" }
-<<<<<<< HEAD
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
 edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
 edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:310:9" }
@@ -255,29 +254,6 @@ edge: { sourcename: "datatypes___elabs" targetname: "system__standard_library__a
 edge: { sourcename: "datatypes___elabs" targetname: "system__finalization_masters__initialize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:7:9" }
 edge: { sourcename: "datatypes___elabs" targetname: "system__finalization_masters__finalization_masterIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:7:9" }
 edge: { sourcename: "datatypes___elabs" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:7:9" }
-=======
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:310:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:310:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "system__secondary_stack__ss_release" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:383:4" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__finalization__initialize" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:383:34" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__finalization__controlledIP" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:383:34" }
-edge: { sourcename: "datatypes___elabs" targetname: "system__secondary_stack__ss_mark" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:383:4" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:264:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:264:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-iteint.ads:32:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-iteint.ads:32:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__register_tag" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-iteint.ads:24:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "ada__tags__check_tsd" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-iteint.ads:24:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "system__finalization_masters__set_base_pool" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:7:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:7:0" }
-edge: { sourcename: "datatypes___elabs" targetname: "system__finalization_masters__initialize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:7:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "system__finalization_masters__finalization_masterIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:7:9" }
-edge: { sourcename: "datatypes___elabs" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:7:9" }
->>>>>>> origin/feature/server_logic
 node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
 node: { title: "datatypes__removecontact" label: "removecontact\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:51:4\n48 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "datatypes__removecontact" targetname: "datatypes__userlist__delete" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:56:23" }
@@ -336,7 +312,6 @@ edge: { sourcename: "datatypes__finalize_spec" targetname: "system__soft_links__
 edge: { sourcename: "datatypes__finalize_spec" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:5:1" }
 edge: { sourcename: "datatypes__finalize_spec" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__finalize_spec" targetname: "_Unwind_Resume" }
-<<<<<<< HEAD
 edge: { sourcename: "datatypes__finalize_spec" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:5:1" }
 edge: { sourcename: "datatypes__finalize_spec" targetname: "system__finalization_masters__finalize" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:7:9" }
 edge: { sourcename: "datatypes__finalize_spec" targetname: "datatypes__userlist__clear" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:383:4" }
@@ -347,180 +322,180 @@ edge: { sourcename: "datatypes__finalize_spec" targetname: "ada__tags__unregiste
 edge: { sourcename: "datatypes__finalize_spec" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:5:1" }
 node: { title: "datatypes__TuserCFD" label: "Tusercfd\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:6:9\n48 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "datatypes__TuserCFD" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:6:9" }
-node: { title: "datatypes___assign" label: "Datatypes\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n464 bytes (static)\n0 dynamic objects" }
+node: { title: "datatypes___assign" label: "Datatypes\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n464 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "datatypes___assign" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes___assign" targetname: "__gnat_raise_from_controlled_operation" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes___assign" targetname: "__gnat_raise_from_controlled_operation" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes___assign" targetname: "__gnat_set_exception_parameter" }
 edge: { sourcename: "datatypes___assign" targetname: "__gnat_begin_handler" }
 edge: { sourcename: "datatypes___assign" targetname: "__gnat_end_handler" }
-edge: { sourcename: "datatypes___assign" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes___assign" targetname: "datatypes__userDA" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes___assign" targetname: "datatypes__userDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes___assign" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__Oeq" label: "=\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__Oeq" targetname: "datatypes__userlist__Oeq__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__Oeq" targetname: "ada__strings__unbounded__Oeq" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__Oeq" targetname: "ada__strings__unbounded__Oeq" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__userSO" label: "Userso\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userSO" targetname: "datatypes__userSW" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__userSI" label: "Usersi\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n128 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "datatypes___assign" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes___assign" targetname: "datatypes__userDA" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes___assign" targetname: "datatypes__userDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes___assign" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__Oeq" label: "=\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:4\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "datatypes__Oeq" targetname: "datatypes__userlist__Oeq__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__Oeq" targetname: "ada__strings__unbounded__Oeq" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__Oeq" targetname: "ada__strings__unbounded__Oeq" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__userSO" label: "Userso\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "datatypes__userSO" targetname: "datatypes__userSW" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__userSI" label: "Usersi\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n128 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "datatypes__userSI" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userSI" targetname: "__gnat_reraise_zcx" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSI" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDA" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "system__secondary_stack__ss_allocate" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userSR" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDI" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" label: "R614s\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "__gnat_reraise_zcx" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSI" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDA" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "system__secondary_stack__ss_allocate" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userSR" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDI" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSI" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" label: "R614s\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "_Unwind_Resume" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "_Unwind_Resume" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "datatypes__userDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__userSW" label: "Usersw\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "datatypes__userDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__userSW" label: "Usersw\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n64 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "datatypes__userSW" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userSW" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSW___finalizer.6380" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSW" targetname: "datatypes__userlist__listSW__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "system__strings__stream_ops__string_output_blk_io" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "ada__strings__unbounded__to_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "system__strings__stream_ops__string_output_blk_io" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "ada__strings__unbounded__to_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "system__secondary_stack__ss_mark" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSW___finalizer.6380" label: "Usersw\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSW___finalizer.6380" targetname: "system__secondary_stack__ss_release" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" label: "B592s\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userSW" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSW___finalizer.6380" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSW" targetname: "datatypes__userlist__listSW__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSW" targetname: "system__strings__stream_ops__string_output_blk_io" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSW" targetname: "ada__strings__unbounded__to_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSW" targetname: "system__strings__stream_ops__string_output_blk_io" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSW" targetname: "ada__strings__unbounded__to_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSW" targetname: "system__secondary_stack__ss_mark" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSW___finalizer.6380" label: "Usersw\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSW___finalizer.6380" targetname: "system__secondary_stack__ss_release" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" label: "B592s\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "_Unwind_Resume" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "_Unwind_Resume" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" label: "B576s\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" label: "B576s\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "_Unwind_Resume" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "_Unwind_Resume" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__userSR" label: "Usersr\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n112 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__userSR" label: "Usersr\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n112 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "datatypes__userSR" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR___finalizer.6329" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "datatypes__userlist__listSR__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded___assign__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__to_unbounded_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__strings__stream_ops__string_input_blk_io" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded___assign__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__to_unbounded_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__strings__stream_ops__string_input_blk_io" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__secondary_stack__ss_mark" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR___finalizer.6329" label: "Usersr\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR___finalizer.6329" targetname: "system__secondary_stack__ss_release" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes___size" label: "Datatypes\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n8 bytes (static)\n0 dynamic objects" }
-node: { title: "datatypes__userIP" label: "Userip\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n64 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_reraise_zcx" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userIP" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSR" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSR" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR___finalizer.6329" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSR" targetname: "datatypes__userlist__listSR__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSR" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded___assign__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__to_unbounded_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "system__strings__stream_ops__string_input_blk_io" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSR" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded___assign__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__to_unbounded_string" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "system__strings__stream_ops__string_input_blk_io" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userSR" targetname: "system__secondary_stack__ss_mark" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR___finalizer.6329" label: "Usersr\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userSR___finalizer.6329" targetname: "system__secondary_stack__ss_release" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes___size" label: "Datatypes\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "datatypes__userIP" label: "Userip\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "datatypes__userIP" targetname: "__gnat_reraise_zcx" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userIP" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userIP" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes__userIP" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__userIP" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:28:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "ada__finalization__initialize" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:28:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "datatypes__userlist__listIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:28:10" }
+edge: { sourcename: "datatypes__userIP" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
 edge: { sourcename: "datatypes__userIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:27:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__initialize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:27:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:27:10" }
+edge: { sourcename: "datatypes__userIP" targetname: "ada__finalization__initialize" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:27:10" }
+edge: { sourcename: "datatypes__userIP" targetname: "datatypes__userlist__listIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:27:10" }
 edge: { sourcename: "datatypes__userIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:26:10" }
 edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__initialize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:26:10" }
 edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:26:10" }
-node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" label: "F555s\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n96 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:25:10" }
+edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__initialize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:25:10" }
+edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:25:10" }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" label: "F555s\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "datatypes__userlist__clear" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__userFD" label: "Userfd\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userFD" targetname: "datatypes__userDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__userDF" label: "Userdf\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "datatypes__userlist__clear" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__userFD" label: "Userfd\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "datatypes__userFD" targetname: "datatypes__userDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__userDF" label: "Userdf\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "datatypes__userlist__clear" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__userDA" label: "Userda\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userDF" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userDF" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userDF" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userDF" targetname: "datatypes__userlist__clear" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userDF" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__userDA" label: "Userda\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:0" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
+edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:0" }
+edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
 edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "datatypes__userlist__adjust__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "ada__strings__unbounded__adjust__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "ada__strings__unbounded__adjust__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" }
-node: { title: "datatypes__userDI" label: "Userdi\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9\n8 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "datatypes__userDA" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userDA" targetname: "datatypes__userlist__adjust__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userDA" targetname: "ada__strings__unbounded__adjust__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userDA" targetname: "ada__strings__unbounded__adjust__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+edge: { sourcename: "datatypes__userDA" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9" }
+node: { title: "datatypes__userDI" label: "Userdi\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:23:9\n8 bytes (static)\n0 dynamic objects" }
 node: { title: "datatypes__userlist__T460s" label: "T460s\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n32 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "datatypes__userlist__T460s" targetname: "datatypes__userlist__previous__4" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
 edge: { sourcename: "datatypes__userlist__T460s" targetname: "ada__tags__offset_to_top" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
@@ -578,249 +553,6 @@ node: { title: "datatypes__userlist__cursorSR" label: "Cursorsr\nE:/programme/gn
 edge: { sourcename: "datatypes__userlist__cursorSR" targetname: "datatypes__userlist__read__2" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:302:4" }
 edge: { sourcename: "datatypes__userlist__cursorSR" targetname: "__gnat_rcheck_CE_Access_Check" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:302:4" }
 node: { title: "datatypes__userlist__TiteratorCFD" label: "Titeratorcfd\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n48 bytes (static)\n0 dynamic objects" }
-=======
-edge: { sourcename: "datatypes__finalize_spec" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:5:1" }
-edge: { sourcename: "datatypes__finalize_spec" targetname: "system__finalization_masters__finalize" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:7:9" }
-edge: { sourcename: "datatypes__finalize_spec" targetname: "datatypes__userlist__clear" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:383:4" }
-edge: { sourcename: "datatypes__finalize_spec" targetname: "ada__tags__unregister_tag" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:5:1" }
-edge: { sourcename: "datatypes__finalize_spec" targetname: "ada__tags__unregister_tag" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:5:1" }
-edge: { sourcename: "datatypes__finalize_spec" targetname: "ada__tags__unregister_tag" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:5:1" }
-edge: { sourcename: "datatypes__finalize_spec" targetname: "ada__tags__unregister_tag" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:5:1" }
-edge: { sourcename: "datatypes__finalize_spec" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:5:1" }
-node: { title: "datatypes__TuserCFD" label: "Tusercfd\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:6:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__TuserCFD" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:6:9" }
-node: { title: "datatypes___assign" label: "Datatypes\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n464 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes___assign" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes___assign" targetname: "__gnat_raise_from_controlled_operation" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes___assign" targetname: "__gnat_set_exception_parameter" }
-edge: { sourcename: "datatypes___assign" targetname: "__gnat_begin_handler" }
-edge: { sourcename: "datatypes___assign" targetname: "__gnat_end_handler" }
-edge: { sourcename: "datatypes___assign" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes___assign" targetname: "datatypes__userDA" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes___assign" targetname: "datatypes__userDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes___assign" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__Oeq" label: "=\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__Oeq" targetname: "datatypes__userlist__Oeq__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__Oeq" targetname: "ada__strings__unbounded__Oeq" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__Oeq" targetname: "ada__strings__unbounded__Oeq" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__userSO" label: "Userso\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userSO" targetname: "datatypes__userSW" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__userSI" label: "Usersi\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n128 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userSI" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userSI" targetname: "__gnat_reraise_zcx" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSI" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDA" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userSR" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userDI" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "datatypes__userIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSI" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" label: "R614s\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "datatypes__userDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSI__R614s___finalizer.6393" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__userSW" label: "Usersw\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n64 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userSW" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userSW" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSW___finalizer.6380" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSW" targetname: "datatypes__userlist__listSW__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "system__strings__stream_ops__string_output_blk_io" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "system__strings__stream_ops__string_output_blk_io" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSW" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSW___finalizer.6380" label: "Usersw\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSW___finalizer.6380" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" label: "B592s\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" label: "B576s\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__userSR" label: "Usersr\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n112 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userSR" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR___finalizer.6329" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "datatypes__userlist__listSR__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B592s___finalizer.6363" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__to_unbounded_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__strings__stream_ops__string_input_blk_io" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR__B576s___finalizer.6333" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "ada__strings__unbounded__to_unbounded_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__strings__stream_ops__string_input_blk_io" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userSR" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR___finalizer.6329" label: "Usersr\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userSR___finalizer.6329" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes___size" label: "Datatypes\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n8 bytes (static)\n0 dynamic objects" }
-node: { title: "datatypes__userIP" label: "Userip\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n64 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_reraise_zcx" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userIP" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userIP" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userIP" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:27:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "ada__finalization__initialize" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:27:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "datatypes__userlist__listIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:27:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:26:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:26:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:26:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:25:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:25:10" }
-edge: { sourcename: "datatypes__userIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:25:10" }
-node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" label: "F555s\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n96 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "datatypes__userlist__clear" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb:datatypes__userIP__F555s.6303" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__userFD" label: "Userfd\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userFD" targetname: "datatypes__userDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__userDF" label: "Userdf\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDF" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "datatypes__userlist__clear" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDF" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__userDA" label: "Userda\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:0" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "datatypes__userDA" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "datatypes__userlist__adjust__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "ada__strings__unbounded__adjust__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "ada__strings__unbounded__adjust__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-edge: { sourcename: "datatypes__userDA" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" }
-node: { title: "datatypes__userDI" label: "Userdi\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9\n8 bytes (static)\n0 dynamic objects" }
-node: { title: "datatypes__userlist__T460s" label: "T460s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T460s" targetname: "datatypes__userlist__previous__4" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-edge: { sourcename: "datatypes__userlist__T460s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-node: { title: "datatypes__userlist__T457s" label: "T457s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T457s" targetname: "datatypes__userlist__last__3" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-edge: { sourcename: "datatypes__userlist__T457s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-node: { title: "datatypes__userlist__T454s" label: "T454s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T454s" targetname: "datatypes__userlist__next__4" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-edge: { sourcename: "datatypes__userlist__T454s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-node: { title: "datatypes__userlist__T451s" label: "T451s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T451s" targetname: "datatypes__userlist__first__3" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-edge: { sourcename: "datatypes__userlist__T451s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-node: { title: "datatypes__userlist__T447s" label: "T447s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T447s" targetname: "datatypes__userlist__iteratorDF__2" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-edge: { sourcename: "datatypes__userlist__T447s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-node: { title: "datatypes__userlist__T444s" label: "T444s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T444s" targetname: "system__finalization_root__root_controlledDA" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-edge: { sourcename: "datatypes__userlist__T444s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-node: { title: "datatypes__userlist__T441s" label: "T441s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T441s" targetname: "system__finalization_root___assign" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-edge: { sourcename: "datatypes__userlist__T441s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-edge: { sourcename: "datatypes__userlist__T441s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-node: { title: "datatypes__userlist__T436s" label: "T436s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T436s" targetname: "system__finalization_root__Oeq" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-edge: { sourcename: "datatypes__userlist__T436s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-edge: { sourcename: "datatypes__userlist__T436s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-node: { title: "datatypes__userlist__T431s" label: "T431s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T431s" targetname: "system__finalization_root__root_controlledSO" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-edge: { sourcename: "datatypes__userlist__T431s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-node: { title: "datatypes__userlist__T428s" label: "T428s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T428s" targetname: "system__finalization_root__root_controlledSW" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-edge: { sourcename: "datatypes__userlist__T428s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-node: { title: "datatypes__userlist__T425s" label: "T425s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T425s" targetname: "system__finalization_root__root_controlledSR" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-edge: { sourcename: "datatypes__userlist__T425s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" }
-node: { title: "datatypes__userlist__T422s" label: "T422s\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__T422s" targetname: "datatypes__userlist___size__5" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-edge: { sourcename: "datatypes__userlist__T422s" targetname: "ada__tags__offset_to_top" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }
-node: { title: "datatypes__userlist__reference_typeSR" label: "Reference_Typesr\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:363:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__reference_typeSR" targetname: "datatypes__userlist__read__4" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:363:4" }
-edge: { sourcename: "datatypes__userlist__reference_typeSR" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:363:4" }
-node: { title: "datatypes__userlist__reference_typeSW" label: "Reference_Typesw\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:357:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__reference_typeSW" targetname: "datatypes__userlist__write__4" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:357:4" }
-edge: { sourcename: "datatypes__userlist__reference_typeSW" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:357:4" }
-node: { title: "datatypes__userlist__constant_reference_typeSR" label: "Constant_Reference_Typesr\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:341:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__constant_reference_typeSR" targetname: "datatypes__userlist__read__3" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:341:4" }
-edge: { sourcename: "datatypes__userlist__constant_reference_typeSR" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:341:4" }
-node: { title: "datatypes__userlist__constant_reference_typeSW" label: "Constant_Reference_Typesw\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:335:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__constant_reference_typeSW" targetname: "datatypes__userlist__write__3" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:335:4" }
-edge: { sourcename: "datatypes__userlist__constant_reference_typeSW" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:335:4" }
-node: { title: "datatypes__userlist__cursorSW" label: "Cursorsw\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:308:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__cursorSW" targetname: "datatypes__userlist__write__2" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:308:4" }
-edge: { sourcename: "datatypes__userlist__cursorSW" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:308:4" }
-node: { title: "datatypes__userlist__cursorSR" label: "Cursorsr\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:302:4\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "datatypes__userlist__cursorSR" targetname: "datatypes__userlist__read__2" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:302:4" }
-edge: { sourcename: "datatypes__userlist__cursorSR" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:302:4" }
-node: { title: "datatypes__userlist__TiteratorCFD" label: "Titeratorcfd\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9\n48 bytes (static)\n0 dynamic objects" }
->>>>>>> origin/feature/server_logic
 edge: { sourcename: "datatypes__userlist__TiteratorCFD" targetname: "_Unwind_Resume" }
 edge: { sourcename: "datatypes__userlist__TiteratorCFD" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.adb:datatypes__userlist__TiteratorCFD__B335s___finalizer.6204" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:0" }
 edge: { sourcename: "datatypes__userlist__TiteratorCFD" targetname: "__indirect_call" label: "E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:387:9" }

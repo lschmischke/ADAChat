@@ -109,10 +109,10 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client_logic.ads	20160422125310 5e4a9618 client_logic%s
+D client_logic.ads	20160422170554 5e4a9618 client_logic%s
 D concrete_client_logic.ads  20160422125310 5faebc53 concrete_client_logic%s
-D concrete_client_logic.adb  20160422125310 7263c427 concrete_client_logic%b
-D datatypes.ads		20160422125310 bd60c4ab datatypes%s
+D concrete_client_logic.adb  20160422170926 7263c427 concrete_client_logic%b
+D datatypes.ads		20160422162812 bd60c4ab datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
@@ -316,7 +316,7 @@ X 32 concrete_client_logic.adb
 280r16 UserSet{11|54R9[31|20]} 288m19 288r19 291r61
 287i20 I<integer> 288r103
 X 33 datatypes.ads
-5K9*dataTypes 31|9w6 9r21 33|32e14
+5K9*dataTypes 31|9w6 9r21 33|31e14
 X 34 gnat.ads
 34K9*GNAT 31|2r6 2r24 14r6 14r29 32|1r6 1r29 279r29 282r16 285r56 287r30
 . 288r66 34|37e9

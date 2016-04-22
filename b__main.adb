@@ -54,7 +54,7 @@ package body ada_main is
    E243 : Short_Integer; pragma Import (Ada, E243, "system__tasking__stages_E");
    E096 : Short_Integer; pragma Import (Ada, E096, "client_logic_E");
    E152 : Short_Integer; pragma Import (Ada, E152, "datatypes_E");
-   E252 : Short_Integer; pragma Import (Ada, E252, "guitoservercommunication_E");
+   E252 : Short_Integer; pragma Import (Ada, E252, "gui_to_server_communication_E");
    E171 : Short_Integer; pragma Import (Ada, E171, "protocol_E");
    E124 : Short_Integer; pragma Import (Ada, E124, "concrete_client_logic_E");
    E254 : Short_Integer; pragma Import (Ada, E254, "user_databases_E");
@@ -388,7 +388,7 @@ package body ada_main is
       E096 := E096 + 1;
       Datatypes'Elab_Spec;
       E152 := E152 + 1;
-      Guitoservercommunication'Elab_Spec;
+      Gui_To_Server_Communication'Elab_Spec;
       E252 := E252 + 1;
       E171 := E171 + 1;
       Concrete_Client_Logic'Elab_Spec;
@@ -436,7 +436,7 @@ package body ada_main is
 --  BEGIN Object file/option list
    --   E:\Development\Ada\Block_Projekt\ada_chat\client_logic.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\datatypes.o
-   --   E:\Development\Ada\Block_Projekt\ada_chat\GUItoServerCommunication.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\gui_to_server_communication.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\protocol.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\concrete_client_logic.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\user_databases.o

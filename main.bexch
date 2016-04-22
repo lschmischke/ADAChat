@@ -6,7 +6,7 @@ E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr
 [BOUND OBJECT FILES]
 E:\Development\Ada\Block_Projekt\ada_chat\client_logic.o
 E:\Development\Ada\Block_Projekt\ada_chat\datatypes.o
-E:\Development\Ada\Block_Projekt\ada_chat\GUItoServerCommunication.o
+E:\Development\Ada\Block_Projekt\ada_chat\gui_to_server_communication.o
 E:\Development\Ada\Block_Projekt\ada_chat\protocol.o
 E:\Development\Ada\Block_Projekt\ada_chat\concrete_client_logic.o
 E:\Development\Ada\Block_Projekt\ada_chat\user_databases.o

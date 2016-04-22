@@ -25,7 +25,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		bcb66e03 DE NE OO SU IL
+U main%b		main.adb		b47c1a9a DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -68,10 +68,10 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client_logic.ads	20160422125310 5e4a9618 client_logic%s
+D client_logic.ads	20160422170554 5e4a9618 client_logic%s
 D concrete_client_logic.ads  20160422125310 5faebc53 concrete_client_logic%s
-D concrete_server_logic.ads  20160422125310 6d565217 concrete_server_logic%s
-D datatypes.ads		20160422125310 bd60c4ab datatypes%s
+D concrete_server_logic.ads  20160422162812 659c268e concrete_server_logic%s
+D datatypes.ads		20160422162812 bd60c4ab datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-arrspl.ads		20150518132148 ce21b18b gnat.array_split%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
@@ -81,12 +81,12 @@ D g-shshco.ads		20150518132148 1144502c gnat.secure_hashes.sha2_common%s
 D g-sha512.ads		20150518132148 ddcf5bc4 gnat.sha512%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
 D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
-D guitoservercommunication.ads  20160422125310 e2e4f668 guitoservercommunication%s
+D gui_to_server_communication.ads  20160422162812 ab21c04d gui_to_server_communication%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20160422125750 4579e767 main%b
+D main.adb		20160422164118 4579e767 main%b
 D protocol.ads		20160422125310 aaec25fd protocol%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
@@ -134,7 +134,7 @@ X 17 a-string.ads
 X 21 a-strunb.ads
 76K21*Unbounded 489e26 47|4w18 4r45
 94V13*To_Unbounded_String{79R9} 47|18s27 18s53 19s27 24s42 26s42
-166V14*"="{boolean} 6|42i19
+166V14*"="{boolean} 6|42i19 8|46i19
 X 29 client_logic.ads
 4K9*Client_Logic 14e17 47|1w6
 6h9*Client_Interface
@@ -148,13 +148,13 @@ X 30 concrete_client_logic.ads
 76i30 Id_Receiver{integer} 47|25r27
 76r56 Msg{21|79R9} 47|26r27
 X 31 concrete_server_logic.ads
-26K9*Concrete_Server_Logic 165e26 47|2w6 2r33
-31R9*Concrete_Server<42|2R9> 128e14 47|10r14
-134U14 startServer<42|4p14> 47|16s12
+26K9*Concrete_Server_Logic 174e26 47|2w6 2r33
+31R9*Concrete_Server<42|4R9> 132e14 47|10r14
+138U14 startServer<42|6p14> 47|16s12
 X 40 g-socket.ads
 409I9*Socket_Type<integer>
-X 42 guitoservercommunication.ads
-2h9*Server
+X 42 gui_to_server_communication.ads
+4h9*Server
 X 47 main.adb
 8U11*main 8b11 33l5 33t9
 10r4 cserver{31|31R9} 16r4

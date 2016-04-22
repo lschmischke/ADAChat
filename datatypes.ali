@@ -77,7 +77,7 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D datatypes.ads		20160422125310 bd60c4ab datatypes%s
+D datatypes.ads		20160422162812 bd60c4ab datatypes%s
 D datatypes.adb		20160422125310 660cca5e datatypes%b
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
@@ -116,7 +116,7 @@ X 4 a-contai.ads
 X 5 a-cdlili.ads
 40+9 Element_Type 17|9r48
 45k24*Doubly_Linked_Lists 407e39 17|2w21 9r28
-49R9*List<8|43R9> 17|16r61[9] 17r73[9] 28r30[9] 18|30r61[17|9] 35r73[17|9]
+49R9*List<8|43R9> 17|16r61[9] 17r73[9] 27r30[9] 18|30r61[17|9] 35r73[17|9]
 58R9*Cursor 18|52r22[17|9]
 146U14*Append 18|43s24[17|9]
 148p7 New_Item{17|7P9} 18|43r31[17|9]
@@ -133,15 +133,15 @@ X 11 a-string.ads
 X 13 a-strunb.ads
 76K21*Unbounded 489e26 17|1w18 1r45
 79R9*Unbounded_String<8|43R9> 473e14 17|11r51 12r59 13r42 13r67 14r51 15r62
-. 26r21 27r21 18|3r51 9r59 14r42 14r67 19r51 24r62
+. 25r21 26r21 18|3r51 9r59 14r42 14r67 19r51 24r62
 94V13*To_Unbounded_String{79R9} 18|16s14
 100V13*To_String{string} 18|16s53
 X 17 datatypes.ads
-5K9*dataTypes 24E9 32l5 32e14 18|1b14 64l5 64t14
-6R9*User 7r27 24c9 29e17
+5K9*dataTypes 23E9 31l5 31e14 18|1b14 64l5 64t14
+6R9*User 7r27 23c9 28e17
 7P9*UserPtr(6R9) 9r64 11r35 12r40 14r35 15r39 16r36 17r41 18r39 18r63 19r42
 . 19r69 18|3r35 9r40 19r35 24r39 30r36 35r41 40r39 40r63 51r42 51r69
-9K12*UserList[5|45] 16r52 17r64 28r21 18|30r52 35r64 52r13
+9K12*UserList[5|45] 16r52 17r64 27r21 18|30r52 35r64 52r13
 11V13*getUsername{13|79R9} 11>25 18|3b13 6l8 6t19
 11p25 this{7P9} 18|3b25 5r14
 12U14*setUsername 12=26 12>49 18|9b14 12l8 12t19
@@ -165,9 +165,9 @@ X 17 datatypes.ads
 19V13*removeContact{boolean} 19=28 19>51 18|51b13 62l11 62t24
 19p28 this{7P9} 18|51b28 52r32 54r10 56r10
 19p51 contactToRemove{7P9} 18|51b51 52r63 54r33
-26r10*username{13|79R9} 18|5r19 11m12
-27r10*password{13|79R9} 18|21r19 26m12
-28r10*contacts{5|49R9[9]} 18|32r19 37m12 42r19 43m15 52r37 54r15 56m15
+25r10*username{13|79R9} 18|5r19 11m12
+26r10*password{13|79R9} 18|21r19 26m12
+27r10*contacts{5|49R9[9]} 18|32r19 37m12 42r19 43m15 52r37 54r15 56m15
 X 18 datatypes.adb
 52r7 pos{5|58R9[17|9]} 56m43 56r43
 X 19 gnat.ads

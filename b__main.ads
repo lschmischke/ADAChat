@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#bcb66e03#;
+   u00001 : constant Version_32 := 16#b47c1a9a#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#fbff4c67#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -413,9 +413,9 @@ package ada_main is
    pragma Export (C, u00188, "ada__strings__fixedB");
    u00189 : constant Version_32 := 16#a86b22b3#;
    pragma Export (C, u00189, "ada__strings__fixedS");
-   u00190 : constant Version_32 := 16#b33ed6ee#;
+   u00190 : constant Version_32 := 16#f9f59827#;
    pragma Export (C, u00190, "concrete_server_logicB");
-   u00191 : constant Version_32 := 16#2139bcae#;
+   u00191 : constant Version_32 := 16#6036fe12#;
    pragma Export (C, u00191, "concrete_server_logicS");
    u00192 : constant Version_32 := 16#30bb6e97#;
    pragma Export (C, u00192, "system__taskingB");
@@ -537,8 +537,8 @@ package ada_main is
    pragma Export (C, u00250, "ada__strings__unbounded__hashB");
    u00251 : constant Version_32 := 16#4f2a3177#;
    pragma Export (C, u00251, "ada__strings__unbounded__hashS");
-   u00252 : constant Version_32 := 16#e2e4f668#;
-   pragma Export (C, u00252, "guitoservercommunicationS");
+   u00252 : constant Version_32 := 16#934c3599#;
+   pragma Export (C, u00252, "gui_to_server_communicationS");
    u00253 : constant Version_32 := 16#91d28976#;
    pragma Export (C, u00253, "user_databasesB");
    u00254 : constant Version_32 := 16#4d7faa8b#;
@@ -806,7 +806,7 @@ package ada_main is
    --  client_logic%s
    --  datatypes%s
    --  datatypes%b
-   --  guitoservercommunication%s
+   --  gui_to_server_communication%s
    --  protocol%s
    --  protocol%b
    --  concrete_client_logic%s
