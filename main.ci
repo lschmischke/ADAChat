@@ -30,6 +30,19 @@ node: { title: "concrete_client_logic__concrete_clientIP" label: "Concrete_Clien
 node: { title: "concrete_server_logic__concrete_serverDI" label: "Concrete_Serverdi\nE:\Development\Ada\Block_Projekt\ada_chat\server\concrete_server_logic.ads:118:9" shape : ellipse }
 node: { title: "concrete_server_logic__concrete_serverIP" label: "Concrete_Serverip\nE:\Development\Ada\Block_Projekt\ada_chat\server\concrete_server_logic.ads:118:9" shape : ellipse }
 node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:80:13" shape : ellipse }
+node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" label: "b84b\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:0" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "_Unwind_Resume" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "system__secondary_stack__ss_release" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:11" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "__gnat_rcheck_CE_Access_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:11" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
+edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
 node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" label: "b60b\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:10\n80 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:0" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:10" }
@@ -41,7 +54,6 @@ edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B6
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" targetname: "_Unwind_Resume" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:10" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:10" }
-node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:42" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" targetname: "__gnat_rcheck_CE_Access_Check" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:42" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:26:42" }
@@ -105,8 +117,14 @@ edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___f
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:12:4" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:8:1" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:8:1" }
-node: { title: "_ada_main" label: "main\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:8:1\n1056 bytes (static)\n0 dynamic objects" }
+node: { title: "_ada_main" label: "main\nE:\Development\Ada\Block_Projekt\ada_chat\main.adb:8:1\n1088 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "_ada_main" targetname: "_Unwind_Resume" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:0" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:11" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_raise_from_controlled_operation" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_set_exception_parameter" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" }
 edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:0" }
 edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:42" }
 edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:0" }
@@ -135,7 +153,20 @@ edge: { sourcename: "_ada_main" targetname: "__gnat_reraise_zcx" label: "E:\Deve
 edge: { sourcename: "_ada_main" targetname: "concrete_server_logic__concrete_serverDF__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:10:4" }
 edge: { sourcename: "_ada_main" targetname: "__gnat_begin_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:10:4" }
 edge: { sourcename: "_ada_main" targetname: "__gnat_end_handler" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:10:0" }
-edge: { sourcename: "_ada_main" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:0" }
+edge: { sourcename: "_ada_main" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main___finalizer.2985" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:33:0" }
+edge: { sourcename: "_ada_main" targetname: "protocol__printmessagetoinfoconsole" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:30:7" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:30:7" }
+edge: { sourcename: "_ada_main" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__L_1__B84b___finalizer.4262" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:0" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:11" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:11" }
+edge: { sourcename: "_ada_main" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:11" }
+edge: { sourcename: "_ada_main" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:0" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectDA" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:4" }
+edge: { sourcename: "_ada_main" targetname: "protocol__messageobjectDF" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:4" }
+edge: { sourcename: "_ada_main" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
+edge: { sourcename: "_ada_main" targetname: "protocol__readmessagefromstream" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:11" }
+edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:11" }
+edge: { sourcename: "_ada_main" targetname: "system__secondary_stack__ss_mark" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:29:8" }
 edge: { sourcename: "_ada_main" targetname: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B60b___finalizer.4219" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:0" }
 edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:42" }
 edge: { sourcename: "_ada_main" targetname: "ada__strings__unbounded__finalize__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:24:42" }

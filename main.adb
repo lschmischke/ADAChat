@@ -25,5 +25,9 @@ begin
                           Id_Receiver => 2,
                           Msg         => To_Unbounded_String("Hallo Ewald"));
 
+   loop
+   msg := readMessageFromStream(ClientSocket => Client.Socket);
+      printMessageToInfoConsole(msg);
+      end loop;
 
 end main;

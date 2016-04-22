@@ -25,7 +25,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		9265cb61 DE NE OO SU IL
+U main%b		main.adb		ec2d868d DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -85,7 +85,7 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20160422102750 3b31aa8b main%b
+D main.adb		20160422110556 4579e767 main%b
 D protocol.ads		20160420200206 aaec25fd protocol%s
 D serverguicommunication.ads  20160422081628 69c2ab07 serverguicommunication%s
 D system.ads		20150518132150 f4ce8c3a system%s
@@ -141,7 +141,7 @@ X 29 client_logic.ads
 X 30 concrete_client_logic.ads
 15K9*Concrete_Client_Logic 84e26 46|3w6 3r33 11r13
 28R9*Concrete_Client<29|6R9> 34e14 46|11r35
-29i7*Socket{40|409I9} 46|21r56
+29i7*Socket{40|409I9} 46|21r56 29r56
 41U14*ConnectToServer<29|8p14> 46|18s11
 65U14*SendTextMessage 46|24s11
 65r61 Username{21|79R9} 46|24r27
@@ -154,16 +154,16 @@ X 31 concrete_server_logic.ads
 X 40 g-socket.ads
 409I9*Socket_Type<integer>
 X 46 main.adb
-8U11*main 8b11 29l5 29t9
+8U11*main 8b11 33l5 33t9
 10r4 cserver{31|29R9} 16r4
-11r4 Client{30|28R9} 18m4 18r4 21r49 24m4 24r4
-12r4 Msg{47|17R9} 21m4 22r30
+11r4 Client{30|28R9} 18m4 18r4 21r49 24m4 24r4 29r49
+12r4 Msg{47|17R9} 21m4 22r30 29m4 30r33
 X 47 protocol.ads
 9K9*Protocol 46|5w6 5r20 47|36e13
 17R9*MessageObject 46|12r10 47|22e14
-30U14*printMessageToInfoConsole 46|22s4
-34V13*readMessageFromStream{17R9} 46|21s11
-34i36 ClientSocket{40|409I9} 46|21r33
+30U14*printMessageToInfoConsole 46|22s4 30s7
+34V13*readMessageFromStream{17R9} 46|21s11 29s11
+34i36 ClientSocket{40|409I9} 46|21r33 29r33
 X 48 serverguicommunication.ads
 2h9*Server
 X 49 system.ads

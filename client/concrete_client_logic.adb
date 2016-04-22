@@ -240,9 +240,9 @@ package body Concrete_Client_Logic is
             begin
                Message := MsgObject.Content;
                Append(Message, " ist jetzt online!");
-               This.UsersOnline.Insert := MsgObject.Content;
-               if This.UsersOffline.Contains(Item => MsgObject) then
-                  This.UsersOffline.Delete(Item => MsgObject);
+               This.UsersOnline.Insert(MsgObject.Content);
+               if This.UsersOffline.Contains(Item => MsgObject.Content) then
+                  This.UsersOffline.Delete(Item => MsgObject.Content);
                end if;
                --#TODOTODO refreshUserlist()
                return Message;
@@ -254,9 +254,9 @@ package body Concrete_Client_Logic is
             begin
                Message := MsgObject.Content;
                Append(Message, " ist jetzt offline!");
-               This.UsersOffline.Insert := MsgObject.Content;
-               if This.UsersOnline.Contains(Item => MsgObject) then
-                  This.UsersOnline.Delete(Item => MsgObject);
+               This.UsersOffline.Insert(MsgObject.Content);
+               if This.UsersOnline.Contains(Item => MsgObject.Content) then
+                  This.UsersOnline.Delete(Item => MsgObject.Content);
                end if;
                --#TODOTODO refreshUserlist()
                return Message;
@@ -281,7 +281,7 @@ package body Concrete_Client_Logic is
             null;
 
          when Leavechat =>
-
+            --#TODO
             --#verlasse Chatraum, schliesse Chatfenster
             return MsgObject.Content;
 
