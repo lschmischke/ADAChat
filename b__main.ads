@@ -231,7 +231,7 @@ package ada_main is
    pragma Export (C, u00097, "client_uiB");
    u00098 : constant Version_32 := 16#80f42b28#;
    pragma Export (C, u00098, "client_uiS");
-   u00099 : constant Version_32 := 16#b33ed6ee#;
+   u00099 : constant Version_32 := 16#0bf471f7#;
    pragma Export (C, u00099, "concrete_server_logicB");
    u00100 : constant Version_32 := 16#2139bcae#;
    pragma Export (C, u00100, "concrete_server_logicS");
