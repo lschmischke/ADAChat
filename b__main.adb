@@ -53,21 +53,12 @@ package body ada_main is
    E237 : Short_Integer; pragma Import (Ada, E237, "system__tasking__queuing_E");
    E243 : Short_Integer; pragma Import (Ada, E243, "system__tasking__stages_E");
    E096 : Short_Integer; pragma Import (Ada, E096, "client_logic_E");
-<<<<<<< HEAD
    E152 : Short_Integer; pragma Import (Ada, E152, "datatypes_E");
+   E252 : Short_Integer; pragma Import (Ada, E252, "guitoservercommunication_E");
    E171 : Short_Integer; pragma Import (Ada, E171, "protocol_E");
    E124 : Short_Integer; pragma Import (Ada, E124, "concrete_client_logic_E");
-   E252 : Short_Integer; pragma Import (Ada, E252, "serverguicommunication_E");
    E254 : Short_Integer; pragma Import (Ada, E254, "user_databases_E");
    E191 : Short_Integer; pragma Import (Ada, E191, "concrete_server_logic_E");
-=======
-   E098 : Short_Integer; pragma Import (Ada, E098, "client_ui_E");
-   E190 : Short_Integer; pragma Import (Ada, E190, "datatypes_E");
-   E229 : Short_Integer; pragma Import (Ada, E229, "guitoservercommunication_E");
-   E231 : Short_Integer; pragma Import (Ada, E231, "protocol_E");
-   E245 : Short_Integer; pragma Import (Ada, E245, "user_databases_E");
-   E100 : Short_Integer; pragma Import (Ada, E100, "concrete_server_logic_E");
->>>>>>> origin/feature/server_logic
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -396,20 +387,13 @@ package body ada_main is
       Client_Logic'Elab_Spec;
       E096 := E096 + 1;
       Datatypes'Elab_Spec;
-<<<<<<< HEAD
       E152 := E152 + 1;
+      Guitoservercommunication'Elab_Spec;
+      E252 := E252 + 1;
       E171 := E171 + 1;
       Concrete_Client_Logic'Elab_Spec;
       Concrete_Client_Logic'Elab_Body;
       E124 := E124 + 1;
-      Serverguicommunication'Elab_Spec;
-      E252 := E252 + 1;
-=======
-      E190 := E190 + 1;
-      Guitoservercommunication'Elab_Spec;
-      E229 := E229 + 1;
-      E231 := E231 + 1;
->>>>>>> origin/feature/server_logic
       User_Databases'Elab_Spec;
       E254 := E254 + 1;
       Concrete_Server_Logic'Elab_Spec;
@@ -450,31 +434,17 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-<<<<<<< HEAD
    --   E:\Development\Ada\Block_Projekt\ada_chat\client_logic.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\datatypes.o
+   --   E:\Development\Ada\Block_Projekt\ada_chat\GUItoServerCommunication.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\protocol.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\concrete_client_logic.o
-   --   E:\Development\Ada\Block_Projekt\ada_chat\serverguicommunication.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\user_databases.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\concrete_server_logic.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\main.o
    --   -LE:\Development\Ada\Block_Projekt\ada_chat\
    --   -LE:\Development\Ada\Block_Projekt\ada_chat\
    --   -LE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
-=======
-   --   C:\Users\Leonard\Documents\ADA\adachat\client_logic.o
-   --   C:\Users\Leonard\Documents\ADA\adachat\client_ui.o
-   --   C:\Users\Leonard\Documents\ADA\adachat\datatypes.o
-   --   C:\Users\Leonard\Documents\ADA\adachat\GUItoServerCommunication.o
-   --   C:\Users\Leonard\Documents\ADA\adachat\protocol.o
-   --   C:\Users\Leonard\Documents\ADA\adachat\user_databases.o
-   --   C:\Users\Leonard\Documents\ADA\adachat\concrete_server_logic.o
-   --   C:\Users\Leonard\Documents\ADA\adachat\main.o
-   --   -LC:\Users\Leonard\Documents\ADA\adachat\
-   --   -LC:\Users\Leonard\Documents\ADA\adachat\
-   --   -LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
->>>>>>> origin/feature/server_logic
    --   -static
    --   -lgnarl
    --   -lgnat

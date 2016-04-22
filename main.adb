@@ -8,18 +8,13 @@ with Protocol; use Protocol;
 procedure main is
 
    cserver : Concrete_Server;
-<<<<<<< HEAD
    Client : Concrete_Client_Logic.Concrete_Client;
    Msg : MessageObject;
 
-=======
-      pragma Unreferenced(cserver);
->>>>>>> origin/feature/server_logic
 begin
 
    cserver.startServer("127.0.0.1",12321);
 
-<<<<<<< HEAD
    Client.connectToServer(To_Unbounded_String("a"), To_Unbounded_String("a"),
                           To_Unbounded_String("127.0.0.1"), 12321);
 
@@ -35,6 +30,4 @@ begin
       printMessageToInfoConsole(msg);
    end loop;
 
-=======
->>>>>>> origin/feature/server_logic
 end main;
