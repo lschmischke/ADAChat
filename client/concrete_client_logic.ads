@@ -17,6 +17,8 @@ with Gui2Client_Communication; use Gui2Client_Communication;
 
 package Concrete_Client_Logic is
 
+   type Concrete_Client is new Gui2Client_Communication.Client with private;
+
    package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
                                                       Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
                                                       Equivalent_Elements => "=",
@@ -33,6 +35,8 @@ package Concrete_Client_Logic is
                                                                       Hash            => Hash,
                                                                       Equivalent_Keys => "=",
                                                                       "="             => Userlist."=");
+
+   private
 
    type Concrete_Client is new Gui2Client_Communication.Client with record
       Socket : Socket_Type;
