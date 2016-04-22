@@ -18,7 +18,6 @@ package dataTypes is
    function addContact (this : in out UserPtr; contactToAdd : UserPtr) return Boolean;
    function removeContact (this : in out UserPtr; contactToRemove : UserPtr) return boolean;
 
-
 private
 
    type User is tagged

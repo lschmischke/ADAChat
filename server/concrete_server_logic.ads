@@ -12,7 +12,7 @@ with dataTypes; use dataTypes;
 with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
-with GUItoServerCommunication;
+with GUI_to_Server_Communication;
 
 
 -- # TODOs #
@@ -24,7 +24,7 @@ with GUItoServerCommunication;
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is
-   package GTS renames GUItoServerCommunication;
+   package GTS renames GUI_to_Server_Communication;
 
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
    -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients.
@@ -41,7 +41,7 @@ package Concrete_Server_Logic is
    type Client_Task is limited private;
    type Client_Task_Ptr is access Client_Task;
 
-   type Concrete_Client is  private;
+   type Concrete_Client is private;
    type Concrete_Client_Ptr is access Concrete_Client;
 
 
@@ -67,7 +67,11 @@ package Concrete_Server_Logic is
    procedure disconnectClient(client : in Concrete_Client_Ptr);
 
 
-
+   package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr);
+   package userViewOfflineMap is new Hashed_Maps(Key_Type        => Unbounded_String,
+						     Element_Type    => Unbounded_String,
+						     Hash            => Hash,
+                                                     Equivalent_Keys => "=");
 private
 
 
@@ -132,8 +136,13 @@ private
     -------------------------------------------------------------------------------------------
    -- # Implementierung ServerGUICommunication #
    procedure startServer(thisServer :  aliased in Concrete_Server; ipAdress: String; port : Natural);
-   procedure kickUserWithName(thisServer : aliased in  Concrete_Server;username:String);
-   procedure stopServer(thisServer : aliased in   Concrete_Server);
+   procedure stopServer(thisServer : aliased in  Concrete_Server);
+   function loadDB(thisServer : aliased in Concrete_Server; DataFile : File_type) return Boolean;
+   procedure saveDB(thisServer : aliased in Concrete_Server; DataFile : File_type);
+   procedure closeServer(thisServer : aliased in Concrete_Server);
+   procedure sendMessageToUser(thisServer : aliased in Concrete_Server; username : String; messagestring : String);
+   procedure deleteUserFromDatabase(thisServer : aliased in Concrete_Server; username : String);
+   procedure kickUserWithName(thisServer : aliased in Concrete_Server; username:String);
    -------------------------------------------------------------------------------------------
 
    function checkIfContactRequestExists(server : in Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;

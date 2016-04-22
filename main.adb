@@ -6,11 +6,17 @@ with Protocol; use Protocol;
 
 
 procedure main is
+<<<<<<< HEAD
 
    cserver : Concrete_Server;
    Client : Concrete_Client_Logic.Concrete_Client;
    Msg : MessageObject;
 
+=======
+   --server : Concrete_Server_Ptr := new Concrete_Server;
+      cserver : Concrete_Server;
+     -- pragma Unreferenced(cserver);
+>>>>>>> origin/feature/server_logic
 begin
 
    cserver.startServer("127.0.0.1",12321);

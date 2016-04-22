@@ -509,15 +509,24 @@ node: { title: "ada__text_io__close" label: "Close\nE:/programme/gnat/lib/gcc/i6
 node: { title: "ada__text_io__put_line" label: "Put_Line\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-textio.ads:259:14" shape : ellipse }
 node: { title: "ada__text_io__open" label: "Open\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-textio.ads:92:14" shape : ellipse }
 node: { title: "__gnat_rcheck_CE_Range_Check" label: "gnat_rcheck_CE_Range_Check\n<built-in>" shape : ellipse }
+<<<<<<< HEAD
 node: { title: "ada__text_io__put_line__2" label: "Put_Line\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-textio.ads:263:14" shape : ellipse }
 node: { title: "system__concat_3__str_concat_3" label: "Str_Concat_3\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-conca3.ads:39:14" shape : ellipse }
 node: { title: "datatypes__userlist__clear" label: "Clear\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:76:14" shape : ellipse }
 node: { title: "datatypes__userFD" label: "Userfd\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" shape : ellipse }
 node: { title: "datatypes__setcontacts" label: "Setcontacts\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:17:14" shape : ellipse }
+=======
+node: { title: "ada__text_io__put_line__2" label: "Put_Line\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-textio.ads:263:14" shape : ellipse }
+node: { title: "system__concat_3__str_concat_3" label: "Str_Concat_3\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-conca3.ads:39:14" shape : ellipse }
+node: { title: "datatypes__userlist__clear" label: "Clear\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:76:14" shape : ellipse }
+node: { title: "datatypes__userFD" label: "Userfd\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" shape : ellipse }
+node: { title: "datatypes__setcontacts" label: "Setcontacts\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:17:14" shape : ellipse }
+>>>>>>> origin/feature/server_logic
 node: { title: "__gnat_rcheck_CE_Invalid_Data" label: "gnat_rcheck_CE_Invalid_Data\n<built-in>" shape : ellipse }
 node: { title: "datatypes__setpassword" label: "Setpassword\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:15:13" shape : ellipse }
 node: { title: "datatypes__setusername" label: "Setusername\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:12:14" shape : ellipse }
 node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
+<<<<<<< HEAD
 node: { title: "datatypes__userlist__listIP" label: "Listip\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:264:9" shape : ellipse }
 node: { title: "datatypes__userDI" label: "Userdi\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" shape : ellipse }
 node: { title: "datatypes__userIP" label: "Userip\nE:\Development\Ada\Block_Projekt\ada_chat\common\datatypes.ads:24:9" shape : ellipse }
@@ -531,6 +540,21 @@ node: { title: "system__finalization_root__root_controlledSO" label: "Root_Contr
 node: { title: "system__finalization_root__root_controlledSW" label: "Root_Controlledsw\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" shape : ellipse }
 node: { title: "system__finalization_root__root_controlledSR" label: "Root_Controlledsr\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" shape : ellipse }
 node: { title: "ada__tags__offset_to_top" label: "Offset_To_Top\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:509:13" shape : ellipse }
+=======
+node: { title: "datatypes__userlist__listIP" label: "Listip\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-cdlili.ads:264:9" shape : ellipse }
+node: { title: "datatypes__userDI" label: "Userdi\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" shape : ellipse }
+node: { title: "datatypes__userIP" label: "Userip\nC:\Users\Leonard\Documents\ADA\adachat\common\datatypes.ads:23:9" shape : ellipse }
+node: { title: "system__soft_links__save_library_occurrence" label: "Save_Library_Occurrence\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-soflin.ads:313:14" shape : ellipse }
+node: { title: "system__finalization_masters__finalize" label: "Finalize\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finmas.ads:96:25" shape : ellipse }
+node: { title: "ada__tags__unregister_tag" label: "Unregister_Tag\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:578:14" shape : ellipse }
+node: { title: "system__finalization_root__root_controlledDA" label: "Root_Controlledda\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" shape : ellipse }
+node: { title: "system__finalization_root___assign" label: "Finalization_Root\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" shape : ellipse }
+node: { title: "system__finalization_root__Oeq" label: "=\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" shape : ellipse }
+node: { title: "system__finalization_root__root_controlledSO" label: "Root_Controlledso\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" shape : ellipse }
+node: { title: "system__finalization_root__root_controlledSW" label: "Root_Controlledsw\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" shape : ellipse }
+node: { title: "system__finalization_root__root_controlledSR" label: "Root_Controlledsr\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-finroo.ads:40:9" shape : ellipse }
+node: { title: "ada__tags__offset_to_top" label: "Offset_To_Top\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:509:13" shape : ellipse }
+>>>>>>> origin/feature/server_logic
 node: { title: "__gnat_rcheck_CE_Access_Check" label: "gnat_rcheck_CE_Access_Check\n<built-in>" shape : ellipse }
 node: { title: "ada__finalization__Oeq__3" label: "=\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-finali.ads:59:9" shape : ellipse }
 node: { title: "ada__finalization__controlledSW__2" label: "Controlledsw\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-finali.ads:59:9" shape : ellipse }
