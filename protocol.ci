@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\common\protocol.adb"
 node: { title: "memcpy" label: "memcpy\n<built-in>" shape : ellipse }
 node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
@@ -381,4 +382,389 @@ edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__strings__unbou
 edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__strings__unbounded__adjust__2" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:17:9" }
 edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__exceptions__triggered_by_abort" label: "E:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:17:9" }
 node: { title: "protocol__messageobjectDI" label: "Messageobjectdi\nE:\Development\Ada\Block_Projekt\ada_chat\common\protocol.ads:17:9\n8 bytes (static)\n0 dynamic objects" }
+=======
+graph: { title: "G:\ADAChat\common\protocol.adb"
+node: { title: "memcpy" label: "memcpy\n<built-in>" shape : ellipse }
+node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
+node: { title: "ada__strings__unbounded__Oconcat__4" label: "&\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:131:13" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Index_Check" label: "gnat_rcheck_CE_Index_Check\n<built-in>" shape : ellipse }
+node: { title: "gnat__sockets__receive_socket" label: "RECEIVE_SOCKET\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-socket.ads:894:14" shape : ellipse }
+node: { title: "system__strings__stream_ops__string_write_blk_io" label: "String_Write_Blk_Io\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-ststop.ads:178:14" shape : ellipse }
+node: { title: "gnat__sockets__stream" label: "STREAM\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-socket.ads:1007:13" shape : ellipse }
+node: { title: "system__concat_2__str_concat_2" label: "Str_Concat_2\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-conca2.ads:39:14" shape : ellipse }
+node: { title: "system__concat_5__str_concat_5" label: "Str_Concat_5\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-conca5.ads:39:14" shape : ellipse }
+node: { title: "gnat__string_split__finalize__2" label: "Finalize\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:188:14" shape : ellipse }
+node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:83:14" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Access_Check" label: "gnat_rcheck_CE_Access_Check\n<built-in>" shape : ellipse }
+node: { title: "ada__text_io__put_line__2" label: "Put_Line\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-textio.ads:263:14" shape : ellipse }
+node: { title: "ada__strings__unbounded__Oconcat__2" label: "&\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:123:13" shape : ellipse }
+node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:80:13" shape : ellipse }
+node: { title: "system__val_int__value_integer" label: "Value_Integer\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-valint.ads:67:13" shape : ellipse }
+node: { title: "ada__strings__unbounded___assign__2" label: "Unbounded\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:471:9" shape : ellipse }
+node: { title: "ada__strings__unbounded__to_unbounded_string" label: "To_Unbounded_String\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:94:13" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Range_Check" label: "gnat_rcheck_CE_Range_Check\n<built-in>" shape : ellipse }
+node: { title: "system__val_enum__value_enumeration_8" label: "Value_Enumeration_8\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-valenu.ads:39:13" shape : ellipse }
+node: { title: "gnat__string_split__slice" label: "Slice\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:123:13" shape : ellipse }
+node: { title: "gnat__string_split__slice_count" label: "Slice_Count\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:119:13" shape : ellipse }
+node: { title: "gnat__string_split__create" label: "Create\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:82:14" shape : ellipse }
+node: { title: "system__standard_library__abort_undefer_direct" label: "Abort_Undefer_Direct\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-stalib.ads:241:14" shape : ellipse }
+node: { title: "gnat__string_split__initialize__2" label: "Initialize\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:186:14" shape : ellipse }
+node: { title: "gnat__string_split__slice_setIP" label: "Slice_Setip\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/g-arrspl.ads:182:9" shape : ellipse }
+node: { title: "system__secondary_stack__ss_allocate" label: "Ss_Allocate\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-secsta.ads:66:14" shape : ellipse }
+node: { title: "system__concat_7__str_concat_7" label: "Str_Concat_7\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-conca7.ads:39:14" shape : ellipse }
+node: { title: "ada__strings__fixed__trim" label: "Trim\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strfix.ads:195:13" shape : ellipse }
+node: { title: "ada__strings__unbounded__to_string" label: "To_String\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:100:13" shape : ellipse }
+node: { title: "system__img_int__image_integer" label: "Image_Integer\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-imgint.ads:39:14" shape : ellipse }
+node: { title: "system__img_enum_new__image_enumeration_8" label: "Image_Enumeration_8\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/s-imenne.ads:48:14" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Invalid_Data" label: "gnat_rcheck_CE_Invalid_Data\n<built-in>" shape : ellipse }
+node: { title: "__gnat_reraise_zcx" label: "gnat_reraise_zcx\n<built-in>" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Overflow_Check" label: "gnat_rcheck_CE_Overflow_Check\n<built-in>" shape : ellipse }
+node: { title: "ada__strings__unbounded__initialize__2" label: "Initialize\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:481:25" shape : ellipse }
+node: { title: "ada__strings__unbounded__unbounded_stringIP" label: "Unbounded_Stringip\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:471:9" shape : ellipse }
+node: { title: "ada__strings__unbounded__finalize__2" label: "Finalize\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:483:25" shape : ellipse }
+node: { title: "__gnat_end_handler" label: "gnat_end_handler\n<built-in>" shape : ellipse }
+node: { title: "__gnat_begin_handler" label: "gnat_begin_handler\n<built-in>" shape : ellipse }
+node: { title: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "gnat_rcheck_PE_Finalize_Raised_Exception\n<built-in>" shape : ellipse }
+node: { title: "ada__strings__unbounded__adjust__2" label: "Adjust\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:482:25" shape : ellipse }
+node: { title: "ada__exceptions__triggered_by_abort" label: "Triggered_By_Abort\nG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-except.ads:257:13" shape : ellipse }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" label: "B268b\nG:\ADAChat\common\protocol.adb:80:27\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:80:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:80:27" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:80:27" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:80:27" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "system__secondary_stack__ss_release" label: "G:\ADAChat\common\protocol.adb:80:27" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:80:46" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_rcheck_CE_Access_Check" label: "G:\ADAChat\common\protocol.adb:80:46" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:80:27" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:80:27" }
+node: { title: "protocol__readmessagefromstream" label: "Readmessagefromstream\nG:\ADAChat\common\protocol.adb:69:4\n4240 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:80:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" label: "G:\ADAChat\common\protocol.adb:85:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "protocol__stringtomessageobject" label: "G:\ADAChat\common\protocol.adb:83:14" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" label: "G:\ADAChat\common\protocol.adb:80:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:80:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded___assign__2" label: "G:\ADAChat\common\protocol.adb:80:27" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:80:27" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__Oconcat__4" label: "G:\ADAChat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__secondary_stack__ss_mark" label: "G:\ADAChat\common\protocol.adb:80:27" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_rcheck_CE_Index_Check" label: "G:\ADAChat\common\protocol.adb:80:62" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "gnat__sockets__receive_socket" label: "G:\ADAChat\common\protocol.adb:76:11" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:72:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__initialize__2" label: "G:\ADAChat\common\protocol.adb:72:7" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "G:\ADAChat\common\protocol.adb:72:7" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:72:7" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" label: "Readmessagefromstream\nG:\ADAChat\common\protocol.adb:69:4\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:69:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:69:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:69:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:69:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:72:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:69:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:69:4" }
+node: { title: "protocol__writemessagetostream" label: "Writemessagetostream\nG:\ADAChat\common\protocol.adb:61:4\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "G:\ADAChat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" label: "G:\ADAChat\common\protocol.adb:66:0" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "system__strings__stream_ops__string_write_blk_io" label: "G:\ADAChat\common\protocol.adb:65:13" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "protocol__messageobjecttostring" label: "G:\ADAChat\common\protocol.adb:65:35" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "gnat__sockets__stream" label: "G:\ADAChat\common\protocol.adb:64:21" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "system__secondary_stack__ss_mark" label: "G:\ADAChat\common\protocol.adb:61:4" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" label: "Writemessagetostream\nG:\ADAChat\common\protocol.adb:61:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" targetname: "system__secondary_stack__ss_release" label: "G:\ADAChat\common\protocol.adb:61:4" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" label: "B219b\nG:\ADAChat\common\protocol.adb:58:7\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:58:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:58:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:58:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:58:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:58:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:58:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:58:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:58:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:58:75" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "G:\ADAChat\common\protocol.adb:58:75" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:58:106" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "G:\ADAChat\common\protocol.adb:58:106" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:58:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:58:7" }
+node: { title: "protocol__printmessagetoinfoconsole" label: "Printmessagetoinfoconsole\nG:\ADAChat\common\protocol.adb:49:4\n848 bytes (dynamic)\n5 dynamic objects\n Messagetype G:\ADAChat\common\protocol.adb:50:7\n S172b G:\ADAChat\common\protocol.adb:55:126\n S193b G:\ADAChat\common\protocol.adb:56:105\n S218b G:\ADAChat\common\protocol.adb:57:113\n S242b G:\ADAChat\common\protocol.adb:58:34" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:58:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:58:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:58:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" label: "G:\ADAChat\common\protocol.adb:59:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" label: "G:\ADAChat\common\protocol.adb:58:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:58:75" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:58:106" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "G:\ADAChat\common\protocol.adb:58:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_2__str_concat_2" label: "G:\ADAChat\common\protocol.adb:58:34" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "G:\ADAChat\common\protocol.adb:58:36" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "G:\ADAChat\common\protocol.adb:58:106" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "G:\ADAChat\common\protocol.adb:58:75" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "G:\ADAChat\common\protocol.adb:58:84" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "G:\ADAChat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "G:\ADAChat\common\protocol.adb:58:98" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "G:\ADAChat\common\protocol.adb:57:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "G:\ADAChat\common\protocol.adb:57:113" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "G:\ADAChat\common\protocol.adb:57:90" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "G:\ADAChat\common\protocol.adb:57:42" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "G:\ADAChat\common\protocol.adb:57:105" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "G:\ADAChat\common\protocol.adb:56:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "G:\ADAChat\common\protocol.adb:56:105" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "G:\ADAChat\common\protocol.adb:56:36" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "G:\ADAChat\common\protocol.adb:56:84" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "G:\ADAChat\common\protocol.adb:56:97" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "G:\ADAChat\common\protocol.adb:55:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "G:\ADAChat\common\protocol.adb:55:126" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "G:\ADAChat\common\protocol.adb:55:99" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_enum_new__image_enumeration_8" label: "G:\ADAChat\common\protocol.adb:55:48" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:55:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:55:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "G:\ADAChat\common\protocol.adb:53:27" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "G:\ADAChat\common\protocol.adb:53:27" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "G:\ADAChat\common\protocol.adb:52:28" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__fixed__trim" label: "G:\ADAChat\common\protocol.adb:52:28" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "G:\ADAChat\common\protocol.adb:52:40" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "G:\ADAChat\common\protocol.adb:51:26" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "G:\ADAChat\common\protocol.adb:51:26" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "memcpy" label: "G:\ADAChat\common\protocol.adb:50:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_enum_new__image_enumeration_8" label: "G:\ADAChat\common\protocol.adb:50:43" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:50:57" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:50:57" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__secondary_stack__ss_mark" label: "G:\ADAChat\common\protocol.adb:49:4" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" label: "Printmessagetoinfoconsole\nG:\ADAChat\common\protocol.adb:49:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" targetname: "system__secondary_stack__ss_release" label: "G:\ADAChat\common\protocol.adb:49:4" }
+node: { title: "protocol__createmessage" label: "Createmessage\nG:\ADAChat\common\protocol.adb:39:4\n128 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__createmessage" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__createmessage" targetname: "__gnat_reraise_zcx" label: "G:\ADAChat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDF" label: "G:\ADAChat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:40:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" label: "G:\ADAChat\common\protocol.adb:47:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDA" label: "G:\ADAChat\common\protocol.adb:46:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "system__secondary_stack__ss_allocate" label: "G:\ADAChat\common\protocol.adb:46:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:45:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "ada__strings__unbounded___assign__2" label: "G:\ADAChat\common\protocol.adb:45:22" }
+edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:45:22" }
+edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:43:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "ada__strings__unbounded___assign__2" label: "G:\ADAChat\common\protocol.adb:43:21" }
+edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:43:21" }
+edge: { sourcename: "protocol__createmessage" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:42:29" }
+edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:40:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDI" label: "G:\ADAChat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectIP" label: "G:\ADAChat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:40:7" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" label: "Createmessage\nG:\ADAChat\common\protocol.adb:39:4\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:39:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:39:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:39:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:39:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "protocol__messageobjectDF" label: "G:\ADAChat\common\protocol.adb:40:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:39:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:39:4" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" label: "B88b\nG:\ADAChat\common\protocol.adb:19:7\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:19:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:19:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:19:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:19:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:31:39" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_rcheck_CE_Access_Check" label: "G:\ADAChat\common\protocol.adb:31:39" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:19:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:19:7" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" label: "B62b\nG:\ADAChat\common\protocol.adb:26:38\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:26:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:26:38" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:26:38" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:26:38" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "system__secondary_stack__ss_release" label: "G:\ADAChat\common\protocol.adb:26:38" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:26:66" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_rcheck_CE_Access_Check" label: "G:\ADAChat\common\protocol.adb:26:66" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:26:38" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:26:38" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" label: "B43b\nG:\ADAChat\common\protocol.adb:22:34\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:22:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:22:34" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:22:34" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:22:34" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:22:58" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_rcheck_CE_Access_Check" label: "G:\ADAChat\common\protocol.adb:22:58" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:22:34" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:22:34" }
+node: { title: "protocol__stringtomessageobject" label: "Stringtomessageobject\nG:\ADAChat\common\protocol.adb:9:4\n256 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:26:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:22:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_reraise_zcx" label: "G:\ADAChat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDF" label: "G:\ADAChat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:13:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" label: "G:\ADAChat\common\protocol.adb:37:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDA" label: "G:\ADAChat\common\protocol.adb:36:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__secondary_stack__ss_allocate" label: "G:\ADAChat\common\protocol.adb:36:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" label: "G:\ADAChat\common\protocol.adb:29:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__createmessage" label: "G:\ADAChat\common\protocol.adb:30:17" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_unbounded_string" label: "G:\ADAChat\common\protocol.adb:31:39" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__text_io__put_line__2" label: "G:\ADAChat\common\protocol.adb:29:10" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" label: "G:\ADAChat\common\protocol.adb:26:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:26:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded___assign__2" label: "G:\ADAChat\common\protocol.adb:26:38" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:26:38" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__Oconcat__2" label: "G:\ADAChat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "G:\ADAChat\common\protocol.adb:26:85" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__secondary_stack__ss_mark" label: "G:\ADAChat\common\protocol.adb:26:38" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:25:41" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_count" label: "G:\ADAChat\common\protocol.adb:25:41" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__val_int__value_integer" label: "G:\ADAChat\common\protocol.adb:23:46" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "G:\ADAChat\common\protocol.adb:23:70" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" label: "G:\ADAChat\common\protocol.adb:22:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:22:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded___assign__2" label: "G:\ADAChat\common\protocol.adb:22:34" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:22:34" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_unbounded_string" label: "G:\ADAChat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "G:\ADAChat\common\protocol.adb:22:96" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Range_Check" label: "G:\ADAChat\common\protocol.adb:21:54" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__val_enum__value_enumeration_8" label: "G:\ADAChat\common\protocol.adb:21:54" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "G:\ADAChat\common\protocol.adb:21:78" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:18:33" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_count" label: "G:\ADAChat\common\protocol.adb:18:33" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__create" label: "G:\ADAChat\common\protocol.adb:16:24" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_string" label: "G:\ADAChat\common\protocol.adb:16:80" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:13:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDI" label: "G:\ADAChat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectIP" label: "G:\ADAChat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:11:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__initialize__2" label: "G:\ADAChat\common\protocol.adb:11:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "G:\ADAChat\common\protocol.adb:11:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:11:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "G:\ADAChat\common\protocol.adb:10:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__initialize__2" label: "G:\ADAChat\common\protocol.adb:10:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_setIP" label: "G:\ADAChat\common\protocol.adb:10:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:10:7" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" label: "Stringtomessageobject\nG:\ADAChat\common\protocol.adb:9:4\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:9:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:9:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.adb:9:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "gnat__string_split__finalize__2" label: "G:\ADAChat\common\protocol.adb:10:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.adb:11:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "protocol__messageobjectDF" label: "G:\ADAChat\common\protocol.adb:13:7" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__indirect_call" label: "G:\ADAChat\common\protocol.adb:9:4" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.adb:9:4" }
+node: { title: "protocol__messageobjecttostring" label: "Messageobjecttostring\nG:\ADAChat\common\protocol.adb:3:4\n256 bytes (dynamic)\n1 dynamic objects\n S34b G:\ADAChat\common\protocol.adb:6:77" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "memcpy" label: "G:\ADAChat\common\protocol.adb:5:7" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__secondary_stack__ss_allocate" label: "G:\ADAChat\common\protocol.adb:5:7" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__concat_7__str_concat_7" label: "G:\ADAChat\common\protocol.adb:6:77" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__unbounded__to_string" label: "G:\ADAChat\common\protocol.adb:6:100" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__fixed__trim" label: "G:\ADAChat\common\protocol.adb:6:21" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__unbounded__to_string" label: "G:\ADAChat\common\protocol.adb:5:89" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__img_int__image_integer" label: "G:\ADAChat\common\protocol.adb:6:33" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__img_enum_new__image_enumeration_8" label: "G:\ADAChat\common\protocol.adb:5:26" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:5:40" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "G:\ADAChat\common\protocol.adb:5:40" }
+node: { title: "protocol__messageobjectIP" label: "Messageobjectip\nG:\ADAChat\common\protocol.ads:17:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_reraise_zcx" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "G:\ADAChat\common\protocol.ads:21:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__initialize__2" label: "G:\ADAChat\common\protocol.ads:21:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "G:\ADAChat\common\protocol.ads:21:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "G:\ADAChat\common\protocol.ads:19:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__initialize__2" label: "G:\ADAChat\common\protocol.ads:19:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "G:\ADAChat\common\protocol.ads:19:7" }
+node: { title: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" label: "F12s\nG:\ADAChat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.ads:17:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.ads:17:0" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "G:\ADAChat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.ads:17:9" }
+node: { title: "protocol__messageobjectFD" label: "Messageobjectfd\nG:\ADAChat\common\protocol.ads:17:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectFD" targetname: "protocol__messageobjectDF" label: "G:\ADAChat\common\protocol.ads:17:9" }
+node: { title: "protocol__messageobjectDF" label: "Messageobjectdf\nG:\ADAChat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__strings__unbounded__finalize__2" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.ads:17:9" }
+node: { title: "protocol__messageobjectDA" label: "Messageobjectda\nG:\ADAChat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_end_handler" label: "G:\ADAChat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_begin_handler" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "_Unwind_Resume" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__strings__unbounded__adjust__2" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__strings__unbounded__adjust__2" label: "G:\ADAChat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__exceptions__triggered_by_abort" label: "G:\ADAChat\common\protocol.ads:17:9" }
+node: { title: "protocol__messageobjectDI" label: "Messageobjectdi\nG:\ADAChat\common\protocol.ads:17:9\n8 bytes (static)\n0 dynamic objects" }
+>>>>>>> origin/feature/server_logic
 }

@@ -9,27 +9,44 @@ with Ada.Exceptions;
 package body ada_main is
    pragma Warnings (Off);
 
+<<<<<<< HEAD
    E134 : Short_Integer; pragma Import (Ada, E134, "system__os_lib_E");
    E011 : Short_Integer; pragma Import (Ada, E011, "system__soft_links_E");
    E021 : Short_Integer; pragma Import (Ada, E021, "system__exception_table_E");
    E140 : Short_Integer; pragma Import (Ada, E140, "ada__containers_E");
+=======
+   E185 : Short_Integer; pragma Import (Ada, E185, "system__os_lib_E");
+   E011 : Short_Integer; pragma Import (Ada, E011, "system__soft_links_E");
+   E021 : Short_Integer; pragma Import (Ada, E021, "system__exception_table_E");
+   E172 : Short_Integer; pragma Import (Ada, E172, "ada__containers_E");
+>>>>>>> origin/feature/server_logic
    E084 : Short_Integer; pragma Import (Ada, E084, "ada__io_exceptions_E");
    E042 : Short_Integer; pragma Import (Ada, E042, "ada__strings_E");
    E048 : Short_Integer; pragma Import (Ada, E048, "ada__strings__maps_E");
    E256 : Short_Integer; pragma Import (Ada, E256, "ada__strings__maps__constants_E");
    E055 : Short_Integer; pragma Import (Ada, E055, "ada__tags_E");
    E083 : Short_Integer; pragma Import (Ada, E083, "ada__streams_E");
+<<<<<<< HEAD
    E104 : Short_Integer; pragma Import (Ada, E104, "interfaces__c_E");
    E106 : Short_Integer; pragma Import (Ada, E106, "interfaces__c__strings_E");
    E023 : Short_Integer; pragma Import (Ada, E023, "system__exceptions_E");
    E137 : Short_Integer; pragma Import (Ada, E137, "system__file_control_block_E");
    E157 : Short_Integer; pragma Import (Ada, E157, "ada__streams__stream_io_E");
    E132 : Short_Integer; pragma Import (Ada, E132, "system__file_io_E");
+=======
+   E110 : Short_Integer; pragma Import (Ada, E110, "interfaces__c_E");
+   E112 : Short_Integer; pragma Import (Ada, E112, "interfaces__c__strings_E");
+   E023 : Short_Integer; pragma Import (Ada, E023, "system__exceptions_E");
+   E188 : Short_Integer; pragma Import (Ada, E188, "system__file_control_block_E");
+   E212 : Short_Integer; pragma Import (Ada, E212, "ada__streams__stream_io_E");
+   E183 : Short_Integer; pragma Import (Ada, E183, "system__file_io_E");
+>>>>>>> origin/feature/server_logic
    E086 : Short_Integer; pragma Import (Ada, E086, "system__finalization_root_E");
    E081 : Short_Integer; pragma Import (Ada, E081, "ada__finalization_E");
    E088 : Short_Integer; pragma Import (Ada, E088, "system__storage_pools_E");
    E075 : Short_Integer; pragma Import (Ada, E075, "system__finalization_masters_E");
    E071 : Short_Integer; pragma Import (Ada, E071, "system__storage_pools__subpools_E");
+<<<<<<< HEAD
    E199 : Short_Integer; pragma Import (Ada, E199, "system__task_info_E");
    E144 : Short_Integer; pragma Import (Ada, E144, "gnat__secure_hashes_E");
    E151 : Short_Integer; pragma Import (Ada, E151, "gnat__secure_hashes__sha2_common_E");
@@ -38,6 +55,16 @@ package body ada_main is
    E120 : Short_Integer; pragma Import (Ada, E120, "system__pool_global_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "gnat__sockets_E");
    E113 : Short_Integer; pragma Import (Ada, E113, "system__pool_size_E");
+=======
+   E128 : Short_Integer; pragma Import (Ada, E128, "system__task_info_E");
+   E195 : Short_Integer; pragma Import (Ada, E195, "gnat__secure_hashes_E");
+   E202 : Short_Integer; pragma Import (Ada, E202, "gnat__secure_hashes__sha2_common_E");
+   E197 : Short_Integer; pragma Import (Ada, E197, "gnat__secure_hashes__sha2_64_E");
+   E204 : Short_Integer; pragma Import (Ada, E204, "system__assertions_E");
+   E206 : Short_Integer; pragma Import (Ada, E206, "system__pool_global_E");
+   E216 : Short_Integer; pragma Import (Ada, E216, "gnat__sockets_E");
+   E223 : Short_Integer; pragma Import (Ada, E223, "system__pool_size_E");
+>>>>>>> origin/feature/server_logic
    E015 : Short_Integer; pragma Import (Ada, E015, "system__secondary_stack_E");
    E044 : Short_Integer; pragma Import (Ada, E044, "ada__strings__unbounded_E");
    E142 : Short_Integer; pragma Import (Ada, E142, "gnat__sha512_E");
@@ -53,6 +80,7 @@ package body ada_main is
    E227 : Short_Integer; pragma Import (Ada, E227, "system__tasking__queuing_E");
    E233 : Short_Integer; pragma Import (Ada, E233, "system__tasking__stages_E");
    E096 : Short_Integer; pragma Import (Ada, E096, "client_logic_E");
+<<<<<<< HEAD
    E124 : Short_Integer; pragma Import (Ada, E124, "client_ui_E");
    E139 : Short_Integer; pragma Import (Ada, E139, "datatypes_E");
    E159 : Short_Integer; pragma Import (Ada, E159, "protocol_E");
@@ -60,6 +88,14 @@ package body ada_main is
    E245 : Short_Integer; pragma Import (Ada, E245, "server_logic_E");
    E247 : Short_Integer; pragma Import (Ada, E247, "user_databases_E");
    E181 : Short_Integer; pragma Import (Ada, E181, "concrete_server_logic_E");
+=======
+   E098 : Short_Integer; pragma Import (Ada, E098, "client_ui_E");
+   E190 : Short_Integer; pragma Import (Ada, E190, "datatypes_E");
+   E230 : Short_Integer; pragma Import (Ada, E230, "protocol_E");
+   E243 : Short_Integer; pragma Import (Ada, E243, "serverguicommunication_E");
+   E245 : Short_Integer; pragma Import (Ada, E245, "user_databases_E");
+   E100 : Short_Integer; pragma Import (Ada, E100, "concrete_server_logic_E");
+>>>>>>> origin/feature/server_logic
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -68,20 +104,28 @@ package body ada_main is
 
    procedure finalize_library is
    begin
+<<<<<<< HEAD
       E181 := E181 - 1;
+=======
+>>>>>>> origin/feature/server_logic
       declare
          procedure F1;
-         pragma Import (Ada, F1, "concrete_server_logic__finalize_spec");
+         pragma Import (Ada, F1, "concrete_server_logic__finalize_body");
       begin
+         E100 := E100 - 1;
          F1;
       end;
+<<<<<<< HEAD
       E247 := E247 - 1;
+=======
+>>>>>>> origin/feature/server_logic
       declare
          procedure F2;
-         pragma Import (Ada, F2, "user_databases__finalize_spec");
+         pragma Import (Ada, F2, "concrete_server_logic__finalize_spec");
       begin
          F2;
       end;
+<<<<<<< HEAD
       E126 := E126 - 1;
       declare
          procedure F3;
@@ -90,20 +134,38 @@ package body ada_main is
          F3;
       end;
       E139 := E139 - 1;
+=======
+      E245 := E245 - 1;
+      declare
+         procedure F3;
+         pragma Import (Ada, F3, "user_databases__finalize_spec");
+      begin
+         F3;
+      end;
+      E190 := E190 - 1;
+>>>>>>> origin/feature/server_logic
       declare
          procedure F4;
          pragma Import (Ada, F4, "datatypes__finalize_spec");
       begin
          F4;
       end;
+<<<<<<< HEAD
       E223 := E223 - 1;
+=======
+      E155 := E155 - 1;
+>>>>>>> origin/feature/server_logic
       declare
          procedure F5;
          pragma Import (Ada, F5, "system__tasking__protected_objects__entries__finalize_spec");
       begin
          F5;
       end;
+<<<<<<< HEAD
       E128 := E128 - 1;
+=======
+      E179 := E179 - 1;
+>>>>>>> origin/feature/server_logic
       declare
          procedure F6;
          pragma Import (Ada, F6, "ada__text_io__finalize_spec");
@@ -114,7 +176,11 @@ package body ada_main is
          procedure F7;
          pragma Import (Ada, F7, "gnat__sockets__finalize_body");
       begin
+<<<<<<< HEAD
          E099 := E099 - 1;
+=======
+         E216 := E216 - 1;
+>>>>>>> origin/feature/server_logic
          F7;
       end;
       E044 := E044 - 1;
@@ -128,12 +194,20 @@ package body ada_main is
          procedure F9;
          pragma Import (Ada, F9, "system__file_io__finalize_body");
       begin
+<<<<<<< HEAD
          E132 := E132 - 1;
+=======
+         E183 := E183 - 1;
+>>>>>>> origin/feature/server_logic
          F9;
       end;
       E075 := E075 - 1;
       E071 := E071 - 1;
+<<<<<<< HEAD
       E113 := E113 - 1;
+=======
+      E223 := E223 - 1;
+>>>>>>> origin/feature/server_logic
       declare
          procedure F10;
          pragma Import (Ada, F10, "system__pool_size__finalize_spec");
@@ -146,7 +220,11 @@ package body ada_main is
       begin
          F11;
       end;
+<<<<<<< HEAD
       E120 := E120 - 1;
+=======
+      E206 := E206 - 1;
+>>>>>>> origin/feature/server_logic
       declare
          procedure F12;
          pragma Import (Ada, F12, "system__pool_global__finalize_spec");
@@ -165,7 +243,11 @@ package body ada_main is
       begin
          F14;
       end;
+<<<<<<< HEAD
       E157 := E157 - 1;
+=======
+      E212 := E212 - 1;
+>>>>>>> origin/feature/server_logic
       declare
          procedure F15;
          pragma Import (Ada, F15, "ada__streams__stream_io__finalize_spec");
@@ -383,12 +465,20 @@ package body ada_main is
       E096 := E096 + 1;
       E124 := E124 + 1;
       Datatypes'Elab_Spec;
+<<<<<<< HEAD
       E139 := E139 + 1;
       E159 := E159 + 1;
       Concrete_Client_Logic'Elab_Spec;
       Concrete_Client_Logic'Elab_Body;
       E126 := E126 + 1;
       Server_Logic'Elab_Spec;
+=======
+      E190 := E190 + 1;
+      E230 := E230 + 1;
+      Serverguicommunication'Elab_Spec;
+      E243 := E243 + 1;
+      User_Databases'Elab_Spec;
+>>>>>>> origin/feature/server_logic
       E245 := E245 + 1;
       User_Databases'Elab_Spec;
       E247 := E247 + 1;
@@ -430,6 +520,7 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
+<<<<<<< HEAD
    --   E:\Development\Ada\Block_Projekt\ada_chat\client_logic.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\client_ui.o
    --   E:\Development\Ada\Block_Projekt\ada_chat\datatypes.o
@@ -442,6 +533,19 @@ package body ada_main is
    --   -LE:\Development\Ada\Block_Projekt\ada_chat\
    --   -LE:\Development\Ada\Block_Projekt\ada_chat\
    --   -LE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+=======
+   --   G:\ADAChat\client_logic.o
+   --   G:\ADAChat\client_ui.o
+   --   G:\ADAChat\datatypes.o
+   --   G:\ADAChat\protocol.o
+   --   G:\ADAChat\serverguicommunication.o
+   --   G:\ADAChat\user_databases.o
+   --   G:\ADAChat\concrete_server_logic.o
+   --   G:\ADAChat\main.o
+   --   -LG:\ADAChat\
+   --   -LG:\ADAChat\
+   --   -LG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+>>>>>>> origin/feature/server_logic
    --   -static
    --   -lgnarl
    --   -lgnat

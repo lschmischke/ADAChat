@@ -23,7 +23,7 @@ package body datatypes is
 
    function setPassword(this : in out UserPtr; password : in Unbounded_String) return Boolean is
    begin
-      this.password := encodePassword(password);
+      this.password := password;
       return true;
    end setPassword;
 

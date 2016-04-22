@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\client\client_ui.adb"
 node: { title: "client_ui__updatechatparticipants" label: "updatechatparticipants\nE:\Development\Ada\Block_Projekt\ada_chat\client\client_ui.adb:4:4\n8 bytes (static)\n0 dynamic objects" }
 node: { title: "client_ui__setconnectionstatus" label: "setconnectionstatus\nE:\Development\Ada\Block_Projekt\ada_chat\client\client_ui.adb:3:4\n8 bytes (static)\n0 dynamic objects" }
 node: { title: "client_ui__showmessage" label: "showmessage\nE:\Development\Ada\Block_Projekt\ada_chat\client\client_ui.adb:2:4\n8 bytes (static)\n0 dynamic objects" }
+=======
+graph: { title: "G:\ADAChat\client\client_ui.adb"
+node: { title: "client_ui__updatechatparticipants" label: "updatechatparticipants\nG:\ADAChat\client\client_ui.adb:4:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "client_ui__setconnectionstatus" label: "setconnectionstatus\nG:\ADAChat\client\client_ui.adb:3:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "client_ui__showmessage" label: "showmessage\nG:\ADAChat\client\client_ui.adb:2:4\n8 bytes (static)\n0 dynamic objects" }
+>>>>>>> origin/feature/server_logic
 }

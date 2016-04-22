@@ -110,7 +110,8 @@ package body User_Databases is
          end loop;
 
       Exception
-         when Error:Ada.IO_Exceptions.End_Error =>
+	 when Error:Ada.IO_Exceptions.End_Error =>
+	    Put_Line("closed Database File " & To_String(this.databaseFileName));
             Close(DataFile);
          when Error:others =>
             Put_Line(Exception_Information(Error));

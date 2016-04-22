@@ -26,8 +26,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U datatypes%b		datatypes.adb		72d84366 DE NE OO PK IL
-W ada.exceptions%s	a-except.adb		a-except.ali
+U datatypes%b		datatypes.adb		db6c0ef5 DE NE OO PK IL
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -78,8 +77,13 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
+<<<<<<< HEAD
 D datatypes.ads		20160420200206 bd60c4ab datatypes%s
 D datatypes.adb		20160420200206 cfb887cd datatypes%b
+=======
+D datatypes.ads		20160421130246 bd60c4ab datatypes%s
+D datatypes.adb		20160421130734 660cca5e datatypes%b
+>>>>>>> origin/feature/server_logic
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
 D g-bytswa.ads		20150518132148 a4d21639 gnat.byte_swapping%s
 D g-sechas.ads		20150518132148 7a59ee39 gnat.secure_hashes%s
@@ -148,13 +152,13 @@ X 17 datatypes.ads
 12U14*setUsername 12=26 12>49 18|9b14 12l8 12t19
 12p26 this{7P9} 18|9b26 11r7
 12r49 name{13|79R9} 18|9b49 11r24
-13V13*encodePassword{13|79R9} 13>28 18|14b13 17l8 17t22 26s24
+13V13*encodePassword{13|79R9} 13>28 18|14b13 17l8 17t22
 13r28 password{13|79R9} 18|14b28 16r63
 14V13*getPassword{13|79R9} 14>25 18|19b13 22l8 22t19
 14p25 this{7P9} 18|19b25 21r14
 15V13*setPassword{boolean} 15=25 15>48 18|24b13 28l8 28t19
 15p25 this{7P9} 18|24b25 26r7
-15r48 password{13|79R9} 18|24b48 26r39
+15r48 password{13|79R9} 18|24b48 26r24
 16V13*getContacts{5|49R9[9]} 16>26 18|30b13 33l8 33t19
 16p26 this{7P9} 18|30b26 32r14
 17U14*setContacts 17=27 17>50 18|35b14 38l8 38t19

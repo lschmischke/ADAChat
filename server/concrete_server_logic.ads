@@ -1,4 +1,3 @@
-with Server_Logic; use Server_Logic;
 with Protocol; use Protocol;
 with GNAT.Sockets; use GNAT.Sockets;
 with Ada.Streams; use Ada.Streams;
@@ -13,31 +12,29 @@ with dataTypes; use dataTypes;
 with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
+with ServerGUICommunication;
 
--- TODO: Kontaktlogik umsetzen,
---       Konakte hinzufügen und entfernen
---       Online Offline Benachrichtigungen
+
+-- # TODOs #
 --       Sicherstellen dass man keine Fremden in Chat einladen kann nur Kontakte
---       Disconnect, Client aus allen Chaträumen entfernen
 --       prüfen ob Kontakt beim Add bereits in Kontaktliste
---       kontakt in datenbank noch eintragen
---       saveUserDB in addContact methode integrieren
 
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is
+   package SGC renames ServerGUICommunication;
 
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
    -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients.
-   type Concrete_Server is private;
-   type Concrete_Server_Ptr is access Concrete_Server;
+   type Concrete_Server is new SGC.server with private;
+   type Concrete_Server_Ptr is access all Concrete_Server;
 
    -- Diese Prozedur leitet die Initialisierung des Servers ein und startet
    -- diesen anschliessend. Dies bedeutet insbesondere, dass von nun an auf
    -- einkommende Verbindungsanfragen gelauscht wird und fuer neue Clients
    -- separate Tasks zur Verfuegung gestellt werden, die es ihnen ermoeglichen
    -- untereinander zu kommunizieren.
-   procedure StartServer(This : in out Concrete_Server_Ptr);
+   procedure StartNewServer (This : in out Concrete_Server; ip : String; port :Natural) ;
 
    type Client_Task is limited private;
    type Client_Task_Ptr is access Client_Task;
@@ -62,11 +59,14 @@ package Concrete_Server_Logic is
 
    package chatRoom_List is new Doubly_Linked_Lists(Element_Type => chatRoomPtr);
 
+   function getChatroomsOfClient(client : in Concrete_Client_Ptr) return chatRoom_List.List;
+   procedure broadcastOnlineStatusToContacts(client : in Concrete_Client_Ptr; status : MessageTypeE);
+
+   procedure disconnectClient(client : in Concrete_Client_Ptr);
+
 
 
 private
-
-
 
 
    -- Typ einer Clientinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
@@ -115,7 +115,7 @@ private
                                                      Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
 
    -- type Concrete_Server is new Server_Interface with record
-   type Concrete_Server is record
+   type Concrete_Server is new SGC.Server with record
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
       Connected_Clients : userToClientMap.Map;
@@ -124,6 +124,15 @@ private
       chatRooms : chatRoomMap.Map;
       ContactRequests : userToUsersMap.Map;
    end record;
+
+
+
+    -------------------------------------------------------------------------------------------
+   -- # Implementierung ServerGUICommunication #
+   procedure startServer(thisServer :  aliased in Concrete_Server; ipAdress: String; port : Natural);
+   procedure kickUserWithName(thisServer : aliased in  Concrete_Server;username:String);
+   procedure stopServer(thisServer : aliased in   Concrete_Server);
+   -------------------------------------------------------------------------------------------
 
    function checkIfCorrespondingContactRequestExists(server : in Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;
 
@@ -135,9 +144,8 @@ private
    -- Diese Prozedur nimmt eine zuvor erzeuge Serverinstanz entgegen und erstellt
    -- fuer diese einen Server-Socket, welchem eine IP-Adresse und Portnr.
    -- zugewiesen wird.
-   procedure InitializeServer(This : in out Concrete_Server_Ptr);
+   procedure InitializeServer(This : in out Concrete_Server_Ptr; ip : String; port :Natural);
 
-   procedure dummy3(This : in out Concrete_Server_Ptr);
 
    -- Dieser Task lauscht auf einkommende Verbindungen von neuen Clients und
    -- erstellt fuer diese jeweils einen eigenen Socket und Task, in dem anschliessend
