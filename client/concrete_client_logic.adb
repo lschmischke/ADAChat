@@ -25,7 +25,7 @@ package body Concrete_Client_Logic is
       --#ConnectMessage erzeugen#
       ConnectMessage := createMessage(messagetype => Protocol.Connect,
                                       sender      => UserName,
-                                      receiver    => 0,
+                                      receiver    => ServerID,
                                       content     => Password);
 
       --#ConnectMessage nach Protokoll an Server#
@@ -54,15 +54,12 @@ package body Concrete_Client_Logic is
       --#DisconnectMessage erzeugen#
       DisconnectMessage := createMessage(messagetype => Protocol.Disconnect,
                                          sender      => UserName,
-                                         receiver    => 0,
+                                         receiver    => ServerID,
                                          content     => Msg);
 
       --#DisconnectMessage nach Protokoll an Server#
       WriteMessageToStream(ClientSocket => Client,
                            message      => DisconnectMessage);
-
-      --#Socket schliessen#
-      Close_Socket (Client);
 
    end DisconnectFromServer;
 
@@ -76,7 +73,7 @@ package body Concrete_Client_Logic is
 
       RegisterMessage := createMessage(messagetype => Register,
                                        sender      => UserName,
-                                       receiver    => 0,
+                                       receiver    => ServerID,
                                        content     => Password);
 
       WriteMessageToStream(ClientSocket => Client,
@@ -144,7 +141,7 @@ package body Concrete_Client_Logic is
    --------------------------------------------------------------------------------
 
    procedure SendMessageObject(This : in out Concrete_Client; Username : in Unbounded_String;
-                               Id_Receiver : in Integer; MsgObject : in Unbounded_String) is
+                               Id_Receiver : in Integer; MsgObject : in MessageObject) is
 
 
    begin
@@ -184,17 +181,18 @@ package body Concrete_Client_Logic is
 
          when Chat =>
 
-            --Ist ID bekannt, bin ich schon im Chatroom
-            --wenn ja, zeige Message in diesem Chatraum
-            --wenn nein, lege Chatraum an und oeffne guifenster
+            --#Ist ID bekannt, bin ich schon im Chatroom
+            --#wenn ja, zeige Message in diesem Chatraum
+            --#wenn nein, lege Chatraum an und oeffne guifenster
 
             if This.ChatRoomIdSet.Contains(Item => MsgObject.Receiver) then
-               --TODO
-               --zeige Message im Chatraum an
+               --#TODO#
+               --#zeige Message im Chatraum an
+               null;
             else
-               This.ChatRoomIdSet.Insert(New_Item => MsgObject);
-               --TODO
-               --oeffne neues Chatfenster
+               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
+               --#TODO
+               --#oeffne neues Chatfenster
             end if;
 
             return MsgObject.Content;
@@ -204,11 +202,11 @@ package body Concrete_Client_Logic is
                Message: Unbounded_String;
             begin
 
-               --TODO
-               --1.refused wenn kein Serverconnect
-               --2. wenn name oder pw falsch
-               --3. user schon eingeloggt
-               --4. wenn einladung in illegalem Chatraum
+               --#TODO
+               --#1.refused wenn kein Serverconnect
+               --#2. wenn name oder pw falsch
+               --#3. user schon eingeloggt
+               --#4. wenn einladung in illegalem Chatraum
 
                Message := To_Unbounded_String("Refused: ");
                Append(Message, MsgObject.Content);
@@ -216,9 +214,25 @@ package body Concrete_Client_Logic is
             end;
 
          when Disconnect =>
-            --TODO
-            --weil gekickt, sockets schliessen, userlister clearn...
-            return To_Unbounded_String("Du wurdest gekickt!");
+            declare
+               Message : Unbounded_String;
+            begin
+               Close_Socket(Client);
+               --#TODO TODO TODO
+               --#Fenster entsprechend schliessen
+
+               --#Userliste löschen#--
+               This.UsersOnline.Clear;
+               This.UsersOffline.Clear;
+
+               if MsgObject.Content = "ok"  then
+                  return To_Unbounded_String("Die Verbindung wurde beendet!");
+               else
+                  Message := To_Unbounded_String("You were kicked: ");
+                  Append(Message, MsgObject.Content);
+                  return Message;
+               end if;
+            end;
 
          when Online =>
             declare
@@ -226,7 +240,11 @@ package body Concrete_Client_Logic is
             begin
                Message := MsgObject.Content;
                Append(Message, " ist jetzt online!");
-               --TODOTODO refreshUserlist();
+               This.UsersOnline.Insert := MsgObject.Content;
+               if This.UsersOffline.Contains(Item => MsgObject) then
+                  This.UsersOffline.Delete(Item => MsgObject);
+               end if;
+               --#TODOTODO refreshUserlist()
                return Message;
             end;
 
@@ -236,7 +254,11 @@ package body Concrete_Client_Logic is
             begin
                Message := MsgObject.Content;
                Append(Message, " ist jetzt offline!");
-               --TODOTODO refreshUserlist();
+               This.UsersOffline.Insert := MsgObject.Content;
+               if This.UsersOnline.Contains(Item => MsgObject) then
+                  This.UsersOnline.Delete(Item => MsgObject);
+               end if;
+               --#TODOTODO refreshUserlist()
                return Message;
             end;
 
@@ -246,25 +268,29 @@ package body Concrete_Client_Logic is
             begin
                Message := To_Unbounded_String("Chatraum :");
                Append(Message, Integer'Image(MsgObject.Receiver));
-               --ChatroomID einordnen
-               --TODO neuer Chatraum, Fenster oeffnen...
+               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
+               --##TODO Chatfenster oeffnen
+
                return Message;
             end;
 
          when Protocol.Userlist =>
-            --TODO
-            --Userlist Chatraum, User verwaltung...
+            --#TODO
+            --#Userlist Chatraum, User verwaltung...
+
             null;
 
          when Leavechat =>
+
+            --#verlasse Chatraum, schliesse Chatfenster
             return MsgObject.Content;
 
          when AddContact =>
-            --TODO
-            --anfrage mitteilen, bestaetigen oder ablehnen
+            --#TODO
+            --#anfrage mitteilen, bestaetigen oder ablehnen
             null;
          when RemContact =>
-            --TODO
+            --#TODO
             --freund loeschen oder freundesanfrage ablehnen
             null;
          when others =>
@@ -284,6 +310,12 @@ package body Concrete_Client_Logic is
    end RefreshUserlist;
 
    --------------------------------------------------------------------------------
+
+   function SearchFriendList(This : in out Concrete_Client; User : in Unbounded_String) return Boolean is
+
+   begin
+      return False;
+   end SearchFriendList;
 
      function Hash (R : Natural) return Hash_Type is
    begin
