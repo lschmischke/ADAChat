@@ -6,8 +6,8 @@ with Ada.Strings.Unbounded;
 
 procedure main is
    --server : Concrete_Server_Ptr := new Concrete_Server;
-   cserver : Concrete_Server;
-      pragma Unreferenced(cserver);
+      cserver : Concrete_Server;
+     -- pragma Unreferenced(cserver);
 begin
    --Data_Types_Test.Test;
    -- Server_Ui.Start_Server(server);

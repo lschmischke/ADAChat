@@ -738,30 +738,70 @@ package body Concrete_Server_Logic is
    end disconnectClient;
 
    ----------------------------------------------------------------------------------------
+
    overriding
    procedure startServer(thisServer : aliased in  Concrete_Server; ipAdress: String; port : Natural) is
       serv : aliased Concrete_Server := thisServer;
    begin
       StartNewServer(serv,ipAdress,port);
    end startServer;
-    ----------------------------------------------------------------------------------------
 
-   procedure kickUserWithName(thisServer : aliased in  Concrete_Server;username:String) is
+   ----------------------------------------------------------------------------------------
+
+   procedure kickUserWithName(thisServer : aliased in  Concrete_Server; username : String) is
       user : UserPtr := getUser(server.UserDatabase,username => To_Unbounded_String(username));
       client : Concrete_Client_Ptr := server.Connected_Clients.Element(user);
    begin
       disconnectClient(client);
    end kickUserWithName;
 
-    ----------------------------------------------------------------------------------------
+   ----------------------------------------------------------------------------------------
 
-   procedure stopServer(thisServer : aliased  in   Concrete_Server) is
+   procedure stopServer(thisServer : aliased in Concrete_Server) is
    begin
       --# TODO
       null;
    end stopServer;
-    ----------------------------------------------------------------------------------------
+   ----------------------------------------------------------------------------------------
 
+   overriding
+   function loadDB(thisServer : aliased in Concrete_Server; DataFile : File_type) return Boolean is
+   begin
+      -- TODO
+      return false;
+   end loadDB;
+
+   ----------------------------------------------------------------------------------------
+
+   procedure saveDB(thisServer : aliased in Concrete_Server; DataFile : File_type) is
+   begin
+      -- TODO
+      null;
+   end saveDB;
+
+   ----------------------------------------------------------------------------------------
+
+   procedure closeServer(thisServer : aliased in Concrete_Server) is
+   begin
+      -- TODO
+      null;
+   end closeServer;
+
+   ----------------------------------------------------------------------------------------
+
+   procedure sendMessageToUser(thisServer : aliased in Concrete_Server; username : String; messagestring : String) is
+   begin
+      -- TODO
+      null;
+   end sendMessageToUser;
+
+   ----------------------------------------------------------------------------------------
+
+   procedure deleteUserFromDatabase(thisServer : aliased in Concrete_Server; username : String) is
+   begin
+      -- TODO
+      null;
+   end deleteUserFromDatabase;
 
    ----------------------------------------------------------------------------------------
 
