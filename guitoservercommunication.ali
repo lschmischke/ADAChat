@@ -19,7 +19,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U client_logic%s	client_logic.ads	104cbac2 DE EE OO PK
+U guitoservercommunication%s  guitoservercommunication.ads  e2e4f668 DE EE OO PK
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W system%s		system.ads		system.ali
@@ -30,7 +30,7 @@ D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D client_logic.ads	20160418132428 104cbac2 client_logic%s
+D guitoservercommunication.ads  20160422081122 e2e4f668 guitoservercommunication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
@@ -40,11 +40,16 @@ D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
-X 6 client_logic.ads
-3K9*Client_Logic 10l5 10e17
-5h9*Client_Interface 7p14 7r44 8p14 8r49
-7x14*connectToServer 7=30
-7r30 This{5R9}
-8x14*disconnectFromServer 8=35
-8r35 This{5R9}
+X 6 guitoservercommunication.ads
+1K9*GUItoServerCommunication 8l5 8e29
+2h9*Server 4p14 4r50 5p14 5r55 6p14 6r50
+4x14*startServer 4>26 4>58 4>76
+4r26 thisServer{2R9}
+4a58 ipAdress{string}
+4i76 port{natural}
+5x14*kickUserWithName 5>31 5>62
+5r31 thisServer{2R9}
+5a62 username{string}
+6x14*stopServer 6>25
+6r25 thisServer{2R9}
 

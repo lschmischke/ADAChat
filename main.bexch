@@ -1,29 +1,29 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-G:\ADAChat\adachat.gpr
-20160417090342
+C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr
+20160418132428
 [BOUND OBJECT FILES]
-G:\ADAChat\client_logic.o
-G:\ADAChat\client_ui.o
-G:\ADAChat\datatypes.o
-G:\ADAChat\protocol.o
-G:\ADAChat\serverguicommunication.o
-G:\ADAChat\user_databases.o
-G:\ADAChat\concrete_server_logic.o
-G:\ADAChat\main.o
+C:\Users\Leonard\Documents\ADA\adachat\client_logic.o
+C:\Users\Leonard\Documents\ADA\adachat\client_ui.o
+C:\Users\Leonard\Documents\ADA\adachat\datatypes.o
+C:\Users\Leonard\Documents\ADA\adachat\GUItoServerCommunication.o
+C:\Users\Leonard\Documents\ADA\adachat\protocol.o
+C:\Users\Leonard\Documents\ADA\adachat\user_databases.o
+C:\Users\Leonard\Documents\ADA\adachat\concrete_server_logic.o
+C:\Users\Leonard\Documents\ADA\adachat\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LG:\ADAChat\
--LG:\ADAChat\
--LG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+-LC:\Users\Leonard\Documents\ADA\adachat\
+-LC:\Users\Leonard\Documents\ADA\adachat\
+-LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
 -static
 -static-libgcc
-G:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
-G:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
+C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
+C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
 -lws2_32
 -Xlinker
 --stack=0x200000,0x1000

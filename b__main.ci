@@ -6,7 +6,7 @@ node: { title: "__gnat_initialize" label: "initialize\nb__main.adb:404:17" shape
 node: { title: "concrete_server_logic___elabb" label: "e206b\nb__main.adb:391:28" shape : ellipse }
 node: { title: "concrete_server_logic___elabs" label: "e204b\nb__main.adb:390:28" shape : ellipse }
 node: { title: "user_databases___elabs" label: "e202b\nb__main.adb:388:21" shape : ellipse }
-node: { title: "serverguicommunication___elabs" label: "e200b\nb__main.adb:386:29" shape : ellipse }
+node: { title: "guitoservercommunication___elabs" label: "e200b\nb__main.adb:385:31" shape : ellipse }
 node: { title: "datatypes___elabs" label: "e198b\nb__main.adb:383:16" shape : ellipse }
 node: { title: "client_logic___elabs" label: "e196b\nb__main.adb:380:19" shape : ellipse }
 node: { title: "system__tasking__stages___elabb" label: "e194b\nb__main.adb:378:28" shape : ellipse }
@@ -86,7 +86,7 @@ node: { title: "adainit" label: "adainit\nb__main.adb:199:4\n48 bytes (static)\n
 edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabb" label: "b__main.adb:391:28" }
 edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabs" label: "b__main.adb:390:28" }
 edge: { sourcename: "adainit" targetname: "user_databases___elabs" label: "b__main.adb:388:21" }
-edge: { sourcename: "adainit" targetname: "serverguicommunication___elabs" label: "b__main.adb:386:29" }
+edge: { sourcename: "adainit" targetname: "guitoservercommunication___elabs" label: "b__main.adb:385:31" }
 edge: { sourcename: "adainit" targetname: "datatypes___elabs" label: "b__main.adb:383:16" }
 edge: { sourcename: "adainit" targetname: "client_logic___elabs" label: "b__main.adb:380:19" }
 edge: { sourcename: "adainit" targetname: "system__tasking__stages___elabb" label: "b__main.adb:378:28" }

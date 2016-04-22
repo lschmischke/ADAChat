@@ -55,8 +55,8 @@ package body ada_main is
    E096 : Short_Integer; pragma Import (Ada, E096, "client_logic_E");
    E098 : Short_Integer; pragma Import (Ada, E098, "client_ui_E");
    E190 : Short_Integer; pragma Import (Ada, E190, "datatypes_E");
-   E230 : Short_Integer; pragma Import (Ada, E230, "protocol_E");
-   E243 : Short_Integer; pragma Import (Ada, E243, "serverguicommunication_E");
+   E229 : Short_Integer; pragma Import (Ada, E229, "guitoservercommunication_E");
+   E231 : Short_Integer; pragma Import (Ada, E231, "protocol_E");
    E245 : Short_Integer; pragma Import (Ada, E245, "user_databases_E");
    E100 : Short_Integer; pragma Import (Ada, E100, "concrete_server_logic_E");
 
@@ -382,9 +382,9 @@ package body ada_main is
       E098 := E098 + 1;
       Datatypes'Elab_Spec;
       E190 := E190 + 1;
-      E230 := E230 + 1;
-      Serverguicommunication'Elab_Spec;
-      E243 := E243 + 1;
+      Guitoservercommunication'Elab_Spec;
+      E229 := E229 + 1;
+      E231 := E231 + 1;
       User_Databases'Elab_Spec;
       E245 := E245 + 1;
       Concrete_Server_Logic'Elab_Spec;
@@ -425,17 +425,17 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   G:\ADAChat\client_logic.o
-   --   G:\ADAChat\client_ui.o
-   --   G:\ADAChat\datatypes.o
-   --   G:\ADAChat\protocol.o
-   --   G:\ADAChat\serverguicommunication.o
-   --   G:\ADAChat\user_databases.o
-   --   G:\ADAChat\concrete_server_logic.o
-   --   G:\ADAChat\main.o
-   --   -LG:\ADAChat\
-   --   -LG:\ADAChat\
-   --   -LG:/hdd programme/gps/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+   --   C:\Users\Leonard\Documents\ADA\adachat\client_logic.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\client_ui.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\datatypes.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\GUItoServerCommunication.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\protocol.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\user_databases.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\concrete_server_logic.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\main.o
+   --   -LC:\Users\Leonard\Documents\ADA\adachat\
+   --   -LC:\Users\Leonard\Documents\ADA\adachat\
+   --   -LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
    --   -static
    --   -lgnarl
    --   -lgnat

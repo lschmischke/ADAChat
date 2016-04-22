@@ -18,20 +18,20 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__main.adb		3468e1d1 NE OO PK IL
+U ada_main%b		b__main.adb		7d777164 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__main.ads		860a6b1e EE NE OO PK IL
+U ada_main%s		b__main.ads		bad542f8 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D b__main.ads		20160421214736 72c4e724 ada_main%s
-D b__main.adb		20160421214736 0f61cbee ada_main%b
+D b__main.ads		20160422111848 4e1bcec2 ada_main%s
+D b__main.adb		20160422111848 7aa172bd ada_main%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
 D s-restri.ads		20150518132150 1b9d0672 system.restrictions%s
@@ -387,8 +387,8 @@ X 5 b__main.adb
 55i4 E096{short_integer} 55m46 55r46 381m7 381r15
 56i4 E098{short_integer} 56m46 56r46 382m7 382r15
 57i4 E190{short_integer} 57m46 57r46 90m7 90r15 384m7 384r15
-58i4 E230{short_integer} 58m46 58r46 385m7 385r15
-59i4 E243{short_integer} 59m46 59r46 387m7 387r15
+58i4 E229{short_integer} 58m46 58r46 386m7 386r15
+59i4 E231{short_integer} 59m46 59r46 387m7 387r15
 60i4 E245{short_integer} 60m46 60r46 83m7 83r15 389m7 389r15
 61i4 E100{short_integer} 61m46 61r46 74m10 74r18 392m7 392r15
 63a4 Local_Priority_Specific_Dispatching{string} 276r9
