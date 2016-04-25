@@ -12,21 +12,23 @@ with dataTypes; use dataTypes;
 with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
-with ServerGUICommunication;
+with GUI_to_Server_Communication;
 
 
 -- # TODOs #
 --       Sicherstellen dass man keine Fremden in Chat einladen kann nur Kontakte
 --       prüfen ob Kontakt beim Add bereits in Kontaktliste
+--       Sicherstellen, dass man keine Nutzer in den Chat mit dem Server eintragen kann
+--       Kontaktanfragen ablehnen über remContact
 
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is
-   package SGC renames ServerGUICommunication;
+   package GTS renames GUI_to_Server_Communication;
 
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
    -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients.
-   type Concrete_Server is new SGC.server with private;
+   type Concrete_Server is new GTS.server with private;
    type Concrete_Server_Ptr is access all Concrete_Server;
 
    -- Diese Prozedur leitet die Initialisierung des Servers ein und startet
@@ -39,7 +41,7 @@ package Concrete_Server_Logic is
    type Client_Task is limited private;
    type Client_Task_Ptr is access Client_Task;
 
-   type Concrete_Client is  private;
+   type Concrete_Client is private;
    type Concrete_Client_Ptr is access Concrete_Client;
 
 
@@ -65,7 +67,11 @@ package Concrete_Server_Logic is
    procedure disconnectClient(client : in Concrete_Client_Ptr);
 
 
-
+   package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr);
+   package userViewOfflineMap is new Hashed_Maps(Key_Type        => Unbounded_String,
+						     Element_Type    => Unbounded_String,
+						     Hash            => Hash,
+                                                     Equivalent_Keys => "=");
 private
 
 
@@ -115,7 +121,7 @@ private
                                                      Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
 
    -- type Concrete_Server is new Server_Interface with record
-   type Concrete_Server is new SGC.Server with record
+   type Concrete_Server is new GTS.Server with record
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
       Connected_Clients : userToClientMap.Map;
@@ -130,11 +136,16 @@ private
     -------------------------------------------------------------------------------------------
    -- # Implementierung ServerGUICommunication #
    procedure startServer(thisServer :  aliased in Concrete_Server; ipAdress: String; port : Natural);
-   procedure kickUserWithName(thisServer : aliased in  Concrete_Server;username:String);
-   procedure stopServer(thisServer : aliased in   Concrete_Server);
+   procedure stopServer(thisServer : aliased in  Concrete_Server);
+   function loadDB(thisServer : aliased in Concrete_Server; DataFile : File_type) return Boolean;
+   procedure saveDB(thisServer : aliased in Concrete_Server; DataFile : File_type);
+   procedure closeServer(thisServer : aliased in Concrete_Server);
+   procedure sendMessageToUser(thisServer : aliased in Concrete_Server; username : String; messagestring : String);
+   procedure deleteUserFromDatabase(thisServer : aliased in Concrete_Server; username : String);
+   procedure kickUserWithName(thisServer : aliased in Concrete_Server; username:String);
    -------------------------------------------------------------------------------------------
 
-   function checkIfCorrespondingContactRequestExists(server : in Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;
+   function checkIfContactRequestExists(server : in Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;
 
    procedure removeContactRequest (server : in out Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr);
 

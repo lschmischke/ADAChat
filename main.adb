@@ -1,4 +1,3 @@
-with client_logic;
 with Concrete_Server_Logic; use Concrete_Server_Logic;
 with Client_Ui;
 with Concrete_Client_Logic; use Concrete_Client_Logic;
@@ -15,6 +14,7 @@ procedure main is
 begin
    cserver.startServer("127.0.0.1",12321);
 
+<<<<<<< HEAD
    Client_Ui.initClientUI(Client);
 
    --Client.connectToServer(To_Unbounded_String("a"), To_Unbounded_String("a"),
@@ -32,4 +32,6 @@ begin
       printMessageToInfoConsole(msg);
       end loop;
 
+=======
+>>>>>>> origin/feature/Client_Logic
 end main;

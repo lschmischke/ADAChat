@@ -1,0 +1,35 @@
+edge: { sourcename: "gui_to_server_communication__TserverCFD"
+  targetname: "-9:gui_to_server_communication__server,gui_to_server_communication__server"
+  label: "gui_to_server_communication.ads:4:9"
+}
+class {
+  classname: "gui_to_server_communication__server"
+  label: "gui_to_server_communication__server\gui_to_server_communication.ads:4:9"
+  virtuals: "1:gui_to_server_communication__startserver\n
+             2:gui_to_server_communication__stopserver\n
+             3:gui_to_server_communication__loaddb\n
+             4:gui_to_server_communication__savedb\n
+             5:gui_to_server_communication__closeserver\n
+             6:gui_to_server_communication__sendmessagetouser\n
+             7:gui_to_server_communication__deleteuserfromdatabase\n
+             8:gui_to_server_communication__kickuserwithname\n
+             -1:gui_to_server_communication___size\n
+             -2:gui_to_server_communication__serverSR\n
+             -3:gui_to_server_communication__serverSW\n
+             -4:gui_to_server_communication__serverSI\n
+             -5:gui_to_server_communication__serverSO\n
+             -6:gui_to_server_communication__Oeq\n
+             -7:gui_to_server_communication___assign\n
+             -8:gui_to_server_communication__serverDA\n
+             -9:gui_to_server_communication__serverDF"
+}
+graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\server\gui_to_server_communication.ads"
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "gui_to_server_communication___elabs" label: "Gui_To_Server_Communication\nE:\Development\Ada\Block_Projekt\ada_chat\server\gui_to_server_communication.ads:3:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "gui_to_server_communication___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\gui_to_server_communication.ads:4:9" }
+edge: { sourcename: "gui_to_server_communication___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\gui_to_server_communication.ads:4:9" }
+node: { title: "gui_to_server_communication__TserverCFD" label: "Tservercfd\nE:\Development\Ada\Block_Projekt\ada_chat\server\gui_to_server_communication.ads:4:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "gui_to_server_communication__TserverCFD" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\gui_to_server_communication.ads:4:9" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+}

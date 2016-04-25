@@ -13,25 +13,24 @@ A -march=pentiumpro
 P ZX
 
 RN
-RV NO_DISPATCH
 RV NO_DISPATCHING_CALLS
+RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U server_ui%b		server_ui.adb		6c3536aa DE NE OO PK
+U guitoservercommunication%s  guitoservercommunication.ads  e2e4f668 DE EE OO PK
+W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
-
-U server_ui%s		server_ui.ads		f8278e7d DE EE NE OO PK
-W server_logic%s	server_logic.ads	server_logic.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D server_logic.ads	20160417151626 1ba6241e server_logic%s
-D server_ui.ads		20160416103510 e381aa63 server_ui%s
-D server_ui.adb		20160416103510 8fb49cc9 server_ui%b
+D guitoservercommunication.ads  20160422125310 e2e4f668 guitoservercommunication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
@@ -39,13 +38,18 @@ D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
 D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
-X 6 server_logic.ads
-3K9*Server_Logic 11e17 7|1w6 1r24
-5h9*Server_Interface 7|5r43 8|3r43
-7x14*dummy1 8|5R7
-X 7 server_ui.ads
-3K9*Server_Ui 7l5 7e14 8|1b14 8l5 8t14
-5U14*Start_Server 5=27 8|3b14 6l8 6t20
-5c27 server<6|5R9> 8|3b27 5m14
+X 6 guitoservercommunication.ads
+1K9*GUItoServerCommunication 8l5 8e29
+2h9*Server 4p14 4r50 5p14 5r55 6p14 6r50
+4x14*startServer 4>26 4>58 4>76
+4r26 thisServer{2R9}
+4a58 ipAdress{string}
+4i76 port{natural}
+5x14*kickUserWithName 5>31 5>62
+5r31 thisServer{2R9}
+5a62 username{string}
+6x14*stopServer 6>25
+6r25 thisServer{2R9}
 

@@ -1,0 +1,30 @@
+edge: { sourcename: "guitoservercommunication__TserverCFD"
+  targetname: "-9:guitoservercommunication__server,guitoservercommunication__server"
+  label: "guitoservercommunication.ads:2:9"
+}
+class {
+  classname: "guitoservercommunication__server"
+  label: "guitoservercommunication__server\guitoservercommunication.ads:2:9"
+  virtuals: "1:guitoservercommunication__startserver\n
+             2:guitoservercommunication__kickuserwithname\n
+             3:guitoservercommunication__stopserver\n
+             -1:guitoservercommunication___size\n
+             -2:guitoservercommunication__serverSR\n
+             -3:guitoservercommunication__serverSW\n
+             -4:guitoservercommunication__serverSI\n
+             -5:guitoservercommunication__serverSO\n
+             -6:guitoservercommunication__Oeq\n
+             -7:guitoservercommunication___assign\n
+             -8:guitoservercommunication__serverDA\n
+             -9:guitoservercommunication__serverDF"
+}
+graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\server\GUItoServerCommunication.ads"
+node: { title: "ada__tags__register_tag" label: "Register_Tag\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
+node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
+node: { title: "guitoservercommunication___elabs" label: "Guitoservercommunication\nE:\Development\Ada\Block_Projekt\ada_chat\server\guitoservercommunication.ads:1:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "guitoservercommunication___elabs" targetname: "ada__tags__register_tag" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\guitoservercommunication.ads:2:9" }
+edge: { sourcename: "guitoservercommunication___elabs" targetname: "ada__tags__check_tsd" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\guitoservercommunication.ads:2:9" }
+node: { title: "guitoservercommunication__TserverCFD" label: "Tservercfd\nE:\Development\Ada\Block_Projekt\ada_chat\server\guitoservercommunication.ads:2:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "guitoservercommunication__TserverCFD" targetname: "__indirect_call" label: "E:\Development\Ada\Block_Projekt\ada_chat\server\guitoservercommunication.ads:2:9" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+}

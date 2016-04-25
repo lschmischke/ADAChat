@@ -1,4 +1,3 @@
-with Client_Logic; use Client_Logic;
 with GNAT.Sockets; use GNAT.Sockets;
 with Ada.Streams; use Ada.Streams;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
@@ -10,9 +9,15 @@ with Datatypes; use Datatypes;
 with Ada.Containers; use Ada.Containers;
 with Ada.Containers.Hashed_Sets;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
+with Ada.Containers.Indefinite_Hashed_Maps;
+with GNAT.String_Split; use GNAT.String_Split;
+with Gui2Client_Communication; use Gui2Client_Communication;
+
 
 
 package Concrete_Client_Logic is
+
+   type Concrete_Client is new Gui2Client_Communication.Client with private;
 
    package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
                                                       Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
@@ -22,19 +27,29 @@ package Concrete_Client_Logic is
    function Hash (R : Natural) return Hash_Type;
 
    package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
-                                                      Hash                => Hash,
-                                                      Equivalent_Elements => "=");
+                                                         Hash                => Hash,
+                                                         Equivalent_Elements => "=");
 
-   type Concrete_Client is new Client_Interface with record
+   package ChatRoomUsers is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
+                                                                      Element_Type    => Userlist.Set,
+                                                                      Hash            => Hash,
+                                                                      Equivalent_Keys => "=",
+                                                                      "="             => Userlist."=");
+
+   private
+
+   type Concrete_Client is new Gui2Client_Communication.Client with record
       Socket : Socket_Type;
       ServerRoomId : Integer;
       UsersOnline : Userlist.Set;
       UsersOffline : Userlist.Set;
       ChatRoomIdSet : ChatRoomIds.Set;
+      ChatRoomParticipants : ChatRoomUsers.Map;
+
    end record;
 
+   --#ServerID fuer register und connect
    ServerID : constant Integer := 0;
-
 
    --Stellt eine Socketverbindung zum Server her und meldet den Client
    --nach Chat-Protokoll am Server an.
@@ -80,5 +95,22 @@ package Concrete_Client_Logic is
    procedure RefreshUserlist(This : in out Concrete_Client; User : in Unbounded_String);
 
    function searchFriendList(This : in out Concrete_Client; User : in Unbounded_String) return Boolean;
+
+   -----------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
+   --#Implementierung des Gui2Client_Communication interfaces
+
+   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String);
+
+   procedure DisconnectUser(This : in out Concrete_Client; Username : in Unbounded_String; Message : in Unbounded_String);
+
+   procedure RegisterUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String);
+
+   procedure InviteToGroupChat(This : in out Concrete_Client; Username : in Unbounded_String; Receiver : in Integer;
+                               Participant : in Unbounded_String);
+
+   procedure SendMessageToChat(This : in out Concrete_Client; Receiver: in Integer; Username : in Unbounded_String;
+                               Message : in Unbounded_String);
+   -----------------------------------------------------------------------------
 
 end Concrete_Client_Logic;

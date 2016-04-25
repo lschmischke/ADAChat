@@ -19,14 +19,12 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U client_logic%s	client_logic.ads	0a5dd175 DE EE OO PK
+U gui2client_communication%s  gui2client_communication.ads  35854c60 DE EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
-W gnat%s		gnat.ads		gnat.ali
-W gnat.sockets%s	g-socket.adb		g-socket.ali
 W system%s		system.ads		system.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
@@ -41,20 +39,13 @@ D a-strmap.ads		20150518132148 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client_logic.ads	20160422170554 5e4a9618 client_logic%s
-D gnat.ads		20150518132148 fd2ad2f1 gnat%s
-D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
-D interfac.ads		20150518132148 6033a23f interfaces%s
-D i-c.ads		20150518132148 5421119b interfaces.c%s
+D gui2client_communication.ads  20160422220524 0a1498a5 gui2client_communication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
 D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
-D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
-D s-pooglo.ads		20150518132150 542f33d0 system.pool_global%s
 D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
 D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
 D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
@@ -67,28 +58,36 @@ D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 X 1 ada.ads
-16K9*Ada 19e8 13|1r6 1r33
+16K9*Ada 19e8 12|1r6 1r33
 X 7 a-string.ads
-16K13*Strings 35e16 13|1r10 1r37
+16K13*Strings 35e16 12|1r10 1r37
 X 9 a-strunb.ads
-76K21*Unbounded 489e26 13|1w18 1r45
-79R9*Unbounded_String<5|43R9> 473e14 13|8r76 8r108 9r48 11r81 12r44
-X 13 client_logic.ads
-4K9*Client_Logic 14l5 14e17
-6h9*Client_Interface 8p14 8r44 11p14 11r49
-8x14*connectToServer 8=30 8>62 8>94 9>30 9>66
-8r30 This{6R9}
-8r62 UserName{9|79R9}
-8r94 Password{9|79R9}
-9r30 ServerAdress{9|79R9}
-9i66 ServerPort{15|476I9}
-11x14*disconnectFromServer 11=35 11>67 12>35
-11r35 This{6R9}
-11r67 UserName{9|79R9}
-12r35 Msg{9|79R9}
-X 14 gnat.ads
-34K9*GNAT 13|2r6 2r24 14|37e9
-X 15 g-socket.ads
-55K14*Sockets 13|2w11 2r29 15|1260e17
-476I9*Port_Type<integer> 13|9r82
+76K21*Unbounded 489e26 12|1w18 1r45
+79R9*Unbounded_String<5|43R9> 473e14 12|7r60 7r92 9r65 9r96 11r63 11r95 13r68
+. 14r49 16r90 17r45
+X 12 gui2client_communication.ads
+3K9*Gui2Client_Communication 19l5 19e29
+5h9*Client 7p14 7r38 9p14 9r43 11p14 11r41 13p14 13r46 16p14 16r46
+7x14*LoginUser 7=24 7>46 7>78
+7r24 This{5R9}
+7r46 Username{9|79R9}
+7r78 Password{9|79R9}
+9x14*DisconnectUser 9=29 9>51 9>83
+9r29 This{5R9}
+9r51 Username{9|79R9}
+9r83 Message{9|79R9}
+11x14*RegisterUser 11=27 11>49 11>81
+11r27 This{5R9}
+11r49 Username{9|79R9}
+11r81 Password{9|79R9}
+13x14*InviteToGroupChat 13=32 13>54 13>86 14>32
+13r32 This{5R9}
+13r54 Username{9|79R9}
+13i86 Receiver{integer}
+14r32 Participant{9|79R9}
+16x14*SendMessageToChat 16=32 16>54 16>76 17>32
+16r32 This{5R9}
+16i54 Receiver{integer}
+16r76 Username{9|79R9}
+17r32 Message{9|79R9}
 
