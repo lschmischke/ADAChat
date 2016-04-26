@@ -5,7 +5,7 @@ package body Concrete_Client_Logic is
    Address : Sock_Addr_Type;
    Channel : Stream_Access;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String;
                              Password : in Unbounded_String; ServerAdress : in Unbounded_String;
@@ -43,7 +43,7 @@ package body Concrete_Client_Logic is
 
    end ConnectToServer;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    procedure DisconnectFromServer(This : in out Concrete_Client; UserName : in Unbounded_String;
                                   Msg : in Unbounded_String) is
@@ -64,7 +64,7 @@ package body Concrete_Client_Logic is
 
    end DisconnectFromServer;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    procedure RegisterAtServer(This : in out Concrete_Client; UserName : in Unbounded_String; Password : in Unbounded_String) is
 
@@ -82,7 +82,7 @@ package body Concrete_Client_Logic is
 
    end RegisterAtServer;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    procedure RequestChatroom(This : in out Concrete_Client; UserName : in Unbounded_String; Id_Receiver : in Integer;
                              Participant : in Unbounded_String) is
@@ -101,7 +101,7 @@ package body Concrete_Client_Logic is
 
    end RequestChatroom;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    procedure LeaveChatroom(This : in out Concrete_Client; UserName : in Unbounded_String; Id_Receiver : in Integer;
                            Message : in Unbounded_String) is
@@ -120,7 +120,7 @@ package body Concrete_Client_Logic is
 
    end LeaveChatroom;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    procedure SendTextMessage(This : in out Concrete_Client; Username : in Unbounded_String;
                              Id_Receiver : in Integer; Msg : in Unbounded_String) is
@@ -139,7 +139,7 @@ package body Concrete_Client_Logic is
 
    end SendTextMessage;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    procedure SendMessageObject(This : in out Concrete_Client; Username : in Unbounded_String;
                                Id_Receiver : in Integer; MsgObject : in MessageObject) is
@@ -152,7 +152,7 @@ package body Concrete_Client_Logic is
 
    end SendMessageObject;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    function ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) return Unbounded_String is
 
@@ -168,7 +168,7 @@ package body Concrete_Client_Logic is
 
    end ReadFromServer;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    function ProcessMessageObject(This : in out Concrete_Client; MsgObject : in MessageObject) return Unbounded_String is
 
@@ -312,7 +312,7 @@ package body Concrete_Client_Logic is
 
    end ProcessMessageObject;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    procedure RefreshUserlist(This : in out Concrete_Client; User : in Unbounded_String) is
 
@@ -320,7 +320,7 @@ package body Concrete_Client_Logic is
       null;
    end RefreshUserlist;
 
-   --------------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    function SearchFriendList(This : in out Concrete_Client; User : in Unbounded_String) return Boolean is
 
