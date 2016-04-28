@@ -1,5 +1,6 @@
 with Protocol; use Protocol;
 with dataTypes; use dataTypes;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 
 package Client2Gui_Communication is
 
@@ -9,8 +10,8 @@ package Client2Gui_Communication is
    procedure AddOnlineUser(This : in GUI; UserName : Unbounded_String) is abstract;
 
    -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
-   procedure UpdateOfflineUsers(This : in GUI; UserName : Unbounded_String) is abstract;
+   procedure AddOfflineUser(This : in GUI; UserName : Unbounded_String) is abstract;
 
-   procedure ShowChatMessages(This : in GUI; message : Message_Object) is abstract;
+   procedure ShowChatMessages(This : in GUI; message : MessageObject) is abstract;
 
 end Client2Gui_Communication;
