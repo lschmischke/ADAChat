@@ -1,6 +1,7 @@
 with Ada.Text_IO; use Ada.Text_IO;
 
 with Gtk.Main;
+with Gtk.GEntry; use Gtk.GEntry;
 
 package body Chat_Window_Callbacks is
 
@@ -12,13 +13,17 @@ package body Chat_Window_Callbacks is
 
    procedure Games_Action  (Object : access Gtkada_Builder_Record'Class) is null;
 
-   procedure Smiley_Action  (Object : access Gtkada_Builder_Record'Class) is null;
-
-   function Check_If_Enter  (Object : access Gtk.GEntry.Gtk_Entry_Record'Class;
-                             Params : Glib.Values.GValues) return Boolean is
+   procedure Smiley_Action  (Object : access Gtkada_Builder_Record'Class) is
    begin
-      Put_Line(Object.Get_Text);
-      return false;
-   end Check_If_Enter;
+      null;
+   end Smiley_Action;
+
+   procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class) is
+      message : Gtk_Entry;
+   begin
+      message := Gtk_Entry(Object.Get_Object("New_Message"));
+      Put_Line(message.Get_Text);
+      message.Set_Text("");
+   end Handle_Enter;
 
 end Chat_Window_Callbacks;

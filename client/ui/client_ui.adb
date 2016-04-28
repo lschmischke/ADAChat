@@ -72,33 +72,18 @@ package body Client_Ui is
 
       Register_Handler
         (Builder => Builder,
-         Handler_Name => "Contact_Action",
-         Handler => Contact_Window_Callbacks.Contact_Action'Access);
+         Handler_Name => "Online_Contact_Action",
+         Handler => Contact_Window_Callbacks.Online_Contact_Action'Access);
 
       Register_Handler
         (Builder => Builder,
-         Handler_Name => "Check_RightClick",
-         Handler => Chat_Window_Callbacks.Check_RightClick'Access);
+         Handler_Name => "Offline_Contact_Action",
+         Handler => Contact_Window_Callbacks.Offline_Contact_Action'Access);
 
-      Register_Handler
-        (Builder => Builder,
-         Handler_Name => "Invite_Action",
-         Handler => Chat_Window_Callbacks.Invite_Action'Access);
-
-      Register_Handler
-        (Builder => Builder,
-         Handler_Name => "History_Action",
-         Handler => Chat_Window_Callbacks.History_Action'Access);
-
-      Register_Handler
-        (Builder => Builder,
-         Handler_Name => "Games_Action",
-         Handler => Chat_Window_Callbacks.Games_Action'Access);
-
-      Register_Handler
-        (Builder => Builder,
-         Handler_Name => "Smiley_Action",
-         Handler => Chat_Window_Callbacks.Smiley_Action'Access);
+      --Register_Handler
+      --  (Builder => Builder,
+      --   Handler_Name => "Check_RightClick",
+      --   Handler => Chat_Window_Callbacks.Check_RightClick'Access);
 
       Do_Connect(Builder);
 

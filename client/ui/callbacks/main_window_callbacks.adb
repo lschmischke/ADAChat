@@ -33,31 +33,31 @@ package body Main_Window_Callbacks is
       serverIP := Gtk_Entry(Object.Get_Object("Settings_IP"));
       serverport := Gtk_Entry(Object.Get_Object("Settings_Port"));
 
-      Client_Ui.Client.connectToServer(To_Unbounded_String(username.Get_Text), To_Unbounded_String(password.Get_Text),
-                                       To_Unbounded_String(serverIP.Get_Text), Port_Type'Value(serverport.Get_Text));
+      Client_Ui.Client.LoginUser(To_Unbounded_String(username.Get_Text), To_Unbounded_String(password.Get_Text));
+      --                                 To_Unbounded_String(serverIP.Get_Text), Port_Type'Value(serverport.Get_Text));
 
-      Msg := readMessageFromStream(ClientSocket => Client.Socket);
-      printMessageToInfoConsole(msg);
-      if Msg.messagetype = Connect then
-        if Msg.content = "ok" then
+      --Msg := readMessageFromStream(ClientSocket => Client.Socket);
+      --printMessageToInfoConsole(msg);
+      --if Msg.messagetype = Connect then
+      --  if Msg.content = "ok" then
           Main_Window.Hide;
           Contact_Window.Show_All;
 
           onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
           offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
 
-          Chat_Window_Manager.test;
+      --    Chat_Window_Manager.test;
           --temp := Assign(temp, "Mein meega Test");
           --offlineList.Append(temp);
           --offlineList.Set(temp, 0, "Mein meega Test");
           --offlineList.Append(temp);
           --offlineList.Set(temp, 0, "Was anders");
-         else
+   --      else
             null; -- TODO Fehler, Benutzername Passwort falsch
-         end if;
-      else
+   --      end if;
+   --   else
          null; -- TODO Fehler, ggf. REFUSED abfragen, sonst Kommunikationsfehler
-      end if;
+   --   end if;
    end Login_Action;
 
 end Main_Window_Callbacks;

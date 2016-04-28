@@ -12,8 +12,6 @@ package Chat_Window_Callbacks is
    procedure History_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Games_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Smiley_Action  (Object : access Gtkada_Builder_Record'Class);
-
-   function Check_If_Enter  (Object : access Gtk.GEntry.Gtk_Entry_Record'Class;
-                             Params : Glib.Values.GValues) return Boolean;
+   procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class);
 
 end Chat_Window_Callbacks;

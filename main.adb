@@ -14,7 +14,6 @@ procedure main is
 begin
    cserver.startServer("127.0.0.1",12321);
 
-<<<<<<< HEAD
    Client_Ui.initClientUI(Client);
 
    --Client.connectToServer(To_Unbounded_String("a"), To_Unbounded_String("a"),
@@ -23,15 +22,13 @@ begin
    --msg := readMessageFromStream(ClientSocket => Client.Socket);
    --printMessageToInfoConsole(msg);
 
-   Client.SendTextMessage(Username    => To_Unbounded_String("a"),
-                          Id_Receiver => 2,
-                          Msg         => To_Unbounded_String("Hallo Ewald"));
+   --Client.SendTextMessage(Username    => To_Unbounded_String("a"),
+   --                       Id_Receiver => 2,
+   --                       Msg         => To_Unbounded_String("Hallo Ewald"));
 
-   loop
-   msg := readMessageFromStream(ClientSocket => Client.Socket);
-      printMessageToInfoConsole(msg);
-      end loop;
+   --loop
+   --msg := readMessageFromStream(ClientSocket => Client.Socket);
+   --   printMessageToInfoConsole(msg);
+   --   end loop;
 
-=======
->>>>>>> origin/feature/Client_Logic
 end main;

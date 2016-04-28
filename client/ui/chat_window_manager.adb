@@ -60,10 +60,12 @@ package body Chat_Window_Manager is
          Handler_Name => "Smiley_Action",
          Handler => Chat_Window_Callbacks.Smiley_Action'Access);
 
-      Key_Press_Callbacks.Connect(Widget => Gtk_Entry(Builder.Get_Object("New_Message")),
-                                  Name => "key-press-event",
-                                  Cb => Chat_Window_Callbacks.Check_If_Enter'Access
-                                 );
+      Register_Handler
+        (Builder => Builder,
+         Handler_Name => "Handle_Enter",
+         Handler => Chat_Window_Callbacks.Handle_Enter'Access);
+
+      Do_Connect(Builder);
 
       Chat_Window := Gtk_Window(Builder.Get_Object ("chat_window_client"));
 
