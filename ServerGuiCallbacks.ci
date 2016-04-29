@@ -1,0 +1,150 @@
+edge: { sourcename: "serverguicallbacks__append_error"
+  targetname: "14:gtk__tree_store__gtk_tree_store,gtk__tree_store__gtk_tree_store"
+  label: "serverguicallbacks.adb:62:28"
+}
+edge: { sourcename: "serverguicallbacks__append_error"
+  targetname: "33:gtk__tree_store__gtk_tree_store,gtk__tree_store__gtk_tree_store"
+  label: "serverguicallbacks.adb:64:28"
+}
+edge: { sourcename: "serverguicallbacks__append_error"
+  targetname: "33:gtk__tree_store__gtk_tree_store,gtk__tree_store__gtk_tree_store"
+  label: "serverguicallbacks.adb:67:28"
+}
+edge: { sourcename: "serverguicallbacks__append_information"
+  targetname: "14:gtk__tree_store__gtk_tree_store,gtk__tree_store__gtk_tree_store"
+  label: "serverguicallbacks.adb:74:28"
+}
+edge: { sourcename: "serverguicallbacks__append_information"
+  targetname: "33:gtk__tree_store__gtk_tree_store,gtk__tree_store__gtk_tree_store"
+  label: "serverguicallbacks.adb:76:28"
+}
+edge: { sourcename: "serverguicallbacks__append_information"
+  targetname: "33:gtk__tree_store__gtk_tree_store,gtk__tree_store__gtk_tree_store"
+  label: "serverguicallbacks.adb:79:28"
+}
+edge: { sourcename: "serverguicallbacks__initializeguireferences"
+  targetname: "16:serverguicallbacks__T2s,serverguicallbacks__T2s"
+  label: "serverguicallbacks.adb:97:39"
+}
+edge: { sourcename: "serverguicallbacks__initializeguireferences"
+  targetname: "411:gtk__gentry__gtk_entry,gtk__gentry__gtk_entry"
+  label: "serverguicallbacks.adb:98:17"
+}
+edge: { sourcename: "serverguicallbacks__initializeguireferences"
+  targetname: "16:serverguicallbacks__T2s,serverguicallbacks__T2s"
+  label: "serverguicallbacks.adb:99:52"
+}
+edge: { sourcename: "serverguicallbacks__initializeguireferences"
+  targetname: "16:serverguicallbacks__T2s,serverguicallbacks__T2s"
+  label: "serverguicallbacks.adb:100:54"
+}
+edge: { sourcename: "serverguicallbacks__initializeguireferences"
+  targetname: "16:serverguicallbacks__T2s,serverguicallbacks__T2s"
+  label: "serverguicallbacks.adb:101:42"
+}
+edge: { sourcename: "serverguicallbacks__initializeguireferences"
+  targetname: "14:gtk__tree_store__gtk_tree_store,gtk__tree_store__gtk_tree_store"
+  label: "serverguicallbacks.adb:108:28"
+}
+edge: { sourcename: "serverguicallbacks__initializeguireferences"
+  targetname: "33:gtk__tree_store__gtk_tree_store,gtk__tree_store__gtk_tree_store"
+  label: "serverguicallbacks.adb:110:28"
+}
+graph: { title: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb"
+node: { title: "__gnat_rcheck_CE_Tag_Check" label: "gnat_rcheck_CE_Tag_Check\n<built-in>" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Index_Check" label: "gnat_rcheck_CE_Index_Check\n<built-in>" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Overflow_Check" label: "gnat_rcheck_CE_Overflow_Check\n<built-in>" shape : ellipse }
+node: { title: "gtk__tree_model__gtk_tree_iterIP" label: "Gtk_Tree_Iterip\nC:\GtkAda\include\gtkada\gtk-tree_model.ads:1211:6" shape : ellipse }
+node: { title: "__gnat_rcheck_CE_Access_Check" label: "gnat_rcheck_CE_Access_Check\n<built-in>" shape : ellipse }
+node: { title: "ada__text_io__put_line__2" label: "Put_Line\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-textio.ads:263:14" shape : ellipse }
+node: { title: "gtk__main__main_quit" label: "Main_Quit\nC:\GtkAda\include\gtkada\gtk-main.ads:239:14" shape : ellipse }
+node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
+node: { title: "serverguicallbacks___elabb" label: "Serverguicallbacks\nC:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:28:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "serverguicallbacks___elabb" targetname: "gtk__tree_model__gtk_tree_iterIP" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:37:4" }
+edge: { sourcename: "serverguicallbacks___elabb" targetname: "gtk__tree_model__gtk_tree_iterIP" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:36:4" }
+node: { title: "serverguicallbacks__initializeguireferences" label: "Initializeguireferences\nC:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:93:4\n224 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "ada__text_io__put_line__2" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:118:7" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:110:28" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:110:28" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:110:28" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:108:28" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:108:28" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:108:28" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Tag_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:26" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Index_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:26" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:26" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:26" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:26" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:26" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:26" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:26" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:42" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:42" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:101:42" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Tag_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:32" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Index_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:32" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:32" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:32" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:32" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:32" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:32" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:32" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:54" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:54" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:100:54" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Tag_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:31" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Index_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:31" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:31" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:31" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:31" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:31" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:31" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:31" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:52" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:52" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:99:52" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:98:17" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:98:17" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:98:17" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Tag_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:21" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Index_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:21" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:21" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:21" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:21" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:21" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:21" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:21" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:39" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:39" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:97:39" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "ada__text_io__put_line__2" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:96:7" }
+edge: { sourcename: "serverguicallbacks__initializeguireferences" targetname: "gtk__tree_model__gtk_tree_iterIP" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:94:7" }
+node: { title: "serverguicallbacks__clicked_button_about" label: "Clicked_Button_About\nC:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:85:4\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "serverguicallbacks__clicked_button_about" targetname: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:87:7" }
+node: { title: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" label: "Append_Information\nC:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:72:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:79:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:79:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:79:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:76:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:76:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:76:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:74:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:74:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_information" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:74:28" }
+node: { title: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" label: "Append_Error\nC:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:60:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:67:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:67:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:67:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:64:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:64:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:64:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:62:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:62:28" }
+edge: { sourcename: "C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb:serverguicallbacks__append_error" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:62:28" }
+node: { title: "serverguicallbacks__rowhandler" label: "Rowhandler\nC:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:54:2\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "serverguicallbacks__rowhandler" targetname: "ada__text_io__put_line__2" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:57:7" }
+node: { title: "serverguicallbacks__quit" label: "Quit\nC:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:48:4\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "serverguicallbacks__quit" targetname: "gtk__main__main_quit" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:51:15" }
+edge: { sourcename: "serverguicallbacks__quit" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguicallbacks.adb:51:15" }
+}
