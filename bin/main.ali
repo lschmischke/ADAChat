@@ -65,7 +65,7 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client2gui_communication.ads  20160429121750 bbe77c3f client2gui_communication%s
+D client2gui_communication.ads  20160429122606 77b48299 client2gui_communication%s
 D concrete_client_logic.ads  20160429121640 7029e9f0 concrete_client_logic%s
 D concrete_client_ui.ads  20160429121712 1a849a30 concrete_client_ui%s
 D concrete_server_logic.ads  20160427171304 659c268e concrete_server_logic%s

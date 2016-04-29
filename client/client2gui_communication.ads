@@ -21,8 +21,6 @@ package Client2Gui_Communication is
 
    procedure RefusedMessage(This : in GUI; Reason : in Unbounded_String) is abstract;
 
-   procedure InitializeStatus(This : in GUI; Status : in Unbounded_String) is abstract;
-
    procedure DisconnectReason(This : in GUI; Status : in Unbounded_String) is abstract;
 
    -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
