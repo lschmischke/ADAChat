@@ -85,10 +85,14 @@ package body ServerGuiCallbacks is
                          port     => 12321);
        MyGui.printInfoMessage("Server started!");
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);
+      Toolbutton_Server_Stop.Set_Sensitive(Sensitive => True);
    end clicked_button_server_start;
 
    procedure clicked_button_server_stop ( Object : access Gtkada_Builder_Record'Class) is begin
-      Put_Line("Server stop!");
+       MyServer.stopServer;
+       MyGui.printInfoMessage("Server stopped!");
+      Toolbutton_Server_Start.Set_Sensitive(Sensitive => True);
+      Toolbutton_Server_Stop.Set_Sensitive(Sensitive => False);
       end clicked_button_server_stop;
 
 

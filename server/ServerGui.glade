@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.24"/>
-  <object class="GtkListStore" id="liststore1"/>
+  <object class="GtkListStore" id="chatMessageListStore">
+    <columns>
+      <!-- column-name chatMessage -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="GtkWindow" id="main_window_server">
     <property name="can_focus">False</property>
     <property name="margin_bottom">10</property>
@@ -282,6 +287,8 @@
             <property name="height_request">303</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">always</property>
+            <property name="vscrollbar_policy">always</property>
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="chatMessagesTreeView">
@@ -289,9 +296,20 @@
                 <property name="height_request">390</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="model">liststore1</property>
+                <property name="model">chatMessageListStore</property>
                 <child internal-child="selection">
                   <object class="GtkTreeSelection" id="treeview-selection"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="chatMessageCollumn">
+                    <property name="title" translatable="yes">Chatnachrichten</property>
+                    <child>
+                      <object class="GtkCellRendererSpin" id="cellrendererspin1"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
                 </child>
               </object>
             </child>

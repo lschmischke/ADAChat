@@ -25,6 +25,7 @@ with Gtk.Tree_Selection; use Gtk.Tree_Selection;
 with Gtk.Scrolled_Window; use Gtk.Scrolled_Window;
 with Gtk.Menu; use Gtk.Menu;
 with Gtk.Spin_Button; use Gtk.Spin_Button;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 package body Concrete_Server_Gui_Logic is
 
    PortGEntry : Gtk_GEntry;
@@ -33,6 +34,9 @@ package body Concrete_Server_Gui_Logic is
    InformationsTreeViewIterator: Gtk_Tree_Iter;
    SecondLevelIterator: Gtk_Tree_Iter;
    Val: Gint;
+   ChatMessageListStore: Gtk_List_Store;
+   ChatMessageListStoreIterator: Gtk_Tree_Iter;
+   ChatMessageTreeView : Gtk_Tree_View;
 
 
 
@@ -58,7 +62,13 @@ package body Concrete_Server_Gui_Logic is
                     Value  => infoMessage );
 
       end printInfoMessage;
-   procedure printChatMessage(thisGUI : aliased  in Server_Gui; chatMessage : MessageObject) is null;
+   procedure printChatMessage(thisGUI : aliased  in Server_Gui; chatMessage : MessageObject) is begin
+        ChatMessageListStore.Append(Iter => ChatMessageListStoreIterator);
+      ChatMessageListStore.Set(Iter   => ChatMessageListStoreIterator,
+                               Column => 0,
+                               Value  => To_String(chatMessage.sender) & ": " &To_String(chatMessage.content));
+
+      end printChatMessage;
    procedure updateNumberOfContacts(thisGUI : aliased in Server_Gui; numberOfContact : Natural) is null;
    procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOnlineList.List) is null;
    procedure updateOfflineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOfflineMap.Map)is null;
@@ -69,17 +79,16 @@ package body Concrete_Server_Gui_Logic is
       PortGEntry.Set_Text("12321");
       InformationsTreeView := Gtk_Tree_View(myBuilder.Get_Object("informationsTreeView"));
       InformationsTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestore1"));
+      ChatMessageTreeView := Gtk_Tree_View(myBuilder.Get_Object("chatMessagesTreeView"));
+      ChatMessageListStore := Gtk_List_Store(myBuilder.Get_Object("chatMessageListStore"));
+
 
      -- InformationsTreeViewListStore.Append(InformationsTreeViewIterator);
      --InformationsTreeViewListStore.Set(InformationsTreeViewIterator,0,"Test");
      -- Column 1: Nachrichtentyp
      -- Column 0: Nachricht
 
-      InformationsTreeStore.Append(Iter   => SecondLevelIterator,
-                       Parent => InformationsTreeViewIterator);
-      InformationsTreeStore.Set(Iter   => SecondLevelIterator,
-                    Column => 0 ,
-                    Value  => "Test456" );
+
 
 
 
