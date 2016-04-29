@@ -10,8 +10,8 @@ package Concrete_Server_Gui_Logic is
    procedure InitServerGui(myBuilder: Gtkada_Builder);
 private
 
-   procedure printErrorMessage(thisGUI : aliased  in Server_Gui; errorMessage : MessageObject);
-   procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : MessageObject);
+   procedure printErrorMessage(thisGUI : aliased  in Server_Gui; errorMessage : String);
+   procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String);
    procedure printChatMessage(thisGUI : aliased in Server_Gui; chatMessage : MessageObject);
    procedure updateNumberOfContacts(thisGUI : aliased in Server_Gui; numberOfContact : Natural);
    procedure updateOnlineUserOverview(thisGUI : aliased  in Server_Gui; viewComponents : userViewOnlineList.List);

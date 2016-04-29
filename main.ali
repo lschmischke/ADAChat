@@ -23,7 +23,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		73f1e8bf DE NE OO SU IL
+U main%b		main.adb		e445842f DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -67,8 +67,8 @@ D cairo.ads		20141113214532 9fb881e2 cairo%s
 D cairo-region.ads	20141113214532 b7133728 cairo.region%s
 D client_logic.ads	20160418132428 104cbac2 client_logic%s
 D client_ui.ads		20160414222546 80f42b28 client_ui%s
-D concrete_server_gui_logic.ads  20160429093130 aee43fe1 concrete_server_gui_logic%s
-D concrete_server_logic.ads  20160429095548 a87ac051 concrete_server_logic%s
+D concrete_server_gui_logic.ads  20160429112734 78c396b8 concrete_server_gui_logic%s
+D concrete_server_logic.ads  20160429112338 3fceacc1 concrete_server_logic%s
 D datatypes.ads		20160422143206 bd60c4ab datatypes%s
 D gdk.ads		20141113214532 96d821f3 gdk%s
 D gdk-color.ads		20141113214532 8f372175 gdk.color%s
@@ -114,7 +114,7 @@ D gtk-widget.ads	20141113214532 75666b65 gtk.widget%s
 D gtkada.ads		20141113214532 57aea1c7 gtkada%s
 D gtkada-builder.ads	20141113214532 833f12b9 gtkada.builder%s
 D gtkada-types.ads	20141113214532 b7bc0c77 gtkada.types%s
-D gui_to_server_communication.ads  20160422143210 ab21c04d gui_to_server_communication%s
+D gui_to_server_communication.ads  20160429111026 cdafb7f9 gui_to_server_communication%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
@@ -134,7 +134,7 @@ D pango-layout.ads	20141113214532 a68b7ace pango.layout%s
 D pango-matrix.ads	20141113214532 365564f3 pango.matrix%s
 D pango-tabs.ads	20141113214532 1e43de1b pango.tabs%s
 D protocol.ads		20160420074808 aaec25fd protocol%s
-D server_to_gui_communication.ads  20160429095402 d3bad1ba server_to_gui_communication%s
+D server_to_gui_communication.ads  20160429112506 20a818c0 server_to_gui_communication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
@@ -188,8 +188,8 @@ X 31 client_ui.ads
 1K9*client_ui 5e14 84|3w6
 X 33 concrete_server_logic.ads
 28K9*Concrete_Server_Logic 172e26 84|2w6 2r33
-36R9*Concrete_Server<79|4R9> 130e14 84|9r17
-136U14 startServer<79|6p14> 84|15s12
+35R9*Concrete_Server<79|4R9> 129e14 84|9r17
+135U14 startServer<79|6p14> 84|15s12
 X 54 glib-object.ads
 41P9*GObject(40R9)
 600V13*Convert{100|67M9} 52|58i21 53|49i21
@@ -198,7 +198,7 @@ X 79 gui_to_server_communication.ads
 4h9*Server
 X 84 main.adb
 7U11*main 7b11 17l5 17t9
-9r7 cserver{33|36R9} 15r4
+9r7 cserver{33|35R9} 15r4
 X 100 system.ads
 67M9*Address
 X 108 s-memory.ads

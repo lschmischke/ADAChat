@@ -8,50 +8,75 @@ A -gnato
 A -gnatE
 A -gnat12
 A -g
-A -gnatc
 A -mtune=generic
 A -march=pentiumpro
-P NO ZX
+P SS ZX
 
 RN
 RV NO_ALLOCATORS
+RV NO_DISPATCHING_CALLS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLICIT_LOOPS
 RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
 RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASK_ALLOCATORS
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U concrete_server_logic%b  concrete_server_logic.adb  0322f332 DE NE OO PK
+U concrete_server_logic%b  concrete_server_logic.adb  c9e533d7 DE OO PF PK
 W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U concrete_server_logic%s  concrete_server_logic.ads  9cdb3433 DE EE NE OO PK
+U concrete_server_logic%s  concrete_server_logic.ads  04818d91 DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.conversions%s  a-chacon.adb	a-chacon.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
 Z ada.containers.hash_tables%s  a-cohata.ads	a-cohata.ali
+Z ada.containers.hash_tables.generic_keys%s
+Z ada.containers.hash_tables.generic_operations%s
 W ada.containers.hashed_maps%s
 W ada.containers.indefinite_hashed_maps%s
+Z ada.containers.prime_numbers%s  a-coprnu.adb	a-coprnu.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.finalization%s	a-finali.adb		a-finali.ali
 Z ada.iterator_interfaces%s
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.strings.unbounded.hash%s  a-stunha.adb	a-stunha.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
 Y concrete_server_gui_logic%s  concrete_server_gui_logic.adb  concrete_server_gui_logic.ali
 W datatypes%s		datatypes.adb		datatypes.ali
 W gnat%s		gnat.ads		gnat.ali
@@ -60,6 +85,21 @@ W gnat.string_split%s	g-strspl.ads		g-strspl.ali
 W gui_to_server_communication%s  gui_to_server_communication.ads  gui_to_server_communication.ali
 W protocol%s		protocol.adb		protocol.ali
 W server_to_gui_communication%s  server_to_gui_communication.ads  server_to_gui_communication.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 W user_databases%s	user_databases.adb	user_databases.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
@@ -68,13 +108,22 @@ D a-chacon.ads		20150518132148 5b23f5eb ada.characters.conversions%s
 D a-chlat1.ads		20150518132148 66457d31 ada.characters.latin_1%s
 D a-contai.ads		20150518132148 61e5e089 ada.containers%s
 D a-cdlili.ads		20150518132148 59d7f011 ada.containers.doubly_linked_lists%s
+D a-cdlili.adb		20150518132148 b44c57c3 ada.containers.doubly_linked_lists%b
 D a-cohata.ads		20150518132148 04abccc5 ada.containers.hash_tables%s
+D a-chtgke.ads		20150518132148 a7b0f3a2 ada.containers.hash_tables.generic_keys%s
+D a-chtgke.adb		20150518132148 ee7af212 ada.containers.hash_tables.generic_keys%b
+D a-chtgop.ads		20150518132148 654c6672 ada.containers.hash_tables.generic_operations%s
+D a-chtgop.adb		20150518132148 8c01e2ed ada.containers.hash_tables.generic_operations%b
 D a-cohama.ads		20150518132148 fb1af438 ada.containers.hashed_maps%s
+D a-cohama.adb		20150518132148 1b92dc1d ada.containers.hashed_maps%b
 D a-cihama.ads		20150518132148 6f653e56 ada.containers.indefinite_hashed_maps%s
+D a-cihama.adb		20150518132148 309c8365 ada.containers.indefinite_hashed_maps%b
+D a-coprnu.ads		20150518132148 0cdf1864 ada.containers.prime_numbers%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-finali.ads		20150518132148 69f99942 ada.finalization%s
 D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
 D a-iteint.ads		20150518132148 7c7305e9 ada.iterator_interfaces%s
+D a-reatim.ads		20150518132148 a5838d5a ada.real_time%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-string.ads		20150518132148 90ac6797 ada.strings%s
 D a-strfix.ads		20150518132148 d07c346e ada.strings.fixed%s
@@ -84,14 +133,15 @@ D a-strunb.ads		20150518132148 3f91d4c5 ada.strings.unbounded%s
 D a-suecin.ads		20150518132148 8f50d241 ada.strings.unbounded.equal_case_insensitive%s
 D a-stunha.ads		20150518132148 115e053b ada.strings.unbounded.hash%s
 D a-suhcin.ads		20150518132148 7f78b9e6 ada.strings.unbounded.hash_case_insensitive%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D cairo.ads		20141113214532 9fb881e2 cairo%s
 D cairo-region.ads	20141113214532 b7133728 cairo.region%s
-D concrete_server_gui_logic.ads  20160429093130 aee43fe1 concrete_server_gui_logic%s
-D concrete_server_logic.ads  20160429101506 d1a70d94 concrete_server_logic%s
-D concrete_server_logic.adb  20160429101442 d285fea6 concrete_server_logic%b
+D concrete_server_gui_logic.ads  20160429112734 78c396b8 concrete_server_gui_logic%s
+D concrete_server_logic.ads  20160429112338 3fceacc1 concrete_server_logic%s
+D concrete_server_logic.adb  20160429113722 f62b9f16 concrete_server_logic%b
 D datatypes.ads		20160422143206 bd60c4ab datatypes%s
 D gdk.ads		20141113214532 96d821f3 gdk%s
 D gdk-color.ads		20141113214532 8f372175 gdk.color%s
@@ -137,7 +187,7 @@ D gtk-widget.ads	20141113214532 75666b65 gtk.widget%s
 D gtkada.ads		20141113214532 57aea1c7 gtkada%s
 D gtkada-builder.ads	20141113214532 833f12b9 gtkada.builder%s
 D gtkada-types.ads	20141113214532 b7bc0c77 gtkada.types%s
-D gui_to_server_communication.ads  20160422143210 ab21c04d gui_to_server_communication%s
+D gui_to_server_communication.ads  20160429111026 cdafb7f9 gui_to_server_communication%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
@@ -156,26 +206,46 @@ D pango-layout.ads	20141113214532 a68b7ace pango.layout%s
 D pango-matrix.ads	20141113214532 365564f3 pango.matrix%s
 D pango-tabs.ads	20141113214532 1e43de1b pango.tabs%s
 D protocol.ads		20160420074808 aaec25fd protocol%s
-D server_to_gui_communication.ads  20160429101432 e632deda server_to_gui_communication%s
+D server_to_gui_communication.ads  20160429112506 20a818c0 server_to_gui_communication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
+D s-conca2.ads		20150518132148 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20150518132148 0b705ca5 system.concat_3%s
 D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
 D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
+D s-imgint.ads		20150518132150 02dbe0c2 system.img_int%s
+D s-memory.ads		20150518132150 597d6634 system.memory%s
 D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
 D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
 D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-pooglo.ads		20150518132150 542f33d0 system.pool_global%s
+D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
 D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
 D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
 D s-stausa.ads		20150518132150 017a0a05 system.stack_usage%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stalib.adb		20150518132150 f2fe2716 system.standard_library%b
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20150518132150 b16154c2 system.storage_pools%s
+D s-stposu.ads		20150518132150 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
 D s-string.ads		20150518132150 8fe54fb7 system.strings%s
+D s-ststop.ads		20150518132150 e6693757 system.strings.stream_ops%s
 D s-tasinf.ads		20150518132150 601f6b72 system.task_info%s
 D s-taspri.ads		20150518132150 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20150518132150 1dd2e1b6 system.task_primitives.operations%s
 D s-taskin.ads		20150518132150 339749f0 system.tasking%s
+D s-taprob.ads		20150518132150 502249e3 system.tasking.protected_objects%s
+D s-tpoben.ads		20150518132150 b641f948 system.tasking.protected_objects.entries%s
+D s-tasren.ads		20150518132150 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20150518132150 70812003 system.tasking.stages%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
@@ -183,467 +253,491 @@ D s-win32.ads		20150518132150 b7f96285 system.win32%s
 D unchconv.ads		20150518132150 ca2f9e18 unchecked_conversion%s
 D user_databases.ads	20160422080612 ca918931 user_databases%s
 X 1 ada.ads
-16K9*Ada 19e8 29|3r6 3r23 4r6 4r33 5r6 5r23 6r6 6r26 7r6 7r47 9r6 12r6 13r6
-. 14r6 103r35 110r31 115r34 30|51r7 90r13 95r13 125r7 129r7 149r16 606r13
-. 643r14 664r7
+16K9*Ada 19e8 39|3r6 3r23 4r6 4r33 5r6 5r23 6r6 6r26 7r6 7r47 9r6 12r6 13r6
+. 14r6 103r35 110r31 115r34 40|52r7 91r13 96r13 126r7 130r7 150r16 611r13
+. 648r14 669r7
 X 2 a-charac.ads
-16K13*Characters 18e19 29|9r10
+16K13*Characters 18e19 39|9r10
 X 3 a-chacon.ads
-36K24*Conversions 86e31 29|9w21
+36K24*Conversions 86e31 39|9w21
 X 5 a-contai.ads
-16K13*Containers 24e19 29|7r10 7r51 12r10 13r10 103r39 110r35 115r38
-19M9*Hash_Type 29|102r52 109r39 30|580r39 582r14 641r52
+16K13*Containers 24e19 39|7r10 7r51 12r10 13r10 103r39 110r35 115r38
+19M9*Hash_Type 39|102r52 109r39 40|585r39 587r14 646r52
 20I9*Count_Type<integer>
 X 6 a-cdlili.ads
-40+9 Element_Type 29|60r51 64r53
-45k24*Doubly_Linked_Lists 407e39 29|7w21 60r31 64r33
-49R9*List<11|43R9> 29|61r69[60] 66r88[64] 83r36[64] 92r35[60] 116r92[31|9]
-. 30|212r75[31|9] 485r58[31|9] 515r70[31|9] 648r70[29|60] 657r32[29|60] 697r34[31|9]
-. 709r34[31|9] 726r89[29|64] 735r48[31|9] 754r41[29|64]
-58R9*Cursor 30|595r54[29|60] 710r34[31|9]
-70V14*"="{boolean} 29|118r104[31|9]
-72V13*Length{5|20I9} 30|602s30[29|60]
-74V13*Is_Empty{boolean} 30|717s19[31|9]
-146U14*Append 30|224s54[29|64] 346s51[29|64] 347s56[29|64] 353s56[29|64]
-. 491s40[31|9] 494s40[31|9] 589s23[29|60]
-148p7 New_Item{31|7P9} 30|491r48[31|9] 494r48[31|9]
-151U14*Delete 30|600s26[29|60] 716s16[31|9]
-153r7 Position{58R9[29|60]} 30|600r34[29|60]
-212V13*Find{58R9[29|60]} 30|595s80[29|60] 714s25[31|9]
-214p7 Item{29|49P9} 30|595r86[29|60]
-222V13*Contains{boolean} 30|277s57[29|60] 327s48[31|9] 385s52[29|64] 523s41[31|9]
-. 599s26[29|60] 701s23[31|9]
-X 8 a-cohama.ads
-41+9 Key_Type 29|103r62 110r58
-42+9 Element_Type 29|104r58 111r54
-44V18 Hash{5|19M9} 29|105r58 112r54
-45V18 Equivalent_Keys{boolean} 29|106r58 113r58
-48k24*Hashed_Maps 467e31 29|13w21 103r50 110r46
-52R9*Map<11|43R9> 29|124r43[103] 127r31[110]
-203U14*Insert 30|221s59[29|103] 634s24[29|110]
-205p7 Key{31|7P9} 30|221r67[29|103] 634r32[29|110]
-206p7 New_Item{29|49P9} 30|221r80[29|103] 634r43[29|110]
-244U14*Delete 30|774s32[29|103]
-279V13*Contains{boolean} 30|192s56[29|103] 231s69[29|103] 273s46[29|110]
-. 329s52[29|110] 381s45[29|110] 740s39[29|103]
-282V13*Element{29|49P9} 30|233s91[29|103] 274s57[29|110] 318s96[29|103] 351s60[29|110]
-. 382s57[29|110] 442s99[29|103] 514s103[29|103] 742s61[29|103] 792s64[29|103]
-X 9 a-cihama.ads
-41+9 Key_Type 29|115r72
-42+9 Element_Type 29|116r54
-44V18 Hash{5|19M9} 29|117r54
-45V18 Equivalent_Keys{boolean} 29|118r54
-46V19 "="{boolean} 29|118r79
-48k24*Indefinite_Hashed_Maps 443e42 29|12w21 115r49
-52R9*Map<11|43R9> 29|128r40[115]
-193U14*Insert 30|496s57[29|115]
-195p7 Key{31|7P9} 30|496r65[29|115]
-196r7 New_Item{6|49R9[31|9]} 30|496r78[29|115]
-235U14*Delete 30|718s36[29|115]
-270V13*Contains{boolean} 30|489s57[29|115] 699s34[29|115] 712s33[29|115]
-270p40 Key{31|7P9} 30|489r67[29|115]
-273V13*Element{6|49R9[31|9]} 30|490s66[29|115] 700s42[29|115] 713s42[29|115]
-273p39 Key{31|7P9} 30|490r75[29|115]
-X 10 a-except.ads
-54K13*Exceptions 361e19 29|6w10 6r30
-104V13*Exception_Information{string} 30|72s20 75s20 106s20 109s20 570s20
-. 574s20
-X 13 a-iteint.ads
+40+9 Element_Type 39|60r51 64r53
+45k24*Doubly_Linked_Lists 407e39 39|7w21 60r31 64r33
+49R9*List<19|43R9> 39|61r69[60] 66r88[64] 83r36[64] 92r35[60] 116r92[41|9]
+. 168r103[105|26] 40|213r75[41|9] 490r58[41|9] 520r70[41|9] 653r70[39|60]
+. 662r32[39|60] 702r34[41|9] 714r34[41|9] 731r89[39|64] 740r48[41|9] 759r41[39|64]
+. 852r103[105|26] 854r39[105|26]
+58R9*Cursor 40|600r54[39|60] 715r34[41|9]
+70V14*"="{boolean} 39|118r104[41|9]
+72V13*Length{5|20I9} 40|607s30[39|60]
+74V13*Is_Empty{boolean} 40|722s19[41|9]
+146U14*Append 40|225s54[39|64] 351s51[39|64] 352s56[39|64] 358s56[39|64]
+. 496s40[41|9] 499s40[41|9] 594s23[39|60] 860s21[105|26]
+148p7 New_Item{41|7P9} 40|496r48[41|9] 499r48[41|9] 860r28[105|26]
+151U14*Delete 40|605s26[39|60] 721s16[41|9]
+153r7 Position{58R9[39|60]} 40|605r34[39|60]
+212V13*Find{58R9[39|60]} 40|600s80[39|60] 719s25[41|9]
+214p7 Item{39|49P9} 40|600r86[39|60]
+222V13*Contains{boolean} 40|281s57[39|60] 332s48[41|9] 390s52[39|64] 528s41[41|9]
+. 604s26[39|60] 706s23[41|9]
+X 13 a-cohama.ads
+41+9 Key_Type 39|103r62 110r58
+42+9 Element_Type 39|104r58 111r54
+44V18 Hash{5|19M9} 39|105r58 112r54
+45V18 Equivalent_Keys{boolean} 39|106r58 113r58
+48k24*Hashed_Maps 467e31 39|13w21 103r50 110r46
+52R9*Map<19|43R9> 39|124r43[103] 127r31[110] 40|853r35[39|103]
+103V13*Length{5|20I9} 40|227s94[39|103]
+203U14*Insert 40|222s59[39|103] 639s24[39|110]
+205p7 Key{41|7P9} 40|222r67[39|103] 639r32[39|110]
+206p7 New_Item{39|49P9} 40|222r80[39|103] 639r43[39|110]
+244U14*Delete 40|779s32[39|103]
+279V13*Contains{boolean} 40|193s56[39|103] 235s69[39|103] 277s46[39|110]
+. 334s52[39|110] 386s45[39|110] 745s39[39|103]
+282V13*Element{39|49P9} 40|237s91[39|103] 278s57[39|110] 323s96[39|103] 356s60[39|110]
+. 387s57[39|110] 447s99[39|103] 519s103[39|103] 747s61[39|103] 797s64[39|103]
+. 831s68[39|103]
+X 15 a-cihama.ads
+41+9 Key_Type 39|115r72
+42+9 Element_Type 39|116r54
+44V18 Hash{5|19M9} 39|117r54
+45V18 Equivalent_Keys{boolean} 39|118r54
+46V19 "="{boolean} 39|118r79
+48k24*Indefinite_Hashed_Maps 443e42 39|12w21 115r49
+52R9*Map<19|43R9> 39|128r40[115]
+193U14*Insert 40|501s57[39|115]
+195p7 Key{41|7P9} 40|501r65[39|115]
+196r7 New_Item{6|49R9[41|9]} 40|501r78[39|115]
+235U14*Delete 40|723s36[39|115]
+270V13*Contains{boolean} 40|494s57[39|115] 704s34[39|115] 717s33[39|115]
+270p40 Key{41|7P9} 40|494r67[39|115]
+273V13*Element{6|49R9[41|9]} 40|495s66[39|115] 705s42[39|115] 718s42[39|115]
+273p39 Key{41|7P9} 40|495r75[39|115]
+X 18 a-except.ads
+54K13*Exceptions 361e19 39|6w10 6r30
+104V13*Exception_Information{string} 40|73s20 76s20 107s20 110s20 575s20
+. 579s20
+X 21 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[6|67]>
-X 14 a-stream.ads
-36K13*Streams 87e16 29|3w10 3r27
-X 15 a-string.ads
-16K13*Strings 35e16 29|4r10 4r37 14r10 30|606r17 643r18 664r11
-X 19 a-strunb.ads
-76K21*Unbounded 489e26 29|4w18 4r45 14r18 30|606r25 643r26 664r19
-79R9*Unbounded_String<11|43R9> 473e14 30|118r22 182r40 378r42 597r42 656r20
-. 734r29 755r27
-94V13*To_Unbounded_String{79R9} 30|63s27 65s27 118s42 162s45 168s45 174s45
-. 180s45 211s54 287s38 298s35 324s45 338s41 365s36 394s38 405s35 420s45 426s45
-. 466s44 472s48 552s33 606s57 610s33 661s26 668s27 734s56 755s49 763s27 791s81
-100V13*To_String{string} 30|365s92 466s89 472s93 552s92
-107U14*Append 30|606s35 661s10 662s10
-166V14*"="{boolean} 6|42i19 8|46i19 30|198r44
-373U14*Delete 30|664s29
-X 21 a-stunha.ads
-18V32*Hash{5|19M9} 29|14w28 30|643s36
-X 23 a-textio.ads
-49K13*Text_IO 471e16 29|5w10 5r27 30|51r11 90r17 95r17 125r11 129r11 149r20
-52P9*File_Type 29|137r72 138r73 30|807r72 815r73
-242U14*Put 30|71s10 74s10 105s10 108s10 569s10 573s10
-263U14*Put_Line 30|17s7 51s19 72s10 75s10 90s25 95s25 106s10 109s10 125s19
-. 129s19 149s28 570s10 574s10
-X 29 concrete_server_logic.ads
-28K9*Concrete_Server_Logic 78E9 171l5 171e26 30|1b14 847l5 847t26
+X 23 a-stream.ads
+36K13*Streams 87e16 39|3w10 3r27
+X 24 a-string.ads
+16K13*Strings 35e16 39|4r10 4r37 14r10 40|611r17 648r18 669r11
+X 28 a-strunb.ads
+76K21*Unbounded 489e26 39|4w18 4r45 14r18 40|611r25 648r26 669r19
+79R9*Unbounded_String<19|43R9> 473e14 40|119r22 183r40 383r42 602r42 661r20
+. 739r29 760r27
+94V13*To_Unbounded_String{79R9} 40|64s27 66s27 119s42 163s45 169s45 175s45
+. 181s45 212s54 292s38 303s35 329s45 343s41 370s36 399s38 410s35 425s45 431s45
+. 471s44 477s48 557s33 611s57 615s33 666s26 673s27 739s56 760s49 768s27 796s81
+. 830s57 833s59 835s59
+100V13*To_String{string} 40|370s92 471s89 477s93 557s92
+107U14*Append 40|611s35 666s10 667s10
+166V14*"="{boolean} 6|42i19 13|46i19 40|199s44
+373U14*Delete 40|669s29
+X 30 a-stunha.ads
+18V32*Hash{5|19M9} 39|14w28 40|648s36
+X 33 a-textio.ads
+49K13*Text_IO 471e16 39|5w10 5r27 40|52r11 91r17 96r17 126r11 130r11 150r20
+52P9*File_Type 39|137r72 138r73 40|812r72 820r73
+242U14*Put 40|72s10 75s10 106s10 109s10 574s10 578s10
+263U14*Put_Line 40|18s7 52s19 73s10 76s10 91s25 96s25 107s10 110s10 126s19
+. 130s19 150s28 575s10 579s10
+X 39 concrete_server_logic.ads
+28K9*Concrete_Server_Logic 78E9 172l5 172e26 40|1b14 870l5 870t26
 29K12*GTS=29:24 35r32 121r32
-30K12*STG=30:24
-35R9*Concrete_Server<76|4R9> 36r43 43p14 43r44 121c9 129e14 135P14 135r51
-. 136P14 136r50 137P13 137r44 138P14 138r45 139P14 139r50 140P14 140r56 141P14
-. 141r61 142P14 142r55 30|4r25 9r44 780r62 781r22 790r56 799r50 807r44 815r45
-. 823r50 831r56 839r61
-36P9*Concrete_Server_Ptr(35R9) 56r44 145r53 147r52 150r47 155r45 30|3r17
-. 26r48 36r46 625r28 693r27 708r52
-43U14*StartNewServer 43=30 43>61 43>74 30|9b14 22l8 22t22 783s7
-43r30 This{35R9} 30|9b30 12r21
-43a61 ip{string} 30|9b61 20r33
-43i74 port{natural} 30|9b74 20r37
-45T9*Client_Task 46r35 100l8 100e19 30|98r45 114b14 576l8 576t19
+30K12*STG=30:24 168r80 40|852r80
+35R9*Concrete_Server<86|4R9> 36r43 43p14 43r44 121c9 129e14 135P14 135r51
+. 136P14 136r50 137P13 137r44 138P14 138r45 139P14 139r56 140P14 140r61 141P14
+. 141r55 40|4r25 9r44 785r62 786r22 795r56 804r50 812r44 820r45 829r56 844r61
+36P9*Concrete_Server_Ptr(35R9) 56r44 144r53 146r52 149r47 154r45 168r52 40|3r17
+. 27r48 37r46 630r28 698r27 713r52 852r52
+43U14*StartNewServer 43=30 43>61 43>74 40|9b14 23l8 23t22 788s7
+43r30 This{35R9} 40|9b30 12r21
+43a61 ip{string} 40|9b61 21r33
+43i74 port{natural} 40|9b74 21r37
+45T9*Client_Task 46r35 100l8 100e19 40|99r45 115b14 581l8 581t19
 46P9*Client_Task_Ptr(45T9) 82r27
-48R9*Concrete_Client 49r39 78c9 85e14 30|37r51 87r49
+48R9*Concrete_Client 49r39 78c9 85e14 40|38r51 88r49
 49P9*Concrete_Client_Ptr(48R9) 54r73 55r86 56r99 60r67 66r46 67r58 69r43
-. 99r31 104r77 30|37r24 87r22 115r22 121r33 228r56 318r48 442r51 514r51 587r74
-. 594r87 627r28 726r47 733r59 736r29 752r44 792r16
-51R9*chatRoom 52r31 89c9 93e17 30|629r33 631r30
+. 99r31 104r77 40|38r24 88r22 116r22 122r33 232r56 323r48 447r51 519r51 592r74
+. 599r87 632r28 731r47 738r59 741r29 757r44 797r16 831r16 855r20
+51R9*chatRoom 52r31 89c9 93e17 40|634r33 636r30
 52P9*chatRoomPtr(51R9) 54r48 55r53 56r127 57r37 58r47 61r37 62r44 64r69 111r73
-. 30|205r57 269r42 325r36 376r42 587r49 594r54 627r56 629r14 648r38 655r48
-. 676r45 685r38
-54U14*addClientToChatroom 54=34 54>61 30|345s31 352s31 587b14 590l8 590t27
-. 633s7
-54p34 room{52P9} 30|345r52 352r52 587b35 589r7 633r28
-54p61 client{49P9} 30|345r70 352r70 587b62 589r31 633r42
-55U14*removeClientFromChatroom 55=39 55>66 30|386s31 594b14 620l8 620t32
-. 767s10
-55p39 room{52P9} 30|594b40 595r64 599r10 600r10 602r14 604r57 605r34 611r33
-. 613r34
-55p66 clientToRemove{49P9} 30|594b67 595r94 597r77 599r36
-56V13*createChatRoom{52P9} 56=28 56>65 56>82 30|218s57 343s43 624b13 637l8
-. 637t22
-56p28 server{36P9} 30|343r59 625b7 634r7
-56i65 id{natural} 30|343r77 626b7 632r26 634r39
-56p82 firstClient{49P9} 30|343r91 627b7 633r52
-57V13*getChatRoomID{natural} 57>27 30|669s27 685b13 688l8 688t21
-57p27 room{52P9} 30|685b28 687r14
-58V13*generateUserlistMessage{94|17R9} 58>37 30|355s62 604s32 655b13 672l8
-. 672t31
-58p37 room{52P9} 30|655b38 657r40 669r42
-60K12*Client_List[6|45] 61r57 92r23 30|595r42 648r58 657r20
-61V13*getClientList{6|49R9[60]} 61>27 30|277s32 648b13 651l8 651t21 678s21
-61p27 room{52P9} 30|648b28 650r14
-62U14*broadcastToChatRoom 62>34 62>57 30|278s31 355s31 605s13 613s13 676b14
-. 681l8 681t27
-62p34 room{52P9} 30|676b35 678r36
-62r57 message{94|17R9} 30|676b58 679r47
-64K12*chatRoom_List[6|45] 66r74 83r22 30|726r75 754r27
-66V13*getChatroomsOfClient{6|49R9[64]} 66>34 30|726b13 729l8 729t28 754s49
-66p34 client{49P9} 30|726b35 728r14
-67U14*broadcastOnlineStatusToContacts 67>46 67>79 30|733b14 748l8 748t39
-. 770s7
-67p46 client{49P9} 30|733b47 735r69 743r111
-67e79 status{94|14E9} 30|733b80 743r51
-69U14*disconnectClient 69>31 30|307s25 571s10 575s10 752b14 776l8 776t24
-. 794s7
-69p31 client{49P9} 30|752b32 754r71 762r27 764r29 767r46 770r40 772r21 774r40
-79p7*user{31|7P9} 30|189r38 222m41 597r92 662r46 735r76 743r118 774r47
-80i7*Socket{62|409I9} 30|56m42 59r43 67r39 93m34 142r82 188r73 191r73 194r57
-. 199r60 219r63 240r79 248r72 257r72 289r60 300r57 331r57 344r60 367r60 396r60
-. 407r57 432r57 434r57 473r73 474r86 481r73 482r86 505r73 533r57 534r70 544r70
-. 553r57 679r39 744r49 764r36 772r28
-81r7*SocketAddress{62|502R9} 30|94m34 95r92 125r81 129r92
-82p7*CommunicationTask{46P9} 30|98m20 99r19 99r20
-83r7*chatRoomList{6|49R9[64]} 30|224m41 346m38 347m43 353m43 385r39 728r21
-84i7*ServerRoomID{natural} 30|217m41 238r62 246r55 255r55 364r43 471r68 478r80
-. 480r93 503r56 517r81 519r94 543r97 551r40 743r84 762r34
-91i10*chatRoomID{natural} 30|611r38 632m12 687r19
-92r10*clientList{6|49R9[60]} 30|589m12 595r69 599r15 600m15 602r19 650r19
-. 657r45
-99Y13 Start 99>19 30|99s38 121b14 123l11 123t16
-99p19 newClient{49P9} 30|122r20
-102V13 userHash{5|19M9} 102>23 105r77 117r73 30|641b13 644l8 644t16
-102p23 userToHash{31|7P9} 30|641b23 643r55
-103K12 userToClientMap[8|48] 124r27
-109V13 Hash{5|19M9} 109>19 112r73 30|580b13 583l8 583t12
-109i19 R{natural} 30|580b19 582r25
-110K12 chatRoomMap[8|48] 127r19
-115K12 userToUsersMap[9|48] 128r25
-122i7 Socket{62|409I9} 30|43m39 47r37 48r39 92r34
-123r7 SocketAddress{62|502R9} 30|45m14 46m14 47r63 59r68
-124r7 Connected_Clients{8|52R9[103]} 30|192r38 221m41 231r51 233r73 318r78
-. 442r81 514r85 740r21 742r43 774m14 792r46
-125r7 UserDatabase{120|19R9} 30|16m47 185r40 316r87 317r87 429m34 441r90
-. 458r53 513r78 530r53 791r55
-126i7 chatRoomIDCounter{natural} 30|29r42 30m14 30r42
-127r7 chatRooms{8|52R9[110]} 30|273r36 274r47 329r42 351r50 381r35 382r47
-. 634m14
-128r7 ContactRequests{9|52R9[115]} 30|489r41 490r50 496m41 699r18 700r26
-. 712r17 713r26 718m20
-135U14 startServer<76|6p14> 135>26 135>68 135>86 30|780b25 784l8 784t19
-135r26 thisServer{35R9} 30|780b38 781r41
-135a68 ipAdress{string} 30|780b79 783r29
-135i86 port{natural} 30|780b98 783r39
-136U14 stopServer<76|7p14> 136>25 30|799b14 803l8 803t18
-136r25 thisServer{35R9} 30|799b26
-137V13 loadDB{boolean}<76|8p13> 137>20 137>61 30|807b13 811l8 811t14
-137r20 thisServer{35R9} 30|807b20
-137p61 DataFile{23|52P9} 30|807b61
-138U14 saveDB<76|9p14> 138>21 138>62 30|815b14 819l8 819t14
-138r21 thisServer{35R9} 30|815b21
-138p62 DataFile{23|52P9} 30|815b62
-139U14 closeServer<76|10p14> 139>26 30|823b14 827l8 827t19
-139r26 thisServer{35R9} 30|823b26
-140U14 sendMessageToUser<76|11p14> 140>32 140>73 140>92 30|831b14 835l8 835t25
-140r32 thisServer{35R9} 30|831b32
-140a73 username{string} 30|831b73
-140a92 messagestring{string} 30|831b92
-141U14 deleteUserFromDatabase<76|12p14> 141>37 141>78 30|839b14 843l8 843t30
-141r37 thisServer{35R9} 30|839b37
-141a78 username{string} 30|839b78
-142U14 kickUserWithName<76|13p14> 142>31 142>72 30|790b14 795l8 795t24
-142r31 thisServer{35R9} 30|790b32
-142a72 username{string} 30|790b73 791r102
-145V13 checkIfContactRequestExists{boolean} 145>41 145>74 145>100 30|449s29
-. 538s28 692b13 704l8 704t35
-145p41 server{36P9} 30|538r57 693b7 699r11 700r19
-145p74 requestingUser{31|7P9} 30|538r75 694b7 699r44 700r51
-145p100 requestedUser{31|7P9} 30|538r108 695b7 701r33
-147U14 removeContactRequest 147=36 147>73 147>99 30|452s28 540s28 708b14
-. 722l8 722t28
-147p36 server{36P9} 30|540r50 708b36 712r10 713r19 718r13
-147p73 requestingUser{31|7P9} 30|540r68 708b73 712r43 713r51 718r44
-147p99 requestedUser{31|7P9} 30|540r101 708b99 714r31
-150V13 getNextChatRoomID{natural} 150=32 30|26b13 32l8 32t25 204s74 315s71
-150p32 server{36P9} 30|26b32 29r35 30r7 30r35
-155U14 InitializeServer 155=31 155>66 155>79 30|20s7 36b14 76l8 76t24
-155p31 This{36P9} 30|36b32
-155a66 ip{string} 30|36b67 45r47
-155i79 port{natural} 30|36b80 46r47
-164t9 Main_Server_Task 30|52r7 80b14 110l8 110t24
-165Y13 Start 30|52s24 82b14
-X 30 concrete_server_logic.adb
-3p4 Server{29|36P9} 13m7 16r40 20m25 20r25 43r32 45r7 46r7 47r30 47r56 48r32
-. 59r61 92r27 185r33 192r31 204m93 204r93 218m73 218r73 221r34 231r44 233r66
-. 273r29 274r40 315m90 315r90 316r80 317r80 318r71 329r35 343m69 343r69 351r43
-. 381r28 382r40 429r27 441r83 442r74 449r58 452m50 452r50 458r46 489r34 490r43
-. 496r34 513r71 514r78 530r46 538r67 540m60 540r60 740r14 742r36 774r7 791r48
-. 792r39
-4r4 concServer{29|35R9} 12m7 13m21 13r21
-5p4 gui{95|23P9}
-27i7 id{natural} 29m7 31r14
-37p7 SubServer{29|49P9} 56r32 59r33 67r29
-38r7 connectMessage{94|17R9} 60m7 67r47
-70r12 Error{10|63R9} 72r43
-73r12 Error{10|63R9} 75r43
-87p13 Client{29|49P9} 93r27 94r27 95r85 98r13 99r13 99r45
-104r12 Error{10|63R9} 106r43
-107r12 Error{10|63R9} 109r43
-115p7 client{29|49P9} 122m10 125r74 129r85 142r75 188r66 189r31 191r66 194r50
-. 199r53 217r34 218r95 219r56 221r92 222r34 224r34 246r48 248r65 255r48 257r65
-. 277r67 289r53 300r50 307r43 331r50 343r106 344r53 346r31 364r36 367r53
-. 385r32 386r67 396r53 407r50 432r50 434r50 473r66 478r73 481r66 517r74 533r50
-. 551r33 553r50 571r28 575r28
-116p7 user{31|7P9} 185m25 187r28 192r66 196r57 212r96 221r74 222r49 239r61
-. 327r42 449r81 452r73 456m56 456r56 457r63 472r117 480r120 489r74 490r82
-. 496r72 504r49 515r91 519r121 526m51 526r51 528r66 538r125 540r118 543r124
-117i7 serverRoomID{integer} 216m34 217r57 218r81 285r51 296r48 336r54 341r62
-. 392r51 403r48 465r48
-118r7 serverStr{19|79R9} 160r45 166r45 172r45 178r45 209r54 237r48 245r48
-. 254r48 284r51 295r48 322r45 335r54 363r36 391r51 402r48 418r45 424r45 464r48
-. 470r48 478r62 480r62 502r36 517r63 519r63 543r66 550r33
-121p21 newClient{29|49P9}
-132L9 Continue
-135r13 incoming_message{94|17R9} 142m16 145r19 146r66 149r61 152r21 185r74
-. 198r63 273r56 274r66 278r62 288r97 299r87 316r101 317r101 329r62 341r34
-. 351r69 365r103 378r62 381r55 382r66 395r97 406r86 430r40 430r93 441r104
-. 513r92 517r95 552r103
-157r25 userNotFoundMessage{94|17R9} 188r92
-163r25 invalidPasswordMessage{94|17R9} 199r68
-169r25 alreadyLoggedInMessage{94|17R9} 194r65
-175r25 alreadyConnectedMessage{94|17R9} 191r92
-182r25 userpassword{19|79R9} 196m28 198r31
-204i34 id{natural} 210r54 216r57
-205p34 chatroom{29|52P9} 218m34 224r62
-206r34 connectAcceptMessage{94|17R9} 219r71
-212r34 clientContacts{6|49R9[31|9]} 226r49
-213r34 clientOnlineMessage{94|17R9} 234m43 240r87 242m43 248r80 251m43 257r80
-226p38 contact{31|7P9} 231r79 233r100 247r61 256r61
-228p40 contactClient{29|49P9} 233m43 238r48 240r65
-269p25 chatRoom{29|52P9} 274m28 277r47 278r52
-270r25 refusedMessage{94|17R9} 281m31 289r68 292m28 300r65
-315i25 roomID{natural} 323r45 343r83
-316p25 requestingUser{31|7P9}
-317p25 userToAdd{31|7P9} 318r105 327r58
-318p25 clientToAdd{29|49P9} 345r80 347r31 352r80 353r31
-319r25 requestAcceptMessage{94|17R9} 344r79
-325p25 chatRoom{29|52P9} 343m31 345m60 345r60 346r59 347r64 351m31 352m60
-. 352r60 353r64 355r52 355r87
-360r31 noContactMessage{94|17R9} 367r68
-376p25 chatRoom{29|52P9} 382m28 385r62 386m57 386r57
-377r25 refusedMessage{94|17R9} 388m31 396r68 399m28 407r65
-378r25 refusedText{19|79R9}
-414b25 registrationComplete{boolean} 428m25 431r28
-415r25 registrationAccepted{94|17R9} 432r65
-421r25 registrationFailed{94|17R9} 434r65
-441p25 requestedUser{31|7P9} 442r108 449r66 452r58 456r78 457m48 457r48 466r113
-. 478r107 491r60 494r60
-442p25 requestedUserClient{29|49P9} 471r48 474r66 480r73 482r66 503r36 505r53
-443r25 messageToRequestingUser{94|17R9} 461m28 473r92 477m28 481r92
-444r25 messageToRequestedUser{94|17R9} 467m28 474r105 479m28 482r105 499m31
-. 505r81
-445b25 bool{boolean} 456m28 457m28
-485r31 ulist{6|49R9[31|9]} 490m34 491m34 491r34 494m34 494r34 496r90
-513p25 requestedUser{31|7P9} 514r112 523r51 526r57 528m51 528r51 538r93 540r86
-514p25 requestedUserClient{29|49P9} 519r74 534r50 543r77 544r50
-515r25 userContacts{6|49R9[31|9]} 523r28
-516r25 messageToRequestingUser{94|17R9} 533r65 547m28 553r65
-518r25 messageToRequestedUser{94|17R9} 534r78 542m28 544r78
-520b25 bool{boolean} 526m28 528m28
-568r12 Error{10|63R9} 570r43
-572r12 Error{10|63R9} 574r43
-595r7 pos{6|58R9[29|60]} 600m46 600r46
-596r7 userlistMessage{94|17R9} 604m13 605r40
-596r24 userleftMessage{94|17R9} 607m13 613r40
-597r7 userleftText{19|79R9} 606m43 606r43 612r33
-629p7 room{29|52P9} 631m7 632r7 633m36 633r36 634r55 635r14
-656r7 result{19|79R9} 661m18 661r18 662m18 662r18 664m37 664r37 670r27
-657r7 clientList{6|49R9[29|60]} 660r21
-658r7 message{94|17R9} 665m7 671r14
-660p11 client{29|49P9} 662r39
-678p11 client{29|49P9} 679r32
-697r7 ulist{6|49R9[31|9]} 700m10 701r17
-709r7 ulist{6|49R9[31|9]} 713m10 714r19 716m10 716r10 717r13
-710r7 pos{6|58R9[31|9]} 714m10 716m24 716r24
-734r7 serverStr{19|79R9} 743r59
-735r7 contactList{6|49R9[31|9]} 739r22
-736p7 contactClient{29|49P9} 742m13 743r70 744r35
-737r7 clientStatusMessage{94|17R9} 743m13 744r57
-739p11 contact{31|7P9} 740r49 742r70
-753r7 disconnectMessage{94|17R9} 758m7 764r44
-754r7 chatRoomsOfClient{6|49R9[29|64]} 766r23 767m36
-755r7 serverStr{19|79R9} 761r27
-766p11 chatRoom{29|52P9} 767m36 767r36
-781r7 serv{29|35R9} 783m23 783r23
-791p7 user{31|7P9} 792r73
-792p7 client{29|49P9} 794r25
-X 31 datatypes.ads
-5K9*dataTypes 29|11w6 11r21 116r73 118r84 30|212r56 485r39 515r51 697r15
-. 709r15 710r15 735r29 31|31e14
-7P9*UserPtr(6R9) 29|79r14 102r36 103r81 115r91 145r91 145r116 147r90 147r115
-. 30|116r22 316r48 317r48 441r51 513r51 641r36 694r27 695r27 708r90 708r115
-. 791r16
-9K12*UserList[6|45] 29|116r83 118r94 30|212r66 485r49 515r61 697r25 709r25
-. 710r25 735r39
-11V13*getUsername{19|79R9} 30|239s48 247s48 256s48 466s100 472s104 478s94
-. 480s107 504s36 519s108 543s111 597s64 643s42 662s26 743s98
-13V13*encodePassword{19|79R9} 30|198s47 430s77
-14V13*getPassword{19|79R9} 30|196s44
-16V13*getContacts{6|49R9[9]} 30|212s83 327s29 515s78 735s56
-18V13*addContact{boolean} 30|456s36 457s36
-18p25 this{7P9} 30|456r48
-18p48 contactToAdd{7P9} 30|456r62
-19V13*removeContact{boolean} 30|526s36 528s36
-X 51 glib-object.ads
+. 40|206r57 273r42 330r36 381r42 592r49 599r54 632r56 634r14 653r38 660r48
+. 681r45 690r38
+54U14*addClientToChatroom 54=34 54>61 40|350s31 357s31 592b14 595l8 595t27
+. 638s7
+54p34 room{52P9} 40|350r52 357r52 592b35 594r7 638r28
+54p61 client{49P9} 40|350r70 357r70 592b62 594r31 638r42
+55U14*removeClientFromChatroom 55=39 55>66 40|391s31 599b14 625l8 625t32
+. 772s10
+55p39 room{52P9} 40|599b40 600r64 604r10 605r10 607r14 609r57 610r34 616r33
+. 618r34
+55p66 clientToRemove{49P9} 40|599b67 600r94 602r77 604r36
+56V13*createChatRoom{52P9} 56=28 56>65 56>82 40|219s57 348s43 629b13 642l8
+. 642t22
+56p28 server{36P9} 40|348r59 630b7 639r7
+56i65 id{natural} 40|348r77 631b7 637r26 639r39
+56p82 firstClient{49P9} 40|348r91 632b7 638r52
+57V13*getChatRoomID{natural} 57>27 40|674s27 690b13 693l8 693t21
+57p27 room{52P9} 40|690b28 692r14
+58V13*generateUserlistMessage{104|17R9} 58>37 40|360s62 609s32 660b13 677l8
+. 677t31
+58p37 room{52P9} 40|660b38 662r40 674r42
+60K12*Client_List[6|45] 61r57 92r23 40|600r42 653r58 662r20
+61V13*getClientList{6|49R9[60]} 61>27 40|281s32 653b13 656l8 656t21 683s21
+61p27 room{52P9} 40|653b28 655r14
+62U14*broadcastToChatRoom 62>34 62>57 40|282s31 360s31 610s13 618s13 681b14
+. 686l8 686t27
+62p34 room{52P9} 40|681b35 683r36
+62r57 message{104|17R9} 40|681b58 684r47
+64K12*chatRoom_List[6|45] 66r74 83r22 40|731r75 759r27
+66V13*getChatroomsOfClient{6|49R9[64]} 66>34 40|731b13 734l8 734t28 759s49
+66p34 client{49P9} 40|731b35 733r14
+67U14*broadcastOnlineStatusToContacts 67>46 67>79 40|738b14 753l8 753t39
+. 775s7
+67p46 client{49P9} 40|738b47 740r69 748r111
+67e79 status{104|14E9} 40|738b80 748r51
+69U14*disconnectClient 69>31 40|312s25 576s10 580s10 757b14 781l8 781t24
+. 799s7
+69p31 client{49P9} 40|757b32 759r71 767r27 769r29 772r46 775r40 777r21 779r40
+79p7*user{41|7P9} 40|190r38 223m41 602r92 667r46 740r76 748r118 779r47
+80i7*Socket{72|409I9} 40|57m42 60r43 68r39 94m34 143r82 189r73 192r73 195r57
+. 200r60 220r63 244r79 252r72 261r72 294r60 305r57 336r57 349r60 372r60 401r60
+. 412r57 437r57 439r57 478r73 479r86 486r73 487r86 510r73 538r57 539r70 549r70
+. 558r57 684r39 749r49 769r36 777r28 837r51
+81r7*SocketAddress{72|502R9} 40|95m34 96r92 126r81 130r92
+82p7*CommunicationTask{46P9} 40|99m20 100r20
+83r7*chatRoomList{6|49R9[64]} 40|225m41 351m38 352m43 358m43 390r39 733r21
+84i7*ServerRoomID{natural} 40|218m41 242r62 250r55 259r55 369r43 476r68 483r80
+. 485r93 508r56 522r81 524r94 548r97 556r40 748r84 767r34 834r66
+91i10*chatRoomID{natural} 40|616r38 637m12 692r19
+92r10*clientList{6|49R9[60]} 40|594m12 600r69 604r15 605m15 607r19 655r19
+. 662r45
+99Y13 Start 99>19 40|100s38 122b14 124l11 124t16
+99p19 newClient{49P9} 40|123r20
+102V13 userHash{5|19M9} 102>23 105r77 117r73 40|646b13 649l8 649t16
+102p23 userToHash{41|7P9} 40|646b23 648r55
+103K12 userToClientMap[13|48] 124r27 40|853r19
+109V13 Hash{5|19M9} 109>19 112r73 40|585b13 588l8 588t12
+109i19 R{natural} 40|585b19 587r25
+110K12 chatRoomMap[13|48] 127r19
+115K12 userToUsersMap[15|48] 128r25
+122i7 Socket{72|409I9} 40|44m39 48r37 49r39 93r34
+123r7 SocketAddress{72|502R9} 40|46m14 47m14 48r63 60r68
+124r7 Connected_Clients{13|52R9[103]} 40|193r38 222m41 227r76 235r51 237r73
+. 323r78 447r81 519r85 745r21 747r43 779m14 797r46 831r50 853r47
+125r7 UserDatabase{150|19R9} 40|17m47 186r40 321r87 322r87 434m34 446r90
+. 463r53 518r78 535r53 796r55 830r36
+126i7 chatRoomIDCounter{natural} 40|30r42 31m14 31r42
+127r7 chatRooms{13|52R9[110]} 40|277r36 278r47 334r42 356r50 386r35 387r47
+. 639m14
+128r7 ContactRequests{15|52R9[115]} 40|494r41 495r50 501m41 704r18 705r26
+. 717r17 718r26 723m20
+135U14 startServer<86|6p14> 135>26 135>68 135>86 40|785b25 789l8 789t19
+135r26 thisServer{35R9} 40|785b38 786r41
+135a68 ipAdress{string} 40|785b79 788r29
+135i86 port{natural} 40|785b98 788r39
+136U14 stopServer<86|7p14> 136>25 40|804b14 808l8 808t18
+136r25 thisServer{35R9} 40|804b26
+137V13 loadDB{boolean}<86|8p13> 137>20 137>61 40|812b13 816l8 816t14
+137r20 thisServer{35R9} 40|812b20
+137p61 DataFile{33|52P9} 40|812b61
+138U14 saveDB<86|9p14> 138>21 138>62 40|820b14 824l8 824t14
+138r21 thisServer{35R9} 40|820b21
+138p62 DataFile{33|52P9} 40|820b62
+139U14 sendMessageToUser<86|10p14> 139>32 139>73 139>92 40|829b14 840l8 840t25
+139r32 thisServer{35R9} 40|829b32 830r25 831r39
+139a73 username{string} 40|829b73 830r77
+139a92 messagestring{string} 40|829b92 835r79
+140U14 deleteUserFromDatabase<86|11p14> 140>37 140>78 40|844b14 848l8 848t30
+140r37 thisServer{35R9} 40|844b37
+140a78 username{string} 40|844b78
+141U14 kickUserWithName<86|12p14> 141>31 141>72 40|795b14 800l8 800t24
+141r31 thisServer{35R9} 40|795b32
+141a72 username{string} 40|795b73 796r102
+144V13 checkIfContactRequestExists{boolean} 144>41 144>74 144>100 40|454s29
+. 543s28 697b13 709l8 709t35
+144p41 server{36P9} 40|543r57 698b7 704r11 705r19
+144p74 requestingUser{41|7P9} 40|543r75 699b7 704r44 705r51
+144p100 requestedUser{41|7P9} 40|543r108 700b7 706r33
+146U14 removeContactRequest 146=36 146>73 146>99 40|457s28 545s28 713b14
+. 727l8 727t28
+146p36 server{36P9} 40|545r50 713b36 717r10 718r19 723r13
+146p73 requestingUser{41|7P9} 40|545r68 713b73 717r43 718r51 723r44
+146p99 requestedUser{41|7P9} 40|545r101 713b99 719r31
+149V13 getNextChatRoomID{natural} 149=32 40|27b13 33l8 33t25 205s74 320s71
+149p32 server{36P9} 40|27b32 30r35 31r7 31r35
+154U14 InitializeServer 154=31 154>66 154>79 40|21s7 37b14 77l8 77t24
+154p31 This{36P9} 40|37b32
+154a66 ip{string} 40|37b67 46r47
+154i79 port{natural} 40|37b80 47r47
+163t9 Main_Server_Task 40|53r7 81b14 111l8 111t24
+164Y13 Start 40|53s24 83b14
+168V13 connectedClientsToClientList{6|49R9[105|26]} 168>42 40|228s63 852b13
+. 864l8 864t36
+168p42 this{36P9} 40|228r92 852b42 853r42
+X 40 concrete_server_logic.adb
+3p4 Server{39|36P9} 13m7 17r40 21m25 21r25 44r32 46r7 47r7 48r30 48r56 49r32
+. 60r61 93r27 186r33 193r31 205m93 205r93 219m73 219r73 222r34 227r69 228r100
+. 235r44 237r66 277r29 278r40 320m90 320r90 321r80 322r80 323r71 334r35 348m69
+. 348r69 356r43 386r28 387r40 434r27 446r83 447r74 454r58 457m50 457r50 463r46
+. 494r34 495r43 501r34 518r71 519r78 535r46 543r67 545m60 545r60 745r14 747r36
+. 779r7 796r48 797r39
+4r4 concServer{39|35R9} 12m7 13m21 13r21
+5p4 gui{105|23P9} 227r34 228r34 283r31
+28i7 id{natural} 30m7 32r14
+38p7 SubServer{39|49P9} 57r32 60r33 68r29
+39r7 connectMessage{104|17R9} 61m7 68r47
+71r12 Error{18|63R9} 73r43
+74r12 Error{18|63R9} 76r43
+88p13 Client{39|49P9} 94r27 95r27 96r85 99r13 100r13 100r45
+105r12 Error{18|63R9} 107r43
+108r12 Error{18|63R9} 110r43
+116p7 client{39|49P9} 123m10 126r74 130r85 143r75 189r66 190r31 192r66 195r50
+. 200r53 218r34 219r95 220r56 222r92 223r34 225r34 250r48 252r65 259r48 261r65
+. 281r67 294r53 305r50 312r43 336r50 348r106 349r53 351r31 369r36 372r53
+. 390r32 391r67 401r53 412r50 437r50 439r50 478r66 483r73 486r66 522r74 538r50
+. 556r33 558r50 576r28 580r28
+117p7 user{41|7P9} 186m25 188r28 193r66 197r57 213r96 222r74 223r49 243r61
+. 332r42 454r81 457r73 461m56 461r56 462r63 477r117 485r120 494r74 495r82
+. 501r72 509r49 520r91 524r121 531m51 531r51 533r66 543r125 545r118 548r124
+118i7 serverRoomID{integer} 217m34 218r57 219r81 290r51 301r48 341r54 346r62
+. 397r51 408r48 470r48
+119r7 serverStr{28|79R9} 161r45 167r45 173r45 179r45 210r54 241r48 249r48
+. 258r48 289r51 300r48 327r45 340r54 368r36 396r51 407r48 423r45 429r45 469r48
+. 475r48 483r62 485r62 507r36 522r63 524r63 548r66 555r33
+122p21 newClient{39|49P9}
+133L9 Continue
+136r13 incoming_message{104|17R9} 143m16 146r19 147r66 150r61 153r21 186r74
+. 199r63 277r56 278r66 282r62 283r52 293r97 304r87 321r101 322r101 334r62
+. 346r34 356r69 370r103 383r62 386r55 387r66 400r97 411r86 435r40 435r93
+. 446r104 518r92 522r95 557r103
+158r25 userNotFoundMessage{104|17R9} 189r92
+164r25 invalidPasswordMessage{104|17R9} 200r68
+170r25 alreadyLoggedInMessage{104|17R9} 195r65
+176r25 alreadyConnectedMessage{104|17R9} 192r92
+183r25 userpassword{28|79R9} 197m28 199r31
+205i34 id{natural} 211r54 217r57
+206p34 chatroom{39|52P9} 219m34 225r62
+207r34 connectAcceptMessage{104|17R9} 220r71
+213r34 clientContacts{6|49R9[41|9]} 230r49
+214r34 clientOnlineMessage{104|17R9} 238m43 244r87 246m43 252r80 255m43 261r80
+230p38 contact{41|7P9} 235r79 237r100 251r61 260r61
+232p40 contactClient{39|49P9} 237m43 242r48 244r65
+273p25 chatRoom{39|52P9} 278m28 281r47 282r52
+274r25 refusedMessage{104|17R9} 286m31 294r68 297m28 305r65
+320i25 roomID{natural} 328r45 348r83
+321p25 requestingUser{41|7P9}
+322p25 userToAdd{41|7P9} 323r105 332r58
+323p25 clientToAdd{39|49P9} 350r80 352r31 357r80 358r31
+324r25 requestAcceptMessage{104|17R9} 349r79
+330p25 chatRoom{39|52P9} 348m31 350m60 350r60 351r59 352r64 356m31 357m60
+. 357r60 358r64 360r52 360r87
+365r31 noContactMessage{104|17R9} 372r68
+381p25 chatRoom{39|52P9} 387m28 390r62 391m57 391r57
+382r25 refusedMessage{104|17R9} 393m31 401r68 404m28 412r65
+383r25 refusedText{28|79R9}
+419b25 registrationComplete{boolean} 433m25 436r28
+420r25 registrationAccepted{104|17R9} 437r65
+426r25 registrationFailed{104|17R9} 439r65
+446p25 requestedUser{41|7P9} 447r108 454r66 457r58 461r78 462m48 462r48 471r113
+. 483r107 496r60 499r60
+447p25 requestedUserClient{39|49P9} 476r48 479r66 485r73 487r66 508r36 510r53
+448r25 messageToRequestingUser{104|17R9} 466m28 478r92 482m28 486r92
+449r25 messageToRequestedUser{104|17R9} 472m28 479r105 484m28 487r105 504m31
+. 510r81
+450b25 bool{boolean} 461m28 462m28
+490r31 ulist{6|49R9[41|9]} 495m34 496m34 496r34 499m34 499r34 501r90
+518p25 requestedUser{41|7P9} 519r112 528r51 531r57 533m51 533r51 543r93 545r86
+519p25 requestedUserClient{39|49P9} 524r74 539r50 548r77 549r50
+520r25 userContacts{6|49R9[41|9]} 528r28
+521r25 messageToRequestingUser{104|17R9} 538r65 552m28 558r65
+523r25 messageToRequestedUser{104|17R9} 539r78 547m28 549r78
+525b25 bool{boolean} 531m28 533m28
+573r12 Error{18|63R9} 575r43
+577r12 Error{18|63R9} 579r43
+600r7 pos{6|58R9[39|60]} 605m46 605r46
+601r7 userlistMessage{104|17R9} 609m13 610r40
+601r24 userleftMessage{104|17R9} 612m13 618r40
+602r7 userleftText{28|79R9} 611m43 611r43 617r33
+634p7 room{39|52P9} 636m7 637r7 638m36 638r36 639r55 640r14
+661r7 result{28|79R9} 666m18 666r18 667m18 667r18 669m37 669r37 675r27
+662r7 clientList{6|49R9[39|60]} 665r21
+663r7 message{104|17R9} 670m7 676r14
+665p11 client{39|49P9} 667r39
+683p11 client{39|49P9} 684r32
+702r7 ulist{6|49R9[41|9]} 705m10 706r17
+714r7 ulist{6|49R9[41|9]} 718m10 719r19 721m10 721r10 722r13
+715r7 pos{6|58R9[41|9]} 719m10 721m24 721r24
+739r7 serverStr{28|79R9} 748r59
+740r7 contactList{6|49R9[41|9]} 744r22
+741p7 contactClient{39|49P9} 747m13 748r70 749r35
+742r7 clientStatusMessage{104|17R9} 748m13 749r57
+744p11 contact{41|7P9} 745r49 747r70
+758r7 disconnectMessage{104|17R9} 763m7 769r44
+759r7 chatRoomsOfClient{6|49R9[39|64]} 771m23 771r23
+760r7 serverStr{28|79R9} 766r27
+771p11 chatRoom{39|52P9} 772r36
+786r7 serv{39|35R9} 788m23 788r23
+796p7 user{41|7P9} 797r73
+797p7 client{39|49P9} 799r25
+830p7 user{41|7P9} 831r76
+831p7 client{39|49P9} 834r59 837r44
+832r7 msg{104|17R9} 838r44
+853r7 clientMap{13|52R9[39|103]} 858r19
+854r7 clientList{6|49R9[105|26]} 860m10 860r10 863r14
+855p7 concClient{39|49P9}
+856p7 ptr{105|25P9} 859m10 860r40
+858p11 user{39|49P9} 859r17
+X 41 datatypes.ads
+5K9*dataTypes 39|11w6 11r21 116r73 118r84 40|213r56 490r39 520r51 702r15
+. 714r15 715r15 740r29 41|31e14
+7P9*UserPtr(6R9) 39|79r14 102r36 103r81 115r91 144r91 144r116 146r90 146r115
+. 40|117r22 321r48 322r48 446r51 518r51 646r36 699r27 700r27 713r90 713r115
+. 796r16 830r14
+9K12*UserList[6|45] 39|116r83 118r94 40|213r66 490r49 520r61 702r25 714r25
+. 715r25 740r39
+11V13*getUsername{28|79R9} 40|243s48 251s48 260s48 471s100 477s104 483s94
+. 485s107 509s36 524s108 548s111 602s64 648s42 667s26 748s98
+13V13*encodePassword{28|79R9} 40|199s47 435s77
+14V13*getPassword{28|79R9} 40|197s44
+16V13*getContacts{6|49R9[9]} 40|213s83 332s29 520s78 740s56
+18V13*addContact{boolean} 40|461s36 462s36
+18p25 this{7P9} 40|461r48
+18p48 contactToAdd{7P9} 40|461r62
+19V13*removeContact{boolean} 40|531s36 533s36
+X 61 glib-object.ads
 41P9*GObject(40R9)
-600V13*Convert{96|67M9} 49|58i21 50|49i21
-601V13*Convert{41P9} 49|59i21 50|50i21
-X 55 gnat.ads
-34K9*GNAT 29|2r6 2r24 8r6 8r29 30|95r65 125r54 129r65 55|37e9
-X 62 g-socket.ads
-55K14*Sockets 29|2w11 2r29 30|95r70 125r59 129r70 62|1260e17
-376U14*Initialize 30|42s7
-409I9*Socket_Type<integer> 29|80r16 122r16
-448X4*Socket_Error 30|70r20 104r20 568r20
-476I9*Port_Type<integer> 30|46r36
-502R9*Sock_Addr_Type 29|81r23 123r23 62|505e14
-503r7*Addr{485R9} 30|45m28
-504i7*Port{476I9} 30|46m28
-518V13*Image{string} 30|95s78 125s67 129s78
-521V13*Inet_Addr{485R9} 30|45s36
-802U14*Create_Socket 30|43s7 56s7
-803i7 Socket{409I9} 30|43r22 56r22
-808U14*Accept_Socket 30|91s13
-809i7 Server{409I9} 30|92r16
-810i7 Socket{409I9} 30|93r16
-811r7 Address{502R9} 30|94r16
-833U14*Bind_Socket 30|47s7
-834i7 Socket{409I9} 30|47r20
-835r7 Address{502R9} 30|47r45
-839U14*Close_Socket 30|772s7
-842U14*Connect_Socket 30|59s7
-843i7 Socket{409I9} 30|59r23
-844r7 Server{502R9} 30|59r51
-884U14*Listen_Socket 30|48s7
-885i7 Socket{409I9} 30|48r22
-X 63 g-strspl.ads
-39K14*String_Split[56|58] 29|8w11 8r34
-X 76 gui_to_server_communication.ads
-3K9*GUI_to_Server_Communication 29|15w6 29r24 76|16e32
-4h9*Server 29|35r36 121r36
-X 94 protocol.ads
-9K9*Protocol 29|1w6 1r20 30|62r27 145r51 146r19 154r24 159r45 165r45 171r45
-. 177r45 208r54 236r48 244r48 253r48 267r24 283r51 294r48 305r24 313r24 321r45
-. 334r54 362r36 374r24 390r51 401r48 412r24 417r45 423r45 439r24 463r48 469r48
-. 478r45 480r45 501r36 511r24 517r42 519r42 543r45 549r33 609r33 661r47 667r27
-. 760r27 770r48 94|36e13
-12a6*Seperator{string} 30|661r56
-14E9*MessageTypeE 29|67r88 30|733r89 94|15e89
-14n26*Connect{14E9} 30|62r36 154r33 208r63
-14n35*Chat{14E9} 30|267r33 463r57 469r57 609r42
-14n41*Refused{14E9} 30|159r54 165r54 171r54 177r54 283r60 294r57 334r63 362r45
-. 390r60 401r57 423r54 549r42
-14n50*Disconnect{14E9} 30|305r33 760r36
-14n62*Online{14E9} 30|236r57 244r57 478r54 480r54
-14n70*Offline{14E9} 30|253r57 770r57
-14n79*Chatrequest{14E9} 30|313r33 321r54
-15n26*Userlist{14E9} 30|667r36
-15n36*Leavechat{14E9} 30|374r33
-15n47*Invalid{14E9} 30|145r60
-15n56*Register{14E9} 30|412r33 417r54
-15n66*addContact{14E9} 30|439r33 501r45
-15n78*remContact{14E9} 30|511r33 517r51 519r51 543r54
-17R9*MessageObject 29|58r67 62r70 30|38r24 135r32 157r47 163r50 169r50 175r51
-. 206r57 213r56 270r42 319r48 360r50 377r42 415r48 421r46 443r51 444r51 516r51
-. 518r50 596r42 655r68 658r20 676r71 737r29 753r27 94|22e14
-18e7*messagetype{14E9} 30|145r36 152r38
-19r7*sender{19|79R9} 30|185r91 316r118 378r79 430r57
-20i7*receiver{integer} 30|273r73 274r83 288r114 299r104 329r79 341r51 351r86
-. 381r72 382r83 395r114 406r103
-21r7*content{19|79R9} 30|198r80 317r118 365r120 430r110 441r121 513r109 517r112
-. 552r120
-24V13*messageObjectToString{string} 30|149s38
-28V13*createMessage{17R9} 30|61s9 158s27 164s27 170s27 176s27 207s36 235s45
-. 243s45 252s45 282s33 293s30 320s27 333s36 361s33 389s33 400s30 416s27 422s27
-. 462s30 468s30 478s30 480s30 500s33 517s27 519s27 543s30 548s30 608s15 666s9
-. 743s36 759s9
-28e27 messagetype{14E9} 30|62r12 159r30 165r30 171r30 177r30 208r39 283r36
-. 294r33 321r30 334r39 390r36 401r33 417r30 423r30 463r33 469r33 609r18 667r12
-. 760r12
-28r58 sender{19|79R9} 30|63r12 160r30 166r30 172r30 178r30 209r39 284r36
-. 295r33 322r30 335r39 391r36 402r33 418r30 424r30 464r33 470r33 610r18 668r12
-. 761r12
-28i88 receiver{integer} 30|64r12 161r30 167r30 173r30 179r30 210r39 285r36
-. 296r33 323r30 336r39 392r36 403r33 419r30 425r30 465r33 471r33 611r18 669r12
-. 762r12
-28r111 content{19|79R9} 30|65r12 162r30 168r30 174r30 180r30 211r39 286r36
-. 297r33 324r30 337r39 393r36 404r33 420r30 426r30 466r33 472r33 612r18 670r12
-. 763r12
-30U14*printMessageToInfoConsole 30|146s28
-30r40 message{17R9} 30|146r55
-32U14*writeMessageToStream 30|67s7 188s28 191s28 194s28 199s31 219s34 240s43
-. 248s43 257s43 289s31 300s28 330s31 344s31 367s31 396s31 407s28 432s28 434s28
-. 473s28 474s28 481s28 482s28 505s31 533s28 534s28 544s28 553s28 679s10 744s13
-. 764s7
-32i35 ClientSocket{62|409I9} 30|188r50 191r50 331r34 473r50 474r50 481r50
-. 482r50
-32r66 message{17R9} 30|188r81 191r81 332r34 344r68 473r81 474r94 481r81 482r94
-34V13*readMessageFromStream{17R9} 30|142s36
-34i36 ClientSocket{62|409I9} 30|142r59
-X 95 server_to_gui_communication.ads
-21K9*Server_To_GUI_Communication 29|16w6 16r39 30r24 95|38e32
+600V13*Convert{106|67M9} 59|58i21 60|49i21
+601V13*Convert{41P9} 59|59i21 60|50i21
+X 65 gnat.ads
+34K9*GNAT 39|2r6 2r24 8r6 8r29 40|96r65 126r54 130r65 65|37e9
+X 72 g-socket.ads
+55K14*Sockets 39|2w11 2r29 40|96r70 126r59 130r70 72|1260e17
+376U14*Initialize 40|43s7
+409I9*Socket_Type<integer> 39|80r16 122r16
+448X4*Socket_Error 40|71r20 105r20 573r20
+476I9*Port_Type<integer> 40|47r36
+502R9*Sock_Addr_Type 39|81r23 123r23 72|505e14
+503r7*Addr{485R9} 40|46m28
+504i7*Port{476I9} 40|47m28
+518V13*Image{string} 40|96s78 126s67 130s78
+521V13*Inet_Addr{485R9} 40|46s36
+802U14*Create_Socket 40|44s7 57s7
+803i7 Socket{409I9} 40|44r22 57r22
+808U14*Accept_Socket 40|92s13
+809i7 Server{409I9} 40|93r16
+810i7 Socket{409I9} 40|94r16
+811r7 Address{502R9} 40|95r16
+833U14*Bind_Socket 40|48s7
+834i7 Socket{409I9} 40|48r20
+835r7 Address{502R9} 40|48r45
+839U14*Close_Socket 40|777s7
+842U14*Connect_Socket 40|60s7
+843i7 Socket{409I9} 40|60r23
+844r7 Server{502R9} 40|60r51
+884U14*Listen_Socket 40|49s7
+885i7 Socket{409I9} 40|49r22
+X 73 g-strspl.ads
+39K14*String_Split[66|58] 39|8w11 8r34
+X 86 gui_to_server_communication.ads
+3K9*GUI_to_Server_Communication 39|15w6 29r24 86|15e32
+4h9*Server 39|35r36 121r36
+X 104 protocol.ads
+9K9*Protocol 39|1w6 1r20 40|63r27 146r51 147r19 155r24 160r45 166r45 172r45
+. 178r45 209r54 240r48 248r48 257r48 271r24 288r51 299r48 310r24 318r24 326r45
+. 339r54 367r36 379r24 395r51 406r48 417r24 422r45 428r45 444r24 468r48 474r48
+. 483r45 485r45 506r36 516r24 522r42 524r42 548r45 554r33 614r33 666r47 672r27
+. 765r27 775r48 832r59 104|36e13
+12a6*Seperator{string} 40|666r56
+14E9*MessageTypeE 39|67r88 40|738r89 104|15e89
+14n26*Connect{14E9} 40|63r36 155r33 209r63
+14n35*Chat{14E9} 40|271r33 468r57 474r57 614r42 832r68
+14n41*Refused{14E9} 40|160r54 166r54 172r54 178r54 288r60 299r57 339r63 367r45
+. 395r60 406r57 428r54 554r42
+14n50*Disconnect{14E9} 40|310r33 765r36
+14n62*Online{14E9} 40|240r57 248r57 483r54 485r54
+14n70*Offline{14E9} 40|257r57 775r57
+14n79*Chatrequest{14E9} 40|318r33 326r54
+15n26*Userlist{14E9} 40|672r36
+15n36*Leavechat{14E9} 40|379r33
+15n47*Invalid{14E9} 40|146r60
+15n56*Register{14E9} 40|417r33 422r54
+15n66*addContact{14E9} 40|444r33 506r45
+15n78*remContact{14E9} 40|516r33 522r51 524r51 548r54
+17R9*MessageObject 39|58r67 62r70 40|39r24 136r32 158r47 164r50 170r50 176r51
+. 207r57 214r56 274r42 324r48 365r50 382r42 420r48 426r46 448r51 449r51 521r51
+. 523r50 601r42 660r68 663r20 681r71 742r29 758r27 832r13 104|22e14
+18e7*messagetype{14E9} 40|146r36 153r38
+19r7*sender{28|79R9} 40|186r91 321r118 383r79 435r57
+20i7*receiver{integer} 40|277r73 278r83 293r114 304r104 334r79 346r51 356r86
+. 386r72 387r83 400r114 411r103
+21r7*content{28|79R9} 40|199r80 322r118 370r120 435r110 446r121 518r109 522r112
+. 557r120
+24V13*messageObjectToString{string} 40|150s38
+28V13*createMessage{17R9} 40|62s9 159s27 165s27 171s27 177s27 208s36 239s45
+. 247s45 256s45 287s33 298s30 325s27 338s36 366s33 394s33 405s30 421s27 427s27
+. 467s30 473s30 483s30 485s30 505s33 522s27 524s27 548s30 553s30 613s15 671s9
+. 748s36 764s9 832s30
+28e27 messagetype{14E9} 40|63r12 160r30 166r30 172r30 178r30 209r39 288r36
+. 299r33 326r30 339r39 395r36 406r33 422r30 428r30 468r33 474r33 614r18 672r12
+. 765r12 832r44
+28r58 sender{28|79R9} 40|64r12 161r30 167r30 173r30 179r30 210r39 289r36
+. 300r33 327r30 340r39 396r36 407r33 423r30 429r30 469r33 475r33 615r18 673r12
+. 766r12 833r44
+28i88 receiver{integer} 40|65r12 162r30 168r30 174r30 180r30 211r39 290r36
+. 301r33 328r30 341r39 397r36 408r33 424r30 430r30 470r33 476r33 616r18 674r12
+. 767r12 834r44
+28r111 content{28|79R9} 40|66r12 163r30 169r30 175r30 181r30 212r39 291r36
+. 302r33 329r30 342r39 398r36 409r33 425r30 431r30 471r33 477r33 617r18 675r12
+. 768r12 835r44
+30U14*printMessageToInfoConsole 40|147s28
+30r40 message{17R9} 40|147r55
+32U14*writeMessageToStream 40|68s7 189s28 192s28 195s28 200s31 220s34 244s43
+. 252s43 261s43 294s31 305s28 335s31 349s31 372s31 401s31 412s28 437s28 439s28
+. 478s28 479s28 486s28 487s28 510s31 538s28 539s28 549s28 558s28 684s10 749s13
+. 769s7 837s7
+32i35 ClientSocket{72|409I9} 40|189r50 192r50 336r34 478r50 479r50 486r50
+. 487r50 837r28
+32r66 message{17R9} 40|189r81 192r81 337r34 349r68 478r81 479r94 486r81 487r94
+. 838r28
+34V13*readMessageFromStream{17R9} 40|143s36
+34i36 ClientSocket{72|409I9} 40|143r59
+X 105 server_to_gui_communication.ads
+21K9*Server_To_GUI_Communication 39|16w6 16r39 30r24 105|38e32
 22h9*GUI
-23P9*GUIPtr(22R9) 30|5r10
-X 96 system.ads
+23P9*GUIPtr(22R9) 40|5r10
+25P9*ClientPtr 40|856r13
+26K13*userViewOnlineList[6|45] 39|168r84 40|852r84 854r20
+34x14*printChatMessage 40|283R35
+35x14*updateNumberOfContacts 40|227R38
+36x14*updateOnlineUserOverview 40|228R38
+X 106 system.ads
 67M9*Address
-X 108 s-stausa.ads
+X 118 s-memory.ads
+53V13*Alloc{106|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{106|67M9} 105i<c,__gnat_realloc>22
+X 127 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 120 user_databases.ads
-16K9*User_Databases 29|10w6 10r26 30|16r7 120|58e19
-19R9*User_Database 29|125r22 120|55e14
-20V13*registerUser{boolean} 30|429s47
-20r55 username{19|79R9} 30|430r28
-20r87 password{19|79R9} 30|430r65
-21V13*getUser{31|7P9} 30|185s53 316s71 317s71 441s74 513s62 791s39
-21r50 username{19|79R9} 30|185r62 791r69
-23U14*saveUserDatabase 30|458s28 530s28
-24U14*loadUserDatabase 30|16s22
+X 129 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+X 150 user_databases.ads
+16K9*User_Databases 39|10w6 10r26 40|17r7 150|58e19
+19R9*User_Database 39|125r22 150|55e14
+20V13*registerUser{boolean} 40|434s47
+20r55 username{28|79R9} 40|435r28
+20r87 password{28|79R9} 40|435r65
+21V13*getUser{41|7P9} 40|186s53 321s71 322s71 446s74 518s62 796s39 830s49
+21r50 username{28|79R9} 40|186r62 796r69
+23U14*saveUserDatabase 40|463s28 535s28
+24U14*loadUserDatabase 40|17s22
 

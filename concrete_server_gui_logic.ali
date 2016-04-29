@@ -23,7 +23,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U concrete_server_gui_logic%b  concrete_server_gui_logic.adb  31750155 DE OO PK
+U concrete_server_gui_logic%b  concrete_server_gui_logic.adb  3f04be43 DE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -51,7 +51,7 @@ W gtk.tree_view%s	gtk-tree_view.adb	gtk-tree_view.ali
 W gtk.tree_view_column%s  gtk-tree_view_column.adb  gtk-tree_view_column.ali
 W system%s		system.ads		system.ali
 
-U concrete_server_gui_logic%s  concrete_server_gui_logic.ads  34e2a59c DE EE OO PF PK
+U concrete_server_gui_logic%s  concrete_server_gui_logic.ads  8663a92f DE EE OO PF PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -95,9 +95,9 @@ D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D cairo.ads		20141113214532 9fb881e2 cairo%s
 D cairo-region.ads	20141113214532 b7133728 cairo.region%s
-D concrete_server_gui_logic.ads  20160429093130 aee43fe1 concrete_server_gui_logic%s
-D concrete_server_gui_logic.adb  20160429093130 e93bde21 concrete_server_gui_logic%b
-D concrete_server_logic.ads  20160429095548 a87ac051 concrete_server_logic%s
+D concrete_server_gui_logic.ads  20160429112734 78c396b8 concrete_server_gui_logic%s
+D concrete_server_gui_logic.adb  20160429112722 316dc86e concrete_server_gui_logic%b
+D concrete_server_logic.ads  20160429112338 3fceacc1 concrete_server_logic%s
 D datatypes.ads		20160422143206 bd60c4ab datatypes%s
 D gdk.ads		20141113214532 96d821f3 gdk%s
 D gdk-color.ads		20141113214532 8f372175 gdk.color%s
@@ -206,7 +206,7 @@ D gtk-widget.ads	20141113214532 75666b65 gtk.widget%s
 D gtkada.ads		20141113214532 57aea1c7 gtkada%s
 D gtkada-builder.ads	20141113214532 833f12b9 gtkada.builder%s
 D gtkada-types.ads	20141113214532 b7bc0c77 gtkada.types%s
-D gui_to_server_communication.ads  20160422143210 ab21c04d gui_to_server_communication%s
+D gui_to_server_communication.ads  20160429111026 cdafb7f9 gui_to_server_communication%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
@@ -225,7 +225,7 @@ D pango-layout.ads	20141113214532 a68b7ace pango.layout%s
 D pango-matrix.ads	20141113214532 365564f3 pango.matrix%s
 D pango-tabs.ads	20141113214532 1e43de1b pango.tabs%s
 D protocol.ads		20160420074808 aaec25fd protocol%s
-D server_to_gui_communication.ads  20160429095402 d3bad1ba server_to_gui_communication%s
+D server_to_gui_communication.ads  20160429112506 20a818c0 server_to_gui_communication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
@@ -267,9 +267,9 @@ D user_databases.ads	20160422080612 ca918931 user_databases%s
 X 1 ada.ads
 16K9*Ada 19e8 31|6r6 6r23
 X 6 a-cdlili.ads
-49R9*List<11|43R9> 30|17r109[160|25] 31|43r108[160|25]
+49R9*List<11|43R9> 30|17r109[160|26] 31|43r108[160|26]
 X 8 a-cohama.ads
-52R9*Map<11|43R9> 30|18r109[160|26] 31|44r109[160|26]
+52R9*Map<11|43R9> 30|18r109[160|27] 31|44r109[160|27]
 X 13 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[6|67]>
@@ -285,24 +285,24 @@ X 30 concrete_server_gui_logic.ads
 . 17P14 17r61 18P14 18r61 31|39r54 40r52 41r53 42r58 43r60 44r61
 10U14*InitServerGui 10>28 31|46b14 69l8 69t21
 10p28 myBuilder{139|84P9} 31|46b28 48r32 50r45 51r47
-13U14 printErrorMessage<160|31p14> 13>32 13>66
+13U14 printErrorMessage<160|32p14> 13>32 13>66
 13r32 thisGUI{9R9}
-13r66 errorMessage{159|17R9}
-14U14 printInfoMessage<160|32p14> 14>31 14>64
+13a66 errorMessage{string}
+14U14 printInfoMessage<160|33p14> 14>31 14>64
 14r31 thisGUI{9R9}
-14r64 infoMessage{159|17R9}
-15U14 printChatMessage<160|33p14> 15>31 15>64
+14a64 infoMessage{string}
+15U14 printChatMessage<160|34p14> 15>31 15>64
 15r31 thisGUI{9R9}
 15r64 chatMessage{159|17R9}
-16U14 updateNumberOfContacts<160|34p14> 16>37 16>70
+16U14 updateNumberOfContacts<160|35p14> 16>37 16>70
 16r37 thisGUI{9R9}
 16i70 numberOfContact{natural}
-17U14 updateOnlineUserOverview<160|35p14> 17>39 17>73
+17U14 updateOnlineUserOverview<160|36p14> 17>39 17>73
 17r39 thisGUI{9R9}
-17r73 viewComponents{6|49R9[160|25]}
-18U14 updateOfflineUserOverview<160|36p14> 18>40 18>73
+17r73 viewComponents{6|49R9[160|26]}
+18U14 updateOfflineUserOverview<160|37p14> 18>40 18>73
 18r40 thisGUI{9R9}
-18r73 viewComponents{8|52R9[160|26]}
+18r73 viewComponents{8|52R9[160|27]}
 X 31 concrete_server_gui_logic.adb
 30p4 PortGEntry{97|796P12} 48m7 49r7
 31p4 InformationsTreeView{135|118P9} 50m7
@@ -312,10 +312,10 @@ X 31 concrete_server_gui_logic.adb
 35i4 Val{48|51I9}
 39U14 printErrorMessage
 39r32 thisGUI{30|9R9}
-39r66 errorMessage{159|17R9}
+39a66 errorMessage{string}
 40U14 printInfoMessage
 40r31 thisGUI{30|9R9}
-40r64 infoMessage{159|17R9}
+40a64 infoMessage{string}
 41U14 printChatMessage
 41r31 thisGUI{30|9R9}
 41r65 chatMessage{159|17R9}
@@ -324,10 +324,10 @@ X 31 concrete_server_gui_logic.adb
 42i70 numberOfContact{natural}
 43U14 updateOnlineUserOverview
 43r39 thisGUI{30|9R9}
-43r72 viewComponents{6|49R9[160|25]}
+43r72 viewComponents{6|49R9[160|26]}
 44U14 updateOfflineUserOverview
 44r40 thisGUI{30|9R9}
-44r73 viewComponents{8|52R9[160|26]}
+44r73 viewComponents{8|52R9[160|27]}
 X 32 concrete_server_logic.ads
 28K9*Concrete_Server_Logic 30|2w6 32|172e26
 X 34 gdk.ads
@@ -437,12 +437,12 @@ X 143 i-c.ads
 35I9*int<integer>
 X 159 protocol.ads
 9K9*Protocol 30|3w6 3r20 159|36e13
-17R9*MessageObject 30|13r81 14r78 15r78 31|39r81 40r78 41r79 159|22e14
+17R9*MessageObject 30|15r78 31|41r79 159|22e14
 X 160 server_to_gui_communication.ads
-21K9*Server_To_GUI_Communication 30|1w6 1r39 7r24 160|37e32
+21K9*Server_To_GUI_Communication 30|1w6 1r39 7r24 160|38e32
 22h9*GUI 30|9r31
-25K13*userViewOnlineList[6|45] 30|17r90 31|43r89
-26K12*userViewOfflineMap[8|48] 30|18r90 31|44r90
+26K13*userViewOnlineList[6|45] 30|17r90 31|43r89
+27K12*userViewOfflineMap[8|48] 30|18r90 31|44r90
 X 161 system.ads
 67M9*Address
 X 179 s-stausa.ads

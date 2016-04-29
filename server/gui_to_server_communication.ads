@@ -7,7 +7,6 @@ package GUI_to_Server_Communication is
    procedure stopServer(thisServer : aliased in  Server) is abstract;
    function loadDB(thisServer : aliased in Server; DataFile : File_type) return Boolean is abstract;
    procedure saveDB(thisServer : aliased in Server; DataFile : File_type) is abstract;
-   procedure closeServer(thisServer : aliased in Server) is abstract;
    procedure sendMessageToUser(thisServer : aliased in Server; username : String; messagestring : String) is abstract;
    procedure deleteUserFromDatabase(thisServer : aliased in Server; username : String) is abstract;
    procedure kickUserWithName(thisServer : aliased in Server; username:String) is abstract;

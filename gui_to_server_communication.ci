@@ -9,10 +9,9 @@ class {
              2:gui_to_server_communication__stopserver\n
              3:gui_to_server_communication__loaddb\n
              4:gui_to_server_communication__savedb\n
-             5:gui_to_server_communication__closeserver\n
-             6:gui_to_server_communication__sendmessagetouser\n
-             7:gui_to_server_communication__deleteuserfromdatabase\n
-             8:gui_to_server_communication__kickuserwithname\n
+             5:gui_to_server_communication__sendmessagetouser\n
+             6:gui_to_server_communication__deleteuserfromdatabase\n
+             7:gui_to_server_communication__kickuserwithname\n
              -1:gui_to_server_communication___size\n
              -2:gui_to_server_communication__serverSR\n
              -3:gui_to_server_communication__serverSW\n
