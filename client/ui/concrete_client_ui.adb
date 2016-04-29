@@ -156,6 +156,34 @@ package body Concrete_Client_Ui is
       offlineList.Set(temp, 0, To_String(UserName));
    end AddOfflineUser;
 
+<<<<<<< HEAD
+=======
+   -----------------------------------------------------------------------------
+
+   procedure ContactRemove(This : in Concrete_Ui; Username : in Unbounded_String) is
+
+   begin
+      null;
+      end ContactRemove;
+
+   -----------------------------------------------------------------------------
+
+   procedure ContactRequest(This : in Concrete_Ui; Username : in Unbounded_String) is
+
+   begin
+      null;
+      end ContactRequest;
+
+   -----------------------------------------------------------------------------
+
+   procedure ShowChatMessages(This : in Concrete_Ui; message : in MessageObject) is
+
+   begin
+      null;
+   end ShowChatMessages;
+
+
+>>>>>>> origin/feature/Client_Logic
    procedure Quit (Object : access Gtkada_Builder_Record'Class) is
       pragma Unreferenced (Object);
    begin
@@ -167,7 +195,19 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
+<<<<<<< HEAD
    procedure ShowChatMessages(This : in Concrete_Ui; message : MessageObject) is
+=======
+   procedure ShowChatParticipants(This : in GUI; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
+
+   begin
+      null;
+      end ShowChatParticipants;
+
+   -----------------------------------------------------------------------------
+
+   procedure ShowChatMessages(This : in GUI; message : MessageObject) is
+>>>>>>> origin/feature/Client_Logic
 
    begin
 
