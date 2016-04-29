@@ -2,7 +2,7 @@ package body Concrete_Server_Logic is
 
    Server     : Concrete_Server_Ptr;
    concServer : aliased Concrete_Server;
-   gui : GUIPtr;
+   gui : GUIPtr := new Server_Gui;
 
 -----------------------------------------------------------------------------
 

@@ -3,6 +3,7 @@ with Concrete_Server_Logic;
 with Protocol; use Protocol;
 with Gtkada.Builder; use Gtkada.Builder;
 with Gtk.Main; use Gtk.Main;
+
 package Concrete_Server_Gui_Logic is
    package STG renames Server_To_GUI_Communication;
 
