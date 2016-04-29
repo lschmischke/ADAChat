@@ -5,6 +5,13 @@ package body Concrete_Client_Logic is
    Address : Sock_Addr_Type;
    Channel : Stream_Access;
 
+
+   procedure RegisterGUI(This : Concrete_Client; GUI : access Concrete_Client_Ui_Ptr) is
+
+   begin
+      null;
+   end RegisterGUI;
+
    -----------------------------------------------------------------------------
 
    procedure InitializeSocket(This : in out Concrete_Client; ServerAdress : in Unbounded_String;

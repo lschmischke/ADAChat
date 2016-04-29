@@ -14,9 +14,11 @@ with GNAT.String_Split; use GNAT.String_Split;
 with Gui2Client_Communication; use Gui2Client_Communication;
 with Client2Gui_Communication; use Client2Gui_Communication;
 
-
+limited with Concrete_Client_Ui;
 
 package Concrete_Client_Logic is
+
+   type Concrete_Client_Ui_Ptr is access all Concrete_Client_Ui.Concrete_Ui;
 
    type Concrete_Client is new Gui2Client_Communication.Client with private;
 
@@ -37,6 +39,9 @@ package Concrete_Client_Logic is
                                                                       Equivalent_Keys => "=",
                                                                       "="             => Userlist."=");
 
+   procedure RegisterGUI(This : Concrete_Client; GUI : access Concrete_Client_Ui_Ptr);
+
+
    private
 
    type Concrete_Client is new Gui2Client_Communication.Client with record
@@ -46,6 +51,7 @@ package Concrete_Client_Logic is
       UsersOffline : Userlist.Set;
       ChatRoomIdSet : ChatRoomIds.Set;
       ChatRoomParticipants : ChatRoomUsers.Map;
+      GUI : Concrete_Client_Ui_Ptr;
 
    end record;
 

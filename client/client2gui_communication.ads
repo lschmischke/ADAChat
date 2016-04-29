@@ -8,7 +8,6 @@ package Client2Gui_Communication is
    type GUI is interface;
 
 --   procedure ShowChatMessages(This : in GUI; message : Message_Object) is abstract;
-
    procedure LoginSuccess(This : in GUI) is abstract;
 
    procedure LoginRefused(This : in GUI; Reason : in Unbounded_String) is abstract;

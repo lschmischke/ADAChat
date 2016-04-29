@@ -1,0 +1,13 @@
+20160429095624
+-c
+-x
+ada
+-gnatA
+-gnatVa
+-gnata
+-gnato
+-fstack-check
+-gnatE
+-gnat12
+-fcallgraph-info=su,da
+-g

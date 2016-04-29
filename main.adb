@@ -1,6 +1,6 @@
 with Concrete_Server_Logic; use Concrete_Server_Logic;
-with Concrete_Client_Ui;
 with Concrete_Client_Logic; use Concrete_Client_Logic;
+with Concrete_Client_Ui; use Concrete_Client_Ui;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Protocol; use Protocol;
 
@@ -14,8 +14,6 @@ procedure main is
 
 begin
    cserver.startServer("127.0.0.1",12321);
-
-   ui.initClientUI(Client);
 
    --Client.connectToServer(To_Unbounded_String("a"), To_Unbounded_String("a"),
    --                       To_Unbounded_String("127.0.0.1"), 12321);
