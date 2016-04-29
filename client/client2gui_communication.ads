@@ -6,8 +6,10 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 package Client2Gui_Communication is
 
    type GUI is interface;
+   type GUIPtr is access all GUI'Class;
 
---   procedure ShowChatMessages(This : in GUI; message : Message_Object) is abstract;
+   procedure ShowChatMessages(This : in GUI; message : in MessageObject) is abstract;
+
    procedure LoginSuccess(This : in GUI) is abstract;
 
    procedure LoginRefused(This : in GUI; Reason : in Unbounded_String) is abstract;

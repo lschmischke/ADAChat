@@ -110,7 +110,11 @@ package body Concrete_Client_Ui is
       offlineList.Set(temp, 0, To_String(UserName));
    end AddOfflineUser;
 
-   procedure ShowChatMessages(This : in Concrete_Ui; message : MessageObject) is null;
+   procedure ShowChatMessages(This : in Concrete_Ui; message : in MessageObject) is
+
+   begin
+      null;
+   end ShowChatMessages;
 
 
    procedure Quit (Object : access Gtkada_Builder_Record'Class) is
@@ -119,6 +123,15 @@ package body Concrete_Client_Ui is
       Gtk.Main.Main_Quit;
 
    end Quit;
+
+   -----------------------------------------------------------------------------
+
+   procedure ShowChatMessages(This : in GUI; message : MessageObject) is
+
+   begin
+
+      null;
+   end ShowChatMessages;
 
    -----------------------------------------------------------------------------
 

@@ -1,13 +1,11 @@
 with Client2Gui_Communication; use Client2Gui_Communication;
+with Gui2Client_Communication; use Gui2Client_Communication;
 with Protocol; use Protocol;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Concrete_Client_Logic; use Concrete_Client_Logic;
 --with Chat_Window_Manager; use Chat_Window_Manager;
 
-limited with Concrete_Client_Logic;
-
 package Concrete_Client_Ui is
-
-   type Concrete_Client_Logic_Ptr is access all Concrete_Client_Logic.Concrete_Client;
 
    type Concrete_Ui is new Client2Gui_Communication.GUI with private;
 
@@ -31,9 +29,11 @@ private
   --    Login_Window   : LoginWindow;
    --   Contact_Window   : ContactWindow;
 --      Chat_Windows : ChatWindows;
-      Client : Concrete_Client_Logic_Ptr;
+      Client : ClientPtr;
 
    end record;
+
+   procedure ShowChatMessages(This : in Concrete_Ui; message : in MessageObject);
 
    --#Implementierung des Client2Gui_Communication interfaces
    procedure LoginSuccess(This : in Concrete_Ui);

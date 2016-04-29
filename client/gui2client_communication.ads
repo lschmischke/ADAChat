@@ -5,6 +5,7 @@ with GNAT.Sockets; use GNAT.Sockets;
 package Gui2Client_Communication is
 
    type Client is interface;
+   type ClientPtr is access all Client'Class;
 
    procedure InitializeSocket(This : in out Client; ServerAdress : in Unbounded_String;
                               ServerPort : in Port_Type) is abstract;

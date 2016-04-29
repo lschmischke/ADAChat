@@ -6,7 +6,15 @@ package body Concrete_Client_Logic is
    Channel : Stream_Access;
 
 
-   procedure RegisterGUI(This : Concrete_Client; GUI : access Concrete_Client_Ui_Ptr) is
+   procedure InitializeGUI(This : in out Concrete_Client; Ptr : in GUIPtr) is
+
+   begin
+
+      This.GUI := Ptr;
+
+   end InitializeGUI;
+
+   procedure RegisterGUI(This : Concrete_Client; GUI : in GUIPtr) is
 
    begin
       null;
@@ -170,7 +178,7 @@ package body Concrete_Client_Logic is
 
    -----------------------------------------------------------------------------
 
-   function ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) return Unbounded_String is
+   procedure ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) is
 
       MsgObject : MessageObject;
       Msg : Unbounded_String;
@@ -178,15 +186,13 @@ package body Concrete_Client_Logic is
    begin
 
       MsgObject := readMessageFromStream(ClientSocket => Client);
-      Msg := This.ProcessMessageObject(MsgObject);
-
-      return Msg;
+      This.ProcessMessageObject(MsgObject);
 
    end ReadFromServer;
 
    -----------------------------------------------------------------------------
 
-   function ProcessMessageObject(This : in out Concrete_Client; MsgObject : in MessageObject) return Unbounded_String is
+   procedure ProcessMessageObject(This : in out Concrete_Client; MsgObject : in MessageObject) is
 
    begin
 
@@ -194,7 +200,7 @@ package body Concrete_Client_Logic is
 
          when Connect =>
             This.ServerRoomId := MsgObject.Receiver;
-            return To_Unbounded_String("Die Verbindung wurde hergestellt!");
+            This.GUI.LoginSuccess;
 
          when Chat =>
 
