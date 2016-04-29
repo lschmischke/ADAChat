@@ -15,6 +15,7 @@ with Ada.Strings.Unbounded.Hash;
 with GUI_to_Server_Communication;
 with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 limited with Concrete_Server_Gui_Logic;
+with Concrete_Server_Gui_Logic;
 
 
 -- # TODOs #
@@ -136,7 +137,6 @@ private
    procedure stopServer(thisServer : aliased in  Concrete_Server);
    function loadDB(thisServer : aliased in Concrete_Server; DataFile : File_type) return Boolean;
    procedure saveDB(thisServer : aliased in Concrete_Server; DataFile : File_type);
-   procedure closeServer(thisServer : aliased in Concrete_Server);
    procedure sendMessageToUser(thisServer : aliased in Concrete_Server; username : String; messagestring : String);
    procedure deleteUserFromDatabase(thisServer : aliased in Concrete_Server; username : String);
    procedure kickUserWithName(thisServer : aliased in Concrete_Server; username:String);
@@ -165,6 +165,8 @@ private
       entry Start;
       -- entry Stop;
    end;
+
+   function connectedClientsToClientList(this : in Concrete_Server_Ptr) return STG.userViewOnlineList.List;
 
 
 

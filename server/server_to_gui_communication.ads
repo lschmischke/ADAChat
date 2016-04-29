@@ -22,7 +22,7 @@ package Server_To_GUI_Communication is
    type GUI is interface;
    type GUIPtr is access all GUI'Class;
 
-   type ClientPtr is access Concrete_Server_Logic.Concrete_Client;
+   type ClientPtr is access all Concrete_Server_Logic.Concrete_Client;
     package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => ClientPtr);
    package userViewOfflineMap is new Hashed_Maps(Key_Type        => Unbounded_String,
 						     Element_Type    => Unbounded_String,

@@ -36,8 +36,8 @@ package body Concrete_Server_Gui_Logic is
 
 
 
-   procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : MessageObject) is null;
-   procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : MessageObject) is null;
+   procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : String) is null;
+   procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String) is null;
    procedure printChatMessage(thisGUI : aliased  in Server_Gui; chatMessage : MessageObject) is null;
    procedure updateNumberOfContacts(thisGUI : aliased in Server_Gui; numberOfContact : Natural) is null;
    procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOnlineList.List) is null;

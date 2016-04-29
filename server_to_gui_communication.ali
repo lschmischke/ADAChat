@@ -37,7 +37,7 @@ RV NO_IMPLICIT_ALIASING
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U server_to_gui_communication%s  server_to_gui_communication.ads  4f2034dd DE EE OO PF PK
+U server_to_gui_communication%s  server_to_gui_communication.ads  4d08e683 DE EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.conversions%s  a-chacon.adb	a-chacon.ali
@@ -120,8 +120,8 @@ D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D cairo.ads		20141113214532 9fb881e2 cairo%s
 D cairo-region.ads	20141113214532 b7133728 cairo.region%s
-D concrete_server_gui_logic.ads  20160429093130 aee43fe1 concrete_server_gui_logic%s
-D concrete_server_logic.ads  20160429095548 a87ac051 concrete_server_logic%s
+D concrete_server_gui_logic.ads  20160429112734 78c396b8 concrete_server_gui_logic%s
+D concrete_server_logic.ads  20160429112338 3fceacc1 concrete_server_logic%s
 D datatypes.ads		20160422143206 bd60c4ab datatypes%s
 D gdk.ads		20141113214532 96d821f3 gdk%s
 D gdk-color.ads		20141113214532 8f372175 gdk.color%s
@@ -167,7 +167,7 @@ D gtk-widget.ads	20141113214532 75666b65 gtk.widget%s
 D gtkada.ads		20141113214532 57aea1c7 gtkada%s
 D gtkada-builder.ads	20141113214532 833f12b9 gtkada.builder%s
 D gtkada-types.ads	20141113214532 b7bc0c77 gtkada.types%s
-D gui_to_server_communication.ads  20160422143210 ab21c04d gui_to_server_communication%s
+D gui_to_server_communication.ads  20160429111026 cdafb7f9 gui_to_server_communication%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
@@ -186,7 +186,7 @@ D pango-layout.ads	20141113214532 a68b7ace pango.layout%s
 D pango-matrix.ads	20141113214532 365564f3 pango.matrix%s
 D pango-tabs.ads	20141113214532 1e43de1b pango.tabs%s
 D protocol.ads		20160420074808 aaec25fd protocol%s
-D server_to_gui_communication.ads  20160429095402 d3bad1ba server_to_gui_communication%s
+D server_to_gui_communication.ads  20160429112506 20a818c0 server_to_gui_communication%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20150518132148 cd8d2c94 system.assertions%s
@@ -226,7 +226,7 @@ D unchconv.ads		20150518132150 ca2f9e18 unchecked_conversion%s
 D user_databases.ads	20160422080612 ca918931 user_databases%s
 X 1 ada.ads
 16K9*Ada 19e8 103|5r6 5r23 6r6 6r33 7r6 7r23 8r6 8r26 9r6 9r47 11r6 14r6
-. 15r6 16r6 19r6 28r73
+. 15r6 16r6 19r6 29r73
 X 2 a-charac.ads
 16K13*Characters 18e19 103|11r10
 X 3 a-chacon.ads
@@ -235,16 +235,16 @@ X 5 a-contai.ads
 16K13*Containers 24e19 103|9r10 9r51 14r10 15r10
 19M9*Hash_Type
 X 6 a-cdlili.ads
-40+9 Element_Type 103|25r59
-45k24*Doubly_Linked_Lists 407e39 103|9w21 25r39
-49R9*List<19|43R9> 103|35r101[25]
+40+9 Element_Type 103|26r59
+45k24*Doubly_Linked_Lists 407e39 103|9w21 26r39
+49R9*List<19|43R9> 103|36r101[26]
 X 13 a-cohama.ads
-41+9 Key_Type 103|26r50
-42+9 Element_Type 103|27r54
-44V18 Hash{5|19M9} 103|28r54
-45V18 Equivalent_Keys{boolean} 103|29r50
-48k24*Hashed_Maps 467e31 103|15w21 26r38
-52R9*Map<19|43R9> 103|36r102[26]
+41+9 Key_Type 103|27r50
+42+9 Element_Type 103|28r54
+44V18 Hash{5|19M9} 103|29r54
+45V18 Equivalent_Keys{boolean} 103|30r50
+48k24*Hashed_Maps 467e31 103|15w21 27r38
+52R9*Map<19|43R9> 103|37r102[27]
 X 15 a-cihama.ads
 48k24*Indefinite_Hashed_Maps 443e42 103|14w21
 X 18 a-except.ads
@@ -255,19 +255,19 @@ X 21 a-iteint.ads
 X 22 a-stream.ads
 36K13*Streams 87e16 103|5w10 5r27
 X 23 a-string.ads
-16K13*Strings 35e16 103|6r10 6r37 16r10 19r10 28r77
+16K13*Strings 35e16 103|6r10 6r37 16r10 19r10 29r77
 X 27 a-strunb.ads
-76K21*Unbounded 489e26 103|6w18 6r45 16r18 19r18 28r85
-79R9*Unbounded_String<19|43R9> 473e14 103|26r69 27r73
-166V14*"="{boolean} 6|42i19 13|46i19 103|29r70
+76K21*Unbounded 489e26 103|6w18 6r45 16r18 19r18 29r85
+79R9*Unbounded_String<19|43R9> 473e14 103|27r69 28r73
+166V14*"="{boolean} 6|42i19 13|46i19 103|30r70
 X 29 a-stunha.ads
 18V32*Hash{5|19M9} 103|16w28
 X 30 a-suhcin.ads
-36V32*Hash_Case_Insensitive{5|19M9} 103|19w28 28r95
+36V32*Hash_Case_Insensitive{5|19M9} 103|19w28 29r95
 X 32 a-textio.ads
 49K13*Text_IO 471e16 103|7w10 7r27
 X 38 concrete_server_logic.ads
-28K9 Concrete_Server_Logic 103|24r29
+28K9 Concrete_Server_Logic 103|25r33
 X 39 datatypes.ads
 5K9*dataTypes 31e14 103|13w6 13r21
 X 59 glib-object.ads
@@ -285,35 +285,36 @@ X 73 gtk.ads
 X 75 gtk-builder.ads
 231K13*Builder 550e16 103|17w10 17r27
 X 84 gui_to_server_communication.ads
-3K9*GUI_to_Server_Communication 16e32 103|18w6
+3K9*GUI_to_Server_Communication 15e32 103|18w6
 X 102 protocol.ads
 9K9*Protocol 36e13 103|1w6 1r20 3w6 3r20
-17R9*MessageObject 22e14 103|31r73 32r71 33r71
+17R9*MessageObject 22e14 103|34r71
 X 103 server_to_gui_communication.ads
-21K9*Server_To_GUI_Communication 37l5 37e32
-22h9*GUI 31p14 31r53 32p14 32r52 33p14 33r52 34p14 34r58 35p14 35r60 36p14
-. 36r61
-24P9*ClientPtr 25r75
-25K13*userViewOnlineList[6|45] 35r82
-26K12*userViewOfflineMap[13|48] 36r83
-31x14*printErrorMessage 31>32 31>58
-31r32 thisGUI{22R9}
-31r58 errorMessage{102|17R9}
-32x14*printInfoMessage 32>31 32>57
-32r31 thisGUI{22R9}
-32r57 infoMessage{102|17R9}
-33x14*printChatMessage 33>31 33>57
+21K9*Server_To_GUI_Communication 38l5 38e32
+22h9*GUI 23r30 32p14 32r53 33p14 33r52 34p14 34r52 35p14 35r58 36p14 36r60
+. 37p14 37r61
+23P9*GUIPtr(22R9)
+25P9*ClientPtr 26r75
+26K13*userViewOnlineList[6|45] 36r82
+27K12*userViewOfflineMap[13|48] 37r83
+32x14*printErrorMessage 32>32 32>58
+32r32 thisGUI{22R9}
+32a58 errorMessage{string}
+33x14*printInfoMessage 33>31 33>57
 33r31 thisGUI{22R9}
-33r57 chatMessage{102|17R9}
-34x14*updateNumberOfContacts 34>37 34>63
-34r37 thisGUI{22R9}
-34i63 numberOfContact{natural}
-35x14*updateOnlineUserOverview 35>39 35>65
-35r39 thisGUI{22R9}
-35r65 viewComponents{6|49R9[25]}
-36x14*updateOfflineUserOverview 36>40 36>66
-36r40 thisGUI{22R9}
-36r66 viewComponents{13|52R9[26]}
+33a57 infoMessage{string}
+34x14*printChatMessage 34>31 34>57
+34r31 thisGUI{22R9}
+34r57 chatMessage{102|17R9}
+35x14*updateNumberOfContacts 35>37 35>63
+35r37 thisGUI{22R9}
+35i63 numberOfContact{natural}
+36x14*updateOnlineUserOverview 36>39 36>65
+36r39 thisGUI{22R9}
+36r65 viewComponents{6|49R9[26]}
+37x14*updateOfflineUserOverview 37>40 37>66
+37r40 thisGUI{22R9}
+37r66 viewComponents{13|52R9[27]}
 X 104 system.ads
 67M9*Address
 X 113 s-memory.ads
