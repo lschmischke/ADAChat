@@ -1,6 +1,8 @@
+ with "C:\GtkAda\lib\gnat\gtkada.gpr";
+
 project ADAChat is
 
-   for Main use ("Main.adb");
+   for Main use ("Main.adb", "ServerGuiEntryPoint.adb");
    for Source_Dirs use ("./**");
 
    package Builder is
@@ -18,6 +20,8 @@ project ADAChat is
    package Pretty_Printer is
       for Default_Switches ("ada") use ("-M130", "-l2");
    end Pretty_Printer;
+
+   for Exec_Dir use "..\..\..\..\bin";
 
 end ADAChat;
 

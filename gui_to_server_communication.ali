@@ -1,0 +1,87 @@
+V "GNAT Lib v2015"
+A -fstack-check=specific
+A -fcallgraph-info=su,da
+A -gnatA
+A -gnatVa
+A -gnata
+A -gnato
+A -gnatE
+A -gnat12
+A -g
+A -mtune=generic
+A -march=pentiumpro
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U gui_to_server_communication%s  gui_to_server_communication.ads  934c3599 DE EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D gui_to_server_communication.ads  20160429055524 ab21c04d gui_to_server_communication%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 8|1r6 1r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 8|1w10 1r27
+52P9*File_Type 8|8r63 9r64
+X 8 gui_to_server_communication.ads
+3K9*GUI_to_Server_Communication 16l5 16e32
+4h9*Server 6p14 6r50 7p14 7r50 8p13 8r44 9p14 9r45 10p14 10r50 11p14 11r56
+. 12p14 12r61 13p14 13r55
+6x14*startServer 6>26 6>58 6>76
+6r26 thisServer{4R9}
+6a58 ipAdress{string}
+6i76 port{natural}
+7x14*stopServer 7>25
+7r25 thisServer{4R9}
+8y13*loadDB{boolean} 8>20 8>52
+8r20 thisServer{4R9}
+8p52 DataFile{6|52P9}
+9x14*saveDB 9>21 9>53
+9r21 thisServer{4R9}
+9p53 DataFile{6|52P9}
+10x14*closeServer 10>26
+10r26 thisServer{4R9}
+11x14*sendMessageToUser 11>32 11>64 11>83
+11r32 thisServer{4R9}
+11a64 username{string}
+11a83 messagestring{string}
+12x14*deleteUserFromDatabase 12>37 12>69
+12r37 thisServer{4R9}
+12a69 username{string}
+13x14*kickUserWithName 13>31 13>63
+13r31 thisServer{4R9}
+13a63 username{string}
+
