@@ -34,7 +34,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="toolbutton_start_stop">
+              <object class="GtkToolButton" id="toolbutton_start_server">
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -42,6 +42,24 @@
                 <property name="label" translatable="yes">Start server</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-media-play</property>
+                <signal name="clicked" handler="clicked_button_server_start" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="toolbutton_stop_server">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="sensitive">False</property>
+                <property name="can_focus">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="label" translatable="yes">Stop Server</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-dialog-error</property>
+                <signal name="clicked" handler="clicked_button_server_stop" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
