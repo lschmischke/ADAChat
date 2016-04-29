@@ -35,7 +35,7 @@ use Gtk; with Gtk;
 with Gtk.Handlers;             use Gtk.Handlers;
 with ServerGuiCallbacks; use ServerGuiCallbacks;
 with GUI_to_Server_Communication; use GUI_to_Server_Communication;
-with Concrete_Server_Gui_Logic; use Concrete_Server_Gui_Logic;
+with Concrete_Server_Gui_Logic;
 
 package body ServerGuiEntryPoint is
 procedure  ServerGuiEntryPoint is

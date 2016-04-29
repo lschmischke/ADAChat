@@ -26,6 +26,8 @@ with Gtk.Scrolled_Window; use Gtk.Scrolled_Window;
 with Gtk.Menu; use Gtk.Menu;
 with Gtk.Spin_Button; use Gtk.Spin_Button;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with dataTypes; use dataTypes;
+
 package body Concrete_Server_Gui_Logic is
 
    PortGEntry : Gtk_GEntry;
@@ -70,7 +72,21 @@ package body Concrete_Server_Gui_Logic is
 
       end printChatMessage;
    procedure updateNumberOfContacts(thisGUI : aliased in Server_Gui; numberOfContact : Natural) is null;
-   procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOnlineList.List) is null;
+
+   procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : Concrete_Server_Logic.userViewOnlineList.List) is
+
+
+   begin
+
+      For client of viewComponents loop
+
+         Put_Line("Username: " & To_String(getUsername(client.user)));
+
+      end loop;
+
+
+      end updateOnlineUserOverview;
+
    procedure updateOfflineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOfflineMap.Map)is null;
 
    procedure InitServerGui(myBuilder: Gtkada_Builder) is begin

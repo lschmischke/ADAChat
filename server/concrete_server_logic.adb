@@ -867,4 +867,13 @@ package body Concrete_Server_Logic is
 
 
    ----------------------------------------------------------------------------------------
+
+   function getUsernameOfClient(client : Concrete_Client_Ptr) return Unbounded_String
+   is
+   begin
+      return getUsername(client.user);
+
+
+      end getUsernameOfClient;
+
 end Concrete_Server_Logic;
