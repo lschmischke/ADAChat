@@ -33,6 +33,8 @@ private
 
    end record;
 
+    procedure ShowChatParticipants(This : in Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set);
+
    procedure ShowChatMessages(This : in Concrete_Ui; message : in MessageObject);
 
    --#Implementierung des Client2Gui_Communication interfaces
@@ -49,6 +51,10 @@ private
 
    -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
    procedure SetOfflineUser(This : in Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
+
+   procedure ContactRequest(This : in Concrete_Ui; Username : in Unbounded_String);
+
+   procedure ContactRemove(This : in Concrete_Ui; Username : in Unbounded_String);
    --
 
    Instance : Concrete_Ui;

@@ -23,7 +23,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		2801ce04 DE NE OO SU IL
+U main%b		main.adb		7cd9e238 DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -65,9 +65,9 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client2gui_communication.ads  20160429122606 77b48299 client2gui_communication%s
+D client2gui_communication.ads  20160429130400 84942ace client2gui_communication%s
 D concrete_client_logic.ads  20160429121640 7029e9f0 concrete_client_logic%s
-D concrete_client_ui.ads  20160429121712 1a849a30 concrete_client_ui%s
+D concrete_client_ui.ads  20160429130400 4e5cb60c concrete_client_ui%s
 D concrete_server_logic.ads  20160427171304 659c268e concrete_server_logic%s
 D datatypes.ads		20160427171304 bd60c4ab datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
@@ -139,7 +139,7 @@ X 30 concrete_client_logic.ads
 17K9*Concrete_Client_Logic 115e26 49|2w6 2r33 11r13
 19R9*Concrete_Client<43|7R9> 45e14 49|11r35
 X 31 concrete_client_ui.ads
-8K9*Concrete_Client_Ui 55e23 49|3w6 3r30 13r9
+8K9*Concrete_Client_Ui 61e23 49|3w6 3r30 13r9
 10R9*Concrete_Ui<29|10R9> 34e14 49|13r28
 X 32 concrete_server_logic.ads
 26K9*Concrete_Server_Logic 174e26 49|1w6 1r33

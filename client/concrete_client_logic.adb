@@ -5,7 +5,6 @@ package body Concrete_Client_Logic is
    Address : Sock_Addr_Type;
    Channel : Stream_Access;
 
-
    procedure InitializeGUI(This : in out Concrete_Client; Ptr : in GUIPtr) is
 
    begin
@@ -222,8 +221,6 @@ package body Concrete_Client_Logic is
                Message : Unbounded_String;
             begin
                Close_Socket(Client);
-               --#TODO TODO TODO
-               --#Fenster entsprechend schliessen
 
                --#Userliste löschen#--
                This.UsersOnline.Clear;
@@ -271,6 +268,7 @@ package body Concrete_Client_Logic is
                Message := To_Unbounded_String("Chatraum :");
                Append(Message, Integer'Image(MsgObject.Receiver));
                This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
+
                --##TODO Chatfenster oeffnen
 
             end;
@@ -290,20 +288,18 @@ package body Concrete_Client_Logic is
                end loop;
                This.ChatRoomParticipants.Insert(Key      => MsgObject.Receiver,
                                                 New_Item => UserSet);
+
+               This.GUI.ShowChatParticipants(Chatraum     => MsgObject.Receiver,
+                                             Participants => UserSet);
             end;
 
-         when Leavechat =>
+         when AddContact =>
             --#TODO
-            --#verlasse Chatraum, schliesse Chatfenster
-            null;
+            This.GUI.ContactRequest(Username => MsgObject.Content);
 
-       --  when AddContact =>
+         when RemContact =>
             --#TODO
-            --#anfrage mitteilen, bestaetigen oder ablehnen
-
-        -- when RemContact =>
-            --#TODO
-            --freund loeschen oder freundesanfrage ablehnen
+            This.GUI.ContactRemove(Username => MsgObject.Content);
 
          when others =>
             null;

@@ -23,10 +23,16 @@ package Client2Gui_Communication is
 
    procedure DisconnectReason(This : in GUI; Status : in Unbounded_String) is abstract;
 
+   procedure ShowChatParticipants(This : in GUI; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is abstract;
+
    -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
    procedure SetOnlineUser(This : in GUI; Users : in Client2Gui_Communication.Userlist.Set) is abstract;
 
    -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
    procedure SetOfflineUser(This : in GUI; Users : in Client2Gui_Communication.Userlist.Set) is abstract;
+
+   procedure ContactRequest(This : in GUI; Username : in Unbounded_String) is abstract;
+
+   procedure ContactRemove(This : in GUI; Username : in Unbounded_String) is abstract;
 
 end Client2Gui_Communication;
