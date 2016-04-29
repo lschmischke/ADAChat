@@ -18,11 +18,6 @@ package Concrete_Client_Logic is
 
    type Concrete_Client is new Gui2Client_Communication.Client with private;
 
-   package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
-                                                      Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
-                                                      Equivalent_Elements => "=",
-                                                      "="                 => Ada.Strings.Unbounded."=");
-
    function Hash (R : Natural) return Hash_Type;
 
    package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
@@ -30,12 +25,10 @@ package Concrete_Client_Logic is
                                                          Equivalent_Elements => "=");
 
    package ChatRoomUsers is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
-                                                                      Element_Type    => Userlist.Set,
+                                                                      Element_Type    => Client2Gui_Communication.Userlist.Set,
                                                                       Hash            => Hash,
                                                                       Equivalent_Keys => "=",
-                                                                      "="             => Userlist."=");
-
-   procedure RegisterGUI(This : Concrete_Client; GUI : in GUIPtr);
+                                                                      "="             => Client2Gui_Communication.Userlist."=");
 
 
    private
@@ -43,8 +36,8 @@ package Concrete_Client_Logic is
    type Concrete_Client is new Gui2Client_Communication.Client with record
       Socket : Socket_Type;
       ServerRoomId : Integer;
-      UsersOnline : Userlist.Set;
-      UsersOffline : Userlist.Set;
+      UsersOnline : Client2Gui_Communication.Userlist.Set;
+      UsersOffline : Client2Gui_Communication.Userlist.Set;
       ChatRoomIdSet : ChatRoomIds.Set;
       ChatRoomParticipants : ChatRoomUsers.Map;
       GUI : GUIPtr;

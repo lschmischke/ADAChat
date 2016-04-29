@@ -14,12 +14,6 @@ package body Concrete_Client_Logic is
 
    end InitializeGUI;
 
-   procedure RegisterGUI(This : Concrete_Client; GUI : in GUIPtr) is
-
-   begin
-      null;
-   end RegisterGUI;
-
    -----------------------------------------------------------------------------
 
    procedure InitializeSocket(This : in out Concrete_Client; ServerAdress : in Unbounded_String;
@@ -262,8 +256,7 @@ package body Concrete_Client_Logic is
                if This.UsersOffline.Contains(Item => MsgObject.Content) then
                   This.UsersOffline.Delete(Item => MsgObject.Content);
                end if;
-               --#TODOTODO refreshUserlist()
-               --#TODOTODOTODO
+               This.GUI.SetOnlineUser(Users => This.UsersOnline);
             end;
 
          when Offline =>
@@ -276,8 +269,7 @@ package body Concrete_Client_Logic is
                if This.UsersOnline.Contains(Item => MsgObject.Content) then
                   This.UsersOnline.Delete(Item => MsgObject.Content);
                end if;
-               --#TODOTODO refreshUserlist()
-               --#TODOTODOTODO
+               This.GUI.SetOfflineUser(Users => This.UsersOnline);
             end;
 
          when Chatrequest =>
@@ -294,7 +286,7 @@ package body Concrete_Client_Logic is
          when Protocol.Userlist =>
             declare
                Substrings : GNAT.String_Split.Slice_Set;
-               UserSet : Userlist.Set;
+               UserSet : Client2Gui_Communication.Userlist.Set;
             begin
                GNAT.String_Split.Create (S => Substrings,
                                          From       => To_String(MsgObject.Content),

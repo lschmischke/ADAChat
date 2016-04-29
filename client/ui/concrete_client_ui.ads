@@ -45,10 +45,10 @@ private
    procedure DisconnectReason(This : in Concrete_Ui; Status : in Unbounded_String);
 
    -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
-   procedure AddOnlineUser(This : in Concrete_Ui; UserName : Unbounded_String);
+   procedure SetOnlineUser(This : in Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
 
    -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
-   procedure AddOfflineUser(This : in Concrete_Ui; UserName : Unbounded_String);
+   procedure SetOfflineUser(This : in Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
    --
 
    Instance : Concrete_Ui;
