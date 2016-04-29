@@ -147,7 +147,11 @@ package body Concrete_Client_Ui is
       offlineList.Set(temp, 0, To_String(UserName));
    end AddOfflineUser;
 
-   procedure ShowChatMessages(This : in Concrete_Ui; message : MessageObject) is null;
+   procedure ShowChatMessages(This : in Concrete_Ui; message : in MessageObject) is
+
+   begin
+      null;
+   end ShowChatMessages;
 
 
    procedure Quit (Object : access Gtkada_Builder_Record'Class) is
@@ -158,6 +162,63 @@ package body Concrete_Client_Ui is
 
    end Quit;
 
+   -----------------------------------------------------------------------------
 
+   procedure ShowChatMessages(This : in GUI; message : MessageObject) is
 
+   begin
+
+      null;
+   end ShowChatMessages;
+
+   -----------------------------------------------------------------------------
+
+   procedure LoginSuccess(This : in GUI) is
+
+   begin
+      null;
+   end LoginSuccess;
+
+   -----------------------------------------------------------------------------
+
+   procedure LoginRefused(This : in GUI; Reason : in Unbounded_String) is
+
+   begin
+      null;
+   end LoginRefused;
+
+   -----------------------------------------------------------------------------
+
+   procedure InitializeStatus(This : in GUI; Status : in Unbounded_String) is
+
+   begin
+      null;
+   end InitializeStatus;
+
+   -----------------------------------------------------------------------------
+
+   procedure DisconnectReason(This : in GUI; Status : in Unbounded_String) is
+
+   begin
+      null;
+   end DisconnectReason;
+
+   -----------------------------------------------------------------------------
+   -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
+   procedure AddOnlineUser(This : in GUI; UserName : Unbounded_String) is
+
+   begin
+      null;
+   end AddOnlineUser;
+
+   -----------------------------------------------------------------------------
+
+   -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
+   procedure AddOfflineUser(This : in GUI; UserName : Unbounded_String) is
+
+   begin
+      null;
+   end AddOfflineUser;
+
+   -----------------------------------------------------------------------------
 end Concrete_Client_Ui;
