@@ -23,7 +23,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		2a720ce3 DE NE OO SU IL
+U main%b		main.adb		0ae40781 DE NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -65,9 +65,9 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D client2gui_communication.ads  20160429103258 fbd80ad9 client2gui_communication%s
-D concrete_client_logic.ads  20160429102338 6c92ebc0 concrete_client_logic%s
-D concrete_client_ui.ads  20160429103650 044c5ae7 concrete_client_ui%s
+D client2gui_communication.ads  20160429105004 590d207c client2gui_communication%s
+D concrete_client_logic.ads  20160429105132 680375ef concrete_client_logic%s
+D concrete_client_ui.ads  20160429105004 204bcfaa concrete_client_ui%s
 D concrete_server_logic.ads  20160427171304 659c268e concrete_server_logic%s
 D datatypes.ads		20160427171304 bd60c4ab datatypes%s
 D gnat.ads		20150518132148 fd2ad2f1 gnat%s
@@ -79,7 +79,7 @@ D g-shshco.ads		20150518132148 1144502c gnat.secure_hashes.sha2_common%s
 D g-sha512.ads		20150518132148 ddcf5bc4 gnat.sha512%s
 D g-socket.ads		20150518132148 6b8693a8 gnat.sockets%s
 D g-strspl.ads		20150518132148 dbf24c7a gnat.string_split%s
-D gui2client_communication.ads  20160429102046 8eef08aa gui2client_communication%s
+D gui2client_communication.ads  20160429105132 0047f32f gui2client_communication%s
 D gui_to_server_communication.ads  20160427171304 ab21c04d gui_to_server_communication%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
@@ -136,7 +136,7 @@ X 21 a-strunb.ads
 X 29 client2gui_communication.ads
 8h9*GUI
 X 30 concrete_client_logic.ads
-17K9*Concrete_Client_Logic 123e26 49|2w6 2r33 11r13
+17K9*Concrete_Client_Logic 122e26 49|2w6 2r33 11r13
 19R9*Concrete_Client<43|7R9> 52e14 49|11r35
 X 31 concrete_client_ui.ads
 8K9*Concrete_Client_Ui 55e23 49|3w6 3r30 13r9

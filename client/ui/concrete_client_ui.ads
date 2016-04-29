@@ -38,7 +38,7 @@ private
    --#Implementierung des Client2Gui_Communication interfaces
    procedure LoginSuccess(This : in Concrete_Ui);
 
-   procedure LoginRefused(This : in Concrete_Ui; Reason : in Unbounded_String);
+   procedure RefusedMessage(This : in Concrete_Ui; Reason : in Unbounded_String);
 
    procedure InitializeStatus(This : in Concrete_Ui; Status : in Unbounded_String);
 

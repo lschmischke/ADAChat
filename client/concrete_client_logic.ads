@@ -106,8 +106,7 @@ package Concrete_Client_Logic is
    procedure InitializeSocket(This : in out Concrete_Client; ServerAdress : in Unbounded_String;
                               ServerPort : in Port_Type);
 
-   procedure LoginUser (This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
-                        ServerAdress : in Unbounded_String);
+   procedure LoginUser (This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String);
 
    procedure DisconnectUser(This : in out Concrete_Client; Username : in Unbounded_String; Message : in Unbounded_String);
 

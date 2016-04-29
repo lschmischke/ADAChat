@@ -11,8 +11,7 @@ package Gui2Client_Communication is
                               ServerPort : in Port_Type) is abstract;
 
    -- In der GUI gibt es Einstellungen für Server Adresse und Port, eine Antwort vom Server muss immer verarbeitet werden
-   procedure LoginUser (This : in out Client; Username : in Unbounded_String; Password : in Unbounded_String;
-                        ServerAdress : in Unbounded_String) is abstract;
+   procedure LoginUser (This : in out Client; Username : in Unbounded_String; Password : in Unbounded_String) is abstract;
 
    procedure DisconnectUser(This : in out Client; Username : in Unbounded_String; Message : in Unbounded_String) is abstract;
 

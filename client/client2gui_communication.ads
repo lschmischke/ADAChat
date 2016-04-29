@@ -12,7 +12,7 @@ package Client2Gui_Communication is
 
    procedure LoginSuccess(This : in GUI) is abstract;
 
-   procedure LoginRefused(This : in GUI; Reason : in Unbounded_String) is abstract;
+   procedure RefusedMessage(This : in GUI; Reason : in Unbounded_String) is abstract;
 
    procedure InitializeStatus(This : in GUI; Status : in Unbounded_String) is abstract;
 
