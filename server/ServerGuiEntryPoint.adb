@@ -48,7 +48,7 @@ procedure  ServerGuiEntryPoint is
 begin
    Gtk.Main.Init;
    Gtk_New (Builder);
-   ret := Builder.Add_From_File ("C:\Users\Thomas\test.glade", error'Access);
+   ret := Builder.Add_From_File ("ServerGui.glade", error'Access);
 
 
 
@@ -75,8 +75,6 @@ begin
    --Concrete_Server_Gui_Logic.STG.initGui;
 
    Concrete_Server_Gui_Logic.InitServerGui(myBuilder => Builder);
-   Server.startServer(ipAdress => "127.0.0.1",
-                      port     => 12321);
 
    --  Find our main window, then display it and all of its children.
    Win := Gtk_Window (Builder.Get_Object ("main_window_server"));
