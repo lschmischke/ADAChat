@@ -2,6 +2,7 @@ package body Concrete_Server_Logic is
 
    Server     : Concrete_Server_Ptr;
    concServer : aliased Concrete_Server;
+   gui : STG.GUI'Class;
 
 -----------------------------------------------------------------------------
 
@@ -275,6 +276,7 @@ package body Concrete_Server_Logic is
                            -- # Pruefe, ob Client in ChatRoom eingeschrieben #
                            if (getClientList (chatRoom).Contains (client)) then
                               broadcastToChatRoom (chatRoom, incoming_message);
+
                            else
                               refusedMessage :=
                                 createMessage

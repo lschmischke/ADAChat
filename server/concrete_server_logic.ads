@@ -13,6 +13,7 @@ with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
 with GUI_to_Server_Communication;
+with Server_To_GUI_Communication;
 
 
 -- # TODOs #
@@ -25,6 +26,7 @@ with GUI_to_Server_Communication;
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is
    package GTS renames GUI_to_Server_Communication;
+   package STG renames Server_To_GUI_Communication;
 
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
    -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients.
@@ -43,8 +45,6 @@ package Concrete_Server_Logic is
 
    type Concrete_Client is private;
    type Concrete_Client_Ptr is access Concrete_Client;
-
-
 
    type chatRoom is tagged private;
    type chatRoomPtr is access chatRoom;
@@ -67,11 +67,6 @@ package Concrete_Server_Logic is
    procedure disconnectClient(client : in Concrete_Client_Ptr);
 
 
-   package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr);
-   package userViewOfflineMap is new Hashed_Maps(Key_Type        => Unbounded_String,
-						     Element_Type    => Unbounded_String,
-						     Hash            => Hash,
-                                                     Equivalent_Keys => "=");
 private
 
 
