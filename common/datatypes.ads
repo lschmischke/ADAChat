@@ -3,7 +3,7 @@ with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
 with GNAT.SHA512;
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
--- Dieses Paket bündelt Typen um Benutzer des Chats zu verwalten.
+-- Dieses Paket bündelt Typen um Benutzer des Chats abzuspeichern.
 --
 -- Autoren: Daniel Kreck, Leonard Schmischke
 -- Letzte Änderung: 29.04.2016
