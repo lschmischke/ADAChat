@@ -10,7 +10,7 @@ with Gui2Client_Communication; use Gui2Client_Communication;
 procedure main is
 
    cserver : Concrete_Server;
-   Client : ClientPtr;
+   Client : ClientPtr := new Concrete_Client_Logic.Concrete_Client;
    Msg : MessageObject;
    ui : Concrete_Client_Ui.Concrete_Ui;
 

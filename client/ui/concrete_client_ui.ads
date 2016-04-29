@@ -21,7 +21,7 @@ package Concrete_Client_Ui is
    procedure updateChatParticipants;
 
    -- general callbacks
-  -- procedure Quit (Object : access Gtkada_Builder_Record'Class);
+   procedure Quit (Object : access Gtkada_Builder_Record'Class);
 
    -- login window callbacks
    procedure Register_Action (Object : access Gtkada_Builder_Record'Class);
@@ -30,8 +30,9 @@ package Concrete_Client_Ui is
 private
 
    type Concrete_Ui is new Client2Gui_Communication.GUI with record
-  --    Login_Window   : LoginWindow;
-   --   Contact_Window   : ContactWindow;
+      UserName : Unbounded_String; -- Set after Login
+      Login_Window   : LoginWindow;
+      Contact_Window   : ContactWindow;
 --      Chat_Windows : ChatWindows;
 
       Client : ClientPtr;

@@ -20,7 +20,7 @@ with Protocol; use Protocol;
 
 package body Login_Window is
 
-   procedure Init (This : in out LoginWindow; Client_Instance : Concrete_Client_Logic.Concrete_Client) is
+   procedure Init (This : in out LoginWindow; Client_Instance : ClientPtr) is
       ret : GUint;
       Error : aliased GError;
       newBuilder : Gtkada_Builder;

@@ -22,9 +22,7 @@ package body Concrete_Client_Ui is
    procedure setConnectionStatus is null;
    procedure updateChatParticipants is null;
 
-   procedure initClientUI(This : in out Concrete_Ui; Client_Instance : Client_Window.Client_Ptr) is
-      ret : GUint;
-      Error : aliased GError;
+   procedure initClientUI(This : in out Concrete_Ui; Client_Instance : ClientPtr) is
    begin
       --  Initialize GtkAda.
       Gtk.Main.Init;
@@ -46,20 +44,21 @@ package body Concrete_Client_Ui is
       password : Gtk_Entry;
       serverIP : Gtk_Entry;
       serverport : Gtk_Entry;
-      answer : MessageObject;
    begin
       username := Gtk_Entry(Object.Get_Object("Login_Username"));
       password := Gtk_Entry(Object.Get_Object("Login_Password"));
       serverIP := Gtk_Entry(Object.Get_Object("Settings_IP"));
       serverport := Gtk_Entry(Object.Get_Object("Settings_Port"));
-                         -- Funktioniert nicht
+
+      username.Set_Editable(false);
+      password.Set_Editable(false);
+      serverIP.Set_Editable(false);
+      serverport.Set_Editable(false);
+
+      Instance.Client.InitializeSocket(ServerAdress => To_Unbounded_String(serverIP.Get_Text),
+                                       ServerPort   => Port_Type'Value(serverport.Get_Text));
       Instance.Client.RegisterUser(Username => To_Unbounded_String(username.Get_Text),
-                                   Password => To_Unbounded_String(password.Get_Text),
-                                   ServerAdress => To_Unbounded_String(serverIP.Get_Text),
-                                   ServerPort => Port_Type'Value(serverport.Get_Text),
-                                   AnswerFromServer => answer);
-
-
+                                   Password => To_Unbounded_String(password.Get_Text));
    end Register_Action;
 
    procedure Login_Action (Object : access Gtkada_Builder_Record'Class) is
@@ -67,57 +66,16 @@ package body Concrete_Client_Ui is
       password : Gtk_Entry;
       serverIP : Gtk_Entry;
       serverport : Gtk_Entry;
-
-      --      onlineList : Gtk_List_Store;
-      --      offlineList : Gtk_List_Store;
-
-      --      temp : Gtk_Tree_Iter;
-
-      answer : MessageObject;
    begin
       username := Gtk_Entry(Object.Get_Object("Login_Username"));
       password := Gtk_Entry(Object.Get_Object("Login_Password"));
       serverIP := Gtk_Entry(Object.Get_Object("Settings_IP"));
       serverport := Gtk_Entry(Object.Get_Object("Settings_Port"));
 
-                   -- Funktioniert nicht
-      Instance.Client.LoginUser(Username => To_Unbounded_String(username.Get_Text),
-                                Password => To_Unbounded_String(password.Get_Text),
-                                ServerAdress => To_Unbounded_String(serverIP.Get_Text),
-                                ServerPort => Port_Type'Value(serverport.Get_Text),
-                                AnswerFromServer => answer);
-
-      if answer.messagetype = Connect then
-         if answer.content = "ok" then
-            Instance.Login_Window.Window.Hide;
-            Instance.Contact_Window.Init(Instance.Client);
-
-            --onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
-            --offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
-
-            --    Chat_Window_Manager.test;
-            --temp := Assign(temp, "Mein meega Test");
-            --offlineList.Append(temp);
-            --offlineList.Set(temp, 0, "Mein meega Test");
-            --offlineList.Append(temp);
-            --offlineList.Set(temp, 0, "Was anders");
-            Instance.AddOnlineUser(To_Unbounded_String("Thomas"));
-            Instance.AddOnlineUser(To_Unbounded_String("Ewald"));
-            Instance.AddOfflineUser(To_Unbounded_String("Daniel"));
-            Instance.AddOfflineUser(To_Unbounded_String("Sebastian"));
-            Instance.AddOfflineUser(To_Unbounded_String("Leonard"));
-
-            Instance.AddOnlineUser(To_Unbounded_String("Daniel"));
-            Instance.AddOnlineUser(To_Unbounded_String("Leonard"));
-            Instance.AddOnlineUser(To_Unbounded_String("Sebastian"));
-
-         else
-
-            null; -- TODO Fehler, Benutzername Passwort falsch
-         end if;
-      else
-         null; -- TODO Fehler, ggf. REFUSED abfragen, sonst Kommunikationsfehler
-      end if;
+      Instance.Client.InitializeSocket (ServerAdress => To_Unbounded_String(serverIP.Get_Text),
+                                       ServerPort   => Port_Type'Value(serverport.Get_Text));
+      Instance.Client.LoginUser        (Username => To_Unbounded_String(username.Get_Text),
+                                	Password => To_Unbounded_String(password.Get_Text));
    end Login_Action;
 
    procedure AddOnlineUser(This : in Concrete_Ui; UserName : Unbounded_String) is
@@ -147,13 +105,6 @@ package body Concrete_Client_Ui is
       offlineList.Set(temp, 0, To_String(UserName));
    end AddOfflineUser;
 
-   procedure ShowChatMessages(This : in Concrete_Ui; message : in MessageObject) is
-
-   begin
-      null;
-   end ShowChatMessages;
-
-
    procedure Quit (Object : access Gtkada_Builder_Record'Class) is
       pragma Unreferenced (Object);
    begin
@@ -164,7 +115,7 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatMessages(This : in GUI; message : MessageObject) is
+   procedure ShowChatMessages(This : in Concrete_Ui; message : MessageObject) is
 
    begin
 
@@ -173,15 +124,37 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure LoginSuccess(This : in GUI) is
-
+   procedure LoginSuccess(This : in Concrete_Ui) is
+      username : Gtk_Entry;
    begin
-      null;
+      username := Gtk_Entry(This.Login_Window.Builder.Get_Object("Login_Username"));
+      --This.UserName := To_Unbounded_String(username.Get_Text);
+      Instance.Login_Window.Window.Hide;
+      Instance.Contact_Window.Init(Instance.Client);
+
+      --onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
+      --offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
+
+      --    Chat_Window_Manager.test;
+      --temp := Assign(temp, "Mein meega Test");
+      --offlineList.Append(temp);
+      --offlineList.Set(temp, 0, "Mein meega Test");
+      --offlineList.Append(temp);
+      --offlineList.Set(temp, 0, "Was anders");
+      Instance.AddOnlineUser(To_Unbounded_String("Thomas"));
+      Instance.AddOnlineUser(To_Unbounded_String("Ewald"));
+      Instance.AddOfflineUser(To_Unbounded_String("Daniel"));
+      Instance.AddOfflineUser(To_Unbounded_String("Sebastian"));
+      Instance.AddOfflineUser(To_Unbounded_String("Leonard"));
+
+      Instance.AddOnlineUser(To_Unbounded_String("Daniel"));
+      Instance.AddOnlineUser(To_Unbounded_String("Leonard"));
+      Instance.AddOnlineUser(To_Unbounded_String("Sebastian"));
    end LoginSuccess;
 
    -----------------------------------------------------------------------------
 
-   procedure RefusedMessage(This : in GUI; Reason : in Unbounded_String) is
+   procedure RefusedMessage(This : in Concrete_Ui; Reason : in Unbounded_String) is
 
    begin
       null;
@@ -189,7 +162,7 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure InitializeStatus(This : in GUI; Status : in Unbounded_String) is
+   procedure InitializeStatus(This : in Concrete_Ui; Status : in Unbounded_String) is
 
    begin
       null;
@@ -197,28 +170,12 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure DisconnectReason(This : in GUI; Status : in Unbounded_String) is
+   procedure DisconnectReason(This : in Concrete_Ui; Status : in Unbounded_String) is
 
    begin
       null;
    end DisconnectReason;
 
    -----------------------------------------------------------------------------
-   -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
-   procedure AddOnlineUser(This : in GUI; UserName : Unbounded_String) is
 
-   begin
-      null;
-   end AddOnlineUser;
-
-   -----------------------------------------------------------------------------
-
-   -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
-   procedure AddOfflineUser(This : in GUI; UserName : Unbounded_String) is
-
-   begin
-      null;
-   end AddOfflineUser;
-
-   -----------------------------------------------------------------------------
 end Concrete_Client_Ui;

@@ -18,7 +18,7 @@ with Concrete_Client_Ui; use Concrete_Client_Ui;
 
 package body Contact_Window is
 
-   procedure Init(This : in out ContactWindow; Client_Instance : Concrete_Client_Logic.Concrete_Client) is
+   procedure Init(This : in out ContactWindow; Client_Instance : ClientPtr) is
       ret : GUint;
       Error : aliased GError;
       newBuilder : Gtkada_Builder;
