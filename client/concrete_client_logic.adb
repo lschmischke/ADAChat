@@ -7,11 +7,8 @@ package body Concrete_Client_Logic is
 
    -----------------------------------------------------------------------------
 
-   procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String;
-                             Password : in Unbounded_String; ServerAdress : in Unbounded_String;
-                             ServerPort : in Port_Type) is
-
-      ConnectMessage : MessageObject;
+   procedure InitializeSocket(This : in out Concrete_Client; ServerAdress : in Unbounded_String;
+                              ServerPort : in Port_Type) is
 
    begin
 
@@ -23,6 +20,26 @@ package body Concrete_Client_Logic is
       Connect_Socket (Client, Address);
       Channel := Stream (Client);
 
+   exception
+      when Error : Socket_Error =>
+         Put ("Socket_Error in ConnectToServer: ");
+         Put_Line (Exception_Information (Error));
+      when Error : others =>
+         Put ("Unexpected exception in ConnectToServer: ");
+         Put_Line (Exception_Information (Error));
+
+   end InitializeSocket;
+
+
+   -----------------------------------------------------------------------------
+
+   procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String;
+                             Password : in Unbounded_String) is
+
+      ConnectMessage : MessageObject;
+
+   begin
+
       --#ConnectMessage erzeugen#
       ConnectMessage := createMessage(messagetype => Protocol.Connect,
                                       sender      => UserName,
@@ -32,14 +49,6 @@ package body Concrete_Client_Logic is
       --#ConnectMessage nach Protokoll an Server#
       writeMessageToStream(ClientSocket => Client,
                            message      => ConnectMessage);
-
-   exception
-      when Error : Socket_Error =>
-         Put ("Socket_Error in ConnectToServer: ");
-         Put_Line (Exception_Information (Error));
-      when Error : others =>
-         Put ("Unexpected exception in ConnectToServer: ");
-         Put_Line (Exception_Information (Error));
 
    end ConnectToServer;
 
@@ -336,13 +345,12 @@ package body Concrete_Client_Logic is
    -----------------------------------------------------------------------------
    -----------------------------------------------------------------------------
 
-   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
+   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
+                        ServerAdress : in Unbounded_String) is
 
    begin
       This.ConnectToServer(UserName     => Username,
-                           Password     => Password,
-                           ServerAdress => To_Unbounded_String("127.0.0.1"),
-                           ServerPort   => 12321);
+                           Password     => Password);
    end LoginUser;
 
    -----------------------------------------------------------------------------

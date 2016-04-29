@@ -12,6 +12,7 @@ with Ada.Strings.Unbounded.Hash_Case_Insensitive;
 with Ada.Containers.Indefinite_Hashed_Maps;
 with GNAT.String_Split; use GNAT.String_Split;
 with Gui2Client_Communication; use Gui2Client_Communication;
+with Client2Gui_Communication; use Client2Gui_Communication;
 
 
 
@@ -53,9 +54,7 @@ package Concrete_Client_Logic is
 
    --Stellt eine Socketverbindung zum Server her und meldet den Client
    --nach Chat-Protokoll am Server an.
-   procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String; Password : in Unbounded_String;
-                             ServerAdress : in Unbounded_String;
-                             ServerPort : in Port_Type);
+   procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String; Password : in Unbounded_String);
 
    --Diese Prozedur meldet den Client beim Server nach Chat-Protokoll ab und schliesst dessen Socket.
    procedure DisconnectFromServer(This : in out Concrete_Client; UserName : in Unbounded_String;
@@ -100,7 +99,11 @@ package Concrete_Client_Logic is
    -----------------------------------------------------------------------------
    --#Implementierung des Gui2Client_Communication interfaces
 
-   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String);
+   procedure InitializeSocket(This : in out Concrete_Client; ServerAdress : in Unbounded_String;
+                              ServerPort : in Port_Type);
+
+   procedure LoginUser (This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
+                        ServerAdress : in Unbounded_String);
 
    procedure DisconnectUser(This : in out Concrete_Client; Username : in Unbounded_String; Message : in Unbounded_String);
 

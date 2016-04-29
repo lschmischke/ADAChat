@@ -8,8 +8,8 @@ node: { title: "concrete_server_logic___elabs" label: "e209b\nb__main.adb:399:28
 node: { title: "user_databases___elabs" label: "e207b\nb__main.adb:397:21" shape : ellipse }
 node: { title: "concrete_client_logic___elabb" label: "e205b\nb__main.adb:395:28" shape : ellipse }
 node: { title: "concrete_client_logic___elabs" label: "e203b\nb__main.adb:394:28" shape : ellipse }
-node: { title: "gui_to_server_communication___elabs" label: "e201b\nb__main.adb:391:34" shape : ellipse }
-node: { title: "gui2client_communication___elabs" label: "e199b\nb__main.adb:389:31" shape : ellipse }
+node: { title: "gui2client_communication___elabs" label: "e201b\nb__main.adb:392:31" shape : ellipse }
+node: { title: "gui_to_server_communication___elabs" label: "e199b\nb__main.adb:389:34" shape : ellipse }
 node: { title: "datatypes___elabs" label: "e197b\nb__main.adb:387:16" shape : ellipse }
 node: { title: "system__tasking__stages___elabb" label: "e195b\nb__main.adb:385:28" shape : ellipse }
 node: { title: "system__tasking__queuing___elabb" label: "e193b\nb__main.adb:383:29" shape : ellipse }
@@ -91,8 +91,8 @@ edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabs" label:
 edge: { sourcename: "adainit" targetname: "user_databases___elabs" label: "b__main.adb:397:21" }
 edge: { sourcename: "adainit" targetname: "concrete_client_logic___elabb" label: "b__main.adb:395:28" }
 edge: { sourcename: "adainit" targetname: "concrete_client_logic___elabs" label: "b__main.adb:394:28" }
-edge: { sourcename: "adainit" targetname: "gui_to_server_communication___elabs" label: "b__main.adb:391:34" }
-edge: { sourcename: "adainit" targetname: "gui2client_communication___elabs" label: "b__main.adb:389:31" }
+edge: { sourcename: "adainit" targetname: "gui2client_communication___elabs" label: "b__main.adb:392:31" }
+edge: { sourcename: "adainit" targetname: "gui_to_server_communication___elabs" label: "b__main.adb:389:34" }
 edge: { sourcename: "adainit" targetname: "datatypes___elabs" label: "b__main.adb:387:16" }
 edge: { sourcename: "adainit" targetname: "system__tasking__stages___elabb" label: "b__main.adb:385:28" }
 edge: { sourcename: "adainit" targetname: "system__tasking__queuing___elabb" label: "b__main.adb:383:29" }

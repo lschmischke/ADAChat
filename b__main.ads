@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#ce70041b#;
+   u00001 : constant Version_32 := 16#cd602edd#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#fbff4c67#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -225,9 +225,9 @@ package ada_main is
    pragma Export (C, u00094, "system__stream_attributesB");
    u00095 : constant Version_32 := 16#221dd20d#;
    pragma Export (C, u00095, "system__stream_attributesS");
-   u00096 : constant Version_32 := 16#57ebfd04#;
+   u00096 : constant Version_32 := 16#04799123#;
    pragma Export (C, u00096, "concrete_client_logicB");
-   u00097 : constant Version_32 := 16#08717542#;
+   u00097 : constant Version_32 := 16#be9376af#;
    pragma Export (C, u00097, "concrete_client_logicS");
    u00098 : constant Version_32 := 16#fd2ad2f1#;
    pragma Export (C, u00098, "gnatS");
@@ -371,7 +371,7 @@ package ada_main is
    pragma Export (C, u00167, "system__val_intS");
    u00168 : constant Version_32 := 16#2e610ef3#;
    pragma Export (C, u00168, "system__os_constantsS");
-   u00169 : constant Version_32 := 16#35854c60#;
+   u00169 : constant Version_32 := 16#411dd31e#;
    pragma Export (C, u00169, "gui2client_communicationS");
    u00170 : constant Version_32 := 16#a4624963#;
    pragma Export (C, u00170, "protocolB");
@@ -805,10 +805,10 @@ package ada_main is
    --  system.tasking.stages%b
    --  datatypes%s
    --  datatypes%b
-   --  gui2client_communication%s
    --  gui_to_server_communication%s
    --  protocol%s
    --  protocol%b
+   --  gui2client_communication%s
    --  concrete_client_logic%s
    --  concrete_client_logic%b
    --  user_databases%s

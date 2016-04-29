@@ -13,4 +13,12 @@ package Client2Gui_Communication is
 
    procedure ShowChatMessages(This : in GUI; message : Message_Object) is abstract;
 
+   procedure LoginSuccess(This : in GUI) is abstract;
+
+   procedure LoginRefused(This : in GUI; Reason : in Unbounded_String) is abstract;
+
+   procedure InitializeStatus(This : in GUI; Status : in Unbounded_String) is abstract;
+
+   procedure DisconnectReason(This : in GUI; Status : in Unbounded_String is abstract);
+
 end Client2Gui_Communication;
