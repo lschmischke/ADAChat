@@ -181,11 +181,11 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure LoginRefused(This : in GUI; Reason : in Unbounded_String) is
+   procedure RefusedMessage(This : in GUI; Reason : in Unbounded_String) is
 
    begin
       null;
-   end LoginRefused;
+   end RefusedMessage;
 
    -----------------------------------------------------------------------------
 
