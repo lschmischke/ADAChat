@@ -26,7 +26,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U serverguientrypoint%b	serverguientrypoint.adb	ea1b42ee DE NE OO SU
+U serverguientrypoint%b	serverguientrypoint.adb	a42f06c2 DE NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -228,7 +228,7 @@ D pango-tabs.ads	20141113214532 1e43de1b pango.tabs%s
 D protocol.ads		20160429055522 aaec25fd protocol%s
 D server_to_gui_communication.ads  20160429085358 7e649e29 server_to_gui_communication%s
 D serverguicallbacks.ads  20160429072804 b9ff1693 serverguicallbacks%s
-D serverguientrypoint.adb  20160429090402 633bdfe2 serverguientrypoint%b
+D serverguientrypoint.adb  20160429093922 2d0f9bce serverguientrypoint%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
@@ -287,9 +287,6 @@ X 30 concrete_server_gui_logic.ads
 X 31 concrete_server_logic.ads
 26K9*Concrete_Server_Logic 174e26 161|37w6 37r33
 31R9*Concrete_Server<140|4R9> 132e14 161|46r12
-138U14 startServer<140|6p14> 161|78s11
-138a68 ipAdress{string} 161|78r23
-138i86 port{natural} 161|79r23
 X 33 gdk.ads
 43P9*Gdk_Window<48|154P9>
 46P9*Gdk_Visual<48|154P9>
@@ -316,7 +313,7 @@ X 49 glib-error.ads
 X 54 glib-object.ads
 38K14*Object 687e16 161|15w11 15r31
 41P9*GObject(40R9)
-78U14*Unref 161|89R4
+78U14*Unref 161|87R4
 600V13*Convert{162|67M9} 52|58i21 53|49i21
 601V13*Convert{41P9} 52|59i21 53|50i21
 X 58 glib-values.ads
@@ -325,10 +322,10 @@ X 70 gtk.ads
 41K9*Gtk 79e8 161|1w6 1r26 2r6 2r26 4r6 4r26 5r6 5r26 10r6 10r22 12r6 12r20
 . 13r6 13r22 17r6 17r22 18r6 18r26 19r6 19r36 21r6 21r36 22r6 22r36 23r6
 . 23r36 24r6 24r36 25r6 25r36 26r6 26r31 27r6 27r36 28r6 28r36 29r6 29r36
-. 30r6 30r21 31r6 31r36 32r6 33r6 33r36 34r5 34w15 35r6 35r36 49r4 84r4
+. 30r6 30r21 31r6 31r36 32r6 33r6 33r36 34r5 34w15 35r6 35r36 49r4 82r4
 X 79 gtk-builder.ads
 282V13*Add_From_File{48|57M9} 161|51R19
-461V13*Get_Object{54|41P9} 161|82R31
+461V13*Get_Object{54|41P9} 161|80R31
 X 80 gtk-button.ads
 54K13*Button 547e15 161|5w10 5r30 13w10 13r26
 X 85 gtk-cell_renderer.ads
@@ -350,9 +347,9 @@ X 96 gtk-gentry.ads
 X 98 gtk-handlers.ads
 181K13*Handlers 1531e17 161|35w10 35r40
 X 102 gtk-main.ads
-33K13*Main 368e13 161|2w10 2r30 12w10 12r24 49r8 84r8
+33K13*Main 368e13 161|2w10 2r30 12w10 12r24 49r8 82r8
 91U14*Init 161|49s13
-231U14*Main 161|84s13
+231U14*Main 161|82s13
 X 108 gtk-scrolled_window.ads
 80K13*Scrolled_Window 452e24 161|26w10 26r35
 X 110 gtk-status_bar.ads
@@ -385,10 +382,10 @@ X 133 gtk-widget.ads
 267P9*Gtk_Widget(266R9)
 349V13*Convert{162|67M9} 52|58i21 53|49i21
 350V13*Convert{267P9} 52|59i21 53|50i21
-2581U14*Show_All 161|83R8
+2581U14*Show_All 161|81R8
 X 134 gtk-window.ads
 74K13*Window 1590e15 161|10w10 10r26
-77P9*Gtk_Window(76R9) 161|45r12 82r11
+77P9*Gtk_Window(76R9) 161|45r12 80r11
 X 135 gtkada.ads
 30K9*Gtkada 34e11 161|7r6 7r26
 X 137 gtkada-builder.ads
@@ -414,12 +411,12 @@ X 160 serverguicallbacks.ads
 6U14*Quit 161|65r42
 10U14*clicked_button_about 161|70r42
 X 161 serverguientrypoint.adb
-41U12*ServerGuiEntryPoint 41b12 91l5 91t24
-42p4 Builder{137|84P9} 50m13 50r13 51r11 63r23 68r23 73r16 77r57 82r23 89r11
+41U12*ServerGuiEntryPoint 41b12 89l5 89t24
+42p4 Builder{137|84P9} 50m13 50r13 51r11 63r23 68r23 73r16 77r57 80r23 87r11
 43m4 ret{48|57M9} 51m4
-44p4 error{49|36P9} 51m64 51r64 55r7 56r55 57r19
-45p4 Win{134|77P9} 82m4 83r4
-46r4 Server{31|31R9} 78r4
+44p4 error{49|36P9} 51m60 51r60 55r7 56r55 57r19
+45p4 Win{134|77P9} 80m4 81r4
+46r4 Server{31|31R9}
 X 162 system.ads
 67M9*Address
 X 173 s-memory.ads

@@ -21,7 +21,7 @@ project ADAChat is
       for Default_Switches ("ada") use ("-M130", "-l2");
    end Pretty_Printer;
 
-   for Exec_Dir use "..\..\..\..\bin";
+   for Exec_Dir use "\bin";
 
 end ADAChat;
 

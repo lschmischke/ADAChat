@@ -4,15 +4,15 @@ edge: { sourcename: "_ada_serverguientrypoint"
 }
 edge: { sourcename: "_ada_serverguientrypoint"
   targetname: "16:gtkada__builder__gtkada_builder,gtkada__builder__gtkada_builder"
-  label: "serverguientrypoint.adb:82:30"
+  label: "serverguientrypoint.adb:80:30"
 }
 edge: { sourcename: "_ada_serverguientrypoint"
   targetname: "209:gtk__window__gtk_window,gtk__window__gtk_window"
-  label: "serverguientrypoint.adb:83:7"
+  label: "serverguientrypoint.adb:81:7"
 }
 edge: { sourcename: "_ada_serverguientrypoint"
   targetname: "3:gtkada__builder__gtkada_builder,gtkada__builder__gtkada_builder"
-  label: "serverguientrypoint.adb:89:4"
+  label: "serverguientrypoint.adb:87:4"
 }
 graph: { title: "C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb"
 node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
@@ -28,7 +28,6 @@ node: { title: "gtk__main__main" label: "Main\nC:\GtkAda\include\gtkada\gtk-main
 node: { title: "__gnat_rcheck_CE_Tag_Check" label: "gnat_rcheck_CE_Tag_Check\n<built-in>" shape : ellipse }
 node: { title: "__gnat_rcheck_CE_Index_Check" label: "gnat_rcheck_CE_Index_Check\n<built-in>" shape : ellipse }
 node: { title: "__gnat_rcheck_CE_Overflow_Check" label: "gnat_rcheck_CE_Overflow_Check\n<built-in>" shape : ellipse }
-node: { title: "concrete_server_logic__startserver__2" label: "Startserver\nC:\Users\Thomas\Documents\adachat\server\concrete_server_logic.ads:138:14" shape : ellipse }
 node: { title: "concrete_server_gui_logic__initservergui" label: "Initservergui\nC:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads:10:14" shape : ellipse }
 node: { title: "gtkada__builder__do_connect" label: "Do_Connect\nC:\GtkAda\include\gtkada\gtkada-builder.ads:90:14" shape : ellipse }
 node: { title: "serverguicallbacks__clicked_button_about" label: "Clicked_Button_About\nC:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.ads:10:14" shape : ellipse }
@@ -64,26 +63,24 @@ edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_reraise_zcx" 
 edge: { sourcename: "_ada_serverguientrypoint" targetname: "concrete_server_logic__concrete_serverDF__2" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:46:4" }
 edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:46:4" }
 edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:46:0" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb:serverguientrypoint___finalizer.2985" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:91:0" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:89:4" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:89:4" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "gtk__main__main" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:84:12" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:84:12" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:83:7" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:83:7" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Tag_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:11" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Index_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:11" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:11" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:11" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:11" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:11" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:11" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:11" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:30" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:30" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:30" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "concrete_server_logic__startserver__2" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:78:10" }
-edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:78:10" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb:serverguientrypoint___finalizer.2985" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:89:0" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:87:4" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:87:4" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "gtk__main__main" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:12" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:82:12" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:81:7" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:81:7" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Tag_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:11" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Index_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:11" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:11" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:11" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:11" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:11" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:11" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:11" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:30" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:30" }
+edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:80:30" }
 edge: { sourcename: "_ada_serverguientrypoint" targetname: "concrete_server_gui_logic__initservergui" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:77:29" }
 edge: { sourcename: "_ada_serverguientrypoint" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:77:29" }
 edge: { sourcename: "_ada_serverguientrypoint" targetname: "gtkada__builder__do_connect" label: "C:\Users\Thomas\Documents\adachat\server\serverguientrypoint.adb:73:4" }
