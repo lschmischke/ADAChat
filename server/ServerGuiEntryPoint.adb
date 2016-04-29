@@ -48,7 +48,7 @@ procedure  ServerGuiEntryPoint is
 begin
    Gtk.Main.Init;
    Gtk_New (Builder);
-   ret := Builder.Add_From_File ("ServerGui.glade", error'Access);
+   ret := Builder.Add_From_File ("server\ServerGui.glade", error'Access);
 
 
 
