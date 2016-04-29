@@ -23,13 +23,13 @@ class {
              -8:gui_to_server_communication__serverDA\n
              -9:gui_to_server_communication__serverDF"
 }
-graph: { title: "C:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads"
+graph: { title: "C:\Users\Leonard\Documents\ADA\adachat\server\gui_to_server_communication.ads"
 node: { title: "ada__tags__register_tag" label: "Register_Tag\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:546:14" shape : ellipse }
 node: { title: "ada__tags__check_tsd" label: "Check_Tsd\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-tags.ads:456:14" shape : ellipse }
-node: { title: "gui_to_server_communication___elabs" label: "Gui_To_Server_Communication\nC:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads:3:1\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "gui_to_server_communication___elabs" targetname: "ada__tags__register_tag" label: "C:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads:4:9" }
-edge: { sourcename: "gui_to_server_communication___elabs" targetname: "ada__tags__check_tsd" label: "C:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads:4:9" }
-node: { title: "gui_to_server_communication__TserverCFD" label: "Tservercfd\nC:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads:4:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "gui_to_server_communication__TserverCFD" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads:4:9" }
+node: { title: "gui_to_server_communication___elabs" label: "Gui_To_Server_Communication\nC:\Users\Leonard\Documents\ADA\adachat\server\gui_to_server_communication.ads:3:1\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "gui_to_server_communication___elabs" targetname: "ada__tags__register_tag" label: "C:\Users\Leonard\Documents\ADA\adachat\server\gui_to_server_communication.ads:4:9" }
+edge: { sourcename: "gui_to_server_communication___elabs" targetname: "ada__tags__check_tsd" label: "C:\Users\Leonard\Documents\ADA\adachat\server\gui_to_server_communication.ads:4:9" }
+node: { title: "gui_to_server_communication__TserverCFD" label: "Tservercfd\nC:\Users\Leonard\Documents\ADA\adachat\server\gui_to_server_communication.ads:4:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "gui_to_server_communication__TserverCFD" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\server\gui_to_server_communication.ads:4:9" }
 node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
 }

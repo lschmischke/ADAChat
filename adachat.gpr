@@ -1,9 +1,12 @@
- with "C:\GtkAda\lib\gnat\gtkada.gpr";
+with "C:\GtkAda\lib\gnat\gtkada.gpr";
 
 project ADAChat is
 
+   type Library_Types is
+      ("static", "relocatable");
    for Main use ("Main.adb", "ServerGuiEntryPoint.adb");
    for Source_Dirs use ("./**");
+   LIBRARY_TYPE : Library_Types := external ("LIBRARY_TYPE");
 
    package Builder is
       for Default_Switches ("ada") use ("-s");
@@ -21,7 +24,14 @@ project ADAChat is
       for Default_Switches ("ada") use ("-M130", "-l2");
    end Pretty_Printer;
 
-   for Exec_Dir use "\bin";
+   case LIBRARY_TYPE is
+
+      when "static" =>
+         for Exec_Dir use "bin";
+
+      when "relocatable" =>
+         for Exec_Dir use "\bin";
+   end case;
 
 end ADAChat;
 

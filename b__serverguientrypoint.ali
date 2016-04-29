@@ -18,20 +18,20 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__serverguientrypoint.adb  436cde0d NE OO PK IL
+U ada_main%b		b__serverguientrypoint.adb  b59b64bf NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__serverguientrypoint.ads  149e07ac EE NE OO PK IL
+U ada_main%s		b__serverguientrypoint.ads  7ee36135 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D b__serverguientrypoint.ads  20160429094622 e0508b96 ada_main%s
-D b__serverguientrypoint.adb  20160429094622 eaf19880 ada_main%b
+D b__serverguientrypoint.ads  20160429095608 8a2ded0f ada_main%s
+D b__serverguientrypoint.adb  20160429095608 767b44ab ada_main%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
 D s-restri.ads		20150518132150 1b9d0672 system.restrictions%s
@@ -634,7 +634,7 @@ X 5 b__serverguientrypoint.adb
 16i4 E059{short_integer} 16m46 16r46 1009m7 1009r15
 17i4 E426{short_integer} 17m46 17r46 1011m7 1011r15
 18i4 E432{short_integer} 18m46 18r46 1056m7 1056r15
-19i4 E505{short_integer} 19m46 19r46 1014m7 1014r15
+19i4 E502{short_integer} 19m46 19r46 1014m7 1014r15
 20i4 E043{short_integer} 20m46 20r46 1055m7 1055r15
 21i4 E058{short_integer} 21m46 21r46 1017m7 1017r15
 22i4 E070{short_integer} 22m46 22r46 1053m7 1053r15
@@ -733,7 +733,7 @@ X 5 b__serverguientrypoint.adb
 115i4 E310{short_integer} 115m46 115r46 1368m7 1368r15
 116i4 E304{short_integer} 116m46 116r46 616m7 616r15 1201m7 1201r15
 117i4 E346{short_integer} 117m46 117r46 609m7 609r15 1204m7 1204r15
-118i4 E513{short_integer} 118m46 118r46 234m10 234r18 1391m7 1391r15
+118i4 E514{short_integer} 118m46 118r46 234m10 234r18 1391m7 1391r15
 119i4 E480{short_integer} 119m46 119r46 1207m7 1207r15
 120i4 E192{short_integer} 120m46 120r46 1209m7 1209r15
 121i4 E210{short_integer} 121m46 121r46 596m7 596r15 1211m7 1211r15
@@ -770,7 +770,7 @@ X 5 b__serverguientrypoint.adb
 152i4 E302{short_integer} 152m46 152r46 431m7 431r15 1270m7 1270r15
 153i4 E326{short_integer} 153m46 153r46 263m7 263r15 1346m7 1346r15
 154i4 E312{short_integer} 154m46 154r46 1272m7 1272r15
-155i4 E517{short_integer} 155m46 155r46 1273m7 1273r15
+155i4 E518{short_integer} 155m46 155r46 1273m7 1273r15
 156i4 E318{short_integer} 156m46 156r46 264m7 264r15 1344m7 1344r15
 157i4 E320{short_integer} 157m46 157r46 265m7 265r15 1342m7 1342r15
 158i4 E314{short_integer} 158m46 158r46 266m7 266r15 1340m7 1340r15
@@ -796,21 +796,21 @@ X 5 b__serverguientrypoint.adb
 178i4 E145{short_integer} 178m46 178r46 279m7 279r15 1314m7 1314r15
 179i4 E264{short_integer} 179m46 179r46 280m7 280r15 1312m7 1312r15
 180i4 E129{short_integer} 180m46 180r46 1310m7 1310r15
-181i4 E518{short_integer} 181m46 181r46 241m10 241r18 1389m7 1389r15
+181i4 E519{short_integer} 181m46 181r46 241m10 241r18 1389m7 1389r15
 182i4 E482{short_integer} 182m46 182r46 1392m7 1392r15
 183i4 E521{short_integer} 183m46 183r46 1394m7 1394r15
-184i4 E496{short_integer} 184m46 184r46 223m7 223r15 1396m7 1396r15
-185i4 E354{short_integer} 185m46 185r46 214m10 214r18 1399m7 1399r15
-186i4 E519{short_integer} 186m46 186r46 207m10 207r18 1401m7 1401r15
+184i4 E506{short_integer} 184m46 184r46 223m7 223r15 1396m7 1396r15
+185i4 E495{short_integer} 185m46 185r46 220m10 220r18 1398m7 1398r15
+186i4 E354{short_integer} 186m46 186r46 207m10 207r18 1401m7 1401r15
 187i4 E077{short_integer} 187m46 187r46 196m7 196r15 1404m7 1404r15
 189a4 Local_Priority_Specific_Dispatching{string} 989r9
 190a4 Local_Interrupt_States{string} 992r27
 192b4 Is_Elaborated{boolean} 902r14 905m7 950r10 953m7
 194U14 finalize_library 194b14 892l8 892t24 1001r35
 198U20*F1 199b<ada,concrete_server_gui_logic__finalize_spec>30 201s10
-204U20*F2 205b<ada,server_to_gui_communication__finalize_spec>30 208s10
-211U20*F3 212b<ada,concrete_server_logic__finalize_body>30 215s10
-218U20*F4 219b<ada,concrete_server_logic__finalize_spec>30 221s10
+204U20*F2 205b<ada,concrete_server_logic__finalize_body>30 208s10
+211U20*F3 212b<ada,concrete_server_logic__finalize_spec>30 214s10
+217U20*F4 218b<ada,server_to_gui_communication__finalize_spec>30 221s10
 225U20*F5 226b<ada,user_databases__finalize_spec>30 228s10
 231U20*F6 232b<ada,gtkada__builder__finalize_body>30 235s10
 238U20*F7 239b<ada,gtkada__handlers__finalize_spec>30 242s10

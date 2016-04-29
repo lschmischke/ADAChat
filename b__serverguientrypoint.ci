@@ -5,9 +5,9 @@ node: { title: "_ada_serverguientrypoint" label: "ada_main_program\nb__servergui
 node: { title: "__gnat_initialize" label: "initialize\nb__serverguientrypoint.adb:1416:17" shape : ellipse }
 node: { title: "concrete_server_gui_logic___elabb" label: "e762b\nb__serverguientrypoint.adb:1403:32" shape : ellipse }
 node: { title: "concrete_server_gui_logic___elabs" label: "e760b\nb__serverguientrypoint.adb:1402:32" shape : ellipse }
-node: { title: "server_to_gui_communication___elabs" label: "e758b\nb__serverguientrypoint.adb:1400:34" shape : ellipse }
-node: { title: "concrete_server_logic___elabb" label: "e756b\nb__serverguientrypoint.adb:1398:28" shape : ellipse }
-node: { title: "concrete_server_logic___elabs" label: "e754b\nb__serverguientrypoint.adb:1397:28" shape : ellipse }
+node: { title: "concrete_server_logic___elabb" label: "e758b\nb__serverguientrypoint.adb:1400:28" shape : ellipse }
+node: { title: "concrete_server_logic___elabs" label: "e756b\nb__serverguientrypoint.adb:1399:28" shape : ellipse }
+node: { title: "server_to_gui_communication___elabs" label: "e754b\nb__serverguientrypoint.adb:1397:34" shape : ellipse }
 node: { title: "user_databases___elabs" label: "e752b\nb__serverguientrypoint.adb:1395:21" shape : ellipse }
 node: { title: "serverguicallbacks___elabb" label: "e750b\nb__serverguientrypoint.adb:1393:25" shape : ellipse }
 node: { title: "gtkada__builder___elabb" label: "e748b\nb__serverguientrypoint.adb:1390:21" shape : ellipse }
@@ -328,9 +328,9 @@ node: { title: "gtk__print_operation__finalize_spec" label: "f8\nb__serverguient
 node: { title: "gtkada__handlers__finalize_spec" label: "f7\nb__serverguientrypoint.adb:238:20" shape : ellipse }
 node: { title: "gtkada__builder__finalize_body" label: "f6\nb__serverguientrypoint.adb:231:20" shape : ellipse }
 node: { title: "user_databases__finalize_spec" label: "f5\nb__serverguientrypoint.adb:225:20" shape : ellipse }
-node: { title: "concrete_server_logic__finalize_spec" label: "f4\nb__serverguientrypoint.adb:218:20" shape : ellipse }
-node: { title: "concrete_server_logic__finalize_body" label: "f3\nb__serverguientrypoint.adb:211:20" shape : ellipse }
-node: { title: "server_to_gui_communication__finalize_spec" label: "f2\nb__serverguientrypoint.adb:204:20" shape : ellipse }
+node: { title: "server_to_gui_communication__finalize_spec" label: "f4\nb__serverguientrypoint.adb:217:20" shape : ellipse }
+node: { title: "concrete_server_logic__finalize_spec" label: "f3\nb__serverguientrypoint.adb:211:20" shape : ellipse }
+node: { title: "concrete_server_logic__finalize_body" label: "f2\nb__serverguientrypoint.adb:204:20" shape : ellipse }
 node: { title: "concrete_server_gui_logic__finalize_spec" label: "f1\nb__serverguientrypoint.adb:198:20" shape : ellipse }
 node: { title: "main" label: "main\nb__serverguientrypoint.adb:1410:4\n48 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "main" targetname: "__gnat_finalize" label: "b__serverguientrypoint.adb:1435:7" }
@@ -342,9 +342,9 @@ edge: { sourcename: "main" targetname: "__main" label: "b__serverguientrypoint.a
 node: { title: "adainit" label: "adainit\nb__serverguientrypoint.adb:912:4\n48 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "adainit" targetname: "concrete_server_gui_logic___elabb" label: "b__serverguientrypoint.adb:1403:32" }
 edge: { sourcename: "adainit" targetname: "concrete_server_gui_logic___elabs" label: "b__serverguientrypoint.adb:1402:32" }
-edge: { sourcename: "adainit" targetname: "server_to_gui_communication___elabs" label: "b__serverguientrypoint.adb:1400:34" }
-edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabb" label: "b__serverguientrypoint.adb:1398:28" }
-edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabs" label: "b__serverguientrypoint.adb:1397:28" }
+edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabb" label: "b__serverguientrypoint.adb:1400:28" }
+edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabs" label: "b__serverguientrypoint.adb:1399:28" }
+edge: { sourcename: "adainit" targetname: "server_to_gui_communication___elabs" label: "b__serverguientrypoint.adb:1397:34" }
 edge: { sourcename: "adainit" targetname: "user_databases___elabs" label: "b__serverguientrypoint.adb:1395:21" }
 edge: { sourcename: "adainit" targetname: "serverguicallbacks___elabb" label: "b__serverguientrypoint.adb:1393:25" }
 edge: { sourcename: "adainit" targetname: "gtkada__builder___elabb" label: "b__serverguientrypoint.adb:1390:21" }
@@ -667,8 +667,8 @@ edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targ
 edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtkada__handlers__finalize_spec" label: "b__serverguientrypoint.adb:242:10" }
 edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtkada__builder__finalize_body" label: "b__serverguientrypoint.adb:235:10" }
 edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "user_databases__finalize_spec" label: "b__serverguientrypoint.adb:228:10" }
-edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "concrete_server_logic__finalize_spec" label: "b__serverguientrypoint.adb:221:10" }
-edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "concrete_server_logic__finalize_body" label: "b__serverguientrypoint.adb:215:10" }
-edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "server_to_gui_communication__finalize_spec" label: "b__serverguientrypoint.adb:208:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "server_to_gui_communication__finalize_spec" label: "b__serverguientrypoint.adb:221:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "concrete_server_logic__finalize_spec" label: "b__serverguientrypoint.adb:214:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "concrete_server_logic__finalize_body" label: "b__serverguientrypoint.adb:208:10" }
 edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "concrete_server_gui_logic__finalize_spec" label: "b__serverguientrypoint.adb:201:10" }
 }

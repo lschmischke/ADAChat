@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-              
-=======
-20160429091920
->>>>>>> origin/feature/server_gui
+20160429095602
 -c
 -x
 ada
@@ -15,7 +11,3 @@ ada
 -gnat12
 -fcallgraph-info=su,da
 -g
-<<<<<<< HEAD
--gnatc
-=======
->>>>>>> origin/feature/server_gui

@@ -1,577 +1,153 @@
 <?xml version="1.0"?>
 <Locations >
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <Project>
-    <vfs_file />
-    <file_marker column=" 26" line=" 12" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
+  <Project >
+    <file_marker column=" 1" line=" 18" >
+      <vfs_project />
       <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 56" line=" 786" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
+    <file_marker column=" 1" line=" 22" >
+      <vfs_project />
       <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 8" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
+      <vfs_project />
       <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 56" line=" 786" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
+    <file_marker column=" 22" line=" 2" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_datatypes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 24" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 3" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 24" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 3" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 24" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 2" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 24" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 37" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 3" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 37" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 18" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 37" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 116" line=" 29" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 2" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 25" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 94" line=" 29" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 50" line=" 19" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 9" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 5" >
+      <vfs_project />
       <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 37" line=" 312" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
+    <file_marker column=" 40" line=" 17" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 2" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 5" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 2" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 5" >
+      <vfs_project />
       <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
     </file_marker>
     <file_marker column=" 7" line=" 9" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
+      <vfs_project />
       <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\main.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 5" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 6" line=" 16" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 7" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 12" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 3" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 12" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 10" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 12" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 7" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 63" line=" 22" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 36" line=" 5" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 12" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 5" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 11" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 74" line=" 12" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 69" line=" 13" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 55" line=" 6" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 74" line=" 12" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 95" line=" 15" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 74" line=" 12" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 52" line=" 31" >
-      <vfs_project>C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-  </Project>
-  <Project >
-    <vfs_file >C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_file>
-    <file_marker column=" 26" line=" 12">
-      <vfs_project >C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file >C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 56" line=" 784">
-      <vfs_project >C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file >C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 8">
-      <vfs_project >C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file >C:\Users\Leonard\Documents\ADA\adachat\common\datatypes.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 56" line=" 784">
-      <vfs_project >C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file >C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 37" line=" 310">
-      <vfs_project >C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file >C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 7" line=" 9">
-      <vfs_project >C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr</vfs_project>
-      <vfs_file >C:\Users\Leonard\Documents\ADA\adachat\main.adb</vfs_file>
-=======
-  <Project >
-=======
-  <Project>
-    <vfs_file>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_file>
->>>>>>> origin/feature/server_gui
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 119" line=" 34" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 78" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 78" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 19" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 78" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 119" line=" 34" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 78" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 119" line=" 34" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 78" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 119" line=" 34" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 78" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 38" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 78" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 66" line=" 77" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 10" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 77" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 10" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 5" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 10" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 4" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 10" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 80" >
-      <vfs_project>C:\GtkAda\lib\gnat\gtkada.gpr</vfs_project>
-      <vfs_file>C:\GtkAda\include\gtkada\gtkada-builder.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 9" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 10" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 53" line=" 77" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 10" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 53" line=" 46" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 46" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 28" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 119" line=" 34" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 28" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 28" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 46" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 43" line=" 27" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 28" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 70" line=" 43" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 72" line=" 44" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 28" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 89" line=" 43" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 23" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 17" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 28" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-<<<<<<< HEAD
-    <file_marker current="true" column=" 4" line=" 43" >
       <vfs_project />
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
->>>>>>> origin/feature/server_gui
-=======
-    <file_marker column=" 112" line=" 44" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 32" line=" 48" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
+    <file_marker column=" 50" line=" 19" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 83" line=" 51" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\gui_to_server_communication.ads</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 4" line=" 35" >
-      <vfs_project>C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
     </file_marker>
-  </Project>
-  <Project >
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.adb</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\gui_to_server_communication.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\server_to_gui_communication.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 89" line=" 17">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 12" line=" 70">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 78" line=" 15">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 17">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\common\protocol.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 115" line=" 18">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 78" line=" 74">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\server_to_gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 102" line=" 15">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 109" line=" 11">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 92">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 109" line=" 11">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\concrete_server_gui_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 28">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 123">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 39">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 123">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\test.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\test.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 39">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\test.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 39">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 39">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiCallbacks.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 30" line=" 5">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\adachat.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 6" line=" 37">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\gui_to_server_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 73">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 12" line=" 43">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 73">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 12" line=" 43">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 42" line=" 74">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 4" line=" 43">
-      <vfs_project  />
-      <vfs_file >C:\Users\Thomas\Documents\adachat\server\ServerGuiEntryPoint.adb</vfs_file>
->>>>>>> origin/feature/server_gui
+    <file_marker current="true" column=" 17" line=" 5" >
+      <vfs_project />
+      <vfs_file>C:\Users\Leonard\Documents\ADA\adachat\server\concrete_server_logic.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>

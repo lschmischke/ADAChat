@@ -1,4 +1,4 @@
-graph: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb"
+graph: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb"
 node: { title: "memcpy" label: "memcpy\n<built-in>" shape : ellipse }
 node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
 node: { title: "ada__strings__unbounded__Oconcat__4" label: "&\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:131:13" shape : ellipse }
@@ -42,343 +42,343 @@ node: { title: "__gnat_begin_handler" label: "gnat_begin_handler\n<built-in>" sh
 node: { title: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "gnat_rcheck_PE_Finalize_Raised_Exception\n<built-in>" shape : ellipse }
 node: { title: "ada__strings__unbounded__adjust__2" label: "Adjust\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-strunb.ads:482:25" shape : ellipse }
 node: { title: "ada__exceptions__triggered_by_abort" label: "Triggered_By_Abort\nC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adainclude/a-except.ads:257:13" shape : ellipse }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" label: "B268b\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" label: "B268b\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
 node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:46" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:46" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
-node: { title: "protocol__readmessagefromstream" label: "Readmessagefromstream\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:69:4\n4240 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:46" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:46" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
+node: { title: "protocol__readmessagefromstream" label: "Readmessagefromstream\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:69:4\n4240 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "protocol__readmessagefromstream" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:0" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:46" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:85:0" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "protocol__stringtomessageobject" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:83:14" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:0" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:46" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:46" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:46" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:0" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__Oconcat__4" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:46" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:27" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_rcheck_CE_Index_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:80:62" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "gnat__sockets__receive_socket" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:76:11" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:72:0" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:72:7" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:72:7" }
-edge: { sourcename: "protocol__readmessagefromstream" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:72:7" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" label: "Readmessagefromstream\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:69:4\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:69:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:69:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:69:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:69:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:72:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:69:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:69:4" }
-node: { title: "protocol__writemessagetostream" label: "Writemessagetostream\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:61:4\n64 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:85:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "protocol__stringtomessageobject" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:83:14" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream__L_2__B268b___finalizer.3870" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__Oconcat__4" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:46" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:27" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__gnat_rcheck_CE_Index_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:80:62" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "gnat__sockets__receive_socket" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:76:11" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:72:0" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:72:7" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:72:7" }
+edge: { sourcename: "protocol__readmessagefromstream" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:72:7" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" label: "Readmessagefromstream\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:69:4\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:69:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:69:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:69:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:69:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:72:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:69:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__readmessagefromstream___finalizer.3814" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:69:4" }
+node: { title: "protocol__writemessagetostream" label: "Writemessagetostream\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:61:4\n64 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "protocol__writemessagetostream" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__writemessagetostream" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:66:0" }
-edge: { sourcename: "protocol__writemessagetostream" targetname: "system__strings__stream_ops__string_write_blk_io" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:65:13" }
-edge: { sourcename: "protocol__writemessagetostream" targetname: "protocol__messageobjecttostring" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:65:35" }
-edge: { sourcename: "protocol__writemessagetostream" targetname: "gnat__sockets__stream" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:64:21" }
-edge: { sourcename: "protocol__writemessagetostream" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:61:4" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" label: "Writemessagetostream\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:61:4\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:61:4" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" label: "B219b\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7\n96 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:75" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:75" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:106" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:106" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7" }
-node: { title: "protocol__printmessagetoinfoconsole" label: "Printmessagetoinfoconsole\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:49:4\n848 bytes (dynamic)\n5 dynamic objects\n Messagetype C:\Users\Thomas\Documents\adachat\common\protocol.adb:50:7\n S172b C:\Users\Thomas\Documents\adachat\common\protocol.adb:55:126\n S193b C:\Users\Thomas\Documents\adachat\common\protocol.adb:56:105\n S218b C:\Users\Thomas\Documents\adachat\common\protocol.adb:57:113\n S242b C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:34" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:66:0" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "system__strings__stream_ops__string_write_blk_io" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:65:13" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "protocol__messageobjecttostring" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:65:35" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "gnat__sockets__stream" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:64:21" }
+edge: { sourcename: "protocol__writemessagetostream" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:61:4" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" label: "Writemessagetostream\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:61:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__writemessagetostream___finalizer.3796" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:61:4" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" label: "B219b\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:75" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:75" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:106" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:106" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7" }
+node: { title: "protocol__printmessagetoinfoconsole" label: "Printmessagetoinfoconsole\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:49:4\n848 bytes (dynamic)\n5 dynamic objects\n Messagetype C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:50:7\n S172b C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:55:126\n S193b C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:56:105\n S218b C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:57:113\n S242b C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:34" }
 edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:0" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:0" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:0" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:59:0" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:0" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:75" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:106" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:7" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_2__str_concat_2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:34" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:36" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:106" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:75" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:84" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:58:98" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:57:7" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:57:113" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:57:90" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:57:42" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:57:105" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:56:7" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:56:105" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:56:36" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:56:84" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:56:97" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:55:7" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:55:126" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:55:99" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_enum_new__image_enumeration_8" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:55:48" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:55:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:55:62" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:53:27" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:53:27" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:52:28" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__fixed__trim" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:52:28" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:52:40" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:51:26" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:51:26" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "memcpy" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:50:7" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_enum_new__image_enumeration_8" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:50:43" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:50:57" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:50:57" }
-edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:49:4" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" label: "Printmessagetoinfoconsole\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:49:4\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:49:4" }
-node: { title: "protocol__createmessage" label: "Createmessage\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:39:4\n128 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:59:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole__B219b___finalizer.3724" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:0" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:75" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:106" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_2__str_concat_2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:34" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:36" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:106" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:75" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:84" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__Oconcat__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:58:98" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:57:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:57:113" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:57:90" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:57:42" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:57:105" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:56:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:56:105" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:56:36" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:56:84" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:56:97" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__text_io__put_line__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:55:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__concat_5__str_concat_5" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:55:126" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:55:99" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_enum_new__image_enumeration_8" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:55:48" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:55:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:55:62" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:53:27" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:53:27" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:52:28" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__fixed__trim" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:52:28" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_int__image_integer" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:52:40" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:51:26" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:51:26" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "memcpy" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:50:7" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__img_enum_new__image_enumeration_8" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:50:43" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:50:57" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:50:57" }
+edge: { sourcename: "protocol__printmessagetoinfoconsole" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:49:4" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" label: "Printmessagetoinfoconsole\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:49:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__printmessagetoinfoconsole___finalizer.3531" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:49:4" }
+node: { title: "protocol__createmessage" label: "Createmessage\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:39:4\n128 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "protocol__createmessage" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__createmessage" targetname: "__gnat_reraise_zcx" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:7" }
-edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDF" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:7" }
-edge: { sourcename: "protocol__createmessage" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:7" }
-edge: { sourcename: "protocol__createmessage" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:0" }
-edge: { sourcename: "protocol__createmessage" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:47:0" }
-edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDA" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:46:7" }
-edge: { sourcename: "protocol__createmessage" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:46:7" }
-edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:45:0" }
-edge: { sourcename: "protocol__createmessage" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:45:22" }
-edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:45:22" }
-edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:43:0" }
-edge: { sourcename: "protocol__createmessage" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:43:21" }
-edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:43:21" }
-edge: { sourcename: "protocol__createmessage" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:42:29" }
-edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:0" }
-edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDI" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:7" }
-edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectIP" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:7" }
-edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:7" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" label: "Createmessage\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:39:4\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:39:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:39:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:39:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:39:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "protocol__messageobjectDF" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:40:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:39:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:39:4" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" label: "B88b\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:19:7\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:19:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:19:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:19:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:19:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:31:39" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:31:39" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:19:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:19:7" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" label: "B62b\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:66" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:66" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" label: "B43b\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:22:34\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:34" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:34" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:34" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:58" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:58" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:34" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:34" }
-node: { title: "protocol__stringtomessageobject" label: "Stringtomessageobject\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4\n256 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__createmessage" targetname: "__gnat_reraise_zcx" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:47:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDA" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:46:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:46:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:45:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:45:22" }
+edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:45:22" }
+edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:43:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:43:21" }
+edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:43:21" }
+edge: { sourcename: "protocol__createmessage" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:42:29" }
+edge: { sourcename: "protocol__createmessage" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:0" }
+edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectDI" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "protocol__messageobjectIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:7" }
+edge: { sourcename: "protocol__createmessage" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:7" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" label: "Createmessage\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:39:4\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:39:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:39:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:39:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:39:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "protocol__messageobjectDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:40:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:39:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__createmessage___finalizer.3516" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:39:4" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" label: "B88b\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:19:7\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:19:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:19:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:19:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:19:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:31:39" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:31:39" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:19:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:19:7" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" label: "B62b\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "system__secondary_stack__ss_release" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:66" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:66" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" label: "B43b\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:34\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:34" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:34" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:34" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:58" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__gnat_rcheck_CE_Access_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:58" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:34" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:34" }
+node: { title: "protocol__stringtomessageobject" label: "Stringtomessageobject\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4\n256 bytes (static)\n0 dynamic objects" }
 edge: { sourcename: "protocol__stringtomessageobject" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:66" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:58" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_reraise_zcx" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDF" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:37:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDA" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:36:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:36:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:29:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__createmessage" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:30:17" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_unbounded_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:31:39" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__text_io__put_line__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:29:10" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:66" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:66" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:66" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__Oconcat__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:66" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:85" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:26:38" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:25:41" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_count" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:25:41" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__val_int__value_integer" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:23:46" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:23:70" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:58" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:58" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:58" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:34" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:34" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_unbounded_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:58" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:22:96" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:21:54" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__val_enum__value_enumeration_8" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:21:54" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:21:78" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:18:33" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_count" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:18:33" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__create" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:16:24" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:16:80" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDI" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectIP" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:11:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:11:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:11:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:11:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:10:0" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__initialize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:10:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_setIP" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:10:7" }
-edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:10:7" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" label: "Stringtomessageobject\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4\n96 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "gnat__string_split__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:10:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:11:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "protocol__messageobjectDF" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:13:7" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__indirect_call" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:9:4" }
-node: { title: "protocol__messageobjecttostring" label: "Messageobjecttostring\nC:\Users\Thomas\Documents\adachat\common\protocol.adb:3:4\n256 bytes (dynamic)\n1 dynamic objects\n S34b C:\Users\Thomas\Documents\adachat\common\protocol.adb:6:77" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_reraise_zcx" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:37:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDA" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:36:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:36:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B88b___finalizer.3490" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:29:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__createmessage" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:30:17" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_unbounded_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:31:39" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__text_io__put_line__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:29:10" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__L_1__B62b___finalizer.3465" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__Oconcat__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:66" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:85" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__secondary_stack__ss_mark" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:26:38" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:25:41" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_count" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:25:41" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__val_int__value_integer" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:23:46" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:23:70" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject__B43b___finalizer.3423" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded___assign__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:34" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:34" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_unbounded_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:58" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:22:96" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Range_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:21:54" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__val_enum__value_enumeration_8" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:21:54" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:21:78" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:18:33" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_count" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:18:33" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__create" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:16:24" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:16:80" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectDI" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "protocol__messageobjectIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:11:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:11:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:11:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:11:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "system__standard_library__abort_undefer_direct" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:10:0" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__initialize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:10:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "gnat__string_split__slice_setIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:10:7" }
+edge: { sourcename: "protocol__stringtomessageobject" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:10:7" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" label: "Stringtomessageobject\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "gnat__string_split__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:10:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:11:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "protocol__messageobjectDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:13:7" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "__indirect_call" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__stringtomessageobject___finalizer.3282" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:9:4" }
+node: { title: "protocol__messageobjecttostring" label: "Messageobjecttostring\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:3:4\n256 bytes (dynamic)\n1 dynamic objects\n S34b C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:6:77" }
 edge: { sourcename: "protocol__messageobjecttostring" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "memcpy" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:5:7" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:5:7" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__concat_7__str_concat_7" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:6:77" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:6:100" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__fixed__trim" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:6:21" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:5:89" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__img_int__image_integer" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:6:33" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__img_enum_new__image_enumeration_8" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:5:26" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:5:40" }
-edge: { sourcename: "protocol__messageobjecttostring" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:5:40" }
-node: { title: "protocol__messageobjectIP" label: "Messageobjectip\nC:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9\n48 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_reraise_zcx" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "memcpy" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:5:7" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__secondary_stack__ss_allocate" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:5:7" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__concat_7__str_concat_7" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:6:77" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:6:100" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__fixed__trim" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:6:21" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "ada__strings__unbounded__to_string" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:5:89" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__img_int__image_integer" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:6:33" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "system__img_enum_new__image_enumeration_8" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:5:26" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:5:40" }
+edge: { sourcename: "protocol__messageobjecttostring" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:5:40" }
+node: { title: "protocol__messageobjectIP" label: "Messageobjectip\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_reraise_zcx" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
 edge: { sourcename: "protocol__messageobjectIP" targetname: "_Unwind_Resume" }
 edge: { sourcename: "protocol__messageobjectIP" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:0" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:21:7" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:21:7" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:21:7" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:19:7" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:19:7" }
-edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:19:7" }
-node: { title: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" label: "F12s\nC:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:0" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "C:\Users\Thomas\Documents\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-node: { title: "protocol__messageobjectFD" label: "Messageobjectfd\nC:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "protocol__messageobjectFD" targetname: "protocol__messageobjectDF" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-node: { title: "protocol__messageobjectDF" label: "Messageobjectdf\nC:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:0" }
-edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:21:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:21:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:21:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "__gnat_rcheck_CE_Overflow_Check" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:19:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__initialize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:19:7" }
+edge: { sourcename: "protocol__messageobjectIP" targetname: "ada__strings__unbounded__unbounded_stringIP" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:19:7" }
+node: { title: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" label: "F12s\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:0" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "_Unwind_Resume" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.adb:protocol__messageobjectIP__F12s.3163" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+node: { title: "protocol__messageobjectFD" label: "Messageobjectfd\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectFD" targetname: "protocol__messageobjectDF" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+node: { title: "protocol__messageobjectDF" label: "Messageobjectdf\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
 edge: { sourcename: "protocol__messageobjectDF" targetname: "_Unwind_Resume" }
 edge: { sourcename: "protocol__messageobjectDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:0" }
-edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
 edge: { sourcename: "protocol__messageobjectDF" targetname: "_Unwind_Resume" }
 edge: { sourcename: "protocol__messageobjectDF" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-node: { title: "protocol__messageobjectDA" label: "Messageobjectda\nC:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:0" }
-edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__strings__unbounded__finalize__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDF" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+node: { title: "protocol__messageobjectDA" label: "Messageobjectda\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9\n80 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
 edge: { sourcename: "protocol__messageobjectDA" targetname: "_Unwind_Resume" }
 edge: { sourcename: "protocol__messageobjectDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_end_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:0" }
-edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_begin_handler" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_end_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:0" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_begin_handler" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
 edge: { sourcename: "protocol__messageobjectDA" targetname: "_Unwind_Resume" }
 edge: { sourcename: "protocol__messageobjectDA" targetname: "_Unwind_Resume" }
-edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__strings__unbounded__adjust__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__strings__unbounded__adjust__2" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9" }
-node: { title: "protocol__messageobjectDI" label: "Messageobjectdi\nC:\Users\Thomas\Documents\adachat\common\protocol.ads:17:9\n8 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "__gnat_rcheck_PE_Finalize_Raised_Exception" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__strings__unbounded__adjust__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__strings__unbounded__adjust__2" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+edge: { sourcename: "protocol__messageobjectDA" targetname: "ada__exceptions__triggered_by_abort" label: "C:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9" }
+node: { title: "protocol__messageobjectDI" label: "Messageobjectdi\nC:\Users\Leonard\Documents\ADA\adachat\common\protocol.ads:17:9\n8 bytes (static)\n0 dynamic objects" }
 }

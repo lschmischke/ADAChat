@@ -2,7 +2,7 @@ package body Concrete_Server_Logic is
 
    Server     : Concrete_Server_Ptr;
    concServer : aliased Concrete_Server;
-   gui : STG.GUI'Class;
+   gui : GUIPtr;
 
 -----------------------------------------------------------------------------
 
@@ -11,6 +11,7 @@ package body Concrete_Server_Logic is
       -- # Erzeugte Serverintanz global setzen, damit sie im Package ueberall bekannt ist #
       concServer := This;
       Server     := concServer'Access;
+
 
       -- # Datenbank laden #
       User_Databases.loadUserDatabase (Server.UserDatabase);
@@ -222,6 +223,9 @@ package body Concrete_Server_Logic is
                                  client.user := user;
                                  -- # Füge server zu Chatraumliste des Clients hinzu
                                  client.chatRoomList.Append (chatroom);
+                                 -- # teile GUI mit, dass user online gekommen ist
+                                 gui.updateNumberOfContacts(server.Connected_Clients.Length);
+                                 gui.
                                  -- # Sende online-Benachrichtigungen
                                  for contact of clientContacts loop
                                     declare
@@ -276,7 +280,7 @@ package body Concrete_Server_Logic is
                            -- # Pruefe, ob Client in ChatRoom eingeschrieben #
                            if (getClientList (chatRoom).Contains (client)) then
                               broadcastToChatRoom (chatRoom, incoming_message);
-
+                              gui.printChatMessage(incoming_message);
                            else
                               refusedMessage :=
                                 createMessage

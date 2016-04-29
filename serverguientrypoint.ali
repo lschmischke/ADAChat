@@ -26,7 +26,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U serverguientrypoint%b	serverguientrypoint.adb	a42f06c2 DE NE OO SU
+U serverguientrypoint%b	serverguientrypoint.adb	c417af8e DE NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -97,9 +97,9 @@ D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
 D cairo.ads		20141113214532 9fb881e2 cairo%s
 D cairo-region.ads	20141113214532 b7133728 cairo.region%s
-D concrete_server_gui_logic.ads  20160429090456 aee43fe1 concrete_server_gui_logic%s
-D concrete_server_logic.ads  20160429055524 659c268e concrete_server_logic%s
-D datatypes.ads		20160429055522 bd60c4ab datatypes%s
+D concrete_server_gui_logic.ads  20160429093130 aee43fe1 concrete_server_gui_logic%s
+D concrete_server_logic.ads  20160429095548 a87ac051 concrete_server_logic%s
+D datatypes.ads		20160422143206 bd60c4ab datatypes%s
 D gdk.ads		20141113214532 96d821f3 gdk%s
 D gdk-color.ads		20141113214532 8f372175 gdk.color%s
 D gdk-device.ads	20141113214532 8cd9c91b gdk.device%s
@@ -207,7 +207,7 @@ D gtkada-bindings.ads	20141113214532 92ac178f gtkada.bindings%s
 D gtkada-builder.ads	20141113214532 833f12b9 gtkada.builder%s
 D gtkada-c.ads		20141113214532 0f5973e3 gtkada.c%s
 D gtkada-types.ads	20141113214532 b7bc0c77 gtkada.types%s
-D gui_to_server_communication.ads  20160429055524 ab21c04d gui_to_server_communication%s
+D gui_to_server_communication.ads  20160422143210 ab21c04d gui_to_server_communication%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
@@ -225,10 +225,10 @@ D pango-language.ads	20141113214532 cd0b875e pango.language%s
 D pango-layout.ads	20141113214532 a68b7ace pango.layout%s
 D pango-matrix.ads	20141113214532 365564f3 pango.matrix%s
 D pango-tabs.ads	20141113214532 1e43de1b pango.tabs%s
-D protocol.ads		20160429055522 aaec25fd protocol%s
-D server_to_gui_communication.ads  20160429085358 7e649e29 server_to_gui_communication%s
-D serverguicallbacks.ads  20160429072804 b9ff1693 serverguicallbacks%s
-D serverguientrypoint.adb  20160429093922 2d0f9bce serverguientrypoint%b
+D protocol.ads		20160420074808 aaec25fd protocol%s
+D server_to_gui_communication.ads  20160429095402 d3bad1ba server_to_gui_communication%s
+D serverguicallbacks.ads  20160429093130 b9ff1693 serverguicallbacks%s
+D serverguientrypoint.adb  20160429094124 2d0f9bce serverguientrypoint%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20150518132148 cd7c94ca system.atomic_counters%s
@@ -269,7 +269,7 @@ D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
 D unchconv.ads		20150518132150 ca2f9e18 unchecked_conversion%s
-D user_databases.ads	20160429055524 ca918931 user_databases%s
+D user_databases.ads	20160422080612 ca918931 user_databases%s
 X 1 ada.ads
 16K9*Ada 19e8 161|6r6 16r6 16r23 56r7
 X 13 a-iteint.ads
@@ -285,8 +285,8 @@ X 30 concrete_server_gui_logic.ads
 10U14*InitServerGui 161|77s30
 10p28 myBuilder{137|84P9} 161|77r44
 X 31 concrete_server_logic.ads
-26K9*Concrete_Server_Logic 174e26 161|37w6 37r33
-31R9*Concrete_Server<140|4R9> 132e14 161|46r12
+28K9*Concrete_Server_Logic 172e26 161|37w6 37r33
+36R9*Concrete_Server<140|4R9> 130e14 161|46r12
 X 33 gdk.ads
 43P9*Gdk_Window<48|154P9>
 46P9*Gdk_Visual<48|154P9>
@@ -404,8 +404,8 @@ X 140 gui_to_server_communication.ads
 X 142 i-c.ads
 43M9*unsigned
 X 159 server_to_gui_communication.ads
-20K9*Server_To_GUI_Communication 35e32 161|39w6 39r39
-21h9*GUI
+21K9*Server_To_GUI_Communication 37e32 161|39w6 39r39
+22h9*GUI
 X 160 serverguicallbacks.ads
 4K9*ServerGuiCallbacks 11e23 161|11w6 11r30 36w6 36r30 65r23 70r23
 6U14*Quit 161|65r42
@@ -416,7 +416,7 @@ X 161 serverguientrypoint.adb
 43m4 ret{48|57M9} 51m4
 44p4 error{49|36P9} 51m60 51r60 55r7 56r55 57r19
 45p4 Win{134|77P9} 80m4 81r4
-46r4 Server{31|31R9}
+46r4 Server{31|36R9}
 X 162 system.ads
 67M9*Address
 X 173 s-memory.ads

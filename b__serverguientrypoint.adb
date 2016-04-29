@@ -16,7 +16,7 @@ package body ada_main is
    E059 : Short_Integer; pragma Import (Ada, E059, "ada__io_exceptions_E");
    E426 : Short_Integer; pragma Import (Ada, E426, "ada__strings_E");
    E432 : Short_Integer; pragma Import (Ada, E432, "ada__strings__maps_E");
-   E505 : Short_Integer; pragma Import (Ada, E505, "ada__strings__maps__constants_E");
+   E502 : Short_Integer; pragma Import (Ada, E502, "ada__strings__maps__constants_E");
    E043 : Short_Integer; pragma Import (Ada, E043, "ada__tags_E");
    E058 : Short_Integer; pragma Import (Ada, E058, "ada__streams_E");
    E070 : Short_Integer; pragma Import (Ada, E070, "interfaces__c_E");
@@ -115,7 +115,7 @@ package body ada_main is
    E310 : Short_Integer; pragma Import (Ada, E310, "gtk__tree_sortable_E");
    E304 : Short_Integer; pragma Import (Ada, E304, "gtk__list_store_E");
    E346 : Short_Integer; pragma Import (Ada, E346, "gtk__tree_store_E");
-   E513 : Short_Integer; pragma Import (Ada, E513, "gtkada__builder_E");
+   E514 : Short_Integer; pragma Import (Ada, E514, "gtkada__builder_E");
    E480 : Short_Integer; pragma Import (Ada, E480, "gui_to_server_communication_E");
    E192 : Short_Integer; pragma Import (Ada, E192, "pango__enums_E");
    E210 : Short_Integer; pragma Import (Ada, E210, "pango__attributes_E");
@@ -152,7 +152,7 @@ package body ada_main is
    E302 : Short_Integer; pragma Import (Ada, E302, "gtk__frame_E");
    E326 : Short_Integer; pragma Import (Ada, E326, "gtk__grange_E");
    E312 : Short_Integer; pragma Import (Ada, E312, "gtk__main_E");
-   E517 : Short_Integer; pragma Import (Ada, E517, "gtk__marshallers_E");
+   E518 : Short_Integer; pragma Import (Ada, E518, "gtk__marshallers_E");
    E318 : Short_Integer; pragma Import (Ada, E318, "gtk__menu_item_E");
    E320 : Short_Integer; pragma Import (Ada, E320, "gtk__menu_shell_E");
    E314 : Short_Integer; pragma Import (Ada, E314, "gtk__menu_E");
@@ -178,12 +178,12 @@ package body ada_main is
    E145 : Short_Integer; pragma Import (Ada, E145, "gtk__dialog_E");
    E264 : Short_Integer; pragma Import (Ada, E264, "gtk__print_operation_E");
    E129 : Short_Integer; pragma Import (Ada, E129, "gtk__arguments_E");
-   E518 : Short_Integer; pragma Import (Ada, E518, "gtkada__handlers_E");
+   E519 : Short_Integer; pragma Import (Ada, E519, "gtkada__handlers_E");
    E482 : Short_Integer; pragma Import (Ada, E482, "protocol_E");
    E521 : Short_Integer; pragma Import (Ada, E521, "serverguicallbacks_E");
-   E496 : Short_Integer; pragma Import (Ada, E496, "user_databases_E");
+   E506 : Short_Integer; pragma Import (Ada, E506, "user_databases_E");
+   E495 : Short_Integer; pragma Import (Ada, E495, "server_to_gui_communication_E");
    E354 : Short_Integer; pragma Import (Ada, E354, "concrete_server_logic_E");
-   E519 : Short_Integer; pragma Import (Ada, E519, "server_to_gui_communication_E");
    E077 : Short_Integer; pragma Import (Ada, E077, "concrete_server_gui_logic_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
@@ -202,25 +202,25 @@ package body ada_main is
       end;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "server_to_gui_communication__finalize_spec");
+         pragma Import (Ada, F2, "concrete_server_logic__finalize_body");
       begin
-         E519 := E519 - 1;
+         E354 := E354 - 1;
          F2;
       end;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "concrete_server_logic__finalize_body");
+         pragma Import (Ada, F3, "concrete_server_logic__finalize_spec");
       begin
-         E354 := E354 - 1;
          F3;
       end;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "concrete_server_logic__finalize_spec");
+         pragma Import (Ada, F4, "server_to_gui_communication__finalize_spec");
       begin
+         E495 := E495 - 1;
          F4;
       end;
-      E496 := E496 - 1;
+      E506 := E506 - 1;
       declare
          procedure F5;
          pragma Import (Ada, F5, "user_databases__finalize_spec");
@@ -231,14 +231,14 @@ package body ada_main is
          procedure F6;
          pragma Import (Ada, F6, "gtkada__builder__finalize_body");
       begin
-         E513 := E513 - 1;
+         E514 := E514 - 1;
          F6;
       end;
       declare
          procedure F7;
          pragma Import (Ada, F7, "gtkada__handlers__finalize_spec");
       begin
-         E518 := E518 - 1;
+         E519 := E519 - 1;
          F7;
       end;
       E177 := E177 - 1;
@@ -1011,7 +1011,7 @@ package body ada_main is
       E426 := E426 + 1;
       Ada.Strings.Maps'Elab_Spec;
       Ada.Strings.Maps.Constants'Elab_Spec;
-      E505 := E505 + 1;
+      E502 := E502 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Streams'Elab_Spec;
       E058 := E058 + 1;
@@ -1270,7 +1270,7 @@ package body ada_main is
       E302 := E302 + 1;
       Gtk.Grange'Elab_Spec;
       E312 := E312 + 1;
-      E517 := E517 + 1;
+      E518 := E518 + 1;
       Gtk.Menu_Item'Elab_Spec;
       Gtk.Menu_Shell'Elab_Spec;
       Gtk.Menu'Elab_Spec;
@@ -1386,19 +1386,19 @@ package body ada_main is
       E177 := E177 + 1;
       E228 := E228 + 1;
       Gtkada.Handlers'Elab_Spec;
-      E518 := E518 + 1;
+      E519 := E519 + 1;
       Gtkada.Builder'Elab_Body;
-      E513 := E513 + 1;
+      E514 := E514 + 1;
       E482 := E482 + 1;
       Serverguicallbacks'Elab_Body;
       E521 := E521 + 1;
       User_Databases'Elab_Spec;
-      E496 := E496 + 1;
+      E506 := E506 + 1;
+      Server_To_Gui_Communication'Elab_Spec;
+      E495 := E495 + 1;
       Concrete_Server_Logic'Elab_Spec;
       Concrete_Server_Logic'Elab_Body;
       E354 := E354 + 1;
-      Server_To_Gui_Communication'Elab_Spec;
-      E519 := E519 + 1;
       Concrete_Server_Gui_Logic'Elab_Spec;
       Concrete_Server_Gui_Logic'Elab_Body;
       E077 := E077 + 1;
@@ -1437,17 +1437,17 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\Thomas\Documents\adachat\datatypes.o
-   --   C:\Users\Thomas\Documents\adachat\gui_to_server_communication.o
-   --   C:\Users\Thomas\Documents\adachat\protocol.o
-   --   C:\Users\Thomas\Documents\adachat\ServerGuiCallbacks.o
-   --   C:\Users\Thomas\Documents\adachat\user_databases.o
-   --   C:\Users\Thomas\Documents\adachat\concrete_server_logic.o
-   --   C:\Users\Thomas\Documents\adachat\server_to_gui_communication.o
-   --   C:\Users\Thomas\Documents\adachat\concrete_server_gui_logic.o
-   --   C:\Users\Thomas\Documents\adachat\ServerGuiEntryPoint.o
-   --   -LC:\Users\Thomas\Documents\adachat\
-   --   -LC:\Users\Thomas\Documents\adachat\
+   --   C:\Users\Leonard\Documents\ADA\adachat\datatypes.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\gui_to_server_communication.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\protocol.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\ServerGuiCallbacks.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\user_databases.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\server_to_gui_communication.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\concrete_server_logic.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\concrete_server_gui_logic.o
+   --   C:\Users\Leonard\Documents\ADA\adachat\ServerGuiEntryPoint.o
+   --   -LC:\Users\Leonard\Documents\ADA\adachat\
+   --   -LC:\Users\Leonard\Documents\ADA\adachat\
    --   -LC:\GtkAda\lib\gtkada\static\
    --   -LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
    --   -static

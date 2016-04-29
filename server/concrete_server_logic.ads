@@ -13,7 +13,8 @@ with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
 with GUI_to_Server_Communication;
-with Server_To_GUI_Communication;
+with Server_To_GUI_Communication; use Server_To_GUI_Communication;
+limited with Concrete_Server_Gui_Logic;
 
 
 -- # TODOs #
@@ -27,6 +28,7 @@ with Server_To_GUI_Communication;
 package Concrete_Server_Logic is
    package GTS renames GUI_to_Server_Communication;
    package STG renames Server_To_GUI_Communication;
+
 
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
    -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients.
