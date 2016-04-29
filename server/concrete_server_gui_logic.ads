@@ -1,5 +1,4 @@
 with Server_To_GUI_Communication; use Server_To_GUI_Communication;
-with Concrete_Server_Logic;
 with Protocol; use Protocol;
 with Gtkada.Builder; use Gtkada.Builder;
 with Gtk.Main; use Gtk.Main;

@@ -1,6 +1,6 @@
 with client_logic;
 with client_ui;
-with ServerGuiEntryPoint;
+with ServerGuiEntryPoint; use ServerGuiEntryPoint;
 with Ada.Strings.Unbounded;
 
 

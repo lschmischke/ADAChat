@@ -4,7 +4,7 @@ project ADAChat is
 
    type Library_Types is
       ("static", "relocatable");
-   for Main use ("Main.adb", "ServerGuiEntryPoint.adb");
+   for Main use ("Main.adb");
    for Source_Dirs use ("./**");
    LIBRARY_TYPE : Library_Types := external ("LIBRARY_TYPE");
 

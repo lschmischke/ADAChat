@@ -14,8 +14,8 @@ with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
 with GUI_to_Server_Communication;
 with Server_To_GUI_Communication; use Server_To_GUI_Communication;
-limited with Concrete_Server_Gui_Logic;
 with Concrete_Server_Gui_Logic;
+
 
 
 -- # TODOs #

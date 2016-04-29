@@ -36,8 +36,28 @@ package body Concrete_Server_Gui_Logic is
 
 
 
-   procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : String) is null;
-   procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String) is null;
+   procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : String) is begin
+        InformationsTreeStore.Append(Iter   => InformationsTreeViewIterator,
+                       Parent => Null_Iter);
+      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
+                    Column => 1 ,
+                                Value  => "Fehler" );
+      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
+                    Column => 0 ,
+                    Value  => errorMessage );
+   end printErrorMessage;
+
+   procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String) is begin
+        InformationsTreeStore.Append(Iter   => InformationsTreeViewIterator,
+                       Parent => Null_Iter);
+      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
+                    Column => 1 ,
+                                Value  => "Information" );
+      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
+                    Column => 0 ,
+                    Value  => infoMessage );
+
+      end printInfoMessage;
    procedure printChatMessage(thisGUI : aliased  in Server_Gui; chatMessage : MessageObject) is null;
    procedure updateNumberOfContacts(thisGUI : aliased in Server_Gui; numberOfContact : Natural) is null;
    procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOnlineList.List) is null;
