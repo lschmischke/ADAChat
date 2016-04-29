@@ -1,12 +1,12 @@
 with Gtk.Builder; use Gtk.Builder;
-limited with Concrete_Client_Logic;
+with Client2Gui_Communication; use Client2Gui_Communication;
+with Gui2Client_Communication; use Gui2Client_Communication;
 
 package Client_Window is
 
-   type Client_Ptr is access all Concrete_Client_Logic.Concrete_Client;
    type Window is interface;
 
    -- Must be called before Window can be used
-   procedure Init(This : in out Window; Client_Instance : Client_Ptr) is abstract;
+   procedure Init(This : in out Window; Client_Instance : ClientPtr) is abstract;
 
 end Client_Window;

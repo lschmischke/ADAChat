@@ -1,29 +1,24 @@
 with Concrete_Server_Logic; use Concrete_Server_Logic;
-<<<<<<< HEAD
-with Concrete_Client_Ui; use Concrete_Client_Ui;
-=======
->>>>>>> origin/feature/Client_Logic
 with Concrete_Client_Logic; use Concrete_Client_Logic;
 with Concrete_Client_Ui; use Concrete_Client_Ui;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Protocol; use Protocol;
 with Client_Window;
+with Client2Gui_Communication; use Client2Gui_Communication;
+with Gui2Client_Communication; use Gui2Client_Communication;
 
 procedure main is
 
    cserver : Concrete_Server;
-   Client : Client_Window.Client_Ptr;
+   Client : ClientPtr;
    Msg : MessageObject;
    ui : Concrete_Client_Ui.Concrete_Ui;
 
 begin
    --cserver.startServer("127.0.0.1",12321);
 
-<<<<<<< HEAD
    ui.initClientUI(Client_Instance => Client);
 
-=======
->>>>>>> origin/feature/Client_Logic
    --Client.connectToServer(To_Unbounded_String("a"), To_Unbounded_String("a"),
    --                       To_Unbounded_String("127.0.0.1"), 12321);
 
