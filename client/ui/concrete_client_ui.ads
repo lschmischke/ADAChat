@@ -42,7 +42,7 @@ private
    procedure ShowChatMessages(This : in Concrete_Ui; message : in MessageObject);
 
    --#Implementierung des Client2Gui_Communication interfaces
-   procedure LoginSuccess(This : in Concrete_Ui);
+   procedure LoginSuccess(This : in out Concrete_Ui);
 
    procedure RefusedMessage(This : in Concrete_Ui; Reason : in Unbounded_String);
 

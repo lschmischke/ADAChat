@@ -1,85 +1,41 @@
 <?xml version="1.0"?>
 <Locations >
   <Project >
-    <file_marker column=" 73" line=" 28" >
+    <file_marker column=" 39" line=" 2" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 7" line=" 26" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 6" >
+    <file_marker column=" 4" line=" 12" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 73" >
+    <file_marker column=" 13" line=" 185" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 20" line=" 50" >
+    <file_marker column=" 77" line=" 19" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 65" line=" 20" >
+    <file_marker column=" 61" line=" 5" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 6" >
+    <file_marker column=" 1" line=" 10" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\client_window.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 66" line=" 25" >
+    <file_marker column=" 61" line=" 6" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\contact_window.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 73" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 55" line=" 1" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 19" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\client2gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 50" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\client2gui_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 50" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 109" line=" 14" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\gui2client_communication.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 12" line=" 381" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 54" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 68" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 66" line=" 25" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\contact_window.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
@@ -89,6 +45,114 @@
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\chat_window_manager.ads</vfs_file>
     </file_marker>
+    <file_marker column=" 1" line=" 10" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\client_window.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 12" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 24" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 12" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 45" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 45" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 48" line=" 21" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\contact_window.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 23" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
@@ -97,245 +161,65 @@
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 7" line=" 26" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 124" line=" 68" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 55" line=" 1" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 4" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 124" line=" 68" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 77" line=" 19" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 8" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 77" line=" 19" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 2" >
+    <file_marker column=" 21" line=" 38" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 72" line=" 17" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 20" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 6" line=" 6" >
+    <file_marker column=" 13" line=" 13" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 2" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 17" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 8" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
     </file_marker>
     <file_marker column=" 9" line=" 5" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\client_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 1" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\client_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 13" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 14" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 65" line=" 20" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 59" line=" 10" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\client_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 11" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 71" line=" 20" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 13" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 11" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 20" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 11" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\gui2client_communication.ads</vfs_file>
     </file_marker>
     <file_marker column=" 9" line=" 7" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\client_window.ads</vfs_file>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\gui2client_communication.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 66" line=" 25" >
+    <file_marker column=" 6" line=" 8" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\contact_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 11" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 10" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\client_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 14" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 61" line=" 5" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 10" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\contact_window.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 61" line=" 6" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\contact_window.ads</vfs_file>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
     </file_marker>
     <file_marker column=" 13" line=" 13" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 61" line=" 8" >
+    <file_marker column=" 1" line=" 19" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 44" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\server\concrete_server_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 67" line=" 13" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 12" >
+    <file_marker column=" 39" line=" 20" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 124" line=" 92" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 220" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 194" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 329" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 96" line=" 194" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 2" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 94" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 12" >
+    <file_marker column=" 30" line=" 13" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 188" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 43" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 188" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 43" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 188" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 43" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 188" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 43" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 188" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 43" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 188" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 43" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 188" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 43" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 188" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 94" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 194" >
-      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
     </file_marker>
     <file_marker column=" 4" line=" 12" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
@@ -343,19 +227,271 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_file>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 4" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
-      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_file>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 55" line=" 1" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\client2gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\gui2client_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\client2gui_communication.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 33" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 87" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 12" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 4" line=" 12" >
+    <file_marker column=" 84" line=" 183" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 85" line=" 183" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\common\datatypes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\common\datatypes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 85" line=" 183" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\concrete_client_logic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 158" >
+      <vfs_project>C:\GtkAda\lib\gnat\gtkada.gpr</vfs_project>
+      <vfs_file>C:\GtkAda\include\gtkada\gtk-dialog.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 92" >
+      <vfs_project>C:\GtkAda\lib\gnat\gtkada.gpr</vfs_project>
+      <vfs_file>C:\GtkAda\include\gtkada\gtk-message_dialog.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 85" line=" 183" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 12" >
       <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
       <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 218" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 221" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 76" >
+      <vfs_project>C:\GtkAda\lib\gnat\gtkada.gpr</vfs_project>
+      <vfs_file>C:\GtkAda\include\gtkada\gtk-window.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 11" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\login_window.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 746" >
+      <vfs_project>C:\GtkAda\lib\gnat\gtkada.gpr</vfs_project>
+      <vfs_file>C:\GtkAda\include\gtkada\gtk-tree_model.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 216" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 216" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 123" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 128" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 126" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 68" line=" 129" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 216" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 216" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 90" >
+      <vfs_project>C:\GtkAda\lib\gnat\gtkada.gpr</vfs_project>
+      <vfs_file>C:\GtkAda\include\gtkada\gtk-message_dialog.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 228" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 49" line=" 129" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 49" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 67" line=" 119" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 74" line=" 163" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 186" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 181" >
+      <vfs_project />
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 78" >
+      <vfs_project />
+      <vfs_file>C:\GtkAda\include\gtkada\gtk-combo_box_text.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 188" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 207" >
+      <vfs_project />
+      <vfs_file>C:\GtkAda\include\gtkada\gtk-combo_box.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 188" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 18" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 41" >
+      <vfs_project>C:\GtkAda\lib\gnat\gtkada.gpr</vfs_project>
+      <vfs_file>C:\GtkAda\include\gtkada\gtk.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 18" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 186" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 16" line=" 120" >
+      <vfs_project>C:\Users\Ewald Bayer\Documents\adachat\adachat.gpr</vfs_project>
+      <vfs_file>C:\Users\Ewald Bayer\Documents\adachat\client\ui\concrete_client_ui.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>

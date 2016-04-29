@@ -33,15 +33,6 @@ package body Concrete_Client_Logic is
       This.Socket := Client;
       Connect_Socket (Client, Address);
       Channel := Stream (Client);
-
-   exception
-      when Error : Socket_Error =>
-         Put ("Socket_Error in ConnectToServer: ");
-         Put_Line (Exception_Information (Error));
-      when Error : others =>
-         Put ("Unexpected exception in ConnectToServer: ");
-         Put_Line (Exception_Information (Error));
-
    end InitializeSocket;
 
 
