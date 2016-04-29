@@ -5,6 +5,10 @@ package body Concrete_Client_Logic is
    Address : Sock_Addr_Type;
    Channel : Stream_Access;
 
+   procedure init(This : in out Concrete_Client; Ui_Instance : Ui_Ptr)is
+   begin
+      This.ui := Ui_Instance;
+   end init;
    --------------------------------------------------------------------------------
 
    procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String;
@@ -14,7 +18,7 @@ package body Concrete_Client_Logic is
       ConnectMessage : MessageObject;
 
    begin
-
+      --Instance.AddOnlineUser(UserName => To_Unbounded_String("Testus"));
       --#Socket initialisieren und erzeugen#
       Create_Socket (Client);
       Address.Addr := Inet_Addr(To_String(ServerAdress));
@@ -66,7 +70,9 @@ package body Concrete_Client_Logic is
 
    --------------------------------------------------------------------------------
 
-   procedure RegisterAtServer(This : in out Concrete_Client; UserName : in Unbounded_String; Password : in Unbounded_String) is
+   procedure RegisterAtServer(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
+                          ServerAdress : in Unbounded_String; ServerPort : in Port_Type;
+                          AnswerFromServer : out MessageObject) is
 
       RegisterMessage : MessageObject;
 
@@ -336,13 +342,16 @@ package body Concrete_Client_Logic is
    -----------------------------------------------------------------------------
    -----------------------------------------------------------------------------
 
-   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
+   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
+                       ServerAdress : in Unbounded_String; ServerPort : in Port_Type;
+                       AnswerFromServer : out MessageObject) is
 
    begin
       This.ConnectToServer(UserName     => Username,
                            Password     => Password,
                            ServerAdress => To_Unbounded_String("127.0.0.1"),
                            ServerPort   => 12321);
+      AnswerFromServer := readMessageFromStream(ClientSocket => Client);
    end LoginUser;
 
    -----------------------------------------------------------------------------
@@ -356,11 +365,16 @@ package body Concrete_Client_Logic is
 
    -----------------------------------------------------------------------------
 
-   procedure RegisterUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
+   procedure RegisterUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
+                          ServerAdress : in Unbounded_String; ServerPort : in Port_Type;
+                          AnswerFromServer : out MessageObject) is
 
    begin
       This.RegisterAtServer(UserName => Username,
-                            Password => Password); --#TODO ENCODE EINFUEGEN
+                            Password => Password,
+                            ServerAdress => ServerAdress,
+                            ServerPort => ServerPort,
+                            AnswerFromServer => AnswerFromServer); --#TODO ENCODE EINFUEGEN
    end RegisterUser;
 
    -----------------------------------------------------------------------------

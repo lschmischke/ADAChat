@@ -14,7 +14,6 @@ with GNAT.Sockets;     use GNAT.Sockets;
 with Gtk.List_Store;   use Gtk.List_Store;
 with Gtk.Tree_Model;   use Gtk.Tree_Model;
 
-
 with System;
 
 package body Concrete_Client_Ui is
@@ -23,7 +22,7 @@ package body Concrete_Client_Ui is
    procedure setConnectionStatus is null;
    procedure updateChatParticipants is null;
 
-   procedure initClientUI(This : in out Concrete_Ui; Client_Instance : Concrete_Client_Logic.Concrete_Client) is
+   procedure initClientUI(This : in out Concrete_Ui; Client_Instance : Client_Window.Client_Ptr) is
       ret : GUint;
       Error : aliased GError;
    begin
@@ -38,10 +37,30 @@ package body Concrete_Client_Ui is
       --  Start the Gtk+ main loop
       Gtk.Main.Main;
       Unref(This.Login_Window.Builder);
+      Unref(This.Contact_Window.Builder);
    end initClientUI;
 
 
-   procedure Register_Action (Object : access Gtkada_Builder_Record'Class) is null;
+   procedure Register_Action (Object : access Gtkada_Builder_Record'Class) is
+      username : Gtk_Entry;
+      password : Gtk_Entry;
+      serverIP : Gtk_Entry;
+      serverport : Gtk_Entry;
+      answer : MessageObject;
+   begin
+      username := Gtk_Entry(Object.Get_Object("Login_Username"));
+      password := Gtk_Entry(Object.Get_Object("Login_Password"));
+      serverIP := Gtk_Entry(Object.Get_Object("Settings_IP"));
+      serverport := Gtk_Entry(Object.Get_Object("Settings_Port"));
+                         -- Funktioniert nicht
+      Instance.Client.RegisterUser(Username => To_Unbounded_String(username.Get_Text),
+                                   Password => To_Unbounded_String(password.Get_Text),
+                                   ServerAdress => To_Unbounded_String(serverIP.Get_Text),
+                                   ServerPort => Port_Type'Value(serverport.Get_Text),
+                                   AnswerFromServer => answer);
+
+
+   end Register_Action;
 
    procedure Login_Action (Object : access Gtkada_Builder_Record'Class) is
       username : Gtk_Entry;
@@ -49,10 +68,10 @@ package body Concrete_Client_Ui is
       serverIP : Gtk_Entry;
       serverport : Gtk_Entry;
 
---      onlineList : Gtk_List_Store;
---      offlineList : Gtk_List_Store;
+      --      onlineList : Gtk_List_Store;
+      --      offlineList : Gtk_List_Store;
 
---      temp : Gtk_Tree_Iter;
+      --      temp : Gtk_Tree_Iter;
 
       answer : MessageObject;
    begin
@@ -61,51 +80,69 @@ package body Concrete_Client_Ui is
       serverIP := Gtk_Entry(Object.Get_Object("Settings_IP"));
       serverport := Gtk_Entry(Object.Get_Object("Settings_Port"));
 
-
+                   -- Funktioniert nicht
       Instance.Client.LoginUser(Username => To_Unbounded_String(username.Get_Text),
                                 Password => To_Unbounded_String(password.Get_Text),
                                 ServerAdress => To_Unbounded_String(serverIP.Get_Text),
                                 ServerPort => Port_Type'Value(serverport.Get_Text),
                                 AnswerFromServer => answer);
 
-      --Msg := readMessageFromStream(ClientSocket => Client.Socket);
-      --printMessageToInfoConsole(msg);
       if answer.messagetype = Connect then
          if answer.content = "ok" then
             Instance.Login_Window.Window.Hide;
             Instance.Contact_Window.Init(Instance.Client);
 
-      --onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
-      --offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
+            --onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
+            --offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
 
-      --    Chat_Window_Manager.test;
-      --temp := Assign(temp, "Mein meega Test");
-      --offlineList.Append(temp);
-      --offlineList.Set(temp, 0, "Mein meega Test");
-      --offlineList.Append(temp);
-      --offlineList.Set(temp, 0, "Was anders");
-            else
-            null; -- TODO Fehler, Benutzername Passwort falsch
-            end if;
+            --    Chat_Window_Manager.test;
+            --temp := Assign(temp, "Mein meega Test");
+            --offlineList.Append(temp);
+            --offlineList.Set(temp, 0, "Mein meega Test");
+            --offlineList.Append(temp);
+            --offlineList.Set(temp, 0, "Was anders");
+            Instance.AddOnlineUser(To_Unbounded_String("Thomas"));
+            Instance.AddOnlineUser(To_Unbounded_String("Ewald"));
+            Instance.AddOfflineUser(To_Unbounded_String("Daniel"));
+            Instance.AddOfflineUser(To_Unbounded_String("Sebastian"));
+            Instance.AddOfflineUser(To_Unbounded_String("Leonard"));
+
+            Instance.AddOnlineUser(To_Unbounded_String("Daniel"));
+            Instance.AddOnlineUser(To_Unbounded_String("Leonard"));
+            Instance.AddOnlineUser(To_Unbounded_String("Sebastian"));
+
          else
-         null; -- TODO Fehler, ggf. REFUSED abfragen, sonst Kommunikationsfehler
+
+            null; -- TODO Fehler, Benutzername Passwort falsch
          end if;
+      else
+         null; -- TODO Fehler, ggf. REFUSED abfragen, sonst Kommunikationsfehler
+      end if;
    end Login_Action;
 
    procedure AddOnlineUser(This : in Concrete_Ui; UserName : Unbounded_String) is
+      offlineList : Gtk_List_Store;
       onlineList : Gtk_List_Store;
       temp : Gtk_Tree_Iter;
    begin
+      offlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("offlinecontacts_list"));
       onlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("onlinecontacts_list"));
+
       onlineList.Append(temp);
       onlineList.Set(temp, 0, To_String(UserName));
+
+      temp := offlineList.Get_Iter (onlineList.Get_Path (temp));
+      offlineList.Remove(temp);
    end AddOnlineUser;
 
    procedure AddOfflineUser(This : in Concrete_Ui; UserName : Unbounded_String) is
       offlineList : Gtk_List_Store;
+      onlineList : Gtk_List_Store;
       temp : Gtk_Tree_Iter;
    begin
       offlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("offlinecontacts_list"));
+      onlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("onlinecontacts_list"));
+
       offlineList.Append(temp);
       offlineList.Set(temp, 0, To_String(UserName));
    end AddOfflineUser;
@@ -116,6 +153,7 @@ package body Concrete_Client_Ui is
    procedure Quit (Object : access Gtkada_Builder_Record'Class) is
       pragma Unreferenced (Object);
    begin
+      --Instance.Client.DisconnectUser(
       Gtk.Main.Main_Quit;
 
    end Quit;

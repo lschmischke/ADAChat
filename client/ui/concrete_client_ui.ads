@@ -1,9 +1,10 @@
 with Gtkada.Builder;   use Gtkada.Builder;
 with Gtk.Window;       use Gtk.Window;
-with Concrete_Client_Logic; use Concrete_Client_Logic;
+limited with Concrete_Client_Logic;
 with Client2Gui_Communication; use Client2Gui_Communication;
 with Protocol; use Protocol;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Client_Window;
 with Login_Window; use Login_Window;
 with Contact_Window; use Contact_Window;
 --with Chat_Window_Manager; use Chat_Window_Manager;
@@ -13,7 +14,7 @@ package Concrete_Client_Ui is
    type Concrete_Ui is new Client2Gui_Communication.GUI with private;
 
    -- Must be called before using Concrete_Ui
-   procedure initClientUI(This : in out Concrete_Ui; Client_Instance : Concrete_Client_Logic.Concrete_Client);
+   procedure initClientUI(This : in out Concrete_Ui; Client_Instance : Client_Window.Client_Ptr);
 
    procedure showMessage;
    procedure setConnectionStatus;
@@ -22,7 +23,7 @@ package Concrete_Client_Ui is
    -- general callbacks
    procedure Quit (Object : access Gtkada_Builder_Record'Class);
 
-   -- login window
+   -- login window callbacks
    procedure Register_Action (Object : access Gtkada_Builder_Record'Class);
    procedure Login_Action (Object : access Gtkada_Builder_Record'Class);
 
@@ -32,7 +33,7 @@ private
       Login_Window   : LoginWindow;
       Contact_Window   : ContactWindow;
 --      Chat_Windows : ChatWindows;
-      Client : Concrete_Client;
+      Client : Client_Window.Client_Ptr;
    end record;
 
    --#Implementierung des Client2Gui_Communication interfaces
@@ -41,5 +42,5 @@ private
    procedure ShowChatMessages(This : in Concrete_Ui; message : MessageObject);
    --
 
-   Instance : Concrete_Ui;
+   Instance : aliased Concrete_Ui;
 end Concrete_Client_Ui;

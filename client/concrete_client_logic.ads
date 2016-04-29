@@ -12,12 +12,14 @@ with Ada.Strings.Unbounded.Hash_Case_Insensitive;
 with Ada.Containers.Indefinite_Hashed_Maps;
 with GNAT.String_Split; use GNAT.String_Split;
 with Gui2Client_Communication; use Gui2Client_Communication;
+limited with Concrete_Client_Ui;
 
 
 
 package Concrete_Client_Logic is
 
    type Concrete_Client is new Gui2Client_Communication.Client with private;
+   type Ui_Ptr is access all Concrete_Client_Ui.Concrete_Ui;
 
    package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
                                                       Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
@@ -36,6 +38,8 @@ package Concrete_Client_Logic is
                                                                       Equivalent_Keys => "=",
                                                                       "="             => Userlist."=");
 
+   procedure init(This : in out Concrete_Client; Ui_Instance : Ui_Ptr);
+
    private
 
    type Concrete_Client is new Gui2Client_Communication.Client with record
@@ -45,7 +49,7 @@ package Concrete_Client_Logic is
       UsersOffline : Userlist.Set;
       ChatRoomIdSet : ChatRoomIds.Set;
       ChatRoomParticipants : ChatRoomUsers.Map;
-
+      ui : Ui_Ptr;
    end record;
 
    --#ServerID fuer register und connect
@@ -53,8 +57,8 @@ package Concrete_Client_Logic is
 
    --Stellt eine Socketverbindung zum Server her und meldet den Client
    --nach Chat-Protokoll am Server an.
-   procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String; Password : in Unbounded_String;
-                             ServerAdress : in Unbounded_String;
+   procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String;
+                             Password : in Unbounded_String; ServerAdress : in Unbounded_String;
                              ServerPort : in Port_Type);
 
    --Diese Prozedur meldet den Client beim Server nach Chat-Protokoll ab und schliesst dessen Socket.
@@ -62,7 +66,9 @@ package Concrete_Client_Logic is
                                   Msg : in Unbounded_String);
 
    --Diese Prozedur registriert den Client mit entsprechenden Parametern beim Server.
-   procedure RegisterAtServer(This : in out Concrete_Client; UserName : in Unbounded_String; Password : in Unbounded_String);
+   procedure RegisterAtServer(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
+                        ServerAdress : in Unbounded_String; ServerPort : in Port_Type;
+                        AnswerFromServer : out MessageObject);
 
    -----------------------------------------------------------------------------
 
@@ -100,11 +106,15 @@ package Concrete_Client_Logic is
    -----------------------------------------------------------------------------
    --#Implementierung des Gui2Client_Communication interfaces
 
-   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String);
+   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
+                       ServerAdress : in Unbounded_String; ServerPort : in Port_Type;
+                       AnswerFromServer : out MessageObject);
 
    procedure DisconnectUser(This : in out Concrete_Client; Username : in Unbounded_String; Message : in Unbounded_String);
 
-   procedure RegisterUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String);
+   procedure RegisterUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String;
+                          ServerAdress : in Unbounded_String; ServerPort : in Port_Type;
+                          AnswerFromServer : out MessageObject);
 
    procedure InviteToGroupChat(This : in out Concrete_Client; Username : in Unbounded_String; Receiver : in Integer;
                                Participant : in Unbounded_String);
