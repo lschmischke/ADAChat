@@ -13,8 +13,7 @@ with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
 with Ada.Strings.Unbounded.Hash;
 with GUI_to_Server_Communication;
-
-limited with Concrete_Server_Gui_Logic;
+with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 
 
 
@@ -30,7 +29,6 @@ package Concrete_Server_Logic is
    package GTS renames GUI_to_Server_Communication;
 
 
-
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
    -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients.
    type Concrete_Server is new GTS.server with private;
@@ -43,30 +41,6 @@ package Concrete_Server_Logic is
    -- untereinander zu kommunizieren.
    procedure StartNewServer (This : in out Concrete_Server; ip : String; port :Natural) ;
 
-   type Client_Task is limited private;
-   type Client_Task_Ptr is access Client_Task;
-
-   type chatRoom is tagged private;
-   type chatRoomPtr is access chatRoom;
-   package chatRoom_List is new Doubly_Linked_Lists(Element_Type => chatRoomPtr);
-
-      -- Typ einer Clientinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
-   -- und Port, sowieso den Benutzernamen zu dem dieser Client gehoert und
-   -- den Client-Task der ihm zugeordnet ist fest.
-   type Concrete_Client is tagged record
-      user : UserPtr;
-      Socket : Socket_Type;
-      SocketAddress : Sock_Addr_Type;
-      CommunicationTask : Client_Task_Ptr;
-      chatRoomList : chatRoom_List.List;
-      ServerRoomID : Natural;
-   end record;
-
-
-   type Concrete_Client_Ptr is access Concrete_Client;
-
-   package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr );
-
    function getUsernameOfClient(client : Concrete_Client_Ptr) return Unbounded_String;
 
 
@@ -76,7 +50,6 @@ package Concrete_Server_Logic is
    function getChatRoomID(room : in chatRoomPtr) return Natural;
    function generateUserlistMessage(room : in chatRoomPtr) return MessageObject;
 
-   package Client_List is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr);
    function getClientList(room : in chatRoomPtr) return Client_List.List;
    procedure broadcastToChatRoom(room : in chatRoomPtr; message : in MessageObject);
 
@@ -87,27 +60,17 @@ package Concrete_Server_Logic is
 
    procedure disconnectClient(client : in Concrete_Client_Ptr);
 
+   type Client_Task is limited private;
+   type Client_Task_Ptr is access Client_Task;
+
 
 
 private
 
-
-
-
-
-
-   type chatRoom is tagged
-      record
-	 chatRoomID : Natural;
-	 clientList : Client_List.List;
-      end record;
-
-
-   -- Jede Instanz dieses Tasks ist pro Client fuer die eigentliche Kommunikation
-   -- zwischen den Clients und die Interpretation der Nachrichten zustaendig.
-   task type Client_Task is
+    task type Client_Task is
       entry Start(newClient : Concrete_Client_Ptr);
    end Client_Task;
+
 
    function userHash (userToHash : UserPtr) return Hash_Type;
    package userToClientMap is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
@@ -172,7 +135,7 @@ private
    -- aufgebaut und zur Verfuegung gestellt. Es gibt nur eine Instanz von diesem Task.
    task Main_Server_Task is
       entry Start;
-      -- entry Stop;
+      --entry Stop;
    end;
 
    function connectedClientsToClientList(this : in Concrete_Server_Ptr) return userViewOnlineList.List;

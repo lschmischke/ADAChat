@@ -47,7 +47,7 @@ package Protocol is
    function stringToMessageObject(message : in Unbounded_String) return MessageObject;
 
    -- Erstellt ein neues MessageObject aus den angegeben Parametern
-   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Integer; content : in Unbounded_String) return MessageObject;
+   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Natural; content : in Unbounded_String) return MessageObject;
 
    -- Gibt das MessageObject auf die Konsole aus
    procedure printMessageToInfoConsole(message : in MessageObject);

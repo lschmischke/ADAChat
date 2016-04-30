@@ -35,13 +35,13 @@ package body ServerGuiCallbacks is
 
 
 
-   PortGEntry : Gtk_GEntry;
-   InformationsTreeView : Gtk_Tree_View;
-   InformationsTreeStore: Gtk_Tree_Store;
+   --PortGEntry : Gtk_GEntry;
+   --InformationsTreeView : Gtk_Tree_View;
+   --InformationsTreeStore: Gtk_Tree_Store;
    InformationsTreeViewIterator: Gtk_Tree_Iter;
    SecondLevelIterator: Gtk_Tree_Iter;
-   UserContextMenu: Gtk_Menu;
-   Val: Gint;
+   --UserContextMenu: Gtk_Menu;
+   --Val: Gint;
    Toolbutton_Server_Stop: Gtk_Tool_Button;
    Toolbutton_Server_Start: Gtk_Tool_Button;
    MyServer: ServerPtr := new Concrete_Server;

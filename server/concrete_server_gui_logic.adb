@@ -35,12 +35,12 @@ package body Concrete_Server_Gui_Logic is
    InformationsTreeStore: Gtk_Tree_Store;
    InformationsTreeViewIterator: Gtk_Tree_Iter;
    SecondLevelIterator: Gtk_Tree_Iter;
-   Val: Gint;
+   --Val: Gint;
    ChatMessageListStore: Gtk_List_Store;
    ChatMessageListStoreIterator: Gtk_Tree_Iter;
    ChatMessageTreeView : Gtk_Tree_View;
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
    procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : String) is begin
         InformationsTreeStore.Append(Iter   => InformationsTreeViewIterator,
@@ -52,7 +52,7 @@ package body Concrete_Server_Gui_Logic is
                     Column => 0 ,
                     Value  => errorMessage );
    end printErrorMessage;
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String) is begin
         InformationsTreeStore.Append(Iter   => InformationsTreeViewIterator,
                        Parent => Null_Iter);
@@ -63,32 +63,27 @@ package body Concrete_Server_Gui_Logic is
                     Column => 0 ,
                     Value  => infoMessage );
 
-      end printInfoMessage;
+   end printInfoMessage;
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure printChatMessage(thisGUI : aliased  in Server_Gui; chatMessage : MessageObject) is begin
         ChatMessageListStore.Append(Iter => ChatMessageListStoreIterator);
       ChatMessageListStore.Set(Iter   => ChatMessageListStoreIterator,
                                Column => 0,
                                Value  => To_String(chatMessage.sender) & ": " &To_String(chatMessage.content));
 
-      end printChatMessage;
+   end printChatMessage;
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure updateNumberOfContacts(thisGUI : aliased in Server_Gui; numberOfContact : Natural) is null;
-
-   procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : Concrete_Server_Logic.userViewOnlineList.List) is
-
-
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOnlineList.List) is
    begin
-
       For client of viewComponents loop
-
          Put_Line("Username: " & To_String(getUsername(client.user)));
-
       end loop;
-
-
-      end updateOnlineUserOverview;
-
+   end updateOnlineUserOverview;
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure updateOfflineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOfflineMap.Map)is null;
-
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure InitServerGui(myBuilder: Gtkada_Builder) is begin
       Put_Line("Init Gui Components");
       PortGEntry := Gtk_GEntry(myBuilder.Get_Object("config_port"));
@@ -105,14 +100,7 @@ package body Concrete_Server_Gui_Logic is
      -- Column 0: Nachricht
 
 
-
-
-
-
-
       Put_Line("Initialization complete!");
    End InitServerGui;
+end Concrete_Server_Gui_Logic;
 
-
-
-   end Concrete_Server_Gui_Logic;

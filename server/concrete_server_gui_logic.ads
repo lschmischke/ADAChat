@@ -3,6 +3,7 @@ with Protocol; use Protocol;
 with Gtkada.Builder; use Gtkada.Builder;
 with Gtk.Main; use Gtk.Main;
 with Concrete_Server_Logic;
+with dataTypes; use dataTypes;
 
 package Concrete_Server_Gui_Logic is
    package STG renames Server_To_GUI_Communication;
@@ -15,7 +16,7 @@ private
    procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String);
    procedure printChatMessage(thisGUI : aliased in Server_Gui; chatMessage : MessageObject);
    procedure updateNumberOfContacts(thisGUI : aliased in Server_Gui; numberOfContact : Natural);
-   procedure updateOnlineUserOverview(thisGUI : aliased  in Server_Gui; viewComponents : Concrete_Server_Logic.userViewOnlineList.List);
+   procedure updateOnlineUserOverview(thisGUI : aliased  in Server_Gui; viewComponents : userViewOnlineList.List);
    procedure updateOfflineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOfflineMap.Map);
 
 end Concrete_Server_Gui_Logic;

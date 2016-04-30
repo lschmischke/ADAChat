@@ -26,7 +26,7 @@ package body Protocol is
          -- Einzelne Attribute des messageObjects werden gefüllt
          newMessageObject.messagetype := MessageTypeE'Value(GNAT.String_Split.Slice(MessageParts, 1));
          newMessageObject.sender := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(MessageParts, 2));
-         newMessageObject.receiver := Integer'Value(GNAT.String_Split.Slice(MessageParts, 3));
+         newMessageObject.receiver := Natural'Value(GNAT.String_Split.Slice(MessageParts, 3));
 
          -- Für das Content-Attribut wird die Zerstückelung, falls vorhanden, wieder rückgänging gemacht
          for i in 4 .. GNAT.String_Split.Slice_Count(MessageParts) loop
@@ -36,7 +36,7 @@ package body Protocol is
          Put_Line("Cannot convert String to MessageObject");
          return createMessage(messagetype => Invalid,
                        sender      => To_Unbounded_String("unknown"),
-                       receiver    => -1 ,
+                       receiver    => 0,
                        content     => message);
       end if;
       return newMessageObject;
@@ -44,7 +44,7 @@ package body Protocol is
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Integer; content : in Unbounded_String) return MessageObject is
+   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Natural; content : in Unbounded_String) return MessageObject is
       result : MessageObject;
    begin
       result.messagetype := messagetype;

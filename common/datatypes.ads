@@ -1,6 +1,7 @@
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
 with GNAT.SHA512;
+with GNAT.Sockets; use GNAT.Sockets;
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Dieses Paket bündelt Typen um Benutzer des Chats abzuspeichern.
@@ -50,6 +51,37 @@ package dataTypes is
    function removeContact (this : in out UserPtr; contactToRemove : UserPtr) return boolean;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
+      -- Jede Instanz dieses Tasks ist pro Client fuer die eigentliche Kommunikation
+      -- zwischen den Clients und die Interpretation der Nachrichten zustaendig.
+
+
+
+
+   type Concrete_Client;
+   type Concrete_Client_Ptr is access Concrete_Client;
+
+   package Client_List is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr);
+
+   type chatRoom is tagged
+      record
+	 chatRoomID : Natural;
+	 clientList : Client_List.List;
+      end record;
+   type chatRoomPtr is access chatRoom;
+   package chatRoom_List is new Doubly_Linked_Lists(Element_Type => chatRoomPtr);
+
+      -- Typ einer Clientinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
+   -- und Port, sowieso den Benutzernamen zu dem dieser Client gehoert und
+   -- den Client-Task der ihm zugeordnet ist fest.
+   type Concrete_Client is tagged record
+      user : UserPtr;
+      Socket : Socket_Type;
+      SocketAddress : Sock_Addr_Type;
+      chatRoomList : chatRoom_List.List;
+      ServerRoomID : Natural;
+   end record;
+
+   package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr );
 
 private
 

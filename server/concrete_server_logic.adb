@@ -1,8 +1,11 @@
+with Concrete_Server_Gui_Logic; use Concrete_Server_Gui_Logic;
+
 package body Concrete_Server_Logic is
 
    Server     : Concrete_Server_Ptr;
    concServer : aliased Concrete_Server;
    gui : GUIPtr := new Concrete_Server_Gui_Logic.Server_Gui;
+
 
 -----------------------------------------------------------------------------
 
@@ -85,7 +88,8 @@ package body Concrete_Server_Logic is
       -- # Abhoerroutine auf Aktivitaet am Server-Socket #
       loop
          declare
-            Client : Concrete_Client_Ptr := new Concrete_Client;
+	    Client : Concrete_Client_Ptr := new Concrete_Client;
+	    cTask : Client_Task_Ptr:= new Client_Task;
          begin
             -- # Auf Verbindungsanfrage warten, annehmen, Client-Socket erzeugen und neue Adresse an diesen binden #
             Ada.Text_IO.Put_Line ("Ready to accept incoming Conncetions...");
@@ -95,16 +99,20 @@ package body Concrete_Server_Logic is
                Address => Client.SocketAddress); -- Blockierender Aufruf
             Ada.Text_IO.Put_Line ("Incoming Connection from " & GNAT.Sockets.Image (Client.SocketAddress) & " accepted");
 
-            -- # Neuen Kommunikationstask für Client erzeugen, hinterlegen und starten #
-            Client.CommunicationTask := new Client_Task;
-            Client.CommunicationTask.Start (Client);
-         end;
+	    -- # Neuen Kommunikationstask für Client erzeugen, hinterlegen und starten #
+	    cTask.Start(Client);
+
+	 end;
+
       end loop;
+
+
 
    exception
       when Error : Socket_Error =>
          Put ("Socket_Error in Main_Server_Task: ");
-         Put_Line (Exception_Information (Error));
+	 --Put_Line (Exception_Information (Error));
+	 Put_Line("terminated Main Server Task");
       when Error : others =>
          Put ("Unexpected exception in Main_Server_Task: ");
          Put_Line (Exception_Information (Error));
@@ -386,7 +394,7 @@ package body Concrete_Server_Logic is
                         if Server.chatRooms.Contains (incoming_message.receiver) then
                            chatRoom := Server.chatRooms.Element (incoming_message.receiver);
 
-                           --# Pruefe obClient in referenziertem Chatraum
+                           --# Pruefe ob Client in referenziertem Chatraum
                            if (client.chatRoomList.Contains (chatRoom)) then
                               removeClientFromChatroom (chatRoom, client);
                            else
@@ -803,8 +811,7 @@ package body Concrete_Server_Logic is
 
    procedure stopServer (thisServer : aliased in Concrete_Server) is
    begin
-      --# TODO
-      null;
+      Close_Socket(server.Socket);
    end stopServer;
    ----------------------------------------------------------------------------------------
 
@@ -849,15 +856,12 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   function connectedClientsToClientList(this : in Concrete_Server_Ptr) return STG.userViewOnlineList.List is
+   function connectedClientsToClientList(this : in Concrete_Server_Ptr) return userViewOnlineList.List is
       clientMap : userToClientMap.Map := this.Connected_Clients;
       clientList : userViewOnlineList.List;
-      concClient : Concrete_Client_Ptr;
-      ptr : ClientPtr;
    begin
       for user of clientMap loop
-         ptr := user.all'Access;
-         clientList.Append(New_Item => ptr);
+         clientList.Append(New_Item => user);
       end loop;
 
       return clientList;
