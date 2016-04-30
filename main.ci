@@ -1,9 +1,0 @@
-graph: { title: "C:\Users\Daniel Kreck\Documents\adachat\main.adb"
-node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
-node: { title: "data_types_test__test" label: "Test\nC:\Users\Daniel Kreck\Documents\adachat\common\testing\data_types_test.ads:8:14" shape : ellipse }
-node: { title: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "gnat_rcheck_PE_Access_Before_Elaboration\n<built-in>" shape : ellipse }
-node: { title: "_ada_main" label: "main\nC:\Users\Daniel Kreck\Documents\adachat\main.adb:14:1\n32 bytes (static)\n0 dynamic objects" }
-edge: { sourcename: "_ada_main" targetname: "data_types_test__test" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:16:18" }
-edge: { sourcename: "_ada_main" targetname: "__gnat_rcheck_PE_Access_Before_Elaboration" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:16:18" }
-edge: { sourcename: "_ada_main" targetname: "__main" label: "C:\Users\Daniel Kreck\Documents\adachat\main.adb:14:1" }
-}

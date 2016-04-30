@@ -1,5 +1,10 @@
 with Client_Logic; use Client_Logic;
 with Communication_Objects; use Communication_Objects;
+with GNAT.Sockets; use GNAT.Sockets;
+with Ada.Streams; use Ada.Streams;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.IO_Exceptions;
 
 
 package Concrete_Client_Logic is
@@ -9,8 +14,13 @@ package Concrete_Client_Logic is
    end record;
 
    procedure connectToServer(This : in out Concrete_Client);
+
    procedure disconnectFromServer(This : in out Concrete_Client);
+
    procedure sendMessage(This : in out Concrete_Client;
-           Message : out Communication_Object'Class);
+                         Message : out Communication_Object'Class);
+
+   procedure readMessage(This : in out Concrete_Client;
+                         Message : out Communication_Object'Class);
 
 end Concrete_Client_Logic;

@@ -1,0 +1,170 @@
+\documentclass[12pt,a4paper,bibliography=totocnumbered,listof=totocnumbered]{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage[right]{eurosym}
+\usepackage[printonlyused]{acronym}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{colortbl}
+\usepackage{paralist}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage[right]{eurosym}
+\usepackage{picins}
+\usepackage[subfigure,titles]{tocloft}
+\usepackage[pdfpagelabels=true]{hyperref}
+\usepackage{lscape}
+\usepackage{eurosym}
+
+
+%für Listings
+\usepackage{listings}
+\lstset{basicstyle=\footnotesize, captionpos=b, breaklines=true, showstringspaces=false, tabsize=2, frame=lines, numbers=left, numberstyle=\tiny, xleftmargin=2em, framexleftmargin=2em}
+\makeatletter
+\def\l@lstlisting#1#2{\@dottedtocline{1}{0em}{1em}{\hspace{1,5em} Lst. #1}{#2}}
+\makeatother
+
+
+\newcommand{\includecode}[1]{\lstinputlisting[caption=#1]{#1}}
+
+%Seitenränder
+\geometry{a4paper, top=27mm, left=30mm, right=20mm, bottom=35mm, headsep=10mm, footskip=12mm}
+
+%Links und PDF-Einstellungen
+\hypersetup{unicode=false, pdftoolbar=true, pdfmenubar=true, pdffitwindow=false, pdfstartview={FitH},
+	pdftitle={Projektdokumentation},
+	pdfauthor={Daniel Kreck, Leonard Schmischke, Thomas Iffland, Ewald Bayer, Sebastian Westbrock},
+	pdfsubject={Projektdokumentation Ada-Instant-Messenger},
+	pdfcreator={\LaTeX\ with package \flqq hyperref\frqq},
+	pdfproducer={pdfTeX \the\pdftexversion.\pdftexrevision},
+	pdfkeywords={Dokumentation, Projekt, Ada, Chat},
+	pdfnewwindow=true,
+	colorlinks=true,linkcolor=black,citecolor=black,filecolor=magenta,urlcolor=black}
+\pdfinfo{/CreationDate (D:20110620133321)}
+
+\begin{document}
+
+\titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+
+% Kopf- und Fusszeile
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\leftmark}{\rightmark}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\thesection\space\contentsname}
+\lfoot{Projektdokumentation}
+\cfoot{}
+\rfoot{ Seite \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Vorspann
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\theHsection}{\Roman{section}}
+\pagenumbering{roman}
+
+% ----------------------------------------------------------------------------------------------------------
+% Titelseite
+% ----------------------------------------------------------------------------------------------------------
+\thispagestyle{empty}
+\begin{center}
+	\includegraphics[width=5cm]{img/thm2.png}\\
+	\vspace*{2cm}
+	\Large
+	\textbf{Fachbereich}\\
+	\textbf{Mathematik, Naturwissenschaften und Informatik }\\
+	\vspace*{2cm}
+	\Huge
+	\textbf{Projektdokumentation Instant-Messaging-Dienst}\\
+	\vspace*{1cm}
+	\large
+	\textbf{Entwicklung sicherer, hardwarenaher Anwendungen}\\
+	\normalsize
+	\vspace*{0.5cm}
+	Wintersemester 15/16\\
+	\vspace*{2cm}
+	\textbf{Stand: 30.04.2016}
+		
+	\normalsize
+	\vfill
+	\begin{tabular}{ l l }
+		\textbf{Projektleiter:}  & \textbf{Projektteam:}\\
+		Leonard Schmischke & Daniel Kreck\\
+						 &  Ewald Bayer\\
+		\textbf{Kursleitung:} & Sebastian Westbrock\\
+		M.Sc. Florian von Zabiensky & Thomas Iffland\\
+	\end{tabular}	
+\end{center}
+\pagebreak
+
+
+% ----------------------------------------------------------------------------------------------------------
+% Verzeichnisse
+% ----------------------------------------------------------------------------------------------------------
+% TODO Typ vor Nummer
+\renewcommand{\cfttabpresnum}{Tab. }
+\renewcommand{\cftfigpresnum}{Abb. }
+\settowidth{\cfttabnumwidth}{Abb. 10\quad}
+\settowidth{\cftfignumwidth}{Abb. 10\quad}
+
+\titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{2pt plus 2pt minus 2pt}
+\singlespacing
+\rhead{INHALTSVERZEICHNIS}
+\tableofcontents
+\pagebreak
+
+
+% ----------------------------------------------------------------------------------------------------------
+% Inhalt
+% ----------------------------------------------------------------------------------------------------------
+% Abstände Überschrift
+\titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+\titlespacing{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+
+% Kopfzeile
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\subsubsectionmark}[1]{}
+\lhead{Kapitel \thesection}
+\rhead{\rightmark}
+
+\onehalfspacing
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\theHsection}{\arabic{section}}
+\setcounter{section}{0}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ----------------------------------------------------------------------------------------------------------
+% Architektur
+% ----------------------------------------------------------------------------------------------------------
+\section{Architektur}
+
+
+% ----------------------------------------------------------------------------------------------------------
+% Vorgehen
+% ----------------------------------------------------------------------------------------------------------
+\section{Vorgehen}
+
+
+% ----------------------------------------------------------------------------------------------------------
+% Probleme
+% ----------------------------------------------------------------------------------------------------------
+\section{Probleme}
+	
+
+		
+\end{document}
