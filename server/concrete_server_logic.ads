@@ -140,6 +140,8 @@ private
 
    function connectedClientsToClientList(this : in Concrete_Server_Ptr) return userViewOnlineList.List;
 
+   procedure declineConnectionWithRefusedMessage(client : Concrete_Client_Ptr; messageContent : String);
+   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String);
 
 
 end Concrete_Server_Logic;

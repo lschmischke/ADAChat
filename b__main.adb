@@ -30,7 +30,7 @@ package body ada_main is
    E088 : Short_Integer; pragma Import (Ada, E088, "system__storage_pools_E");
    E075 : Short_Integer; pragma Import (Ada, E075, "system__finalization_masters_E");
    E071 : Short_Integer; pragma Import (Ada, E071, "system__storage_pools__subpools_E");
-   E435 : Short_Integer; pragma Import (Ada, E435, "system__task_info_E");
+   E441 : Short_Integer; pragma Import (Ada, E441, "system__task_info_E");
    E124 : Short_Integer; pragma Import (Ada, E124, "gnat__secure_hashes_E");
    E131 : Short_Integer; pragma Import (Ada, E131, "gnat__secure_hashes__sha2_common_E");
    E126 : Short_Integer; pragma Import (Ada, E126, "gnat__secure_hashes__sha2_64_E");
@@ -43,15 +43,15 @@ package body ada_main is
    E122 : Short_Integer; pragma Import (Ada, E122, "gnat__sha512_E");
    E140 : Short_Integer; pragma Import (Ada, E140, "gnat__sockets__thin_common_E");
    E136 : Short_Integer; pragma Import (Ada, E136, "gnat__sockets__thin_E");
-   E484 : Short_Integer; pragma Import (Ada, E484, "gnat__string_split_E");
+   E490 : Short_Integer; pragma Import (Ada, E490, "gnat__string_split_E");
    E157 : Short_Integer; pragma Import (Ada, E157, "system__strings__stream_ops_E");
-   E449 : Short_Integer; pragma Import (Ada, E449, "system__tasking__initialization_E");
-   E473 : Short_Integer; pragma Import (Ada, E473, "ada__real_time_E");
+   E455 : Short_Integer; pragma Import (Ada, E455, "system__tasking__initialization_E");
+   E479 : Short_Integer; pragma Import (Ada, E479, "ada__real_time_E");
    E102 : Short_Integer; pragma Import (Ada, E102, "ada__text_io_E");
-   E457 : Short_Integer; pragma Import (Ada, E457, "system__tasking__protected_objects_E");
-   E461 : Short_Integer; pragma Import (Ada, E461, "system__tasking__protected_objects__entries_E");
-   E465 : Short_Integer; pragma Import (Ada, E465, "system__tasking__queuing_E");
-   E471 : Short_Integer; pragma Import (Ada, E471, "system__tasking__stages_E");
+   E463 : Short_Integer; pragma Import (Ada, E463, "system__tasking__protected_objects_E");
+   E467 : Short_Integer; pragma Import (Ada, E467, "system__tasking__protected_objects__entries_E");
+   E471 : Short_Integer; pragma Import (Ada, E471, "system__tasking__queuing_E");
+   E477 : Short_Integer; pragma Import (Ada, E477, "system__tasking__stages_E");
    E161 : Short_Integer; pragma Import (Ada, E161, "glib_E");
    E179 : Short_Integer; pragma Import (Ada, E179, "gtkada__types_E");
    E096 : Short_Integer; pragma Import (Ada, E096, "client_logic_E");
@@ -118,7 +118,7 @@ package body ada_main is
    E363 : Short_Integer; pragma Import (Ada, E363, "gtk__list_store_E");
    E405 : Short_Integer; pragma Import (Ada, E405, "gtk__tree_store_E");
    E519 : Short_Integer; pragma Import (Ada, E519, "gtkada__builder_E");
-   E485 : Short_Integer; pragma Import (Ada, E485, "gui_to_server_communication_E");
+   E491 : Short_Integer; pragma Import (Ada, E491, "gui_to_server_communication_E");
    E251 : Short_Integer; pragma Import (Ada, E251, "pango__enums_E");
    E269 : Short_Integer; pragma Import (Ada, E269, "pango__attributes_E");
    E255 : Short_Integer; pragma Import (Ada, E255, "pango__font_metrics_E");
@@ -184,7 +184,7 @@ package body ada_main is
    E323 : Short_Integer; pragma Import (Ada, E323, "gtk__print_operation_E");
    E188 : Short_Integer; pragma Import (Ada, E188, "gtk__arguments_E");
    E524 : Short_Integer; pragma Import (Ada, E524, "gtkada__handlers_E");
-   E487 : Short_Integer; pragma Import (Ada, E487, "protocol_E");
+   E493 : Short_Integer; pragma Import (Ada, E493, "protocol_E");
    E526 : Short_Integer; pragma Import (Ada, E526, "serverguicallbacks_E");
    E100 : Short_Integer; pragma Import (Ada, E100, "serverguientrypoint_E");
    E511 : Short_Integer; pragma Import (Ada, E511, "user_databases_E");
@@ -631,7 +631,7 @@ package body ada_main is
          procedure F61;
          pragma Import (Ada, F61, "gui_to_server_communication__finalize_spec");
       begin
-         E485 := E485 - 1;
+         E491 := E491 - 1;
          F61;
       end;
       declare
@@ -841,7 +841,7 @@ package body ada_main is
       begin
          F92;
       end;
-      E461 := E461 - 1;
+      E467 := E467 - 1;
       declare
          procedure F93;
          pragma Import (Ada, F93, "system__tasking__protected_objects__entries__finalize_spec");
@@ -1066,7 +1066,7 @@ package body ada_main is
       System.Finalization_Masters'Elab_Spec;
       System.Storage_Pools.Subpools'Elab_Spec;
       System.Task_Info'Elab_Spec;
-      E435 := E435 + 1;
+      E441 := E441 + 1;
       E124 := E124 + 1;
       E131 := E131 + 1;
       Gnat.Secure_Hashes.Sha2_64'Elab_Spec;
@@ -1105,25 +1105,25 @@ package body ada_main is
       Gnat.Sockets'Elab_Body;
       E133 := E133 + 1;
       Gnat.String_Split'Elab_Spec;
-      E484 := E484 + 1;
+      E490 := E490 + 1;
       System.Strings.Stream_Ops'Elab_Body;
       E157 := E157 + 1;
       System.Tasking.Initialization'Elab_Body;
-      E449 := E449 + 1;
+      E455 := E455 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
-      E473 := E473 + 1;
+      E479 := E479 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E102 := E102 + 1;
       System.Tasking.Protected_Objects'Elab_Body;
-      E457 := E457 + 1;
+      E463 := E463 + 1;
       System.Tasking.Protected_Objects.Entries'Elab_Spec;
-      E461 := E461 + 1;
+      E467 := E467 + 1;
       System.Tasking.Queuing'Elab_Body;
-      E465 := E465 + 1;
-      System.Tasking.Stages'Elab_Body;
       E471 := E471 + 1;
+      System.Tasking.Stages'Elab_Body;
+      E477 := E477 + 1;
       Glib'Elab_Spec;
       E161 := E161 + 1;
       Gtkada.Types'Elab_Spec;
@@ -1241,7 +1241,7 @@ package body ada_main is
       E405 := E405 + 1;
       Gtkada.Builder'Elab_Spec;
       Gui_To_Server_Communication'Elab_Spec;
-      E485 := E485 + 1;
+      E491 := E491 + 1;
       Pango.Enums'Elab_Spec;
       E251 := E251 + 1;
       Pango.Attributes'Elab_Spec;
@@ -1435,7 +1435,7 @@ package body ada_main is
       E524 := E524 + 1;
       Gtkada.Builder'Elab_Body;
       E519 := E519 + 1;
-      E487 := E487 + 1;
+      E493 := E493 + 1;
       User_Databases'Elab_Spec;
       E511 := E511 + 1;
       Server_To_Gui_Communication'Elab_Spec;

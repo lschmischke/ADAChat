@@ -78,7 +78,7 @@ package dataTypes is
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
       chatRoomList : chatRoom_List.List;
-      ServerRoomID : Natural;
+      ServerRoomID : Natural := 0;
    end record;
 
    package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr );
