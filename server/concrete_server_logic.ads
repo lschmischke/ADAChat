@@ -67,7 +67,9 @@ package Concrete_Server_Logic is
 
 private
 
-    task type Client_Task is
+   -- Jede Instanz dieses Tasks ist pro Client fuer die eigentliche Kommunikation
+   -- zwischen den Clients und die Interpretation der Nachrichten zustaendig.
+   task type Client_Task is
       entry Start(newClient : Concrete_Client_Ptr);
    end Client_Task;
 

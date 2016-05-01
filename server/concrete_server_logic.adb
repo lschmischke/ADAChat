@@ -55,10 +55,9 @@ package body Concrete_Server_Logic is
       Main_Server_Task.Start;
 
       -- # Erzeugung des SubServer-Sockets #
-
       Create_Socket (Socket => SubServer.Socket);
-      -- # SubServer mit Server verbinden, Server wartet mit Accept - SubServer fragt mit Connect an #
 
+      -- # SubServer mit Server verbinden, Server wartet mit Accept - SubServer fragt mit Connect an #
       Connect_Socket (Socket => SubServer.Socket, Server => Server.SocketAddress);
       sendServerMessageToClient(SubServer,Connect,"password");
 
@@ -301,7 +300,7 @@ package body Concrete_Server_Logic is
                            chatRoom := Server.chatRooms.Element (incoming_message.receiver);
                            --# Pruefe ob Client in referenziertem Chatraum
                            if (client.chatRoomList.Contains (chatRoom)) then
-				  removeClientFromChatroom (chatRoom, client);
+			      removeClientFromChatroom (chatRoom, client);
                            else
 			      sendServerMessageToClient(client,Refused,"you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)&".");
                            end if;

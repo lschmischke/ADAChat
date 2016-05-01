@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>G:\ADAChat\adachat.gpr</vfs_file>
-    <file_marker column=" 70" line=" 193" >
+  <Project >
+    <file_marker column=" 70" line=" 192" >
       <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
       <vfs_file>G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 24" line=" 144" >
+    <file_marker column=" 24" line=" 146" >
       <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
       <vfs_file>G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
     </file_marker>
@@ -14,7 +13,7 @@
       <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
       <vfs_file>G:\ADAChat\common\datatypes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 30" line=" 79" >
+    <file_marker column=" 30" line=" 78" >
       <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
       <vfs_file>G:\ADAChat\common\datatypes.ads</vfs_file>
     </file_marker>
@@ -22,9 +21,13 @@
       <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
       <vfs_file>G:\ADAChat\common\protocol.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 70" line=" 193" >
+    <file_marker column=" 70" line=" 192" >
       <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
       <vfs_file>G:\ADAChat\server\concrete_server_logic.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>G:\ADAChat\adachat.gpr</vfs_project>
+      <vfs_file>G:\ADAChat\server\concrete_server_logic.ads</vfs_file>
     </file_marker>
   </Project>
   <Project >

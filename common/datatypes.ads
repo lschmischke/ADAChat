@@ -51,8 +51,7 @@ package dataTypes is
    function removeContact (this : in out UserPtr; contactToRemove : UserPtr) return boolean;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
-      -- Jede Instanz dieses Tasks ist pro Client fuer die eigentliche Kommunikation
-      -- zwischen den Clients und die Interpretation der Nachrichten zustaendig.
+
 
 
 
