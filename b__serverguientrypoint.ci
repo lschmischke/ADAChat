@@ -1,0 +1,674 @@
+graph: { title: "b__serverguientrypoint.adb"
+node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
+node: { title: "__gnat_finalize" label: "finalize\nb__serverguientrypoint.adb:1419:17" shape : ellipse }
+node: { title: "_ada_serverguientrypoint" label: "ada_main_program\nb__serverguientrypoint.adb:1407:14" shape : ellipse }
+node: { title: "__gnat_initialize" label: "initialize\nb__serverguientrypoint.adb:1416:17" shape : ellipse }
+node: { title: "concrete_server_gui_logic___elabb" label: "e762b\nb__serverguientrypoint.adb:1403:32" shape : ellipse }
+node: { title: "concrete_server_gui_logic___elabs" label: "e760b\nb__serverguientrypoint.adb:1402:32" shape : ellipse }
+node: { title: "concrete_server_logic___elabb" label: "e758b\nb__serverguientrypoint.adb:1400:28" shape : ellipse }
+node: { title: "concrete_server_logic___elabs" label: "e756b\nb__serverguientrypoint.adb:1399:28" shape : ellipse }
+node: { title: "server_to_gui_communication___elabs" label: "e754b\nb__serverguientrypoint.adb:1397:34" shape : ellipse }
+node: { title: "user_databases___elabs" label: "e752b\nb__serverguientrypoint.adb:1395:21" shape : ellipse }
+node: { title: "serverguicallbacks___elabb" label: "e750b\nb__serverguientrypoint.adb:1393:25" shape : ellipse }
+node: { title: "gtkada__builder___elabb" label: "e748b\nb__serverguientrypoint.adb:1390:21" shape : ellipse }
+node: { title: "gtkada__handlers___elabs" label: "e746b\nb__serverguientrypoint.adb:1388:22" shape : ellipse }
+node: { title: "gdk__frame_clock___elabb" label: "e744b\nb__serverguientrypoint.adb:1385:22" shape : ellipse }
+node: { title: "gdk__display___elabb" label: "e742b\nb__serverguientrypoint.adb:1383:18" shape : ellipse }
+node: { title: "glib__menu_model___elabb" label: "e740b\nb__serverguientrypoint.adb:1381:22" shape : ellipse }
+node: { title: "gtk__accel_group___elabb" label: "e738b\nb__serverguientrypoint.adb:1379:22" shape : ellipse }
+node: { title: "gtk__adjustment___elabb" label: "e736b\nb__serverguientrypoint.adb:1377:21" shape : ellipse }
+node: { title: "gtk__entry_buffer___elabb" label: "e734b\nb__serverguientrypoint.adb:1374:23" shape : ellipse }
+node: { title: "gtk__style___elabb" label: "e732b\nb__serverguientrypoint.adb:1372:16" shape : ellipse }
+node: { title: "gtk__clipboard___elabb" label: "e730b\nb__serverguientrypoint.adb:1370:20" shape : ellipse }
+node: { title: "gtk__text_tag_table___elabb" label: "e728b\nb__serverguientrypoint.adb:1366:25" shape : ellipse }
+node: { title: "gtk__widget___elabb" label: "e726b\nb__serverguientrypoint.adb:1363:17" shape : ellipse }
+node: { title: "gtk__action___elabb" label: "e724b\nb__serverguientrypoint.adb:1361:17" shape : ellipse }
+node: { title: "gtk__cell_renderer___elabb" label: "e722b\nb__serverguientrypoint.adb:1359:24" shape : ellipse }
+node: { title: "gtk__cell_area___elabb" label: "e720b\nb__serverguientrypoint.adb:1357:20" shape : ellipse }
+node: { title: "gtk__cell_renderer_text___elabb" label: "e718b\nb__serverguientrypoint.adb:1355:29" shape : ellipse }
+node: { title: "gtk__cell_renderer_toggle___elabb" label: "e716b\nb__serverguientrypoint.adb:1353:31" shape : ellipse }
+node: { title: "gtk__container___elabb" label: "e714b\nb__serverguientrypoint.adb:1351:20" shape : ellipse }
+node: { title: "gtk__button___elabb" label: "e712b\nb__serverguientrypoint.adb:1349:17" shape : ellipse }
+node: { title: "gtk__entry_completion___elabb" label: "e710b\nb__serverguientrypoint.adb:1347:27" shape : ellipse }
+node: { title: "gtk__grange___elabb" label: "e708b\nb__serverguientrypoint.adb:1345:17" shape : ellipse }
+node: { title: "gtk__menu_item___elabb" label: "e706b\nb__serverguientrypoint.adb:1343:20" shape : ellipse }
+node: { title: "gtk__menu_shell___elabb" label: "e704b\nb__serverguientrypoint.adb:1341:21" shape : ellipse }
+node: { title: "gtk__menu___elabb" label: "e702b\nb__serverguientrypoint.adb:1339:15" shape : ellipse }
+node: { title: "gtk__notebook___elabb" label: "e700b\nb__serverguientrypoint.adb:1337:19" shape : ellipse }
+node: { title: "gtk__scrolled_window___elabb" label: "e698b\nb__serverguientrypoint.adb:1335:26" shape : ellipse }
+node: { title: "gtk__status_bar___elabb" label: "e696b\nb__serverguientrypoint.adb:1333:21" shape : ellipse }
+node: { title: "gtk__style_context___elabb" label: "e694b\nb__serverguientrypoint.adb:1331:24" shape : ellipse }
+node: { title: "gtk__gentry___elabb" label: "e692b\nb__serverguientrypoint.adb:1329:17" shape : ellipse }
+node: { title: "gtk__spin_button___elabb" label: "e690b\nb__serverguientrypoint.adb:1327:22" shape : ellipse }
+node: { title: "gtk__text_buffer___elabb" label: "e688b\nb__serverguientrypoint.adb:1325:22" shape : ellipse }
+node: { title: "gtk__text_view___elabb" label: "e686b\nb__serverguientrypoint.adb:1323:20" shape : ellipse }
+node: { title: "gtk__tree_selection___elabb" label: "e684b\nb__serverguientrypoint.adb:1321:25" shape : ellipse }
+node: { title: "gtk__tree_view_column___elabb" label: "e682b\nb__serverguientrypoint.adb:1319:27" shape : ellipse }
+node: { title: "gtk__tree_view___elabb" label: "e680b\nb__serverguientrypoint.adb:1317:20" shape : ellipse }
+node: { title: "gtk__window___elabb" label: "e678b\nb__serverguientrypoint.adb:1315:17" shape : ellipse }
+node: { title: "gtk__dialog___elabb" label: "e676b\nb__serverguientrypoint.adb:1313:17" shape : ellipse }
+node: { title: "gtk__print_operation___elabb" label: "e674b\nb__serverguientrypoint.adb:1311:26" shape : ellipse }
+node: { title: "gtk__arguments___elabs" label: "e672b\nb__serverguientrypoint.adb:1309:20" shape : ellipse }
+node: { title: "gtk__print_operation___elabs" label: "e670b\nb__serverguientrypoint.adb:1308:26" shape : ellipse }
+node: { title: "gtk__dialog___elabs" label: "e668b\nb__serverguientrypoint.adb:1307:17" shape : ellipse }
+node: { title: "gtk__window___elabs" label: "e666b\nb__serverguientrypoint.adb:1306:17" shape : ellipse }
+node: { title: "gtk__tree_view___elabs" label: "e664b\nb__serverguientrypoint.adb:1305:20" shape : ellipse }
+node: { title: "gtk__tree_view_column___elabs" label: "e662b\nb__serverguientrypoint.adb:1304:27" shape : ellipse }
+node: { title: "gtk__tree_selection___elabs" label: "e660b\nb__serverguientrypoint.adb:1303:25" shape : ellipse }
+node: { title: "gtk__tooltip___elabb" label: "e658b\nb__serverguientrypoint.adb:1301:18" shape : ellipse }
+node: { title: "gtk__tooltip___elabs" label: "e656b\nb__serverguientrypoint.adb:1300:18" shape : ellipse }
+node: { title: "gtk__text_view___elabs" label: "e654b\nb__serverguientrypoint.adb:1299:20" shape : ellipse }
+node: { title: "gtk__text_buffer___elabs" label: "e652b\nb__serverguientrypoint.adb:1298:22" shape : ellipse }
+node: { title: "gtk__text_child_anchor___elabb" label: "e650b\nb__serverguientrypoint.adb:1296:28" shape : ellipse }
+node: { title: "gtk__text_child_anchor___elabs" label: "e648b\nb__serverguientrypoint.adb:1295:28" shape : ellipse }
+node: { title: "gtk__spin_button___elabs" label: "e646b\nb__serverguientrypoint.adb:1294:22" shape : ellipse }
+node: { title: "gtk__gentry___elabs" label: "e644b\nb__serverguientrypoint.adb:1293:17" shape : ellipse }
+node: { title: "gtk__image___elabb" label: "e642b\nb__serverguientrypoint.adb:1291:16" shape : ellipse }
+node: { title: "gtk__image___elabs" label: "e640b\nb__serverguientrypoint.adb:1290:16" shape : ellipse }
+node: { title: "gtk__icon_set___elabs" label: "e638b\nb__serverguientrypoint.adb:1288:19" shape : ellipse }
+node: { title: "gtk__style_context___elabs" label: "e636b\nb__serverguientrypoint.adb:1287:24" shape : ellipse }
+node: { title: "gtk__status_bar___elabs" label: "e634b\nb__serverguientrypoint.adb:1285:21" shape : ellipse }
+node: { title: "gtk__scrolled_window___elabs" label: "e632b\nb__serverguientrypoint.adb:1284:26" shape : ellipse }
+node: { title: "gtk__scrollbar___elabb" label: "e630b\nb__serverguientrypoint.adb:1282:20" shape : ellipse }
+node: { title: "gtk__scrollbar___elabs" label: "e628b\nb__serverguientrypoint.adb:1281:20" shape : ellipse }
+node: { title: "gtk__notebook___elabs" label: "e626b\nb__serverguientrypoint.adb:1280:19" shape : ellipse }
+node: { title: "gtk__misc___elabb" label: "e624b\nb__serverguientrypoint.adb:1278:15" shape : ellipse }
+node: { title: "gtk__misc___elabs" label: "e622b\nb__serverguientrypoint.adb:1277:15" shape : ellipse }
+node: { title: "gtk__menu___elabs" label: "e620b\nb__serverguientrypoint.adb:1276:15" shape : ellipse }
+node: { title: "gtk__menu_shell___elabs" label: "e618b\nb__serverguientrypoint.adb:1275:21" shape : ellipse }
+node: { title: "gtk__menu_item___elabs" label: "e616b\nb__serverguientrypoint.adb:1274:20" shape : ellipse }
+node: { title: "gtk__grange___elabs" label: "e614b\nb__serverguientrypoint.adb:1271:17" shape : ellipse }
+node: { title: "gtk__frame___elabb" label: "e612b\nb__serverguientrypoint.adb:1269:16" shape : ellipse }
+node: { title: "gtk__frame___elabs" label: "e610b\nb__serverguientrypoint.adb:1268:16" shape : ellipse }
+node: { title: "gtk__entry_completion___elabs" label: "e608b\nb__serverguientrypoint.adb:1267:27" shape : ellipse }
+node: { title: "gtk__button___elabs" label: "e606b\nb__serverguientrypoint.adb:1266:17" shape : ellipse }
+node: { title: "gtk__box___elabb" label: "e604b\nb__serverguientrypoint.adb:1264:14" shape : ellipse }
+node: { title: "gtk__box___elabs" label: "e602b\nb__serverguientrypoint.adb:1263:14" shape : ellipse }
+node: { title: "gtk__bin___elabb" label: "e600b\nb__serverguientrypoint.adb:1261:14" shape : ellipse }
+node: { title: "gtk__bin___elabs" label: "e598b\nb__serverguientrypoint.adb:1260:14" shape : ellipse }
+node: { title: "gtk__container___elabs" label: "e596b\nb__serverguientrypoint.adb:1259:20" shape : ellipse }
+node: { title: "gtk__cell_renderer_toggle___elabs" label: "e594b\nb__serverguientrypoint.adb:1258:31" shape : ellipse }
+node: { title: "gtk__cell_renderer_text___elabs" label: "e592b\nb__serverguientrypoint.adb:1257:29" shape : ellipse }
+node: { title: "gtk__cell_area___elabs" label: "e590b\nb__serverguientrypoint.adb:1256:20" shape : ellipse }
+node: { title: "gtk__cell_renderer___elabs" label: "e588b\nb__serverguientrypoint.adb:1254:24" shape : ellipse }
+node: { title: "gtk__activatable___elabs" label: "e586b\nb__serverguientrypoint.adb:1252:22" shape : ellipse }
+node: { title: "gtk__action___elabs" label: "e584b\nb__serverguientrypoint.adb:1251:17" shape : ellipse }
+node: { title: "gtk__widget___elabs" label: "e582b\nb__serverguientrypoint.adb:1250:17" shape : ellipse }
+node: { title: "gtk__print_context___elabb" label: "e580b\nb__serverguientrypoint.adb:1248:24" shape : ellipse }
+node: { title: "gtk__print_context___elabs" label: "e578b\nb__serverguientrypoint.adb:1247:24" shape : ellipse }
+node: { title: "pango__layout___elabb" label: "e576b\nb__serverguientrypoint.adb:1245:19" shape : ellipse }
+node: { title: "pango__layout___elabs" label: "e574b\nb__serverguientrypoint.adb:1244:19" shape : ellipse }
+node: { title: "pango__tabs___elabs" label: "e572b\nb__serverguientrypoint.adb:1242:17" shape : ellipse }
+node: { title: "pango__font_map___elabb" label: "e570b\nb__serverguientrypoint.adb:1240:21" shape : ellipse }
+node: { title: "pango__font_map___elabs" label: "e568b\nb__serverguientrypoint.adb:1239:21" shape : ellipse }
+node: { title: "pango__context___elabb" label: "e566b\nb__serverguientrypoint.adb:1237:20" shape : ellipse }
+node: { title: "pango__context___elabs" label: "e564b\nb__serverguientrypoint.adb:1236:20" shape : ellipse }
+node: { title: "pango__fontset___elabb" label: "e562b\nb__serverguientrypoint.adb:1233:20" shape : ellipse }
+node: { title: "pango__fontset___elabs" label: "e560b\nb__serverguientrypoint.adb:1232:20" shape : ellipse }
+node: { title: "pango__font_family___elabb" label: "e558b\nb__serverguientrypoint.adb:1230:24" shape : ellipse }
+node: { title: "pango__font_family___elabs" label: "e556b\nb__serverguientrypoint.adb:1229:24" shape : ellipse }
+node: { title: "pango__font_face___elabb" label: "e554b\nb__serverguientrypoint.adb:1227:22" shape : ellipse }
+node: { title: "pango__font_face___elabs" label: "e552b\nb__serverguientrypoint.adb:1226:22" shape : ellipse }
+node: { title: "gtk__text_tag_table___elabs" label: "e550b\nb__serverguientrypoint.adb:1225:25" shape : ellipse }
+node: { title: "gtk__text_iter___elabs" label: "e548b\nb__serverguientrypoint.adb:1223:20" shape : ellipse }
+node: { title: "gtk__text_tag___elabb" label: "e546b\nb__serverguientrypoint.adb:1221:19" shape : ellipse }
+node: { title: "gtk__text_tag___elabs" label: "e544b\nb__serverguientrypoint.adb:1220:19" shape : ellipse }
+node: { title: "pango__font___elabb" label: "e542b\nb__serverguientrypoint.adb:1217:17" shape : ellipse }
+node: { title: "pango__font___elabs" label: "e540b\nb__serverguientrypoint.adb:1216:17" shape : ellipse }
+node: { title: "pango__language___elabs" label: "e538b\nb__serverguientrypoint.adb:1214:21" shape : ellipse }
+node: { title: "pango__font_metrics___elabs" label: "e536b\nb__serverguientrypoint.adb:1212:25" shape : ellipse }
+node: { title: "pango__attributes___elabs" label: "e534b\nb__serverguientrypoint.adb:1210:23" shape : ellipse }
+node: { title: "pango__enums___elabs" label: "e532b\nb__serverguientrypoint.adb:1208:18" shape : ellipse }
+node: { title: "gui_to_server_communication___elabs" label: "e530b\nb__serverguientrypoint.adb:1206:34" shape : ellipse }
+node: { title: "gtkada__builder___elabs" label: "e528b\nb__serverguientrypoint.adb:1205:21" shape : ellipse }
+node: { title: "gtk__tree_store___elabb" label: "e526b\nb__serverguientrypoint.adb:1203:21" shape : ellipse }
+node: { title: "gtk__tree_store___elabs" label: "e524b\nb__serverguientrypoint.adb:1202:21" shape : ellipse }
+node: { title: "gtk__list_store___elabb" label: "e522b\nb__serverguientrypoint.adb:1200:21" shape : ellipse }
+node: { title: "gtk__list_store___elabs" label: "e520b\nb__serverguientrypoint.adb:1199:21" shape : ellipse }
+node: { title: "gtk__tree_model___elabs" label: "e518b\nb__serverguientrypoint.adb:1196:21" shape : ellipse }
+node: { title: "gtk__text_mark___elabb" label: "e516b\nb__serverguientrypoint.adb:1194:20" shape : ellipse }
+node: { title: "gtk__text_mark___elabs" label: "e514b\nb__serverguientrypoint.adb:1193:20" shape : ellipse }
+node: { title: "gtk__clipboard___elabs" label: "e512b\nb__serverguientrypoint.adb:1192:20" shape : ellipse }
+node: { title: "gtk__target_list___elabs" label: "e510b\nb__serverguientrypoint.adb:1190:22" shape : ellipse }
+node: { title: "gtk__style___elabs" label: "e508b\nb__serverguientrypoint.adb:1188:16" shape : ellipse }
+node: { title: "gtk__selection_data___elabb" label: "e506b\nb__serverguientrypoint.adb:1186:25" shape : ellipse }
+node: { title: "gtk__selection_data___elabs" label: "e504b\nb__serverguientrypoint.adb:1185:25" shape : ellipse }
+node: { title: "gtk__scrollable___elabs" label: "e502b\nb__serverguientrypoint.adb:1183:21" shape : ellipse }
+node: { title: "gtk__print_settings___elabb" label: "e500b\nb__serverguientrypoint.adb:1181:25" shape : ellipse }
+node: { title: "gtk__print_settings___elabs" label: "e498b\nb__serverguientrypoint.adb:1180:25" shape : ellipse }
+node: { title: "gtk__page_setup___elabb" label: "e496b\nb__serverguientrypoint.adb:1178:21" shape : ellipse }
+node: { title: "gtk__page_setup___elabs" label: "e494b\nb__serverguientrypoint.adb:1177:21" shape : ellipse }
+node: { title: "gtk__paper_size___elabs" label: "e492b\nb__serverguientrypoint.adb:1175:21" shape : ellipse }
+node: { title: "gtk__orientable___elabs" label: "e490b\nb__serverguientrypoint.adb:1173:21" shape : ellipse }
+node: { title: "gtk__icon_source___elabs" label: "e488b\nb__serverguientrypoint.adb:1171:22" shape : ellipse }
+node: { title: "gtk__enums___elabs" label: "e486b\nb__serverguientrypoint.adb:1169:16" shape : ellipse }
+node: { title: "gtk__entry_buffer___elabs" label: "e484b\nb__serverguientrypoint.adb:1168:23" shape : ellipse }
+node: { title: "gtk__css_section___elabs" label: "e482b\nb__serverguientrypoint.adb:1166:22" shape : ellipse }
+node: { title: "gtk__cell_editable___elabs" label: "e480b\nb__serverguientrypoint.adb:1165:24" shape : ellipse }
+node: { title: "gtk__cell_area_context___elabb" label: "e478b\nb__serverguientrypoint.adb:1163:28" shape : ellipse }
+node: { title: "gtk__cell_area_context___elabs" label: "e476b\nb__serverguientrypoint.adb:1162:28" shape : ellipse }
+node: { title: "gtk__builder___elabb" label: "e474b\nb__serverguientrypoint.adb:1159:18" shape : ellipse }
+node: { title: "gtk__builder___elabs" label: "e472b\nb__serverguientrypoint.adb:1158:18" shape : ellipse }
+node: { title: "gtk__adjustment___elabs" label: "e470b\nb__serverguientrypoint.adb:1157:21" shape : ellipse }
+node: { title: "gtk__actionable___elabs" label: "e468b\nb__serverguientrypoint.adb:1155:21" shape : ellipse }
+node: { title: "gtk__accel_group___elabs" label: "e466b\nb__serverguientrypoint.adb:1154:22" shape : ellipse }
+node: { title: "glib__menu_model___elabs" label: "e464b\nb__serverguientrypoint.adb:1153:22" shape : ellipse }
+node: { title: "glib__variant___elabs" label: "e462b\nb__serverguientrypoint.adb:1151:19" shape : ellipse }
+node: { title: "gdk__window___elabs" label: "e460b\nb__serverguientrypoint.adb:1149:17" shape : ellipse }
+node: { title: "gdk__drag_contexts___elabb" label: "e458b\nb__serverguientrypoint.adb:1147:24" shape : ellipse }
+node: { title: "gdk__drag_contexts___elabs" label: "e456b\nb__serverguientrypoint.adb:1146:24" shape : ellipse }
+node: { title: "gdk__device___elabb" label: "e454b\nb__serverguientrypoint.adb:1144:17" shape : ellipse }
+node: { title: "gdk__device___elabs" label: "e452b\nb__serverguientrypoint.adb:1143:17" shape : ellipse }
+node: { title: "gdk__screen___elabb" label: "e450b\nb__serverguientrypoint.adb:1141:17" shape : ellipse }
+node: { title: "gdk__screen___elabs" label: "e448b\nb__serverguientrypoint.adb:1140:17" shape : ellipse }
+node: { title: "glib__properties___elabs" label: "e446b\nb__serverguientrypoint.adb:1138:22" shape : ellipse }
+node: { title: "gdk__pixbuf___elabs" label: "e444b\nb__serverguientrypoint.adb:1136:17" shape : ellipse }
+node: { title: "gdk__display___elabs" label: "e442b\nb__serverguientrypoint.adb:1135:18" shape : ellipse }
+node: { title: "gdk__event___elabs" label: "e440b\nb__serverguientrypoint.adb:1133:16" shape : ellipse }
+node: { title: "gdk__types___elabs" label: "e438b\nb__serverguientrypoint.adb:1131:16" shape : ellipse }
+node: { title: "gdk__frame_clock___elabs" label: "e436b\nb__serverguientrypoint.adb:1130:22" shape : ellipse }
+node: { title: "gdk__color___elabb" label: "e434b\nb__serverguientrypoint.adb:1127:16" shape : ellipse }
+node: { title: "gdk__rgba___elabb" label: "e432b\nb__serverguientrypoint.adb:1125:15" shape : ellipse }
+node: { title: "glib__object___elabb" label: "e430b\nb__serverguientrypoint.adb:1123:18" shape : ellipse }
+node: { title: "gtkada__bindings___elabs" label: "e428b\nb__serverguientrypoint.adb:1118:22" shape : ellipse }
+node: { title: "glib__generic_properties___elabb" label: "e426b\nb__serverguientrypoint.adb:1115:30" shape : ellipse }
+node: { title: "glib__generic_properties___elabs" label: "e424b\nb__serverguientrypoint.adb:1114:30" shape : ellipse }
+node: { title: "gdk__color___elabs" label: "e422b\nb__serverguientrypoint.adb:1112:16" shape : ellipse }
+node: { title: "glib__values___elabb" label: "e420b\nb__serverguientrypoint.adb:1108:18" shape : ellipse }
+node: { title: "glib__object___elabs" label: "e418b\nb__serverguientrypoint.adb:1106:18" shape : ellipse }
+node: { title: "gdk__visual___elabb" label: "e416b\nb__serverguientrypoint.adb:1103:17" shape : ellipse }
+node: { title: "gdk__visual___elabs" label: "e414b\nb__serverguientrypoint.adb:1102:17" shape : ellipse }
+node: { title: "gdk__frame_timings___elabs" label: "e412b\nb__serverguientrypoint.adb:1099:24" shape : ellipse }
+node: { title: "datatypes___elabs" label: "e410b\nb__serverguientrypoint.adb:1097:16" shape : ellipse }
+node: { title: "gtkada__types___elabs" label: "e408b\nb__serverguientrypoint.adb:1095:19" shape : ellipse }
+node: { title: "glib___elabs" label: "e406b\nb__serverguientrypoint.adb:1093:11" shape : ellipse }
+node: { title: "system__tasking__stages___elabb" label: "e404b\nb__serverguientrypoint.adb:1091:28" shape : ellipse }
+node: { title: "system__tasking__queuing___elabb" label: "e402b\nb__serverguientrypoint.adb:1089:29" shape : ellipse }
+node: { title: "system__tasking__protected_objects__entries___elabs" label: "e400b\nb__serverguientrypoint.adb:1087:47" shape : ellipse }
+node: { title: "system__tasking__protected_objects___elabb" label: "e398b\nb__serverguientrypoint.adb:1085:39" shape : ellipse }
+node: { title: "ada__text_io___elabb" label: "e396b\nb__serverguientrypoint.adb:1083:18" shape : ellipse }
+node: { title: "ada__text_io___elabs" label: "e394b\nb__serverguientrypoint.adb:1082:18" shape : ellipse }
+node: { title: "ada__real_time___elabb" label: "e392b\nb__serverguientrypoint.adb:1080:20" shape : ellipse }
+node: { title: "ada__real_time___elabs" label: "e390b\nb__serverguientrypoint.adb:1079:20" shape : ellipse }
+node: { title: "system__tasking__initialization___elabb" label: "e388b\nb__serverguientrypoint.adb:1077:36" shape : ellipse }
+node: { title: "system__strings__stream_ops___elabb" label: "e386b\nb__serverguientrypoint.adb:1075:32" shape : ellipse }
+node: { title: "gnat__string_split___elabs" label: "e384b\nb__serverguientrypoint.adb:1073:24" shape : ellipse }
+node: { title: "gnat__sockets___elabb" label: "e382b\nb__serverguientrypoint.adb:1071:19" shape : ellipse }
+node: { title: "gnat__sockets__thin___elabb" label: "e380b\nb__serverguientrypoint.adb:1069:24" shape : ellipse }
+node: { title: "gnat__sockets__thin_common___elabs" label: "e378b\nb__serverguientrypoint.adb:1067:31" shape : ellipse }
+node: { title: "gnat__sha512___elabs" label: "e376b\nb__serverguientrypoint.adb:1065:18" shape : ellipse }
+node: { title: "ada__strings__unbounded___elabs" label: "e374b\nb__serverguientrypoint.adb:1063:28" shape : ellipse }
+node: { title: "system__secondary_stack___elabb" label: "e372b\nb__serverguientrypoint.adb:1061:29" shape : ellipse }
+node: { title: "system__os_lib___elabb" label: "e370b\nb__serverguientrypoint.adb:1059:20" shape : ellipse }
+node: { title: "system__soft_links___elabb" label: "e368b\nb__serverguientrypoint.adb:1057:24" shape : ellipse }
+node: { title: "ada__tags___elabb" label: "e366b\nb__serverguientrypoint.adb:1054:15" shape : ellipse }
+node: { title: "system__file_io___elabb" label: "e364b\nb__serverguientrypoint.adb:1050:21" shape : ellipse }
+node: { title: "system__finalization_masters___elabb" label: "e362b\nb__serverguientrypoint.adb:1048:34" shape : ellipse }
+node: { title: "system__pool_size___elabs" label: "e360b\nb__serverguientrypoint.adb:1045:23" shape : ellipse }
+node: { title: "gnat__sockets___elabs" label: "e358b\nb__serverguientrypoint.adb:1044:19" shape : ellipse }
+node: { title: "system__pool_global___elabs" label: "e356b\nb__serverguientrypoint.adb:1042:25" shape : ellipse }
+node: { title: "system__assertions___elabs" label: "e354b\nb__serverguientrypoint.adb:1040:24" shape : ellipse }
+node: { title: "gnat__secure_hashes__sha2_64___elabs" label: "e352b\nb__serverguientrypoint.adb:1038:33" shape : ellipse }
+node: { title: "system__task_info___elabs" label: "e350b\nb__serverguientrypoint.adb:1034:23" shape : ellipse }
+node: { title: "system__storage_pools__subpools___elabs" label: "e348b\nb__serverguientrypoint.adb:1033:36" shape : ellipse }
+node: { title: "system__finalization_masters___elabs" label: "e346b\nb__serverguientrypoint.adb:1032:34" shape : ellipse }
+node: { title: "system__storage_pools___elabs" label: "e344b\nb__serverguientrypoint.adb:1030:27" shape : ellipse }
+node: { title: "ada__finalization___elabs" label: "e342b\nb__serverguientrypoint.adb:1028:23" shape : ellipse }
+node: { title: "system__finalization_root___elabs" label: "e340b\nb__serverguientrypoint.adb:1026:31" shape : ellipse }
+node: { title: "ada__streams__stream_io___elabs" label: "e338b\nb__serverguientrypoint.adb:1024:28" shape : ellipse }
+node: { title: "system__file_control_block___elabs" label: "e336b\nb__serverguientrypoint.adb:1022:32" shape : ellipse }
+node: { title: "system__exceptions___elabs" label: "e334b\nb__serverguientrypoint.adb:1020:24" shape : ellipse }
+node: { title: "interfaces__c__strings___elabs" label: "e332b\nb__serverguientrypoint.adb:1019:27" shape : ellipse }
+node: { title: "interfaces__c___elabs" label: "e330b\nb__serverguientrypoint.adb:1018:19" shape : ellipse }
+node: { title: "ada__streams___elabs" label: "e328b\nb__serverguientrypoint.adb:1016:18" shape : ellipse }
+node: { title: "ada__tags___elabs" label: "e326b\nb__serverguientrypoint.adb:1015:15" shape : ellipse }
+node: { title: "ada__strings__maps__constants___elabs" label: "e324b\nb__serverguientrypoint.adb:1013:33" shape : ellipse }
+node: { title: "ada__strings__maps___elabs" label: "e322b\nb__serverguientrypoint.adb:1012:23" shape : ellipse }
+node: { title: "ada__strings___elabs" label: "e320b\nb__serverguientrypoint.adb:1010:18" shape : ellipse }
+node: { title: "ada__io_exceptions___elabs" label: "e318b\nb__serverguientrypoint.adb:1008:24" shape : ellipse }
+node: { title: "ada__containers___elabs" label: "e316b\nb__serverguientrypoint.adb:1006:21" shape : ellipse }
+node: { title: "system__exception_table___elabb" label: "e314b\nb__serverguientrypoint.adb:1004:29" shape : ellipse }
+node: { title: "system__soft_links___elabs" label: "e312b\nb__serverguientrypoint.adb:1003:24" shape : ellipse }
+node: { title: "__gnat_runtime_initialize" label: "runtime_initialize\nb__serverguientrypoint.adb:944:17" shape : ellipse }
+node: { title: "system__standard_library__adafinal" label: "s_stalib_adafinal\nb__serverguientrypoint.adb:895:17" shape : ellipse }
+node: { title: "__gnat_runtime_finalize" label: "runtime_finalize\nb__serverguientrypoint.adb:898:17" shape : ellipse }
+node: { title: "__gnat_reraise_library_exception_if_any" label: "reraise_library_exception_if_any\nb__serverguientrypoint.adb:887:20" shape : ellipse }
+node: { title: "ada__streams__stream_io__finalize_spec" label: "f99\nb__serverguientrypoint.adb:881:20" shape : ellipse }
+node: { title: "system__finalization_masters__finalize_spec" label: "f98\nb__serverguientrypoint.adb:874:20" shape : ellipse }
+node: { title: "system__storage_pools__subpools__finalize_spec" label: "f97\nb__serverguientrypoint.adb:868:20" shape : ellipse }
+node: { title: "system__pool_global__finalize_spec" label: "f96\nb__serverguientrypoint.adb:862:20" shape : ellipse }
+node: { title: "gnat__sockets__finalize_spec" label: "f95\nb__serverguientrypoint.adb:855:20" shape : ellipse }
+node: { title: "system__pool_size__finalize_spec" label: "f94\nb__serverguientrypoint.adb:849:20" shape : ellipse }
+node: { title: "system__file_io__finalize_body" label: "f93\nb__serverguientrypoint.adb:839:20" shape : ellipse }
+node: { title: "ada__strings__unbounded__finalize_spec" label: "f92\nb__serverguientrypoint.adb:833:20" shape : ellipse }
+node: { title: "gnat__sockets__finalize_body" label: "f91\nb__serverguientrypoint.adb:825:20" shape : ellipse }
+node: { title: "ada__text_io__finalize_spec" label: "f90\nb__serverguientrypoint.adb:819:20" shape : ellipse }
+node: { title: "system__tasking__protected_objects__entries__finalize_spec" label: "f89\nb__serverguientrypoint.adb:812:20" shape : ellipse }
+node: { title: "glib__finalize_spec" label: "f88\nb__serverguientrypoint.adb:805:20" shape : ellipse }
+node: { title: "datatypes__finalize_spec" label: "f87\nb__serverguientrypoint.adb:798:20" shape : ellipse }
+node: { title: "gdk__frame_timings__finalize_spec" label: "f86\nb__serverguientrypoint.adb:791:20" shape : ellipse }
+node: { title: "glib__object__finalize_spec" label: "f85\nb__serverguientrypoint.adb:784:20" shape : ellipse }
+node: { title: "gdk__frame_clock__finalize_spec" label: "f84\nb__serverguientrypoint.adb:777:20" shape : ellipse }
+node: { title: "gdk__display__finalize_spec" label: "f83\nb__serverguientrypoint.adb:771:20" shape : ellipse }
+node: { title: "gdk__pixbuf__finalize_spec" label: "f82\nb__serverguientrypoint.adb:765:20" shape : ellipse }
+node: { title: "gdk__screen__finalize_spec" label: "f81\nb__serverguientrypoint.adb:758:20" shape : ellipse }
+node: { title: "gdk__device__finalize_spec" label: "f80\nb__serverguientrypoint.adb:751:20" shape : ellipse }
+node: { title: "gdk__drag_contexts__finalize_spec" label: "f79\nb__serverguientrypoint.adb:744:20" shape : ellipse }
+node: { title: "glib__variant__finalize_spec" label: "f78\nb__serverguientrypoint.adb:737:20" shape : ellipse }
+node: { title: "glib__menu_model__finalize_spec" label: "f77\nb__serverguientrypoint.adb:730:20" shape : ellipse }
+node: { title: "gtk__accel_group__finalize_spec" label: "f76\nb__serverguientrypoint.adb:724:20" shape : ellipse }
+node: { title: "gtk__adjustment__finalize_spec" label: "f75\nb__serverguientrypoint.adb:718:20" shape : ellipse }
+node: { title: "gtk__builder__finalize_spec" label: "f74\nb__serverguientrypoint.adb:712:20" shape : ellipse }
+node: { title: "gtk__cell_area_context__finalize_spec" label: "f73\nb__serverguientrypoint.adb:705:20" shape : ellipse }
+node: { title: "gtk__css_section__finalize_spec" label: "f72\nb__serverguientrypoint.adb:698:20" shape : ellipse }
+node: { title: "gtk__entry_buffer__finalize_spec" label: "f71\nb__serverguientrypoint.adb:691:20" shape : ellipse }
+node: { title: "gtk__icon_source__finalize_spec" label: "f70\nb__serverguientrypoint.adb:685:20" shape : ellipse }
+node: { title: "gtk__paper_size__finalize_spec" label: "f69\nb__serverguientrypoint.adb:678:20" shape : ellipse }
+node: { title: "gtk__page_setup__finalize_spec" label: "f68\nb__serverguientrypoint.adb:671:20" shape : ellipse }
+node: { title: "gtk__print_settings__finalize_spec" label: "f67\nb__serverguientrypoint.adb:664:20" shape : ellipse }
+node: { title: "gtk__selection_data__finalize_spec" label: "f66\nb__serverguientrypoint.adb:657:20" shape : ellipse }
+node: { title: "gtk__style__finalize_spec" label: "f65\nb__serverguientrypoint.adb:650:20" shape : ellipse }
+node: { title: "gtk__target_list__finalize_spec" label: "f64\nb__serverguientrypoint.adb:644:20" shape : ellipse }
+node: { title: "gtk__clipboard__finalize_spec" label: "f63\nb__serverguientrypoint.adb:637:20" shape : ellipse }
+node: { title: "gtk__text_mark__finalize_spec" label: "f62\nb__serverguientrypoint.adb:631:20" shape : ellipse }
+node: { title: "gtk__tree_model__finalize_spec" label: "f61\nb__serverguientrypoint.adb:624:20" shape : ellipse }
+node: { title: "gtk__list_store__finalize_spec" label: "f60\nb__serverguientrypoint.adb:618:20" shape : ellipse }
+node: { title: "gtk__tree_store__finalize_spec" label: "f59\nb__serverguientrypoint.adb:611:20" shape : ellipse }
+node: { title: "gtkada__builder__finalize_spec" label: "f58\nb__serverguientrypoint.adb:604:20" shape : ellipse }
+node: { title: "pango__attributes__finalize_spec" label: "f57\nb__serverguientrypoint.adb:598:20" shape : ellipse }
+node: { title: "pango__font_metrics__finalize_spec" label: "f56\nb__serverguientrypoint.adb:591:20" shape : ellipse }
+node: { title: "pango__language__finalize_spec" label: "f55\nb__serverguientrypoint.adb:584:20" shape : ellipse }
+node: { title: "pango__font__finalize_spec" label: "f54\nb__serverguientrypoint.adb:577:20" shape : ellipse }
+node: { title: "gtk__text_tag__finalize_spec" label: "f53\nb__serverguientrypoint.adb:570:20" shape : ellipse }
+node: { title: "gtk__text_tag_table__finalize_spec" label: "f52\nb__serverguientrypoint.adb:563:20" shape : ellipse }
+node: { title: "pango__font_face__finalize_spec" label: "f51\nb__serverguientrypoint.adb:557:20" shape : ellipse }
+node: { title: "pango__font_family__finalize_spec" label: "f50\nb__serverguientrypoint.adb:550:20" shape : ellipse }
+node: { title: "pango__fontset__finalize_spec" label: "f49\nb__serverguientrypoint.adb:543:20" shape : ellipse }
+node: { title: "pango__context__finalize_spec" label: "f48\nb__serverguientrypoint.adb:536:20" shape : ellipse }
+node: { title: "pango__font_map__finalize_spec" label: "f47\nb__serverguientrypoint.adb:529:20" shape : ellipse }
+node: { title: "pango__tabs__finalize_spec" label: "f46\nb__serverguientrypoint.adb:522:20" shape : ellipse }
+node: { title: "pango__layout__finalize_spec" label: "f45\nb__serverguientrypoint.adb:515:20" shape : ellipse }
+node: { title: "gtk__print_context__finalize_spec" label: "f44\nb__serverguientrypoint.adb:508:20" shape : ellipse }
+node: { title: "gtk__widget__finalize_spec" label: "f43\nb__serverguientrypoint.adb:501:20" shape : ellipse }
+node: { title: "gtk__action__finalize_spec" label: "f42\nb__serverguientrypoint.adb:495:20" shape : ellipse }
+node: { title: "gtk__cell_renderer__finalize_spec" label: "f41\nb__serverguientrypoint.adb:489:20" shape : ellipse }
+node: { title: "gtk__cell_area__finalize_spec" label: "f40\nb__serverguientrypoint.adb:483:20" shape : ellipse }
+node: { title: "gtk__cell_renderer_text__finalize_spec" label: "f39\nb__serverguientrypoint.adb:477:20" shape : ellipse }
+node: { title: "gtk__cell_renderer_toggle__finalize_spec" label: "f38\nb__serverguientrypoint.adb:471:20" shape : ellipse }
+node: { title: "gtk__container__finalize_spec" label: "f37\nb__serverguientrypoint.adb:465:20" shape : ellipse }
+node: { title: "gtk__bin__finalize_spec" label: "f36\nb__serverguientrypoint.adb:459:20" shape : ellipse }
+node: { title: "gtk__box__finalize_spec" label: "f35\nb__serverguientrypoint.adb:452:20" shape : ellipse }
+node: { title: "gtk__button__finalize_spec" label: "f34\nb__serverguientrypoint.adb:445:20" shape : ellipse }
+node: { title: "gtk__entry_completion__finalize_spec" label: "f33\nb__serverguientrypoint.adb:439:20" shape : ellipse }
+node: { title: "gtk__frame__finalize_spec" label: "f32\nb__serverguientrypoint.adb:433:20" shape : ellipse }
+node: { title: "gtk__grange__finalize_spec" label: "f31\nb__serverguientrypoint.adb:426:20" shape : ellipse }
+node: { title: "gtk__menu_item__finalize_spec" label: "f30\nb__serverguientrypoint.adb:420:20" shape : ellipse }
+node: { title: "gtk__menu_shell__finalize_spec" label: "f29\nb__serverguientrypoint.adb:414:20" shape : ellipse }
+node: { title: "gtk__menu__finalize_spec" label: "f28\nb__serverguientrypoint.adb:408:20" shape : ellipse }
+node: { title: "gtk__misc__finalize_spec" label: "f27\nb__serverguientrypoint.adb:402:20" shape : ellipse }
+node: { title: "gtk__notebook__finalize_spec" label: "f26\nb__serverguientrypoint.adb:395:20" shape : ellipse }
+node: { title: "gtk__scrollbar__finalize_spec" label: "f25\nb__serverguientrypoint.adb:389:20" shape : ellipse }
+node: { title: "gtk__scrolled_window__finalize_spec" label: "f24\nb__serverguientrypoint.adb:382:20" shape : ellipse }
+node: { title: "gtk__status_bar__finalize_spec" label: "f23\nb__serverguientrypoint.adb:376:20" shape : ellipse }
+node: { title: "gtk__style_context__finalize_spec" label: "f22\nb__serverguientrypoint.adb:370:20" shape : ellipse }
+node: { title: "gtk__icon_set__finalize_spec" label: "f21\nb__serverguientrypoint.adb:364:20" shape : ellipse }
+node: { title: "gtk__image__finalize_spec" label: "f20\nb__serverguientrypoint.adb:357:20" shape : ellipse }
+node: { title: "gtk__gentry__finalize_spec" label: "f19\nb__serverguientrypoint.adb:350:20" shape : ellipse }
+node: { title: "gtk__spin_button__finalize_spec" label: "f18\nb__serverguientrypoint.adb:344:20" shape : ellipse }
+node: { title: "gtk__text_child_anchor__finalize_spec" label: "f17\nb__serverguientrypoint.adb:338:20" shape : ellipse }
+node: { title: "gtk__text_buffer__finalize_spec" label: "f16\nb__serverguientrypoint.adb:331:20" shape : ellipse }
+node: { title: "gtk__text_view__finalize_spec" label: "f15\nb__serverguientrypoint.adb:325:20" shape : ellipse }
+node: { title: "gtk__tooltip__finalize_spec" label: "f14\nb__serverguientrypoint.adb:319:20" shape : ellipse }
+node: { title: "gtk__tree_selection__finalize_spec" label: "f13\nb__serverguientrypoint.adb:312:20" shape : ellipse }
+node: { title: "gtk__tree_view_column__finalize_spec" label: "f12\nb__serverguientrypoint.adb:306:20" shape : ellipse }
+node: { title: "gtk__tree_view__finalize_spec" label: "f11\nb__serverguientrypoint.adb:300:20" shape : ellipse }
+node: { title: "gtk__window__finalize_spec" label: "f10\nb__serverguientrypoint.adb:294:20" shape : ellipse }
+node: { title: "gtk__dialog__finalize_spec" label: "f9\nb__serverguientrypoint.adb:288:20" shape : ellipse }
+node: { title: "gtk__print_operation__finalize_spec" label: "f8\nb__serverguientrypoint.adb:282:20" shape : ellipse }
+node: { title: "gtkada__handlers__finalize_spec" label: "f7\nb__serverguientrypoint.adb:238:20" shape : ellipse }
+node: { title: "gtkada__builder__finalize_body" label: "f6\nb__serverguientrypoint.adb:231:20" shape : ellipse }
+node: { title: "user_databases__finalize_spec" label: "f5\nb__serverguientrypoint.adb:225:20" shape : ellipse }
+node: { title: "server_to_gui_communication__finalize_spec" label: "f4\nb__serverguientrypoint.adb:217:20" shape : ellipse }
+node: { title: "concrete_server_logic__finalize_spec" label: "f3\nb__serverguientrypoint.adb:211:20" shape : ellipse }
+node: { title: "concrete_server_logic__finalize_body" label: "f2\nb__serverguientrypoint.adb:204:20" shape : ellipse }
+node: { title: "concrete_server_gui_logic__finalize_spec" label: "f1\nb__serverguientrypoint.adb:198:20" shape : ellipse }
+node: { title: "main" label: "main\nb__serverguientrypoint.adb:1410:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "main" targetname: "__gnat_finalize" label: "b__serverguientrypoint.adb:1435:7" }
+edge: { sourcename: "main" targetname: "adafinal" label: "b__serverguientrypoint.adb:1434:7" }
+edge: { sourcename: "main" targetname: "_ada_serverguientrypoint" label: "b__serverguientrypoint.adb:1433:7" }
+edge: { sourcename: "main" targetname: "adainit" label: "b__serverguientrypoint.adb:1432:7" }
+edge: { sourcename: "main" targetname: "__gnat_initialize" label: "b__serverguientrypoint.adb:1431:7" }
+edge: { sourcename: "main" targetname: "__main" label: "b__serverguientrypoint.adb:1410:4" }
+node: { title: "adainit" label: "adainit\nb__serverguientrypoint.adb:912:4\n48 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "adainit" targetname: "concrete_server_gui_logic___elabb" label: "b__serverguientrypoint.adb:1403:32" }
+edge: { sourcename: "adainit" targetname: "concrete_server_gui_logic___elabs" label: "b__serverguientrypoint.adb:1402:32" }
+edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabb" label: "b__serverguientrypoint.adb:1400:28" }
+edge: { sourcename: "adainit" targetname: "concrete_server_logic___elabs" label: "b__serverguientrypoint.adb:1399:28" }
+edge: { sourcename: "adainit" targetname: "server_to_gui_communication___elabs" label: "b__serverguientrypoint.adb:1397:34" }
+edge: { sourcename: "adainit" targetname: "user_databases___elabs" label: "b__serverguientrypoint.adb:1395:21" }
+edge: { sourcename: "adainit" targetname: "serverguicallbacks___elabb" label: "b__serverguientrypoint.adb:1393:25" }
+edge: { sourcename: "adainit" targetname: "gtkada__builder___elabb" label: "b__serverguientrypoint.adb:1390:21" }
+edge: { sourcename: "adainit" targetname: "gtkada__handlers___elabs" label: "b__serverguientrypoint.adb:1388:22" }
+edge: { sourcename: "adainit" targetname: "gdk__frame_clock___elabb" label: "b__serverguientrypoint.adb:1385:22" }
+edge: { sourcename: "adainit" targetname: "gdk__display___elabb" label: "b__serverguientrypoint.adb:1383:18" }
+edge: { sourcename: "adainit" targetname: "glib__menu_model___elabb" label: "b__serverguientrypoint.adb:1381:22" }
+edge: { sourcename: "adainit" targetname: "gtk__accel_group___elabb" label: "b__serverguientrypoint.adb:1379:22" }
+edge: { sourcename: "adainit" targetname: "gtk__adjustment___elabb" label: "b__serverguientrypoint.adb:1377:21" }
+edge: { sourcename: "adainit" targetname: "gtk__entry_buffer___elabb" label: "b__serverguientrypoint.adb:1374:23" }
+edge: { sourcename: "adainit" targetname: "gtk__style___elabb" label: "b__serverguientrypoint.adb:1372:16" }
+edge: { sourcename: "adainit" targetname: "gtk__clipboard___elabb" label: "b__serverguientrypoint.adb:1370:20" }
+edge: { sourcename: "adainit" targetname: "gtk__text_tag_table___elabb" label: "b__serverguientrypoint.adb:1366:25" }
+edge: { sourcename: "adainit" targetname: "gtk__widget___elabb" label: "b__serverguientrypoint.adb:1363:17" }
+edge: { sourcename: "adainit" targetname: "gtk__action___elabb" label: "b__serverguientrypoint.adb:1361:17" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_renderer___elabb" label: "b__serverguientrypoint.adb:1359:24" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_area___elabb" label: "b__serverguientrypoint.adb:1357:20" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_renderer_text___elabb" label: "b__serverguientrypoint.adb:1355:29" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_renderer_toggle___elabb" label: "b__serverguientrypoint.adb:1353:31" }
+edge: { sourcename: "adainit" targetname: "gtk__container___elabb" label: "b__serverguientrypoint.adb:1351:20" }
+edge: { sourcename: "adainit" targetname: "gtk__button___elabb" label: "b__serverguientrypoint.adb:1349:17" }
+edge: { sourcename: "adainit" targetname: "gtk__entry_completion___elabb" label: "b__serverguientrypoint.adb:1347:27" }
+edge: { sourcename: "adainit" targetname: "gtk__grange___elabb" label: "b__serverguientrypoint.adb:1345:17" }
+edge: { sourcename: "adainit" targetname: "gtk__menu_item___elabb" label: "b__serverguientrypoint.adb:1343:20" }
+edge: { sourcename: "adainit" targetname: "gtk__menu_shell___elabb" label: "b__serverguientrypoint.adb:1341:21" }
+edge: { sourcename: "adainit" targetname: "gtk__menu___elabb" label: "b__serverguientrypoint.adb:1339:15" }
+edge: { sourcename: "adainit" targetname: "gtk__notebook___elabb" label: "b__serverguientrypoint.adb:1337:19" }
+edge: { sourcename: "adainit" targetname: "gtk__scrolled_window___elabb" label: "b__serverguientrypoint.adb:1335:26" }
+edge: { sourcename: "adainit" targetname: "gtk__status_bar___elabb" label: "b__serverguientrypoint.adb:1333:21" }
+edge: { sourcename: "adainit" targetname: "gtk__style_context___elabb" label: "b__serverguientrypoint.adb:1331:24" }
+edge: { sourcename: "adainit" targetname: "gtk__gentry___elabb" label: "b__serverguientrypoint.adb:1329:17" }
+edge: { sourcename: "adainit" targetname: "gtk__spin_button___elabb" label: "b__serverguientrypoint.adb:1327:22" }
+edge: { sourcename: "adainit" targetname: "gtk__text_buffer___elabb" label: "b__serverguientrypoint.adb:1325:22" }
+edge: { sourcename: "adainit" targetname: "gtk__text_view___elabb" label: "b__serverguientrypoint.adb:1323:20" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_selection___elabb" label: "b__serverguientrypoint.adb:1321:25" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_view_column___elabb" label: "b__serverguientrypoint.adb:1319:27" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_view___elabb" label: "b__serverguientrypoint.adb:1317:20" }
+edge: { sourcename: "adainit" targetname: "gtk__window___elabb" label: "b__serverguientrypoint.adb:1315:17" }
+edge: { sourcename: "adainit" targetname: "gtk__dialog___elabb" label: "b__serverguientrypoint.adb:1313:17" }
+edge: { sourcename: "adainit" targetname: "gtk__print_operation___elabb" label: "b__serverguientrypoint.adb:1311:26" }
+edge: { sourcename: "adainit" targetname: "gtk__arguments___elabs" label: "b__serverguientrypoint.adb:1309:20" }
+edge: { sourcename: "adainit" targetname: "gtk__print_operation___elabs" label: "b__serverguientrypoint.adb:1308:26" }
+edge: { sourcename: "adainit" targetname: "gtk__dialog___elabs" label: "b__serverguientrypoint.adb:1307:17" }
+edge: { sourcename: "adainit" targetname: "gtk__window___elabs" label: "b__serverguientrypoint.adb:1306:17" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_view___elabs" label: "b__serverguientrypoint.adb:1305:20" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_view_column___elabs" label: "b__serverguientrypoint.adb:1304:27" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_selection___elabs" label: "b__serverguientrypoint.adb:1303:25" }
+edge: { sourcename: "adainit" targetname: "gtk__tooltip___elabb" label: "b__serverguientrypoint.adb:1301:18" }
+edge: { sourcename: "adainit" targetname: "gtk__tooltip___elabs" label: "b__serverguientrypoint.adb:1300:18" }
+edge: { sourcename: "adainit" targetname: "gtk__text_view___elabs" label: "b__serverguientrypoint.adb:1299:20" }
+edge: { sourcename: "adainit" targetname: "gtk__text_buffer___elabs" label: "b__serverguientrypoint.adb:1298:22" }
+edge: { sourcename: "adainit" targetname: "gtk__text_child_anchor___elabb" label: "b__serverguientrypoint.adb:1296:28" }
+edge: { sourcename: "adainit" targetname: "gtk__text_child_anchor___elabs" label: "b__serverguientrypoint.adb:1295:28" }
+edge: { sourcename: "adainit" targetname: "gtk__spin_button___elabs" label: "b__serverguientrypoint.adb:1294:22" }
+edge: { sourcename: "adainit" targetname: "gtk__gentry___elabs" label: "b__serverguientrypoint.adb:1293:17" }
+edge: { sourcename: "adainit" targetname: "gtk__image___elabb" label: "b__serverguientrypoint.adb:1291:16" }
+edge: { sourcename: "adainit" targetname: "gtk__image___elabs" label: "b__serverguientrypoint.adb:1290:16" }
+edge: { sourcename: "adainit" targetname: "gtk__icon_set___elabs" label: "b__serverguientrypoint.adb:1288:19" }
+edge: { sourcename: "adainit" targetname: "gtk__style_context___elabs" label: "b__serverguientrypoint.adb:1287:24" }
+edge: { sourcename: "adainit" targetname: "gtk__status_bar___elabs" label: "b__serverguientrypoint.adb:1285:21" }
+edge: { sourcename: "adainit" targetname: "gtk__scrolled_window___elabs" label: "b__serverguientrypoint.adb:1284:26" }
+edge: { sourcename: "adainit" targetname: "gtk__scrollbar___elabb" label: "b__serverguientrypoint.adb:1282:20" }
+edge: { sourcename: "adainit" targetname: "gtk__scrollbar___elabs" label: "b__serverguientrypoint.adb:1281:20" }
+edge: { sourcename: "adainit" targetname: "gtk__notebook___elabs" label: "b__serverguientrypoint.adb:1280:19" }
+edge: { sourcename: "adainit" targetname: "gtk__misc___elabb" label: "b__serverguientrypoint.adb:1278:15" }
+edge: { sourcename: "adainit" targetname: "gtk__misc___elabs" label: "b__serverguientrypoint.adb:1277:15" }
+edge: { sourcename: "adainit" targetname: "gtk__menu___elabs" label: "b__serverguientrypoint.adb:1276:15" }
+edge: { sourcename: "adainit" targetname: "gtk__menu_shell___elabs" label: "b__serverguientrypoint.adb:1275:21" }
+edge: { sourcename: "adainit" targetname: "gtk__menu_item___elabs" label: "b__serverguientrypoint.adb:1274:20" }
+edge: { sourcename: "adainit" targetname: "gtk__grange___elabs" label: "b__serverguientrypoint.adb:1271:17" }
+edge: { sourcename: "adainit" targetname: "gtk__frame___elabb" label: "b__serverguientrypoint.adb:1269:16" }
+edge: { sourcename: "adainit" targetname: "gtk__frame___elabs" label: "b__serverguientrypoint.adb:1268:16" }
+edge: { sourcename: "adainit" targetname: "gtk__entry_completion___elabs" label: "b__serverguientrypoint.adb:1267:27" }
+edge: { sourcename: "adainit" targetname: "gtk__button___elabs" label: "b__serverguientrypoint.adb:1266:17" }
+edge: { sourcename: "adainit" targetname: "gtk__box___elabb" label: "b__serverguientrypoint.adb:1264:14" }
+edge: { sourcename: "adainit" targetname: "gtk__box___elabs" label: "b__serverguientrypoint.adb:1263:14" }
+edge: { sourcename: "adainit" targetname: "gtk__bin___elabb" label: "b__serverguientrypoint.adb:1261:14" }
+edge: { sourcename: "adainit" targetname: "gtk__bin___elabs" label: "b__serverguientrypoint.adb:1260:14" }
+edge: { sourcename: "adainit" targetname: "gtk__container___elabs" label: "b__serverguientrypoint.adb:1259:20" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_renderer_toggle___elabs" label: "b__serverguientrypoint.adb:1258:31" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_renderer_text___elabs" label: "b__serverguientrypoint.adb:1257:29" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_area___elabs" label: "b__serverguientrypoint.adb:1256:20" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_renderer___elabs" label: "b__serverguientrypoint.adb:1254:24" }
+edge: { sourcename: "adainit" targetname: "gtk__activatable___elabs" label: "b__serverguientrypoint.adb:1252:22" }
+edge: { sourcename: "adainit" targetname: "gtk__action___elabs" label: "b__serverguientrypoint.adb:1251:17" }
+edge: { sourcename: "adainit" targetname: "gtk__widget___elabs" label: "b__serverguientrypoint.adb:1250:17" }
+edge: { sourcename: "adainit" targetname: "gtk__print_context___elabb" label: "b__serverguientrypoint.adb:1248:24" }
+edge: { sourcename: "adainit" targetname: "gtk__print_context___elabs" label: "b__serverguientrypoint.adb:1247:24" }
+edge: { sourcename: "adainit" targetname: "pango__layout___elabb" label: "b__serverguientrypoint.adb:1245:19" }
+edge: { sourcename: "adainit" targetname: "pango__layout___elabs" label: "b__serverguientrypoint.adb:1244:19" }
+edge: { sourcename: "adainit" targetname: "pango__tabs___elabs" label: "b__serverguientrypoint.adb:1242:17" }
+edge: { sourcename: "adainit" targetname: "pango__font_map___elabb" label: "b__serverguientrypoint.adb:1240:21" }
+edge: { sourcename: "adainit" targetname: "pango__font_map___elabs" label: "b__serverguientrypoint.adb:1239:21" }
+edge: { sourcename: "adainit" targetname: "pango__context___elabb" label: "b__serverguientrypoint.adb:1237:20" }
+edge: { sourcename: "adainit" targetname: "pango__context___elabs" label: "b__serverguientrypoint.adb:1236:20" }
+edge: { sourcename: "adainit" targetname: "pango__fontset___elabb" label: "b__serverguientrypoint.adb:1233:20" }
+edge: { sourcename: "adainit" targetname: "pango__fontset___elabs" label: "b__serverguientrypoint.adb:1232:20" }
+edge: { sourcename: "adainit" targetname: "pango__font_family___elabb" label: "b__serverguientrypoint.adb:1230:24" }
+edge: { sourcename: "adainit" targetname: "pango__font_family___elabs" label: "b__serverguientrypoint.adb:1229:24" }
+edge: { sourcename: "adainit" targetname: "pango__font_face___elabb" label: "b__serverguientrypoint.adb:1227:22" }
+edge: { sourcename: "adainit" targetname: "pango__font_face___elabs" label: "b__serverguientrypoint.adb:1226:22" }
+edge: { sourcename: "adainit" targetname: "gtk__text_tag_table___elabs" label: "b__serverguientrypoint.adb:1225:25" }
+edge: { sourcename: "adainit" targetname: "gtk__text_iter___elabs" label: "b__serverguientrypoint.adb:1223:20" }
+edge: { sourcename: "adainit" targetname: "gtk__text_tag___elabb" label: "b__serverguientrypoint.adb:1221:19" }
+edge: { sourcename: "adainit" targetname: "gtk__text_tag___elabs" label: "b__serverguientrypoint.adb:1220:19" }
+edge: { sourcename: "adainit" targetname: "pango__font___elabb" label: "b__serverguientrypoint.adb:1217:17" }
+edge: { sourcename: "adainit" targetname: "pango__font___elabs" label: "b__serverguientrypoint.adb:1216:17" }
+edge: { sourcename: "adainit" targetname: "pango__language___elabs" label: "b__serverguientrypoint.adb:1214:21" }
+edge: { sourcename: "adainit" targetname: "pango__font_metrics___elabs" label: "b__serverguientrypoint.adb:1212:25" }
+edge: { sourcename: "adainit" targetname: "pango__attributes___elabs" label: "b__serverguientrypoint.adb:1210:23" }
+edge: { sourcename: "adainit" targetname: "pango__enums___elabs" label: "b__serverguientrypoint.adb:1208:18" }
+edge: { sourcename: "adainit" targetname: "gui_to_server_communication___elabs" label: "b__serverguientrypoint.adb:1206:34" }
+edge: { sourcename: "adainit" targetname: "gtkada__builder___elabs" label: "b__serverguientrypoint.adb:1205:21" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_store___elabb" label: "b__serverguientrypoint.adb:1203:21" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_store___elabs" label: "b__serverguientrypoint.adb:1202:21" }
+edge: { sourcename: "adainit" targetname: "gtk__list_store___elabb" label: "b__serverguientrypoint.adb:1200:21" }
+edge: { sourcename: "adainit" targetname: "gtk__list_store___elabs" label: "b__serverguientrypoint.adb:1199:21" }
+edge: { sourcename: "adainit" targetname: "gtk__tree_model___elabs" label: "b__serverguientrypoint.adb:1196:21" }
+edge: { sourcename: "adainit" targetname: "gtk__text_mark___elabb" label: "b__serverguientrypoint.adb:1194:20" }
+edge: { sourcename: "adainit" targetname: "gtk__text_mark___elabs" label: "b__serverguientrypoint.adb:1193:20" }
+edge: { sourcename: "adainit" targetname: "gtk__clipboard___elabs" label: "b__serverguientrypoint.adb:1192:20" }
+edge: { sourcename: "adainit" targetname: "gtk__target_list___elabs" label: "b__serverguientrypoint.adb:1190:22" }
+edge: { sourcename: "adainit" targetname: "gtk__style___elabs" label: "b__serverguientrypoint.adb:1188:16" }
+edge: { sourcename: "adainit" targetname: "gtk__selection_data___elabb" label: "b__serverguientrypoint.adb:1186:25" }
+edge: { sourcename: "adainit" targetname: "gtk__selection_data___elabs" label: "b__serverguientrypoint.adb:1185:25" }
+edge: { sourcename: "adainit" targetname: "gtk__scrollable___elabs" label: "b__serverguientrypoint.adb:1183:21" }
+edge: { sourcename: "adainit" targetname: "gtk__print_settings___elabb" label: "b__serverguientrypoint.adb:1181:25" }
+edge: { sourcename: "adainit" targetname: "gtk__print_settings___elabs" label: "b__serverguientrypoint.adb:1180:25" }
+edge: { sourcename: "adainit" targetname: "gtk__page_setup___elabb" label: "b__serverguientrypoint.adb:1178:21" }
+edge: { sourcename: "adainit" targetname: "gtk__page_setup___elabs" label: "b__serverguientrypoint.adb:1177:21" }
+edge: { sourcename: "adainit" targetname: "gtk__paper_size___elabs" label: "b__serverguientrypoint.adb:1175:21" }
+edge: { sourcename: "adainit" targetname: "gtk__orientable___elabs" label: "b__serverguientrypoint.adb:1173:21" }
+edge: { sourcename: "adainit" targetname: "gtk__icon_source___elabs" label: "b__serverguientrypoint.adb:1171:22" }
+edge: { sourcename: "adainit" targetname: "gtk__enums___elabs" label: "b__serverguientrypoint.adb:1169:16" }
+edge: { sourcename: "adainit" targetname: "gtk__entry_buffer___elabs" label: "b__serverguientrypoint.adb:1168:23" }
+edge: { sourcename: "adainit" targetname: "gtk__css_section___elabs" label: "b__serverguientrypoint.adb:1166:22" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_editable___elabs" label: "b__serverguientrypoint.adb:1165:24" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_area_context___elabb" label: "b__serverguientrypoint.adb:1163:28" }
+edge: { sourcename: "adainit" targetname: "gtk__cell_area_context___elabs" label: "b__serverguientrypoint.adb:1162:28" }
+edge: { sourcename: "adainit" targetname: "gtk__builder___elabb" label: "b__serverguientrypoint.adb:1159:18" }
+edge: { sourcename: "adainit" targetname: "gtk__builder___elabs" label: "b__serverguientrypoint.adb:1158:18" }
+edge: { sourcename: "adainit" targetname: "gtk__adjustment___elabs" label: "b__serverguientrypoint.adb:1157:21" }
+edge: { sourcename: "adainit" targetname: "gtk__actionable___elabs" label: "b__serverguientrypoint.adb:1155:21" }
+edge: { sourcename: "adainit" targetname: "gtk__accel_group___elabs" label: "b__serverguientrypoint.adb:1154:22" }
+edge: { sourcename: "adainit" targetname: "glib__menu_model___elabs" label: "b__serverguientrypoint.adb:1153:22" }
+edge: { sourcename: "adainit" targetname: "glib__variant___elabs" label: "b__serverguientrypoint.adb:1151:19" }
+edge: { sourcename: "adainit" targetname: "gdk__window___elabs" label: "b__serverguientrypoint.adb:1149:17" }
+edge: { sourcename: "adainit" targetname: "gdk__drag_contexts___elabb" label: "b__serverguientrypoint.adb:1147:24" }
+edge: { sourcename: "adainit" targetname: "gdk__drag_contexts___elabs" label: "b__serverguientrypoint.adb:1146:24" }
+edge: { sourcename: "adainit" targetname: "gdk__device___elabb" label: "b__serverguientrypoint.adb:1144:17" }
+edge: { sourcename: "adainit" targetname: "gdk__device___elabs" label: "b__serverguientrypoint.adb:1143:17" }
+edge: { sourcename: "adainit" targetname: "gdk__screen___elabb" label: "b__serverguientrypoint.adb:1141:17" }
+edge: { sourcename: "adainit" targetname: "gdk__screen___elabs" label: "b__serverguientrypoint.adb:1140:17" }
+edge: { sourcename: "adainit" targetname: "glib__properties___elabs" label: "b__serverguientrypoint.adb:1138:22" }
+edge: { sourcename: "adainit" targetname: "gdk__pixbuf___elabs" label: "b__serverguientrypoint.adb:1136:17" }
+edge: { sourcename: "adainit" targetname: "gdk__display___elabs" label: "b__serverguientrypoint.adb:1135:18" }
+edge: { sourcename: "adainit" targetname: "gdk__event___elabs" label: "b__serverguientrypoint.adb:1133:16" }
+edge: { sourcename: "adainit" targetname: "gdk__types___elabs" label: "b__serverguientrypoint.adb:1131:16" }
+edge: { sourcename: "adainit" targetname: "gdk__frame_clock___elabs" label: "b__serverguientrypoint.adb:1130:22" }
+edge: { sourcename: "adainit" targetname: "gdk__color___elabb" label: "b__serverguientrypoint.adb:1127:16" }
+edge: { sourcename: "adainit" targetname: "gdk__rgba___elabb" label: "b__serverguientrypoint.adb:1125:15" }
+edge: { sourcename: "adainit" targetname: "glib__object___elabb" label: "b__serverguientrypoint.adb:1123:18" }
+edge: { sourcename: "adainit" targetname: "gtkada__bindings___elabs" label: "b__serverguientrypoint.adb:1118:22" }
+edge: { sourcename: "adainit" targetname: "glib__generic_properties___elabb" label: "b__serverguientrypoint.adb:1115:30" }
+edge: { sourcename: "adainit" targetname: "glib__generic_properties___elabs" label: "b__serverguientrypoint.adb:1114:30" }
+edge: { sourcename: "adainit" targetname: "gdk__color___elabs" label: "b__serverguientrypoint.adb:1112:16" }
+edge: { sourcename: "adainit" targetname: "glib__values___elabb" label: "b__serverguientrypoint.adb:1108:18" }
+edge: { sourcename: "adainit" targetname: "glib__object___elabs" label: "b__serverguientrypoint.adb:1106:18" }
+edge: { sourcename: "adainit" targetname: "gdk__visual___elabb" label: "b__serverguientrypoint.adb:1103:17" }
+edge: { sourcename: "adainit" targetname: "gdk__visual___elabs" label: "b__serverguientrypoint.adb:1102:17" }
+edge: { sourcename: "adainit" targetname: "gdk__frame_timings___elabs" label: "b__serverguientrypoint.adb:1099:24" }
+edge: { sourcename: "adainit" targetname: "datatypes___elabs" label: "b__serverguientrypoint.adb:1097:16" }
+edge: { sourcename: "adainit" targetname: "gtkada__types___elabs" label: "b__serverguientrypoint.adb:1095:19" }
+edge: { sourcename: "adainit" targetname: "glib___elabs" label: "b__serverguientrypoint.adb:1093:11" }
+edge: { sourcename: "adainit" targetname: "system__tasking__stages___elabb" label: "b__serverguientrypoint.adb:1091:28" }
+edge: { sourcename: "adainit" targetname: "system__tasking__queuing___elabb" label: "b__serverguientrypoint.adb:1089:29" }
+edge: { sourcename: "adainit" targetname: "system__tasking__protected_objects__entries___elabs" label: "b__serverguientrypoint.adb:1087:47" }
+edge: { sourcename: "adainit" targetname: "system__tasking__protected_objects___elabb" label: "b__serverguientrypoint.adb:1085:39" }
+edge: { sourcename: "adainit" targetname: "ada__text_io___elabb" label: "b__serverguientrypoint.adb:1083:18" }
+edge: { sourcename: "adainit" targetname: "ada__text_io___elabs" label: "b__serverguientrypoint.adb:1082:18" }
+edge: { sourcename: "adainit" targetname: "ada__real_time___elabb" label: "b__serverguientrypoint.adb:1080:20" }
+edge: { sourcename: "adainit" targetname: "ada__real_time___elabs" label: "b__serverguientrypoint.adb:1079:20" }
+edge: { sourcename: "adainit" targetname: "system__tasking__initialization___elabb" label: "b__serverguientrypoint.adb:1077:36" }
+edge: { sourcename: "adainit" targetname: "system__strings__stream_ops___elabb" label: "b__serverguientrypoint.adb:1075:32" }
+edge: { sourcename: "adainit" targetname: "gnat__string_split___elabs" label: "b__serverguientrypoint.adb:1073:24" }
+edge: { sourcename: "adainit" targetname: "gnat__sockets___elabb" label: "b__serverguientrypoint.adb:1071:19" }
+edge: { sourcename: "adainit" targetname: "gnat__sockets__thin___elabb" label: "b__serverguientrypoint.adb:1069:24" }
+edge: { sourcename: "adainit" targetname: "gnat__sockets__thin_common___elabs" label: "b__serverguientrypoint.adb:1067:31" }
+edge: { sourcename: "adainit" targetname: "gnat__sha512___elabs" label: "b__serverguientrypoint.adb:1065:18" }
+edge: { sourcename: "adainit" targetname: "ada__strings__unbounded___elabs" label: "b__serverguientrypoint.adb:1063:28" }
+edge: { sourcename: "adainit" targetname: "system__secondary_stack___elabb" label: "b__serverguientrypoint.adb:1061:29" }
+edge: { sourcename: "adainit" targetname: "system__os_lib___elabb" label: "b__serverguientrypoint.adb:1059:20" }
+edge: { sourcename: "adainit" targetname: "system__soft_links___elabb" label: "b__serverguientrypoint.adb:1057:24" }
+edge: { sourcename: "adainit" targetname: "ada__tags___elabb" label: "b__serverguientrypoint.adb:1054:15" }
+edge: { sourcename: "adainit" targetname: "system__file_io___elabb" label: "b__serverguientrypoint.adb:1050:21" }
+edge: { sourcename: "adainit" targetname: "system__finalization_masters___elabb" label: "b__serverguientrypoint.adb:1048:34" }
+edge: { sourcename: "adainit" targetname: "system__pool_size___elabs" label: "b__serverguientrypoint.adb:1045:23" }
+edge: { sourcename: "adainit" targetname: "gnat__sockets___elabs" label: "b__serverguientrypoint.adb:1044:19" }
+edge: { sourcename: "adainit" targetname: "system__pool_global___elabs" label: "b__serverguientrypoint.adb:1042:25" }
+edge: { sourcename: "adainit" targetname: "system__assertions___elabs" label: "b__serverguientrypoint.adb:1040:24" }
+edge: { sourcename: "adainit" targetname: "gnat__secure_hashes__sha2_64___elabs" label: "b__serverguientrypoint.adb:1038:33" }
+edge: { sourcename: "adainit" targetname: "system__task_info___elabs" label: "b__serverguientrypoint.adb:1034:23" }
+edge: { sourcename: "adainit" targetname: "system__storage_pools__subpools___elabs" label: "b__serverguientrypoint.adb:1033:36" }
+edge: { sourcename: "adainit" targetname: "system__finalization_masters___elabs" label: "b__serverguientrypoint.adb:1032:34" }
+edge: { sourcename: "adainit" targetname: "system__storage_pools___elabs" label: "b__serverguientrypoint.adb:1030:27" }
+edge: { sourcename: "adainit" targetname: "ada__finalization___elabs" label: "b__serverguientrypoint.adb:1028:23" }
+edge: { sourcename: "adainit" targetname: "system__finalization_root___elabs" label: "b__serverguientrypoint.adb:1026:31" }
+edge: { sourcename: "adainit" targetname: "ada__streams__stream_io___elabs" label: "b__serverguientrypoint.adb:1024:28" }
+edge: { sourcename: "adainit" targetname: "system__file_control_block___elabs" label: "b__serverguientrypoint.adb:1022:32" }
+edge: { sourcename: "adainit" targetname: "system__exceptions___elabs" label: "b__serverguientrypoint.adb:1020:24" }
+edge: { sourcename: "adainit" targetname: "interfaces__c__strings___elabs" label: "b__serverguientrypoint.adb:1019:27" }
+edge: { sourcename: "adainit" targetname: "interfaces__c___elabs" label: "b__serverguientrypoint.adb:1018:19" }
+edge: { sourcename: "adainit" targetname: "ada__streams___elabs" label: "b__serverguientrypoint.adb:1016:18" }
+edge: { sourcename: "adainit" targetname: "ada__tags___elabs" label: "b__serverguientrypoint.adb:1015:15" }
+edge: { sourcename: "adainit" targetname: "ada__strings__maps__constants___elabs" label: "b__serverguientrypoint.adb:1013:33" }
+edge: { sourcename: "adainit" targetname: "ada__strings__maps___elabs" label: "b__serverguientrypoint.adb:1012:23" }
+edge: { sourcename: "adainit" targetname: "ada__strings___elabs" label: "b__serverguientrypoint.adb:1010:18" }
+edge: { sourcename: "adainit" targetname: "ada__io_exceptions___elabs" label: "b__serverguientrypoint.adb:1008:24" }
+edge: { sourcename: "adainit" targetname: "ada__containers___elabs" label: "b__serverguientrypoint.adb:1006:21" }
+edge: { sourcename: "adainit" targetname: "system__exception_table___elabb" label: "b__serverguientrypoint.adb:1004:29" }
+edge: { sourcename: "adainit" targetname: "system__soft_links___elabs" label: "b__serverguientrypoint.adb:1003:24" }
+edge: { sourcename: "adainit" targetname: "__gnat_runtime_initialize" label: "b__serverguientrypoint.adb:999:7" }
+node: { title: "adafinal" label: "adafinal\nb__serverguientrypoint.adb:894:4\n16 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "adafinal" targetname: "system__standard_library__adafinal" label: "b__serverguientrypoint.adb:907:7" }
+edge: { sourcename: "adafinal" targetname: "__gnat_runtime_finalize" label: "b__serverguientrypoint.adb:906:7" }
+node: { title: "b__serverguientrypoint.adb:ada_main__finalize_library" label: "finalize_library\nb__serverguientrypoint.adb:194:4\n16 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "__gnat_reraise_library_exception_if_any" label: "b__serverguientrypoint.adb:890:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "ada__streams__stream_io__finalize_spec" label: "b__serverguientrypoint.adb:884:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "system__finalization_masters__finalize_spec" label: "b__serverguientrypoint.adb:877:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "system__storage_pools__subpools__finalize_spec" label: "b__serverguientrypoint.adb:871:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "system__pool_global__finalize_spec" label: "b__serverguientrypoint.adb:865:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gnat__sockets__finalize_spec" label: "b__serverguientrypoint.adb:858:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "system__pool_size__finalize_spec" label: "b__serverguientrypoint.adb:852:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "system__file_io__finalize_body" label: "b__serverguientrypoint.adb:843:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "ada__strings__unbounded__finalize_spec" label: "b__serverguientrypoint.adb:836:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gnat__sockets__finalize_body" label: "b__serverguientrypoint.adb:829:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "ada__text_io__finalize_spec" label: "b__serverguientrypoint.adb:822:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "system__tasking__protected_objects__entries__finalize_spec" label: "b__serverguientrypoint.adb:815:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "glib__finalize_spec" label: "b__serverguientrypoint.adb:808:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "datatypes__finalize_spec" label: "b__serverguientrypoint.adb:801:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gdk__frame_timings__finalize_spec" label: "b__serverguientrypoint.adb:794:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "glib__object__finalize_spec" label: "b__serverguientrypoint.adb:787:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gdk__frame_clock__finalize_spec" label: "b__serverguientrypoint.adb:780:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gdk__display__finalize_spec" label: "b__serverguientrypoint.adb:774:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gdk__pixbuf__finalize_spec" label: "b__serverguientrypoint.adb:768:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gdk__screen__finalize_spec" label: "b__serverguientrypoint.adb:761:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gdk__device__finalize_spec" label: "b__serverguientrypoint.adb:754:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gdk__drag_contexts__finalize_spec" label: "b__serverguientrypoint.adb:747:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "glib__variant__finalize_spec" label: "b__serverguientrypoint.adb:740:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "glib__menu_model__finalize_spec" label: "b__serverguientrypoint.adb:733:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__accel_group__finalize_spec" label: "b__serverguientrypoint.adb:727:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__adjustment__finalize_spec" label: "b__serverguientrypoint.adb:721:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__builder__finalize_spec" label: "b__serverguientrypoint.adb:715:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__cell_area_context__finalize_spec" label: "b__serverguientrypoint.adb:708:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__css_section__finalize_spec" label: "b__serverguientrypoint.adb:701:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__entry_buffer__finalize_spec" label: "b__serverguientrypoint.adb:694:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__icon_source__finalize_spec" label: "b__serverguientrypoint.adb:688:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__paper_size__finalize_spec" label: "b__serverguientrypoint.adb:681:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__page_setup__finalize_spec" label: "b__serverguientrypoint.adb:674:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__print_settings__finalize_spec" label: "b__serverguientrypoint.adb:667:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__selection_data__finalize_spec" label: "b__serverguientrypoint.adb:660:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__style__finalize_spec" label: "b__serverguientrypoint.adb:653:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__target_list__finalize_spec" label: "b__serverguientrypoint.adb:647:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__clipboard__finalize_spec" label: "b__serverguientrypoint.adb:640:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__text_mark__finalize_spec" label: "b__serverguientrypoint.adb:634:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__tree_model__finalize_spec" label: "b__serverguientrypoint.adb:627:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__list_store__finalize_spec" label: "b__serverguientrypoint.adb:621:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__tree_store__finalize_spec" label: "b__serverguientrypoint.adb:614:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtkada__builder__finalize_spec" label: "b__serverguientrypoint.adb:607:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__attributes__finalize_spec" label: "b__serverguientrypoint.adb:601:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__font_metrics__finalize_spec" label: "b__serverguientrypoint.adb:594:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__language__finalize_spec" label: "b__serverguientrypoint.adb:587:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__font__finalize_spec" label: "b__serverguientrypoint.adb:580:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__text_tag__finalize_spec" label: "b__serverguientrypoint.adb:573:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__text_tag_table__finalize_spec" label: "b__serverguientrypoint.adb:566:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__font_face__finalize_spec" label: "b__serverguientrypoint.adb:560:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__font_family__finalize_spec" label: "b__serverguientrypoint.adb:553:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__fontset__finalize_spec" label: "b__serverguientrypoint.adb:546:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__context__finalize_spec" label: "b__serverguientrypoint.adb:539:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__font_map__finalize_spec" label: "b__serverguientrypoint.adb:532:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__tabs__finalize_spec" label: "b__serverguientrypoint.adb:525:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "pango__layout__finalize_spec" label: "b__serverguientrypoint.adb:518:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__print_context__finalize_spec" label: "b__serverguientrypoint.adb:511:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__widget__finalize_spec" label: "b__serverguientrypoint.adb:504:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__action__finalize_spec" label: "b__serverguientrypoint.adb:498:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__cell_renderer__finalize_spec" label: "b__serverguientrypoint.adb:492:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__cell_area__finalize_spec" label: "b__serverguientrypoint.adb:486:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__cell_renderer_text__finalize_spec" label: "b__serverguientrypoint.adb:480:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__cell_renderer_toggle__finalize_spec" label: "b__serverguientrypoint.adb:474:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__container__finalize_spec" label: "b__serverguientrypoint.adb:468:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__bin__finalize_spec" label: "b__serverguientrypoint.adb:462:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__box__finalize_spec" label: "b__serverguientrypoint.adb:455:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__button__finalize_spec" label: "b__serverguientrypoint.adb:448:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__entry_completion__finalize_spec" label: "b__serverguientrypoint.adb:442:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__frame__finalize_spec" label: "b__serverguientrypoint.adb:436:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__grange__finalize_spec" label: "b__serverguientrypoint.adb:429:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__menu_item__finalize_spec" label: "b__serverguientrypoint.adb:423:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__menu_shell__finalize_spec" label: "b__serverguientrypoint.adb:417:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__menu__finalize_spec" label: "b__serverguientrypoint.adb:411:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__misc__finalize_spec" label: "b__serverguientrypoint.adb:405:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__notebook__finalize_spec" label: "b__serverguientrypoint.adb:398:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__scrollbar__finalize_spec" label: "b__serverguientrypoint.adb:392:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__scrolled_window__finalize_spec" label: "b__serverguientrypoint.adb:385:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__status_bar__finalize_spec" label: "b__serverguientrypoint.adb:379:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__style_context__finalize_spec" label: "b__serverguientrypoint.adb:373:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__icon_set__finalize_spec" label: "b__serverguientrypoint.adb:367:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__image__finalize_spec" label: "b__serverguientrypoint.adb:360:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__gentry__finalize_spec" label: "b__serverguientrypoint.adb:353:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__spin_button__finalize_spec" label: "b__serverguientrypoint.adb:347:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__text_child_anchor__finalize_spec" label: "b__serverguientrypoint.adb:341:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__text_buffer__finalize_spec" label: "b__serverguientrypoint.adb:334:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__text_view__finalize_spec" label: "b__serverguientrypoint.adb:328:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__tooltip__finalize_spec" label: "b__serverguientrypoint.adb:322:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__tree_selection__finalize_spec" label: "b__serverguientrypoint.adb:315:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__tree_view_column__finalize_spec" label: "b__serverguientrypoint.adb:309:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__tree_view__finalize_spec" label: "b__serverguientrypoint.adb:303:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__window__finalize_spec" label: "b__serverguientrypoint.adb:297:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__dialog__finalize_spec" label: "b__serverguientrypoint.adb:291:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtk__print_operation__finalize_spec" label: "b__serverguientrypoint.adb:285:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtkada__handlers__finalize_spec" label: "b__serverguientrypoint.adb:242:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "gtkada__builder__finalize_body" label: "b__serverguientrypoint.adb:235:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "user_databases__finalize_spec" label: "b__serverguientrypoint.adb:228:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "server_to_gui_communication__finalize_spec" label: "b__serverguientrypoint.adb:221:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "concrete_server_logic__finalize_spec" label: "b__serverguientrypoint.adb:214:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "concrete_server_logic__finalize_body" label: "b__serverguientrypoint.adb:208:10" }
+edge: { sourcename: "b__serverguientrypoint.adb:ada_main__finalize_library" targetname: "concrete_server_gui_logic__finalize_spec" label: "b__serverguientrypoint.adb:201:10" }
+}

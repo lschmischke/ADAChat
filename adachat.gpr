@@ -1,8 +1,14 @@
+with "C:\GtkAda\lib\gnat\gtkada.gpr";
+
 project ADAChat is
 
    type Library_Types is
       ("static", "relocatable");
+<<<<<<< HEAD
    for Main use ("Main.adb");
+=======
+   for Main use ("Main.adb", "ServerGuiEntryPoint.adb");
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
    for Source_Dirs use ("./**");
    LIBRARY_TYPE : Library_Types := external ("LIBRARY_TYPE");
 
@@ -25,11 +31,18 @@ project ADAChat is
    case LIBRARY_TYPE is
 
       when "static" =>
+<<<<<<< HEAD
          for Object_Dir use "bin";
          for Exec_Dir use "bin";
 
       when "relocatable" =>
 
+=======
+         for Exec_Dir use "bin";
+
+      when "relocatable" =>
+         for Exec_Dir use "\bin";
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
    end case;
 
 end ADAChat;

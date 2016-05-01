@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 graph: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb"
 node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
 node: { title: "__main" label: "main\n<built-in>" shape : ellipse }
@@ -78,3 +79,5 @@ node: { title: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B1b___f
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B1b___finalizer.3924" targetname: "system__secondary_stack__ss_release" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:4" }
 edge: { sourcename: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:main__B1b___finalizer.3924" targetname: "system__standard_library__abort_undefer_direct" label: "E:\Development\Ada\Block_Projekt\ada_chat\main.adb:9:4" }
 }
+=======
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436

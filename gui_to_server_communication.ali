@@ -20,7 +20,11 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
+<<<<<<< HEAD
 U gui_to_server_communication%s  gui_to_server_communication.ads  934c3599 DE EE OO PK
+=======
+U gui_to_server_communication%s  gui_to_server_communication.ads  f5c2422d DE EE OO PK
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 W ada%s			ada.ads			ada.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -35,7 +39,11 @@ D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+<<<<<<< HEAD
 D gui_to_server_communication.ads  20160427171304 ab21c04d gui_to_server_communication%s
+=======
+D gui_to_server_communication.ads  20160429111026 cdafb7f9 gui_to_server_communication%s
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
 D system.ads		20150518132150 f4ce8c3a system%s
@@ -57,9 +65,15 @@ X 6 a-textio.ads
 49K13*Text_IO 471e16 8|1w10 1r27
 52P9*File_Type 8|8r63 9r64
 X 8 gui_to_server_communication.ads
+<<<<<<< HEAD
 3K9*GUI_to_Server_Communication 16l5 16e32
 4h9*Server 6p14 6r50 7p14 7r50 8p13 8r44 9p14 9r45 10p14 10r50 11p14 11r56
 . 12p14 12r61 13p14 13r55
+=======
+3K9*GUI_to_Server_Communication 15l5 15e32
+4h9*Server 6p14 6r50 7p14 7r50 8p13 8r44 9p14 9r45 10p14 10r56 11p14 11r61
+. 12p14 12r55
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 6x14*startServer 6>26 6>58 6>76
 6r26 thisServer{4R9}
 6a58 ipAdress{string}
@@ -72,6 +86,7 @@ X 8 gui_to_server_communication.ads
 9x14*saveDB 9>21 9>53
 9r21 thisServer{4R9}
 9p53 DataFile{6|52P9}
+<<<<<<< HEAD
 10x14*closeServer 10>26
 10r26 thisServer{4R9}
 11x14*sendMessageToUser 11>32 11>64 11>83
@@ -84,4 +99,16 @@ X 8 gui_to_server_communication.ads
 13x14*kickUserWithName 13>31 13>63
 13r31 thisServer{4R9}
 13a63 username{string}
+=======
+10x14*sendMessageToUser 10>32 10>64 10>83
+10r32 thisServer{4R9}
+10a64 username{string}
+10a83 messagestring{string}
+11x14*deleteUserFromDatabase 11>37 11>69
+11r37 thisServer{4R9}
+11a69 username{string}
+12x14*kickUserWithName 12>31 12>63
+12r31 thisServer{4R9}
+12a63 username{string}
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 

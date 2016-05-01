@@ -2,6 +2,7 @@ package body Concrete_Server_Logic is
 
    Server     : Concrete_Server_Ptr;
    concServer : aliased Concrete_Server;
+   gui : GUIPtr := new Server_Gui;
 
 -----------------------------------------------------------------------------
 
@@ -10,6 +11,7 @@ package body Concrete_Server_Logic is
       -- # Erzeugte Serverintanz global setzen, damit sie im Package ueberall bekannt ist #
       concServer := This;
       Server     := concServer'Access;
+
 
       -- # Datenbank laden #
       User_Databases.loadUserDatabase (Server.UserDatabase);
@@ -221,6 +223,9 @@ package body Concrete_Server_Logic is
                                  client.user := user;
                                  -- # Füge server zu Chatraumliste des Clients hinzu
                                  client.chatRoomList.Append (chatroom);
+                                 -- # teile GUI mit, dass user online gekommen ist
+                                 gui.updateNumberOfContacts(Integer(server.Connected_Clients.Length));
+                                 gui.updateOnlineUserOverview(connectedClientsToClientList(this => server));
                                  -- # Sende online-Benachrichtigungen
                                  for contact of clientContacts loop
                                     declare
@@ -275,6 +280,8 @@ package body Concrete_Server_Logic is
                            -- # Pruefe, ob Client in ChatRoom eingeschrieben #
                            if (getClientList (chatRoom).Contains (client)) then
                               broadcastToChatRoom (chatRoom, incoming_message);
+                              gui.printChatMessage(incoming_message);
+
                            else
                               refusedMessage :=
                                 createMessage
@@ -818,17 +825,17 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   procedure closeServer(thisServer : aliased in Concrete_Server) is
-   begin
-      -- TODO
-      null;
-   end closeServer;
-
-   ----------------------------------------------------------------------------------------
 
    procedure sendMessageToUser(thisServer : aliased in Concrete_Server; username : String; messagestring : String) is
+      user : UserPtr := thisServer.UserDatabase.getUser(To_Unbounded_String(username));
+      client : Concrete_Client_Ptr := thisServer.Connected_Clients.Element(user);
+      msg : MessageObject := createMessage(messagetype => Protocol.Chat,
+                                           sender      => To_Unbounded_String("server"),
+                                           receiver    => client.ServerRoomID,
+                                           content     => To_Unbounded_String(messagestring));
    begin
-      -- TODO
+      writeMessageToStream(ClientSocket => client.Socket,
+                           message      => msg);
       null;
    end sendMessageToUser;
 
@@ -842,4 +849,22 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
+   function connectedClientsToClientList(this : in Concrete_Server_Ptr) return STG.userViewOnlineList.List is
+      clientMap : userToClientMap.Map := this.Connected_Clients;
+      clientList : userViewOnlineList.List;
+      concClient : Concrete_Client_Ptr;
+      ptr : ClientPtr;
+   begin
+      for user of clientMap loop
+         ptr := user.all'Access;
+         clientList.Append(New_Item => ptr);
+      end loop;
+
+      return clientList;
+   end connectedClientsToClientList;
+
+
+
+
+   ----------------------------------------------------------------------------------------
 end Concrete_Server_Logic;

@@ -10,7 +10,11 @@ A -gnat12
 A -g
 A -mtune=generic
 A -march=pentiumpro
+<<<<<<< HEAD
 P SS ZX
+=======
+P ZX
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 
 RN
 RV NO_DISPATCHING_CALLS
@@ -19,6 +23,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
+<<<<<<< HEAD
 U client_logic%s	client_logic.ads	0a5dd175 DE EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.streams%s		a-stream.adb		a-stream.ali
@@ -27,10 +32,16 @@ W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W gnat%s		gnat.ads		gnat.ali
 W gnat.sockets%s	g-socket.adb		g-socket.ali
+=======
+U client_logic%s	client_logic.ads	104cbac2 DE EE OO PK
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 W system%s		system.ads		system.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
+<<<<<<< HEAD
 D a-charac.ads		20150518132148 2d3ec45b ada.characters%s
 D a-chlat1.ads		20150518132148 66457d31 ada.characters.latin_1%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
@@ -56,11 +67,22 @@ D s-oscons.ads		20150518132150 8e8e9352 system.os_constants%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
 D s-pooglo.ads		20150518132150 542f33d0 system.pool_global%s
 D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
+=======
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D client_logic.ads	20160418132428 104cbac2 client_logic%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
 D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
+<<<<<<< HEAD
 D s-stopoo.ads		20150518132150 b16154c2 system.storage_pools%s
 D s-stposu.ads		20150518132150 97a6219c system.storage_pools.subpools%s
 D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
@@ -91,4 +113,14 @@ X 14 gnat.ads
 X 15 g-socket.ads
 55K14*Sockets 13|2w11 2r29 15|1260e17
 476I9*Port_Type<integer> 13|9r82
+=======
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+X 6 client_logic.ads
+3K9*Client_Logic 10l5 10e17
+5h9*Client_Interface 7p14 7r44 8p14 8r49
+7x14*connectToServer 7=30
+7r30 This{5R9}
+8x14*disconnectFromServer 8=35
+8r35 This{5R9}
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 

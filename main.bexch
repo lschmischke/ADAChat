@@ -1,6 +1,7 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
+<<<<<<< HEAD
 E:\Development\Ada\Block_Projekt\ada_chat\adachat.gpr
 20160428120840
 [BOUND OBJECT FILES]
@@ -12,11 +13,29 @@ E:\Development\Ada\Block_Projekt\ada_chat\concrete_client_logic.o
 E:\Development\Ada\Block_Projekt\ada_chat\user_databases.o
 E:\Development\Ada\Block_Projekt\ada_chat\concrete_server_logic.o
 E:\Development\Ada\Block_Projekt\ada_chat\main.o
+=======
+C:\Users\Leonard\Documents\ADA\adachat\adachat.gpr
+20160429100126
+C:\GtkAda\lib\gnat\gtkada.gpr
+20150123134008
+[BOUND OBJECT FILES]
+C:\Users\Leonard\Documents\ADA\adachat\client_logic.o
+C:\Users\Leonard\Documents\ADA\adachat\client_ui.o
+C:\Users\Leonard\Documents\ADA\adachat\datatypes.o
+C:\Users\Leonard\Documents\ADA\adachat\gui_to_server_communication.o
+C:\Users\Leonard\Documents\ADA\adachat\protocol.o
+C:\Users\Leonard\Documents\ADA\adachat\user_databases.o
+C:\Users\Leonard\Documents\ADA\adachat\server_to_gui_communication.o
+C:\Users\Leonard\Documents\ADA\adachat\concrete_server_logic.o
+C:\Users\Leonard\Documents\ADA\adachat\main.o
+C:\Users\Leonard\Documents\ADA\adachat\concrete_server_gui_logic.o
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
+<<<<<<< HEAD
 -LE:\Development\Ada\Block_Projekt\ada_chat\
 -LE:\Development\Ada\Block_Projekt\ada_chat\
 -LE:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
@@ -24,6 +43,19 @@ b__main.ali
 -static-libgcc
 E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
 E:/programme/gnat/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
+=======
+-LC:\Users\Leonard\Documents\ADA\adachat\
+-LC:\Users\Leonard\Documents\ADA\adachat\
+-LC:\GtkAda\lib\gtkada\static\
+-LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+-static
+-static-libgcc
+-shared-libgcc
+-shared-libgcc
+-shared-libgcc
+C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnarl.a
+C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
 -lws2_32
 -Xlinker
 --stack=0x200000,0x1000
