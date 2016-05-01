@@ -177,6 +177,42 @@ Die einzelnen Teile einer Nachricht werden durch ein definiertes Trennzeichen se
 
 Während Bestandteile des Headers nicht mehr weiter unterteilbar sind, wird der Inhalt je nach Nachrichtentyp noch feiner strukturiert, indem in ihm das gleiche Trennzeichen wiederholt zur Anwendung kommt.
 
+Der Nachrichtentyp wird durch die Definition eines Aufzählungstypen von 13 zu unterscheidenden Werten realisiert. Das Absender-Feld hält den Namen des Benutzers als Zeichenkette fest, wohingegen das Empfänger-Feld den Chatraum als positive Ganzahl kodiert. Dies hat den Grund, dass zur Kommunikation immer ein Chatraum erforderlich ist. Alle Nachrichten werden zunächst als Broadcast gehandhabt, allerdings kann durch einen Chatraum von zwei Nutzern Unicast-Kommunikation verwirklicht werden.
+
+Bei diesem Vorgehen nimmt der Chatraum mit der Nummer \textit{0} eine besondere Rolle ein, da er statisch erzeugt und immer da ist. Er ist die Anlaufstelle für eingehende Verbindungsanfragen, da erst im Folgenden Schritt dem anfragenden Client dynamisch ein einzelner Chatraum zur Kommunikation mit dem Server zugewiesen werden kann. Nach dem Verbindungsaufbau verfügt demnach jeder Client über einen eigenen Server-Chatraum und ggf. wenn er die Kommunikation mit anderen Clients sucht, über jeweils einen Chatraum für jeden Kommunikationspartner. Diese werden zunächst als Einzelchats zwischen zwei Nutzern erzeugt, können aber durch Benutzerinteraktion um beliebig viele Teilnehmer erweitert werden, wodurch Gruppenkommunikation möglich ist.
+
+\subsubsection{Registrierung}
+Zu Anfang wird dem Benutzer, bevor er anderweitige Funktionalität des Programmes nutzen kann, eine Registrierung mit freiwählbarem Benutzernamen und Passwort abverlangt. 
+
+Hierzu schreibt das Protokoll folgendes Verhalten vor: 
+Der Client sendet eine Registrierungsanfrage an den Server. Diese ist vom Nachrichtentyp \textit{register} und trägt im Absender-Feld den gewünschten Benutzernamen. Als Receiver wird der Standard-Chatraum des Servers angegeben. Der Inhalt der Nachricht ist das verschlüsselt zu übertragende Passwort des Benutzers.
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/register1.png}
+	\label{fig:Registrierung1}
+\end{minipage}
+\vspace{0.5em}
+
+Wenn der Server die Nachricht empfängt quittiert er den Erfolgsfall, indem ebenfalls eine  \textit{register}-Nachricht, mit dem Inhalt \glqq ok\grqq{} zurückgeschickt wird. Sollte der Benutzername bereits verwendet werden, wird eine \textit{refused}-Nachricht mit Inhalt \glqq registration failed, name in use\grqq{} versendet.
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/register2.png}
+	\label{fig:Registrierung2}
+\end{minipage}
+\vspace{0.5em}
+
+\subsubsection{Verbindungsaufbau}
+
+\subsubsection{Kontaktanfrage}
+
+\subsubsection{Kommunikation}
+
+\subsubsection{Verbindungsabbau}
+
 % ----------------------------------------------------------------------------------------------------------
 % Vorgehen
 % ----------------------------------------------------------------------------------------------------------
