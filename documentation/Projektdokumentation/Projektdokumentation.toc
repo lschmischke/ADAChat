@@ -1,4 +1,75 @@
 \select@language {ngerman}
-\contentsline {section}{\numberline {1}Architektur}{1}{section.1}
-\contentsline {section}{\numberline {2}Vorgehen}{1}{section.2}
-\contentsline {section}{\numberline {3}Probleme}{1}{section.3}
+\contentsline {section}{\numberline {1}Architektur}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Kommunikationsprotokoll}{4}{subsection.1.1}
+\contentsline {section}{\numberline {2}Vorgehen}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}dies und das}{4}{subsection.2.1}
+\contentsline {section}{\numberline {3}Probleme}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}dies und das}{4}{subsection.3.1}
+\contentsline {section}{\numberline {4}Praktische Aufgabenstellungen}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Endfassung Lauflicht}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Endfassung Taschenrechner}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Endfassung Teatimer}{9}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Der Lautsprecher}{9}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Das Timer-Modul}{10}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {4.4}Motorsteuerung}{13}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}Messung der Drehzahl}{13}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}Steuerung des Motors \IeC {\"u}ber die Tasten}{16}{subsubsection.4.4.2}
+\contentsline {subsection}{\numberline {4.5}Fernbedienung}{18}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Telegramme empfangen und auswerten}{18}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}Kommando ausf\IeC {\"u}hren und Teatimer bedienen}{22}{subsubsection.4.5.2}
+\contentsline {section}{\numberline {5}Analyse praktischer Probleme mit Interrupts}{29}{section.5}
+\contentsline {subsection}{\numberline {5.1}Praktikumsaufgabe 22 - Interrupt-gesteuertes Programm I}{29}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Praktikumsaufgabe 23 - Interrupt-gesteuertes Programm II}{30}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Praktikumsaufgabe 24 - Interrupt-gesteuertes Programm III}{30}{subsection.5.3}
+\contentsline {section}{\numberline {6}Theoretische Aufgabenstellungen}{33}{section.6}
+\contentsline {subsection}{\numberline {6.1}Block 1 - Erste Schritte / IDE}{33}{subsection.6.1}
+\contentsline {paragraph}{Was ist ein Crosscompiler?}{33}{paragraph*.4}
+\contentsline {paragraph}{Was ist eine JTAG-Schnittstelle?}{33}{paragraph*.5}
+\contentsline {subsection}{\numberline {6.2}Block 2 - Erste Schritte / Blinkprogramm }{33}{subsection.6.2}
+\contentsline {paragraph}{Warum kann der Parameter Anzahl in der Funktion Warteschleife nicht vom Typ int sein?}{33}{paragraph*.6}
+\contentsline {paragraph}{Welche Hardwaregruppen werden angesprochen?}{33}{paragraph*.7}
+\contentsline {paragraph}{Warum muss man keine Hardwareadressen angeben um die Hardware anzusprechen?}{33}{paragraph*.8}
+\contentsline {paragraph}{Wie ist die Hardwareadresse von P1OUT? Wie kann man das herausfinden?}{33}{paragraph*.9}
+\contentsline {paragraph}{Warum wird der Watchdog Timer ausgeschaltet?}{34}{paragraph*.10}
+\contentsline {paragraph}{Wie funktioniert In-System-Debugging?}{34}{paragraph*.11}
+\contentsline {subsection}{\numberline {6.3}Block 3 - Interrupt \IeC {\"u}ber Port 2}{34}{subsection.6.3}
+\contentsline {paragraph}{Was bedeutet die Zeile "\#pragma vector=PORT2\_Vector"?}{34}{paragraph*.12}
+\contentsline {paragraph}{Warum wird hier vor den Funktionsnamen "\_\_interrupt" gesetzt?}{34}{paragraph*.13}
+\contentsline {paragraph}{Warum k\IeC {\"o}nnen keine weiteren Interrupts eintreten, wenn man in der Interrupt-Service-Routine ist?}{35}{paragraph*.14}
+\contentsline {subsection}{\numberline {6.4}Block 4 - Zyklische Interrupts durch den Timer}{35}{subsection.6.4}
+\contentsline {paragraph}{Warum l\IeC {\"a}uft der Timer A nach dem Befehl "TACTL = TASSEL0 + TACLR;" noch nicht gleich?}{35}{paragraph*.15}
+\contentsline {paragraph}{Welche Signale kann man dem Eingang des Timers (au\IeC {\ss }er AClock) zuf\IeC {\"u}hren?}{35}{paragraph*.16}
+\contentsline {paragraph}{Wie funktioniert der Up Mode des Timers A und welche Modes gibt es noch?}{35}{paragraph*.17}
+\contentsline {paragraph}{Mit welcher Taktfrequenz l\IeC {\"a}uft unser Edu-Board?}{36}{paragraph*.18}
+\contentsline {subsection}{\numberline {6.5}Block 5 - Impulse von rotierender Welle z\IeC {\"a}hlen und anzeigen}{36}{subsection.6.5}
+\contentsline {paragraph}{Aus welcher Quelle sollten die Impulse am Z\IeC {\"a}hlereingang kommen?}{36}{paragraph*.19}
+\contentsline {paragraph}{Welchen Timer k\IeC {\"o}nnte man benutzen?}{36}{paragraph*.20}
+\contentsline {paragraph}{Welche Impulsquelle wird benutzt?}{36}{paragraph*.21}
+\contentsline {paragraph}{In welchem Mode sollte der Timer betrieben werden?}{36}{paragraph*.22}
+\contentsline {paragraph}{Wo nimmt man die n\IeC {\"o}tigen Einstellungen vor?}{36}{paragraph*.23}
+\contentsline {paragraph}{Wie oft sollte man die Anzeige aktualisieren?}{36}{paragraph*.24}
+\contentsline {paragraph}{Kann bei Z\IeC {\"a}hlerbetrieb ein Low-Power-Mode genutzt werden, wenn ja, welche?}{37}{paragraph*.25}
+\contentsline {subsection}{\numberline {6.6}Block 6 - Anzeige der Drehzahl des rotierenden Rades}{37}{subsection.6.6}
+\contentsline {paragraph}{Wie kann grunds\IeC {\"a}tzlich eine Drehzahl gemessen werden?}{37}{paragraph*.26}
+\contentsline {paragraph}{Wie viele Timer braucht man?}{37}{paragraph*.27}
+\contentsline {subsection}{\numberline {6.7}Block 7 - Analoges Signal von Potentiometern anzeigen}{37}{subsection.6.7}
+\contentsline {paragraph}{Wozu werden die beiden internen ADC-Kan\IeC {\"a}le genutzt?}{37}{paragraph*.28}
+\contentsline {paragraph}{Welche Konvertierungsarten (Conversion Modes) kennt der ADC10?}{37}{paragraph*.29}
+\contentsline {subsection}{\numberline {6.8}Block 8 - Interrupt \IeC {\"u}ber Port 2 unter Ber\IeC {\"u}cksichtigung energieeffizenter Programmierung}{38}{subsection.6.8}
+\contentsline {paragraph}{Bei Eintritt eines Interrupts beendet der MSP430 automatisch den Low-Power-Mode und wechselt in den Active-Mode, Warum ist das sinnvoll und wie wird es technisch durchgef\IeC {\"u}hrt?}{38}{paragraph*.30}
+\contentsline {paragraph}{Welche Low-Power-Modes sind bei dem oben stehenden Programm m\IeC {\"o}glich?}{38}{paragraph*.31}
+\contentsline {paragraph}{Welche Low-Power-Modes sind m\IeC {\"o}glich beim Taschenrechner?}{38}{paragraph*.32}
+\contentsline {paragraph}{Welche Low-Power-Modes sind m\IeC {\"o}glich beim Tea-Timer?}{38}{paragraph*.33}
+\contentsline {paragraph}{Kann man an unserem Education System das Absinken des Versorgungsstromes beim Eintritt in einen Low-Power-Mode messen?}{38}{paragraph*.34}
+\contentsline {section}{\numberline {7}Aufgabenstellungen des MPT-Skripts}{39}{section.7}
+\contentsline {subsection}{\numberline {7.1}Memory Map}{39}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Verst\IeC {\"a}ndnis von Maschinencode}{42}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Analyse des Assembler- und Maschinencodes}{42}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Codeerzeugung bei ge\IeC {\"a}nderter Hardwareplattform}{46}{subsubsection.7.2.2}
+\contentsline {section}{Anhang}{I}{section*.44}
+\vspace {-0.5em}
+\contentsline {section}{\numberline {A}Endfassung Lauflicht Quellcode}{I}{appendix.A}
+\contentsline {section}{\numberline {B}Endfassung Taschenrechner Quellcode}{II}{appendix.B}
+\contentsline {section}{\numberline {C}Endfassung Teatimer Quellcode}{V}{appendix.C}
+\contentsline {section}{\numberline {D}Motorsteuerung Quellcode}{VII}{appendix.D}
+\contentsline {section}{\numberline {E}Fernbedienung Quellcode}{X}{appendix.E}
