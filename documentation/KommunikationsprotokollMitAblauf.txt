@@ -1,18 +1,3 @@
-Lastenheft: PIS-Anforderungen +
-- Persistente Datenhaltung
-	+ Typ User
-		* UserID (UNIQUE)
-		* Username
-		* Userpasswort
-		* Kontaktliste (speichert IDs von anderen Usern)
-	Vorgehen: 	Server hält User-Datenbank (Map oder so), wenn Client einloggt =>
-				Client sendet seine ID, Server sucht zur ID Kontakte in Datenbank
-				und schickt ihm die Namen etc. zurueck zur Anzeige in GUI
-- Log-File Client von vergangenen Nachrichten (clientseitige Speicherung)
-- 
-
-
-
 Nachrichtmodell: 	ART	|MYUSERNAME	|EMPFÄNGER(CHATRAUM/Server)	|CONTENT
 			enum 	|string		|integer			|string
 Servername = server
@@ -156,38 +141,12 @@ Die Abmeldung wurde erfolgreich vollzogen
 
 
 
+Protokoll 
 
+Umsetzung: Klassendiagramm, welche Komponenten gibts, wie interagieren diese.
 
-
-	
-
-Ablauf:
-1. Client senden Anmeldung
-	connect:client:0:apfelkuchen			
-2. Server bestätigt Anmeldung (und fügt Client in den Server-Client Chatraum hinzu [9])
-	connect:server:9:ok
-	online:server:X:client --Broadcast an alle Kontakte von Client, Client ist jetzt online
-3. Server schickt online-Nachrichten an client
-	online:server:9:daniel 	--daniel ist online
-	online:server:9:paul 	--paul ist online
-4. Server schickt offline-Nachrichten
-	offline:server:9:sebastian --sebastian ist offline
- -- Kontaktliste jetzt vollständig angezeigt
-5. Client requestet Chatraum mit clientB
-	chat:client:9:clientB
-6. Server erstellt Chatraumm, fügt anfragenden Client in den Raum hinzu (ID: 12), Request wird bestätigt
-	chat:server:12:?
-7. Server setzt clientB als Teilnehmer des Raums
-
-8. Client sendet Nachricht an Chat 12
-	message:client:12: es hat geklappt
- -- erst jetzt sieht Client B den Chat 12
-9. Client C (Kontakt zu Client) kommt online
-	online:server:9:clientC --broadcast an alle kontakte von client C
-10. Client schliesst den Chat X
-	disconnect:client:12:tschüssi
-11. client meldet sich ab
-	disconnect:client:9:?
-
-User-Datenbank als File:
-username:passwort:kontaktA:kontaktB
+Vorgehen: wer macht was, wöchentliche treffen, Guis mit GTK (Gtk-erklärung)
+	Probleme: 	GTK
+			fehlende ausführliche Dokumentation für GTK und ADA
+			Zirkuläre Abhängigkeiten
+			Merkwürdigkeiten in ADA

@@ -1,0 +1,49 @@
+\BOOKMARK [1][-]{section.1}{Projektidee}{}% 1
+\BOOKMARK [1][-]{section.2}{Architektur}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Kommunikationsprotokoll}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Registrierung}{subsection.2.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Verbindungsaufbau}{subsection.2.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Kontaktanfrage}{subsection.2.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Kommunikation}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.5}{Verbindungsabbau}{subsection.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Klassendiagramm}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Vorgehen}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{dies und das}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Probleme}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{dies und das}{section.4}% 13
+\BOOKMARK [1][-]{section.5}{Praktische Aufgabenstellungen}{}% 14
+\BOOKMARK [2][-]{subsection.5.1}{Endfassung Lauflicht}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.2}{Endfassung Taschenrechner}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.3}{Endfassung Teatimer}{section.5}% 17
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Der Lautsprecher}{subsection.5.3}% 18
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Das Timer-Modul}{subsection.5.3}% 19
+\BOOKMARK [2][-]{subsection.5.4}{Motorsteuerung}{section.5}% 20
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Messung der Drehzahl}{subsection.5.4}% 21
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Steuerung des Motors \374ber die Tasten}{subsection.5.4}% 22
+\BOOKMARK [2][-]{subsection.5.5}{Fernbedienung}{section.5}% 23
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Telegramme empfangen und auswerten}{subsection.5.5}% 24
+\BOOKMARK [3][-]{subsubsection.5.5.2}{Kommando ausf\374hren und Teatimer bedienen}{subsection.5.5}% 25
+\BOOKMARK [1][-]{section.6}{Analyse praktischer Probleme mit Interrupts}{}% 26
+\BOOKMARK [2][-]{subsection.6.1}{Praktikumsaufgabe 22 - Interrupt-gesteuertes Programm I}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.2}{Praktikumsaufgabe 23 - Interrupt-gesteuertes Programm II}{section.6}% 28
+\BOOKMARK [2][-]{subsection.6.3}{Praktikumsaufgabe 24 - Interrupt-gesteuertes Programm III}{section.6}% 29
+\BOOKMARK [1][-]{section.7}{Theoretische Aufgabenstellungen}{}% 30
+\BOOKMARK [2][-]{subsection.7.1}{Block 1 - Erste Schritte / IDE}{section.7}% 31
+\BOOKMARK [2][-]{subsection.7.2}{Block 2 - Erste Schritte / Blinkprogramm }{section.7}% 32
+\BOOKMARK [2][-]{subsection.7.3}{Block 3 - Interrupt \374ber Port 2}{section.7}% 33
+\BOOKMARK [2][-]{subsection.7.4}{Block 4 - Zyklische Interrupts durch den Timer}{section.7}% 34
+\BOOKMARK [2][-]{subsection.7.5}{Block 5 - Impulse von rotierender Welle z\344hlen und anzeigen}{section.7}% 35
+\BOOKMARK [2][-]{subsection.7.6}{Block 6 - Anzeige der Drehzahl des rotierenden Rades}{section.7}% 36
+\BOOKMARK [2][-]{subsection.7.7}{Block 7 - Analoges Signal von Potentiometern anzeigen}{section.7}% 37
+\BOOKMARK [2][-]{subsection.7.8}{Block 8 - Interrupt \374ber Port 2 unter Ber\374cksichtigung energieeffizenter Programmierung}{section.7}% 38
+\BOOKMARK [1][-]{section.8}{Aufgabenstellungen des MPT-Skripts}{}% 39
+\BOOKMARK [2][-]{subsection.8.1}{Memory Map}{section.8}% 40
+\BOOKMARK [2][-]{subsection.8.2}{Verst\344ndnis von Maschinencode}{section.8}% 41
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Analyse des Assembler- und Maschinencodes}{subsection.8.2}% 42
+\BOOKMARK [3][-]{subsubsection.8.2.2}{Codeerzeugung bei ge\344nderter Hardwareplattform}{subsection.8.2}% 43
+\BOOKMARK [1][-]{section*.44}{Anhang}{}% 44
+\BOOKMARK [1][-]{appendix.A}{Endfassung Lauflicht Quellcode}{}% 45
+\BOOKMARK [1][-]{appendix.B}{Endfassung Taschenrechner Quellcode}{}% 46
+\BOOKMARK [1][-]{appendix.C}{Endfassung Teatimer Quellcode}{}% 47
+\BOOKMARK [1][-]{appendix.D}{Motorsteuerung Quellcode}{}% 48
+\BOOKMARK [1][-]{appendix.E}{Fernbedienung Quellcode}{}% 49

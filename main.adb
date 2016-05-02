@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 with Concrete_Server_Logic; use Concrete_Server_Logic;
 with Concrete_Client_Logic; use Concrete_Client_Logic;
 with Concrete_Client_Ui; use Concrete_Client_Ui;
@@ -15,9 +16,25 @@ procedure main is
    ui : Concrete_Client_Ui.Concrete_Ui;
 
 begin
+<<<<<<< HEAD
    --cserver.startServer("127.0.0.1",12321);
 
    ui.initClientUI(Client_Instance => Client);
+=======
+   cserver.startServer("127.0.0.1",12321);
+=======
+with client_logic;
+with client_ui;
+with ServerGuiEntryPoint; use ServerGuiEntryPoint;
+with Ada.Strings.Unbounded;
+
+
+procedure main is
+begin
+
+   ServerGuiEntryPoint.ServerGuiEntryPoint;
+>>>>>>> 4877513291a6a3d10ccdfb4ed858cadf649f6436
+>>>>>>> origin/feature/Client_Logic
 
    --Client.connectToServer(To_Unbounded_String("a"), To_Unbounded_String("a"),
    --                       To_Unbounded_String("127.0.0.1"), 12321);
