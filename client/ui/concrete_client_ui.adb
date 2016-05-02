@@ -129,42 +129,39 @@ package body Concrete_Client_Ui is
          Error_Message("Unexpected exception in InitializeSocket");
    end Login_Action;
 
-   procedure AddOnlineUser(This : in Concrete_Ui; UserName : Unbounded_String) is
-      offlineList : Gtk_List_Store;
+   procedure SetOnlineUser(This : in Concrete_Ui; Users : Client2Gui_Communication.Userlist.Set) is
       onlineList : Gtk_List_Store;
-      temp : Gtk_Tree_Iter;
+      newItem : Gtk_Tree_Iter;
    begin
-      offlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("offlinecontacts_list"));
       onlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("onlinecontacts_list"));
 
-      onlineList.Append(temp);
-      onlineList.Set(temp, 0, To_String(UserName));
+      for E in Users.Iterate
+      loop
+         onlineList.Append(newItem);
+         onlineList.Set(newItem, 0, To_String(Client2Gui_Communication.Userlist.Element(E)));
+      end loop;
+   end SetOnlineUser;
 
-      temp := offlineList.Get_Iter (onlineList.Get_Path (temp));
-      offlineList.Remove(temp);
-   end AddOnlineUser;
-
-   procedure AddOfflineUser(This : in Concrete_Ui; UserName : Unbounded_String) is
+   procedure SetOfflineUser(This : in Concrete_Ui; Users : Client2Gui_Communication.Userlist.Set) is
       offlineList : Gtk_List_Store;
-      onlineList : Gtk_List_Store;
-      temp : Gtk_Tree_Iter;
+      newItem : Gtk_Tree_Iter;
    begin
       offlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("offlinecontacts_list"));
-      onlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("onlinecontacts_list"));
 
-      offlineList.Append(temp);
-      offlineList.Set(temp, 0, To_String(UserName));
-   end AddOfflineUser;
+      for E in Users.Iterate
+      loop
+         offlineList.Append(newItem);
+         offlineList.Set(newItem, 0, To_String(Client2Gui_Communication.Userlist.Element(E)));
+      end loop;
+   end SetOfflineUser;
 
-<<<<<<< HEAD
-=======
    -----------------------------------------------------------------------------
 
    procedure ContactRemove(This : in Concrete_Ui; Username : in Unbounded_String) is
 
    begin
       null;
-      end ContactRemove;
+   end ContactRemove;
 
    -----------------------------------------------------------------------------
 
@@ -172,18 +169,10 @@ package body Concrete_Client_Ui is
 
    begin
       null;
-      end ContactRequest;
+   end ContactRequest;
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatMessages(This : in Concrete_Ui; message : in MessageObject) is
-
-   begin
-      null;
-   end ShowChatMessages;
-
-
->>>>>>> origin/feature/Client_Logic
    procedure Quit (Object : access Gtkada_Builder_Record'Class) is
       pragma Unreferenced (Object);
    begin
@@ -195,19 +184,15 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-<<<<<<< HEAD
-   procedure ShowChatMessages(This : in Concrete_Ui; message : MessageObject) is
-=======
-   procedure ShowChatParticipants(This : in GUI; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
+   procedure ShowChatParticipants(This : in Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
 
    begin
       null;
-      end ShowChatParticipants;
+   end ShowChatParticipants;
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatMessages(This : in GUI; message : MessageObject) is
->>>>>>> origin/feature/Client_Logic
+   procedure ShowChatMessages(This : in Concrete_Ui; message : MessageObject) is
 
    begin
 
@@ -236,15 +221,6 @@ package body Concrete_Client_Ui is
       --offlineList.Set(temp, 0, "Mein meega Test");
       --offlineList.Append(temp);
       --offlineList.Set(temp, 0, "Was anders");
-      Instance.AddOnlineUser(To_Unbounded_String("Thomas"));
-      Instance.AddOnlineUser(To_Unbounded_String("Ewald"));
-      Instance.AddOfflineUser(To_Unbounded_String("Daniel"));
-      Instance.AddOfflineUser(To_Unbounded_String("Sebastian"));
-      Instance.AddOfflineUser(To_Unbounded_String("Leonard"));
-
-      Instance.AddOnlineUser(To_Unbounded_String("Daniel"));
-      Instance.AddOnlineUser(To_Unbounded_String("Leonard"));
-      Instance.AddOnlineUser(To_Unbounded_String("Sebastian"));
    end LoginSuccess;
 
    -----------------------------------------------------------------------------

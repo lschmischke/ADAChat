@@ -27,10 +27,6 @@ package body Concrete_Client_Logic is
       This.Socket := Client;
       Connect_Socket (Client, Address);
       Channel := Stream (Client);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feature/Client_Logic
    end InitializeSocket;
 
 

@@ -28,14 +28,7 @@ package Concrete_Client_Logic is
                                                                       Element_Type    => Client2Gui_Communication.Userlist.Set,
                                                                       Hash            => Hash,
                                                                       Equivalent_Keys => "=",
-<<<<<<< HEAD
-                                                                      "="             => Userlist."=");
-
-=======
                                                                       "="             => Client2Gui_Communication.Userlist."=");
->>>>>>> origin/feature/Client_Logic
-
-   procedure RegisterGUI(This : Concrete_Client; GUI : in GUIPtr);
 
    private
 
