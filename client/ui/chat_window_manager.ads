@@ -4,7 +4,7 @@ with Concrete_Client_Logic; use Concrete_Client_Logic;
 
 package Chat_Window_Manager is
 
-   GladeFile : constant String := "Chat_Window.glade";
+   GladeFile : constant String := "client/Chat_Window.glade";
    type ChatWindow is tagged record with private;
    type ChatWindow_Ptr is access ChatWindow;
    type ChatWindows is new Unbounded_Array;

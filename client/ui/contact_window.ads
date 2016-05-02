@@ -10,9 +10,8 @@ package Contact_Window is
    type ContactWindow is new Client_Window.Window with record
       Builder : Gtkada_Builder;
       Window : Gtk_Window;
-      Client : ClientPtr;
    end record;
-   GladeFile : constant String := "Contact_Window.glade";
+   GladeFile : constant String := "client/Contact_Window.glade";
 
    procedure Search_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Update_Status  (Object : access Gtkada_Builder_Record'Class);
@@ -22,7 +21,7 @@ package Contact_Window is
 
 private
 
-   procedure Init(This : in out ContactWindow; Client_Instance : ClientPtr);
+   procedure Init(This : in out ContactWindow);
 
    Instance : ContactWindow;
 

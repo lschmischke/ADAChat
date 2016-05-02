@@ -18,12 +18,11 @@ with Concrete_Client_Ui; use Concrete_Client_Ui;
 
 package body Contact_Window is
 
-   procedure Init(This : in out ContactWindow; Client_Instance : ClientPtr) is
+   procedure Init(This : in out ContactWindow) is
       ret : GUint;
       Error : aliased GError;
       newBuilder : Gtkada_Builder;
    begin
-      This.Client := Client_Instance;
       Gtk_New (newBuilder);
       This.Builder := newBuilder;
       ret := This.Builder.Add_From_File (GladeFile, Error'Access);
@@ -37,7 +36,7 @@ package body Contact_Window is
       Register_Handler
         (Builder => This.Builder,
          Handler_Name => "Main_Quit",
-         Handler => Concrete_Client_Ui.Quit'Access);
+         Handler => Quit'Access);
 
       Register_Handler
         (Builder => This.Builder,

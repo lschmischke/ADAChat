@@ -7,6 +7,6 @@ package Client_Window is
    type Window is interface;
 
    -- Must be called before Window can be used
-   procedure Init(This : in out Window; Client_Instance : ClientPtr) is abstract;
+   procedure Init(This : in out Window) is abstract;
 
 end Client_Window;

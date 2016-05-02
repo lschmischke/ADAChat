@@ -20,12 +20,11 @@ with Protocol; use Protocol;
 
 package body Login_Window is
 
-   procedure Init (This : in out LoginWindow; Client_Instance : ClientPtr) is
+   procedure Init (This : in out LoginWindow) is
       ret : GUint;
       Error : aliased GError;
       newBuilder : Gtkada_Builder;
    begin
-      This.Client := Client_Instance;
       Gtk_New (newBuilder);
       This.Builder := newBuilder;
       ret := This.Builder.Add_From_File (GladeFile, Error'Access);
@@ -55,7 +54,6 @@ package body Login_Window is
 
       This.Window := Gtk_Window(This.Builder.Get_Object ("login_window_client"));
       This.Window.Show_All;
-      Instance := This;
    end Init;
 
 end Login_Window;

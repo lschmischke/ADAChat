@@ -11,13 +11,12 @@ package Login_Window is
    type LoginWindow is new Client_Window.Window with record
       Builder : Gtkada_Builder;
       Window : Gtk_Window;
-      Client : ClientPtr;
    end record;
-   GladeFile : constant String := "Login_Window.glade";
+   GladeFile : constant String := "client/Login_Window.glade";
 
 private
 
-   procedure Init (This : in out LoginWindow; Client_Instance : ClientPtr);
+   procedure Init (This : in out LoginWindow);
 
    Instance : LoginWindow;
 
