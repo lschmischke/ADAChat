@@ -1,6 +1,6 @@
 package body Protocol is
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    function messageObjectToString(message : MessageObject) return String is
    begin
@@ -8,7 +8,7 @@ package body Protocol is
         Seperator & Trim(Integer'Image(message.receiver), Left) & Seperator & Ada.Strings.Unbounded.To_String(message.content);
    end messageObjectToString;
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    function stringToMessageObject(message : in Unbounded_String) return MessageObject is
       MessageParts : GNAT.String_Split.Slice_Set;
@@ -26,7 +26,7 @@ package body Protocol is
          -- Einzelne Attribute des messageObjects werden gefüllt
          newMessageObject.messagetype := MessageTypeE'Value(GNAT.String_Split.Slice(MessageParts, 1));
          newMessageObject.sender := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(MessageParts, 2));
-         newMessageObject.receiver := Integer'Value(GNAT.String_Split.Slice(MessageParts, 3));
+         newMessageObject.receiver := Natural'Value(GNAT.String_Split.Slice(MessageParts, 3));
 
          -- Für das Content-Attribut wird die Zerstückelung, falls vorhanden, wieder rückgänging gemacht
          for i in 4 .. GNAT.String_Split.Slice_Count(MessageParts) loop
@@ -36,15 +36,15 @@ package body Protocol is
          Put_Line("Cannot convert String to MessageObject");
          return createMessage(messagetype => Invalid,
                        sender      => To_Unbounded_String("unknown"),
-                       receiver    => -1 ,
+                       receiver    => 0,
                        content     => message);
       end if;
       return newMessageObject;
    end;
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Integer; content : in Unbounded_String) return MessageObject is
+   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Natural; content : in Unbounded_String) return MessageObject is
       result : MessageObject;
    begin
       result.messagetype := messagetype;
@@ -54,7 +54,7 @@ package body Protocol is
       return result;
    end createMessage;
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    procedure printMessageToInfoConsole(message : in MessageObject) is
       messageType : String := MessageTypeE'Image(message.messagetype);
@@ -68,7 +68,7 @@ package body Protocol is
       Put_Line("content     -> " & To_String(message.content & " (length "&Positive'Image(content'Length)& ")"));
    end printMessageToInfoConsole;
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    procedure writeMessageToStream(ClientSocket : in Socket_Type; message : MessageObject)is
       OutputChannel : Stream_Access;
@@ -77,7 +77,7 @@ package body Protocol is
       String'Write(OutputChannel, messageObjectToString(message));
    end writeMessageToStream;
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    function readMessageFromStream (ClientSocket : in Socket_Type) return MessageObject is
       incoming_data : Stream_Element_Array(1..4096);
@@ -95,6 +95,6 @@ package body Protocol is
       return stringToMessageObject(incoming_string);
    end readMessageFromStream;
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 end Protocol;

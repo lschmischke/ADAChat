@@ -1,8 +1,11 @@
+with Concrete_Server_Gui_Logic; use Concrete_Server_Gui_Logic;
+
 package body Concrete_Server_Logic is
 
    Server     : Concrete_Server_Ptr;
    concServer : aliased Concrete_Server;
-   gui : GUIPtr := new Server_Gui;
+   gui : GUIPtr := new Concrete_Server_Gui_Logic.Server_Gui;
+
 
 -----------------------------------------------------------------------------
 
@@ -15,7 +18,7 @@ package body Concrete_Server_Logic is
 
       -- # Datenbank laden #
       User_Databases.loadUserDatabase (Server.UserDatabase);
-      Put_Line ("User database loadad.");
+      gui.printInfoMessage("User database loadad.");
 
       --#Sockets aufbauen
       InitializeServer (Server, ip, port);
@@ -36,7 +39,6 @@ package body Concrete_Server_Logic is
 
    procedure InitializeServer (This : in out Concrete_Server_Ptr; ip : String; port : Natural) is
       SubServer      : Concrete_Client_Ptr := new Concrete_Client;
-      connectMessage : MessageObject;
    begin
 
       -- # Erzeugung und Konfiguration des Server-Sockets #
@@ -49,31 +51,21 @@ package body Concrete_Server_Logic is
       Listen_Socket (Socket => Server.Socket);
 
       -- # Server starten #
-      Ada.Text_IO.Put_Line ("Server initialization successful, starting Server Listener Task...");
+      gui.printInfoMessage("Server initialization successful, starting Server Listener Task...");
       Main_Server_Task.Start;
 
       -- # Erzeugung des SubServer-Sockets #
-
       Create_Socket (Socket => SubServer.Socket);
+
       -- # SubServer mit Server verbinden, Server wartet mit Accept - SubServer fragt mit Connect an #
-
       Connect_Socket (Socket => SubServer.Socket, Server => Server.SocketAddress);
-      connectMessage :=
-        createMessage
-          (messagetype => Protocol.Connect,
-           sender      => To_Unbounded_String ("server"),
-           receiver    => 0,
-           content     => To_Unbounded_String ("password"));
-
-      writeMessageToStream (SubServer.Socket, connectMessage);
+      sendServerMessageToClient(SubServer,Connect,"password");
 
    exception
       when Error : Socket_Error =>
-         Put ("Socket_Error in InitializeServer: ");
-         Put_Line (Exception_Information (Error));
+	 gui.printErrorMessage("Socket_Error in InitializeServer: " & Exception_Information (Error));
       when Error : others =>
-         Put ("Unexpected exception in InitializeServer: ");
-         Put_Line (Exception_Information (Error));
+	 gui.printErrorMessage("Unexpected exception in InitializeServer: " & Exception_Information (Error));
    end InitializeServer;
 
 -----------------------------------------------------------------------------
@@ -85,29 +77,26 @@ package body Concrete_Server_Logic is
       -- # Abhoerroutine auf Aktivitaet am Server-Socket #
       loop
          declare
-            Client : Concrete_Client_Ptr := new Concrete_Client;
+	    Client : Concrete_Client_Ptr := new Concrete_Client;
+	    cTask : Client_Task_Ptr:= new Client_Task;
          begin
             -- # Auf Verbindungsanfrage warten, annehmen, Client-Socket erzeugen und neue Adresse an diesen binden #
-            Ada.Text_IO.Put_Line ("Ready to accept incoming Conncetions...");
+            gui.printInfoMessage("Ready to accept incoming Connections...");
             Accept_Socket
               (Server  => Server.Socket,
                Socket  => Client.Socket,
                Address => Client.SocketAddress); -- Blockierender Aufruf
-            Ada.Text_IO.Put_Line ("Incoming Connection from " & GNAT.Sockets.Image (Client.SocketAddress) & " accepted");
+            gui.printInfoMessage("Incoming Connection from " & GNAT.Sockets.Image (Client.SocketAddress) & " accepted");
 
-            -- # Neuen Kommunikationstask für Client erzeugen, hinterlegen und starten #
-            Client.CommunicationTask := new Client_Task;
-            Client.CommunicationTask.Start (Client);
-         end;
+	    -- # Neuen Kommunikationstask für Client erzeugen, hinterlegen und starten #
+	    cTask.Start(Client);
+	 end;
       end loop;
-
    exception
       when Error : Socket_Error =>
-         Put ("Socket_Error in Main_Server_Task: ");
-         Put_Line (Exception_Information (Error));
+	 gui.printErrorMessage("Socket_Error in Main_Server_Task: " & "terminated Main Server Task");
       when Error : others =>
-         Put ("Unexpected exception in Main_Server_Task: ");
-         Put_Line (Exception_Information (Error));
+         gui.printErrorMessage("Unexpected exception in Main_Server_Task: " & Exception_Information (Error));
    end Main_Server_Task;
 
 -----------------------------------------------------------------------------
@@ -123,11 +112,11 @@ package body Concrete_Server_Logic is
          client := newClient;
       end Start; -- Jetzt laeuft dieser erst nebenlaeufig weiter! #
 
-      Ada.Text_IO.Put_Line ("New Client Task for " & GNAT.Sockets.Image (client.SocketAddress) & " successfully started");
+      gui.printInfoMessage("New Client Task for " & GNAT.Sockets.Image (client.SocketAddress) & " successfully started");
 
       -- InputChannel := Stream(ClientSocket);
 
-      Ada.Text_IO.Put_Line ("Waiting for incoming data from " & GNAT.Sockets.Image (client.SocketAddress) & " ...");
+      gui.printInfoMessage("Waiting for incoming data from " & GNAT.Sockets.Image (client.SocketAddress) & " ...");
 
       -- # Abhoerroutine2 auf Aktivitaet am Client-Socket #
       <<Continue>>
@@ -153,112 +142,68 @@ package body Concrete_Server_Logic is
                case incoming_message.messagetype is
                   -- ### CONNECT ###
                   when Protocol.Connect => -- # connect:client:0:<passwort> #
-                     declare
+		     declare
 
-                        userNotFoundMessage : MessageObject :=
-                          createMessage
-                            (messagetype => Protocol.Refused,
-                             sender      => serverStr,
-                             receiver    => 0,
-                             content     => To_Unbounded_String ("user not found in database"));
-                        invalidPasswordMessage : MessageObject :=
-                          createMessage
-                            (messagetype => Protocol.Refused,
-                             sender      => serverStr,
-                             receiver    => 0,
-                             content     => To_Unbounded_String ("invalid password"));
-                        alreadyLoggedInMessage : MessageObject :=
-                          createMessage
-                            (messagetype => Protocol.Refused,
-                             sender      => serverStr,
-                             receiver    => 0,
-                             content     => To_Unbounded_String ("user already logged in"));
-                        alreadyConnectedMessage : MessageObject :=
-                          createMessage
-                            (messagetype => Protocol.Refused,
-                             sender      => serverStr,
-                             receiver    => 0,
-                             content     => To_Unbounded_String ("you are already logged in to an account"));
-
-                        userpassword : Unbounded_String;
+			userpassword : Unbounded_String;
+			msgContent : Unbounded_String;
                      begin
                         -- # Pruefe ob Benutzer registriert und Passwort richtig #
                         user := Server.UserDatabase.getUser (username => incoming_message.sender);
 
-                        if user = null then
-                           writeMessageToStream (ClientSocket => client.Socket, message => userNotFoundMessage);
+			if user = null then
+			   declineConnectionWithRefusedMessage(client,"user '"& To_String(incoming_message.sender)& "' not found in database");
                         elsif client.user /= null then
-                           --# Prüefe ob Client schon mit einem User verbunden ist
-                           writeMessageToStream (ClientSocket => client.Socket, message => alreadyConnectedMessage);
+			   --# Prüefe ob Client schon mit einem User verbunden ist
+			   declineConnectionWithRefusedMessage(client,"you are already logged in to an account");
                         elsif Server.Connected_Clients.Contains (user) then
-                           -- # Prüfe ob User, für den sich angemeldet wurde, schon angemeldet ist
-                           writeMessageToStream (client.Socket, alreadyLoggedInMessage);
+			   -- # Prüfe ob User, für den sich angemeldet wurde, schon angemeldet ist
+			   declineConnectionWithRefusedMessage(client,"user '"& To_String(incoming_message.sender)& "' already logged in");
                         else
                            userpassword := getPassword (user);
                            -- TODO: das Passwort sollte vom Client bereits verschluesselt verschickt werden!!
-                           if userpassword /= encodePassword (incoming_message.content) then
-                              writeMessageToStream (client.Socket, invalidPasswordMessage);
+			   if userpassword /= encodePassword (incoming_message.content) then
+			      declineConnectionWithRefusedMessage(client,"invalid password");
                            else
                               -- # CONNECT ERFOLGREICH
                               --# hole serverroomid zu diesem client vom server
                               declare
                                  id                   : Natural       := getNextChatRoomID (Server);
                                  chatroom             : chatRoomPtr;
-                                 connectAcceptMessage : MessageObject :=
-                                   createMessage
-                                     (messagetype => Protocol.Connect,
-                                      sender      => serverStr,
-                                      receiver    => id,
-                                      content     => To_Unbounded_String ("ok"));
                                  clientContacts      : dataTypes.UserList.List := getContacts (user);
-                                 clientOnlineMessage : MessageObject;
                               begin
-                                 -- # Weise Client eine ServerRoomID zu #
+                                 -- # Weise Client eine ServerRoomID zu und init Client #
                                  serverRoomID        := id;
-                                 client.ServerRoomID := serverRoomID;
+				 client.ServerRoomID := serverRoomID;
+				 client.user := user;
                                  chatroom            := createChatRoom (Server, serverRoomID, client);
-                                 writeMessageToStream (client.Socket, connectAcceptMessage);
+				 sendServerMessageToClient(client,Connect,"ok");
+
                                  -- # Client in Verwaltungsliste speichern #
                                  Server.Connected_Clients.Insert (Key => user, New_Item => client);
-                                 client.user := user;
+
                                  -- # Füge server zu Chatraumliste des Clients hinzu
-                                 client.chatRoomList.Append (chatroom);
+				 client.chatRoomList.Append (chatroom);
+
                                  -- # teile GUI mit, dass user online gekommen ist
                                  gui.updateNumberOfContacts(Integer(server.Connected_Clients.Length));
-                                 gui.updateOnlineUserOverview(connectedClientsToClientList(this => server));
+				 gui.updateOnlineUserOverview(connectedClientsToClientList(this => server));
+				 gui.printInfoMessage("'"&To_String(getUsername(user)) & "' has come online.");
+
                                  -- # Sende online-Benachrichtigungen
                                  for contact of clientContacts loop
                                     declare
                                        contactClient : Concrete_Client_Ptr;
                                     begin
                                        -- # Pruefe ob Kontakt online
-                                       if (Server.Connected_Clients.Contains (contact)) then
+				       if (Server.Connected_Clients.Contains (contact)) then
+					  contactClient := server.Connected_Clients.Element(contact);
                                           -- # sende Kontakt, dass User online ist
-                                          contactClient       := Server.Connected_Clients.Element (contact);
-                                          clientOnlineMessage :=
-                                            createMessage
-                                              (Protocol.Online,
-                                               serverStr,
-                                               contactClient.ServerRoomID,
-                                               getUsername (user));
-                                          writeMessageToStream (contactClient.Socket, clientOnlineMessage);
+					  sendServerMessageToClient(contactClient,Online,To_String(getUsername(user)));
                                           -- # sende User, dass Kontakt online ist
-                                          clientOnlineMessage :=
-                                            createMessage
-                                              (Protocol.Online,
-                                               serverStr,
-                                               client.ServerRoomID,
-                                               getUsername (contact));
-                                          writeMessageToStream (client.Socket, clientOnlineMessage);
+					  sendServerMessageToClient(client,Online,To_String(getUsername (contact)));
                                        else
                                           -- # sende User, dass Kontakt offline ist
-                                          clientOnlineMessage :=
-                                            createMessage
-                                              (Protocol.Offline,
-                                               serverStr,
-                                               client.ServerRoomID,
-                                               getUsername (contact));
-                                          writeMessageToStream (client.Socket, clientOnlineMessage);
+					  sendServerMessageToClient(client,Offline,To_String(getUsername (contact)));
                                        end if;
                                     end;
                                  end loop;
@@ -271,46 +216,29 @@ package body Concrete_Server_Logic is
                   when Protocol.Chat => -- # chat:client:<ChatRoomID>:Hi #
                      declare
                         chatRoom       : chatRoomPtr;
-                        refusedMessage : MessageObject;
                      begin
-                        --# echo Nachricht an alle Clienten im Raum
+                        -- # Pruefe, ob Chatraum mit angegebener Nummer existiert
                         if (Server.chatRooms.Contains (incoming_message.receiver)) then
                            chatRoom := Server.chatRooms.Element (incoming_message.receiver);
 
                            -- # Pruefe, ob Client in ChatRoom eingeschrieben #
-                           if (getClientList (chatRoom).Contains (client)) then
+			   if (getClientList (chatRoom).Contains (client)) then
+			      --# echo Nachricht an alle Clienten im Raum
                               broadcastToChatRoom (chatRoom, incoming_message);
                               gui.printChatMessage(incoming_message);
-
                            else
-                              refusedMessage :=
-                                createMessage
-                                  (messagetype => Protocol.Refused,
-                                   sender      => serverStr,
-                                   receiver    => serverRoomID,
-                                   content     =>
-                                     To_Unbounded_String
-                                       ("you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)));
-                              writeMessageToStream (client.Socket, refusedMessage);
+			      sendServerMessageToClient(client,Refused,"you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)&".");
                            end if;
                         else
-                           refusedMessage :=
-                             createMessage
-                               (messagetype => Protocol.Refused,
-                                sender      => serverStr,
-                                receiver    => serverRoomID,
-                                content     =>
-                                  To_Unbounded_String
-                                    ("there is no chatroom with id " & Integer'Image (incoming_message.receiver)));
-                           writeMessageToStream (client.Socket, refusedMessage);
+			   sendServerMessageToClient(client,Refused,"there is no chatroom with id " & Integer'Image (incoming_message.receiver)&".");
                         end if;
                      end;
 
                   -- ### DISCONNECT ###
                   when Protocol.Disconnect => -- # disconnect:client:<ServerRoomID>:<?> #
                      begin
-                        disconnectClient (client);
-                        -- # Task beenden
+			disconnectClient (client);
+                        -- # TODO: Task beenden
                         exit;
                      end;
 
@@ -321,56 +249,43 @@ package body Concrete_Server_Logic is
                         requestingUser       : UserPtr             := getUser (Server.UserDatabase, incoming_message.sender);
                         userToAdd            : UserPtr             := getUser (Server.UserDatabase, incoming_message.content);
                         clientToAdd          : Concrete_Client_Ptr := Server.Connected_Clients.Element (userToAdd);
-                        requestAcceptMessage : MessageObject       :=
-                          createMessage
-                            (messagetype => Protocol.Chatrequest,
-                             sender      => serverStr,
-                             receiver    => roomID,
-                             content     => To_Unbounded_String ("ok"));
-                        chatRoom : chatRoomPtr;
-                     begin
+			chatRoom : chatRoomPtr;
+		     begin
+			--# TODO: getUser Fehler abfangen
+			--# Pruefe, ob Kontakt zu angegebenem User besteht
                         if (getContacts (user).Contains (userToAdd)) then
-                        --#pruefe ob chat mit dieser Nummer bereits existiert
-                           if not Server.chatRooms.Contains (incoming_message.receiver) then
-                              writeMessageToStream
-                                (ClientSocket => client.Socket,
-                                 message      =>
-                                   createMessage
-                                     (messagetype => Protocol.Refused,
-                                      sender      => serverStr,
-                                      receiver    => serverRoomID,
-                                      content     =>
-                                        To_Unbounded_String
-                                          ("invalid roomID in chatrequest, please use your serverRoomID for new chatrequests and the specific chatrommID for invites")));
-
+			   --# Pruefe, ob Chat mit dieser Nummer bereits existiert
+			   if not Server.chatRooms.Contains (incoming_message.receiver) then
+			      sendServerMessageToClient(client,Refused,"invalid roomID in chatrequest, please use your serverRoomID for new chatrequests and the specific chatroomID for invites");
+			      gui.printErrorMessage("Chatroomrequest from '"&To_String(getUsername(user) &"' denied: invalid roomID (does not exist)."));
                            elsif incoming_message.receiver = serverRoomID then
-                           --#neuer Raum
+			      --# neuen Raum anlegen
                               chatRoom := createChatRoom (server => Server, id => roomID, firstClient => client);
-                              writeMessageToStream (client.Socket, message => requestAcceptMessage);
-                              addClientToChatroom (room => chatRoom, client => clientToAdd);
-                              client.chatRoomList.Append (chatRoom);
-                              clientToAdd.chatRoomList.Append (chatRoom);
+			      addClientToChatroom (room => chatRoom, client => clientToAdd);
 
+			      -- # Füge Chatroom in Liste beider Clients hinzu
+                              client.chatRoomList.Append (chatRoom);
+			      clientToAdd.chatRoomList.Append (chatRoom);
+			      sendServerMessageToClient(client,Chatrequest,"ok");
+
+			      -- # Benachrichtige GUI
+			      gui.printInfoMessage("Chatroomrequest from '"&To_String(getUsername(user))& "' accepted: created chatroom '"&Natural'Image(chatroom.chatRoomID) & "' with user '"&To_String(getUsername(userToAdd)));
                            else
-                           --#alter Raum, User einladen
+			      --# alter Raum, User einladen
                               chatRoom := Server.chatRooms.Element (incoming_message.receiver);
                               addClientToChatroom (room => chatRoom, client => clientToAdd);
-                              clientToAdd.chatRoomList.Append (chatRoom);
-                           --#userlist rumschicken
-                              broadcastToChatRoom (chatRoom, generateUserlistMessage (chatRoom));
+			      clientToAdd.chatRoomList.Append (chatRoom);
+
+			      --# userlist rumschicken
+			      broadcastToChatRoom (chatRoom, generateUserlistMessage (chatRoom));
+
+			      -- # Benachrichtige GUI
+			       gui.printInfoMessage("Chatroomrequest from '"&To_String(getUsername(user))& "' accepted: invited '"&To_String(getUsername(userToAdd))&"' to chatroom '"&Natural'Image(chatroom.chatRoomID));
                            end if;
                         else
                            -- # Es existiert kein Kontakt mit dem angegebenem Namen
-                           declare
-                              noContactMessage : MessageObject :=
-                                createMessage
-                                  (Protocol.Refused,
-                                   serverStr,
-                                   client.ServerRoomID,
-                                   To_Unbounded_String ("You have no contact with name " & To_String (incoming_message.content)));
-                           begin
-                              writeMessageToStream (client.Socket, noContactMessage);
-                           end;
+			   sendServerMessageToClient(client,Refused,"You have no contact with name " & To_String (incoming_message.content)&".");
+			   gui.printErrorMessage("Chatroomrequest from '"&To_String(getUsername(user) &"' denied: not contact with '"& To_string(getUsername(userToAdd)&"'.")));
                         end if;
 
                      end;
@@ -379,37 +294,18 @@ package body Concrete_Server_Logic is
                   when Protocol.Leavechat => -- # leavechat:client:<ChatRoomID>:<?> #
                      declare
                         chatRoom       : chatRoomPtr;
-                        refusedMessage : MessageObject;
-                        refusedText    : Unbounded_String := incoming_message.sender;
                      begin
                         --# Pruefe, ob referenziertet Raum existiert
                         if Server.chatRooms.Contains (incoming_message.receiver) then
                            chatRoom := Server.chatRooms.Element (incoming_message.receiver);
-
-                           --# Pruefe obClient in referenziertem Chatraum
+                           --# Pruefe ob Client in referenziertem Chatraum
                            if (client.chatRoomList.Contains (chatRoom)) then
-                              removeClientFromChatroom (chatRoom, client);
+			      removeClientFromChatroom (chatRoom, client);
                            else
-                              refusedMessage :=
-                                createMessage
-                                  (messagetype => Protocol.Refused,
-                                   sender      => serverStr,
-                                   receiver    => serverRoomID,
-                                   content     =>
-                                     To_Unbounded_String
-                                       ("you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)));
-                              writeMessageToStream (client.Socket, refusedMessage);
+			      sendServerMessageToClient(client,Refused,"you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)&".");
                            end if;
                         else
-                           refusedMessage :=
-                             createMessage
-                               (messagetype => Protocol.Refused,
-                                sender      => serverStr,
-                                receiver    => serverRoomID,
-                                content     =>
-                                  To_Unbounded_String
-                                    ("there is no chatroom with id" & Integer'Image (incoming_message.receiver)));
-                           writeMessageToStream (client.Socket, refusedMessage);
+			   sendServerMessageToClient(client,Refused,"there is no chatroom with id" & Integer'Image (incoming_message.receiver)&".");
                         end if;
                      end;
 
@@ -417,26 +313,15 @@ package body Concrete_Server_Logic is
                   when Protocol.Register => -- # register:<username>:0:<passwort>
                      declare
                         registrationComplete : Boolean;
-                        registrationAccepted : MessageObject :=
-                          createMessage
-                            (messagetype => Protocol.Register,
-                             sender      => serverStr,
-                             receiver    => 0,
-                             content     => To_Unbounded_String ("ok"));
-                        registrationFailed : MessageObject :=
-                          createMessage
-                            (messagetype => Protocol.Refused,
-                             sender      => serverStr,
-                             receiver    => 0,
-                             content     => To_Unbounded_String ("registration failed, name in use"));
                      begin
                         registrationComplete :=
                           Server.UserDatabase.registerUser
                           (username => incoming_message.sender, password => encodePassword (incoming_message.content));
-                        if registrationComplete = True then
-                           writeMessageToStream (client.Socket, registrationAccepted);
-                        else
-                           writeMessageToStream (client.Socket, registrationFailed);
+			if registrationComplete = True then
+			   sendServerMessageToClient(client,Register,"ok");
+			   gui.printInfoMessage("New user '"&To_String(incoming_message.sender)&"' registrated");
+			else
+			   sendServerMessageToClient(client,Refused,"registration failed, name in use");
                         end if;
                      end;
 
@@ -445,15 +330,15 @@ package body Concrete_Server_Logic is
                      declare
                         requestedUser           : UserPtr             := getUser (Server.UserDatabase, incoming_message.content);
                         requestedUserClient     : Concrete_Client_Ptr := Server.Connected_Clients.Element (requestedUser);
-                        messageToRequestingUser : MessageObject;
-                        messageToRequestedUser  : MessageObject;
                         bool                    : Boolean;
                      --requestingUser ist user
                      begin
-                        -- TODO: pruefe ob es die beiden User gibt
+			-- TODO: pruefe ob es die beiden User gibt
+
+			-- # Pruefe, ob eine Kontaktanfrage beantortet wird
                         if (checkIfContactRequestExists (Server, requestedUser, user)) then
-                           -- stelle Kontakt her
-                           --      Kontaktanfrage aus Liste rausnehmen
+                           -- # stelle Kontakt her
+                           -- # Kontaktanfrage aus Liste rausnehmen
                            removeContactRequest (Server, requestedUser, user);
 
                            -- # User_Datenbank aktualisieren
@@ -463,51 +348,36 @@ package body Concrete_Server_Logic is
                            saveUserDatabase (Server.UserDatabase);
 
                            --  # User benachrichten
-                           messageToRequestingUser :=
-                             createMessage
-                               (messagetype => Protocol.Chat,
-                                sender      => serverStr,
-                                receiver    => serverRoomID,
-                                content => To_Unbounded_String ("New Contact added: " & To_String (getUsername (requestedUser))));
-                           messageToRequestedUser :=
-                             createMessage
-                               (messagetype => Protocol.Chat,
-                                sender      => serverStr,
-                                receiver    => requestedUserClient.ServerRoomID, --TODO: Element kann fehlschlagen
-                                content     => To_Unbounded_String ("New Contact added: " & To_String (getUsername (user))));
-                           writeMessageToStream (ClientSocket => client.Socket, message => messageToRequestingUser);
-                           writeMessageToStream (ClientSocket => requestedUserClient.Socket, message => messageToRequestedUser);
+			   sendServerMessageToClient(requestedUserClient,Chat,"New Contact added: " & To_String (getUsername (user)));
+			   sendServerMessageToClient(client,Chat,"New Contact added: " & To_String (getUsername (requestedUser)));
 
                            -- # Kontakte über online Status benachrichtigen
-                           messageToRequestingUser :=
-                             createMessage (Protocol.Online, serverStr, client.ServerRoomID, getUsername (requestedUser));
-                           messageToRequestedUser :=
-                             createMessage (Protocol.Online, serverStr, requestedUserClient.ServerRoomID, getUsername (user));
-                           writeMessageToStream (ClientSocket => client.Socket, message => messageToRequestingUser);
-                           writeMessageToStream (ClientSocket => requestedUserClient.Socket, message => messageToRequestedUser);
+			   sendServerMessageToClient(client,Online,To_String(getUsername(requestedUser)));
+			   sendServerMessageToClient(requestedUserClient,Online,To_String(getUsername(user)));
+
+			   -- # GUI informieren
+			   gui.printInfoMessage("'"&To_string(getUsername(user))&"' accepted contact request from '"&To_String(getUsername(user))&"'.");
+			   gui.printInfoMessage("'"&To_String(getUsername(user))&"' and '"&To_String(getUsername(requestedUser))&"' are now contacts.");
                         else
                            declare
                               ulist : dataTypes.UserList.List;
                            begin
-                              -- trage Kontaktanfrage in serverliste ein
-                              -- gibt es UserKey von Requests in Map
+                              -- # trage Kontaktanfrage in serverliste ein
+                              -- # gibt es UserKey von Requests in Map
                               if Server.ContactRequests.Contains (Key => user) then
                                  ulist := Server.ContactRequests.Element (Key => user);
                                  ulist.Append (New_Item => requestedUser);
                               else
-                                 -- requestedUser zur Liste hinzufuegen
+                                 -- # requestedUser zur Liste hinzufuegen
                                  ulist.Append (New_Item => requestedUser);
-                                 -- wenn nein, Key und Liste anlegen
+                                 -- # wenn nein, Key und Liste anlegen
                                  Server.ContactRequests.Insert (Key => user, New_Item => ulist);
                               end if;
                               -- # Benachrichtige requested user über Kontaktanfrage
-                              messageToRequestedUser :=
-                                createMessage
-                                  (Protocol.addContact,
-                                   serverStr,
-                                   requestedUserClient.ServerRoomID,
-                                   getUsername (user));
-                              writeMessageToStream (requestedUserClient.Socket, messageToRequestedUser);
+			      sendServerMessageToClient(requestedUserClient,addContact,To_String(getUsername(user)));
+
+			      -- # Benachrichtige GUI
+			      gui.printInfoMessage("'"&To_String(getUsername(user))&"' sent contact request to '"&To_String(getUsername(requestedUser))&"'.");
                            end;
                         end if;
                      end;
@@ -518,10 +388,6 @@ package body Concrete_Server_Logic is
                         requestedUser           : UserPtr := getUser (Server.UserDatabase, incoming_message.content);
                         requestedUserClient     : Concrete_Client_Ptr     := Server.Connected_Clients.Element (requestedUser);
                         userContacts            : dataTypes.UserList.List := getContacts (user);
-                        messageToRequestingUser : MessageObject           :=
-                          createMessage (Protocol.remContact, serverStr, client.ServerRoomID, incoming_message.content);
-                        messageToRequestedUser : MessageObject :=
-                          createMessage (Protocol.remContact, serverStr, requestedUserClient.ServerRoomID, getUsername (user));
                         bool : Boolean;
                      begin
                         -- #prüfe ob Kontakt zu angegebenen User besteht
@@ -535,27 +401,22 @@ package body Concrete_Server_Logic is
                            saveUserDatabase (Server.UserDatabase);
 
                            -- #Benachrichtige die User über Löschen des Kontakts
-                           writeMessageToStream (client.Socket, messageToRequestingUser);
-                           writeMessageToStream (requestedUserClient.Socket, messageToRequestedUser);
+			   sendServerMessageToClient(client,remContact,To_String(incoming_message.content));
+			   sendServerMessageToClient(requestedUserClient,remContact,To_String(getUsername (user)));
+
+			   -- # Benachrichtige GUI
+			   gui.printInfoMessage("'"&To_String(getUsername(user)&"' and '" &To_String(getUsername(requestedUser)&"' are no longer contacts")));
 
                         -- # Kontaktanfrage ablehnen über RemContact
-                        elsif
-                          (checkIfContactRequestExists (server => Server, requestingUser => requestedUser, requestedUser => user))
-                        then
+                        elsif checkIfContactRequestExists (Server, requestedUser, user) then
                            removeContactRequest (server => Server, requestingUser => requestedUser, requestedUser => user);
                            -- # User muss benachrichtigt werden, dass seine Kontaktanfrage abgelehnt wurde
-                           messageToRequestedUser :=
-                             createMessage (Protocol.remContact, serverStr, requestedUserClient.ServerRoomID, getUsername (user));
-                           writeMessageToStream (requestedUserClient.Socket, messageToRequestedUser);
+			   sendServerMessageToClient(requestedUserClient,remContact,To_String(getUsername (user)));
+			   -- # GUI benachrichtigen
+			   gui.printInfoMessage("'"&To_String(getUsername(user))&"' has declined the contact request from '"&To_String(getUsername(requestedUser))&"'.");
                         else
                            -- # wenn keine Kontaktanfrage zu diesem Kontakt vorhanden
-                           messageToRequestingUser :=
-                             createMessage
-                               (Protocol.Refused,
-                                serverStr,
-                                client.ServerRoomID,
-                                To_Unbounded_String ("There is no contact request from " & To_String (incoming_message.content)));
-                           writeMessageToStream (client.Socket, messageToRequestingUser);
+			   sendServerMessageToClient(client,Refused,"There is no contact request from " & To_String (incoming_message.content));
                         end if;
 
                      end;
@@ -615,7 +476,8 @@ package body Concrete_Server_Logic is
                  sender      => To_Unbounded_String ("server"),
                  receiver    => room.chatRoomID,
                  content     => userleftText);
-            broadcastToChatRoom (room, userleftMessage);
+	    broadcastToChatRoom (room, userleftMessage);
+	    gui.printInfoMessage("'"&To_String(getUsernameOfClient(clientToRemove))&"' left the chatroom with ID '"&Natural'Image(room.chatRoomID)&"'");
          else
             -- # TODO: lösche den chatraum
             null;
@@ -638,7 +500,6 @@ package body Concrete_Server_Logic is
       addClientToChatroom (room => room, client => firstClient);
       server.chatRooms.Insert (Key => id, New_Item => room);
       return room;
-
    end createChatRoom;
 
    ----------------------------------------------------------------------------------------
@@ -777,7 +638,10 @@ package body Concrete_Server_Logic is
       Close_Socket (client.Socket);
       -- # Setze User als offline #
       Server.Connected_Clients.Delete (client.user);
-      -- # TODO: Benachrichtige GUI über Änderung der Connected_Clients
+      -- # Benachrichtige GUI über Änderung der Connected_Clients
+      gui.printInfoMessage(To_String(getUsername(client.user)) & " disconnected.");
+      gui.updateOnlineUserOverview(connectedClientsToClientList(server));
+      gui.updateNumberOfContacts(Integer(server.Connected_Clients.Length));
    end disconnectClient;
 
    ----------------------------------------------------------------------------------------
@@ -803,8 +667,7 @@ package body Concrete_Server_Logic is
 
    procedure stopServer (thisServer : aliased in Concrete_Server) is
    begin
-      --# TODO
-      null;
+      Close_Socket(server.Socket);
    end stopServer;
    ----------------------------------------------------------------------------------------
 
@@ -849,22 +712,40 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   function connectedClientsToClientList(this : in Concrete_Server_Ptr) return STG.userViewOnlineList.List is
+   function connectedClientsToClientList(this : in Concrete_Server_Ptr) return userViewOnlineList.List is
       clientMap : userToClientMap.Map := this.Connected_Clients;
       clientList : userViewOnlineList.List;
-      concClient : Concrete_Client_Ptr;
-      ptr : ClientPtr;
    begin
       for user of clientMap loop
-         ptr := user.all'Access;
-         clientList.Append(New_Item => ptr);
+         clientList.Append(New_Item => user);
       end loop;
 
       return clientList;
    end connectedClientsToClientList;
 
+   ----------------------------------------------------------------------------------------
 
-
+   function getUsernameOfClient(client : Concrete_Client_Ptr) return Unbounded_String
+   is
+   begin
+      return getUsername(client.user);
+   end getUsernameOfClient;
 
    ----------------------------------------------------------------------------------------
+
+   procedure declineConnectionWithRefusedMessage(client : Concrete_Client_Ptr; messageContent : String)is
+      refusedMessage : MessageObject := createMessage(Protocol.Refused,To_Unbounded_String("server"),client.ServerRoomID,To_Unbounded_String(messageContent));
+   begin
+      writeMessageToStream(client.Socket,refusedMessage);
+      gui.printErrorMessage("Connection request from " & Gnat.Sockets.Image(client.SocketAddress.Addr) & " declined: " & messageContent);
+   end declineConnectionWithRefusedMessage;
+
+   ----------------------------------------------------------------------------------------
+   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String)is
+      message : MessageObject := createMessage(messageType,To_Unbounded_String("server"),client.ServerRoomID,To_Unbounded_String(content));
+   begin
+      writeMessageToStream(client.Socket,message);
+   end sendServerMessageToClient;
+   ----------------------------------------------------------------------------------------
+
 end Concrete_Server_Logic;

@@ -10,18 +10,32 @@ with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Strings.hash;
 with Ada.Exceptions; use Ada.Exceptions;
 with Ada.IO_Exceptions;
-
 with DataTypes; use DataTypes;
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Dieses Paket bündelt Typen um Benutzer des Chats zu verwalten. Es unterhält unter anderem Funktionen um User zu registrieren und die
+-- Benutzerdatenbank zu speichern oder zu laden.
+--
+-- Autoren: Daniel Kreck, Leonard Schmischke
+-- Letzte Änderung: 29.04.2016
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 package User_Databases is
--- public
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   -- > Öffentliche Typen
 
    type User_Database is tagged private;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   -- > Öffentliche Funktionen zum Typ User_Database
+
    function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean;
    function getUser(database : in User_Database; username : in Unbounded_String) return UserPtr;
 
    procedure saveUserDatabase(this : in User_Database); -- writes User Database to file
    procedure loadUserDatabase(this : in out User_Database); -- loads user database from file
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 private
 
@@ -42,10 +56,14 @@ private
       "=" => contactNamesList."=");
    use userToContactNamesMap;
 
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   -- > Öffentliche Funktionen zum Typ User_Database
+
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String;
    function StringToLonelyUser(inputLine : in String; database : in User_Database; contactNames : out contactNamesList.List  ) return UserPtr;
 
-
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   -- > Öffentliche Typen
 
    type User_Database is tagged record
       users : User_Maps.Map; -- # username -> userDataSet

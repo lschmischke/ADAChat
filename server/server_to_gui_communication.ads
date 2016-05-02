@@ -1,5 +1,4 @@
 with Protocol; use Protocol;
-limited with Concrete_Server_Logic;
 with Protocol; use Protocol;
 with GNAT.Sockets; use GNAT.Sockets;
 with Ada.Streams; use Ada.Streams;
@@ -17,13 +16,13 @@ with Ada.Strings.Unbounded.Hash;
 with Gtk.Builder; use Gtk.Builder;
 with GUI_to_Server_Communication;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
+with dataTypes;
 
 package Server_To_GUI_Communication is
    type GUI is interface;
    type GUIPtr is access all GUI'Class;
 
-   type ClientPtr is access all Concrete_Server_Logic.Concrete_Client;
-    package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => ClientPtr);
+
    package userViewOfflineMap is new Hashed_Maps(Key_Type        => Unbounded_String,
 						     Element_Type    => Unbounded_String,
 						     Hash            => Ada.Strings.Unbounded.Hash_Case_Insensitive,

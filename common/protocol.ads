@@ -6,25 +6,23 @@ with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Streams; use Ada.Streams;
 with GNAT.Sockets; use GNAT.Sockets;
 
--- #######################################################################################################################################################
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 -- In diesem Paket ist das Kommunikationsprotokoll in Code gegossen. Es stellt Konstanten, Typen und Funktionen zur Verfügung über die unteranderem
 -- Nachrichten erstellt, versendet und gelesen werden können.
 --
 -- Autoren: Daniel Kreck, Leonard Schmischke
 -- Letzte Änderung: 29.04.2016
--- #######################################################################################################################################################
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 package Protocol is
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
    -- > Konstanten
 
    -- Trennzeichen für die zur Kommunikation verwendeten Strings, um in diesen inhaltlich getrennte Felder zu definieren
    -- Seperator : constant String := Character'Image(Character'Val(0));
    Seperator : constant String :=":";
 
-   -- ####################################################################################################################################################
-
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
    -- > Typen
 
    -- Legt die verschiedenen Nachrichtentypen fest, die verschickt werden können
@@ -39,9 +37,7 @@ package Protocol is
       content : Unbounded_String;
    end record;
 
-   -- ####################################################################################################################################################
-
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
    -- > Funktionen zum Typ MessageObject
 
    -- Setzt aus dem MessageObject einen protokollkonformen Nachrichtenstring zusammen
@@ -51,7 +47,7 @@ package Protocol is
    function stringToMessageObject(message : in Unbounded_String) return MessageObject;
 
    -- Erstellt ein neues MessageObject aus den angegeben Parametern
-   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Integer; content : in Unbounded_String) return MessageObject;
+   function createMessage(messagetype : in MessageTypeE; sender : in Unbounded_String; receiver : in Natural; content : in Unbounded_String) return MessageObject;
 
    -- Gibt das MessageObject auf die Konsole aus
    procedure printMessageToInfoConsole(message : in MessageObject);
@@ -62,6 +58,6 @@ package Protocol is
    -- Liest vom angegebenen Socket eine Nachricht ein und erstellt aus dieser ein neues MessageObject
    function readMessageFromStream (ClientSocket : in Socket_Type) return MessageObject;
 
-   -- ####################################################################################################################################################
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 end Protocol;
