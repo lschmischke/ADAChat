@@ -10,13 +10,11 @@ with ServerGuiEntryPoint; use ServerGuiEntryPoint;
 
 procedure main is
 
-   cserver : Concrete_Server;
-   Client : ClientPtr := new Concrete_Client_Logic.Concrete_Client;
-   ui : Concrete_Client_Ui.Concrete_Ui;
-
 begin
-   --cserver.startServer("127.0.0.1",12321);
    --ServerGuiEntryPoint.ServerGuiEntryPoint;
 
-   ui.initClientUI(Client_Instance => Client);
+   Concrete_Client_Ui.Instance    := new Concrete_Ui;
+   Concrete_Client_Logic.Instance := new Concrete_Client;
+   Concrete_Client_Logic.Instance.InitializeGUI (GUIPtr    (Concrete_Client_Ui.Instance));
+   Concrete_Client_Ui.Instance.initClientUI     (ClientPtr (Concrete_Client_Logic.Instance));
 end main;
