@@ -2,10 +2,14 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Protocol; use Protocol;
 with GNAT.Sockets; use GNAT.Sockets;
 
+limited with Client2Gui_Communication;
+
 package Gui2Client_Communication is
 
    type Client is interface;
    type ClientPtr is access all Client'Class;
+
+   procedure InitializeGUI(This : in out Client; Ptr : in Client2Gui_Communication.GUIPtr) is abstract;
 
    procedure InitializeSocket(This : in out Client; ServerAdress : in Unbounded_String;
                               ServerPort : in Port_Type) is abstract;
