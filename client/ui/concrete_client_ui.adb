@@ -98,7 +98,7 @@ package body Concrete_Client_Ui is
       when Error : others =>
          --Put ("Unexpected exception in ConnectToServer: ");
          --Put_Line (Exception_Information (Error));
-         Error_Message("Unexpected exception in InitializeSocket");
+         Error_Message(message => "Unexpected exception in InitializeSocket");
    end Register_Action;
 
    procedure Login_Action (Object : access Gtkada_Builder_Record'Class) is
