@@ -19,7 +19,6 @@ package body Concrete_Client_Logic is
                               ServerPort : in Port_Type) is
 
    begin
-      --Instance.AddOnlineUser(UserName => To_Unbounded_String("Testus"));
       --#Socket initialisieren und erzeugen#
       Create_Socket (Client);
       Address.Addr := Inet_Addr(To_String(ServerAdress));
@@ -27,6 +26,7 @@ package body Concrete_Client_Logic is
       This.Socket := Client;
       Connect_Socket (Client, Address);
       Channel := Stream (Client);
+      Server_Listener_Task.Start;
    end InitializeSocket;
 
 
@@ -168,7 +168,6 @@ package body Concrete_Client_Logic is
       Msg : Unbounded_String;
 
    begin
-
       MsgObject := readMessageFromStream(ClientSocket => Client);
       This.ProcessMessageObject(MsgObject);
 
@@ -179,13 +178,11 @@ package body Concrete_Client_Logic is
    procedure ProcessMessageObject(This : in out Concrete_Client; MsgObject : in MessageObject) is
 
    begin
-
       case MsgObject.Messagetype is
 
          when Connect =>
             This.ServerRoomId := MsgObject.Receiver;
             This.GUI.LoginSuccess;
-
          when Chat =>
 
             --#Ist ID bekannt, bin ich schon im Chatroom
@@ -304,7 +301,6 @@ package body Concrete_Client_Logic is
             null;
 
       end case;
-
    end ProcessMessageObject;
 
    -----------------------------------------------------------------------------
@@ -380,5 +376,19 @@ package body Concrete_Client_Logic is
    end SendMessageToChat;
 
    -----------------------------------------------------------------------------
+
+   task body Server_Listener_Task is
+   begin
+      accept Start;
+      <<Continue>>
+      loop
+         declare
+            MsgObject : MessageObject;
+         begin
+            --MsgObject := readMessageFromStream(ClientSocket => Client);
+            Instance.ProcessMessageObject(MsgObject);
+         end;
+      end loop;
+   end Server_Listener_Task;
 
 end Concrete_Client_Logic;

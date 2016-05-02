@@ -18,6 +18,8 @@ package Concrete_Client_Logic is
 
    type Concrete_Client is new Gui2Client_Communication.Client with private;
 
+   type ConcretePtr is access all Concrete_Client'Class;
+
    function Hash (R : Natural) return Hash_Type;
 
    package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
@@ -29,6 +31,8 @@ package Concrete_Client_Logic is
                                                                       Hash            => Hash,
                                                                       Equivalent_Keys => "=",
                                                                       "="             => Client2Gui_Communication.Userlist."=");
+
+   Instance : ConcretePtr;
 
    private
 
@@ -110,5 +114,9 @@ package Concrete_Client_Logic is
    procedure SendMessageToChat(This : in out Concrete_Client; Receiver: in Integer; Username : in Unbounded_String;
                                Message : in Unbounded_String);
    -----------------------------------------------------------------------------
+
+   task Server_Listener_Task is
+      entry Start;
+   end Server_Listener_Task;
 
 end Concrete_Client_Logic;
