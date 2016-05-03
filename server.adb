@@ -8,11 +8,8 @@ with Client2Gui_Communication; use Client2Gui_Communication;
 with Gui2Client_Communication; use Gui2Client_Communication;
 with ServerGuiEntryPoint; use ServerGuiEntryPoint;
 
-procedure main is
+procedure server is
 
 begin
-   Concrete_Client_Ui.Instance    := new Concrete_Ui;
-   Concrete_Client_Logic.Instance := new Concrete_Client;
-   Concrete_Client_Logic.Instance.InitializeGUI (GUIPtr    (Concrete_Client_Ui.Instance));
-   Concrete_Client_Ui.Instance.initClientUI     (ClientPtr (Concrete_Client_Logic.Instance));
-end main;
+   ServerGuiEntryPoint.ServerGuiEntryPoint;
+end server;
