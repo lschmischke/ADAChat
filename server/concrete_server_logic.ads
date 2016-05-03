@@ -58,7 +58,7 @@ package Concrete_Server_Logic is
    function getChatroomsOfClient(client : in Concrete_Client_Ptr) return chatRoom_List.List;
    procedure broadcastOnlineStatusToContacts(client : in Concrete_Client_Ptr; status : MessageTypeE);
 
-   procedure disconnectClient(client : in Concrete_Client_Ptr);
+   procedure disconnectClient(client : in Concrete_Client_Ptr; msg : String);
 
    type Client_Task is limited private;
    type Client_Task_Ptr is access Client_Task;
@@ -144,6 +144,7 @@ private
 
    procedure declineConnectionWithRefusedMessage(client : Concrete_Client_Ptr; messageContent : String);
    procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String);
+   procedure removeClientRoutine(client : Concrete_Client_Ptr);
 
 
 end Concrete_Server_Logic;
