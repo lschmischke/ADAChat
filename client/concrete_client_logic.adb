@@ -1,4 +1,8 @@
+--Implementierung der Client_Logic
+
+--Includes
 with GNAT.String_Split; use GNAT.String_Split;
+
 package body Concrete_Client_Logic is
 
    Client : Socket_Type;
@@ -319,12 +323,14 @@ package body Concrete_Client_Logic is
       return False;
    end SearchFriendList;
 
+   -----------------------------------------------------------------------------
    function Hash (R : Natural) return Hash_Type is
    begin
       return Hash_Type (R);
    end Hash;
 
    -----------------------------------------------------------------------------
+   -----------Implementierung des Gui2Client_Communication interfaces-----------
    -----------------------------------------------------------------------------
 
    procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
@@ -380,7 +386,6 @@ package body Concrete_Client_Logic is
    task body Server_Listener_Task is
    begin
       accept Start;
-      <<Continue>>
       loop
          declare
             MsgObject : MessageObject;

@@ -1,5 +1,3 @@
-with "C:\GtkAda\lib\gnat\gtkada.gpr";
-
 project ADAChat is
 
    for Main use ("Main.adb", "server.adb");
