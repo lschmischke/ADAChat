@@ -84,7 +84,7 @@ package Concrete_Client_Logic is
                                Id_Receiver : in Integer; MsgObject : in MessageObject);
 
    --Diese Funktion liest Messageobjects vom Server-Stream.
-   procedure ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type);
+   procedure ReadFromServer(This : in out Concrete_Client);
 
    --Diese Funktion verarbeitet MessageObjects.
    procedure ProcessMessageObject(This : in out Concrete_Client; MsgObject : in MessageObject);

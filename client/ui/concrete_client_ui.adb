@@ -21,25 +21,16 @@ with System;
 
 package body Concrete_Client_Ui is
 
-   procedure showMessage is null;
-   procedure setConnectionStatus is null;
-   procedure updateChatParticipants is null;
+   -----------------------------------------------------------------------------
 
    procedure initClientUI(This : in out Concrete_Ui; Client_Instance : ClientPtr) is
    begin
-      --  Initialize GtkAda.
-      Gtk.Main.Init;
-
       This.Client := Client_Instance;
 
       This.Login_Window.Init;
-
-      --  Start the Gtk+ main loop
-      Gtk.Main.Main;
-      Unref(This.Login_Window.Builder);
-      Unref(This.Contact_Window.Builder);
    end initClientUI;
 
+   -----------------------------------------------------------------------------
 
    procedure Error_Message(This : in out Concrete_Ui; message : String) is
       dialog : aliased Gtk_Message_Dialog;
@@ -152,6 +143,8 @@ package body Concrete_Client_Ui is
    begin
       onlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("onlinecontacts_list"));
 
+      onlineList.Clear;
+
       for E in Users.Iterate
       loop
          onlineList.Append(newItem);
@@ -166,11 +159,13 @@ package body Concrete_Client_Ui is
    begin
       offlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("offlinecontacts_list"));
 
-      --for E in Users.Iterate
-      --loop
-      --   offlineList.Append(newItem);
-      --   offlineList.Set(newItem, 0, To_String(Client2Gui_Communication.Userlist.Element(E)));
-      --end loop;
+      offlineList.Clear;
+
+      for E in Users.Iterate
+      loop
+         offlineList.Append(newItem);
+         offlineList.Set(newItem, 0, To_String(Client2Gui_Communication.Userlist.Element(E)));
+      end loop;
    end SetOfflineUser;
 
    -----------------------------------------------------------------------------

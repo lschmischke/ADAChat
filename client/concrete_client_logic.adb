@@ -162,13 +162,14 @@ package body Concrete_Client_Logic is
 
    -----------------------------------------------------------------------------
 
-   procedure ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) is
+   procedure ReadFromServer(This : in out Concrete_Client) is
 
       MsgObject : MessageObject;
       Msg : Unbounded_String;
 
    begin
       MsgObject := readMessageFromStream(ClientSocket => Client);
+      Protocol.printMessageToInfoConsole(MsgObject);
       This.ProcessMessageObject(MsgObject);
 
    end ReadFromServer;
@@ -382,11 +383,10 @@ package body Concrete_Client_Logic is
       accept Start;
       <<Continue>>
       loop
-         declare
-            MsgObject : MessageObject;
          begin
-            --MsgObject := readMessageFromStream(ClientSocket => Client);
-            Instance.ProcessMessageObject(MsgObject);
+            Put_Line("Loop top");
+            Instance.ReadFromServer;
+            Put_Line("Loop bottom");
          end;
       end loop;
    end Server_Listener_Task;

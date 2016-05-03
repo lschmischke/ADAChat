@@ -11,6 +11,8 @@ with Concrete_Client_Logic; use Concrete_Client_Logic;
 
 package Concrete_Client_Ui is
 
+   -----------------------------------------------------------------------------
+
    type Concrete_Ui is new Client2Gui_Communication.GUI with record
       UserName : Unbounded_String; -- Set after Login
       Login_Window   : LoginWindow;
@@ -21,11 +23,11 @@ package Concrete_Client_Ui is
 
    type UiPtr is access all Concrete_Ui'Class;
 
+   -----------------------------------------------------------------------------
+
    Instance : UiPtr;
 
-   procedure showMessage;
-   procedure setConnectionStatus;
-   procedure updateChatParticipants;
+   -----------------------------------------------------------------------------
 
    -- general callbacks
    procedure Quit (Object : access Gtkada_Builder_Record'Class);
@@ -34,36 +36,66 @@ package Concrete_Client_Ui is
    procedure Register_Action (Object : access Gtkada_Builder_Record'Class);
    procedure Login_Action (Object : access Gtkada_Builder_Record'Class);
 
+   -----------------------------------------------------------------------------
+
 private
+
+   -----------------------------------------------------------------------------
 
    -- Must be called before using Concrete_Ui
    procedure initClientUI(This : in out Concrete_Ui; Client_Instance : ClientPtr);
 
+   -----------------------------------------------------------------------------
+
    procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set);
 
+   -----------------------------------------------------------------------------
+
    procedure ShowChatMessages(This : in out Concrete_Ui; message : in MessageObject);
+
+   -----------------------------------------------------------------------------
 
    --#Implementierung des Client2Gui_Communication interfaces
    procedure LoginSuccess(This : in out Concrete_Ui);
 
+   -----------------------------------------------------------------------------
+
    procedure RefusedMessage(This : in out Concrete_Ui; Reason : in Unbounded_String);
+
+   -----------------------------------------------------------------------------
 
    procedure InitializeStatus(This : in Concrete_Ui; Status : in Unbounded_String);
 
+   -----------------------------------------------------------------------------
+
    procedure DisconnectReason(This : in out Concrete_Ui; Status : in Unbounded_String);
+
+   -----------------------------------------------------------------------------
 
    -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
    procedure SetOnlineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
 
+   -----------------------------------------------------------------------------
+
    -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
    procedure SetOfflineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
 
+   -----------------------------------------------------------------------------
+
    procedure ContactRequest(This : in out Concrete_Ui; Username : in Unbounded_String);
 
+   -----------------------------------------------------------------------------
+
    procedure ContactRemove(This : in out Concrete_Ui; Username : in Unbounded_String);
-   --
+
+   -----------------------------------------------------------------------------
+
    procedure Error_Message(This : in out Concrete_Ui; message : String);
 
+   -----------------------------------------------------------------------------
+
    procedure Info_Message(This : in out Concrete_Ui; message : String);
+
+   -----------------------------------------------------------------------------
 
 end Concrete_Client_Ui;
