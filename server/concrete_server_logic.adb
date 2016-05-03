@@ -15,7 +15,6 @@ package body Concrete_Server_Logic is
       concServer := This;
       Server     := concServer'Access;
 
-
       -- # Datenbank laden #
       User_Databases.loadUserDatabase (Server.UserDatabase);
       gui.printInfoMessage("User database loadad.");
@@ -237,7 +236,7 @@ package body Concrete_Server_Logic is
                   -- ### DISCONNECT ###
                   when Protocol.Disconnect => -- # disconnect:client:<ServerRoomID>:<?> #
                      begin
-			disconnectClient (client);
+			disconnectClient (client,"ok");
                         -- # TODO: Task beenden
                         exit;
                      end;
@@ -434,11 +433,11 @@ package body Concrete_Server_Logic is
       when Error : Socket_Error =>
          Put ("Socket_Error in Client_Task: ");
          Put_Line (Exception_Information (Error));
-         disconnectClient (client);
+         removeClientRoutine(client);
       when Error : others =>
          Put ("Unexpected exception in Client_Task: ");
          Put_Line (Exception_Information (Error));
-         disconnectClient (client);
+         disconnectClient (client,"unspecified error");
    end Client_Task;
 
    ----------------------------------------------------------------------------------------
@@ -615,34 +614,39 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   procedure disconnectClient (client : in Concrete_Client_Ptr) is
-      disconnectMessage : MessageObject;
-      chatRoomsOfClient : chatRoom_List.List := getChatroomsOfClient (client);
+   procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String) is
       serverStr         : Unbounded_String   := To_Unbounded_String ("server");
    begin
+
+      Put_Line("disconnect nachricht");
       -- # Sende Disconnect-Bestaetigung
-      disconnectMessage :=
-        createMessage
-          (messagetype => Protocol.Disconnect,
-           sender      => serverStr,
-           receiver    => client.ServerRoomID,
-           content     => To_Unbounded_String ("ok"));
-      writeMessageToStream (client.Socket, disconnectMessage);
-      -- # Client verlässt alle Chaträume
+      sendServerMessageToClient(client,Disconnect,msg);
+      removeClientRoutine(client);
+   end disconnectClient;
+
+   ----------------------------------------------------------------------------------------
+   procedure removeClientRoutine(client : Concrete_Client_Ptr) is
+      chatRoomsOfClient : chatRoom_List.List := getChatroomsOfClient (client);
+   begin
+            -- # Client verlässt alle Chaträume
+      Put_Line("chaträume");
       for chatRoom of chatRoomsOfClient loop
          removeClientFromChatroom (chatRoom, client);
       end loop;
       -- # Sende Offline-Status an alle Kontakte vom Client #
+      Put_Line("offline status");
       broadcastOnlineStatusToContacts (client, Protocol.Offline);
       -- # Schliesse Socket zu Client #
+      Put_Line("socket schliessen");
       Close_Socket (client.Socket);
       -- # Setze User als offline #
+      Put_Line("user offline");
       Server.Connected_Clients.Delete (client.user);
       -- # Benachrichtige GUI über Änderung der Connected_Clients
-      gui.printInfoMessage(To_String(getUsername(client.user)) & " disconnected.");
+      gui.printInfoMessage("'"&To_String(getUsername(client.user)) & "' disconnected.");
       gui.updateOnlineUserOverview(connectedClientsToClientList(server));
       gui.updateNumberOfContacts(Integer(server.Connected_Clients.Length));
-   end disconnectClient;
+   end removeClientRoutine;
 
    ----------------------------------------------------------------------------------------
 
@@ -660,7 +664,7 @@ package body Concrete_Server_Logic is
       user   : UserPtr             := getUser (Server.UserDatabase, username => To_Unbounded_String (username));
       client : Concrete_Client_Ptr := Server.Connected_Clients.Element (user);
    begin
-      disconnectClient (client);
+      disconnectClient (client,"kicked");
    end kickUserWithName;
 
    ----------------------------------------------------------------------------------------
@@ -744,6 +748,8 @@ package body Concrete_Server_Logic is
    procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String)is
       message : MessageObject := createMessage(messageType,To_Unbounded_String("server"),client.ServerRoomID,To_Unbounded_String(content));
    begin
+      Put_Line("OUT:");
+      printMessageToInfoConsole(message);
       writeMessageToStream(client.Socket,message);
    end sendServerMessageToClient;
    ----------------------------------------------------------------------------------------
