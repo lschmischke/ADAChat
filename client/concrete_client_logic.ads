@@ -97,14 +97,9 @@ package Concrete_Client_Logic is
    procedure SendMessageObject(This : in out Concrete_Client; Username : in Unbounded_String;
                                Id_Receiver : in Integer; MsgObject : in MessageObject);
 
-<<<<<<< HEAD
-   --Diese Funktion liest Messageobjects vom Server-Stream.
-   procedure ReadFromServer(This : in out Concrete_Client);
-=======
    -- Liest Messageobjects vom Server-Stream.
    -- ServerSocket => Socketstream von dem gelesen werden soll
    procedure ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type);
->>>>>>> origin/feature/Client_Logic
 
    -- Verarbeitet MessageObjects und kommuniziert mit der GUI.
    -- MsgObject => MessageObject welches verarbeitet werden soll

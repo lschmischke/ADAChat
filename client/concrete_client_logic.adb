@@ -166,7 +166,7 @@ package body Concrete_Client_Logic is
 
    -----------------------------------------------------------------------------
 
-   procedure ReadFromServer(This : in out Concrete_Client) is
+   procedure ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) is
 
       MsgObject : MessageObject;
       Msg : Unbounded_String;
@@ -390,7 +390,7 @@ package body Concrete_Client_Logic is
       loop
          begin
             Put_Line("Loop top");
-            Instance.ReadFromServer;
+            Instance.ReadFromServer(Client);
             Put_Line("Loop bottom");
          end;
       end loop;
