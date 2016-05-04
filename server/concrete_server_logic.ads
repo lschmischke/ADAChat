@@ -28,11 +28,48 @@ with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 package Concrete_Server_Logic is
    package GTS renames GUI_to_Server_Communication;
 
+      function userHash (userToHash : UserPtr) return Hash_Type;
+   package userToClientMap is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
+							 Element_Type    => Concrete_Client_Ptr,
+							 Hash            => userHash,
+							 Equivalent_Keys => "=");
+
+
+   function Hash (R : Natural) return Hash_Type;
+   package chatRoomMap is new Ada.Containers.Hashed_Maps(Key_Type        => Natural,
+						     Element_Type    => chatRoomPtr,
+						     Hash            => Hash,
+                                                         Equivalent_Keys => "=");
+
+   package userToUsersMap is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => UserPtr,
+						     Element_Type    => dataTypes.UserList.List,
+						     Hash            => userHash,
+                                                     Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
+
 
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
    -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients.
-   type Concrete_Server is new GTS.server with private;
+
+    -- type Concrete_Server is new Server_Interface with record
+   protected type Concrete_Server is new GTS.Server with
+	procedure getSocket( s : out Socket_Type);
+      procedure getSocketAddress(sAddress: out Sock_Addr_Type);
+      procedure getConnectedClients(connectedClients : out userToClientMap.Map);
+      procedure getUserDatabase (dataBase : out User_Database);
+      procedure getChatrooms(cRooms : out chatRoomMap.Map);
+      procedure getContactRequests(cRequests : out userToUsersMap.Map);
+	private
+      Socket : Socket_Type;
+      SocketAddress : Sock_Addr_Type;
+      Connected_Clients : userToClientMap.Map;
+      UserDatabase : User_Database;
+      chatRoomIDCounter : Natural:= 1;
+      chatRooms : chatRoomMap.Map;
+      ContactRequests : userToUsersMap.Map;
+   end Concrete_Server;
    type Concrete_Server_Ptr is access all Concrete_Server;
+
+
 
    -- Diese Prozedur leitet die Initialisierung des Servers ein und startet
    -- diesen anschliessend. Dies bedeutet insbesondere, dass von nun an auf
@@ -73,41 +110,9 @@ private
       entry Start(newClient : Concrete_Client_Ptr);
    end Client_Task;
 
-
-   function userHash (userToHash : UserPtr) return Hash_Type;
-   package userToClientMap is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
-							 Element_Type    => Concrete_Client_Ptr,
-							 Hash            => userHash,
-							 Equivalent_Keys => "=");
-
-
-   function Hash (R : Natural) return Hash_Type;
-   package chatRoomMap is new Ada.Containers.Hashed_Maps(Key_Type        => Natural,
-						     Element_Type    => chatRoomPtr,
-						     Hash            => Hash,
-                                                         Equivalent_Keys => "=");
-
-   package userToUsersMap is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => UserPtr,
-						     Element_Type    => dataTypes.UserList.List,
-						     Hash            => userHash,
-                                                     Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
-
-   -- type Concrete_Server is new Server_Interface with record
-   type Concrete_Server is new GTS.Server with record
-      Socket : Socket_Type;
-      SocketAddress : Sock_Addr_Type;
-      Connected_Clients : userToClientMap.Map;
-      UserDatabase : User_Database;
-      chatRoomIDCounter : Natural:= 1;
-      chatRooms : chatRoomMap.Map;
-      ContactRequests : userToUsersMap.Map;
-   end record;
-
-
-
     -------------------------------------------------------------------------------------------
    -- # Implementierung ServerGUICommunication #
-   procedure startServer(thisServer :  aliased in Concrete_Server; ipAdress: String; port : Natural);
+   procedure startServer(thisServer :  aliased in Concrete_Server_Ptr; ipAdress: String; port : Natural);
    procedure stopServer(thisServer : aliased in  Concrete_Server);
    function loadDB(thisServer : aliased in Concrete_Server; DataFile : File_type) return Boolean;
    procedure saveDB(thisServer : aliased in Concrete_Server; DataFile : File_type);

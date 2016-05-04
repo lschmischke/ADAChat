@@ -14,7 +14,7 @@ package body Concrete_Server_Logic is
       -- # Erzeugte Serverintanz global setzen, damit sie im Package ueberall bekannt ist #
       concServer := This;
       Server     := concServer'Access;
-
+      Server.
       -- # Datenbank laden #
       User_Databases.loadUserDatabase (Server.UserDatabase);
       gui.printInfoMessage("User database loadad.");
@@ -646,7 +646,8 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   overriding procedure startServer (thisServer : aliased in Concrete_Server; ipAdress : String; port : Natural) is
+   overriding
+   procedure startServer (thisServer : aliased in Concrete_Server; ipAdress : String; port : Natural) is
       serv : aliased Concrete_Server := thisServer;
    begin
       StartNewServer (serv, ipAdress, port);
@@ -759,6 +760,42 @@ package body Concrete_Server_Logic is
       printMessageToInfoConsole(message);
       writeMessageToStream(client.Socket,message);
    end sendServerMessageToClient;
+
+   ----------------------------------------------------------------------------------------
+   -- SERVER GETTER --
+
+   protected body Concrete_Server is
+      procedure getSocket(s : out Socket_Type) is
+      begin
+	 s := Socket;
+      end getSocket;
+      procedure getSocketAddress(sAddress: out Sock_Addr_Type) is
+      begin
+	 sAddress := SocketAddress;
+      end getSocketAddress;
+
+      procedure getConnectedClients(connectedClients : out userToClientMap.Map) is
+      begin
+	 connectedClients := Connected_Clients;
+      end getConnectedClients;
+
+      procedure getUserDatabase (dataBase : out User_Database) is
+      begin
+	 dataBase := UserDatabase;
+      end getUserDatabase;
+
+      procedure getChatrooms(cRooms : out chatRoomMap.Map) is
+      begin
+	 cRooms := chatRooms;
+      end getChatrooms;
+
+      procedure getContactRequests(cRequests : out userToUsersMap.Map) is
+      begin
+	 cRequests := ContactRequests;
+      end getContactRequests;
+   end Concrete_Server;
+
+
 
 
 end Concrete_Server_Logic;
