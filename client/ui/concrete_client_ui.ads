@@ -47,7 +47,7 @@ private
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set);
+   procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.List);
 
    -----------------------------------------------------------------------------
 
@@ -73,12 +73,12 @@ private
    -----------------------------------------------------------------------------
 
    -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
-   procedure SetOnlineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
+   procedure SetOnlineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.List);
 
    -----------------------------------------------------------------------------
 
    -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
-   procedure SetOfflineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
+   procedure SetOfflineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.List);
 
    -----------------------------------------------------------------------------
 

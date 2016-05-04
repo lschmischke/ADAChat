@@ -3,7 +3,7 @@
 --Includes
 with Protocol; use Protocol;
 with dataTypes; use dataTypes;
-with Ada.Containers.Hashed_Sets;
+with Ada.Containers.Doubly_Linked_Lists;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 
@@ -15,10 +15,11 @@ package Client2Gui_Communication is
    type GUIPtr is access all GUI'Class;
 
    --Typdefinition zur Userlist
-   package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
-                                                      Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
-                                                      Equivalent_Elements => "=",
-                                                      "="                 => Ada.Strings.Unbounded."=");
+   package Userlist is new Ada.Containers.Doubly_Linked_Lists(Element_Type        => Unbounded_String);
+   --package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
+   --                                                   Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
+   --                                                   Equivalent_Elements => "=",
+   --                                                   "="                 => Ada.Strings.Unbounded."=");
 
    -- Registriert bzw. referenziert den Client bei der GUI.
    -- Client_Instance => Referenz der Client-Logik
@@ -42,15 +43,15 @@ package Client2Gui_Communication is
    -- Zeigt die aktuellen Chat-Teilnehmer eines Raumes.
    -- Chatraum => ID des Chatraums
    -- Participants => Liste der Teilnehmer im Chatraum
-   procedure ShowChatParticipants(This : in out GUI; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is abstract;
+   procedure ShowChatParticipants(This : in out GUI; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.List) is abstract;
 
    -- Fuegt den angegebenen User der Offline Liste hinzu.
    -- Users => Liste der Online User
-   procedure SetOnlineUser(This : in out GUI; Users : in Client2Gui_Communication.Userlist.Set) is abstract;
+   procedure SetOnlineUser(This : in out GUI; Users : in Client2Gui_Communication.Userlist.List) is abstract;
 
    -- Fuegt den angegebenen User der Online Liste hinzu.
    -- Users => Liste des Offline User
-   procedure SetOfflineUser(This : in out GUI; Users : in Client2Gui_Communication.Userlist.Set) is abstract;
+   procedure SetOfflineUser(This : in out GUI; Users : in Client2Gui_Communication.Userlist.List) is abstract;
 
    -- Stellt eine Kontaktanfrage an einen User.
    -- Username => Name des anzufragenden Users

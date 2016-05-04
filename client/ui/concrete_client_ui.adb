@@ -137,7 +137,7 @@ package body Concrete_Client_Ui is
 
    end Login_Action;
 
-   procedure SetOnlineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.Set) is
+   procedure SetOnlineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.List) is
       onlineList : Gtk_List_Store;
       newItem : Gtk_Tree_Iter;
    begin
@@ -153,7 +153,7 @@ package body Concrete_Client_Ui is
 
    end SetOnlineUser;
 
-   procedure SetOfflineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.Set) is
+   procedure SetOfflineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.List) is
       offlineList : Gtk_List_Store;
       newItem : Gtk_Tree_Iter;
    begin
@@ -199,7 +199,7 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
+   procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.List) is
 
    begin
       null;
