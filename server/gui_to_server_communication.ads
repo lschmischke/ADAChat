@@ -1,7 +1,7 @@
 with Ada.Text_IO; use Ada.Text_IO;
 
 package GUI_to_Server_Communication is
-   type Server is limited interface;
+   type Server is interface;
    type ServerPtr is access all Server'Class;
 
    procedure startServer(thisServer : aliased in Server; ipAdress: String; port : Natural) is abstract;
