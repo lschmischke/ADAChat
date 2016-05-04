@@ -384,8 +384,11 @@ package body Concrete_Client_Logic is
       loop
          declare
             MsgObject : MessageObject;
-         begin
-            --MsgObject := readMessageFromStream(ClientSocket => Client);
+	 begin
+	    Put_Line("before read");
+	    MsgObject := readMessageFromStream(ClientSocket => Client);
+	    Put_Line("after read");
+	    printMessageToInfoConsole(MsgObject);
             Instance.ProcessMessageObject(MsgObject);
          end;
       end loop;
