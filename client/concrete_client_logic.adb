@@ -388,10 +388,21 @@ package body Concrete_Client_Logic is
    begin
       accept Start;
       loop
+<<<<<<< HEAD
          begin
             Put_Line("Loop top");
             Instance.ReadFromServer(Client);
             Put_Line("Loop bottom");
+=======
+         declare
+            MsgObject : MessageObject;
+	 begin
+	    Put_Line("before read");
+	    MsgObject := readMessageFromStream(ClientSocket => Client);
+	    Put_Line("after read");
+	    printMessageToInfoConsole(MsgObject);
+            Instance.ProcessMessageObject(MsgObject);
+>>>>>>> origin/feature/server_logic
          end;
       end loop;
    end Server_Listener_Task;
