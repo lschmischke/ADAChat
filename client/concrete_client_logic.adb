@@ -1,4 +1,8 @@
+--Implementierung der Client_Logic
+
+--Includes
 with GNAT.String_Split; use GNAT.String_Split;
+
 package body Concrete_Client_Logic is
 
    Client : Socket_Type;
@@ -166,9 +170,10 @@ package body Concrete_Client_Logic is
 
       MsgObject : MessageObject;
       Msg : Unbounded_String;
-
    begin
+
       MsgObject := readMessageFromStream(ClientSocket => Client);
+      Protocol.printMessageToInfoConsole(MsgObject);
       This.ProcessMessageObject(MsgObject);
 
    end ReadFromServer;
@@ -194,7 +199,7 @@ package body Concrete_Client_Logic is
                --#zeige Message im Chatraum an
                null;
             else
-               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
+               This.ChatRoomIdSet.Append(New_Item => MsgObject.Receiver);
                --#TODO
                --#oeffne neues Chatfenster
             end if;
@@ -234,12 +239,14 @@ package body Concrete_Client_Logic is
          when Online =>
             declare
                Message: Unbounded_String;
+               Position: Client2Gui_Communication.Userlist.Cursor;
             begin
                Message := MsgObject.Content;
                Append(Message, " ist jetzt online!");
-               This.UsersOnline.Insert(MsgObject.Content);
+               This.UsersOnline.Append(MsgObject.Content);
                if This.UsersOffline.Contains(Item => MsgObject.Content) then
-                  This.UsersOffline.Delete(Item => MsgObject.Content);
+                  Position := This.UsersOffline.Find(Item => MsgObject.Content);
+                  This.UsersOffline.Delete(Position);
                end if;
                This.GUI.SetOnlineUser(Users => This.UsersOnline);
             end;
@@ -247,14 +254,16 @@ package body Concrete_Client_Logic is
          when Offline =>
             declare
                Message: Unbounded_String;
+               Position: Client2Gui_Communication.Userlist.Cursor;
             begin
                Message := MsgObject.Content;
                Append(Message, " ist jetzt offline!");
-               This.UsersOffline.Insert(MsgObject.Content);
+               This.UsersOffline.Append(MsgObject.Content);
                if This.UsersOnline.Contains(Item => MsgObject.Content) then
-                  This.UsersOnline.Delete(Item => MsgObject.Content);
+                  Position := This.UsersOnline.Find(Item => MsgObject.Content);
+                  This.UsersOnline.Delete(Position);
                end if;
-               This.GUI.SetOfflineUser(Users => This.UsersOnline);
+               This.GUI.SetOfflineUser(Users => This.UsersOffline);
             end;
 
          when Chatrequest =>
@@ -263,7 +272,7 @@ package body Concrete_Client_Logic is
             begin
                Message := To_Unbounded_String("Chatraum :");
                Append(Message, Integer'Image(MsgObject.Receiver));
-               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
+               This.ChatRoomIdSet.Append(New_Item => MsgObject.Receiver);
 
                --##TODO Chatfenster oeffnen
 
@@ -272,7 +281,7 @@ package body Concrete_Client_Logic is
          when Protocol.Userlist =>
             declare
                Substrings : GNAT.String_Split.Slice_Set;
-               UserSet : Client2Gui_Communication.Userlist.Set;
+               UserSet : Client2Gui_Communication.Userlist.List;
             begin
                GNAT.String_Split.Create (S => Substrings,
                                          From       => To_String(MsgObject.Content),
@@ -280,9 +289,9 @@ package body Concrete_Client_Logic is
                                          Mode       => GNAT.String_Split.Single);
 
                for I in 1 .. GNAT.String_Split.Slice_Count (Substrings) loop
-                  UserSet.Insert(New_Item => To_Unbounded_String(GNAT.String_Split.Slice (Substrings, I)));
+                  UserSet.Append(New_Item => To_Unbounded_String(GNAT.String_Split.Slice (Substrings, I)));
                end loop;
-               This.ChatRoomParticipants.Insert(Key      => MsgObject.Receiver,
+               This.ChatRoomParticipants.Append(--Key      => MsgObject.Receiver,
                                                 New_Item => UserSet);
 
                This.GUI.ShowChatParticipants(Chatraum     => MsgObject.Receiver,
@@ -319,12 +328,14 @@ package body Concrete_Client_Logic is
       return False;
    end SearchFriendList;
 
+   -----------------------------------------------------------------------------
    function Hash (R : Natural) return Hash_Type is
    begin
       return Hash_Type (R);
    end Hash;
 
    -----------------------------------------------------------------------------
+   -----------Implementierung des Gui2Client_Communication interfaces-----------
    -----------------------------------------------------------------------------
 
    procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
@@ -380,16 +391,9 @@ package body Concrete_Client_Logic is
    task body Server_Listener_Task is
    begin
       accept Start;
-      <<Continue>>
       loop
-         declare
-            MsgObject : MessageObject;
-	 begin
-	    Put_Line("before read");
-	    MsgObject := readMessageFromStream(ClientSocket => Client);
-	    Put_Line("after read");
-	    printMessageToInfoConsole(MsgObject);
-            Instance.ProcessMessageObject(MsgObject);
+         begin
+            Instance.ReadFromServer(Client);
          end;
       end loop;
    end Server_Listener_Task;
