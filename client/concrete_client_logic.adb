@@ -170,8 +170,8 @@ package body Concrete_Client_Logic is
 
       MsgObject : MessageObject;
       Msg : Unbounded_String;
-
    begin
+
       MsgObject := readMessageFromStream(ClientSocket => Client);
       Protocol.printMessageToInfoConsole(MsgObject);
       This.ProcessMessageObject(MsgObject);
@@ -263,7 +263,7 @@ package body Concrete_Client_Logic is
                   Position := This.UsersOnline.Find(Item => MsgObject.Content);
                   This.UsersOnline.Delete(Position);
                end if;
-               This.GUI.SetOfflineUser(Users => This.UsersOnline);
+               This.GUI.SetOfflineUser(Users => This.UsersOffline);
             end;
 
          when Chatrequest =>
@@ -393,9 +393,7 @@ package body Concrete_Client_Logic is
       accept Start;
       loop
          begin
-            Put_Line("Loop top");
             Instance.ReadFromServer(Client);
-            Put_Line("Loop bottom");
          end;
       end loop;
    end Server_Listener_Task;
