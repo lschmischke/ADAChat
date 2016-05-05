@@ -1,0 +1,170 @@
+package body datatypes is
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   protected body User is
+      function getUsername return Unbounded_String is
+      begin
+	 return username;
+      end getUsername;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   procedure setUsername(name : in Unbounded_String) is
+   begin
+      username := name;
+   end setUserName;
+
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   function getPassword return Unbounded_String is
+   begin
+      return password;
+   end getPassword;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   procedure setPassword(pw : in Unbounded_String)is
+   begin
+      password := pw;
+   end setPassword;
+
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   procedure setContacts (contactList : in UserList.List) is
+   begin
+      contacts := contactList;
+   end setContacts;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   procedure addContact (contactToAdd : UserPtr) is
+      begin
+
+      if not contacts.Contains(contactToAdd) then
+         contacts.Append(New_Item => contactToAdd);
+	 end if;
+      end addContact;
+
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   procedure removeContact (contactToRemove : UserPtr) is
+      pos : UserList.Cursor := contacts.Find(Item     => contactToRemove);
+   begin
+      if contacts.Contains(contactToRemove) then
+         contacts.Delete(Position => pos);
+      end if;
+      end removeContact;
+   end User;
+
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   protected body Concrete_Client is
+      function getUsernameOfClient return Unbounded_String is
+      begin
+	 return user.getUsername;
+      end getUsernameOfClient;
+
+      procedure declineConnectionWithRefusedMessage(messageContent : String)is
+	 refusedMessage : MessageObject := createMessage(Protocol.Refused,To_Unbounded_String("server"),ServerRoomID,To_Unbounded_String(messageContent));
+      begin
+	 writeMessageToStream(Socket,refusedMessage);
+      end declineConnectionWithRefusedMessage;
+
+      ----------------------------------------------------------------------------------------
+      procedure sendServerMessageToClient(messageType : MessageTypeE; content : String)is
+      begin
+	 sendServerMessageToClient(messageType,content,ServerRoomID);
+      end sendServerMessageToClient;
+
+      procedure sendServerMessageToClient(messageType : MessageTypeE; content : String; receiver : Natural) is
+	 message : MessageObject := createMessage(messageType,To_Unbounded_String("server"),receiver,To_Unbounded_String(content));
+      begin
+	 printMessageToInfoConsole(message);
+	 writeMessageToStream(Socket,message);
+      end sendServerMessageToClient;
+
+      function getSocket return Socket_Type is
+      begin
+	 return Socket;
+      end getSocket;
+
+   end Concrete_Client;
+
+
+      protected body chatRoom is
+      procedure addClientToChatroom (client : in Concrete_Client_Ptr) is
+      begin
+	 clientList.Append (client);
+      end addClientToChatroom;
+
+         procedure removeClientFromChatroom (clientToRemove : in Concrete_Client_Ptr) is
+      pos                              : Client_List.Cursor := clientList.Find (Item => clientToRemove);
+      userlistMessage, userleftMessage : MessageObject;
+      userleftText                     : Unbounded_String   := clientToRemove.getUsernameOfClient;
+   begin
+      if clientList.Contains (clientToRemove) then
+         clientList.Delete (Position => pos);
+
+         if (clientList.Length >= 1) then
+            -- # broadcaste die neue Userlist und teile dem Chat mit, dass der Benutzer diesen verlassen hat
+            userlistMessage := generateUserlistMessage;
+            broadcastToChatRoom (userlistMessage);
+            Ada.Strings.Unbounded.Append (userleftText, To_Unbounded_String (" left the chat."));
+            userleftMessage :=
+              createMessage
+                (messagetype => Protocol.Chat,
+                 sender      => To_Unbounded_String ("server"),
+                 receiver    => getChatRoomID,
+                 content     => userleftText);
+	    broadcastToChatRoom (userleftMessage);
+	 else
+            -- # TODO: lösche den chatraum
+            null;
+         end if;
+      end if;
+      end removeClientFromChatroom;
+
+      function getChatRoomID  return Natural is
+      begin
+	 return chatRoomID;
+      end getChatRoomID;
+
+         function generateUserlistMessage return MessageObject is
+      result     : Unbounded_String;
+      clients : Client_List.List := clientList;
+      message    : MessageObject;
+   begin
+      for client of clients loop
+         Append (result, To_Unbounded_String (Protocol.Seperator));
+         Append (result, client.getUsernameOfClient);
+      end loop;
+      Ada.Strings.Unbounded.Delete (result, 1, 1);
+      message :=
+        createMessage
+          (messagetype => Protocol.Userlist,
+           sender      => To_Unbounded_String ("server"),
+           receiver    => getChatRoomID,
+           content     => result);
+      return message;
+   end generateUserlistMessage;
+
+
+   procedure broadcastToChatRoom (message : in MessageObject) is
+   begin
+      for client of clientList loop
+         writeMessageToStream (client.getSocket, message);
+      end loop;
+   end broadcastToChatRoom;
+      end chatRoom;
+
+
+
+   function encodePassword(password : in Unbounded_String) return Unbounded_String is
+   begin
+      return To_Unbounded_String(GNAT.SHA512.Digest(To_String(password)));
+   end encodePassword;
+end datatypes;

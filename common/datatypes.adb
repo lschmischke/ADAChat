@@ -57,25 +57,63 @@ package body dataTypes is
 
       function getContacts return UserList.List is
       begin
-	 return contacts:
+	 return contacts;
       end getContacts;
    end User;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    protected body Concrete_Client is
+
+       procedure setSocket (s : Socket_Type) is
+      begin
+	 socket := s;
+      end setSocket;
+
+      procedure setSocketAddress (sa : Sock_Addr_Type) is
+      begin
+	 SocketAddress := sa;
+      end setSocketAddress;
+
+      procedure setServerRoomID (id : Natural) is
+      begin
+	 ServerRoomID := id;
+      end setServerRoomID;
+
+      procedure setUser (u : UserPtr) is
+      begin
+	 user := u;
+      end setUser;
+
+      procedure addChatroom (room : chatRoomPtr) is
+      begin
+	 chatRoomList.Append(room);
+      end addChatroom;
+
       function getUsernameOfClient return Unbounded_String is
       begin
          return user.getUsername;
       end getUsernameOfClient;
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-      procedure declineConnectionWithRefusedMessage (messageContent : String) is
-         refusedMessage : MessageObject :=
-           createMessage (Protocol.Refused, To_Unbounded_String ("server"), ServerRoomID, To_Unbounded_String (messageContent));
+      function getServerroomID return Natural is
       begin
-         writeMessageToStream (Socket, refusedMessage);
-      end declineConnectionWithRefusedMessage;
+	 return ServerRoomID;
+      end getServerroomID;
+
+      function getChatroomList return chatroom_list.List is
+      begin
+	 return chatRoomList;
+      end  getChatroomList;
+
+      function getUser return UserPtr is
+      begin
+	 return user;
+      end getUser;
+      function getSocketAddress return Sock_Addr_Type is
+      begin
+	 return SocketAddress;
+      end getSocketAddress;
 
       ----------------------------------------------------------------------------------------
       procedure sendServerMessageToClient (messageType : MessageTypeE; content : String) is
@@ -102,6 +140,12 @@ package body dataTypes is
    end Concrete_Client;
 
    protected body chatRoom is
+
+      function getClientList return Client_List.List is
+      begin
+	 return clientList;
+      end getClientList;
+
       procedure addClientToChatroom (client : in Concrete_Client_Ptr) is
       begin
          clientList.Append (client);
@@ -169,6 +213,10 @@ package body dataTypes is
          end loop;
       end broadcastToChatRoom;
       --------------------------------------------------------------------------------------------------------------------------------------------------------
+      procedure setChatRoomID( id : in Natural) is
+      begin
+	 chatRoomID := id;
+      end setChatRoomID;
    end chatRoom;
 
    function encodePassword (password : in Unbounded_String) return Unbounded_String is

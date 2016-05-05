@@ -49,6 +49,8 @@ package User_Databases is
       databaseFileName: Unbounded_String := To_Unbounded_String("ADAChatDatabase.txt");
    end User_Database;
 
+   type User_Database_Ptr is access User_Database;
+
 private
 
 

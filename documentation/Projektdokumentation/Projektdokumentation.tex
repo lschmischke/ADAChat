@@ -212,6 +212,8 @@ Wenn der Server die Nachricht empfängt, quittiert er den Erfolgsfall, indem ebe
 \subsubsection{Einloggen}
 Sobald ein Benutzer registriert wurde, kann sich der Client nun unter Angabe des Benutzernamens und Passworts beim Server per \textit{connect}-Nachricht einloggen. Da noch kein Chat zu diesem existiert, wird der Standard-Chatraum adressiert.
 
+%BILD 
+
 Der Verbindungsversuch hat zwei mögliche Resultate:
 \begin{itemize}
 	\item \textbf{Einloggen erfolgreich}
@@ -230,21 +232,36 @@ Der Verbindungsversuch hat zwei mögliche Resultate:
 		\item \textbf{Client bereits eingeloggt} \newline
 		    Wenn der Client sich bereits als ein Benutzer zum Server verbunden hat, lehnt der Server ein erneutes Einloggen ab. Der Inhalt der Nachricht lautet dann \glqq you are already logged in to an account\grqq.
 	\end{enumerate} 
+	
+	%BILD ?
 \end{itemize}
 
 \subsubsection{Kontaktanfrage}
-Sobald der Client eingeloggt ist, kann er nun mit Kontakten chatten. Kontakte sind beidseitig, das heißt, man kann nicht mit einem Benutzer kontaktiert sein, ohne Kontakt des Benutzers zu sein.
+Sobald der Client eingeloggt ist, kann er nun mit Kontakten chatten. Kontakte sind beidseitig, das heißt, man kann nicht mit einem Benutzer kontaktiert sein, ohne gleichzeitig auch Kontakt des Benutzers zu sein.
 
-Diese Kontakte müssen zuvor angelegt werden. Eine \textit{addcontact}-Nachricht, adressiert an den Server, teilt diesem mit, dass dem im Inhalt der Nachricht genannten Benutzer eine Kontaktanfrage gestellt werden soll.
+Diese Kontakte müssen vor dem Chatten angelegt werden. Eine \textit{addcontact}-Nachricht, adressiert an den Server, teilt diesem mit, dass dem im Inhalt der Nachricht genannten Benutzer eine Kontaktanfrage gestellt werden soll.
+
+%BILD 
 
 Der Server gibt diese Intention dem requestierten Benutzer weiter, sollte dieser eingeloggt sein.
 
-Eine Kontaktanfrage kann angenommen werden, indem man dem anfragenden User eine Kontaktanfrage stellt.
+%BILD 
+
+Eine Kontaktanfrage kann angenommen werden, indem man dem anfragenden User eine Kontaktanfrage zurück stellt.
+
 Um eine Kontaktanfrage abzulehnen, kann eine \texit{remcontact}-Nachricht an den Server gesendet werden. Als Inhalt ist der Benutzernamen des anfragenden Benutzers zu nennen.
 
 %BILD 
 
-Über eine Nachricht in dieser Form kann auch ein Kontakt entfernt werden.
+Über eine Nachricht in dieser Form kann auch ein Kontakt entfernt werden. Dies quittiert der Server mit einer \texit{remcontact}-Nachricht, welche den Benutzernamen des entfernten Kontakts als Inhalt trägt. Eine analoge Nachricht wird auch den an entfernten Kontakt gesendet.
+
+Sollte der Client versuchen, einen Benutzer von seiner Kontaktliste zu entfernen, welcher sich nicht auf dieser befindet, oder versuchen, eine Kontaktanfrage von einem Benutzer abzulehnen, welcher keine Anfrage gestellt hat, wird die \textit{remcontact}-Nachricht vom Server mit einer \textit{refused}-Nachricht beantwortet und keine weiteren Aktionen ausgelöst. Der Inhalt der Nachricht lautet dann dementsprechend der Situation \glqq there is no contact request from '<username>' \grqq beziehungsweise \glqq there is no contact with name '<username>' \grq{}.
+
+%BILD?
+
+Sollte sich der Online-Status des Benutzers ändern, durch Ein-/Ausloggen oder nach dem Hinzufügen eines Kontaktes, wird der neue Status allen Kontakt durch eine \textit{offline}- oder \textit{online}-Nachricht mitgeteilt.
+
+%BILD
 
 \subsubsection{Kommunikation}
 

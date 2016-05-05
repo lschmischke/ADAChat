@@ -55,8 +55,10 @@ package dataTypes is
       procedure addClientToChatroom (client : in Concrete_Client_Ptr);
       procedure removeClientFromChatroom (clientToRemove : in Concrete_Client_Ptr);
       function getChatRoomID  return Natural;
+      function getClientList return Client_List.List;
       function generateUserlistMessage  return MessageObject;
       procedure broadcastToChatRoom (message : in MessageObject);
+      procedure setChatRoomID( id : in Natural);
    private
       chatRoomID : Natural;
       clientList : Client_List.List;
@@ -71,7 +73,16 @@ package dataTypes is
       function getUsernameOfClient  return Unbounded_String;
       procedure sendServerMessageToClient (messageType : MessageTypeE; content : String);
       procedure sendServerMessageToClient (messageType : MessageTypeE; content : String; receiver: Natural);
+      procedure addChatroom (room : chatRoomPtr);
       function getSocket return Socket_Type;
+      function getServerroomID return Natural;
+      function getChatroomList return chatroom_list.List;
+      function getUser return UserPtr;
+      function getSocketAddress return Sock_Addr_Type;
+      procedure setSocket (s : Socket_Type);
+      procedure setSocketAddress (sa : Sock_Addr_Type);
+      procedure setServerRoomID (id : Natural);
+      procedure setUser (u : UserPtr);
       private
       user          : UserPtr;
       Socket        : Socket_Type;

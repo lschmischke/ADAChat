@@ -87,6 +87,8 @@ a) remcontact:server:<serverRoomID>:<name of contact that got removed>
 b) Refused:server:<serverRoomID>:There is no contact request from <username>
    Es existiert kein Kontakt mit angegebenem Usernamen und es existiert keine Kontaktanfrage von einem User mit angegebenem Username
 
+there is no contact with name '<username>' muss noch rein
+
 Onlinestatus von Kontakten ermitteln
 Beim Einloggen wird der Status von jedem Kontakt in einer online- oder offline-Nachricht mitgeteilt
 <online> | <offline>:server:<serverRoomID>:<name of contact>

@@ -54,18 +54,35 @@ package Concrete_Server_Logic is
 
     -- type Concrete_Server is new Server_Interface with record
    protected type Concrete_Server is new GTS.Server with
-	procedure getSocket( s : out Socket_Type);
-      procedure getSocketAddress(sAddress: out Sock_Addr_Type);
-      procedure getConnectedClients(connectedClients : out userToClientMap.Map);
-      procedure getUserDatabase (dataBase : out User_Database);
-      procedure getChatrooms(cRooms : out chatRoomMap.Map);
-      procedure getContactRequests(cRequests : out userToUsersMap.Map);
+      function getSocket return Socket_Type;
+      function getSocketAddress return Sock_Addr_Type;
+      function getConnectedClients return userToClientMap.Map;
+      function getUserDatabase return User_Database_Ptr;
+      function getChatrooms return chatRoomMap.Map;
+      function getContactRequests return userToUsersMap.Map;
+      procedure StartNewServer (ip : String; port : Natural) ;
+         -- Diese Prozedur nimmt eine zuvor erzeuge Serverinstanz entgegen und erstellt
+   -- fuer diese einen Server-Socket, welchem eine IP-Adresse und Portnr.
+   -- zugewiesen wird.
+      procedure InitializeServer (ip : String; port : Natural);
+      procedure createChatRoom(id : in Natural; firstClient : in Concrete_Client_Ptr; room : out chatRoomPtr);
+      procedure declineConnectionWithRefusedMessage (client : Concrete_Client_Ptr; messageContent : String);
+      procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String);
+      procedure removeClientRoutine (client : Concrete_Client_Ptr);
+      procedure broadcastOnlineStatusToContacts (client : Concrete_Client_Ptr; status : MessageTypeE);
+      function checkIfContactRequestExists(requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;
+      procedure removeContactRequest (requestingUser : UserPtr; requestedUser : UserPtr);
+      procedure addContactRequest(requestingUser: UserPtr; requestedUser: UserPtr);
+      function connectedClientsToClientList return userViewOnlineList.List;
+      procedure addChatroom(room : chatRoomPtr);
+      procedure getNextChatRoomID (id : out Natural);
+      procedure addClientToConnectedClients(client : Concrete_Client_Ptr);
+      function getClientToConnectedUser ( user : UserPtr) return Concrete_Client_Ptr;
    private
-
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
       Connected_Clients : userToClientMap.Map;
-      UserDatabase : User_Database;
+      UserDatabase : User_Database_Ptr := new User_Database;
       chatRoomIDCounter : Natural:= 1;
       chatRooms : chatRoomMap.Map;
       ContactRequests : userToUsersMap.Map;
@@ -79,12 +96,7 @@ package Concrete_Server_Logic is
    -- einkommende Verbindungsanfragen gelauscht wird und fuer neue Clients
    -- separate Tasks zur Verfuegung gestellt werden, die es ihnen ermoeglichen
    -- untereinander zu kommunizieren.
-   procedure StartNewServer (This : in out Concrete_Server; ip : String; port : Natural) ;
-   function createChatRoom(server : in out Concrete_Server_Ptr; id : in Natural; firstClient : in Concrete_Client_Ptr) return chatRoomPtr ;
-   procedure declineConnectionWithRefusedMessage (thisServer : Concrete_Server_Ptr; client : Concrete_Client_Ptr; messageContent : String);
-   procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String);
-   procedure removeClientRoutine (thisServer : Concrete_Server_Ptr; client : Concrete_Client_Ptr);
-   procedure broadcastOnlineStatusToContacts (thiServer : Concrete_Server_Ptr; status : MessageTypeE);
+
 
 
 
@@ -103,26 +115,16 @@ private
 
     -------------------------------------------------------------------------------------------
    -- # Implementierung ServerGUICommunication #
-   procedure startServer(thisServer :  aliased in Concrete_Server; ipAdress: String; port : Natural);
-   procedure stopServer(thisServer : aliased in  Concrete_Server);
-   function loadDB(thisServer : aliased in Concrete_Server; DataFile : File_type) return Boolean;
-   procedure saveDB(thisServer : aliased in Concrete_Server; DataFile : File_type);
-   procedure sendMessageToUser(thisServer : aliased in Concrete_Server; username : String; messagestring : String);
-   procedure deleteUserFromDatabase(thisServer : aliased in Concrete_Server; username : String);
-   procedure kickUserWithName(thisServer : aliased in Concrete_Server; username:String);
+   procedure startServer(thisServer :  aliased in out  Concrete_Server; ipAdress: String; port : Natural);
+   procedure stopServer(thisServer : aliased in out Concrete_Server);
+   function loadDB(thisServer : aliased in out Concrete_Server; DataFile : File_type) return Boolean;
+   procedure saveDB(thisServer : aliased in out Concrete_Server; DataFile : File_type);
+   procedure sendMessageToUser(thisServer : aliased in out Concrete_Server; username : String; messagestring : String);
+   procedure deleteUserFromDatabase(thisServer : aliased in out Concrete_Server; username : String);
+   procedure kickUserWithName(thisServer : aliased in out Concrete_Server; username:String);
    -------------------------------------------------------------------------------------------
 
-   function checkIfContactRequestExists(server : in Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;
 
-   procedure removeContactRequest (server : in out Concrete_Server_Ptr; requestingUser : UserPtr; requestedUser : UserPtr);
-
-   -- gibt die nächste ID für den Chatraum
-   function getNextChatRoomID( server: in out Concrete_Server_Ptr) return Natural;
-
-   -- Diese Prozedur nimmt eine zuvor erzeuge Serverinstanz entgegen und erstellt
-   -- fuer diese einen Server-Socket, welchem eine IP-Adresse und Portnr.
-   -- zugewiesen wird.
-   procedure InitializeServer(This : in out Concrete_Server_Ptr; ip : String; port :Natural);
 
 
    -- Dieser Task lauscht auf einkommende Verbindungen von neuen Clients und
@@ -136,7 +138,7 @@ private
       --entry Stop;
    end;
 
-   function connectedClientsToClientList(this : in Concrete_Server_Ptr) return userViewOnlineList.List;
+
 
 
 
