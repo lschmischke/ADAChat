@@ -81,7 +81,10 @@ package Concrete_Server_Logic is
    -- untereinander zu kommunizieren.
    procedure StartNewServer (This : in out Concrete_Server; ip : String; port : Natural) ;
    function createChatRoom(server : in out Concrete_Server_Ptr; id : in Natural; firstClient : in Concrete_Client_Ptr) return chatRoomPtr ;
-
+   procedure declineConnectionWithRefusedMessage (thisServer : Concrete_Server_Ptr; client : Concrete_Client_Ptr; messageContent : String);
+   procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String);
+   procedure removeClientRoutine (thisServer : Concrete_Server_Ptr; client : Concrete_Client_Ptr);
+   procedure broadcastOnlineStatusToContacts (thiServer : Concrete_Server_Ptr; status : MessageTypeE);
 
 
 

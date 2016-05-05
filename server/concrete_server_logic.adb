@@ -145,23 +145,32 @@ package body Concrete_Server_Logic is
 
 			userpassword : Unbounded_String;
 			msgContent : Unbounded_String;
+			messageContent: String;
                      begin
                         -- # Pruefe ob Benutzer registriert und Passwort richtig #
                         user := Server.UserDatabase.getUser (username => incoming_message.sender);
 
 			if user = null then
-			   declineConnectionWithRefusedMessage(client,"user '"& To_String(incoming_message.sender)& "' not found in database");
+			   messageContent := "user '"& To_String(incoming_message.sender)& "' not found in database";
+			   declineConnectionWithRefusedMessage(client,messageContent);
+			   gui.printErrorMessage("Connection request from " & Gnat.Sockets.Image(client.SocketAddress.Addr) & " declined: " & messageContent);
                         elsif client.user /= null then
 			   --# Prüefe ob Client schon mit einem User verbunden ist
-			   declineConnectionWithRefusedMessage(client,"you are already logged in to an account");
+			   messageContent := "you are already logged in to an account";
+			   declineConnectionWithRefusedMessage(client,messageContent);
+			   gui.printErrorMessage("Connection request from " & Gnat.Sockets.Image(client.SocketAddress.Addr) & " declined: " & messageContent);
                         elsif Server.Connected_Clients.Contains (user) then
 			   -- # Prüfe ob User, für den sich angemeldet wurde, schon angemeldet ist
-			   declineConnectionWithRefusedMessage(client,"user '"& To_String(incoming_message.sender)& "' already logged in");
+			   messageContent := "user '"& To_String(incoming_message.sender)& "' already logged in";
+			   declineConnectionWithRefusedMessage(client,messageContent);
+			   gui.printErrorMessage("Connection request from " & Gnat.Sockets.Image(client.SocketAddress.Addr) & " declined: " & messageContent);
                         else
                            userpassword := getPassword (user);
                            -- TODO: das Passwort sollte vom Client bereits verschluesselt verschickt werden!!
 			   if userpassword /= encodePassword (incoming_message.content) then
-			      declineConnectionWithRefusedMessage(client,"invalid password");
+			      messageContent := "invalid password";
+			      declineConnectionWithRefusedMessage(client,messageContent);
+			      gui.printErrorMessage("Connection request from " & Gnat.Sockets.Image(client.SocketAddress.Addr) & " declined: " & messageContent);
                            else
                               -- # CONNECT ERFOLGREICH
                               --# hole serverroomid zu diesem client vom server
@@ -300,6 +309,7 @@ package body Concrete_Server_Logic is
                            --# Pruefe ob Client in referenziertem Chatraum
                            if (client.chatRoomList.Contains (chatRoom)) then
 			      removeClientFromChatroom (chatRoom, client);
+			      gui.printInfoMessage("'"&To_String(clientToRemove.getUsernameOfClient)&"' left the chatroom with ID '"&Natural'Image(room.getChatRoomID)&"'");
                            else
 			      sendServerMessageToClient(client,Refused,"you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)&".");
                            end if;
@@ -454,41 +464,10 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   procedure addClientToChatroom (room : in out chatRoomPtr; client : in Concrete_Client_Ptr) is
-   begin
-      room.clientList.Append (client);
-   end addClientToChatroom;
 
    ----------------------------------------------------------------------------------------
 
-   procedure removeClientFromChatroom (room : in out chatRoomPtr; clientToRemove : in Concrete_Client_Ptr) is
-      pos                              : Client_List.Cursor := room.clientList.Find (Item => clientToRemove);
-      userlistMessage, userleftMessage : MessageObject;
-      userleftText                     : Unbounded_String   := getUsername (clientToRemove.user);
-   begin
-      if room.clientList.Contains (clientToRemove) then
-         room.clientList.Delete (Position => pos);
 
-         if (room.clientList.Length >= 1) then
-            -- # broadcaste die neue Userlist und teile dem Chat mit, dass der Benutzer diesen verlassen hat
-            userlistMessage := generateUserlistMessage (room);
-            broadcastToChatRoom (room, userlistMessage);
-            Ada.Strings.Unbounded.Append (userleftText, To_Unbounded_String (" left the chat."));
-            userleftMessage :=
-              createMessage
-                (messagetype => Protocol.Chat,
-                 sender      => To_Unbounded_String ("server"),
-                 receiver    => room.chatRoomID,
-                 content     => userleftText);
-	    broadcastToChatRoom (room, userleftMessage);
-	    gui.printInfoMessage("'"&To_String(getUsernameOfClient(clientToRemove))&"' left the chatroom with ID '"&Natural'Image(room.chatRoomID)&"'");
-         else
-            -- # TODO: lösche den chatraum
-            null;
-         end if;
-
-      end if;
-   end removeClientFromChatroom;
 
    ----------------------------------------------------------------------------------------
 
@@ -522,40 +501,13 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   function generateUserlistMessage (room : in chatRoomPtr) return MessageObject is
-      result     : Unbounded_String;
-      clientList : Client_List.List := room.clientList;
-      message    : MessageObject;
-   begin
-      for client of clientList loop
-         Append (result, To_Unbounded_String (Protocol.Seperator));
-         Append (result, getUsername (client.user));
-      end loop;
-      Ada.Strings.Unbounded.Delete (result, 1, 1);
-      message :=
-        createMessage
-          (messagetype => Protocol.Userlist,
-           sender      => To_Unbounded_String ("server"),
-           receiver    => getChatRoomID (room),
-           content     => result);
-      return message;
-   end generateUserlistMessage;
 
    ----------------------------------------------------------------------------------------
 
-   procedure broadcastToChatRoom (room : in chatRoomPtr; message : in MessageObject) is
-   begin
-      for client of getClientList (room) loop
-         writeMessageToStream (client.Socket, message);
-      end loop;
-   end broadcastToChatRoom;
 
    ----------------------------------------------------------------------------------------
 
-   function getChatRoomID (room : in chatRoomPtr) return Natural is
-   begin
-      return room.chatRoomID;
-   end getChatRoomID;
+
 
    ----------------------------------------------------------------------------------------
 
@@ -619,7 +571,7 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String) is
+   procedure disconnectClient (thisServer : Concrete_Server_Ptr; client : in Concrete_Client_Ptr; msg : String) is
       serverStr         : Unbounded_String   := To_Unbounded_String ("server");
    begin
 
@@ -635,7 +587,9 @@ package body Concrete_Server_Logic is
    begin
             -- # Client verlässt alle Chaträume
       for chatRoom of chatRoomsOfClient loop
-         removeClientFromChatroom (chatRoom, client);
+	 removeClientFromChatroom (chatRoom, client);
+	 gui.printInfoMessage("'"&To_String(client.getUsernameOfClient)&"' left the chatroom with ID '"&Natural'Image(room.getChatRoomID)&"'");
+
       end loop;
       -- # Sende Offline-Status an alle Kontakte vom Client #
       broadcastOnlineStatusToContacts (client, Protocol.Offline);
@@ -735,36 +689,14 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
 
-   function getUsernameOfClient(client : Concrete_Client_Ptr) return Unbounded_String
-   is
-   begin
-      return getUsername(client.user);
-   end getUsernameOfClient;
+
 
    ----------------------------------------------------------------------------------------
 
-   procedure declineConnectionWithRefusedMessage(client : Concrete_Client_Ptr; messageContent : String)is
-      refusedMessage : MessageObject := createMessage(Protocol.Refused,To_Unbounded_String("server"),client.ServerRoomID,To_Unbounded_String(messageContent));
-   begin
-      writeMessageToStream(client.Socket,refusedMessage);
-      gui.printErrorMessage("Connection request from " & Gnat.Sockets.Image(client.SocketAddress.Addr) & " declined: " & messageContent);
-   end declineConnectionWithRefusedMessage;
 
    ----------------------------------------------------------------------------------------
-   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String)is
-      begin
-      sendServerMessageToClient(client,messageType,content,client.ServerRoomID);
 
-   end sendServerMessageToClient;
-   ----------------------------------------------------------------------------------------
 
-   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String; receiver : Natural) is
-      message : MessageObject := createMessage(messageType,To_Unbounded_String("server"),receiver,To_Unbounded_String(content));
-   begin
-      Put_Line("OUT:");
-      printMessageToInfoConsole(message);
-      writeMessageToStream(client.Socket,message);
-   end sendServerMessageToClient;
 
    ----------------------------------------------------------------------------------------
    -- SERVER GETTER --

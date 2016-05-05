@@ -21,23 +21,13 @@ with DataTypes; use DataTypes;
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 package User_Databases is
 
+   --TODO
+   -- deleteUser
+
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    -- > Öffentliche Typen
 
-   type User_Database is tagged private;
-
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-   -- > Öffentliche Funktionen zum Typ User_Database
-
-   function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean;
-   function getUser(database : in User_Database; username : in Unbounded_String) return UserPtr;
-
-   procedure saveUserDatabase(this : in User_Database); -- writes User Database to file
-   procedure loadUserDatabase(this : in out User_Database); -- loads user database from file
-
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-
-private
+   package contactNamesList is new Doubly_Linked_Lists(Element_Type => Unbounded_String);
 
    package User_Maps is new Hashed_Maps
      (Key_Type => Unbounded_String,
@@ -46,7 +36,23 @@ private
       Equivalent_Keys => "=");
    use User_Maps;
 
-   package contactNamesList is new Doubly_Linked_Lists(Element_Type => Unbounded_String);
+
+   protected type User_Database is
+      procedure registerUser(username : in Unbounded_String; password : in Unbounded_String; success : out Boolean);
+      function getUser(username : in Unbounded_String) return UserPtr;
+      procedure saveUserDatabase; -- writes User Database to file
+      procedure loadUserDatabase; -- loads user database from file
+      function userToUnboundedString(this : in out UserPtr) return Unbounded_String;
+      procedure StringToLonelyUser(inputLine : in String; contactNames : out contactNamesList.List; newUser : out UserPtr);
+   private
+      users : User_Maps.Map; -- # username -> userDataSet
+      databaseFileName: Unbounded_String := To_Unbounded_String("ADAChatDatabase.txt");
+   end User_Database;
+
+private
+
+
+
 
    package userToContactNamesMap is new Indefinite_Hashed_Maps
      (Key_Type => Unbounded_String,
@@ -55,22 +61,5 @@ private
       Equivalent_Keys => Ada.strings.Unbounded.Equal_Case_Insensitive,
       "=" => contactNamesList."=");
    use userToContactNamesMap;
-
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-   -- > Öffentliche Funktionen zum Typ User_Database
-
-   function userToUnboundedString(this : in out UserPtr) return Unbounded_String;
-   function StringToLonelyUser(inputLine : in String; database : in User_Database; contactNames : out contactNamesList.List  ) return UserPtr;
-
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-   -- > Öffentliche Typen
-
-   type User_Database is tagged record
-      users : User_Maps.Map; -- # username -> userDataSet
-      databaseFileName: Unbounded_String := To_Unbounded_String("ADAChatDatabase.txt");
-      maxSize : Integer := 1000000;
-
-   end record;
-
 
 end User_Databases;
