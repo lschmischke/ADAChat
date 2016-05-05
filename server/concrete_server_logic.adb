@@ -135,7 +135,7 @@ package body Concrete_Server_Logic is
                   Protocol.printMessageToInfoConsole (message => incoming_message);
                end if;
 
-               Ada.Text_IO.Put_Line (messageObjectToString (incoming_message));
+
                -----------------------------------------------------------------
 
                case incoming_message.messagetype is
@@ -265,7 +265,7 @@ package body Concrete_Server_Logic is
 			      -- # Füge Chatroom in Liste beider Clients hinzu
                               client.chatRoomList.Append (chatRoom);
 			      clientToAdd.chatRoomList.Append (chatRoom);
-			      sendServerMessageToClient(client,Chatrequest,"ok");
+			      sendServerMessageToClient(client,Chatrequest,"ok",roomID);
 
 			      -- # Benachrichtige GUI
 			      gui.printInfoMessage("Chatroomrequest from '"&To_String(getUsername(user))& "' accepted: created chatroom '"&Natural'Image(chatroom.chatRoomID) & "' with user '"&To_String(getUsername(userToAdd)));
@@ -629,18 +629,14 @@ package body Concrete_Server_Logic is
       chatRoomsOfClient : chatRoom_List.List := getChatroomsOfClient (client);
    begin
             -- # Client verlässt alle Chaträume
-      Put_Line("chaträume");
       for chatRoom of chatRoomsOfClient loop
          removeClientFromChatroom (chatRoom, client);
       end loop;
       -- # Sende Offline-Status an alle Kontakte vom Client #
-      Put_Line("offline status");
       broadcastOnlineStatusToContacts (client, Protocol.Offline);
       -- # Schliesse Socket zu Client #
-      Put_Line("socket schliessen");
       Close_Socket (client.Socket);
       -- # Setze User als offline #
-      Put_Line("user offline");
       Server.Connected_Clients.Delete (client.user);
       -- # Benachrichtige GUI über Änderung der Connected_Clients
       gui.printInfoMessage("'"&To_String(getUsername(client.user)) & "' disconnected.");
@@ -671,6 +667,10 @@ package body Concrete_Server_Logic is
 
    procedure stopServer (thisServer : aliased in Concrete_Server) is
    begin
+      for client of Server.Connected_Clients loop
+	 disconnectClient(client,"server shut down");
+      end loop;
+
       Close_Socket(server.Socket);
    end stopServer;
    ----------------------------------------------------------------------------------------
@@ -746,12 +746,19 @@ package body Concrete_Server_Logic is
 
    ----------------------------------------------------------------------------------------
    procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String)is
-      message : MessageObject := createMessage(messageType,To_Unbounded_String("server"),client.ServerRoomID,To_Unbounded_String(content));
+      begin
+      sendServerMessageToClient(client,messageType,content,client.ServerRoomID);
+
+   end sendServerMessageToClient;
+   ----------------------------------------------------------------------------------------
+
+   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String; receiver : Natural) is
+      message : MessageObject := createMessage(messageType,To_Unbounded_String("server"),receiver,To_Unbounded_String(content));
    begin
       Put_Line("OUT:");
       printMessageToInfoConsole(message);
       writeMessageToStream(client.Socket,message);
    end sendServerMessageToClient;
-   ----------------------------------------------------------------------------------------
+
 
 end Concrete_Server_Logic;

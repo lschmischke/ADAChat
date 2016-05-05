@@ -21,6 +21,7 @@ package Protocol is
    -- Trennzeichen für die zur Kommunikation verwendeten Strings, um in diesen inhaltlich getrennte Felder zu definieren
    -- Seperator : constant String := Character'Image(Character'Val(0));
    Seperator : constant String :=":";
+   Terminator : constant Character :=';';
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    -- > Typen

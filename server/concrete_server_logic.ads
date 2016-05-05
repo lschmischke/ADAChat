@@ -144,6 +144,7 @@ private
 
    procedure declineConnectionWithRefusedMessage(client : Concrete_Client_Ptr; messageContent : String);
    procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String);
+   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String; receiver : Natural);
    procedure removeClientRoutine(client : Concrete_Client_Ptr);
 
 
