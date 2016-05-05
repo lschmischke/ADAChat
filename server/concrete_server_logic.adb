@@ -277,7 +277,7 @@ package body Concrete_Server_Logic is
                           (username => incoming_message.sender, password => encodePassword (incoming_message.content),success => registrationComplete);
 			if registrationComplete = True then
 			   client.sendServerMessageToClient(Register,"ok");
-			   gui.printInfoMessage("New user '"&To_String(incoming_message.sender)&"' registrated");
+			   gui.printInfoMessage("New user '"&To_String(incoming_message.sender)&"' registered");
 			else
 			   client.sendServerMessageToClient(Refused,"registration failed, name in use");
                         end if;
@@ -299,7 +299,6 @@ package body Concrete_Server_Logic is
                            Server.removeContactRequest (requestedUser, user);
 
                            -- # User_Datenbank aktualisieren
-                           -- # TODO return Wert abfragen
                            user.addContact (contactToAdd => requestedUser);
                            requestedUser.addContact (user);
                            Server.getUserDatabase.saveUserDatabase;
@@ -346,7 +345,6 @@ package body Concrete_Server_Logic is
                         -- #prüfe ob Kontakt zu angegebenen User besteht
                         if userContacts.Contains (requestedUser) then
                            -- #wenn ja, entferne kontakt zu angegebenen user
-                           -- #TODO Rückgabewert abfangen
                            user.removeContact (requestedUser);
                            -- #entferne user aus Kontakt des angegebenen Users
                            requestedUser.removeContact (user);
