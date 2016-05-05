@@ -2,6 +2,7 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Ada.Containers.Doubly_Linked_Lists;  use Ada.Containers;
 with GNAT.SHA512;
 with GNAT.Sockets; use GNAT.Sockets;
+with Protocol; use Protocol;
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Dieses Paket bündelt Typen um Benutzer des Chats abzuspeichern.
@@ -15,45 +16,37 @@ package dataTypes is
    -- > Öffentliche Typen
 
    -- In diesem Datentyp wird ein Benutzer abgelegt. Er enthält seinen Namen, Passwort und seine Kontaktliste
-   type User is tagged private;
+   type User;
    type UserPtr is access User;
-
    package UserList is new Doubly_Linked_Lists(Element_Type => UserPtr);
 
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-   -- > Funktionen zum Typ UserPtr
 
+   protected type User is
    -- Gibt den Namen des Benutzers zurück
-   function getUsername(this : in UserPtr) return Unbounded_String;
+      function getUsername return Unbounded_String;
+         -- Setzt den Namen des Benutzers
+      procedure setUsername(name : in Unbounded_String);
+         -- Gibt das Passwort eines Benutzer zurück
+      function getPassword return Unbounded_String;
+         -- Setzt das Passwort eines Benutzers
+      procedure setPassword(pw : in Unbounded_String);
+      -- Setzt die Kontaktliste eines Benutzers
+      procedure setContacts (contactList : in UserList.List);
+      -- Fügt einen einen Benutzer zur Kontaktliste eines anderen Benutzers hinzu
+   procedure addContact (contactToAdd : UserPtr);
+   -- Löscht einen Benutzer von der Kontaktliste eines anderen Benutzers
+   procedure removeContact (contactToRemove : UserPtr);
+      private
+      username : Unbounded_String;
+      password : Unbounded_String;
+      contacts : UserList.List;
+   end User;
 
-   -- Setzt den Namen des Benutzers
-   procedure setUsername(this : in out UserPtr; name : in Unbounded_String);
+
+
 
    -- Verschlüsselt das Passwort eines Benutzers mit SHA512
    function encodePassword(password : in Unbounded_String) return Unbounded_String;
-
-   -- Gibt das Passwort eines Benutzer zurück
-   function getPassword(this : in UserPtr) return Unbounded_String;
-
-   -- Setzt das Passwort eines Benutzers
-   function setPassword(this : in out UserPtr; password : in Unbounded_String) return Boolean;
-
-   -- Gibt die Kontaktliste eines Benutzers zurück
-   function getContacts (this : in UserPtr) return UserList.List;
-
-   -- Setzt die Kontaktliste eines Benutzers
-   procedure setContacts (this : in out UserPtr; contacts : in UserList.List);
-
-   -- Fügt einen einen Benutzer zur Kontaktliste eines anderen Benutzers hinzu
-   function addContact (this : in out UserPtr; contactToAdd : UserPtr) return Boolean;
-
-   -- Löscht einen Benutzer von der Kontaktliste eines anderen Benutzers
-   function removeContact (this : in out UserPtr; contactToRemove : UserPtr) return boolean;
-
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
    type Concrete_Client;
@@ -82,17 +75,38 @@ package dataTypes is
 
    package userViewOnlineList is new Doubly_Linked_Lists(Element_Type => Concrete_Client_Ptr );
 
+
+
+   procedure addClientToChatroom(room : in out ChatRoomPtr; client : in Concrete_Client_Ptr);
+   procedure removeClientFromChatroom(room : in out chatRoomPtr; clientToRemove : in Concrete_Client_Ptr);
+   function getChatRoomID(room : in chatRoomPtr) return Natural;
+   function generateUserlistMessage(room : in chatRoomPtr) return MessageObject;
+   function getClientList(room : in chatRoomPtr) return Client_List.List;
+   procedure broadcastToChatRoom(room : in chatRoomPtr; message : in MessageObject);
+
+
+
+
+
+
+
+
+
+
+   function getUsernameOfClient(client : Concrete_Client_Ptr) return Unbounded_String;
+   function getChatroomsOfClient(client : in Concrete_Client_Ptr) return chatRoom_List.List;
+   procedure broadcastOnlineStatusToContacts(client : in Concrete_Client_Ptr; status : MessageTypeE);
+   procedure disconnectClient(client : in Concrete_Client_Ptr; msg : String);
+   procedure declineConnectionWithRefusedMessage(client : Concrete_Client_Ptr; messageContent : String);
+   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String);
+   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String; receiver : Natural);
+   procedure removeClientRoutine(client : Concrete_Client_Ptr);
+
 private
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    -- > Private Typen
 
-   type User is tagged
-      record
-         username : Unbounded_String;
-         password : Unbounded_String;
-         contacts : UserList.List;
-      end record;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 

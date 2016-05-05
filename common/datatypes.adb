@@ -1,80 +1,69 @@
 package body datatypes is
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
-
-   function getUsername(this : in UserPtr) return Unbounded_String is
-   begin
-      return this.username;
-   end getUsername;
+   protected body User is
+      function getUsername return Unbounded_String is
+      begin
+	 return username;
+      end getUsername;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   procedure setUsername(this : in out UserPtr; name : in Unbounded_String) is
+   procedure setUsername(name : in Unbounded_String) is
    begin
-      this.username := name;
+      username := name;
    end setUserName;
 
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-
-   function encodePassword(password : in Unbounded_String) return Unbounded_String is
-   begin
-      return To_Unbounded_String(GNAT.SHA512.Digest(To_String(password)));
-   end encodePassword;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   function getPassword(this : in UserPtr) return Unbounded_String is
+   function getPassword return Unbounded_String is
    begin
-      return this.password;
+      return password;
    end getPassword;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   function setPassword(this : in out UserPtr; password : in Unbounded_String) return Boolean is
+   procedure setPassword(pw : in Unbounded_String)is
    begin
-      this.password := password;
-      return true; -- TODO: zu procedure wechseln, macht so keinen Sinn, Code anpassen
+      password := pw;
    end setPassword;
 
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-
-   function getContacts (this : in UserPtr) return UserList.List is
-   begin
-      return this.contacts;
-   end getContacts;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   procedure setContacts (this : in out UserPtr; contacts : in UserList.List) is
+   procedure setContacts (contactList : in UserList.List) is
    begin
-      this.contacts := contacts;
+      contacts := contactList;
    end setContacts;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   function addContact (this : in out UserPtr; contactToAdd : UserPtr) return Boolean is
-   begin
-      if not this.contacts.Contains(contactToAdd) then
-         this.contacts.Append(New_Item => contactToAdd);
-         return true;
-      else
-         return false;
-      end if;
-   end addContact;
+   procedure addContact (contactToAdd : UserPtr) is
+      begin
+
+      if not contacts.Contains(contactToAdd) then
+         contacts.Append(New_Item => contactToAdd);
+	 end if;
+      end addContact;
+
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   function removeContact (this : in out UserPtr; contactToRemove : UserPtr) return boolean is
-      pos : UserList.Cursor := this.contacts.Find(Item     => contactToRemove);
+   procedure removeContact (contactToRemove : UserPtr) is
+      pos : UserList.Cursor := contacts.Find(Item     => contactToRemove);
    begin
-      if this.contacts.Contains(contactToRemove) then
-         this.contacts.Delete(Position => pos);
-         return true;
-      else
-         return false;
+      if contacts.Contains(contactToRemove) then
+         contacts.Delete(Position => pos);
       end if;
-   end removeContact;
+      end removeContact;
+   end User;
+
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
+        function encodePassword(password : in Unbounded_String) return Unbounded_String is
+   begin
+      return To_Unbounded_String(GNAT.SHA512.Digest(To_String(password)));
+   end encodePassword;
 end datatypes;

@@ -334,7 +334,7 @@ package body Concrete_Server_Logic is
                      begin
 			-- TODO: pruefe ob es die beiden User gibt
 
-			-- # Pruefe, ob eine Kontaktanfrage beantortet wird
+			-- # Pruefe, ob eine Kontaktanfrage beantwortet wird
                         if (checkIfContactRequestExists (Server, requestedUser, user)) then
                            -- # stelle Kontakt her
                            -- # Kontaktanfrage aus Liste rausnehmen
@@ -388,7 +388,12 @@ package body Concrete_Server_Logic is
                         requestedUserClient     : Concrete_Client_Ptr     := Server.Connected_Clients.Element (requestedUser);
                         userContacts            : dataTypes.UserList.List := getContacts (user);
                         bool : Boolean;
-                     begin
+		     begin
+			-- # prüfe, ob requestierter Nutzer existiert
+			if requestedUser = null then
+			   sendServerMessageToClient(client,refused,"'"&To_String(incoming_message.content&"' doesn't exist."));
+			end if;
+
                         -- #prüfe ob Kontakt zu angegebenen User besteht
                         if userContacts.Contains (requestedUser) then
                            -- #wenn ja, entferne kontakt zu angegebenen user

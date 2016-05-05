@@ -21,7 +21,9 @@ with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 --       Sicherstellen dass man keine Fremden in Chat einladen kann nur Kontakte
 --       prüfen ob Kontakt beim Add bereits in Kontaktliste
 --       Sicherstellen, dass man keine Nutzer in den Chat mit dem Server eintragen kann
---       Kontaktanfragen ablehnen über remContact
+--       GetUser = null überall Abfragen
+--       Kontaktrequest ablehnen funktioniert nicht
+--       Generelle Kontrolle einführen, ob username richtig und ob gültiger Receiver
 
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
@@ -58,7 +60,8 @@ package Concrete_Server_Logic is
       procedure getUserDatabase (dataBase : out User_Database);
       procedure getChatrooms(cRooms : out chatRoomMap.Map);
       procedure getContactRequests(cRequests : out userToUsersMap.Map);
-	private
+   private
+
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
       Connected_Clients : userToClientMap.Map;
@@ -76,26 +79,11 @@ package Concrete_Server_Logic is
    -- einkommende Verbindungsanfragen gelauscht wird und fuer neue Clients
    -- separate Tasks zur Verfuegung gestellt werden, die es ihnen ermoeglichen
    -- untereinander zu kommunizieren.
-   procedure StartNewServer (This : in out Concrete_Server; ip : String; port :Natural) ;
-
-   function getUsernameOfClient(client : Concrete_Client_Ptr) return Unbounded_String;
-
-
-   procedure addClientToChatroom(room : in out ChatRoomPtr; client : in Concrete_Client_Ptr);
-   procedure removeClientFromChatroom(room : in out chatRoomPtr; clientToRemove : in Concrete_Client_Ptr);
+   procedure StartNewServer (This : in out Concrete_Server; ip : String; port : Natural) ;
    function createChatRoom(server : in out Concrete_Server_Ptr; id : in Natural; firstClient : in Concrete_Client_Ptr) return chatRoomPtr ;
-   function getChatRoomID(room : in chatRoomPtr) return Natural;
-   function generateUserlistMessage(room : in chatRoomPtr) return MessageObject;
-
-   function getClientList(room : in chatRoomPtr) return Client_List.List;
-   procedure broadcastToChatRoom(room : in chatRoomPtr; message : in MessageObject);
 
 
 
-   function getChatroomsOfClient(client : in Concrete_Client_Ptr) return chatRoom_List.List;
-   procedure broadcastOnlineStatusToContacts(client : in Concrete_Client_Ptr; status : MessageTypeE);
-
-   procedure disconnectClient(client : in Concrete_Client_Ptr; msg : String);
 
    type Client_Task is limited private;
    type Client_Task_Ptr is access Client_Task;
@@ -112,7 +100,7 @@ private
 
     -------------------------------------------------------------------------------------------
    -- # Implementierung ServerGUICommunication #
-   procedure startServer(thisServer :  aliased in Concrete_Server_Ptr; ipAdress: String; port : Natural);
+   procedure startServer(thisServer :  aliased in Concrete_Server; ipAdress: String; port : Natural);
    procedure stopServer(thisServer : aliased in  Concrete_Server);
    function loadDB(thisServer : aliased in Concrete_Server; DataFile : File_type) return Boolean;
    procedure saveDB(thisServer : aliased in Concrete_Server; DataFile : File_type);
@@ -147,10 +135,7 @@ private
 
    function connectedClientsToClientList(this : in Concrete_Server_Ptr) return userViewOnlineList.List;
 
-   procedure declineConnectionWithRefusedMessage(client : Concrete_Client_Ptr; messageContent : String);
-   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String);
-   procedure sendServerMessageToClient(client : Concrete_Client_Ptr; messageType : MessageTypeE; content : String; receiver : Natural);
-   procedure removeClientRoutine(client : Concrete_Client_Ptr);
+
 
 
 end Concrete_Server_Logic;
