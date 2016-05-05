@@ -7,7 +7,7 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Login_Window; use Login_Window;
 with Contact_Window; use Contact_Window;
 with Concrete_Client_Logic; use Concrete_Client_Logic;
---with Chat_Window_Manager; use Chat_Window_Manager;
+with Chat_Window_Manager; use Chat_Window_Manager;
 
 package Concrete_Client_Ui is
 
@@ -17,7 +17,7 @@ package Concrete_Client_Ui is
       UserName : Unbounded_String; -- Set after Login
       Login_Window   : LoginWindow;
       Contact_Window   : ContactWindow;
---      Chat_Windows : ChatWindows;
+      Chat_Windows : ChatWindows.List;
       Client : ClientPtr;
    end record;
 
