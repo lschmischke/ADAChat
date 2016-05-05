@@ -78,7 +78,7 @@ package body Concrete_Server_Gui_Logic is
    procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOnlineList.List) is
    begin
       For client of viewComponents loop
-         Put_Line("Username: " & To_String(getUsername(client.user)));
+         Put_Line("Username: " & To_String(client.getUsernameOfClient));
       end loop;
    end updateOnlineUserOverview;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
