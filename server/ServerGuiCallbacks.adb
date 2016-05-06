@@ -30,6 +30,13 @@ with Concrete_Server_Gui_Logic; use Concrete_Server_Gui_Logic;
 with Concrete_Server_Logic; use Concrete_Server_Logic;
 with GUI_to_Server_Communication; use GUI_to_Server_Communication;
 with Server_To_GUI_Communication; use Server_To_GUI_Communication;
+with Gtk.Text_View; use Gtk.Text_View;
+
+--------------------------------
+
+with Gtk.Text_Mark; use Gtk.Text_Mark;
+with Gtk.Text_Buffer; use Gtk.Text_Buffer;
+with Gtk.Text_Iter; use Gtk.Text_Iter;
 package body ServerGuiCallbacks is
 
 
@@ -44,14 +51,21 @@ package body ServerGuiCallbacks is
    --Val: Gint;
    Toolbutton_Server_Stop: Gtk_Tool_Button;
    Toolbutton_Server_Start: Gtk_Tool_Button;
+   Port_Edit_Text: Gtk_Entry;
    MyServer: ServerPtr := new Concrete_Server;
    MyGui: GUIPtr := new Server_Gui;
+   OnlineUserTreeView: Gtk_Tree_View;
+OnlineUserTreeStore: Gtk_Tree_Store;
+
 
 
 
    procedure InitializeGuiReferences(myBuilder: access Gtkada_Builder_Record'Class) is begin
       Toolbutton_Server_Start := Gtk_Tool_Button(myBuilder.Get_Object("toolbutton_start_server"));
       Toolbutton_Server_Stop := Gtk_Tool_Button(myBuilder.Get_Object("toolbutton_stop_server"));
+      Port_Edit_Text := Gtk_Entry(myBuilder.Get_Object("config_port"));
+     OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
+             OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
       end InitializeGuiReferences;
 
 
@@ -74,15 +88,18 @@ package body ServerGuiCallbacks is
 
 
    procedure clicked_button_about ( Object : access Gtkada_Builder_Record'Class) is
-   begin
-      Put_Line("about");
 
+   begin
+
+
+
+  Put_Line("Todo");
 
    end clicked_button_about;
 
    procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class) is begin
       MyServer.startServer(ipAdress => "127.0.0.1",
-                         port     => 12321);
+                         port     => Integer'Value(Port_Edit_Text.Get_Text));
        MyGui.printInfoMessage("Server started!");
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => True);
@@ -95,7 +112,28 @@ package body ServerGuiCallbacks is
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => False);
       end clicked_button_server_stop;
 
+   procedure kickSelectedUser ( Object : access Gtkada_Builder_Record'Class) is
+      Selection: Gtk_Tree_Selection;
+      myIter: Gtk_Tree_Iter;
+      myValue: GValue;
+      myModel: Gtk_Tree_Model;
+   begin
+      Selection := OnlineUserTreeView.Get_Selection;
+      Selection.Get_Selected(Model => myModel,
+                             Iter  => myIter);
 
+     -- OnlineUserTreeStore.Get_Path(Iter => myIter);
+     -- Get_Path(Widget => OnlineUserTreeView,
+       --        Tree_Model => OnlineUserTreeStore,
+        --       Iter       => myIter);
+
+      Get_Value(Tree_Model => OnlineUserTreeStore,
+                Iter       => myIter,
+                Column     => 0 ,
+                Value      =>myValue );
+
+      -- Put_Line(To_String(myValue));
+      end kickSelectedUser;
 
 
 
