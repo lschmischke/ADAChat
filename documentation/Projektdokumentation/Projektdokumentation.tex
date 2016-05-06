@@ -331,13 +331,36 @@ bla bla
 % Probleme
 % ----------------------------------------------------------------------------------------------------------
 \section{Probleme}
-Arbeiten mit GTK
+Im Folgenden sind die Problemstellungen aufgeführt, die in den Augen des Projektteams gravierend waren und die Entwicklung merkbar gehemmt haben.
 
-fehlende ausführliche Dokumentation für GTK und ADA (und Beispiele im Internet)
+\subsection{Dokumentation der Sprache Ada}
+Das schwerwiegenste Problem, dass das Team über das ganze Projekt begleitet hat, war die unzureichende bis nicht vorhandene Dokumentation der Sprache Ada bzw. ihrer API.
 
-Zirkuläre Abhängigkeiten
+Das Verhalten von bspw. Unterprogrammroutinen musste sich häufig allein durch die Bezeichnung und den Paramtern oder aus dem Kontext eines Programmierbeispiels von einem beliebigen Blog hergeleitet werden. Durch darauf folgendes mühsames und zeitintensives experimentieren konnte die fehlende Dokumentation dann meist kompensiert werden.
 
-Merkwürdigkeiten in ADA (Endlosschleife durch If-Abfrage)
+Es gibt zwar das Ada Reference Manual, welches sich jedoch meist nicht als sonderlich hilfreich erwies.
+
+Jedoch muss man erwähnen, dass die Code-Qualität trotz alledem  unmittelbar darunter gelitten hat. Denn dadurch dass die Bibliotheksroutinen nicht ausreichend dokumentiert sind, kann unser Programm nur beschränkt auf z.B. Fehlersituationen oder anderweitiges situationsbedingtes Verhalten reagieren.
+
+Abgesehen davon wird aus diesem Grund eine Beschäftigung mit der Spache über den Kurs hinaus kaum Anhang finden.
+
+\subsection{Zirkuläre Abhängigkeiten}
+Beim Aufbau von Datenstrukturen, wo die einen Bestandteil der anderen sind traten sehr oft Zirkuläre Abhängigkeitsprobleme auf. Da in Ada ein Identifier vor dessen Verwendung deklariert werden muss war es nicht einfach Protected Types, Types, Pointer Types, Interfaces frei miteinander zu kombinieren. 
+
+Zudem zeigte sich, dass das Einbinden von Spezifikationsdateien (.ads) in eine Bodydatei (.adb) ein anderes Folgeverhalten aufweisen kann als wenn diese in die dem Body zugehörige Spezifikationsdatei eingebunden werden. Manche zirkuläre Abhängigkeit konnte dadurch aufgelöst werden.
+
+\subsection{Arbeiten mit GTK}
+
+\subsection{Merkwürdigkeiten in ADA (Endlosschleife durch If-Abfrage)}
+
+\subsection{Arbeiten mit GTK}
+
+
+
+
+
+
+
 
 \subsection{dies und das}
 bla bla
