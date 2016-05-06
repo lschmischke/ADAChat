@@ -25,22 +25,55 @@ with Gtk.Tree_Selection; use Gtk.Tree_Selection;
 with Gtk.Scrolled_Window; use Gtk.Scrolled_Window;
 with Gtk.Menu; use Gtk.Menu;
 with Gtk.Spin_Button; use Gtk.Spin_Button;
+with Gtk.Tool_Button; use Gtk.Tool_Button;
+with Concrete_Server_Gui_Logic; use Concrete_Server_Gui_Logic;
+with Concrete_Server_Logic; use Concrete_Server_Logic;
+with GUI_to_Server_Communication; use GUI_to_Server_Communication;
+with Server_To_GUI_Communication; use Server_To_GUI_Communication;
+with Gtk.Text_View; use Gtk.Text_View;
+
+--------------------------------
+
+with Gtk.Text_Mark; use Gtk.Text_Mark;
+with Gtk.Text_Buffer; use Gtk.Text_Buffer;
+with Gtk.Text_Iter; use Gtk.Text_Iter;
+with Gtk.Combo_Box; use Gtk.Combo_Box;
 package body ServerGuiCallbacks is
 
 
 
 
-   PortGEntry : Gtk_GEntry;
-   InformationsTreeView : Gtk_Tree_View;
-   InformationsTreeStore: Gtk_Tree_Store;
+   --PortGEntry : Gtk_GEntry;
+   --InformationsTreeView : Gtk_Tree_View;
+   --InformationsTreeStore: Gtk_Tree_Store;
    InformationsTreeViewIterator: Gtk_Tree_Iter;
    SecondLevelIterator: Gtk_Tree_Iter;
-   UserContextMenu: Gtk_Menu;
-   Val: Gint;
+   --UserContextMenu: Gtk_Menu;
+   --Val: Gint;
+   Toolbutton_Server_Stop: Gtk_Tool_Button;
+   Toolbutton_Server_Start: Gtk_Tool_Button;
+   Port_Edit_Text: Gtk_Entry;
+   MyServer: ServerPtr := new Concrete_Server;
+   MyGui: GUIPtr := new Server_Gui;
+   OnlineUserTreeView: Gtk_Tree_View;
+
+
+OnlineUserTreeStore: Gtk_Tree_Store;
+
+   KickUserComboBox: Gtk_Combo_Box;
+    KickUserListStore: Gtk_List_Store;
 
 
 
-
+   procedure InitializeGuiReferences(myBuilder: access Gtkada_Builder_Record'Class) is begin
+      Toolbutton_Server_Start := Gtk_Tool_Button(myBuilder.Get_Object("toolbutton_start_server"));
+      Toolbutton_Server_Stop := Gtk_Tool_Button(myBuilder.Get_Object("toolbutton_stop_server"));
+      Port_Edit_Text := Gtk_Entry(myBuilder.Get_Object("config_port"));
+     OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
+      OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
+       KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
+       KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
+      end InitializeGuiReferences;
 
 
 
@@ -57,67 +90,47 @@ package body ServerGuiCallbacks is
       Put_Line("ROW");
    end rowHandler;
 
-   procedure Append_Error (message: String) is
-   begin
-      InformationsTreeStore.Append(Iter   => InformationsTreeViewIterator,
-                       Parent => Null_Iter);
-      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
-                    Column => 1 ,
-                                Value  => "Fehler" );
-      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
-                    Column => 0 ,
-                    Value  => message );
-     end Append_Error;
 
-   procedure Append_Information (message: String) is
-   begin
-      InformationsTreeStore.Append(Iter   => InformationsTreeViewIterator,
-                       Parent => Null_Iter);
-      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
-                    Column => 1 ,
-                                Value  => "Information" );
-      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
-                    Column => 0 ,
-                    Value  => message );
-     end Append_Information;
+
 
 
    procedure clicked_button_about ( Object : access Gtkada_Builder_Record'Class) is
-   begin
-      Append_Error("Mein Fehler1!");
 
+   begin
+
+
+
+  Put_Line("Todo");
 
    end clicked_button_about;
 
+   procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class) is begin
+      MyServer.startServer(ipAdress => "127.0.0.1",
+                         port     => Integer'Value(Port_Edit_Text.Get_Text));
+       MyGui.printInfoMessage("Server started!");
+      Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);
+      Toolbutton_Server_Stop.Set_Sensitive(Sensitive => True);
+   end clicked_button_server_start;
 
-   procedure InitializeGuiReferences(Builder : access Gtkada_Builder_Record'Class) is
-      InitParent: Gtk_Tree_Iter;
+   procedure clicked_button_server_stop ( Object : access Gtkada_Builder_Record'Class) is begin
+       MyServer.stopServer;
+       MyGui.printInfoMessage("Server stopped!");
+      Toolbutton_Server_Start.Set_Sensitive(Sensitive => True);
+      Toolbutton_Server_Stop.Set_Sensitive(Sensitive => False);
+      end clicked_button_server_stop;
+
+   procedure kickSelectedUser ( Object : access Gtkada_Builder_Record'Class) is
+      selection : Gtk_Tree_Selection;
+      selectedIter : Gtk_Tree_Iter;
+      selectedModel : Gtk_Tree_Model;
    begin
-      Put_Line("Init Gui Components");
-      PortGEntry := Gtk_GEntry(Builder.Get_Object("config_port"));
-      PortGEntry.Set_Text("12321");
-      InformationsTreeView := Gtk_Tree_View(Builder.Get_Object("informationsTreeView"));
-      InformationsTreeStore := Gtk_Tree_Store(Builder.Get_Object("treestore1"));
-      UserContextMenu := Gtk_Menu(Builder.Get_Object("menu1"));
-
-     -- InformationsTreeViewListStore.Append(InformationsTreeViewIterator);
-     --InformationsTreeViewListStore.Set(InformationsTreeViewIterator,0,"Test");
-     -- Column 1: Nachrichtentyp
-     -- Column 0: Nachricht
-
-      InformationsTreeStore.Append(Iter   => SecondLevelIterator,
-                       Parent => InformationsTreeViewIterator);
-      InformationsTreeStore.Set(Iter   => SecondLevelIterator,
-                    Column => 0 ,
-                    Value  => "Test456" );
+      Put_Line(KickUserComboBox.Get_Active_Text);
+     selection := Gtk_Tree_Selection(Object.Get_Object("treeview-selection3"));
+      selection.Get_Selected(selectedModel, selectedIter);
 
 
-
-
-
-      Put_Line("Initialization complete!");
-     end InitializeGuiReferences;
-
+   Put_Line("Kick!");
+   end kickSelectedUser;
 
 
 

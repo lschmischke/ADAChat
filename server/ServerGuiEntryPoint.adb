@@ -34,23 +34,21 @@ with Gtk.Enums;                use Gtk.Enums;
 use Gtk; with Gtk;
 with Gtk.Handlers;             use Gtk.Handlers;
 with ServerGuiCallbacks; use ServerGuiCallbacks;
-with Concrete_Server_Logic; use Concrete_Server_Logic;
 with GUI_to_Server_Communication; use GUI_to_Server_Communication;
-with Server_To_GUI_Communication; use Server_To_GUI_Communication;
-with Concrete_Server_Gui_Logic; use Concrete_Server_Gui_Logic;
+with Concrete_Server_Gui_Logic;
+
+package body ServerGuiEntryPoint is
 procedure  ServerGuiEntryPoint is
    Builder : Gtkada_Builder;
    ret : GUint;
    error : aliased GError;
    Win   : Gtk_Window;
-   Server: Concrete_Server;
+
   -- Server2: GUI_to_Server_Communication.Server
 begin
    Gtk.Main.Init;
    Gtk_New (Builder);
    ret := Builder.Add_From_File ("server\ServerGui.glade", error'Access);
-
-
 
    if Error /= null then
       Ada.Text_IO.Put_Line ("Error : " & Get_Message (Error));
@@ -68,6 +66,24 @@ begin
      (Builder      => Builder,
       Handler_Name => "clicked_button_about",
       Handler      => ServerGuiCallbacks.clicked_button_about'Access);
+      Register_Handler
+     (Builder      => Builder,
+      Handler_Name => "clicked_button_server_start",
+      Handler      => ServerGuiCallbacks.clicked_button_server_start'Access);
+      Register_Handler
+     (Builder      => Builder,
+      Handler_Name => "clicked_button_server_stop",
+      Handler      => ServerGuiCallbacks.clicked_button_server_stop'Access);
+      Register_Handler
+     (Builder      => Builder,
+      Handler_Name => "kickSelectedUser",
+      Handler      => ServerGuiCallbacks.kickSelectedUser'Access);
+      Register_Handler
+     (Builder      => Builder,
+      Handler_Name => "rowActivated",
+      Handler      => ServerGuiCallbacks.rowHandler'Access);
+
+
 
 
    Do_Connect (Builder);
@@ -75,7 +91,7 @@ begin
    --Concrete_Server_Gui_Logic.STG.initGui;
 
    Concrete_Server_Gui_Logic.InitServerGui(myBuilder => Builder);
-
+   ServerGuiCallbacks.InitializeGuiReferences(myBuilder => Builder);
    --  Find our main window, then display it and all of its children.
    Win := Gtk_Window (Builder.Get_Object ("main_window_server"));
    Win.Show_All;
@@ -84,7 +100,11 @@ begin
 
 
 
-   Unref (Builder);
+      Unref (Builder);
+
+
+
+   end ServerGuiEntryPoint;
 
 end ServerGuiEntryPoint;
 

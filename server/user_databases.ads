@@ -10,20 +10,24 @@ with ada.containers.Indefinite_Hashed_Maps;
 with Ada.Strings.hash;
 with Ada.Exceptions; use Ada.Exceptions;
 with Ada.IO_Exceptions;
-
 with DataTypes; use DataTypes;
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Dieses Paket bündelt Typen um Benutzer des Chats zu verwalten. Es unterhält unter anderem Funktionen um User zu registrieren und die
+-- Benutzerdatenbank zu speichern oder zu laden.
+--
+-- Autoren: Daniel Kreck, Leonard Schmischke
+-- Letzte Änderung: 29.04.2016
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 package User_Databases is
--- public
 
-   type User_Database is tagged private;
-   function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean;
-   function getUser(database : in User_Database; username : in Unbounded_String) return UserPtr;
+   --TODO
+   -- deleteUser
 
-   procedure saveUserDatabase(this : in User_Database); -- writes User Database to file
-   procedure loadUserDatabase(this : in out User_Database); -- loads user database from file
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   -- > Öffentliche Typen
 
-private
+   package contactNamesList is new Doubly_Linked_Lists(Element_Type => Unbounded_String);
 
    package User_Maps is new Hashed_Maps
      (Key_Type => Unbounded_String,
@@ -32,7 +36,25 @@ private
       Equivalent_Keys => "=");
    use User_Maps;
 
-   package contactNamesList is new Doubly_Linked_Lists(Element_Type => Unbounded_String);
+
+   protected type User_Database is
+      procedure registerUser(username : in Unbounded_String; password : in Unbounded_String; success : out Boolean);
+      function getUser(username : in Unbounded_String) return UserPtr;
+      procedure saveUserDatabase; -- writes User Database to file
+      procedure loadUserDatabase; -- loads user database from file
+      function userToUnboundedString(this : in out UserPtr) return Unbounded_String;
+      procedure StringToLonelyUser(inputLine : in String; contactNames : out contactNamesList.List; newUser : out UserPtr);
+   private
+      users : User_Maps.Map; -- # username -> userDataSet
+      databaseFileName: Unbounded_String := To_Unbounded_String("ADAChatDatabase.txt");
+   end User_Database;
+
+   type User_Database_Ptr is access User_Database;
+
+private
+
+
+
 
    package userToContactNamesMap is new Indefinite_Hashed_Maps
      (Key_Type => Unbounded_String,
@@ -41,18 +63,5 @@ private
       Equivalent_Keys => Ada.strings.Unbounded.Equal_Case_Insensitive,
       "=" => contactNamesList."=");
    use userToContactNamesMap;
-
-   function userToUnboundedString(this : in out UserPtr) return Unbounded_String;
-   function StringToLonelyUser(inputLine : in String; database : in User_Database; contactNames : out contactNamesList.List  ) return UserPtr;
-
-
-
-   type User_Database is tagged record
-      users : User_Maps.Map; -- # username -> userDataSet
-      databaseFileName: Unbounded_String := To_Unbounded_String("ADAChatDatabase.txt");
-      maxSize : Integer := 1000000;
-
-   end record;
-
 
 end User_Databases;

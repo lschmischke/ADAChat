@@ -1,117 +1,113 @@
 package body User_Databases is
 
-   function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean is
+   protected body User_Database is
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   procedure registerUser(username : in Unbounded_String; password : in Unbounded_String; success : out Boolean)is
       newUser : UserPtr := new User;
-      bool : Boolean;
       contacts : UserList.List;
-
    begin
-      setUsername(newUser, username);
+      newUser.setUsername(username);
 
-      bool := setPassword(newUser, password);
-      setContacts(newUser, contacts);
+      newUser.setPassword(password);
+      newUser.setContacts(contacts);
 
-      User_Maps.Insert(Container => this.users,
-                       Key       => username,
-                       New_Item  => newUser);
+      users.Insert(username, newUser);
 
-      --#hard-speichern des Users
-      saveUserDatabase(this => this);
-      return true;
-
+      -- hard-speichern des Users
+	 saveUserDatabase;
+	 success := true;
    Exception
       when Constraint_Error =>
-           return false;
-
+           success := false;
    end registerUser;
 
-   function getUser(database : in User_Database; username : in Unbounded_String) return UserPtr is
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   function getUser(username : in Unbounded_String) return UserPtr is
       user: UserPtr;
    begin
-      user := database.users.Element(Key => username);
+      user := users.Element(Key => username);
       return user;
-
    Exception
       when Constraint_Error =>
          Put_Line("User '"&To_String(username)&"' not found in database");
          return null;
-
    end getUser;
 
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   procedure saveUserDatabase(this : in User_Database) is
-      Write_To : String := To_String(this.databaseFileName);
+   procedure saveUserDatabase is
+      Write_To : String := To_String(databaseFileName);
       DataFile : File_type;
-      usermap : User_Maps.map :=this.users;
    begin
       begin
       Open(File => DataFile,
            Mode => Out_File,
            Name => Write_To);
       exception
-         when others => --# welcher Fehler wird hier normalerweise geworfen? #
+         when others => -- TODO: welcher Fehler wird hier normalerweise geworfen?
             Create(File => DataFile,
                    Mode => Out_File,
                    Name => Write_To);
       end;
 
-      for user of usermap loop
-         --# schreibe jeden User in eine Line im folgenden Format
-         --# username:userpasswort[:contact]*
+      for user of users loop
+         -- schreibe jeden User in eine Line im folgenden Format
+         -- username:userpasswort[:contact]*
          Put_Line(DataFile, To_String(userToUnboundedString(this => user)));
       end loop;
       Close(DataFile);
    end saveUserDatabase; -- writes User Database to file
 
-   procedure loadUserDatabase(this : in out User_Database) is
-      Read_From : String := To_String(this.databaseFileName);
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   procedure loadUserDatabase is
+      Read_From : String := To_String(databaseFileName);
       DataFile : File_type;
       contactNames : contactNamesList.List;
       userToContactNames : userToContactNamesMap.Map;
    begin
-       begin
+      begin
       Open(File => DataFile,
            Mode => In_File,
            Name => Read_from);
+
       exception
          when others => --# welcher Fehler wird hier normalerweise geworfen? #
-            Put_line("ERROR: Userdatabase file doesn't exist. Creating Userdatabase file with name: "& To_String(this.databaseFileName));
+            Put_line("ERROR: Userdatabase file doesn't exist. Creating Userdatabase file with name: "& To_String(databaseFileName));
             Create(File => DataFile,
                    Mode => In_File,
                    Name => Read_From);
             return;
       end;
 
-      --#Erster Durchgang lege alle Benutzer an, Benutzer haben noch keine Kontakte
+      -- Erster Durchgang lege alle Benutzer an, Benutzer haben noch keine Kontakte
       Put_Line("Reading from database file, first iteration.");
       begin
-
          loop
             declare
-               --# lese Line aus dem File
+               -- lese Line aus dem File
                userLine : String := Get_Line(DataFile);
-
-               --# konvertiere Line in User
+               -- konvertiere Line in User
                user : UserPtr;
             begin
                Put_Line("Read from database file: "&userLine);
-               user:= StringToLonelyUser(userLine, this, contactNames);
+               StringToLonelyUser(userLine, contactNames,user);
 
-               --#füge User zur Map hinzu
-               this.users.Insert(Key      => getUsername(user),
+               -- füge User zur Map hinzu
+               users.Insert(Key      => user.getUsername,
                                  New_Item => user);
-                --#speichere gefundene Kontaktnamen zwischen
-               userToContactNames.Insert(Key      => getUsername(user),
+                -- speichere gefundene Kontaktnamen zwischen
+               userToContactNames.Insert(Key      => user.getUsername,
                                          New_Item => contactNames);
                contactNames.Clear;
-
-
             end;
          end loop;
 
       Exception
 	 when Error:Ada.IO_Exceptions.End_Error =>
-	    Put_Line("closed Database File " & To_String(this.databaseFileName));
+	    Put_Line("closed Database File " & To_String(databaseFileName));
             Close(DataFile);
          when Error:others =>
             Put_Line(Exception_Information(Error));
@@ -119,28 +115,25 @@ package body User_Databases is
       end;
 
       Put_Line("Reading from database file, second iteration.");
-      --#zweiter Durchgang: da alle User angelegt sind, können nun die Kontakte geknüpft werden
+      -- zweiter Durchgang: da alle User angelegt sind, können nun die Kontakte geknüpft werden
       declare
          Index : userToContactNamesMap.Cursor := userToContactNames.First;
       begin
-         --#durchlaufe alle user (map)
+         -- durchlaufe alle user (map)
          while Index /= userToContactNamesMap.No_Element loop
             declare
-               user : UserPtr := getUser(this,username => Key (Index));
-               bool : boolean;
+               user : UserPtr := getUser(username => Key (Index));
             begin
-               --# durchlaufe alle kontaktnamen eines users (liste)
+               -- durchlaufe alle kontaktnamen eines users (liste)
                for contactName of userToContactNames.Element(Key => key(index)) loop
                   declare
-                     contact : UserPtr := getUser(this, contactName);
+                     contact : UserPtr := getUser(contactName);
                   begin
                      if contact /= null then
-                        Put_Line("Adding contact " & To_String(contactName) & " to user '"&To_String(getUsername(user))&"'");
-                        bool := addContact(user,contact);
+                        Put_Line("Adding contact " & To_String(contactName) & " to user '"&To_String(user.getUsername)&"'");
+                        user.addContact(contact);
                      end if;
-
-                    end;
-
+                  end;
                end loop;
             end;
             Index := Next(Index);
@@ -148,57 +141,57 @@ package body User_Databases is
       end;
    end loadUserDatabase; -- loads user database from file
 
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String is
       --result : Unbounded_String := this.user_data.username;
-      result : Unbounded_String := getUsername(this);
-      contacts : UserList.List := getContacts(this);
+      result : Unbounded_String := this.getUsername;
+      contacts : UserList.List := this.getContacts;
    begin
-      --#Trennzeichen
+      -- Trennzeichen
       Append(Source   => result,
              New_Item => To_Unbounded_String(Protocol.Seperator));
-      --#Passwort
+      -- Passwort
       Append(Source   => result,
-             New_Item => getPassword(this));
+             New_Item => this.getPassword);
 
       for contact of contacts loop
-         --#Trennzeichen
+         -- Trennzeichen
          Append(Source   => result,
                 New_Item => To_Unbounded_String(Protocol.Seperator));
-         --#Kontaktname
+         -- Kontaktname
          Append(Source   => result,
-                New_Item => getUsername(contact));
+                New_Item => contact.getUsername);
       end loop;
       return result;
    end userToUnboundedString;
 
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   function StringToLonelyUser(inputLine : in String; database : in User_Database; contactNames : out contactNamesList.List ) return UserPtr is
+   procedure StringToLonelyUser(inputLine : in String; contactNames : out contactNamesList.List; newUser : out UserPtr )  is
       MessageParts : GNAT.String_Split.Slice_Set;
       MessagePart : Unbounded_String;
       Count : Slice_Number;
-      newUser: UserPtr := new User;
-      bool : Boolean;
-   begin
-      -- # Nachricht wird an definiertem Trennzeichen zerstueckelt #
+      begin
+	 newUser := new User;
+      -- Nachricht wird an definiertem Trennzeichen zerstueckelt
       GNAT.String_Split.Create(S => MessageParts, From => inputLine,
                                Separators => Protocol.Seperator, Mode => GNAT.String_Split.Multiple);
       Count := GNAT.String_Split.Slice_Count(MessageParts);
 
-      --#TODO: Pruefen, ob Nachricht richtiges Format
+      -- TODO: Pruefen, ob Nachricht richtiges Format
 
-
-      --#Slice 1: username
-      setUsername(newUser,To_Unbounded_String(Gnat.String_Split.Slice(MessageParts, 1)));
-      --#Slice 2: password
-      bool := setPassword(newUser,To_Unbounded_String(Gnat.String_split.slice(MessageParts, 2)));
-      --#Slice rest: contacts
+      -- Slice 1: username
+      newUser.setUsername(To_Unbounded_String(Gnat.String_Split.Slice(MessageParts, 1)));
+      -- Slice 2: password
+      newUser.setPassword(To_Unbounded_String(Gnat.String_split.slice(MessageParts, 2)));
+      -- Slice rest: contacts
       for i in 3 .. Count loop
          contactNames.Append(New_Item => To_Unbounded_String(Gnat.String_split.slice(MessageParts, i)));
       end loop;
+      end StringToLonelyUser;
+      end User_Database;
 
-
-      return newUser;
-
-   end StringToLonelyUser;
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 end User_Databases;
