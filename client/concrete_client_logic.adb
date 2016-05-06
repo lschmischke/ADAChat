@@ -199,7 +199,7 @@ package body Concrete_Client_Logic is
                --#zeige Message im Chatraum an
                null;
             else
-               This.ChatRoomIdSet.Append(New_Item => MsgObject.Receiver);
+               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
                --#TODO
                --#oeffne neues Chatfenster
             end if;
@@ -243,7 +243,7 @@ package body Concrete_Client_Logic is
             begin
                Message := MsgObject.Content;
                Append(Message, " ist jetzt online!");
-               This.UsersOnline.Append(MsgObject.Content);
+               This.UsersOnline.Insert(MsgObject.Content);
                if This.UsersOffline.Contains(Item => MsgObject.Content) then
                   Position := This.UsersOffline.Find(Item => MsgObject.Content);
                   This.UsersOffline.Delete(Position);
@@ -259,7 +259,7 @@ package body Concrete_Client_Logic is
             begin
                Message := MsgObject.Content;
                Append(Message, " ist jetzt offline!");
-               This.UsersOffline.Append(MsgObject.Content);
+               This.UsersOffline.Insert(MsgObject.Content);
                if This.UsersOnline.Contains(Item => MsgObject.Content) then
                   Position := This.UsersOnline.Find(Item => MsgObject.Content);
                   This.UsersOnline.Delete(Position);
@@ -274,7 +274,7 @@ package body Concrete_Client_Logic is
             begin
                Message := To_Unbounded_String("Chatraum :");
                Append(Message, Integer'Image(MsgObject.Receiver));
-               This.ChatRoomIdSet.Append(New_Item => MsgObject.Receiver);
+               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
 
                --##TODO Chatfenster oeffnen
 
@@ -283,7 +283,7 @@ package body Concrete_Client_Logic is
          when Protocol.Userlist =>
             declare
                Substrings : GNAT.String_Split.Slice_Set;
-               UserSet : Client2Gui_Communication.Userlist.List;
+               UserSet : Client2Gui_Communication.Userlist.Set;
             begin
                GNAT.String_Split.Create (S => Substrings,
                                          From       => To_String(MsgObject.Content),
@@ -291,9 +291,9 @@ package body Concrete_Client_Logic is
                                          Mode       => GNAT.String_Split.Single);
 
                for I in 1 .. GNAT.String_Split.Slice_Count (Substrings) loop
-                  UserSet.Append(New_Item => To_Unbounded_String(GNAT.String_Split.Slice (Substrings, I)));
+                  UserSet.Insert(New_Item => To_Unbounded_String(GNAT.String_Split.Slice (Substrings, I)));
                end loop;
-               This.ChatRoomParticipants.Append(--Key      => MsgObject.Receiver,
+               This.ChatRoomParticipants.Insert(Key      => MsgObject.Receiver,
                                                 New_Item => UserSet);
 
                This.GUI.ShowChatParticipants(Chatraum     => MsgObject.Receiver,
