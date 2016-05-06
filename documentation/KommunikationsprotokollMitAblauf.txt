@@ -1,0 +1,154 @@
+Nachrichtmodell: 	ART	|MYUSERNAME	|EMPFÄNGER(CHATRAUM/Server)	|CONTENT
+			enum 	|string		|integer			|string
+Servername = server
+username = leo
+ChatraumID =  42
+serverchatID = 9
+Trennzeichen = : (wird geändert)
+z.B: 	Chatnachricht 			chat:leo:42:Hi Leute
+	Anmeldung an Server: 		connect:leo:0:Passwort --EMPFÄNGER = 0
+	Anmeldungsbestätigung:		connect:server:9:ok
+	Anmeldung fehlgeschlagen:	refused:server:9:nö
+	Abmeldung vom Server: 		disconnect:leo:9:?
+	Disconnect vom Chatraum:	leavechat:leo:42:Abschiedsnachricht
+	Disconnect-Bestätigung:		disconnect:server:9:ok
+	Kick-Benachrichtigung:		disconnect:server:9:YOU WERE KICKED NOOB
+	Kontaktliste (user online)	online:server:9:daniel
+	Kontaktliste (user offline)	offline:server:9:ewald
+	Chatraumrequest			chatrequest:leo:9:daniel
+	Chatraumrequest-Accept		chatrequest:server:9:?
+	ungültige Nachricht 		invalid:server:0:<whole invalid message>
+	Registrierung			register:<username>:0:<userpassword>
+	registrierungsbestätigung	register:server:0:ok
+	
+	Kontakt hinzufügen		addContact:<user>:<serverroomid>:<contactToAdd>			
+	Kontakt entfernen		remContact:<user>:<serverroomid>:<contactToRemove>	
+
+FEATURES
+Zur Struktur:
+Eine Nachricht besteht auf vier Komponenten
+1.) dem MessageTyp (MessageTypeE)
+2.) der Absender   (Unbounded_String)
+3.) der Empfänger in Form der ID des Chatraums (Natural)
+4.) dem Inhalt der Nachricht (Unbounded_String)
+
+die einzelnen Teile der Nachricht werden durch einen definierten Separator getrennt. Im Folgenden wird als Separator ein Doppelpunkt verwendet. Im fertigen Programm wird ein nicht printbares Zeichen dafür genutzt,
+um den Zeichenraum beim Chatten nicht einzuschränken.
+--------
+Registrieren
+--------
+Registrieren mit
+register:<username>:0:<password>
+Server antwortet mit
+a) register:server:0:ok  -- Registrierung erfolgreich
+b) refused:server:0:registration failed, name in use -- Gewählter Benutzername wird schon benutzt
+
+-------
+Connecten
+-------
+Anmelden mit
+connect:<username>:0:<password>
+Server antwortet mit
+a) connect:server:<serverRoomID>:ok
+   Erfolgreich verbunden, zukünftige Nachrichten an den Server werden an <serverRoomID> adressiert
+b) refused:server:0:user not found in database
+   Es exisitiert kein User mit angegebenem Benutzernamen
+c) refused:server:0:invalid password
+   Das angebene Passwort ist nicht korrekt
+d) refused:server:0:user already logged in
+   Der angegebene User ist schon eingeloggt
+e) refused:server:0:you are already logged in to an account
+   Der Client ist schon als anderer Benutzer eingeloggt
+
+-------
+Kontakte
+-------
+Kontaktanfrage stellen mit
+addcontact:<myusername>:<serverRoomID>:<username of contact>
+Anfrage wird von Server an Wunsch-Kontakt weitergereicht mit
+addcontact:server:<serverRoomID of contact>:<username of user that requested contact>
+
+Kontaktanfrage annehmen
+addcontact:<myusername>:<serverRoomID>:<username of contact>
+Die beiden User sind nun als Kontakt verknüft
+
+Kontaktanfrage ablehnen
+existiert eine Kontaktanfrage von einem User, kann diese mit folgender Nachricht abgelehnt werden
+remcontact:<myyusername>:<serverRoomID>:<username of user that requested contact>
+Der Benutzer, dessen Anfrage abgelehnt wurde, wird benachrichtigt
+remcontact:server:<serverRoomID>:<username of contact that did not accept the request>
+
+Kontakt entfernen
+remcontact:<myusername>:<serverRoomID>:<name of contact that should be removed>
+der Server antwortet mit
+a) remcontact:server:<serverRoomID>:<name of contact that got removed>
+   Der angegeben Kontakt wurde entfernt
+   Der entfernte Kontakt wird ebenfalls mit der analogen Nachricht benachrichtigt   
+b) Refused:server:<serverRoomID>:There is no contact request from <username>
+   Es existiert kein Kontakt mit angegebenem Usernamen und es existiert keine Kontaktanfrage von einem User mit angegebenem Username
+
+there is no contact with name '<username>' muss noch rein
+
+Onlinestatus von Kontakten ermitteln
+Beim Einloggen wird der Status von jedem Kontakt in einer online- oder offline-Nachricht mitgeteilt
+<online> | <offline>:server:<serverRoomID>:<name of contact>
+Diese Nachricht wird auch bei jeder Änderung des Status eines Kontaktes verschickt, zum Beispiel wenn dieser offline geht oder nach dem Anlegen eines neuen Kontakts
+
+-------
+Chatten
+-------
+Einen neuen Chat beginnen mit
+chatrequest:<myusername>:<serveRoomID>:<username of contact I want to chat with>
+
+Einen Kontakt zu einem bestehendem Chatraum einladen mit
+chatrequest:<myusername>:<chatroomID>:<username of contact I want to invite to the chatroom>
+
+Der Server antwortet mit
+a) chatrequest:server:<ID of new Chatroom>:<user you are now chatting with>
+   Der Chatraum wurde erstellt, Teilnehmer sind: der Server, der Benutzer, und der angegebene Kontakt
+b) refused:server:<serverRoomID>:invalid roomID in chatrequest, please use your serverRoomID for new chatrequests and the specific chatrommID for invites
+   Wenn eine falsche ID als Empfänger angegeben wurde, d.h. nicht die ServerroomID für einen neuen Chatraum oder die ID eines bereits existenten Chatraums, kann die Anfrage nicht
+   bearbeitet werden
+c) refused:server:<serverRoomID>:There is no contact with name <username>
+   Es können nur Kontakte in Chaträume eingeladen werden
+
+Wenn sich die Teilnehmer-Liste in einem Chatraum ändert wird eine userlist an alle Teilnehmer verschickt
+userlist:server:<serverRoomID>:<username>[:<username>]*
+
+Eine Nachricht in einem Chatraum senden mit
+chat:<myusername>:<chatroomID>:<message>
+Diese Nachricht wird vom Server an alle Kontakte im Chatraum geechot
+
+Einen Chat verlassen mit
+leavechat:<myusername>:<chatroomID of chatroom I want to leave>:<farewell message>
+
+Der Server antwortet auf leavechat und chat mit
+a) refused:server:<serverRoomID>:you are not in the chatroom with id <id of adressed chatroom>
+   wenn der Benutzer sich nicht in dem angegebenem Chatraum befindet
+b) refused:server:<serverRoomID>:there is no chatroom with id <id of adressed chatroom>
+   wenn kein Chatraum mit der angegebenen Nummer existiert
+
+
+
+---------
+Disconnecten
+---------
+Vom Server abmelden mit
+disconnect:<myusername>:<serverRoomID>:?
+
+der Server antwortet mit
+disconnect:server:<serverRoomID>:ok
+Die Abmeldung wurde erfolgreich vollzogen
+
+
+
+
+Protokoll 
+
+Umsetzung: Klassendiagramm, welche Komponenten gibts, wie interagieren diese.
+
+Vorgehen: wer macht was, wöchentliche treffen, Guis mit GTK (Gtk-erklärung)
+	Probleme: 	GTK
+			fehlende ausführliche Dokumentation für GTK und ADA
+			Zirkuläre Abhängigkeiten
+			Merkwürdigkeiten in ADA

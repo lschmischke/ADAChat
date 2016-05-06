@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#a42f06c2#;
+   u00001 : constant Version_32 := 16#c417af8e#;
    pragma Export (C, u00001, "serverguientrypointB");
    u00002 : constant Version_32 := 16#fbff4c67#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -187,7 +187,7 @@ package ada_main is
    pragma Export (C, u00075, "system__file_control_blockS");
    u00076 : constant Version_32 := 16#31750155#;
    pragma Export (C, u00076, "concrete_server_gui_logicB");
-   u00077 : constant Version_32 := 16#54da0cd0#;
+   u00077 : constant Version_32 := 16#34e2a59c#;
    pragma Export (C, u00077, "concrete_server_gui_logicS");
    u00078 : constant Version_32 := 16#9a0f0489#;
    pragma Export (C, u00078, "glibB");
@@ -739,9 +739,9 @@ package ada_main is
    pragma Export (C, u00351, "gtk__tree_view_columnB");
    u00352 : constant Version_32 := 16#df455cdf#;
    pragma Export (C, u00352, "gtk__tree_view_columnS");
-   u00353 : constant Version_32 := 16#f9f59827#;
+   u00353 : constant Version_32 := 16#858c16a1#;
    pragma Export (C, u00353, "concrete_server_logicB");
-   u00354 : constant Version_32 := 16#6036fe12#;
+   u00354 : constant Version_32 := 16#d08ef696#;
    pragma Export (C, u00354, "concrete_server_logicS");
    u00355 : constant Version_32 := 16#fd83e873#;
    pragma Export (C, u00355, "system__concat_2B");
@@ -1023,56 +1023,56 @@ package ada_main is
    pragma Export (C, u00493, "ada__strings__fixedB");
    u00494 : constant Version_32 := 16#a86b22b3#;
    pragma Export (C, u00494, "ada__strings__fixedS");
-   u00495 : constant Version_32 := 16#91d28976#;
-   pragma Export (C, u00495, "user_databasesB");
-   u00496 : constant Version_32 := 16#4d7faa8b#;
-   pragma Export (C, u00496, "user_databasesS");
-   u00497 : constant Version_32 := 16#75de1dee#;
-   pragma Export (C, u00497, "ada__strings__hashB");
-   u00498 : constant Version_32 := 16#3655ad4c#;
-   pragma Export (C, u00498, "ada__strings__hashS");
-   u00499 : constant Version_32 := 16#eea87217#;
-   pragma Export (C, u00499, "ada__strings__unbounded__equal_case_insensitiveB");
-   u00500 : constant Version_32 := 16#b0c10684#;
-   pragma Export (C, u00500, "ada__strings__unbounded__equal_case_insensitiveS");
-   u00501 : constant Version_32 := 16#22d17b05#;
-   pragma Export (C, u00501, "ada__strings__equal_case_insensitiveB");
-   u00502 : constant Version_32 := 16#a7ec4680#;
-   pragma Export (C, u00502, "ada__strings__equal_case_insensitiveS");
-   u00503 : constant Version_32 := 16#8f637df8#;
-   pragma Export (C, u00503, "ada__characters__handlingB");
-   u00504 : constant Version_32 := 16#3b3f6154#;
-   pragma Export (C, u00504, "ada__characters__handlingS");
-   u00505 : constant Version_32 := 16#92f05f13#;
-   pragma Export (C, u00505, "ada__strings__maps__constantsS");
-   u00506 : constant Version_32 := 16#da8cbe06#;
-   pragma Export (C, u00506, "ada__strings__unbounded__auxB");
-   u00507 : constant Version_32 := 16#5c293c89#;
-   pragma Export (C, u00507, "ada__strings__unbounded__auxS");
-   u00508 : constant Version_32 := 16#59e971b9#;
-   pragma Export (C, u00508, "ada__strings__unbounded__hash_case_insensitiveB");
-   u00509 : constant Version_32 := 16#210c8daa#;
-   pragma Export (C, u00509, "ada__strings__unbounded__hash_case_insensitiveS");
-   u00510 : constant Version_32 := 16#eee9c0c6#;
-   pragma Export (C, u00510, "ada__strings__hash_case_insensitiveB");
-   u00511 : constant Version_32 := 16#f9e6d5c1#;
-   pragma Export (C, u00511, "ada__strings__hash_case_insensitiveS");
-   u00512 : constant Version_32 := 16#889c3aa8#;
-   pragma Export (C, u00512, "gtkada__builderB");
-   u00513 : constant Version_32 := 16#054d62aa#;
-   pragma Export (C, u00513, "gtkada__builderS");
-   u00514 : constant Version_32 := 16#eca7d2aa#;
-   pragma Export (C, u00514, "gtk__handlersB");
-   u00515 : constant Version_32 := 16#4ec738e6#;
-   pragma Export (C, u00515, "gtk__handlersS");
-   u00516 : constant Version_32 := 16#53dfc0e9#;
-   pragma Export (C, u00516, "gtk__marshallersB");
-   u00517 : constant Version_32 := 16#33f6213e#;
-   pragma Export (C, u00517, "gtk__marshallersS");
-   u00518 : constant Version_32 := 16#f59df1f8#;
-   pragma Export (C, u00518, "gtkada__handlersS");
-   u00519 : constant Version_32 := 16#50602477#;
-   pragma Export (C, u00519, "server_to_gui_communicationS");
+   u00495 : constant Version_32 := 16#4f2034dd#;
+   pragma Export (C, u00495, "server_to_gui_communicationS");
+   u00496 : constant Version_32 := 16#59e971b9#;
+   pragma Export (C, u00496, "ada__strings__unbounded__hash_case_insensitiveB");
+   u00497 : constant Version_32 := 16#210c8daa#;
+   pragma Export (C, u00497, "ada__strings__unbounded__hash_case_insensitiveS");
+   u00498 : constant Version_32 := 16#eee9c0c6#;
+   pragma Export (C, u00498, "ada__strings__hash_case_insensitiveB");
+   u00499 : constant Version_32 := 16#f9e6d5c1#;
+   pragma Export (C, u00499, "ada__strings__hash_case_insensitiveS");
+   u00500 : constant Version_32 := 16#8f637df8#;
+   pragma Export (C, u00500, "ada__characters__handlingB");
+   u00501 : constant Version_32 := 16#3b3f6154#;
+   pragma Export (C, u00501, "ada__characters__handlingS");
+   u00502 : constant Version_32 := 16#92f05f13#;
+   pragma Export (C, u00502, "ada__strings__maps__constantsS");
+   u00503 : constant Version_32 := 16#da8cbe06#;
+   pragma Export (C, u00503, "ada__strings__unbounded__auxB");
+   u00504 : constant Version_32 := 16#5c293c89#;
+   pragma Export (C, u00504, "ada__strings__unbounded__auxS");
+   u00505 : constant Version_32 := 16#91d28976#;
+   pragma Export (C, u00505, "user_databasesB");
+   u00506 : constant Version_32 := 16#4d7faa8b#;
+   pragma Export (C, u00506, "user_databasesS");
+   u00507 : constant Version_32 := 16#75de1dee#;
+   pragma Export (C, u00507, "ada__strings__hashB");
+   u00508 : constant Version_32 := 16#3655ad4c#;
+   pragma Export (C, u00508, "ada__strings__hashS");
+   u00509 : constant Version_32 := 16#eea87217#;
+   pragma Export (C, u00509, "ada__strings__unbounded__equal_case_insensitiveB");
+   u00510 : constant Version_32 := 16#b0c10684#;
+   pragma Export (C, u00510, "ada__strings__unbounded__equal_case_insensitiveS");
+   u00511 : constant Version_32 := 16#22d17b05#;
+   pragma Export (C, u00511, "ada__strings__equal_case_insensitiveB");
+   u00512 : constant Version_32 := 16#a7ec4680#;
+   pragma Export (C, u00512, "ada__strings__equal_case_insensitiveS");
+   u00513 : constant Version_32 := 16#889c3aa8#;
+   pragma Export (C, u00513, "gtkada__builderB");
+   u00514 : constant Version_32 := 16#054d62aa#;
+   pragma Export (C, u00514, "gtkada__builderS");
+   u00515 : constant Version_32 := 16#eca7d2aa#;
+   pragma Export (C, u00515, "gtk__handlersB");
+   u00516 : constant Version_32 := 16#4ec738e6#;
+   pragma Export (C, u00516, "gtk__handlersS");
+   u00517 : constant Version_32 := 16#53dfc0e9#;
+   pragma Export (C, u00517, "gtk__marshallersB");
+   u00518 : constant Version_32 := 16#33f6213e#;
+   pragma Export (C, u00518, "gtk__marshallersS");
+   u00519 : constant Version_32 := 16#f59df1f8#;
+   pragma Export (C, u00519, "gtkada__handlersS");
    u00520 : constant Version_32 := 16#2f040cf1#;
    pragma Export (C, u00520, "serverguicallbacksB");
    u00521 : constant Version_32 := 16#666e72b0#;
@@ -1593,9 +1593,9 @@ package ada_main is
    --  serverguicallbacks%b
    --  user_databases%s
    --  user_databases%b
+   --  server_to_gui_communication%s
    --  concrete_server_logic%s
    --  concrete_server_logic%b
-   --  server_to_gui_communication%s
    --  concrete_server_gui_logic%s
    --  concrete_server_gui_logic%b
    --  serverguientrypoint%b
