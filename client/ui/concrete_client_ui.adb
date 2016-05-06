@@ -239,6 +239,7 @@ package body Concrete_Client_Ui is
    begin
       username := Gtk_Entry(This.Login_Window.Builder.Get_Object("Login_Username"));
       Instance.UserName := To_Unbounded_String(username.Get_Text);
+      Chat_Window_Manager.MyUserName := Instance.UserName;
       This.Login_Window.Window.Hide;
    end LoginSuccess;
 
@@ -284,7 +285,11 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String) is null;
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String) is
+   begin
+--      Chat_window_Manager.MyUsers.Insert(Name, ChatId);
+      Chat_window_Manager.MyUsers.Insert(To_Unbounded_String("tomi"), ChatId);
+   end UpdateChatRoomId;
 
    -----------------------------------------------------------------------------
 
