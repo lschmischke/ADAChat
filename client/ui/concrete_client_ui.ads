@@ -16,7 +16,7 @@ package Concrete_Client_Ui is
    type Concrete_Ui is new Client2Gui_Communication.GUI with record
       UserName : Unbounded_String; -- Set after Login
       Login_Window   : LoginWindow;
-      Contact_Window   : ContactWindow;
+      Contact_Window   : WindowPtr;
       Chat_Windows : ChatWindows.List;
       Client : ClientPtr;
    end record;

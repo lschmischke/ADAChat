@@ -16,6 +16,7 @@ with GNAT.Sockets;       use GNAT.Sockets;
 with Gtk.List_Store;     use Gtk.List_Store;
 with Gtk.Tree_Model;     use Gtk.Tree_Model;
 with Gtk.Combo_Box_Text; use Gtk.Combo_Box_Text;
+with Gtk.Label;          use Gtk.Label;
 
 with System;
 
@@ -33,31 +34,38 @@ package body Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    procedure Error_Message(This : in out Concrete_Ui; message : String) is
-      dialog : aliased Gtk_Message_Dialog;
-      ret : Gtk_Response_Type;
+--      dialog : aliased Gtk_Message_Dialog;
+--      ret : Gtk_Response_Type;
+      label: Gtk_Label;
    begin
-      dialog := Gtk_Message_Dialog_New (Parent   => This.Login_Window.Window,
-                                        Flags    => Destroy_With_Parent,
-                                        The_Type => Message_Error,
-                                        Buttons  => Buttons_Ok,
-                                        Message  => "Error: %s",
-                                        Arg5     => message'Address);
-      ret := Run(Gtk_Dialog(dialog));
-      dialog.Destroy;
+--      dialog := Gtk_Message_Dialog_New (Parent   => This.Login_Window.Window,
+--                                        Flags    => Destroy_With_Parent,
+--                                        The_Type => Message_Error,
+--                                        Buttons  => Buttons_Ok,
+--                                        Message  => "Error: %s",
+--                                        Arg5     => message'Address);
+--      ret := Run(Gtk_Dialog(dialog));
+--      dialog.Destroy;
+      label := Gtk_Label(This.Login_Window.Builder.Get_Object("Login_Error_Label"));
+      label.Set_Text(message);
+      This.Contact_Window.Window.Hide;
    end Error_Message;
 
    procedure Info_Message(This : in out Concrete_Ui; message : String) is
-      dialog : aliased Gtk_Message_Dialog;
-      ret : Gtk_Response_Type;
+      --dialog : aliased Gtk_Message_Dialog;
+      --ret : Gtk_Response_Type;
+      label: Gtk_Label;
    begin
-      dialog := Gtk_Message_Dialog_New (Parent   => This.Login_Window.Window,
-                                        Flags    => Destroy_With_Parent,
-                                        The_Type => Message_Info,
-                                        Buttons  => Buttons_Ok,
-                                        Message  => "%s",
-                                        Arg5     => message'Address);
-      ret := Run(Gtk_Dialog(dialog));
-      dialog.Destroy;
+      --dialog := Gtk_Message_Dialog_New (Parent   => This.Login_Window.Window,
+      --                                  Flags    => Destroy_With_Parent,
+      --                                  The_Type => Message_Info,
+      --                                  Buttons  => Buttons_Ok,
+      --                                  Message  => "%s",
+      --                                  Arg5     => message'Address);
+      --ret := Run(Gtk_Dialog(dialog));
+      --dialog.Destroy;
+      label := Gtk_Label(This.Login_Window.Builder.Get_Object("Register_Info_Label"));
+      label.Set_Text(message);
    end Info_Message;
 
    procedure Register_Action (Object : access Gtkada_Builder_Record'Class) is
@@ -80,20 +88,22 @@ package body Concrete_Client_Ui is
                                        ServerPort   => Port_Type'Value(serverport.Get_Text));
       Instance.Client.RegisterUser    (Username => To_Unbounded_String(username.Get_Text),
                                        Password => To_Unbounded_String(password.Get_Text));
+
+      return;
    exception
       when Error : Socket_Error =>
-         Instance.Error_Message(message => "Socket_Error in InitializeSocket");
          username.Set_Editable(true);
          password.Set_Editable(true);
          serverIP.Set_Editable(true);
          serverport.Set_Editable(true);
+         Instance.Error_Message(message => "Socket_Error in InitializeSocket");
 
       when Error : others =>
-         Instance.Error_Message(message => "Unexpected exception in InitializeSocket");
          username.Set_Editable(true);
          password.Set_Editable(true);
          serverIP.Set_Editable(true);
          serverport.Set_Editable(true);
+         Instance.Error_Message(message => "Unexpected exception in InitializeSocket");
 
    end Register_Action;
 
@@ -117,27 +127,30 @@ package body Concrete_Client_Ui is
 
       Instance.Client.InitializeSocket (ServerAdress => To_Unbounded_String(serverIP.Get_Text),
                                         ServerPort   => Port_Type'Value(serverport.Get_Text));
+      Contact_Window.Instance := new ContactWindow;
+      Instance.Contact_Window := Contact_Window.Instance;
+      Instance.Contact_Window.Init;
       Instance.Client.LoginUser        (Username => To_Unbounded_String(username.Get_Text),
                                         Password => To_Unbounded_String(password.Get_Text));
-      Instance.Contact_Window.Init;
       onlineStatus := Gtk_Combo_Box_Text(Instance.Contact_Window.Builder.Get_Object("Status_Combo"));
 
       onlineStatus.Set_Active(0);
 
+      return;
    exception
       when Error : Socket_Error =>
-         Instance.Error_Message(message => "Socket_Error in InitializeSocket");
          username.Set_Editable(true);
          password.Set_Editable(true);
          serverIP.Set_Editable(true);
          serverport.Set_Editable(true);
+         Instance.Error_Message(message => "Socket_Error in InitializeSocket");
 
       when Error : others =>
-         Instance.Error_Message("Unexpected exception in InitializeSocket");
          username.Set_Editable(true);
          password.Set_Editable(true);
          serverIP.Set_Editable(true);
          serverport.Set_Editable(true);
+         Instance.Error_Message("Unexpected exception in InitializeSocket");
 
    end Login_Action;
 
@@ -169,7 +182,6 @@ package body Concrete_Client_Ui is
       loop
          offlineList.Append(newItem);
          offlineList.Set(newItem, 0, To_String(E));
-         Ada.Text_IO.Put_Line(To_String(E));
       end loop;
    end SetOfflineUser;
 
@@ -199,7 +211,6 @@ package body Concrete_Client_Ui is
       Instance.Client.DisconnectUser(Username => Instance.UserName,
                                      Message  => To_Unbounded_String("Bye"));
       Gtk.Main.Main_Quit;
-
    end Quit;
 
    -----------------------------------------------------------------------------

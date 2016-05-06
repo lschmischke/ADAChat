@@ -247,6 +247,7 @@ package body Concrete_Client_Logic is
                if This.UsersOffline.Contains(Item => MsgObject.Content) then
                   Position := This.UsersOffline.Find(Item => MsgObject.Content);
                   This.UsersOffline.Delete(Position);
+                  This.GUI.SetOfflineUser(Users => This.UsersOffline);
                end if;
                This.GUI.SetOnlineUser(Users => This.UsersOnline);
             end;
@@ -262,6 +263,7 @@ package body Concrete_Client_Logic is
                if This.UsersOnline.Contains(Item => MsgObject.Content) then
                   Position := This.UsersOnline.Find(Item => MsgObject.Content);
                   This.UsersOnline.Delete(Position);
+                  This.GUI.SetOnlineUser(Users => This.UsersOnline);
                end if;
                This.GUI.SetOfflineUser(Users => This.UsersOffline);
             end;
