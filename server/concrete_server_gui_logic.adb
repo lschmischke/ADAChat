@@ -69,7 +69,10 @@ package body Concrete_Server_Gui_Logic is
    OnlineUserTreeIter: Gtk_Tree_Iter;
 
     KickUserListStore : Gtk_List_Store;
-      KickUserComboBox :Gtk_Combo_Box;
+   KickUserComboBox :Gtk_Combo_Box;
+
+    ChatroomTreeView : Gtk_Tree_View;
+      ChatroomTreeStore :Gtk_Tree_Store;
 
 
 
@@ -206,9 +209,31 @@ end if;
      KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
       KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
 
+      ChatroomTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("listtoreChatrooms"));
+      ChatroomTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewChatrooms"));
+
+
       Put_Line("Initialization complete!");
    End InitServerGui;
 
-   procedure updateChatroomOverview(thisGUI : aliased in Server_Gui; viewComponents : chatRoomMap.Map) is null;
+   procedure updateChatroomOverview(thisGUI : aliased in Server_Gui; viewComponents : chatRoomMap.Map) is
+      ChatroomIter: Gtk_Tree_Iter;
+      UserIter: Gtk_Tree_Iter;
+   begin
+      for room of viewComponents loop
+         ChatroomTreeStore.Append(Iter   => ChatroomIter,
+                                  Parent => Null_Iter);
+         ChatroomTreeStore.Set(Iter   => ChatroomIter,
+                               Column => 0,
+                               Value  => Natural'Image(room.getchatroomid));
+         for user of room.getclientlist loop
+            ChatroomTreeStore.Append(Iter   => UserIter,
+                                     Parent => ChatroomIter );
+            ChatroomTreeStore.Set(Iter   => UserIter,
+                                  Column => 0 ,
+                                  Value  => To_String(user.getUsernameOfClient) );
+            end loop;
+         end loop;
+      end updateChatroomOverview;
 end Concrete_Server_Gui_Logic;
 
