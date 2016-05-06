@@ -39,6 +39,9 @@ with Gtk.Text_Buffer; use Gtk.Text_Buffer;
 with Gtk.Text_Iter; use Gtk.Text_Iter;
 
 with Gtk.Menu_Item; use Gtk.Menu_Item;
+with GNAT.Sockets; use GNAT.Sockets;
+
+ with GNAT;use GNAT;
 package body Concrete_Server_Gui_Logic is
 
    PortGEntry : Gtk_GEntry;
@@ -66,8 +69,9 @@ package body Concrete_Server_Gui_Logic is
    OnlineUserTreeView: Gtk_Tree_View;
    OnlineUserTreeIter: Gtk_Tree_Iter;
 
-   TestToolButton: Gtk_Menu_Tool_Button;
-   TestMenu: Gtk_Menu;
+    KickUserListStore : Gtk_List_Store;
+      KickUserComboBox :Gtk_Combo_Box;
+
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -113,6 +117,8 @@ package body Concrete_Server_Gui_Logic is
       IpAddressIterator: Gtk_Tree_Iter;
       TempIter: Gtk_Tree_Iter;
       TempItem: Gtk_Menu_Item;
+      ChatroomIterator: Gtk_Tree_Iter;
+      SingleChatroomIterator: Gtk_Tree_Iter;
              begin
 
       OnlineUserTreeStore.Clear;
@@ -122,8 +128,17 @@ package body Concrete_Server_Gui_Logic is
       --                 Parent => InformationsTreeViewIterator);
       --TreeStore.Set(Iter   => SecondLevelIterator,
         --            Column => 0 ,
-          --          Value  => "Test456" );
+  --          Value  => "Test456" );
+   KickUserListStore.Append(Iter => TempIter);
+         KickUserListStore.Set(Iter   => TempIter,
+                               Column => 0,
+                               Value  => " Test1 " );
+       KickUserListStore.Append(Iter => TempIter);
+         KickUserListStore.Set(Iter   => TempIter,
+                               Column => 0,
+                               Value  => "Dummy" );
       For client of viewComponents loop
+       --  if To_String(client.getUsernameOfClient) /= "server" then
          OnlineUserTreeIter := Null_Iter;
          ContactsIterator := Null_Iter;
          SingleContactIterator := Null_Iter;
@@ -134,14 +149,25 @@ package body Concrete_Server_Gui_Logic is
                     Column => 0 ,
                     Value  => To_String(client.getUsernameOfClient));
 
+         OnlineUserTreeStore.Append(Iter   => IpAddressIterator,
+                                    Parent => OnlineUserTreeIter);
+         OnlineUserTreeStore.Set(Iter   => IpAddressIterator,
+                                 Column => 0,
+                                 Value  => Gnat.Sockets.Image(client.getSocketAddress) );
+
+
+         KickUserListStore.Append(Iter => TempIter);
+         KickUserListStore.Set(Iter   => TempIter,
+                               Column => 0,
+                               Value  => To_String(client.getUsernameOfClient));
+
          OnlineUserTreeStore.Append(Iter   => ContactsIterator,
                                     Parent => OnlineUserTreeIter);
          OnlineUserTreeStore.Set(Iter   => ContactsIterator,
                                  Column => 0,
                                  Value  => "Contacts");
 
-         TempItem := Gtk_Menu_Item_New_With_Label(Label =>  To_String(client.getUsernameOfClient));
-         TestMenu.Append(Child => TempItem);
+
          For contact of client.getUser.getContacts loop
             OnlineUserTreeStore.Append(Iter   => SingleContactIterator,
                                        Parent => ContactsIterator);
@@ -149,8 +175,23 @@ package body Concrete_Server_Gui_Logic is
                                     Column =>0 ,
                                     Value  => To_String(contact.getUsername) );
 
-            end loop;
+         end loop;
 
+         OnlineUserTreeStore.Append(Iter   => ChatroomIterator,
+                                    Parent => OnlineUserTreeIter);
+         OnlineUserTreeStore.Set(Iter   => ChatroomIterator,
+                                 Column => 0,
+                                 Value  => "Chaträume");
+
+         For chatroom of client.getChatroomList loop
+            OnlineUserTreeStore.Append(Iter   => SingleChatroomIterator,
+                                       Parent => ChatroomIterator);
+            OnlineUserTreeStore.Set(Iter   => SingleChatroomIterator,
+                                    Column =>0 ,
+                                    Value  => Natural'Image(chatroom.getChatRoomID) );
+
+         end loop;
+--end if;
       end loop;
 
    end updateOnlineUserOverview;
@@ -172,9 +213,8 @@ package body Concrete_Server_Gui_Logic is
       ErrorsTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewErrors"));
              OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
       OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
-     -- KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
-      -- KickUserComboBox := Gtk_List_Store(myBuilder.Get_Object("comboboxKickUser"));
-     TestMenu := Gtk_Menu(myBuilder.Get_Object("kickMenu"));
+     KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
+      KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
 
       Put_Line("Initialization complete!");
    End InitServerGui;
