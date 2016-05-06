@@ -21,20 +21,27 @@ package body Chat_Window_Manager is
    begin
       newWindow.Init;
       newWindow.Window.Set_Title(To_String(ChatName));
-      Concrete_Client_Logic.Instance.RequestChat(MyName, ChatName);
-      while not MyUsers.Contains(ChatName)
+      if not MyRooms.Contains(ChatName) then
+         Concrete_Client_Logic.Instance.RequestChat(MyName, ChatName);
+      end if;
+      while not MyRooms.Contains(ChatName)
       loop
          null;
       end loop;
-      newWindow.ChatID := MyUsers.Element(ChatName);
+      newWindow.ChatID := MyRooms.Element(ChatName);
       if This = null then
          This := new ChatWindows.Map;
       end if;
       This.Insert(newWindow.ChatID, newWindow);
    end OpenNewChatWindow;
 
-   function ChatWindowOpen(This : in out MapPtr; ChatName : String) return Boolean is
+   function ChatWindowOpen(ChatName : String) return Boolean is
    begin
+      if MyRooms.Contains(To_Unbounded_String(ChatName)) then
+         if MyWindows.Contains(MyRooms.Element(To_Unbounded_String(ChatName))) then
+            return true;
+         end if;
+      end if;
       return false;
    end ChatWindowOpen;
 
@@ -84,8 +91,12 @@ package body Chat_Window_Manager is
       Do_Connect(This.Builder);
 
       This.Window := Gtk_Window(This.Builder.Get_Object ("chat_window_client"));
-
+      This.ChatParticipants := Gtk_List_Store(This.Builder.Get_Object("Participants"));
       This.Window.Show_All;
+
+
+      Ada.Text_IO.Put("Ich bin ");
+      Ada.Text_IO.Put_Line(To_String(Chat_Window_Manager.MyUserName));
    end Init;
 
 
@@ -108,7 +119,7 @@ package body Chat_Window_Manager is
    begin
       message := Gtk_Entry(Object.Get_Object("New_Message"));
       window := Gtk_Window(Object.Get_Object("chat_window_client"));
-      Concrete_Client_Logic.Instance.SendMessageToChat(Receiver => MyUsers.Element(To_Unbounded_String(window.Get_Title)),
+      Concrete_Client_Logic.Instance.SendMessageToChat(Receiver => MyRooms.Element(To_Unbounded_String(window.Get_Title)),
                                                        Username => MyUserName,
                                                        Message  => To_Unbounded_String(message.Get_Text));
       message.Set_Text("");
