@@ -76,7 +76,7 @@ begin
       Handler      => ServerGuiCallbacks.clicked_button_server_stop'Access);
       Register_Handler
      (Builder      => Builder,
-      Handler_Name => "kickSelectedUser",
+      Handler_Name => "kickUser",
       Handler      => ServerGuiCallbacks.kickSelectedUser'Access);
       Register_Handler
      (Builder      => Builder,
