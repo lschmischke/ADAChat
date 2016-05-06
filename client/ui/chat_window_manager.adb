@@ -16,15 +16,24 @@ package body Chat_Window_Manager is
 
    package Key_Press_Callbacks is new Gtk.Handlers.Return_Callback (Gtk_Entry_Record, Boolean);
 
-   procedure OpenNewChatWindow(This : in out ChatWindows.List; ChatName : String) is
+   procedure OpenNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String) is
       newWindow : ChatWindow_Ptr := new ChatWindow;
    begin
       newWindow.Init;
-      newWindow.Window.Set_Title(ChatName);
-      This.Append(newWindow);
+      newWindow.Window.Set_Title(To_String(ChatName));
+      Concrete_Client_Logic.Instance.RequestChat(MyName, ChatName);
+      while not MyUsers.Contains(ChatName)
+      loop
+         null;
+      end loop;
+      newWindow.ChatID := MyUsers.Element(ChatName);
+      if This = null then
+         This := new ChatWindows.Map;
+      end if;
+      This.Insert(newWindow.ChatID, newWindow);
    end OpenNewChatWindow;
 
-   function ChatWindowOpen(This : in out ChatWindows.List; ChatName : String) return Boolean is
+   function ChatWindowOpen(This : in out MapPtr; ChatName : String) return Boolean is
    begin
       return false;
    end ChatWindowOpen;
@@ -95,11 +104,20 @@ package body Chat_Window_Manager is
 
    procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class) is
       message : Gtk_Entry;
+      window : Gtk_Window;
    begin
       message := Gtk_Entry(Object.Get_Object("New_Message"));
-      Ada.Text_IO.Put_Line(message.Get_Text);
+      window := Gtk_Window(Object.Get_Object("chat_window_client"));
+      Concrete_Client_Logic.Instance.SendMessageToChat(Receiver => MyUsers.Element(To_Unbounded_String(window.Get_Title)),
+                                                       Username => MyUserName,
+                                                       Message  => To_Unbounded_String(message.Get_Text));
       message.Set_Text("");
    end Handle_Enter;
 
+   -----------------------------------------------------------------------------
+   function Hash (R : Natural) return Hash_Type is
+   begin
+      return Hash_Type (R);
+   end Hash;
 
 end Chat_Window_Manager;
