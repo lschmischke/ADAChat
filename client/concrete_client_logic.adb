@@ -274,8 +274,7 @@ package body Concrete_Client_Logic is
             begin
 
                This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
-
-               --##TODO Chatfenster oeffnen
+               This.GUI.UpdateChatRoomId(ChatId => MsgObject.Receiver, Name => MsgObject.Content);
 
             end;
 

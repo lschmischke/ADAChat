@@ -61,4 +61,8 @@ package Client2Gui_Communication is
    -- Username => Name des zu entfernenden Users
    procedure ContactRemove(This : in out GUI; Username : in Unbounded_String) is abstract;
 
+
+
+   procedure UpdateChatRoomId(ChatId => MsgObject.Receiver, Name => MsgObject.Content) is abstract;
+
 end Client2Gui_Communication;
