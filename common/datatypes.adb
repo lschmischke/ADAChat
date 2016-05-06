@@ -224,4 +224,16 @@ package body dataTypes is
    begin
       return To_Unbounded_String (GNAT.SHA512.Digest (To_String (password)));
    end encodePassword;
+
+      function userHash (userToHash : UserPtr) return Hash_Type is
+   begin
+      return Ada.Strings.Unbounded.Hash (userToHash.getUsername);
+   end userHash;
+
+
+   function Hash (R : Natural) return Hash_Type is
+   begin
+      return Hash_Type (R);
+   end Hash;
+
 end dataTypes;

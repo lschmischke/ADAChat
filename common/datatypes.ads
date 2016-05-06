@@ -3,6 +3,9 @@ with Ada.Containers.Doubly_Linked_Lists; use Ada.Containers;
 with GNAT.SHA512;
 with GNAT.Sockets;                       use GNAT.Sockets;
 with Protocol;                           use Protocol;
+with ada.containers.Hashed_Maps;
+with ada.containers.Indefinite_Hashed_Maps;
+with ada.strings.Unbounded.Hash;
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Dieses Paket bündelt Typen um Benutzer des Chats abzuspeichern.
@@ -92,6 +95,24 @@ package dataTypes is
    end Concrete_Client;
 
    package userViewOnlineList is new Doubly_Linked_Lists (Element_Type => Concrete_Client_Ptr);
+
+         function userHash (userToHash : UserPtr) return Hash_Type;
+   package userToClientMap is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
+							 Element_Type    => Concrete_Client_Ptr,
+							 Hash            => userHash,
+							 Equivalent_Keys => "=");
+
+
+   function Hash (R : Natural) return Hash_Type;
+   package chatRoomMap is new Ada.Containers.Hashed_Maps(Key_Type        => Natural,
+						     Element_Type    => chatRoomPtr,
+						     Hash            => Hash,
+                                                         Equivalent_Keys => "=");
+
+   package userToUsersMap is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => UserPtr,
+						     Element_Type    => dataTypes.UserList.List,
+						     Hash            => userHash,
+                                                     Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
 
 
 
