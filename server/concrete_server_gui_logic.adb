@@ -62,8 +62,7 @@ package body Concrete_Server_Gui_Logic is
    --Val: Gint;
 
 
-    InformationsTextView: Gtk_Text_View;
-   ErrorsTextView: Gtk_Text_View;
+
 
    OnlineUserTreeStore: Gtk_Tree_Store;
    OnlineUserTreeView: Gtk_Tree_View;
@@ -78,8 +77,7 @@ package body Concrete_Server_Gui_Logic is
 
    procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : String)
    is
-   buffer: Gtk_Text_Buffer;
-      mark : Gtk_Text_Mark;
+
       iter: Gtk_Text_Iter;
 
    begin
@@ -105,7 +103,7 @@ package body Concrete_Server_Gui_Logic is
         ChatMessageListStore.Append(Iter => ChatMessageListStoreIterator);
       ChatMessageListStore.Set(Iter   => ChatMessageListStoreIterator,
                                Column => 0,
-                               Value  => To_String(chatMessage.sender) & ": " &To_String(chatMessage.content));
+                               Value  => To_String(chatMessage.sender) & " -> " & Natural'Image(chatMessage.receiver) &": "  &To_String(chatMessage.content));
 
    end printChatMessage;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -116,7 +114,6 @@ package body Concrete_Server_Gui_Logic is
       SingleContactIterator: Gtk_Tree_Iter;
       IpAddressIterator: Gtk_Tree_Iter;
       TempIter: Gtk_Tree_Iter;
-      TempItem: Gtk_Menu_Item;
       ChatroomIterator: Gtk_Tree_Iter;
       SingleChatroomIterator: Gtk_Tree_Iter;
              begin
@@ -153,7 +150,7 @@ package body Concrete_Server_Gui_Logic is
                                     Parent => OnlineUserTreeIter);
          OnlineUserTreeStore.Set(Iter   => IpAddressIterator,
                                  Column => 0,
-                                 Value  => Gnat.Sockets.Image(client.getSocketAddress) );
+                                 Value  => "IP-Adresse: " & Gnat.Sockets.Image(client.getSocketAddress) );
 
 
          KickUserListStore.Append(Iter => TempIter);
@@ -165,7 +162,7 @@ package body Concrete_Server_Gui_Logic is
                                     Parent => OnlineUserTreeIter);
          OnlineUserTreeStore.Set(Iter   => ContactsIterator,
                                  Column => 0,
-                                 Value  => "Contacts");
+                                 Value  => "Kontakte");
 
 
          For contact of client.getUser.getContacts loop
@@ -181,7 +178,7 @@ package body Concrete_Server_Gui_Logic is
                                     Parent => OnlineUserTreeIter);
          OnlineUserTreeStore.Set(Iter   => ChatroomIterator,
                                  Column => 0,
-                                 Value  => "Chaträume");
+                                 Value  => "Chatrooms");
 
          For chatroom of client.getChatroomList loop
             OnlineUserTreeStore.Append(Iter   => SingleChatroomIterator,
