@@ -89,8 +89,9 @@ package body Contact_Window is
       selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Offline_Contact"));
       selection.Get_Selected(selectedModel, selectedIter);
       offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
-      Concrete_Client_Ui.Instance.Chat_Windows.Append(new ChatWindow);
-      Concrete_Client_Ui.Instance.Chat_Windows.First_Element.test(offlineList.Get_String(selectedIter, 0));
+      if ChatWindowOpen(Concrete_Client_Ui.Instance.Chat_Windows, offlineList.Get_String(selectedIter, 0)) = False then
+         OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, offlineList.Get_String(selectedIter, 0));
+      end if;
    end Offline_Contact_Action;
 
    procedure Online_Contact_Action  (Object : access Gtkada_Builder_Record'Class) is
@@ -103,7 +104,6 @@ package body Contact_Window is
       selection.Get_Selected(selectedModel, selectedIter);
       onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
       Concrete_Client_Ui.Instance.Chat_Windows.Append(new ChatWindow);
-      Concrete_Client_Ui.Instance.Chat_Windows.First_Element.test(onlineList.Get_String(selectedIter, 0));
    end Online_Contact_Action;
 
 end Contact_Window;
