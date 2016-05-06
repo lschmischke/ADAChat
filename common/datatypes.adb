@@ -207,10 +207,9 @@ package body dataTypes is
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       procedure broadcastToChatRoom (message : in MessageObject) is
-         outMsg : MessageObject := createMessage(message.messagetype,message.sender,message.receiver,message.content);
       begin
          for client of clientList loop
-            writeMessageToStream (client.getSocket, outMsg);
+            writeMessageToStream (client.getSocket, message);
          end loop;
       end broadcastToChatRoom;
       --------------------------------------------------------------------------------------------------------------------------------------------------------

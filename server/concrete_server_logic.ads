@@ -29,23 +29,6 @@ with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 package Concrete_Server_Logic is
    package GTS renames GUI_to_Server_Communication;
 
-      function userHash (userToHash : UserPtr) return Hash_Type;
-   package userToClientMap is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
-							 Element_Type    => Concrete_Client_Ptr,
-							 Hash            => userHash,
-							 Equivalent_Keys => "=");
-
-
-   function Hash (R : Natural) return Hash_Type;
-   package chatRoomMap is new Ada.Containers.Hashed_Maps(Key_Type        => Natural,
-						     Element_Type    => chatRoomPtr,
-						     Hash            => Hash,
-                                                         Equivalent_Keys => "=");
-
-   package userToUsersMap is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => UserPtr,
-						     Element_Type    => dataTypes.UserList.List,
-						     Hash            => userHash,
-                                                     Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
 
 
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse

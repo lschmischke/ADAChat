@@ -190,6 +190,7 @@ package body Concrete_Server_Logic is
                   when Protocol.Chat => -- # chat:client:<ChatRoomID>:Hi #
                      declare
                         chatRoom       : chatRoomPtr;
+                        outMessage : MessageObject := createMessage(incoming_message.messagetype,incoming_message.sender,incoming_message.receiver,incoming_message.content);
                      begin
                         -- # Pruefe, ob Chatraum mit angegebener Nummer existiert
                         if (Server.getChatrooms.Contains (incoming_message.receiver)) then
@@ -198,7 +199,7 @@ package body Concrete_Server_Logic is
                            -- # Pruefe, ob Client in ChatRoom eingeschrieben #
 			   if (chatRoom.getClientList.Contains (client)) then
 			      --# echo Nachricht an alle Clienten im Raum
-                              chatRoom.broadcastToChatRoom (incoming_message);
+                              chatRoom.broadcastToChatRoom (outMessage);
                               gui.printChatMessage(incoming_message);
                            else
 			      client.sendServerMessageToClient(Refused,"you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)&".");
