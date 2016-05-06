@@ -224,7 +224,7 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatMessages(This : in out Concrete_Ui; message : MessageObject) is
+   procedure ShowChatMessages(This : in out Concrete_Ui; ChatId : in Natural; Name : in Unbounded_String; Message : in Unbounded_String) is
 
    begin
 
@@ -281,6 +281,14 @@ package body Concrete_Client_Ui is
 
       onlineStatus.Set_Active(1);
    end DisconnectReason;
+
+   -----------------------------------------------------------------------------
+
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : in  Natural; Name : in Unbounded_String) is
+
+   begin
+      null;
+      end UpdateChatRoomId;
 
    -----------------------------------------------------------------------------
 
