@@ -272,12 +272,6 @@ package body Concrete_Client_Logic is
             declare
                Message: Unbounded_String;
             begin
-<<<<<<< HEAD
-               Message := To_Unbounded_String("Chatraum :");
-               Append(Message, Integer'Image(MsgObject.Receiver));
-               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
-=======
->>>>>>> origin/feature/Client_Logic
 
                This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
                This.GUI.UpdateChatRoomId(ChatId => MsgObject.Receiver, Name => MsgObject.Content);
@@ -297,10 +291,7 @@ package body Concrete_Client_Logic is
                for I in 1 .. GNAT.String_Split.Slice_Count (Substrings) loop
                   UserSet.Insert(New_Item => To_Unbounded_String(GNAT.String_Split.Slice (Substrings, I)));
                end loop;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/feature/Client_Logic
                This.ChatRoomParticipants.Insert(Key      => MsgObject.Receiver,
                                                 New_Item => UserSet);
 

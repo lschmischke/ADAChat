@@ -284,5 +284,8 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String) is null;
+
+   -----------------------------------------------------------------------------
 
 end Concrete_Client_Ui;
