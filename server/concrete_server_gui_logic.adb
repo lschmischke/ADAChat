@@ -208,5 +208,7 @@ end if;
 
       Put_Line("Initialization complete!");
    End InitServerGui;
+
+   procedure updateChatroomOverview(thisGUI : aliased in Server_Gui; viewComponents : chatRoomMap.Map) is null;
 end Concrete_Server_Gui_Logic;
 
