@@ -13,16 +13,17 @@ package Contact_Window is
    end record;
    GladeFile : constant String := "client/Contact_Window.glade";
 
+   type WindowPtr is access all ContactWindow'Class;
+
    procedure Search_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Update_Status  (Object : access Gtkada_Builder_Record'Class);
    procedure Add_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Offline_Contact_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Online_Contact_Action  (Object : access Gtkada_Builder_Record'Class);
 
+   Instance : WindowPtr;
 private
 
    procedure Init(This : in out ContactWindow);
-
-   Instance : ContactWindow;
 
 end Contact_Window;

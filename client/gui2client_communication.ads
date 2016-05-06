@@ -52,4 +52,10 @@ package Gui2Client_Communication is
    procedure SendMessageToChat(This : in out Client; Receiver: in Integer; Username : in Unbounded_String;
                                Message : in Unbounded_String) is abstract;
 
+   -- Sendet einen Chatrequest an den Server, um einen Chat zu eröffnen.
+   -- Username => Name des sendenden Clients
+   -- Message => Name des Participant
+   procedure RequestChat(This : in out Client; Username : in Unbounded_String;
+                               Participant : in Unbounded_String) is abstract;
+
 end Gui2Client_Communication;

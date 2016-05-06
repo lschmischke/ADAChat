@@ -68,7 +68,6 @@ package body Contact_Window is
 
       This.Window := Gtk_Window(This.Builder.Get_Object ("contact_window_client"));
       This.Window.Show_All;
-      Instance := This;
    end Init;
 
 
