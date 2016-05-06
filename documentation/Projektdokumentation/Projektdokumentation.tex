@@ -156,13 +156,16 @@
 \setcounter{section}{0}
 
 \section{Projektidee}
-Lastenheft etc.
+Das Ziel ist es einen Instant-Messaging-Dienst zu entwickeln, der es erlaubt mit anderen Nutzern einzeln oder in Gruppen in Echtzeit zu kommunizieren. Hierbei handelt es sich um ein Gruppenprojekt, dass im Rahmen des Kurses \textit{Entwicklung sicherer, hardwarenaher Anwendungen} in der Programmiersprache \textit{Ada} entwickelt wird.  
+
+Der Dienst ist in Client und Server unterteilt. Beide Komponenten können über grafische Benutzerschnittstellen bedient werden. Die des Servers informiert über alle Ereignisse die auf dem Server eintreten und erlaubt eine rudimentäre Verwaltung von angemeldeten Nutzern. 
+Die Benutzerscnittstelle des Clients gestattet das Registrieren und Einloggen am Server. Im Anschluss bekommt der Nutzer seine Kontaktliste angezeigt, in der er unter anderem andere Nutzer als Freunde hinzufügen oder löschen kann. Bei Doppelklick auf einen befreundeten Nutzer öffnet sich ein seprarates Chatfenster zur direkten Kommunikation. Diese kann zur Gruppenkommunikation erweitert werden, indem weitere Freunde zum Chat eingeladen werden.
 
 % ----------------------------------------------------------------------------------------------------------
 % Architektur
 % ----------------------------------------------------------------------------------------------------------
 \section{Architektur}
-bla bla
+Der Instant-Messaging-Dienst unterliegt dem Client-Server-Paradigma. Zur Kommunikation zwischen den Clients und dem Server ist ein Protokoll erforderlich, welches den Kommunikationsablauf und entsprechend das Verhalten der Kommunikationsteilnehmer regelt.
 
 \subsection{Kommunikationsprotokoll}
 Server und Client kommunizieren über Nachrichten. Eine Nachricht besteht aus vier Komponenten:
