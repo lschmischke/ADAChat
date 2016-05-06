@@ -62,7 +62,9 @@ package Client2Gui_Communication is
    procedure ContactRemove(This : in out GUI; Username : in Unbounded_String) is abstract;
 
 
-
+   -- Uebermittelt der GUI von dem geforderten Chatrequest die Id
+   -- ChatId => Id des Chatraums
+   -- Name => Name des angeforderten Chatpartners
    procedure UpdateChatRoomId(ChatId => MsgObject.Receiver, Name => MsgObject.Content) is abstract;
 
 end Client2Gui_Communication;

@@ -136,7 +136,7 @@ private
    procedure SendMessageToChat(This : in out Concrete_Client; Receiver: in Integer; Username : in Unbounded_String;
                                Message : in Unbounded_String);
 
-      procedure RequestChat(This : in out Concrete_Client; Username : in Unbounded_String;
+   procedure RequestChat(This : in out Concrete_Client; Username : in Unbounded_String;
                                Participant : in Unbounded_String);
    -----------------------------------------------------------------------------
 
