@@ -120,7 +120,7 @@ package body Concrete_Server_Gui_Logic is
                                         Parent => Null_Iter );
            OnlineUserTreeStore.Set(Iter   => OnlineUserTreeIter,
                     Column => 0 ,
-                    Value  => To_String(getUsername(client.user)) );
+                    Value  => To_String(client.getUsernameOfClient));
 
          OnlineUserTreeStore.Append(Iter   => ContactsIterator,
                                     Parent => OnlineUserTreeIter);
@@ -128,12 +128,12 @@ package body Concrete_Server_Gui_Logic is
                                  Column => 0,
                                  Value  => "Contacts");
 
-         For contact of getContacts(client.user) loop
+         For contact of client.getUser.getContacts loop
             OnlineUserTreeStore.Append(Iter   => SingleContactIterator,
                                        Parent => ContactsIterator);
             OnlineUserTreeStore.Set(Iter   => SingleContactIterator,
                                     Column =>0 ,
-                                    Value  => To_String(getUsername(contact)) );
+                                    Value  => To_String(contact.getUsername) );
 
             end loop;
 
