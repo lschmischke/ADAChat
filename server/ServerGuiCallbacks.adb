@@ -13,7 +13,7 @@ with Gtk.Frame; use Gtk.Frame;
 with Gtk.Cell_Renderer_Toggle; use Gtk.Cell_Renderer_Toggle;
 with Gtk.Text_View;
 
-use Gtk; with Gtk;
+with Gtk; use Gtk;
 with Gtk.Enums; use Gtk.Enums;
 with Gtk.List_Store; use Gtk.List_Store;
 with Gtk.Tree_View; use Gtk.Tree_View;
@@ -33,7 +33,6 @@ with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 with Gtk.Text_View; use Gtk.Text_View;
 
 --------------------------------
-
 with Gtk.Text_Mark; use Gtk.Text_Mark;
 with Gtk.Text_Buffer; use Gtk.Text_Buffer;
 with Gtk.Text_Iter; use Gtk.Text_Iter;
@@ -107,30 +106,23 @@ OnlineUserTreeStore: Gtk_Tree_Store;
    procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class) is begin
       MyServer.startServer(ipAdress => "127.0.0.1",
                          port     => Integer'Value(Port_Edit_Text.Get_Text));
-       MyGui.printInfoMessage("Server started!");
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => True);
    end clicked_button_server_start;
 
    procedure clicked_button_server_stop ( Object : access Gtkada_Builder_Record'Class) is begin
        MyServer.stopServer;
-       MyGui.printInfoMessage("Server stopped!");
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => True);
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => False);
       end clicked_button_server_stop;
 
    procedure kickSelectedUser ( Object : access Gtkada_Builder_Record'Class) is
 
-      myString: String := "";
+
    begin
-
-      myString :=  KickUserListStore.Get_String(Iter   => KickUserComboBox.Get_Active_Iter,
-                                   Column => 0);
-      Put_Line("String:" & myString);
-
-
-   Put_Line("Kick!");
-   end kickSelectedUser;
+      MyServer.kickUserWithName(username => KickUserListStore.Get_String(Iter   => KickUserComboBox.Get_Active_Iter,
+                                                Column => 0));
+         end kickSelectedUser;
 
 
 

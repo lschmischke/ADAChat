@@ -34,4 +34,5 @@ package Server_To_GUI_Communication is
    procedure updateNumberOfContacts(thisGUI : aliased in GUI; numberOfContact : Natural) is abstract;
    procedure updateOnlineUserOverview(thisGUI : aliased in GUI; viewComponents : userViewOnlineList.List) is abstract;
    procedure updateOfflineUserOverview(thisGUI : aliased in GUI; viewComponents : userViewOfflineMap.Map) is abstract;
+  -- procedure updateChatroomOverview(thisGUI : aliased in GUI; viewComponents : chatRoomMap.Map) is abstract;
 end Server_To_GUI_Communication;

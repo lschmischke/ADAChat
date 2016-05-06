@@ -126,16 +126,9 @@ package body Concrete_Server_Gui_Logic is
       --TreeStore.Set(Iter   => SecondLevelIterator,
         --            Column => 0 ,
   --          Value  => "Test456" );
-   KickUserListStore.Append(Iter => TempIter);
-         KickUserListStore.Set(Iter   => TempIter,
-                               Column => 0,
-                               Value  => " Test1 " );
-       KickUserListStore.Append(Iter => TempIter);
-         KickUserListStore.Set(Iter   => TempIter,
-                               Column => 0,
-                               Value  => "Dummy" );
+
       For client of viewComponents loop
-       --  if To_String(client.getUsernameOfClient) /= "server" then
+         if To_String(client.getUsernameOfClient) /= "server" then
          OnlineUserTreeIter := Null_Iter;
          ContactsIterator := Null_Iter;
          SingleContactIterator := Null_Iter;
@@ -188,7 +181,7 @@ package body Concrete_Server_Gui_Logic is
                                     Value  => Natural'Image(chatroom.getChatRoomID) );
 
          end loop;
---end if;
+end if;
       end loop;
 
    end updateOnlineUserOverview;

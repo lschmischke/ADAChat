@@ -51,7 +51,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">About</property>
+                <property name="label" translatable="yes">Über AdaChat</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-about</property>
                 <signal name="clicked" handler="clicked_button_about" swapped="no"/>
@@ -67,7 +67,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">Start server</property>
+                <property name="label" translatable="yes">Server starten</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-media-play</property>
                 <signal name="clicked" handler="clicked_button_server_start" swapped="no"/>
@@ -84,7 +84,7 @@
                 <property name="sensitive">False</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">Stop Server</property>
+                <property name="label" translatable="yes">Server stoppen</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-dialog-error</property>
                 <signal name="clicked" handler="clicked_button_server_stop" swapped="no"/>
@@ -176,7 +176,7 @@
               <object class="GtkLabel" id="config_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Configuration</property>
+                <property name="label" translatable="yes">Konfiguration &amp; Administration</property>
               </object>
             </child>
           </object>
@@ -298,7 +298,7 @@
               <object class="GtkLabel" id="labelInformations">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Informations</property>
+                <property name="label" translatable="yes">Informationen</property>
               </object>
               <packing>
                 <property name="tab_fill">False</property>
@@ -340,7 +340,7 @@
               <object class="GtkLabel" id="labelErrors">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Errors</property>
+                <property name="label" translatable="yes">Fehler</property>
               </object>
               <packing>
                 <property name="position">1</property>
