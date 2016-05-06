@@ -67,8 +67,6 @@ package body Concrete_Server_Logic is
             invalidMessageContent : Unbounded_String := To_Unbounded_String("illegal receiver, message ignored");
             validReceiver : Boolean := false;
          begin
-
-            -- # Nachricht liegt vor, nun wird diese verarbeitet und interpretiert #
             declare
             begin
                -- # Nachricht wird aus String erstellt #
@@ -95,7 +93,7 @@ package body Concrete_Server_Logic is
                   end loop;
                end if;
 
-               if validReceiver = false then
+               if incoming_message.messagetype /= invalid and then validReceiver = false then
                   Put_Line("illegal username or receiver");
                   incoming_message.messagetype := Invalid;
                   client.sendServerMessageToClient(Refused,To_String(invalidMessageContent));
@@ -220,11 +218,18 @@ package body Concrete_Server_Logic is
                   when Protocol.Chatrequest => -- # chatrequest:clientA:<ServerRoomID>:clientB #
                      declare
                         roomID               : Natural             ;
-                        requestingUser       : UserPtr             := Server.getUserDatabase.getUser (incoming_message.sender);
+                        requestingUser       : UserPtr             := user;
 			userToAdd            : UserPtr             := Server.getUserDatabase.getUser (incoming_message.content);
 			clientToAdd          : Concrete_Client_Ptr := Server.getClientToConnectedUser(userToAdd);
 			chatRoom : chatRoomPtr;
-		     begin
+                     begin
+                        if user = null then
+                           messageContent := To_Unbounded_String("user '"& To_String(incoming_message.sender)& "' not found in database");
+                           client.sendServerMessageToClient(Refused,messageContent);
+
+                        end if;
+
+
 			Server.getNextChatRoomID(roomID);
 			--# TODO: getUser Fehler abfangen
 			--# Pruefe, ob Kontakt zu angegebenem User besteht
@@ -247,7 +252,7 @@ package body Concrete_Server_Logic is
                               chatRoom.broadcastToChatRoom(chatRoom.generateUserlistMessage);
 
 			      -- # Benachrichtige GUI
-			      gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: created chatroom '"&Natural'Image(chatroom.getChatRoomID) & "' with user '"&To_String(userToAdd.getUsername));
+			      gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: created chatroom"&Natural'Image(chatroom.getChatRoomID) & " with user '"&To_String(userToAdd.getUsername)&"'.");
                            else
                               --# alter Raum, User einladen
 
