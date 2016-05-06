@@ -200,9 +200,11 @@ package body Concrete_Client_Logic is
                null;
             else
                This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
+               This.GUI.UpdateChatRoomId(MsgObject.receiver, MsgObject.sender);
                --#TODO
                --#oeffne neues Chatfenster
             end if;
+            This.GUI.ShowChatMessages(message => MsgObject);
 
          when Refused =>
             declare
@@ -404,14 +406,8 @@ package body Concrete_Client_Logic is
    begin
       accept Start;
       loop
-         declare
-            MsgObject : MessageObject;
-	 begin
-	    Put_Line("before read");
-	    MsgObject := readMessageFromStream(ClientSocket => Client);
-	    Put_Line("after read");
-	    printMessageToInfoConsole(MsgObject);
-            Instance.ProcessMessageObject(MsgObject);
+         begin
+            Instance.ReadFromServer(Client);
          end;
       end loop;
    end Server_Listener_Task;
