@@ -22,7 +22,7 @@ package Chat_Window_Manager is
                                                                     "="             => "=");
    type MapPtr is access all ChatWindows.Map'Class;
 
-   package ChatUsers is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Unbounded_String,
+   package ChatRooms is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Unbounded_String,
                                                                   Element_Type    => Natural,
                                                                   Hash            => Ada.Strings.Unbounded.Hash_Case_Insensitive,
                                                                   Equivalent_Keys => "=",
@@ -32,7 +32,7 @@ package Chat_Window_Manager is
 
    function ChatWindowOpen(This : in out MapPtr; ChatName : String) return Boolean;
 
-   MyUsers : ChatUsers.Map;
+   MyUsers : ChatRooms.Map;
 
    MyWindows : MapPtr;
 

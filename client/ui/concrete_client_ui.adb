@@ -218,6 +218,11 @@ package body Concrete_Client_Ui is
    procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
 
    begin
+
+      if This.Chat_Windows.Conatins(Chatraum) then
+         --Chat_Window_Manager.My
+         null;
+      end if;
       null;
 
    end ShowChatParticipants;
@@ -228,7 +233,7 @@ package body Concrete_Client_Ui is
 
    begin
 
-      null;
+      This.Chat_Windows.Contains(message.sender);
 
    end ShowChatMessages;
 
@@ -287,8 +292,8 @@ package body Concrete_Client_Ui is
 
    procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String) is
    begin
---      Chat_window_Manager.MyUsers.Insert(Name, ChatId);
-      Chat_window_Manager.MyUsers.Insert(To_Unbounded_String("tomi"), ChatId);
+      Chat_window_Manager.MyUsers.Insert(Name, ChatId);
+--      Chat_window_Manager.MyUsers.Insert(To_Unbounded_String("tomi"), ChatId);
    end UpdateChatRoomId;
 
    -----------------------------------------------------------------------------
