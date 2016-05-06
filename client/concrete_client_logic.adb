@@ -103,7 +103,7 @@ package body Concrete_Client_Logic is
 
    begin
 
-      RequestMessage := createMessage(messagetype => Register,
+      RequestMessage := createMessage(messagetype => Chatrequest,
                                       sender      => UserName,
                                       receiver    => Id_Receiver,
                                       content     => Participant);
@@ -122,7 +122,7 @@ package body Concrete_Client_Logic is
 
    begin
 
-      LeaveMessage := createMessage(messagetype => Register,
+      LeaveMessage := createMessage(messagetype => Leavechat,
                                     sender      => UserName,
                                     receiver    => Id_Receiver,
                                     content     => Message);
