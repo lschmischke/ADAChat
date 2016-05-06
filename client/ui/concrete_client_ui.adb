@@ -219,10 +219,10 @@ package body Concrete_Client_Ui is
 
    begin
 
-      if This.Chat_Windows.Conatins(Chatraum) then
+      --if This.Chat_Windows.Contains(Chatraum) then
          --Chat_Window_Manager.My
          null;
-      end if;
+      --end if;
       null;
 
    end ShowChatParticipants;
@@ -233,7 +233,8 @@ package body Concrete_Client_Ui is
 
    begin
 
-      This.Chat_Windows.Contains(message.sender);
+      --This.Chat_Windows.Contains(message.sender);
+      null;
 
    end ShowChatMessages;
 
