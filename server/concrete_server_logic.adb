@@ -224,8 +224,7 @@ package body Concrete_Server_Logic is
 			chatRoom : chatRoomPtr;
                      begin
                         if user = null then
-                           messageContent := To_Unbounded_String("user '"& To_String(incoming_message.sender)& "' not found in database");
-                           client.sendServerMessageToClient(Refused,messageContent);
+                           client.sendServerMessageToClient(Refused,"user '"& To_String(incoming_message.sender)& "' not found in database");
 
                         end if;
 
