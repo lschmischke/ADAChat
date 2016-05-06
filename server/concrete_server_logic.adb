@@ -158,7 +158,6 @@ package body Concrete_Server_Logic is
 				 client.addChatroom (chatroom);
 
                                  -- # teile GUI mit, dass user online gekommen ist
-                                 gui.updateNumberOfContacts(Integer(server.getConnectedClients.Length));
 				 gui.updateOnlineUserOverview(Server.connectedClientsToClientList);
 				 gui.printInfoMessage("'"&To_String(user.getUsername) & "' has come online.");
 
@@ -630,7 +629,6 @@ package body Concrete_Server_Logic is
       -- # Benachrichtige GUI über Änderung der Connected_Clients
       gui.printInfoMessage("'"&To_String(client.getUsernameOfClient) & "' disconnected.");
       gui.updateOnlineUserOverview(connectedClientsToClientList);
-      gui.updateNumberOfContacts(Integer(Connected_Clients.Length));
       end removeClientRoutine;
 
       procedure getNextChatRoomID (id : out Natural) is

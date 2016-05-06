@@ -31,8 +31,6 @@ package Server_To_GUI_Communication is
    procedure printErrorMessage(thisGUI : aliased in GUI; errorMessage : String) is abstract;
    procedure printInfoMessage(thisGUI : aliased in GUI; infoMessage : String) is abstract;
    procedure printChatMessage(thisGUI : aliased in GUI; chatMessage : MessageObject) is abstract;
-   procedure updateNumberOfContacts(thisGUI : aliased in GUI; numberOfContact : Natural) is abstract;
    procedure updateOnlineUserOverview(thisGUI : aliased in GUI; viewComponents : userViewOnlineList.List) is abstract;
-   procedure updateOfflineUserOverview(thisGUI : aliased in GUI; viewComponents : userViewOfflineMap.Map) is abstract;
-  -- procedure updateChatroomOverview(thisGUI : aliased in GUI; viewComponents : chatRoomMap.Map) is abstract;
+   procedure updateChatroomOverview(thisGUI : aliased in GUI; viewComponents : chatRoomMap.Map) is abstract;
 end Server_To_GUI_Communication;

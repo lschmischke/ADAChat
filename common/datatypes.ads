@@ -86,7 +86,7 @@ package dataTypes is
       procedure setSocketAddress (sa : Sock_Addr_Type);
       procedure setServerRoomID (id : Natural);
       procedure setUser (u : UserPtr);
-      private
+   private
       user          : UserPtr;
       Socket        : Socket_Type;
       SocketAddress : Sock_Addr_Type;
