@@ -394,15 +394,6 @@ package body Concrete_Client_Logic is
    begin
       accept Start;
       loop
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/feature/Client_GUI
-         begin
-            Instance.ReadFromServer(Client);
-<<<<<<< HEAD
-            Put_Line("Loop bottom");
-=======
          declare
             MsgObject : MessageObject;
 	 begin
@@ -411,9 +402,6 @@ package body Concrete_Client_Logic is
 	    Put_Line("after read");
 	    printMessageToInfoConsole(MsgObject);
             Instance.ProcessMessageObject(MsgObject);
->>>>>>> origin/feature/server_logic
-=======
->>>>>>> origin/feature/Client_GUI
          end;
       end loop;
    end Server_Listener_Task;
