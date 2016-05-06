@@ -241,7 +241,7 @@ package body Concrete_Server_Logic is
 			      -- # Füge Chatroom in Liste beider Clients hinzu
 			      client.addChatroom(chatRoom);
 			      clientToAdd.addChatroom(chatRoom);
-                              client.sendServerMessageToClient(Chatrequest,"ok",roomID);
+                              client.sendServerMessageToClient(Chatrequest,userToAdd.getUsername,roomID);
 
                               -- # Teile den Teilnehmern die Userlist mit
                               chatRoom.broadcastToChatRoom(chatRoom.generateUserlistMessage);

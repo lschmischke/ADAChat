@@ -104,7 +104,7 @@ Einen Kontakt zu einem bestehendem Chatraum einladen mit
 chatrequest:<myusername>:<chatroomID>:<username of contact I want to invite to the chatroom>
 
 Der Server antwortet mit
-a) chatrequest:server:<ID of new Chatroom>:ok
+a) chatrequest:server:<ID of new Chatroom>:<user you are now chatting with>
    Der Chatraum wurde erstellt, Teilnehmer sind: der Server, der Benutzer, und der angegebene Kontakt
 b) refused:server:<serverRoomID>:invalid roomID in chatrequest, please use your serverRoomID for new chatrequests and the specific chatrommID for invites
    Wenn eine falsche ID als Empfänger angegeben wurde, d.h. nicht die ServerroomID für einen neuen Chatraum oder die ID eines bereits existenten Chatraums, kann die Anfrage nicht
