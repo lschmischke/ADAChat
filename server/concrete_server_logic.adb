@@ -64,6 +64,8 @@ package body Concrete_Server_Logic is
       loop
          declare
             incoming_message : MessageObject;
+            invalidMessageContent : Unbounded_String := To_Unbounded_String("illegal receiver, message ignored");
+            validReceiver : Boolean := false;
          begin
 
             -- # Nachricht liegt vor, nun wird diese verarbeitet und interpretiert #
@@ -72,18 +74,33 @@ package body Concrete_Server_Logic is
                -- # Nachricht wird aus String erstellt #
                incoming_message := readMessageFromStream (ClientSocket => client.getSocket);
 
-               --Kann speater raus, Nachricht und deren Laenge anzeigen---------
+               -- # Stelle die Nachricht dar
                if incoming_message.messagetype /= Protocol.Invalid then
                   Protocol.printMessageToInfoConsole (message => incoming_message);
 	       end if;
 
-	       if user /= null and then user.getUsername /= incoming_message.sender then
-		  client.sendServerMessageToClient(Refused,"sender doesn't match with username, messaged ignored");
-		  incoming_message.messagetype := Invalid;
-	       end if;
+               -- # Prüft bei gültig zusammengestellten Nachrichten, ob der Sender dem eingeloggten Benutzer entspricht und ob eine gültiger Chatraum adressiert wurde
+	       if incoming_message.messagetype /= INVALID and then user /= null and then user.getUsername /= incoming_message.sender then
+                  invalidMessageContent := To_Unbounded_String("sender doesn't match with username, messaged ignored");
+                  Put_Line("illegal username");
+                  validReceiver := false;
+               elsif incoming_message.receiver = 0 and then client.getServerroomID = 0 then
+                  validReceiver := true;
+               else
+                  for chatRoom of client.getChatroomList loop
+                     if chatRoom.getChatRoomID = incoming_message.receiver then
+                        validReceiver := true;
+                        exit;
+                     end if;
+                  end loop;
+               end if;
 
+               if validReceiver = false then
+                  Put_Line("illegal username or receiver");
+                  incoming_message.messagetype := Invalid;
+                  client.sendServerMessageToClient(Refused,To_String(invalidMessageContent));
+               end if;
 
-	       --TODO illegale receiver nummern abfangen
                -----------------------------------------------------------------
 
                case incoming_message.messagetype is
@@ -224,7 +241,10 @@ package body Concrete_Server_Logic is
 			      -- # Füge Chatroom in Liste beider Clients hinzu
 			      client.addChatroom(chatRoom);
 			      clientToAdd.addChatroom(chatRoom);
-			      client.sendServerMessageToClient(Chatrequest,"ok",roomID);
+                              client.sendServerMessageToClient(Chatrequest,"ok",roomID);
+
+                              -- # Teile den Teilnehmern die Userlist mit
+                              chatRoom.broadcastToChatRoom(chatRoom.generateUserlistMessage);
 
 			      -- # Benachrichtige GUI
 			      gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: created chatroom '"&Natural'Image(chatroom.getChatRoomID) & "' with user '"&To_String(userToAdd.getUsername));
