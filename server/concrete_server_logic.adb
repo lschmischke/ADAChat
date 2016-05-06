@@ -559,10 +559,12 @@ package body Concrete_Server_Logic is
       Bind_Socket (Socket => Socket, Address => SocketAddress);
       Listen_Socket (Socket => Socket);
 
-      -- # Server starten #
-      gui.printInfoMessage("Server initialization successful, starting Server Listener Task...");
-      Main_Server_Task.Start;
+         -- # Server starten #
+         gui.printInfoMessage("Server initialization successful, starting Server Listener Task...");
 
+          pragma Warnings(Off,"potentially blocking operation in protected operation");
+         Main_Server_Task.Start;
+          pragma Warnings(On ,"potentially blocking operation in protected operation");
       -- # Erzeugung des SubServer-Sockets #
 	 Create_Socket (Socket => subServerSocket);
 	 SubServer.setSocket(subServerSocket);
