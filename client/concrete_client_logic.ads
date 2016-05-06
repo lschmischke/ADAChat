@@ -10,9 +10,9 @@ with Ada.Exceptions; use Ada.Exceptions;
 with Protocol; use Protocol;
 with Datatypes; use Datatypes;
 with Ada.Containers; use Ada.Containers;
-with Ada.Containers.Hashed_Sets;
+with Ada.Containers.Doubly_Linked_Lists;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
-with Ada.Containers.Indefinite_Hashed_Maps;
+with Ada.Containers.Indefinite_Doubly_Linked_Lists;
 with GNAT.String_Split; use GNAT.String_Split;
 with Gui2Client_Communication; use Gui2Client_Communication;
 with Client2Gui_Communication; use Client2Gui_Communication;
@@ -25,15 +25,18 @@ package Concrete_Client_Logic is
 
    function Hash (R : Natural) return Hash_Type;
 
-   package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
-                                                         Hash                => Hash,
-                                                         Equivalent_Elements => "=");
+   package ChatRoomIds is new Ada.Containers.Doubly_Linked_Lists(Element_Type        => Natural);
+   --package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
+   --                                                      Hash                => Hash,
+   --                                                      Equivalent_Elements => "=");
 
-   package ChatRoomUsers is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
-                                                                      Element_Type    => Client2Gui_Communication.Userlist.Set,
-                                                                      Hash            => Hash,
-                                                                      Equivalent_Keys => "=",
-                                                                      "="             => Client2Gui_Communication.Userlist."=");
+   package ChatRoomUsers is new Ada.Containers.Indefinite_Doubly_Linked_Lists(Element_Type    => Client2Gui_Communication.Userlist.List,
+                                                                              "="             => Client2Gui_Communication.Userlist."=");
+   --package ChatRoomUsers is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
+   --                                                                   Element_Type    => Client2Gui_Communication.Userlist,
+   --                                                                   Hash            => Hash,
+   --                                                                   Equivalent_Keys => "=",
+   --                                                                   "="             => Client2Gui_Communication.Userlist."=");
 
    Instance : ConcretePtr;
 
@@ -42,10 +45,10 @@ package Concrete_Client_Logic is
    type Concrete_Client is new Gui2Client_Communication.Client with record
       Socket : Socket_Type;
       ServerRoomId : Integer;
-      UsersOnline : Client2Gui_Communication.Userlist.Set;
-      UsersOffline : Client2Gui_Communication.Userlist.Set;
-      ChatRoomIdSet : ChatRoomIds.Set;
-      ChatRoomParticipants : ChatRoomUsers.Map;
+      UsersOnline : Client2Gui_Communication.Userlist.List;
+      UsersOffline : Client2Gui_Communication.Userlist.List;
+      ChatRoomIdSet : ChatRoomIds.List;
+      ChatRoomParticipants : ChatRoomUsers.List;
       GUI : GUIPtr;
    end record;
 

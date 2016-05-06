@@ -11,23 +11,20 @@ with Gtkada.Builder;   use Gtkada.Builder;
 with Glib;             use Glib;
 with Glib.Error;       use Glib.Error;
 with Gtk.Window;       use Gtk.Window;
-with General_Callbacks; use General_Callbacks;
-with Main_Window_Callbacks; use Main_Window_Callbacks;
-with Contact_Window_Callbacks; use Contact_Window_Callbacks;
-with Chat_Window_Callbacks; use Chat_Window_Callbacks;
 
 package body Chat_Window_Manager is
 
    package Key_Press_Callbacks is new Gtk.Handlers.Return_Callback (Gtk_Entry_Record, Boolean);
 
-   procedure test is
-      Chat_Window : Gtk_Window;
-      Builder : Gtkada_Builder;
+   procedure Init(This : in out ChatWindow) is null;
+
+
+   procedure test (This : in out ChatWindow; ChatName : String) is
       ret : GUint;
       Error : aliased GError;
    begin
-      Gtk_New (Builder);
-      ret := Builder.Add_From_File ("Chat_Window.glade", Error'Access);
+      Gtk_New (This.Builder);
+      ret := This.Builder.Add_From_File (GladeFile, Error'Access);
 
       if Error /= null then
          Ada.Text_IO.Put_Line(Get_Message(Error));
@@ -36,40 +33,41 @@ package body Chat_Window_Manager is
       end if;
 
       Register_Handler
-        (Builder => Builder,
+        (Builder => This.Builder,
          Handler_Name => "Check_RightClick",
-         Handler => Chat_Window_Callbacks.Check_RightClick'Access);
+         Handler => Check_RightClick'Access);
 
       Register_Handler
-        (Builder => Builder,
+        (Builder => This.Builder,
          Handler_Name => "Invite_Action",
-         Handler => Chat_Window_Callbacks.Invite_Action'Access);
+         Handler => Invite_Action'Access);
 
       Register_Handler
-        (Builder => Builder,
+        (Builder => This.Builder,
          Handler_Name => "History_Action",
-         Handler => Chat_Window_Callbacks.History_Action'Access);
+         Handler => History_Action'Access);
 
       Register_Handler
-        (Builder => Builder,
+        (Builder => This.Builder,
          Handler_Name => "Games_Action",
-         Handler => Chat_Window_Callbacks.Games_Action'Access);
+         Handler => Games_Action'Access);
 
       Register_Handler
-        (Builder => Builder,
+        (Builder => This.Builder,
          Handler_Name => "Smiley_Action",
-         Handler => Chat_Window_Callbacks.Smiley_Action'Access);
+         Handler => Smiley_Action'Access);
 
       Register_Handler
-        (Builder => Builder,
+        (Builder => This.Builder,
          Handler_Name => "Handle_Enter",
-         Handler => Chat_Window_Callbacks.Handle_Enter'Access);
+         Handler => Handle_Enter'Access);
 
-      Do_Connect(Builder);
+      Do_Connect(This.Builder);
 
-      Chat_Window := Gtk_Window(Builder.Get_Object ("chat_window_client"));
+      This.Window := Gtk_Window(This.Builder.Get_Object ("chat_window_client"));
 
-      Chat_Window.Show_All;
+      This.Window.Set_Title(ChatName);
+      This.Window.Show_All;
    end test;
 
 
@@ -90,7 +88,7 @@ package body Chat_Window_Manager is
       message : Gtk_Entry;
    begin
       message := Gtk_Entry(Object.Get_Object("New_Message"));
-      Put_Line(message.Get_Text);
+      Ada.Text_IO.Put_Line(message.Get_Text);
       message.Set_Text("");
    end Handle_Enter;
 
