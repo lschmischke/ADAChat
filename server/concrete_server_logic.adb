@@ -229,7 +229,9 @@ package body Concrete_Server_Logic is
 			      -- # Benachrichtige GUI
 			      gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: created chatroom '"&Natural'Image(chatroom.getChatRoomID) & "' with user '"&To_String(userToAdd.getUsername));
                            else
-			      --# alter Raum, User einladen
+                              --# alter Raum, User einladen
+
+                              -- # Prüfe, ob es sich beim angegebenen Raum um den Serverchat handelt
                               chatRoom := Server.getchatRooms.Element (incoming_message.receiver);
                               chatRoom.addClientToChatroom (client => clientToAdd);
 			      clientToAdd.addChatroom(chatRoom);
