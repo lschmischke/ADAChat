@@ -3,6 +3,7 @@
 --Includes
 with Protocol; use Protocol;
 with dataTypes; use dataTypes;
+with Ada.Containers.Hashed_Sets;
 with Ada.Containers.Doubly_Linked_Lists;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
 with Ada.Containers.Hashed_Sets;
@@ -16,9 +17,10 @@ package Client2Gui_Communication is
    type GUIPtr is access all GUI'Class;
 
    --Typdefinition zur Userlist
+   --package Userlist is new Ada.Containers.Doubly_Linked_Lists(Element_Type        => Unbounded_String);
    package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
-                                                     Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
-                                                     Equivalent_Elements => "=",
+                                                      Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
+                                                      Equivalent_Elements => "=",
                                                       "="                 => Ada.Strings.Unbounded."=");
 
    -- Registriert bzw. referenziert den Client bei der GUI.
@@ -65,6 +67,6 @@ package Client2Gui_Communication is
    -- Uebermittelt der GUI von dem geforderten Chatrequest die Id
    -- ChatId => Id des Chatraums
    -- Name => Name des angeforderten Chatpartners
-   procedure UpdateChatRoomId(ChatId => MsgObject.Receiver, Name => MsgObject.Content) is abstract;
+   procedure UpdateChatRoomId(This : in out GUI; ChatId : Natural; Name : Unbounded_String) is abstract;
 
 end Client2Gui_Communication;

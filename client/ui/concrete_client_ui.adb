@@ -162,10 +162,10 @@ package body Concrete_Client_Ui is
 
       onlineList.Clear;
 
-      for E in Users.Iterate
+      for E of Users
       loop
          onlineList.Append(newItem);
-         onlineList.Set(newItem, 0, To_String(Client2Gui_Communication.Userlist.Element(E)));
+         onlineList.Set(newItem, 0, To_String(E));
       end loop;
 
    end SetOnlineUser;
@@ -284,5 +284,8 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String) is null;
+
+   -----------------------------------------------------------------------------
 
 end Concrete_Client_Ui;

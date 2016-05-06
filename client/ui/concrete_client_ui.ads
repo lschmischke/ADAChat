@@ -98,4 +98,8 @@ private
 
    -----------------------------------------------------------------------------
 
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String);
+
+   -----------------------------------------------------------------------------
+
 end Concrete_Client_Ui;
