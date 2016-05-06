@@ -18,6 +18,7 @@ with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 
 
 -- # TODOs #
+--       Sicherstellen dass man keine Fremden in Chat einladen kann nur Kontakte
 --       prüfen ob Kontakt beim Add bereits in Kontaktliste
 --       Sicherstellen, dass man keine Nutzer in den Chat mit dem Server eintragen kann
 --       GetUser = null überall Abfragen
