@@ -159,7 +159,8 @@ package body Concrete_Server_Logic is
 
                                  -- # teile GUI mit, dass user online gekommen ist
 				 gui.updateOnlineUserOverview(Server.connectedClientsToClientList);
-				 gui.printInfoMessage("'"&To_String(user.getUsername) & "' has come online.");
+                                 gui.printInfoMessage("'"&To_String(user.getUsername) & "' has come online.");
+                                 gui.updateChatroomOverview(Server.getChatrooms);
 
                                  -- # Sende online-Benachrichtigungen
                                  for contact of clientContacts loop
@@ -245,7 +246,8 @@ package body Concrete_Server_Logic is
                               -- # Teile den Teilnehmern die Userlist mit
                               chatRoom.broadcastToChatRoom(chatRoom.generateUserlistMessage);
 
-			      -- # Benachrichtige GUI
+                              -- # Benachrichtige GUI
+                              gui.updateChatroomOverview(Server.getChatrooms);
 			      gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: created chatroom '"&Natural'Image(chatroom.getChatRoomID) & "' with user '"&To_String(userToAdd.getUsername));
                            else
                               --# alter Raum, User einladen
@@ -258,7 +260,8 @@ package body Concrete_Server_Logic is
 			      --# userlist rumschicken
 			      chatRoom.broadcastToChatRoom (chatRoom.generateUserlistMessage);
 
-			      -- # Benachrichtige GUI
+                              -- # Benachrichtige GUI
+                              gui.updateChatroomOverview(Server.getChatrooms);
 			       gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: invited '"&To_String(userToAdd.getUsername)&"' to chatroom '"&Natural'Image(chatroom.getChatRoomID));
                            end if;
                         else
@@ -279,7 +282,8 @@ package body Concrete_Server_Logic is
                            chatRoom := Server.getChatrooms.Element (incoming_message.receiver);
                            --# Pruefe ob Client in referenziertem Chatraum
                            if (client.getChatroomList.Contains (chatRoom)) then
-			      chatRoom.removeClientFromChatroom (client);
+                              chatRoom.removeClientFromChatroom (client);
+                              gui.updateChatroomOverview(Server.getChatrooms);
 			      gui.printInfoMessage("'"&To_String(client.getUsernameOfClient)&"' left the chatroom with ID '"&Natural'Image(chatRoom.getChatRoomID)&"'");
                            else
 			      client.sendServerMessageToClient(Refused,"you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)&".");
@@ -510,6 +514,7 @@ package body Concrete_Server_Logic is
       begin
 	 return Socket;
       end getSocket;
+
       function getSocketAddress return Sock_Addr_Type is
       begin
 	 return SocketAddress;
@@ -592,7 +597,7 @@ package body Concrete_Server_Logic is
 
       procedure addChatroom(room : chatRoomPtr) is
       begin
-	 chatRooms.Insert(room.getChatRoomID,room);
+         chatRooms.Insert(room.getChatRoomID,room);
       end addChatroom;
 
       procedure declineConnectionWithRefusedMessage (client : Concrete_Client_Ptr; messageContent : String) is
