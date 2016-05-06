@@ -51,7 +51,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">About</property>
+                <property name="label" translatable="yes">Über AdaChat</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-about</property>
                 <signal name="clicked" handler="clicked_button_about" swapped="no"/>
@@ -67,7 +67,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">Start server</property>
+                <property name="label" translatable="yes">Server starten</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-media-play</property>
                 <signal name="clicked" handler="clicked_button_server_start" swapped="no"/>
@@ -84,7 +84,7 @@
                 <property name="sensitive">False</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">Stop Server</property>
+                <property name="label" translatable="yes">Server stoppen</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-dialog-error</property>
                 <signal name="clicked" handler="clicked_button_server_stop" swapped="no"/>
@@ -104,6 +104,37 @@
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-cancel</property>
                 <signal name="clicked" handler="kickUser" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbutton1">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="use_action_appearance">False</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolItem" id="toolbutton2">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="use_action_appearance">False</property>
+                <child>
+                  <object class="GtkLabel" id="label1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">label</property>
+                  </object>
+                </child>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -176,7 +207,7 @@
               <object class="GtkLabel" id="config_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Configuration</property>
+                <property name="label" translatable="yes">Konfiguration &amp; Administration</property>
               </object>
             </child>
           </object>
@@ -225,7 +256,7 @@
         <child>
           <object class="GtkScrolledWindow" id="scrolledwindow3">
             <property name="width_request">310</property>
-            <property name="height_request">369</property>
+            <property name="height_request">181</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hscrollbar_policy">never</property>
@@ -298,7 +329,7 @@
               <object class="GtkLabel" id="labelInformations">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Informations</property>
+                <property name="label" translatable="yes">Informationen</property>
               </object>
               <packing>
                 <property name="tab_fill">False</property>
@@ -340,7 +371,7 @@
               <object class="GtkLabel" id="labelErrors">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Errors</property>
+                <property name="label" translatable="yes">Fehler</property>
               </object>
               <packing>
                 <property name="position">1</property>
@@ -353,6 +384,45 @@
             <property name="y">60</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow5">
+            <property name="width_request">309</property>
+            <property name="height_request">181</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">never</property>
+            <property name="vscrollbar_policy">never</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTreeView" id="treeviewChatrooms">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">treestoreChatrooms</property>
+                <property name="headers_clickable">False</property>
+                <property name="search_column">0</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="treeview-selection9"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeViewColumnOnlineUser1">
+                    <property name="sizing">fixed</property>
+                    <property name="title" translatable="yes">Chatroomliste</property>
+                    <child>
+                      <object class="GtkCellRendererSpin" id="cellrendererspin5"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">14</property>
+            <property name="y">340</property>
+          </packing>
+        </child>
       </object>
     </child>
   </object>
@@ -361,6 +431,12 @@
       <!-- column-name treeMessageColumn -->
       <column type="gchararray"/>
       <!-- column-name treeMessageTypeVolumn -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkTreeStore" id="treestoreChatrooms">
+    <columns>
+      <!-- column-name chatroom -->
       <column type="gchararray"/>
     </columns>
   </object>
