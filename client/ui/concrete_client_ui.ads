@@ -16,7 +16,7 @@ package Concrete_Client_Ui is
    type Concrete_Ui is new Client2Gui_Communication.GUI with record
       UserName : Unbounded_String; -- Set after Login
       Login_Window   : LoginWindow;
-      Contact_Window   : ContactWindow;
+      Contact_Window   : WindowPtr;
       Chat_Windows : ChatWindows.List;
       Client : ClientPtr;
    end record;
@@ -47,11 +47,11 @@ private
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.List);
+   procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set);
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatMessages(This : in out Concrete_Ui; message : in MessageObject);
+   procedure ShowChatMessages(This : in out Concrete_Ui; ChatId : in Natural; Name : in Unbounded_String; Message : in Unbounded_String);
 
    -----------------------------------------------------------------------------
 
@@ -73,12 +73,12 @@ private
    -----------------------------------------------------------------------------
 
    -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
-   procedure SetOnlineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.List);
+   procedure SetOnlineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
 
    -----------------------------------------------------------------------------
 
    -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
-   procedure SetOfflineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.List);
+   procedure SetOfflineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
 
    -----------------------------------------------------------------------------
 
@@ -95,6 +95,10 @@ private
    -----------------------------------------------------------------------------
 
    procedure Info_Message(This : in out Concrete_Ui; message : String);
+
+   -----------------------------------------------------------------------------
+
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : in  Natural; Name : in Unbounded_String);
 
    -----------------------------------------------------------------------------
 
