@@ -11,7 +11,11 @@ package Chat_Window_Manager is
    type ChatWindow_Ptr is access ChatWindow;
    package ChatWindows is new Ada.Containers.Doubly_Linked_Lists(Element_Type => ChatWindow_Ptr);
 
-   procedure test(This : in out ChatWindow; ChatName : String);
+
+   procedure OpenNewChatWindow(This : in out ChatWindows.List; ChatName : String);
+
+   function ChatWindowOpen(This : in out ChatWindows.List; ChatName : String) return Boolean;
+
 private
    type ChatWindow is new Client_Window.Window with record
       Builder : Gtkada_Builder;
@@ -20,6 +24,7 @@ private
 
 
    procedure Init(This : in out ChatWindow);
+
 
    procedure Check_RightClick  (Object : access Gtkada_Builder_Record'Class);
    procedure Invite_Action  (Object : access Gtkada_Builder_Record'Class);

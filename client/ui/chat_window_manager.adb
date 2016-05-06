@@ -16,10 +16,20 @@ package body Chat_Window_Manager is
 
    package Key_Press_Callbacks is new Gtk.Handlers.Return_Callback (Gtk_Entry_Record, Boolean);
 
-   procedure Init(This : in out ChatWindow) is null;
+   procedure OpenNewChatWindow(This : in out ChatWindows.List; ChatName : String) is
+      newWindow : ChatWindow_Ptr := new ChatWindow;
+   begin
+      newWindow.Init;
+      newWindow.Window.Set_Title(ChatName);
+      This.Append(newWindow);
+   end OpenNewChatWindow;
 
+   function ChatWindowOpen(This : in out ChatWindows.List; ChatName : String) return Boolean is
+   begin
+      return false;
+   end ChatWindowOpen;
 
-   procedure test (This : in out ChatWindow; ChatName : String) is
+   procedure Init (This : in out ChatWindow) is
       ret : GUint;
       Error : aliased GError;
    begin
@@ -66,9 +76,8 @@ package body Chat_Window_Manager is
 
       This.Window := Gtk_Window(This.Builder.Get_Object ("chat_window_client"));
 
-      This.Window.Set_Title(ChatName);
       This.Window.Show_All;
-   end test;
+   end Init;
 
 
    procedure Check_RightClick  (Object : access Gtkada_Builder_Record'Class) is null;
