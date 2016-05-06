@@ -13,9 +13,14 @@ with Ada.Containers; use Ada.Containers;
 with Ada.Containers.Doubly_Linked_Lists;
 with Ada.Containers.Hashed_Sets;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
+<<<<<<< HEAD
 with Ada.Containers.Indefinite_Doubly_Linked_Lists;
 with Ada.Containers.Indefinite_Hashed_Maps;
 with Ada.Containers.Hashed_Maps;
+=======
+with Ada.Containers.Hashed_Sets;
+with Ada.Containers.Indefinite_Hashed_Maps;
+>>>>>>> origin/feature/Client_Logic
 with GNAT.String_Split; use GNAT.String_Split;
 with Gui2Client_Communication; use Gui2Client_Communication;
 with Client2Gui_Communication; use Client2Gui_Communication;
@@ -28,6 +33,7 @@ package Concrete_Client_Logic is
 
    function Hash (R : Natural) return Hash_Type;
 
+<<<<<<< HEAD
    --package ChatRoomIds is new Ada.Containers.Doubly_Linked_Lists(Element_Type        => Natural);
    package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
                                                          Hash                => Hash,
@@ -35,6 +41,12 @@ package Concrete_Client_Logic is
 
    --package ChatRoomUsers is new Ada.Containers.Indefinite_Doubly_Linked_Lists(Element_Type    => Client2Gui_Communication.Userlist.List,
    --                                                                           "="             => Client2Gui_Communication.Userlist."=");
+=======
+  package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
+                                                        Hash                => Hash,
+                                                        Equivalent_Elements => "=");
+
+>>>>>>> origin/feature/Client_Logic
    package ChatRoomUsers is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
                                                                       Element_Type    => Client2Gui_Communication.Userlist.Set,
                                                                       Hash            => Hash,
@@ -43,7 +55,7 @@ package Concrete_Client_Logic is
 
    Instance : ConcretePtr;
 
-   private
+private
 
    type Concrete_Client is new Gui2Client_Communication.Client with record
       Socket : Socket_Type;
@@ -140,6 +152,9 @@ package Concrete_Client_Logic is
 
    procedure SendMessageToChat(This : in out Concrete_Client; Receiver: in Integer; Username : in Unbounded_String;
                                Message : in Unbounded_String);
+
+   procedure RequestChat(This : in out Concrete_Client; Username : in Unbounded_String;
+                               Participant : in Unbounded_String);
    -----------------------------------------------------------------------------
 
    task Server_Listener_Task is

@@ -6,6 +6,7 @@ with dataTypes; use dataTypes;
 with Ada.Containers.Hashed_Sets;
 with Ada.Containers.Doubly_Linked_Lists;
 with Ada.Strings.Unbounded.Hash_Case_Insensitive;
+with Ada.Containers.Hashed_Sets;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 
 limited with Gui2Client_Communication;
@@ -16,10 +17,16 @@ package Client2Gui_Communication is
    type GUIPtr is access all GUI'Class;
 
    --Typdefinition zur Userlist
+<<<<<<< HEAD
    --package Userlist is new Ada.Containers.Doubly_Linked_Lists(Element_Type        => Unbounded_String);
    package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
                                                       Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
                                                       Equivalent_Elements => "=",
+=======
+   package Userlist is new Ada.Containers.Hashed_Sets(Element_Type        => Unbounded_String,
+                                                     Hash                => Ada.Strings.Unbounded.Hash_Case_Insensitive,
+                                                     Equivalent_Elements => "=",
+>>>>>>> origin/feature/Client_Logic
                                                       "="                 => Ada.Strings.Unbounded."=");
 
    -- Registriert bzw. referenziert den Client bei der GUI.
@@ -61,5 +68,11 @@ package Client2Gui_Communication is
    -- Entfernt den angegebenen User aus der Kontaktliste.
    -- Username => Name des zu entfernenden Users
    procedure ContactRemove(This : in out GUI; Username : in Unbounded_String) is abstract;
+
+
+   -- Uebermittelt der GUI von dem geforderten Chatrequest die Id
+   -- ChatId => Id des Chatraums
+   -- Name => Name des angeforderten Chatpartners
+   procedure UpdateChatRoomId(ChatId => MsgObject.Receiver, Name => MsgObject.Content) is abstract;
 
 end Client2Gui_Communication;
