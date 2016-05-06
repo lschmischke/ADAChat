@@ -29,12 +29,16 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with dataTypes; use dataTypes;
 
 with Gtk.Text_View; use Gtk.Text_View;
+with Gtk.Combo_Box; use Gtk.Combo_Box;
 
+with Gtk.Menu_Tool_Button; use Gtk.Menu_Tool_Button;
 --------------------------------
 
 with Gtk.Text_Mark; use Gtk.Text_Mark;
 with Gtk.Text_Buffer; use Gtk.Text_Buffer;
 with Gtk.Text_Iter; use Gtk.Text_Iter;
+
+with Gtk.Menu_Item; use Gtk.Menu_Item;
 package body Concrete_Server_Gui_Logic is
 
    PortGEntry : Gtk_GEntry;
@@ -61,6 +65,10 @@ package body Concrete_Server_Gui_Logic is
    OnlineUserTreeStore: Gtk_Tree_Store;
    OnlineUserTreeView: Gtk_Tree_View;
    OnlineUserTreeIter: Gtk_Tree_Iter;
+
+   TestToolButton: Gtk_Menu_Tool_Button;
+   TestMenu: Gtk_Menu;
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -102,6 +110,9 @@ package body Concrete_Server_Gui_Logic is
    procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOnlineList.List) is
       ContactsIterator : Gtk_Tree_Iter;
       SingleContactIterator: Gtk_Tree_Iter;
+      IpAddressIterator: Gtk_Tree_Iter;
+      TempIter: Gtk_Tree_Iter;
+      TempItem: Gtk_Menu_Item;
              begin
 
       OnlineUserTreeStore.Clear;
@@ -116,6 +127,7 @@ package body Concrete_Server_Gui_Logic is
          OnlineUserTreeIter := Null_Iter;
          ContactsIterator := Null_Iter;
          SingleContactIterator := Null_Iter;
+
              OnlineUserTreeStore.Append(Iter   => OnlineUserTreeIter,
                                         Parent => Null_Iter );
            OnlineUserTreeStore.Set(Iter   => OnlineUserTreeIter,
@@ -128,6 +140,8 @@ package body Concrete_Server_Gui_Logic is
                                  Column => 0,
                                  Value  => "Contacts");
 
+         TempItem := Gtk_Menu_Item_New_With_Label(Label =>  To_String(client.getUsernameOfClient));
+         TestMenu.Append(Child => TempItem);
          For contact of client.getUser.getContacts loop
             OnlineUserTreeStore.Append(Iter   => SingleContactIterator,
                                        Parent => ContactsIterator);
@@ -157,8 +171,10 @@ package body Concrete_Server_Gui_Logic is
       ErrorsListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreErrors"));
       ErrorsTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewErrors"));
              OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
-             OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
-
+      OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
+     -- KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
+      -- KickUserComboBox := Gtk_List_Store(myBuilder.Get_Object("comboboxKickUser"));
+     TestMenu := Gtk_Menu(myBuilder.Get_Object("kickMenu"));
 
       Put_Line("Initialization complete!");
    End InitServerGui;

@@ -37,6 +37,7 @@ with Gtk.Text_View; use Gtk.Text_View;
 with Gtk.Text_Mark; use Gtk.Text_Mark;
 with Gtk.Text_Buffer; use Gtk.Text_Buffer;
 with Gtk.Text_Iter; use Gtk.Text_Iter;
+with Gtk.Combo_Box; use Gtk.Combo_Box;
 package body ServerGuiCallbacks is
 
 
@@ -55,8 +56,12 @@ package body ServerGuiCallbacks is
    MyServer: ServerPtr := new Concrete_Server;
    MyGui: GUIPtr := new Server_Gui;
    OnlineUserTreeView: Gtk_Tree_View;
+
+
 OnlineUserTreeStore: Gtk_Tree_Store;
 
+   KickUserComboBox: Gtk_Combo_Box;
+    KickUserListStore: Gtk_List_Store;
 
 
 
@@ -65,7 +70,9 @@ OnlineUserTreeStore: Gtk_Tree_Store;
       Toolbutton_Server_Stop := Gtk_Tool_Button(myBuilder.Get_Object("toolbutton_stop_server"));
       Port_Edit_Text := Gtk_Entry(myBuilder.Get_Object("config_port"));
      OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
-             OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
+      OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
+       KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
+       KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
       end InitializeGuiReferences;
 
 
@@ -113,27 +120,17 @@ OnlineUserTreeStore: Gtk_Tree_Store;
       end clicked_button_server_stop;
 
    procedure kickSelectedUser ( Object : access Gtkada_Builder_Record'Class) is
-      Selection: Gtk_Tree_Selection;
-      myIter: Gtk_Tree_Iter;
-      myValue: GValue;
-      myModel: Gtk_Tree_Model;
+      selection : Gtk_Tree_Selection;
+      selectedIter : Gtk_Tree_Iter;
+      selectedModel : Gtk_Tree_Model;
    begin
-      Selection := OnlineUserTreeView.Get_Selection;
-      Selection.Get_Selected(Model => myModel,
-                             Iter  => myIter);
+      Put_Line(KickUserComboBox.Get_Active_Text);
+     selection := Gtk_Tree_Selection(Object.Get_Object("treeview-selection3"));
+      selection.Get_Selected(selectedModel, selectedIter);
 
-     -- OnlineUserTreeStore.Get_Path(Iter => myIter);
-     -- Get_Path(Widget => OnlineUserTreeView,
-       --        Tree_Model => OnlineUserTreeStore,
-        --       Iter       => myIter);
 
-      Get_Value(Tree_Model => OnlineUserTreeStore,
-                Iter       => myIter,
-                Column     => 0 ,
-                Value      =>myValue );
-
-      -- Put_Line(To_String(myValue));
-      end kickSelectedUser;
+   Put_Line("Kick!");
+   end kickSelectedUser;
 
 
 

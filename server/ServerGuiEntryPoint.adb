@@ -78,6 +78,11 @@ begin
      (Builder      => Builder,
       Handler_Name => "kickSelectedUser",
       Handler      => ServerGuiCallbacks.kickSelectedUser'Access);
+      Register_Handler
+     (Builder      => Builder,
+      Handler_Name => "rowActivated",
+      Handler      => ServerGuiCallbacks.rowHandler'Access);
+
 
 
 
