@@ -28,40 +28,64 @@ with Gtk.Spin_Button; use Gtk.Spin_Button;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with dataTypes; use dataTypes;
 
+with Gtk.Text_View; use Gtk.Text_View;
+
+--------------------------------
+
+with Gtk.Text_Mark; use Gtk.Text_Mark;
+with Gtk.Text_Buffer; use Gtk.Text_Buffer;
+with Gtk.Text_Iter; use Gtk.Text_Iter;
 package body Concrete_Server_Gui_Logic is
 
    PortGEntry : Gtk_GEntry;
+
    InformationsTreeView : Gtk_Tree_View;
-   InformationsTreeStore: Gtk_Tree_Store;
+   InformationsListStore: Gtk_List_Store;
    InformationsTreeViewIterator: Gtk_Tree_Iter;
-   SecondLevelIterator: Gtk_Tree_Iter;
-   --Val: Gint;
+
+   ErrorsTreeView: Gtk_Tree_View;
+   ErrorsListStore: Gtk_List_Store;
+   ErrorsTreeViewIterator: Gtk_Tree_Iter;
+
    ChatMessageListStore: Gtk_List_Store;
    ChatMessageListStoreIterator: Gtk_Tree_Iter;
-   ChatMessageTreeView : Gtk_Tree_View;
+   ChatMessageTreeView: Gtk_Tree_View;
+
+   SecondLevelIterator: Gtk_Tree_Iter;
+   --Val: Gint;
+
+
+    InformationsTextView: Gtk_Text_View;
+   ErrorsTextView: Gtk_Text_View;
+
+   OnlineUserTreeStore: Gtk_Tree_Store;
+   OnlineUserTreeView: Gtk_Tree_View;
+   OnlineUserTreeIter: Gtk_Tree_Iter;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : String) is begin
-        InformationsTreeStore.Append(Iter   => InformationsTreeViewIterator,
-                       Parent => Null_Iter);
-      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
-                    Column => 1 ,
-                                Value  => "Fehler" );
-      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
-                    Column => 0 ,
-                    Value  => errorMessage );
+   procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : String)
+   is
+   buffer: Gtk_Text_Buffer;
+      mark : Gtk_Text_Mark;
+      iter: Gtk_Text_Iter;
+
+   begin
+       ErrorsListStore.Append(Iter => ErrorsTreeViewIterator);
+      ErrorsListStore.Set(Iter   => ErrorsTreeViewIterator,
+                                Column => 0,
+                                Value  => errorMessage);
+
    end printErrorMessage;
 --------------------------------------------------------------------------------------------------------------------------------------------------------
-   procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String) is begin
-        InformationsTreeStore.Append(Iter   => InformationsTreeViewIterator,
-                       Parent => Null_Iter);
-      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
-                    Column => 1 ,
-                                Value  => "Information" );
-      InformationsTreeStore.Set(Iter   => InformationsTreeViewIterator,
-                    Column => 0 ,
-                    Value  => infoMessage );
+   procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String) is
+
+   begin
+      Put_Line(infoMessage);
+      InformationsListStore.Append(Iter => InformationsTreeViewIterator);
+      InformationsListStore.Set(Iter   => InformationsTreeViewIterator,
+                                Column => 0,
+                                Value  => infoMessage);
 
    end printInfoMessage;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -76,10 +100,45 @@ package body Concrete_Server_Gui_Logic is
    procedure updateNumberOfContacts(thisGUI : aliased in Server_Gui; numberOfContact : Natural) is null;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure updateOnlineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOnlineList.List) is
-   begin
+      ContactsIterator : Gtk_Tree_Iter;
+      SingleContactIterator: Gtk_Tree_Iter;
+             begin
+
+      OnlineUserTreeStore.Clear;
+
+  --    OnlineUserTreeView.
+    --  TreeStore.Append(Iter   => SecondLevelIterator,
+      --                 Parent => InformationsTreeViewIterator);
+      --TreeStore.Set(Iter   => SecondLevelIterator,
+        --            Column => 0 ,
+          --          Value  => "Test456" );
       For client of viewComponents loop
-         Put_Line("Username: " & To_String(client.getUsernameOfClient));
+         OnlineUserTreeIter := Null_Iter;
+         ContactsIterator := Null_Iter;
+         SingleContactIterator := Null_Iter;
+             OnlineUserTreeStore.Append(Iter   => OnlineUserTreeIter,
+                                        Parent => Null_Iter );
+           OnlineUserTreeStore.Set(Iter   => OnlineUserTreeIter,
+                    Column => 0 ,
+                    Value  => To_String(getUsername(client.user)) );
+
+         OnlineUserTreeStore.Append(Iter   => ContactsIterator,
+                                    Parent => OnlineUserTreeIter);
+         OnlineUserTreeStore.Set(Iter   => ContactsIterator,
+                                 Column => 0,
+                                 Value  => "Contacts");
+
+         For contact of getContacts(client.user) loop
+            OnlineUserTreeStore.Append(Iter   => SingleContactIterator,
+                                       Parent => ContactsIterator);
+            OnlineUserTreeStore.Set(Iter   => SingleContactIterator,
+                                    Column =>0 ,
+                                    Value  => To_String(getUsername(contact)) );
+
+            end loop;
+
       end loop;
+
    end updateOnlineUserOverview;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure updateOfflineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOfflineMap.Map)is null;
@@ -88,16 +147,17 @@ package body Concrete_Server_Gui_Logic is
       Put_Line("Init Gui Components");
       PortGEntry := Gtk_GEntry(myBuilder.Get_Object("config_port"));
       PortGEntry.Set_Text("12321");
-      InformationsTreeView := Gtk_Tree_View(myBuilder.Get_Object("informationsTreeView"));
-      InformationsTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestore1"));
+
       ChatMessageTreeView := Gtk_Tree_View(myBuilder.Get_Object("chatMessagesTreeView"));
       ChatMessageListStore := Gtk_List_Store(myBuilder.Get_Object("chatMessageListStore"));
 
+      InformationsListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreInformations"));
+      InformationsTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewInformations"));
 
-     -- InformationsTreeViewListStore.Append(InformationsTreeViewIterator);
-     --InformationsTreeViewListStore.Set(InformationsTreeViewIterator,0,"Test");
-     -- Column 1: Nachrichtentyp
-     -- Column 0: Nachricht
+      ErrorsListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreErrors"));
+      ErrorsTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewErrors"));
+             OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
+             OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
 
 
       Put_Line("Initialization complete!");
