@@ -252,15 +252,19 @@ package body Concrete_Server_Logic is
                               --# alter Raum, User einladen
 
                               -- # Prüfe, ob es sich beim angegebenen Raum um den Serverchat handelt
-                              chatRoom := Server.getchatRooms.Element (incoming_message.receiver);
-                              chatRoom.addClientToChatroom (client => clientToAdd);
-			      clientToAdd.addChatroom(chatRoom);
+                              if incoming_message.receiver = client.getServerroomID then
+                                 client.sendServerMessageToClient(Refused,"not possible to add contact to serverchat");
+                              else
+                                 chatRoom := Server.getchatRooms.Element (incoming_message.receiver);
+                                 chatRoom.addClientToChatroom (client => clientToAdd);
+                                 clientToAdd.addChatroom(chatRoom);
 
-			      --# userlist rumschicken
-			      chatRoom.broadcastToChatRoom (chatRoom.generateUserlistMessage);
+                                 --# userlist rumschicken
+                                 chatRoom.broadcastToChatRoom (chatRoom.generateUserlistMessage);
 
-			      -- # Benachrichtige GUI
-			       gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: invited '"&To_String(userToAdd.getUsername)&"' to chatroom '"&Natural'Image(chatroom.getChatRoomID));
+                                 -- # Benachrichtige GUI
+                                 gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: invited '"&To_String(userToAdd.getUsername)&"' to chatroom '"&Natural'Image(chatroom.getChatRoomID));
+                              end if;
                            end if;
                         else
                            -- # Es existiert kein Kontakt mit dem angegebenem Namen
@@ -312,8 +316,11 @@ package body Concrete_Server_Logic is
                         requestedUserClient     : Concrete_Client_Ptr := Server.getConnectedClients.Element (requestedUser);
                      --requestingUser ist user
                      begin
-			-- TODO: pruefe ob es die beiden User gibt
-
+                        -- TODO: pruefe ob es die beiden User gibt
+                        if user.getContacts.Contains(requestedUser) then
+                           client.sendServerMessageToClient(Refused,"'"&To_String(incoming_message.content)&"' is already contact of yours.");
+                           goto Continue;
+                        end if;
 			-- # Pruefe, ob eine Kontaktanfrage beantwortet wird
                         if (Server.checkIfContactRequestExists (requestedUser, user)) then
                            -- # stelle Kontakt her
