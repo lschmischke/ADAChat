@@ -26,10 +26,8 @@ package Client2Gui_Communication is
    procedure initClientUI(This : in out GUI; Client_Instance : Gui2Client_Communication.ClientPtr) is abstract;
 
    -- Zeigt die empfangene Chatnachricht.
-   -- ChatId => Id in welchem Chatraum Nachricht empfangen wurde
-   -- Name => Name des Senders
-   -- Message => Nachricht
-   procedure ShowChatMessages(This : in out GUI; ChatId : in Natural; Name : in Unbounded_String; Message : in Unbounded_String) is abstract;
+   -- message => Nachricht
+   procedure ShowChatMessages(This : in out GUI; message : in MessageObject) is abstract;
 
    -- Teilt der GUI mit, dass ein erfolgreicher Login stattgefunden hat.
    procedure LoginSuccess(This : in out GUI) is abstract;
@@ -63,9 +61,10 @@ package Client2Gui_Communication is
    -- Username => Name des zu entfernenden Users
    procedure ContactRemove(This : in out GUI; Username : in Unbounded_String) is abstract;
 
+
    -- Uebermittelt der GUI von dem geforderten Chatrequest die Id
    -- ChatId => Id des Chatraums
    -- Name => Name des angeforderten Chatpartners
-   procedure UpdateChatRoomId(This : in out GUI; ChatId : in  Natural; Name : in Unbounded_String) is abstract;
+   procedure UpdateChatRoomId(ChatId => MsgObject.Receiver, Name => MsgObject.Content) is abstract;
 
 end Client2Gui_Communication;

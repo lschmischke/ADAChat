@@ -195,14 +195,13 @@ package body Concrete_Client_Logic is
             --#wenn nein, lege Chatraum an und oeffne guifenster
 
             if This.ChatRoomIdSet.Contains(Item => MsgObject.Receiver) then
-               This.GUI.ShowChatMessages(ChatId  => MsgObject.Receiver,
-                                         Name    => MsgObject.Sender,
-                                         Message => MsgObject.Content);
+               --#TODO#
+               --#zeige Message im Chatraum an
+               null;
             else
                This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
-               This.GUI.ShowChatMessages(ChatId  => MsgObject.Receiver,
-                                         Name    => MsgObject.Sender,
-                                         Message => MsgObject.Content);
+               --#TODO
+               --#oeffne neues Chatfenster
             end if;
 
          when Refused =>

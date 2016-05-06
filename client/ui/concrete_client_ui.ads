@@ -51,7 +51,7 @@ private
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatMessages(This : in out Concrete_Ui; ChatId : in Natural; Name : in Unbounded_String; Message : in Unbounded_String);
+   procedure ShowChatMessages(This : in out Concrete_Ui; message : in MessageObject);
 
    -----------------------------------------------------------------------------
 
@@ -95,10 +95,6 @@ private
    -----------------------------------------------------------------------------
 
    procedure Info_Message(This : in out Concrete_Ui; message : String);
-
-   -----------------------------------------------------------------------------
-
-   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : in  Natural; Name : in Unbounded_String);
 
    -----------------------------------------------------------------------------
 
