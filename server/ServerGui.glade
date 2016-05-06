@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.24"/>
+  <object class="GtkAction" id="action1"/>
   <object class="GtkListStore" id="chatMessageListStore">
     <columns>
       <!-- column-name chatMessage -->
       <column type="gchararray"/>
     </columns>
+  </object>
+  <object class="GtkMenu" id="kickMenu">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
   </object>
   <object class="GtkListStore" id="liststoreErrors">
     <columns>
@@ -16,6 +21,12 @@
   <object class="GtkListStore" id="liststoreInformations">
     <columns>
       <!-- column-name infoMessage -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="liststoreKickUser">
+    <columns>
+      <!-- column-name gchararray1 -->
       <column type="gchararray"/>
     </columns>
   </object>
@@ -84,15 +95,30 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="toolbutton_kick">
+              <object class="GtkToolButton" id="toolbutton_kick_user">
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">Kick selected user</property>
+                <property name="label" translatable="yes">Benutzer kicken</property>
                 <property name="use_underline">True</property>
-                <property name="stock_id">gtk-close</property>
-                <signal name="clicked" handler="kickSelectedUser" swapped="no"/>
+                <property name="stock_id">gtk-cancel</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkMenuToolButton" id="toolbutton1">
+                <property name="use_action_appearance">False</property>
+                <property name="related_action">action1</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="related_action">action1</property>
+                <property name="use_action_appearance">False</property>
+                <property name="label" translatable="yes">toolbutton1</property>
+                <property name="use_underline">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -138,6 +164,25 @@
                   <packing>
                     <property name="x">14</property>
                     <property name="y">15</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBox" id="comboboxKickUser">
+                    <property name="width_request">302</property>
+                    <property name="height_request">22</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="model">liststoreKickUser</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cellrenderertext1"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">21</property>
+                    <property name="y">38</property>
                   </packing>
                 </child>
               </object>
@@ -206,6 +251,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="model">treestoreOnlineUser</property>
+                <signal name="row-activated" handler="rowActivated" swapped="no"/>
                 <child internal-child="selection">
                   <object class="GtkTreeSelection" id="treeview-selection3"/>
                 </child>
@@ -323,17 +369,17 @@
       </object>
     </child>
   </object>
-  <object class="GtkTreeStore" id="treestoreOnlineUser">
-    <columns>
-      <!-- column-name onlineUser -->
-      <column type="gchararray"/>
-    </columns>
-  </object>
   <object class="GtkTreeStore" id="treestore1">
     <columns>
       <!-- column-name treeMessageColumn -->
       <column type="gchararray"/>
       <!-- column-name treeMessageTypeVolumn -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkTreeStore" id="treestoreOnlineUser">
+    <columns>
+      <!-- column-name onlineUser -->
       <column type="gchararray"/>
     </columns>
   </object>
