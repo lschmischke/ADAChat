@@ -67,6 +67,8 @@ package body Concrete_Server_Logic is
             invalidMessageContent : Unbounded_String := To_Unbounded_String("illegal receiver, message ignored");
             validReceiver : Boolean := false;
          begin
+
+            -- # Nachricht liegt vor, nun wird diese verarbeitet und interpretiert #
             declare
             begin
                -- # Nachricht wird aus String erstellt #
@@ -93,7 +95,7 @@ package body Concrete_Server_Logic is
                   end loop;
                end if;
 
-               if incoming_message.messagetype /= invalid and then validReceiver = false then
+               if validReceiver = false then
                   Put_Line("illegal username or receiver");
                   incoming_message.messagetype := Invalid;
                   client.sendServerMessageToClient(Refused,To_String(invalidMessageContent));
@@ -218,17 +220,11 @@ package body Concrete_Server_Logic is
                   when Protocol.Chatrequest => -- # chatrequest:clientA:<ServerRoomID>:clientB #
                      declare
                         roomID               : Natural             ;
-                        requestingUser       : UserPtr             := user;
+                        requestingUser       : UserPtr             := Server.getUserDatabase.getUser (incoming_message.sender);
 			userToAdd            : UserPtr             := Server.getUserDatabase.getUser (incoming_message.content);
 			clientToAdd          : Concrete_Client_Ptr := Server.getClientToConnectedUser(userToAdd);
 			chatRoom : chatRoomPtr;
-                     begin
-                        if user = null then
-                           client.sendServerMessageToClient(Refused,"user '"& To_String(incoming_message.sender)& "' not found in database");
-
-                        end if;
-
-
+		     begin
 			Server.getNextChatRoomID(roomID);
 			--# TODO: getUser Fehler abfangen
 			--# Pruefe, ob Kontakt zu angegebenem User besteht
@@ -251,24 +247,20 @@ package body Concrete_Server_Logic is
                               chatRoom.broadcastToChatRoom(chatRoom.generateUserlistMessage);
 
 			      -- # Benachrichtige GUI
-			      gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: created chatroom"&Natural'Image(chatroom.getChatRoomID) & " with user '"&To_String(userToAdd.getUsername)&"'.");
+			      gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: created chatroom '"&Natural'Image(chatroom.getChatRoomID) & "' with user '"&To_String(userToAdd.getUsername));
                            else
                               --# alter Raum, User einladen
 
                               -- # Prüfe, ob es sich beim angegebenen Raum um den Serverchat handelt
-                              if incoming_message.receiver = client.getServerroomID then
-                                 client.sendServerMessageToClient(Refused,"not possible to add contact to serverchat");
-                              else
-                                 chatRoom := Server.getchatRooms.Element (incoming_message.receiver);
-                                 chatRoom.addClientToChatroom (client => clientToAdd);
-                                 clientToAdd.addChatroom(chatRoom);
+                              chatRoom := Server.getchatRooms.Element (incoming_message.receiver);
+                              chatRoom.addClientToChatroom (client => clientToAdd);
+			      clientToAdd.addChatroom(chatRoom);
 
-                                 --# userlist rumschicken
-                                 chatRoom.broadcastToChatRoom (chatRoom.generateUserlistMessage);
+			      --# userlist rumschicken
+			      chatRoom.broadcastToChatRoom (chatRoom.generateUserlistMessage);
 
-                                 -- # Benachrichtige GUI
-                                 gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: invited '"&To_String(userToAdd.getUsername)&"' to chatroom '"&Natural'Image(chatroom.getChatRoomID));
-                              end if;
+			      -- # Benachrichtige GUI
+			       gui.printInfoMessage("Chatroomrequest from '"&To_String(user.getUsername)& "' accepted: invited '"&To_String(userToAdd.getUsername)&"' to chatroom '"&Natural'Image(chatroom.getChatRoomID));
                            end if;
                         else
                            -- # Es existiert kein Kontakt mit dem angegebenem Namen
@@ -320,11 +312,8 @@ package body Concrete_Server_Logic is
                         requestedUserClient     : Concrete_Client_Ptr := Server.getConnectedClients.Element (requestedUser);
                      --requestingUser ist user
                      begin
-                        -- TODO: pruefe ob es die beiden User gibt
-                        if user.getContacts.Contains(requestedUser) then
-                           client.sendServerMessageToClient(Refused,"'"&To_String(incoming_message.content)&"' is already contact of yours.");
-                           goto Continue;
-                        end if;
+			-- TODO: pruefe ob es die beiden User gibt
+
 			-- # Pruefe, ob eine Kontaktanfrage beantwortet wird
                         if (Server.checkIfContactRequestExists (requestedUser, user)) then
                            -- # stelle Kontakt her

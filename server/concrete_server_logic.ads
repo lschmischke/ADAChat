@@ -18,9 +18,11 @@ with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 
 
 -- # TODOs #
+--       prüfen ob Kontakt beim Add bereits in Kontaktliste
+--       Sicherstellen, dass man keine Nutzer in den Chat mit dem Server eintragen kann
 --       GetUser = null überall Abfragen
 --       Kontaktrequest ablehnen funktioniert nicht
-
+--       Generelle Kontrolle einführen, ob username richtig und ob gültiger Receiver
 
 
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
