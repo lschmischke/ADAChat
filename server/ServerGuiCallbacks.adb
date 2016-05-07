@@ -112,6 +112,7 @@ Put_Line("About");
    procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class) is
    userCounter : Integer := 0;
    begin
+      MyServer := new Concrete_Server;
       MyServer.startServer(ipAdress => "127.0.0.1",
                          port     => Integer'Value(Port_Edit_Text.Get_Text));
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);

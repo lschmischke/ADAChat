@@ -1,26 +1,53 @@
 with Gtkada.Builder;   use Gtkada.Builder;
 with Gtk.Window;       use Gtk.Window;
-with Concrete_Client_Logic; use Concrete_Client_Logic;
+with Gtk.List_Store;   use Gtk.List_Store;
+with Concrete_Client_Logic;
 with Client_Window;
 with Ada.Containers.Doubly_Linked_Lists;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Strings.Unbounded.Hash_Case_Insensitive;
+with Ada.Containers.Indefinite_Hashed_Maps;
+with Ada.Containers; use Ada.Containers;
 
 package Chat_Window_Manager is
 
    GladeFile : constant String := "client/Chat_Window.glade";
-   type ChatWindow is new Client_Window.Window with private;
-   type ChatWindow_Ptr is access ChatWindow;
-   package ChatWindows is new Ada.Containers.Doubly_Linked_Lists(Element_Type => ChatWindow_Ptr);
-
-
-   procedure OpenNewChatWindow(This : in out ChatWindows.List; ChatName : String);
-
-   function ChatWindowOpen(This : in out ChatWindows.List; ChatName : String) return Boolean;
-
-private
    type ChatWindow is new Client_Window.Window with record
       Builder : Gtkada_Builder;
       Window : Gtk_Window;
+      ChatID : Natural;
+      ChatName : Unbounded_String;
+      ChatParticipants : Gtk_List_Store;
    end record;
+   type ChatWindow_Ptr is access ChatWindow;
+   function Hash (R : Natural) return Hash_Type;
+   --package ChatWindows is new Ada.Containers.Doubly_Linked_Lists(Element_Type => ChatWindow_Ptr);
+   package ChatWindows is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
+                                                                    Element_Type    => ChatWindow_Ptr,
+                                                                    Hash            => Hash,
+                                                                    Equivalent_Keys => "=",
+                                                                    "="             => "=");
+   type MapPtr is access all ChatWindows.Map'Class;
+
+   package PrivateChatRooms is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Unbounded_String,
+                                                                         Element_Type    => Natural,
+                                                                         Hash            => Ada.Strings.Unbounded.Hash_Case_Insensitive,
+                                                                         Equivalent_Keys => "=",
+                                                                         "="             => "=");
+   package GroupChatRooms is new Ada.Containers.Doubly_Linked_Lists(Element_Type => Natural);
+
+   procedure OpenNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String);
+
+   function ChatWindowOpen(ChatName : String) return Boolean;
+
+   MyRooms : PrivateChatRooms.Map;
+
+   MyWindows : MapPtr := new ChatWindows.Map;
+
+   MyUserName : Unbounded_String;
+
+private
+
 
 
    procedure Init(This : in out ChatWindow);

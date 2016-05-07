@@ -17,6 +17,8 @@ with Gtk.Tree_Selection; use Gtk.Tree_Selection;
 with Concrete_Client_Ui; use Concrete_Client_Ui;
 with Chat_Window_Manager; use Chat_Window_Manager;
 
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+
 package body Contact_Window is
 
    procedure Init(This : in out ContactWindow) is
@@ -89,8 +91,8 @@ package body Contact_Window is
       selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Offline_Contact"));
       selection.Get_Selected(selectedModel, selectedIter);
       offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
-      if ChatWindowOpen(Concrete_Client_Ui.Instance.Chat_Windows, offlineList.Get_String(selectedIter, 0)) = False then
-         OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, offlineList.Get_String(selectedIter, 0));
+      if ChatWindowOpen(offlineList.Get_String(selectedIter, 0)) = False then
+         OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, To_Unbounded_String(offlineList.Get_String(selectedIter, 0)));
       end if;
    end Offline_Contact_Action;
 
@@ -103,7 +105,9 @@ package body Contact_Window is
       selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Online_Contact"));
       selection.Get_Selected(selectedModel, selectedIter);
       onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
-      Concrete_Client_Ui.Instance.Chat_Windows.Append(new ChatWindow);
+      if ChatWindowOpen(onlineList.Get_String(selectedIter, 0)) = False then
+         OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, To_Unbounded_String(onlineList.Get_String(selectedIter, 0)));
+      end if;
    end Online_Contact_Action;
 
 end Contact_Window;

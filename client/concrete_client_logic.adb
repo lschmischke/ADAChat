@@ -103,7 +103,7 @@ package body Concrete_Client_Logic is
 
    begin
 
-      RequestMessage := createMessage(messagetype => Register,
+      RequestMessage := createMessage(messagetype => Chatrequest,
                                       sender      => UserName,
                                       receiver    => Id_Receiver,
                                       content     => Participant);
@@ -122,7 +122,7 @@ package body Concrete_Client_Logic is
 
    begin
 
-      LeaveMessage := createMessage(messagetype => Register,
+      LeaveMessage := createMessage(messagetype => Leavechat,
                                     sender      => UserName,
                                     receiver    => Id_Receiver,
                                     content     => Message);
@@ -195,15 +195,16 @@ package body Concrete_Client_Logic is
             --#wenn nein, lege Chatraum an und oeffne guifenster
 
             if This.ChatRoomIdSet.Contains(Item => MsgObject.Receiver) then
-               This.GUI.ShowChatMessages(ChatId  => MsgObject.Receiver,
-                                         Name    => MsgObject.Sender,
-                                         Message => MsgObject.Content);
+               --#TODO#
+               --#zeige Message im Chatraum an
+               null;
             else
                This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
-               This.GUI.ShowChatMessages(ChatId  => MsgObject.Receiver,
-                                         Name    => MsgObject.Sender,
-                                         Message => MsgObject.Content);
+               This.GUI.UpdateChatRoomId(MsgObject.receiver, MsgObject.sender);
+               --#TODO
+               --#oeffne neues Chatfenster
             end if;
+            This.GUI.ShowChatMessages(message => MsgObject);
 
          when Refused =>
             declare
@@ -405,14 +406,8 @@ package body Concrete_Client_Logic is
    begin
       accept Start;
       loop
-         declare
-            MsgObject : MessageObject;
-	 begin
-	    Put_Line("before read");
-	    MsgObject := readMessageFromStream(ClientSocket => Client);
-	    Put_Line("after read");
-	    printMessageToInfoConsole(MsgObject);
-            Instance.ProcessMessageObject(MsgObject);
+         begin
+            Instance.ReadFromServer(Client);
          end;
       end loop;
    end Server_Listener_Task;
