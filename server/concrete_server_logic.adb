@@ -280,7 +280,7 @@ package body Concrete_Server_Logic is
                            chatRoom := Server.getChatrooms.Element (incoming_message.receiver);
                            --# Pruefe ob Client in referenziertem Chatraum
 			   if (client.getChatroomList.Contains (chatRoom)) then
-                              Server.removeClientFromChatroom (client,chatRoom);
+                              Server.removeClientFromChatroom (client,chatRoom,To_String(incoming_message.content));
                            else
 			      client.sendServerMessageToClient(Refused,"you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)&".");
                            end if;
@@ -780,7 +780,14 @@ package body Concrete_Server_Logic is
 
       procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr) is
       begin
-	 chatRoom.removeClientFromChatroom(client);
+	 removeClientFromChatroom(client,chatRoom, "");
+      end removeClientFromChatroom;
+
+      ----------------------------------------------------------------------------------------
+
+      procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr; farewell : String) is
+      begin
+	 chatRoom.removeClientFromChatroom(client,farewell);
 	 gui.updateChatroomOverview(Server.getChatrooms);
 	 gui.printInfoMessage("'"&To_String(client.getUsernameOfClient)&"' left the chatroom with ID '"&Natural'Image(chatRoom.getChatRoomID)&"'");
 	 if chatRoom.getClientList.Length = 0 then
@@ -789,7 +796,6 @@ package body Concrete_Server_Logic is
 	    gui.printInfoMessage("Closed empty chatroom with ID '"&Natural'Image(chatRoom.getChatRoomID)&"'.");
 	 end if;
       end removeClientFromChatroom;
-
 
       ----------------------------------------------------------------------------------------
 

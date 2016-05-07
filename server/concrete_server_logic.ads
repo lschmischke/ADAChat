@@ -96,6 +96,10 @@ package Concrete_Server_Logic is
       procedure removeAllChatRooms;
       -- Entfernt einen Client aus dem angegebenen Chatraum, sofern beide Teil des Servers sind
       procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr);
+      -- Entfernt einen Client aus dem angegebenen Chatraum, sofern beide Teil des Servers sind.
+      -- An die restlichen Teilnehmern in dem Chat wird die Abschiedsnachricht gesendet.
+      -- farewell => Abschiedsnachricht
+      procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr; farewell : String);
    private
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
