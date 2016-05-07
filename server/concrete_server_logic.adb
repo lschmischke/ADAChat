@@ -441,6 +441,7 @@ package body Concrete_Server_Logic is
    begin
       Server := thisServer'Access;
       Server.StartNewServer (ipAdress, port);
+      gui.updateChatroomOverview(Server.getChatrooms);
    end startServer;
 
    ----------------------------------------------------------------------------------------
