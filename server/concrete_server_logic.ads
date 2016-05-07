@@ -58,10 +58,6 @@ package Concrete_Server_Logic is
       procedure declineConnectionWithRefusedMessage (client : Concrete_Client_Ptr; messageContent : String);
       -- Unterbricht eine bestehende Verbindung mit dem Client.
       -- Dieser wird aus allen Chaträumen entfernt, anschließend wird die Verbindung getrennt und die Kontakte benachrichtigt.
-      -- Dann wird der Socket geschlossen.
-      -- cliet => Client, der enfernt werden soll
-      procedure removeClientRoutine (client : Concrete_Client_Ptr);
-      -- Ruft "removeClientRoutine" mit client auf und sendet zusätzlich eine "disconnect"-Nachricht an den Client.
       -- client => Client, der disconnected werden soll
       -- msg => Inhalt der "disconnect"-Nachricht, die an den Client geschickt wird
       procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String);

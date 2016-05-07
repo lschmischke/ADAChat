@@ -418,7 +418,7 @@ package body Concrete_Server_Logic is
       when Error : others =>
       --  Put ("Unexpected exception in Client_Task: ");
       --  Put_Line (Exception_Information (Error));
-         Server.disconnectClient (client,"");
+         Server.disconnectClient (client,"disconnected");
    end Client_Task;
 
    ----------------------------------------------------------------------------------------
@@ -628,16 +628,7 @@ package body Concrete_Server_Logic is
       ----------------------------------------------------------------------------------------
 
       procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String) is
-      serverStr         : Unbounded_String   := To_Unbounded_String ("server");
-      begin
-	 -- # Sende Disconnect-Bestaetigung
-	 client.sendServerMessageToClient(Disconnect,msg);
-	 removeClientRoutine(client);
-      end disconnectClient;
-
-      ----------------------------------------------------------------------------------------
-
-      procedure removeClientRoutine(client : Concrete_Client_Ptr) is
+	 serverStr         : Unbounded_String   := To_Unbounded_String ("server");
 	 chatRoomsOfClient : chatRoom_List.List := client.getChatroomList;
       begin
 	 -- # Client verlässt alle Chaträume
@@ -646,15 +637,16 @@ package body Concrete_Server_Logic is
 	 end loop;
 	 -- # Sende Offline-Status an alle Kontakte vom Client #
 	 broadcastOnlineStatusToContacts (client, Protocol.Offline);
-	 -- # Schliesse Socket zu Client #
-	 Close_Socket (client.getSocket);
 	 -- # Setze User als offline #
 	 Connected_Clients.Delete (client.getUser);
 	 -- # Benachrichtige GUI über Änderung der Connected_Clients
 	 gui.printInfoMessage("'"&To_String(client.getUsernameOfClient) & "' disconnected.");
 	 gui.updateOnlineUserOverview(connectedClientsToClientList);
 	 gui.updateChatroomOverview(chatRooms);
-      end removeClientRoutine;
+	 -- # Schliesse Socket zu Client #
+	 client.sendServerMessageToClient(Disconnect,msg);
+	 Close_Socket (client.getSocket);
+      end disconnectClient;
 
       ----------------------------------------------------------------------------------------
 
