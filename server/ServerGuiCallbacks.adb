@@ -113,7 +113,7 @@ Put_Line("About");
    userCounter : Integer := 0;
    begin
       MyServer := new Concrete_Server;
-      MyServer.startServer(ipAdress => "127.0.0.1",
+      MyServer.startServer(
                          port     => Integer'Value(Port_Edit_Text.Get_Text));
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => True);

@@ -41,13 +41,13 @@ package Concrete_Server_Logic is
       -- Gibt eine Kopie der Kontaktanfragen Map zurück. Diese enthält alle Kontaktfragen, gemappt auf den jeweiligen User, der die Anfrage gestellt hat
       function getContactRequests return userToUsersMap.Map;
       -- Startet den Server auf der übergebenen IP mit dem übergebenem Port
-      procedure StartNewServer (ip : String; port : Natural) ;
+      procedure StartNewServer (port : Natural) ;
       -- Diese Prozedur leitet die Initialisierung des Servers ein und startet
       -- diesen anschliessend. Dies bedeutet insbesondere, dass von nun an auf
       -- einkommende Verbindungsanfragen gelauscht wird und fuer neue Clients
       -- separate Tasks zur Verfuegung gestellt werden, die es ihnen ermoeglichen
       -- untereinander zu kommunizieren.
-      procedure InitializeServer (ip : String; port : Natural);
+      procedure InitializeServer (port : Natural);
       -- Erstellt einen neuen Chatraum, mit der übergebenen ID und fügt automatisch den übergebenen Client zu dem Chatraum hinzu.
       -- firstClient => Client, der direkt hinzugefügt wird
       -- room => Referenz auf den Chatraum, die rausgegeben wird
@@ -140,7 +140,7 @@ private
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    -------------------------------------------------# Implementierung ServerGUICommunication #-------------------------------------------------------------
 
-   procedure startServer(thisServer :  aliased in out  Concrete_Server; ipAdress: String; port : Natural);
+   procedure startServer(thisServer :  aliased in out  Concrete_Server; port : Natural);
    procedure stopServer(thisServer : aliased in out Concrete_Server);
    function loadDB(thisServer : aliased in out Concrete_Server; DataFile : File_type) return Boolean;
    procedure saveDB(thisServer : aliased in out Concrete_Server; DataFile : File_type);

@@ -438,10 +438,10 @@ package body Concrete_Server_Logic is
    ----------------------------------------------------------------------------------------
 
    overriding
-   procedure startServer (thisServer : aliased in out Concrete_Server; ipAdress : String; port : Natural) is
+   procedure startServer (thisServer : aliased in out Concrete_Server; port : Natural) is
    begin
       Server := thisServer'Access;
-      Server.StartNewServer (ipAdress, port);
+      Server.StartNewServer (port);
       gui.updateChatroomOverview(Server.getChatrooms);
    end startServer;
 
@@ -555,7 +555,7 @@ package body Concrete_Server_Logic is
 
       ----------------------------------------------------------------------------------------
 
-      procedure StartNewServer (ip : String; port : Natural) is
+      procedure StartNewServer (port : Natural) is
       begin
       -- # Erzeugte Serverintanz global setzen, damit sie im Package ueberall bekannt ist #
       -- # Datenbank laden #
@@ -564,12 +564,12 @@ package body Concrete_Server_Logic is
 	 gui.printInfoMessage("User database loadad.");
 
 	 --#Sockets aufbauen
-	 InitializeServer (ip, port);
+	 InitializeServer (port);
       end StartNewServer;
 
       ----------------------------------------------------------------------------------------
 
-      procedure InitializeServer (ip : String; port : Natural) is
+      procedure InitializeServer (port : Natural) is
 	 SubServer      : Concrete_Client_Ptr := new Concrete_Client;
 	 subServerSocket : Socket_Type;
 	 serverTask : Main_Server_Task_Ptr := new Main_Server_Task;
@@ -577,7 +577,7 @@ package body Concrete_Server_Logic is
       -- # Erzeugung und Konfiguration des Server-Sockets #
       Initialize;
       Create_Socket (Socket => Socket);
-      SocketAddress.Addr := Inet_Addr (ip);
+      SocketAddress.Addr := Addresses(Get_Host_By_Name(Host_Name),1);
       SocketAddress.Port := Port_Type (port);
       Bind_Socket (Socket => Socket, Address => SocketAddress);
       Listen_Socket (Socket => Socket);
