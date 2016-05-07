@@ -46,22 +46,6 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkToolButton" id="toolbutton_about">
-                <property name="use_action_appearance">False</property>
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">Über AdaChat</property>
-                <property name="use_underline">True</property>
-                <property name="stock_id">gtk-about</property>
-                <signal name="clicked" handler="clicked_button_about" swapped="no"/>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="homogeneous">True</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkToolButton" id="toolbutton_start_server">
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
@@ -111,7 +95,23 @@
               </packing>
             </child>
             <child>
-              <object class="GtkSeparatorToolItem" id="toolbutton1">
+              <object class="GtkToolButton" id="toolbutton_clear">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="label" translatable="yes">Chatnachrichten löschen</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-clear</property>
+                <signal name="clicked" handler="clearChat" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbutton3">
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -123,16 +123,19 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolItem" id="toolbutton2">
+              <object class="GtkToolItem" id="toolbutton4">
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
                 <child>
-                  <object class="GtkLabel" id="label1">
+                  <object class="GtkLabel" id="labelStats">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">label</property>
+                    <property name="xalign">0.51999998092651367</property>
+                    <property name="ypad">5</property>
+                    <property name="label" translatable="yes">User online: 0
+Server not running</property>
                   </object>
                 </child>
               </object>
@@ -259,8 +262,6 @@
             <property name="height_request">181</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="hscrollbar_policy">never</property>
-            <property name="vscrollbar_policy">never</property>
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="treeviewOnlineUser">
@@ -390,8 +391,6 @@
             <property name="height_request">181</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="hscrollbar_policy">never</property>
-            <property name="vscrollbar_policy">never</property>
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="treeviewChatrooms">

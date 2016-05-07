@@ -11,4 +11,5 @@ package ServerGuiCallbacks is
    procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class);
    procedure clicked_button_server_stop ( Object : access Gtkada_Builder_Record'Class);
    procedure kickSelectedUser (Object : access Gtkada_Builder_Record'Class);
+    procedure clearChat (Object : access Gtkada_Builder_Record'Class);
 end ServerGuiCallbacks;

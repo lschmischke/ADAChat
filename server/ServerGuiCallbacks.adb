@@ -37,6 +37,8 @@ with Gtk.Text_Mark; use Gtk.Text_Mark;
 with Gtk.Text_Buffer; use Gtk.Text_Buffer;
 with Gtk.Text_Iter; use Gtk.Text_Iter;
 with Gtk.Combo_Box; use Gtk.Combo_Box;
+with Gtk.Label; use Gtk.Label;
+with Ada.Characters.Latin_1;
 package body ServerGuiCallbacks is
 
 
@@ -62,6 +64,8 @@ OnlineUserTreeStore: Gtk_Tree_Store;
    KickUserComboBox: Gtk_Combo_Box;
     KickUserListStore: Gtk_List_Store;
 
+   LabelStats: Gtk_Label;
+    ChatMessageListStore: Gtk_List_Store;
 
 
    procedure InitializeGuiReferences(myBuilder: access Gtkada_Builder_Record'Class) is begin
@@ -71,7 +75,10 @@ OnlineUserTreeStore: Gtk_Tree_Store;
      OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
       OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
        KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
-       KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
+      KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
+      LabelStats := Gtk_Label(myBuilder.Get_Object("labelStats"));
+      ChatMessageListStore := Gtk_List_Store(myBuilder.Get_Object("chatMessageListStore"));
+
       end InitializeGuiReferences;
 
 
@@ -97,23 +104,27 @@ OnlineUserTreeStore: Gtk_Tree_Store;
 
    begin
 
+Put_Line("About");
 
-
-  Put_Line("Todo");
 
    end clicked_button_about;
 
-   procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class) is begin
+   procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class) is
+   userCounter : Integer := 0;
+   begin
       MyServer.startServer(ipAdress => "127.0.0.1",
                          port     => Integer'Value(Port_Edit_Text.Get_Text));
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => True);
+
+      LabelStats.Set_Label(Str =>"Users online: 0" & Ada.Characters.Latin_1.LF &"Server is running" );
    end clicked_button_server_start;
 
    procedure clicked_button_server_stop ( Object : access Gtkada_Builder_Record'Class) is begin
        MyServer.stopServer;
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => True);
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => False);
+       LabelStats.Set_Label(Str =>"Users online: 0" & Ada.Characters.Latin_1.LF &"Server not running" );
       end clicked_button_server_stop;
 
    procedure kickSelectedUser ( Object : access Gtkada_Builder_Record'Class) is
@@ -124,7 +135,9 @@ OnlineUserTreeStore: Gtk_Tree_Store;
                                                 Column => 0));
          end kickSelectedUser;
 
-
+   procedure clearChat ( Object : access Gtkada_Builder_Record'Class) is begin
+      ChatMessageListStore.Clear;
+      end clearChat;
 
 
 

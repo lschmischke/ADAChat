@@ -82,6 +82,10 @@ begin
      (Builder      => Builder,
       Handler_Name => "rowActivated",
       Handler      => ServerGuiCallbacks.rowHandler'Access);
+      Register_Handler
+      (Builder      => Builder,
+      Handler_Name => "clearChat",
+      Handler      => ServerGuiCallbacks.clearChat'Access);
 
 
 
