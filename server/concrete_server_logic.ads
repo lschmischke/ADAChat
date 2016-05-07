@@ -157,9 +157,11 @@ private
    -- Die eigentliche Verbindungsanfrage (connect) wird ebenfalls erst in den
    -- Client-Tasks vorgenommen. Hier wird lediglich ein Kanal zur Erstkommunikation
    -- aufgebaut und zur Verfuegung gestellt. Es gibt nur eine Instanz von diesem Task.
-   task Main_Server_Task is
+   task type Main_Server_Task is
       entry Start;
    end;
+
+   type Main_Server_Task_Ptr is access Main_Server_Task;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    --------------------------------------------------------------------------------------------------------------------------------------------------------

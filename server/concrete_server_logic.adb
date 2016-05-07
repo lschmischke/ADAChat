@@ -34,10 +34,11 @@ package body Concrete_Server_Logic is
 	 end;
       end loop;
    exception
-      when Error : Socket_Error =>
-	 gui.printErrorMessage("Socket_Error in Main_Server_Task: " & "terminated Main Server Task");
+      --when Error : Socket_Error =>
+      -- gui.printErrorMessage("Socket_Error in Main_Server_Task: " & "terminated Main Server Task");
       when Error : others =>
-         gui.printErrorMessage("Unexpected exception in Main_Server_Task: " & Exception_Information (Error));
+	 --  gui.printErrorMessage("Unexpected exception in Main_Server_Task: " & Exception_Information (Error));
+	 null;
    end Main_Server_Task;
 
 -----------------------------------------------------------------------------
@@ -410,14 +411,14 @@ package body Concrete_Server_Logic is
       end loop;
 
    exception
-      when Error : Socket_Error =>
-         Put ("Socket_Error in Client_Task: ");
-         Put_Line (Exception_Information (Error));
-         --Server.removeClientRoutine(client);
+      --when Error : Socket_Error =>
+      --   Put ("Socket_Error in Client_Task: ");
+      --  Put_Line (Exception_Information (Error));
+      --  Server.removeClientRoutine(client);
       when Error : others =>
-         Put ("Unexpected exception in Client_Task: ");
-         Put_Line (Exception_Information (Error));
-         --Server.disconnectClient (client,"unspecified error");
+      --  Put ("Unexpected exception in Client_Task: ");
+      --  Put_Line (Exception_Information (Error));
+         Server.disconnectClient (client,"");
    end Client_Task;
 
    ----------------------------------------------------------------------------------------
@@ -463,6 +464,7 @@ package body Concrete_Server_Logic is
       end loop;
       thisServer.removeAllChatRooms;
       gui.updateChatroomOverview(thisServer.getChatRooms);
+      gui.printInfoMessage("Stopping server ...");
 
       Close_Socket(thisServer.getSocket);
    end stopServer;
@@ -557,6 +559,7 @@ package body Concrete_Server_Logic is
       begin
       -- # Erzeugte Serverintanz global setzen, damit sie im Package ueberall bekannt ist #
       -- # Datenbank laden #
+         gui.printInfoMessage("Starting server ...");
 	 UserDatabase.loadUserDatabase;
 	 gui.printInfoMessage("User database loadad.");
 
@@ -569,6 +572,7 @@ package body Concrete_Server_Logic is
       procedure InitializeServer (ip : String; port : Natural) is
 	 SubServer      : Concrete_Client_Ptr := new Concrete_Client;
 	 subServerSocket : Socket_Type;
+	 serverTask : Main_Server_Task_Ptr := new Main_Server_Task;
       begin
       -- # Erzeugung und Konfiguration des Server-Sockets #
       Initialize;
@@ -582,7 +586,7 @@ package body Concrete_Server_Logic is
          gui.printInfoMessage("Server initialization successful, starting Server Listener Task...");
 
           pragma Warnings(Off,"potentially blocking operation in protected operation");
-         Main_Server_Task.Start;
+         serverTask.Start;
           pragma Warnings(On ,"potentially blocking operation in protected operation");
       -- # Erzeugung des SubServer-Sockets #
 	 Create_Socket (Socket => subServerSocket);
