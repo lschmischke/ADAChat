@@ -90,6 +90,12 @@ package Concrete_Server_Logic is
       procedure addClientToConnectedClients(client : Concrete_Client_Ptr);
       -- Gibt den Client zu einem eingeloggten User zurück
       function getClientToConnectedUser ( user : UserPtr) return Concrete_Client_Ptr;
+      -- Entfernt den angegebenen Chatraum aus der Chatraum-Liste des Servers
+      procedure removeChatRoom (chatRoom : chatRoomPtr);
+      -- Entfernt alle Chaträume aus der Chatraum-Liste des Server
+      procedure removeAllChatRooms;
+      -- Entfernt einen Client aus dem angegebenen Chatraum, sofern beide Teil des Servers sind
+      procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr);
    private
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;

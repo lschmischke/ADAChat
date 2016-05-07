@@ -273,16 +273,14 @@ package body Concrete_Server_Logic is
                   -- ### LEAVECHAT ###
                   when Protocol.Leavechat => -- # leavechat:client:<ChatRoomID>:<?> #
                      declare
-                        chatRoom       : chatRoomPtr;
+			chatRoom       : chatRoomPtr;
                      begin
                         --# Pruefe, ob referenziertet Raum existiert
                         if Server.getChatrooms.Contains (incoming_message.receiver) then
                            chatRoom := Server.getChatrooms.Element (incoming_message.receiver);
                            --# Pruefe ob Client in referenziertem Chatraum
-                           if (client.getChatroomList.Contains (chatRoom)) then
-                              chatRoom.removeClientFromChatroom (client);
-                              gui.updateChatroomOverview(Server.getChatrooms);
-			      gui.printInfoMessage("'"&To_String(client.getUsernameOfClient)&"' left the chatroom with ID '"&Natural'Image(chatRoom.getChatRoomID)&"'");
+			   if (client.getChatroomList.Contains (chatRoom)) then
+                              Server.removeClientFromChatroom (client,chatRoom);
                            else
 			      client.sendServerMessageToClient(Refused,"you are not in the chatroom with id " & Integer'Image (incoming_message.receiver)&".");
                            end if;
@@ -415,11 +413,11 @@ package body Concrete_Server_Logic is
       when Error : Socket_Error =>
          Put ("Socket_Error in Client_Task: ");
          Put_Line (Exception_Information (Error));
-         Server.removeClientRoutine(client);
+         --Server.removeClientRoutine(client);
       when Error : others =>
          Put ("Unexpected exception in Client_Task: ");
          Put_Line (Exception_Information (Error));
-         Server.disconnectClient (client,"unspecified error");
+         --Server.disconnectClient (client,"unspecified error");
    end Client_Task;
 
    ----------------------------------------------------------------------------------------
@@ -452,6 +450,7 @@ package body Concrete_Server_Logic is
       client : Concrete_Client_Ptr := thisServer.getConnectedClients.Element (user);
    begin
       thisServer.disconnectClient (client,"kicked");
+      --TODO Listener Task beenden
    end kickUserWithName;
 
    ----------------------------------------------------------------------------------------
@@ -461,6 +460,8 @@ package body Concrete_Server_Logic is
       for client of thisServer.getConnectedClients loop
 	 thisServer.disconnectClient(client,"server shut down");
       end loop;
+      thisServer.removeAllChatRooms;
+      gui.updateChatroomOverview(thisServer.getChatRooms);
 
       Close_Socket(thisServer.getSocket);
    end stopServer;
@@ -636,8 +637,7 @@ package body Concrete_Server_Logic is
       begin
 	 -- # Client verlässt alle Chaträume
 	 for chatRoom of chatRoomsOfClient loop
-	    chatRoom.removeClientFromChatroom (client);
-	    gui.printInfoMessage("'"&To_String(client.getUsernameOfClient)&"' left the chatroom with ID '"&Natural'Image(chatRoom.getChatRoomID)&"'");
+	    removeClientFromChatroom(client,chatRoom);
 	 end loop;
 	 -- # Sende Offline-Status an alle Kontakte vom Client #
 	 broadcastOnlineStatusToContacts (client, Protocol.Offline);
@@ -648,6 +648,7 @@ package body Concrete_Server_Logic is
 	 -- # Benachrichtige GUI über Änderung der Connected_Clients
 	 gui.printInfoMessage("'"&To_String(client.getUsernameOfClient) & "' disconnected.");
 	 gui.updateOnlineUserOverview(connectedClientsToClientList);
+	 gui.updateChatroomOverview(chatRooms);
       end removeClientRoutine;
 
       ----------------------------------------------------------------------------------------
@@ -754,6 +755,40 @@ package body Concrete_Server_Logic is
 	    return null;
 	 end if;
       end;
+
+      ----------------------------------------------------------------------------------------
+
+      procedure removeChatRoom (chatRoom : chatRoomPtr) is
+	 cursor : chatRoomMap.Cursor;
+      begin
+	 if chatRooms.Contains(chatRoom.getChatRoomID) then
+	    cursor := chatRooms.Find(chatRoom.getChatRoomID);
+	    chatRooms.Delete(cursor);
+	 end if;
+      end removeChatRoom;
+
+
+      ----------------------------------------------------------------------------------------
+
+      procedure removeAllChatRooms is
+      begin
+	 chatRooms.Clear;
+      end removeAllChatRooms;
+
+      ----------------------------------------------------------------------------------------
+
+      procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr) is
+      begin
+	 chatRoom.removeClientFromChatroom(client);
+	 gui.updateChatroomOverview(Server.getChatrooms);
+	 gui.printInfoMessage("'"&To_String(client.getUsernameOfClient)&"' left the chatroom with ID '"&Natural'Image(chatRoom.getChatRoomID)&"'");
+	 if chatRoom.getClientList.Length = 0 then
+	    Server.removeChatRoom(chatRoom);
+	    -- TODO Chatroom Free?
+	    gui.printInfoMessage("Closed empty chatroom with ID '"&Natural'Image(chatRoom.getChatRoomID)&"'.");
+	 end if;
+      end removeClientFromChatroom;
+
 
       ----------------------------------------------------------------------------------------
 

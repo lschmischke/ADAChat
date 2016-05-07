@@ -209,7 +209,7 @@ end if;
      KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
       KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
 
-      ChatroomTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("listtoreChatrooms"));
+      ChatroomTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreChatrooms"));
       ChatroomTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewChatrooms"));
 
 
