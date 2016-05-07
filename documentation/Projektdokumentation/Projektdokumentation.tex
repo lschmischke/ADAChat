@@ -162,6 +162,55 @@ Der Dienst ist in Client und Server unterteilt. Beide Komponenten können über 
 % rudimentär? downgradest uns ja selber :P
 Die Benutzerschnittstelle des Clients gestattet das Registrieren und Einloggen am Server. Im Anschluss bekommt der Nutzer seine Kontaktliste angezeigt, in der er unter anderem andere Nutzer als Freunde hinzufügen oder löschen kann. Bei Doppelklick auf einen befreundeten Nutzer öffnet sich ein seprarates Chatfenster zur direkten Kommunikation. Diese kann zur Gruppenkommunikation erweitert werden, indem weitere Freunde zum Chat eingeladen werden.
 
+
+% ----------------------------------------------------------------------------------------------------------
+% Vorgehen
+% ----------------------------------------------------------------------------------------------------------
+\section{Vorgehen}
+Nachdem die Projektidee gefunden war wurde das Projekt analysiert und systematisch eingeteilt. Hierzu wurde sich im Team Gedanken gemacht, was 
+der Instant-Messaging-Dienst im Einzelnen an Funktionaltität bereitstellen 
+soll. Die Gruppe definierte dazu genaue Pflichten und skizzierte anhand dieser die Benutzeroberflächen.
+
+Die daraus resultierenden Aufgabenbereiche wurde im Anschluss auf die Gruppenmitglieder verteilt: 
+\begin{description}
+	\item[Geschäftslogik Server:] Herr Kreck und Herr Schmischke
+	\item[Benutzeroberfläche Server:] Herr Iffland
+	\item[Geschäftslogik Client:] Herr Westbrock
+	\item[Benutzeroberfläche Client:] Herr Bayer 
+\end{description}
+
+Organisatorisch beschloss das Projektteam wöchentliche Treffen um die bisher
+entwickelte Funktionalität zusammenzuführen und zu testen. Des Weiteren wurden
+die Aufgaben für die nächste Woche besprochen und festgesetzt.
+
+\section{Pflichtenheft}
+Folgende Funktionalität wurden bzgl. des Clients festgelegt.
+Einem Nutzer soll es möglich sein:
+\begin{itemize}
+	\item sich durch eine Registrierung ein Konto zu erstellen. Hierfür muss ein freiwählbarer aber eindeutiger Benutzername ausgewählt und ein Passwort zum späteren Login festgelegt werden.
+	\item sich über einen Loginscreen mit seinem Benutzernamen und Passwort in den Chat einwählen zu können.
+	\item nach vorangegangenem Login seine Kontaktliste einsehen zu können, Kontakte daraus zu entfernen oder neue über einen Kontaktanfrage hinzuzufügen zu können.
+	\item über Kontaktanfragen selbstständig entscheiden zu dürfen, d.h. diese entweder annehmen oder ablehnen zu können. 
+	\item durch Interaktion mit der Kontaktliste mit seinen Kontakten kommunizieren zu können. Dieses soll er sowohl mit einem einzelnen Kommunikationspartner als auch mit mehreren gleichzeitig vollziehen können.
+\end{itemize}
+
+
+Folgende Funktionalität wurden bzgl. des Servers festgelegt.
+Einem Administrator soll es möglich sein:
+\begin{itemize}
+	\item den Server von der GUI aus zu starten und zu stoppen.
+	\item auszuwählen auf welchem Port der Server kommunizieren soll.
+	\item die momentan verbundenen Benutzer mit zusätzlichen Informationen einsehen zu können (Client-IP, Kontakte, offene Chaträume).
+	\item einen zuvor selektierten Benutzer zu kicken.
+	\item die Anzahl der momentan verbundenen Benutzer einsehen zu können.
+	\item die momentan zur Kommunikation genutzten Chaträume einsehen zu können.
+	\item einen Überblick über die Aktivitäten des Servers zu erlangen, indem 
+	dieser diese zur Kenntnissnahme wichtige Aktivitäten in Informations- und Fehlerfeldern ausgibt.
+	\item einen Mitschnitt über die momentan aublaufende Nutzerkommunikation angezeigt zu bekommen.
+\end{itemize} 
+
+Aus diesen für den Nutzer und Administrator zur Verfügung gestellten Funktionen resultiert unter anderem, dass die Geschäftslogik des Servers Nutzer, Chaträume, Kontaktanfragen usw. verwalten können muss und dass diese Daten beim Starten und Beenden der Serveranwendung persistent gespeichert bzw. aus einer Datebank geladen werden.
+
 % ----------------------------------------------------------------------------------------------------------
 % Architektur
 % ----------------------------------------------------------------------------------------------------------
@@ -339,21 +388,9 @@ Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn 
 
 
 
-\subsection{Klassendiagramm}
+\subsection{Implementierungslogik - Zustandsdiagramm}
 
-% ----------------------------------------------------------------------------------------------------------
-% Vorgehen
-% ----------------------------------------------------------------------------------------------------------
-\section{Vorgehen}
-Usecases definiert
-
-Skizzen für GUIs erstellt
-
-aufteilen des Klassendiagramms auf die Leute, wöchentliche Treffen
-
-
-\subsection{dies und das}
-bla bla
+\subsection{Klassendiagramme}
 
 % ----------------------------------------------------------------------------------------------------------
 % Probleme
