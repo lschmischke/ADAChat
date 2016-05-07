@@ -41,7 +41,14 @@ with Gtk.Text_Iter; use Gtk.Text_Iter;
 with Gtk.Menu_Item; use Gtk.Menu_Item;
 with GNAT.Sockets; use GNAT.Sockets;
 
- with GNAT;use GNAT;
+with GNAT;use GNAT;
+
+with Ada.Calendar; use Ada.Calendar;
+with GNAT.Calendar.Time_IO;
+
+with Gtk.Label; use Gtk.Label;
+with Ada.Characters.Latin_1;
+with Ada.Containers; use ada.Containers;
 package body Concrete_Server_Gui_Logic is
 
    PortGEntry : Gtk_GEntry;
@@ -68,45 +75,50 @@ package body Concrete_Server_Gui_Logic is
    OnlineUserTreeView: Gtk_Tree_View;
    OnlineUserTreeIter: Gtk_Tree_Iter;
 
-    KickUserListStore : Gtk_List_Store;
+   KickUserListStore : Gtk_List_Store;
    KickUserComboBox :Gtk_Combo_Box;
 
-    ChatroomTreeView : Gtk_Tree_View;
-      ChatroomTreeStore :Gtk_Tree_Store;
+   ChatroomTreeView : Gtk_Tree_View;
+   ChatroomTreeStore :Gtk_Tree_Store;
+
+   LabelStats: Gtk_Label;
 
 
 
---------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    procedure printErrorMessage(thisGUI :  aliased in Server_Gui; errorMessage : String)
    is
 
       iter: Gtk_Text_Iter;
-
+      Now : Time := Clock;
    begin
-       ErrorsListStore.Append(Iter => ErrorsTreeViewIterator);
+      ErrorsListStore.Insert(Iter => ErrorsTreeViewIterator,
+                             Position => 0);
       ErrorsListStore.Set(Iter   => ErrorsTreeViewIterator,
-                                Column => 0,
-                                Value  => errorMessage);
+                          Column => 0,
+                          Value  => "(" & GNAT.Calendar.Time_Io.Image (Now, "%H:%M:%S") &") " &errorMessage);
 
    end printErrorMessage;
---------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure printInfoMessage(thisGUI : aliased in Server_Gui; infoMessage : String) is
-
+      Now : Time := Clock;
    begin
-      Put_Line(infoMessage);
-      InformationsListStore.Append(Iter => InformationsTreeViewIterator);
+      InformationsListStore.Insert(Iter => InformationsTreeViewIterator ,
+                                   Position => 0);
       InformationsListStore.Set(Iter   => InformationsTreeViewIterator,
                                 Column => 0,
-                                Value  => infoMessage);
+                                Value  =>"(" & GNAT.Calendar.Time_Io.Image (Now, "%H:%M:%S") &") " & infoMessage);
 
    end printInfoMessage;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
-   procedure printChatMessage(thisGUI : aliased  in Server_Gui; chatMessage : MessageObject) is begin
-        ChatMessageListStore.Append(Iter => ChatMessageListStoreIterator);
+   procedure printChatMessage(thisGUI : aliased  in Server_Gui; chatMessage : MessageObject) is
+      Now : Time := Clock;
+   begin
+      ChatMessageListStore.Append(Iter => ChatMessageListStoreIterator);
       ChatMessageListStore.Set(Iter   => ChatMessageListStoreIterator,
                                Column => 0,
-                               Value  => To_String(chatMessage.sender) & " -> " & Natural'Image(chatMessage.receiver) &": "  &To_String(chatMessage.content));
+                               Value  =>"(" & GNAT.Calendar.Time_Io.Image (Now, "%H:%M:%S") &") " & To_String(chatMessage.sender) & " -> " & Natural'Image(chatMessage.receiver) &": "  &To_String(chatMessage.content));
 
    end printChatMessage;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -119,80 +131,76 @@ package body Concrete_Server_Gui_Logic is
       TempIter: Gtk_Tree_Iter;
       ChatroomIterator: Gtk_Tree_Iter;
       SingleChatroomIterator: Gtk_Tree_Iter;
-             begin
+   begin
 
       OnlineUserTreeStore.Clear;
+      KickUserListStore.Clear;
 
-  --    OnlineUserTreeView.
-    --  TreeStore.Append(Iter   => SecondLevelIterator,
-      --                 Parent => InformationsTreeViewIterator);
-      --TreeStore.Set(Iter   => SecondLevelIterator,
-        --            Column => 0 ,
-  --          Value  => "Test456" );
+
 
       For client of viewComponents loop
-         if To_String(client.getUsernameOfClient) /= "server" then
-         OnlineUserTreeIter := Null_Iter;
-         ContactsIterator := Null_Iter;
-         SingleContactIterator := Null_Iter;
+            OnlineUserTreeIter := Null_Iter;
+            ContactsIterator := Null_Iter;
+            SingleContactIterator := Null_Iter;
 
-             OnlineUserTreeStore.Append(Iter   => OnlineUserTreeIter,
-                                        Parent => Null_Iter );
-           OnlineUserTreeStore.Set(Iter   => OnlineUserTreeIter,
-                    Column => 0 ,
-                    Value  => To_String(client.getUsernameOfClient));
+            OnlineUserTreeStore.Append(Iter   => OnlineUserTreeIter,
+                                       Parent => Null_Iter );
+            OnlineUserTreeStore.Set(Iter   => OnlineUserTreeIter,
+                                    Column => 0 ,
+                                    Value  => To_String(client.getUsernameOfClient));
 
-         OnlineUserTreeStore.Append(Iter   => IpAddressIterator,
-                                    Parent => OnlineUserTreeIter);
-         OnlineUserTreeStore.Set(Iter   => IpAddressIterator,
-                                 Column => 0,
-                                 Value  => "IP-Adresse: " & Gnat.Sockets.Image(client.getSocketAddress) );
-
-
-         KickUserListStore.Append(Iter => TempIter);
-         KickUserListStore.Set(Iter   => TempIter,
-                               Column => 0,
-                               Value  => To_String(client.getUsernameOfClient));
-
-         OnlineUserTreeStore.Append(Iter   => ContactsIterator,
-                                    Parent => OnlineUserTreeIter);
-         OnlineUserTreeStore.Set(Iter   => ContactsIterator,
-                                 Column => 0,
-                                 Value  => "Kontakte");
+            OnlineUserTreeStore.Append(Iter   => IpAddressIterator,
+                                       Parent => OnlineUserTreeIter);
+            OnlineUserTreeStore.Set(Iter   => IpAddressIterator,
+                                    Column => 0,
+                                    Value  => "IP-Adresse: " & Gnat.Sockets.Image(client.getSocketAddress) );
 
 
-         For contact of client.getUser.getContacts loop
-            OnlineUserTreeStore.Append(Iter   => SingleContactIterator,
-                                       Parent => ContactsIterator);
-            OnlineUserTreeStore.Set(Iter   => SingleContactIterator,
-                                    Column =>0 ,
-                                    Value  => To_String(contact.getUsername) );
+            KickUserListStore.Append(Iter => TempIter);
+            KickUserListStore.Set(Iter   => TempIter,
+                                  Column => 0,
+                                  Value  => To_String(client.getUsernameOfClient));
 
-         end loop;
+            OnlineUserTreeStore.Append(Iter   => ContactsIterator,
+                                       Parent => OnlineUserTreeIter);
+            OnlineUserTreeStore.Set(Iter   => ContactsIterator,
+                                    Column => 0,
+                                    Value  => "Kontakte");
 
-         OnlineUserTreeStore.Append(Iter   => ChatroomIterator,
-                                    Parent => OnlineUserTreeIter);
-         OnlineUserTreeStore.Set(Iter   => ChatroomIterator,
-                                 Column => 0,
-                                 Value  => "Chatrooms");
 
-         For chatroom of client.getChatroomList loop
-            OnlineUserTreeStore.Append(Iter   => SingleChatroomIterator,
-                                       Parent => ChatroomIterator);
-            OnlineUserTreeStore.Set(Iter   => SingleChatroomIterator,
-                                    Column =>0 ,
-                                    Value  => Natural'Image(chatroom.getChatRoomID) );
+            For contact of client.getUser.getContacts loop
+               OnlineUserTreeStore.Append(Iter   => SingleContactIterator,
+                                          Parent => ContactsIterator);
+               OnlineUserTreeStore.Set(Iter   => SingleContactIterator,
+                                       Column =>0 ,
+                                       Value  => To_String(contact.getUsername) );
 
-         end loop;
-end if;
+            end loop;
+
+            OnlineUserTreeStore.Append(Iter   => ChatroomIterator,
+                                       Parent => OnlineUserTreeIter);
+            OnlineUserTreeStore.Set(Iter   => ChatroomIterator,
+                                    Column => 0,
+                                    Value  => "Chatrooms");
+
+            For chatroom of client.getChatroomList loop
+               OnlineUserTreeStore.Append(Iter   => SingleChatroomIterator,
+                                          Parent => ChatroomIterator);
+               OnlineUserTreeStore.Set(Iter   => SingleChatroomIterator,
+                                       Column =>0 ,
+                                       Value  => Natural'Image(chatroom.getChatRoomID) );
+
+            end loop;
+
       end loop;
+
+       LabelStats.Set_Label(Str =>"Users online: " & Count_Type'Image(viewComponents.Length) & Ada.Characters.Latin_1.LF &"Server is running" );
 
    end updateOnlineUserOverview;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure updateOfflineUserOverview(thisGUI : aliased in Server_Gui; viewComponents : userViewOfflineMap.Map)is null;
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    procedure InitServerGui(myBuilder: Gtkada_Builder) is begin
-      Put_Line("Init Gui Components");
       PortGEntry := Gtk_GEntry(myBuilder.Get_Object("config_port"));
       PortGEntry.Set_Text("12321");
 
@@ -204,22 +212,24 @@ end if;
 
       ErrorsListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreErrors"));
       ErrorsTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewErrors"));
-             OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
+      OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
       OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
-     KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
+      KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
       KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
 
       ChatroomTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreChatrooms"));
       ChatroomTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewChatrooms"));
 
+      LabelStats := Gtk_Label(myBuilder.Get_Object("labelStats"));
 
-      Put_Line("Initialization complete!");
+
    End InitServerGui;
 
    procedure updateChatroomOverview(thisGUI : aliased in Server_Gui; viewComponents : chatRoomMap.Map) is
       ChatroomIter: Gtk_Tree_Iter;
       UserIter: Gtk_Tree_Iter;
    begin
+      ChatroomTreeStore.Clear;
       for room of viewComponents loop
          ChatroomTreeStore.Append(Iter   => ChatroomIter,
                                   Parent => Null_Iter);
@@ -232,8 +242,8 @@ end if;
             ChatroomTreeStore.Set(Iter   => UserIter,
                                   Column => 0 ,
                                   Value  => To_String(user.getUsernameOfClient) );
-            end loop;
          end loop;
-      end updateChatroomOverview;
+      end loop;
+   end updateChatroomOverview;
 end Concrete_Server_Gui_Logic;
 
