@@ -285,14 +285,7 @@ Der Verbindungsversuch hat zwei mögliche Resultate:
 	Sollte das Verbinden nicht gelingen, wird vom Server eine an den Standard-Chatraum adressierte \textit{refused}-Nachricht versendet, deren Inhalt Aufschluss über die Hintergründe des Misserfolgs liefert. Hierfür existieren vier verschiedene Szenarien.
 	\begin{enumerate}
 		\item \textbf{der Benutzer ist unbekannt} \newline
-			Wird ein Benutzername übergeben, welcher dem Server nicht bekannt ist, schlägt das Einloggen fehl. Der Inhalt der Nachricht lautet dann \glqq user not found in database\grqq{}.
-			
-			\vspace{1em}
-			\begin{minipage}{\linewidth}
-				\centering
-				\includegraphics[width=0.7\linewidth]{img/connect2.png}
-				\label{fig:connect2}
-			\end{minipage} 	
+			Wird ein Benutzername übergeben, welcher dem Server nicht bekannt ist, schlägt das Einloggen fehl. Der Inhalt der Nachricht lautet dann \glqq user not found in database\grqq{}. 	
 		\item \textbf{das Passwort ist nicht korrekt} \newline
 			Sollte das übergebene Passwort nicht mit dem in der Datenbank des Servers hinterlegtem Passwort des Benutzers übereinstimmen, kann der Client nicht eingeloggt werden. Der Inhalt der Nachricht lautet dann \glqq invalid password\grqq{}.
 		\item \textbf{der angegebene Benutzer ist schon eingeloggt} \newline
@@ -301,7 +294,12 @@ Der Verbindungsversuch hat zwei mögliche Resultate:
 		    Wenn der Client sich bereits als ein Benutzer zum Server verbunden hat, lehnt der Server ein erneutes Einloggen ab. Der Inhalt der Nachricht lautet dann \glqq you are already logged in to an account\grqq.
 	\end{enumerate}
 	
-	% entweder zu jeder Fehlermeldung ein Bild oder ein zentrales Bild nach der auflistung
+		\vspace{1em}
+		\begin{minipage}{\linewidth}
+			\centering
+			\includegraphics[width=0.7\linewidth]{img/connect2.png}
+			\label{fig:connect2}
+		\end{minipage}
 	
 \end{itemize}
 
@@ -364,27 +362,57 @@ Sollte sich der Online-Status eines Kontaktes ändern, durch Ein-/Ausloggen oder
 \subsubsection{Chatten}
 Jeder Form des Chattens findet in einem Chatraum statt. Dieser muss zuerst vom Server erstellt werden. Hierzu muss der Client eine \textit{chatrequest}-Nachricht an den Server senden. Adressiert wird diese an den Serverchatraum, der Inhalt gibt an, mit welchem eingeloggten Kontakt man chatten möchte. Mit Benutzern, die nicht Kontakt des Clients sind, kann nicht gechattet werden.
 
-%Bild
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/chatrequest1.png}
+	\label{fig:chatrequest1}
+\end{minipage}
+\vspace{0.5em}
 
 Der Server verarbeitet die Anfrage, in dem er einen Chatraum mit einer einzigartigen ID erstellt und den anfragenden sowie den angefragten Benutzer zu dem Chatraum hinzufügt. Dem anfragenden Benutzer wird anschließend mit einer \textit{chatrequest}-Nachricht geantwortet, die als Empfänger-ID die Nummer des Chatraums trägt. Diese Nummer dient nun als Adresse aller \textit{chat}-Nachrichten, die in diesem Raum ausgetauscht werden. 
 
-%Bild
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/chat1.png}
+	\label{fig:chat1}
+\end{minipage}
+\vspace{0.5em}
 
 Möchte der Benutzer einen weiteren Kontakt zu diesem Chat hinzufügen, sendet er eine analoge \textit{chatrequest}-Nachricht mit der Chatraum-ID als Empfänger-ID.
 
 Ändert sich die Teilnehmerliste eines Chats, indem ein neuer Benutzer hinzugefügt wurde oder ein Benutzer den Chat verlässt, teilt der Server dies allen übrigen Teilnehmern im Chat mit einer \textit{userlist}-Nachricht mit. Im Inhalt dieser an den jeweiligen Chatraum adressierten Nachricht befinden sich die Benutzernamen aller Teilnehmer, durch das vom Protokoll genutzte Trennzeichen jeweils separiert.
 
-%Bild
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/userlist1.png}
+	\label{fig:userlist1}
+\end{minipage}
+\vspace{0.5em}
 
 Ein Chatraum wird durch Versenden einer an den jeweiligen Chatraum adressierte \textit{leavechat}-Nachricht verlassen. Dem Benutzer steht es offen einen Abschiedstext anzugeben, der nach dem Verlassen im Chat angegeben wird.
 
-%Bild
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/leavechat1.png}
+	\label{fig:leavechat1}
+\end{minipage}
+\vspace{0.5em}
 
 
 \subsubsection{Ausloggen}
-Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn der Server die Nachricht bestätigt, wurde der Benutzer erfolgreich ausgeloggt.
+Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn der Server diese durch eine weitere \textit{disconnect}-Nachricht dem Inhalt \glqq ok\grqq{}. bestätigt, wurde der Benutzer erfolgreich ausgeloggt.
 
-%Bild
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/disconnect.png}
+	\label{fig:disconnect}
+\end{minipage}
+\vspace{0.5em}
 
 
 
