@@ -15,68 +15,91 @@ with Ada.Strings.Unbounded.Hash;
 with GUI_to_Server_Communication;
 with Server_To_GUI_Communication; use Server_To_GUI_Communication;
 
-
-
--- # TODOs #
---       prüfen ob Kontakt beim Add bereits in Kontaktliste
---       Sicherstellen, dass man keine Nutzer in den Chat mit dem Server eintragen kann
---       GetUser = null überall Abfragen
---       Kontaktrequest ablehnen funktioniert nicht
---       Generelle Kontrolle einführen, ob username richtig und ob gültiger Receiver
-
-
 -- Dieses Paket spiegelt die serverseitige Funktionalitaet der Chatanwendung wieder.
 package Concrete_Server_Logic is
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
    package GTS renames GUI_to_Server_Communication;
 
-      function userHash (userToHash : UserPtr) return Hash_Type;
-   package userToClientMap is new Ada.Containers.Hashed_Maps(Key_Type        => UserPtr,
-							 Element_Type    => Concrete_Client_Ptr,
-							 Hash            => userHash,
-							 Equivalent_Keys => "=");
-
-
-   function Hash (R : Natural) return Hash_Type;
-   package chatRoomMap is new Ada.Containers.Hashed_Maps(Key_Type        => Natural,
-						     Element_Type    => chatRoomPtr,
-						     Hash            => Hash,
-                                                         Equivalent_Keys => "=");
-
-   package userToUsersMap is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => UserPtr,
-						     Element_Type    => dataTypes.UserList.List,
-						     Hash            => userHash,
-                                                     Equivalent_Keys => "=", "=" =>dataTypes.UserList."=");
-
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    -- Typ einer Serverinstanz. Diese haelt als Attribute ihren Socket, IP-Adresse
-   -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients.
-
-    -- type Concrete_Server is new Server_Interface with record
+   -- und Port, sowieso eine Verwaltungsliste von allen angemeldeten  Clients und ein Übersicht über alle Chaträume.
    protected type Concrete_Server is new GTS.Server with
+      -- Gibt den Socket des Servers zurück
       function getSocket return Socket_Type;
+      -- Gibt die SocketAdresse des Servers zurück
       function getSocketAddress return Sock_Addr_Type;
+      -- Gibt eine Kopie der Liste verbundener Clients zurück
       function getConnectedClients return userToClientMap.Map;
+      -- Gibt eine Referenz auf die User-Datenbank zurück. Sie enthält alle bereits registrierten Benutzer und deren Informationen.
       function getUserDatabase return User_Database_Ptr;
+      -- Gibt eine Kopie der Chatraum-Map zurück. Diese bildet die ID des Chatraums auf die Referenz des Chatraums ab.
       function getChatrooms return chatRoomMap.Map;
+      -- Gibt eine Kopie der Kontaktanfragen Map zurück. Diese enthält alle Kontaktfragen, gemappt auf den jeweiligen User, der die Anfrage gestellt hat
       function getContactRequests return userToUsersMap.Map;
+      -- Startet den Server auf der übergebenen IP mit dem übergebenem Port
       procedure StartNewServer (ip : String; port : Natural) ;
-         -- Diese Prozedur nimmt eine zuvor erzeuge Serverinstanz entgegen und erstellt
-   -- fuer diese einen Server-Socket, welchem eine IP-Adresse und Portnr.
-   -- zugewiesen wird.
+      -- Diese Prozedur leitet die Initialisierung des Servers ein und startet
+      -- diesen anschliessend. Dies bedeutet insbesondere, dass von nun an auf
+      -- einkommende Verbindungsanfragen gelauscht wird und fuer neue Clients
+      -- separate Tasks zur Verfuegung gestellt werden, die es ihnen ermoeglichen
+      -- untereinander zu kommunizieren.
       procedure InitializeServer (ip : String; port : Natural);
-      procedure createChatRoom(id : in Natural; firstClient : in Concrete_Client_Ptr; room : out chatRoomPtr);
+      -- Erstellt einen neuen Chatraum, mit der übergebenen ID und fügt automatisch den übergebenen Client zu dem Chatraum hinzu.
+      -- firstClient => Client, der direkt hinzugefügt wird
+      -- room => Referenz auf den Chatraum, die rausgegeben wird
+      procedure createChatRoom(firstClient : in Concrete_Client_Ptr; room : out chatRoomPtr);
+      -- Lehnt eine Verbindungsanfrage von dem übergebenen Client ab. Der Inhalt der Nachricht kann angegeben werden.
+      -- client => Client, dessen Verbindungsanfrage abgelehnt wird
+      -- messageContent => Inhalt, der "refused"-Nachricht, die dem Client geschickt wird, sollte den Grund der Ablehnung beinhalten
       procedure declineConnectionWithRefusedMessage (client : Concrete_Client_Ptr; messageContent : String);
-      procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String);
+      -- Unterbricht eine bestehende Verbindung mit dem Client.
+      -- Dieser wird aus allen Chaträumen entfernt, anschließend wird die Verbindung getrennt und die Kontakte benachrichtigt.
+      -- Dann wird der Socket geschlossen.
+      -- cliet => Client, der enfernt werden soll
       procedure removeClientRoutine (client : Concrete_Client_Ptr);
+      -- Ruft "removeClientRoutine" mit client auf und sendet zusätzlich eine "disconnect"-Nachricht an den Client.
+      -- client => Client, der disconnected werden soll
+      -- msg => Inhalt der "disconnect"-Nachricht, die an den Client geschickt wird
+      procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String);
+      -- Benachrichtigt die Kontakte des Clients über seine Statusänderung (nach Online- oder Online-kommen)
+      -- client => Client, dessen Kontakte benachrichtigt werden
+      -- status => Messagetyp der Nachricht, muss Online oder Offline sein, sonst wird der Aufruf der Funktion ignoriert
       procedure broadcastOnlineStatusToContacts (client : Concrete_Client_Ptr; status : MessageTypeE);
+      -- Überprüft, ob eine Kontaktanfrage von dem requesting User zu dem requested User existiert. Achtung: Kontaktanfragen existieren nur
+      -- während der Laufzeit des Servers, in der die Anfrage gestellt wird. Mit dem Stoppen des Servers gehen die Anfragen verloren
+      -- return => true, wenn die Kontaktanfrage existiert, sonst false
       function checkIfContactRequestExists(requestingUser : UserPtr; requestedUser : UserPtr) return Boolean;
+      -- Entfernt eine Kontaktanfrage aus der Liste des Servers
+      -- requestingUser => User, der die Anfrage gestellt hat
+      -- requestedUser => User, dem die Anfrage gestellt wurde
       procedure removeContactRequest (requestingUser : UserPtr; requestedUser : UserPtr);
+      -- Fügt eine Kontaktanfrage zur Liste des Servers hinzu
+      -- requestingUser => User, der die Anfrage stellt
+      -- requestedUser => User, dem die Anfrage gestellt wird
       procedure addContactRequest(requestingUser: UserPtr; requestedUser: UserPtr);
+      -- Gibt eine Liste aller verbundenen User zurück
       function connectedClientsToClientList return userViewOnlineList.List;
-      procedure addChatroom(room : chatRoomPtr);
+      -- Gibt die nächste verfügbare Nummer für einen neuen Chatraum zurück
+      -- id => ID, die bisher ungenutzt ist, und einem neuen Chatraum zugewiesen werden kann
       procedure getNextChatRoomID (id : out Natural);
+      -- Fügt den client zu der Liste verbundener Clients hinzu
       procedure addClientToConnectedClients(client : Concrete_Client_Ptr);
+      -- Gibt den Client zu einem eingeloggten User zurück
       function getClientToConnectedUser ( user : UserPtr) return Concrete_Client_Ptr;
+      -- Entfernt den angegebenen Chatraum aus der Chatraum-Liste des Servers
+      procedure removeChatRoom (chatRoom : chatRoomPtr);
+      -- Entfernt alle Chaträume aus der Chatraum-Liste des Server
+      procedure removeAllChatRooms;
+      -- Entfernt einen Client aus dem angegebenen Chatraum, sofern beide Teil des Servers sind
+      procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr);
+      -- Entfernt einen Client aus dem angegebenen Chatraum, sofern beide Teil des Servers sind.
+      -- An die restlichen Teilnehmern in dem Chat wird die Abschiedsnachricht gesendet.
+      -- farewell => Abschiedsnachricht
+      procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr; farewell : String);
    private
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
@@ -86,25 +109,26 @@ package Concrete_Server_Logic is
       chatRooms : chatRoomMap.Map;
       ContactRequests : userToUsersMap.Map;
    end Concrete_Server;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Referenz auf eine Serverinstanz
    type Concrete_Server_Ptr is access all Concrete_Server;
 
-
-
-   -- Diese Prozedur leitet die Initialisierung des Servers ein und startet
-   -- diesen anschliessend. Dies bedeutet insbesondere, dass von nun an auf
-   -- einkommende Verbindungsanfragen gelauscht wird und fuer neue Clients
-   -- separate Tasks zur Verfuegung gestellt werden, die es ihnen ermoeglichen
-   -- untereinander zu kommunizieren.
-
-
-
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    type Client_Task is limited private;
    type Client_Task_Ptr is access Client_Task;
 
-
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 private
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    -- Jede Instanz dieses Tasks ist pro Client fuer die eigentliche Kommunikation
    -- zwischen den Clients und die Interpretation der Nachrichten zustaendig.
@@ -112,8 +136,10 @@ private
       entry Start(newClient : Concrete_Client_Ptr);
    end Client_Task;
 
-    -------------------------------------------------------------------------------------------
-   -- # Implementierung ServerGUICommunication #
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   -------------------------------------------------# Implementierung ServerGUICommunication #-------------------------------------------------------------
+
    procedure startServer(thisServer :  aliased in out  Concrete_Server; ipAdress: String; port : Natural);
    procedure stopServer(thisServer : aliased in out Concrete_Server);
    function loadDB(thisServer : aliased in out Concrete_Server; DataFile : File_type) return Boolean;
@@ -121,10 +147,9 @@ private
    procedure sendMessageToUser(thisServer : aliased in out Concrete_Server; username : String; messagestring : String);
    procedure deleteUserFromDatabase(thisServer : aliased in out Concrete_Server; username : String);
    procedure kickUserWithName(thisServer : aliased in out Concrete_Server; username:String);
-   -------------------------------------------------------------------------------------------
 
-
-
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    -- Dieser Task lauscht auf einkommende Verbindungen von neuen Clients und
    -- erstellt fuer diese jeweils einen eigenen Socket und Task, in dem anschliessend
@@ -134,12 +159,8 @@ private
    -- aufgebaut und zur Verfuegung gestellt. Es gibt nur eine Instanz von diesem Task.
    task Main_Server_Task is
       entry Start;
-      --entry Stop;
    end;
 
-
-
-
-
-
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 end Concrete_Server_Logic;

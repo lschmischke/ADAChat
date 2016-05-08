@@ -1,7 +1,12 @@
 package body dataTypes is
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
    protected body User is
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       function getUsername return Unbounded_String is
       begin
          return username;
@@ -55,45 +60,63 @@ package body dataTypes is
          end if;
       end removeContact;
 
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       function getContacts return UserList.List is
       begin
 	 return contacts;
       end getContacts;
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
    end User;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    protected body Concrete_Client is
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
 
        procedure setSocket (s : Socket_Type) is
       begin
 	 socket := s;
       end setSocket;
 
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       procedure setSocketAddress (sa : Sock_Addr_Type) is
       begin
 	 SocketAddress := sa;
       end setSocketAddress;
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       procedure setServerRoomID (id : Natural) is
       begin
 	 ServerRoomID := id;
       end setServerRoomID;
 
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       procedure setUser (u : UserPtr) is
       begin
 	 user := u;
       end setUser;
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       procedure addChatroom (room : chatRoomPtr) is
       begin
 	 chatRoomList.Append(room);
       end addChatroom;
 
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       function getUsernameOfClient return Unbounded_String is
       begin
          return user.getUsername;
       end getUsernameOfClient;
+
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       function getServerroomID return Natural is
@@ -101,25 +124,34 @@ package body dataTypes is
 	 return ServerRoomID;
       end getServerroomID;
 
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       function getChatroomList return chatroom_list.List is
       begin
 	 return chatRoomList;
       end  getChatroomList;
 
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       function getUser return UserPtr is
       begin
 	 return user;
       end getUser;
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       function getSocketAddress return Sock_Addr_Type is
       begin
 	 return SocketAddress;
       end getSocketAddress;
 
-      ----------------------------------------------------------------------------------------
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       procedure sendServerMessageToClient (messageType : MessageTypeE; content : String) is
       begin
          sendServerMessageToClient (messageType, content, ServerRoomID);
       end sendServerMessageToClient;
+
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       procedure sendServerMessageToClient (messageType : MessageTypeE; content : String; receiver : Natural) is
@@ -129,22 +161,31 @@ package body dataTypes is
          printMessageToInfoConsole (message);
          writeMessageToStream (Socket, message);
       end sendServerMessageToClient;
+
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       function getSocket return Socket_Type is
       begin
          return Socket;
       end getSocket;
+
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    end Concrete_Client;
 
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
    protected body chatRoom is
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       function getClientList return Client_List.List is
       begin
 	 return clientList;
       end getClientList;
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       procedure addClientToChatroom (client : in Concrete_Client_Ptr) is
       begin
@@ -153,7 +194,14 @@ package body dataTypes is
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       procedure removeClientFromChatroom (clientToRemove : in Concrete_Client_Ptr) is
-         pos                              : Client_List.Cursor := clientList.Find (Item => clientToRemove);
+      begin
+	 removeClientFromChatroom(clientToRemove,"");
+      end removeClientFromChatroom;
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      procedure removeClientFromChatroom (clientToRemove : in Concrete_Client_Ptr; farewell : String) is
+	 pos                              : Client_List.Cursor := clientList.Find (Item => clientToRemove);
          userlistMessage, userleftMessage : MessageObject;
          userleftText                     : Unbounded_String   := clientToRemove.getUsernameOfClient;
       begin
@@ -164,7 +212,11 @@ package body dataTypes is
                -- # broadcaste die neue Userlist und teile dem Chat mit, dass der Benutzer diesen verlassen hat
                userlistMessage := generateUserlistMessage;
                broadcastToChatRoom (userlistMessage);
-               Ada.Strings.Unbounded.Append (userleftText, To_Unbounded_String (" left the chat."));
+	       Ada.Strings.Unbounded.Append (userleftText, To_Unbounded_String (" left the chat."));
+	       -- Füge Abschiedstext hinzu
+	       if farewell'Length>1 then
+		  Ada.Strings.Unbounded.Append (userleftText, To_Unbounded_String ("("&farewell&")"));
+	       end if;
                userleftMessage :=
                  createMessage
                    (messagetype => Protocol.Chat,
@@ -176,14 +228,16 @@ package body dataTypes is
                -- # TODO: lösche den chatraum
                null;
             end if;
-         end if;
-      end removeClientFromChatroom;
+	 end if;
+	 end removeClientFromChatroom;
+
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       function getChatRoomID return Natural is
       begin
          return chatRoomID;
       end getChatRoomID;
+
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       function generateUserlistMessage return MessageObject is
@@ -204,24 +258,49 @@ package body dataTypes is
               content     => result);
          return message;
       end generateUserlistMessage;
+
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       procedure broadcastToChatRoom (message : in MessageObject) is
-         outMsg : MessageObject := createMessage(message.messagetype,message.sender,message.receiver,message.content);
       begin
          for client of clientList loop
-            writeMessageToStream (client.getSocket, outMsg);
+            writeMessageToStream (client.getSocket, message);
          end loop;
       end broadcastToChatRoom;
+
       --------------------------------------------------------------------------------------------------------------------------------------------------------
+
       procedure setChatRoomID( id : in Natural) is
       begin
 	 chatRoomID := id;
       end setChatRoomID;
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
    end chatRoom;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    function encodePassword (password : in Unbounded_String) return Unbounded_String is
    begin
       return To_Unbounded_String (GNAT.SHA512.Digest (To_String (password)));
    end encodePassword;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   function userHash (userToHash : UserPtr) return Hash_Type is
+   begin
+      return Ada.Strings.Unbounded.Hash (userToHash.getUsername);
+   end userHash;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   function Hash (R : Natural) return Hash_Type is
+   begin
+      return Hash_Type (R);
+   end Hash;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
 end dataTypes;

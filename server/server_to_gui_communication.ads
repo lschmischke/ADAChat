@@ -19,19 +19,52 @@ with Ada.Strings.Unbounded.Hash_Case_Insensitive;
 with dataTypes;
 
 package Server_To_GUI_Communication is
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Interfacetyp einer GUI, die Informationen von einem Chat-Server darstellen kann
    type GUI is interface;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Referenztyp auf Implementierungen des GUI-Interfaces
    type GUIPtr is access all GUI'Class;
 
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    package userViewOfflineMap is new Hashed_Maps(Key_Type        => Unbounded_String,
 						     Element_Type    => Unbounded_String,
 						     Hash            => Ada.Strings.Unbounded.Hash_Case_Insensitive,
-                                                 Equivalent_Keys => "=");
+						 Equivalent_Keys => "=");
 
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Veranlasst die GUI, eine Error-Nachricht darzustellen
    procedure printErrorMessage(thisGUI : aliased in GUI; errorMessage : String) is abstract;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Veranlasst die GUI, eine Info-Nachricht darzustellen
    procedure printInfoMessage(thisGUI : aliased in GUI; infoMessage : String) is abstract;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Veranlasst die GUI, eine Chat-Nachricht darzustellen
    procedure printChatMessage(thisGUI : aliased in GUI; chatMessage : MessageObject) is abstract;
-   procedure updateNumberOfContacts(thisGUI : aliased in GUI; numberOfContact : Natural) is abstract;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Veranlasst die GUI, ihre Darstellung der verbundenen User zu erneuern
    procedure updateOnlineUserOverview(thisGUI : aliased in GUI; viewComponents : userViewOnlineList.List) is abstract;
-   procedure updateOfflineUserOverview(thisGUI : aliased in GUI; viewComponents : userViewOfflineMap.Map) is abstract;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Veranlasst die GUI, ihre Darstellung der genutzen Chaträume zu erneuern
+   procedure updateChatroomOverview(thisGUI : aliased in GUI; viewComponents : chatRoomMap.Map) is abstract;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
 end Server_To_GUI_Communication;

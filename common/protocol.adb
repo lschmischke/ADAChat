@@ -92,7 +92,6 @@ package body Protocol is
       while true loop
 	 Character'Read(InputChannel,c);
 	 exit when c = Terminator;
-	 --Put_Line("in char: "&c);
 	 incoming_string := incoming_string & c;
       end loop;
 

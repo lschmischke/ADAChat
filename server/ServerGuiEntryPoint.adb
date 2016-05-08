@@ -38,68 +38,72 @@ with GUI_to_Server_Communication; use GUI_to_Server_Communication;
 with Concrete_Server_Gui_Logic;
 
 package body ServerGuiEntryPoint is
-procedure  ServerGuiEntryPoint is
-   Builder : Gtkada_Builder;
-   ret : GUint;
-   error : aliased GError;
-   Win   : Gtk_Window;
 
-  -- Server2: GUI_to_Server_Communication.Server
-begin
-   Gtk.Main.Init;
-   Gtk_New (Builder);
-   ret := Builder.Add_From_File ("server\ServerGui.glade", error'Access);
+   procedure  ServerGuiEntryPoint is
+      -- Benötigte Variablen
+      Builder : Gtkada_Builder;
+      ret : GUint;
+      error : aliased GError;
+      Win   : Gtk_Window;
 
-   if Error /= null then
-      Ada.Text_IO.Put_Line ("Error : " & Get_Message (Error));
-      Error_Free (Error);
-      return;
-   end if;
-   --     Step 2: add calls to "Register_Handler" to associate your
-   --     handlers with your callbacks.
-   Register_Handler
-     (Builder      => Builder,
-      Handler_Name => "Main_Quit", -- from XML file <signal handler=..>
-      Handler      => ServerGuiCallbacks.Quit'Access);
+      -- Server2: GUI_to_Server_Communication.Server
+   begin
+      -- GTK initialisieren und Glade Datei laden
+      Gtk.Main.Init;
+      Gtk_New (Builder);
+      ret := Builder.Add_From_File ("server\ServerGui.glade", error'Access);
 
-   Register_Handler
-     (Builder      => Builder,
-      Handler_Name => "clicked_button_about",
-      Handler      => ServerGuiCallbacks.clicked_button_about'Access);
+      -- Fehler abfangen
+      if Error /= null then
+         Ada.Text_IO.Put_Line ("Error : " & Get_Message (Error));
+         Error_Free (Error);
+         return;
+      end if;
+      -- Callbacks hinzufügen
       Register_Handler
-     (Builder      => Builder,
-      Handler_Name => "clicked_button_server_start",
-      Handler      => ServerGuiCallbacks.clicked_button_server_start'Access);
+        (Builder      => Builder,
+         Handler_Name => "Main_Quit", -- from XML file <signal handler=..>
+         Handler      => ServerGuiCallbacks.Quit'Access);
+
+
       Register_Handler
-     (Builder      => Builder,
-      Handler_Name => "clicked_button_server_stop",
-      Handler      => ServerGuiCallbacks.clicked_button_server_stop'Access);
+        (Builder      => Builder,
+         Handler_Name => "clicked_button_server_start",
+         Handler      => ServerGuiCallbacks.clicked_button_server_start'Access);
       Register_Handler
-     (Builder      => Builder,
-      Handler_Name => "kickUser",
-      Handler      => ServerGuiCallbacks.kickSelectedUser'Access);
+        (Builder      => Builder,
+         Handler_Name => "clicked_button_server_stop",
+         Handler      => ServerGuiCallbacks.clicked_button_server_stop'Access);
       Register_Handler
-     (Builder      => Builder,
-      Handler_Name => "rowActivated",
-      Handler      => ServerGuiCallbacks.rowHandler'Access);
+        (Builder      => Builder,
+         Handler_Name => "kickUser",
+         Handler      => ServerGuiCallbacks.kickSelectedUser'Access);
+
+      Register_Handler
+        (Builder      => Builder,
+         Handler_Name => "clearChat",
+         Handler      => ServerGuiCallbacks.clearChat'Access);
 
 
 
 
-   Do_Connect (Builder);
-
-   --Concrete_Server_Gui_Logic.STG.initGui;
-
-   Concrete_Server_Gui_Logic.InitServerGui(myBuilder => Builder);
-   ServerGuiCallbacks.InitializeGuiReferences(myBuilder => Builder);
-   --  Find our main window, then display it and all of its children.
-   Win := Gtk_Window (Builder.Get_Object ("main_window_server"));
-   Win.Show_All;
-   Gtk.Main.Main;
+      Do_Connect (Builder);
 
 
+      -- GUI Referenzen in der concrete_server_Gui_logic und der ServerGuiCallbacks setzen
+      Concrete_Server_Gui_Logic.InitServerGui(myBuilder => Builder);
+      ServerGuiCallbacks.InitializeGuiReferences(myBuilder => Builder);
+      --  Find our main window, then display it and all of its children.
+      -- Hauptfenster laden
+      Win := Gtk_Window (Builder.Get_Object ("main_window_server"));
+      -- Fenster anzeigen
+      Win.Show_All;
+      -- Ausführen
+      Gtk.Main.Main;
 
 
+
+      -- Builder freigeben da übergeben & nicht mehr benötigt
       Unref (Builder);
 
 
