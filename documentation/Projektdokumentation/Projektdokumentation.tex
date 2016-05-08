@@ -25,7 +25,7 @@
 \usepackage{parskip}
 \usepackage{booktabs}
 \usepackage[right]{eurosym}
-\usepackage{picins}
+%\usepackage{picins}
 \usepackage[subfigure,titles]{tocloft}
 \usepackage[pdfpagelabels=true]{hyperref}
 \usepackage{listings}
@@ -358,6 +358,40 @@ bla bla
 % ----------------------------------------------------------------------------------------------------------
 % Probleme
 % ----------------------------------------------------------------------------------------------------------
+
+\newpage
+\section{Benutzerhandbuch}
+Im Folgenden soll die Benutzung der Oberflächen erklärt werden, um dem Benutzer einen leichten Einstieg zu gewähren.
+\subsection{Server}
+Die Server-GUI dient als Oberfläche dazu, die Steuerung der Serverlogik einfach zu gestalten und somit eine effiziente Verwaltung zu gewährleisten.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/Server_GUI.png}
+
+\end{minipage}
+\vspace{1em}
+\begin{enumerate}
+	\item Mit diesem Button lässt sich der Server starten. Diese Schaltfläche ist nur aktiviert, wenn der Server nicht läuft.
+	\item Mit diesem Button lässt sich der Server stoppen. Diese Schaltfläche ist nur aktiviert, wenn der Server läuft.
+	\item Mit dieser Schaltfläche ist es möglich einen Benutzer aus dem Chat zu entfernen("kicken"). Der User, der entfernt werden soll, wird aus dem Drop-down-Menü unter \textit{7.} ausgewählt.
+	\item Mit der Schaltfläche ist es möglich das Fenster mit den Chatnachrichten zu leeren.
+	\item Hier wird der aktuelle Status des Servers angezeigt und die Anzahl der verbundenen Benutzer.
+	\item In diesem Textfeld lässt sich der Port einstellen. Diese Einstellung lässt sich nicht zur Laufzeit verändern, sondern nur vor dem Start des Servers.
+	\item In diesem Drop-down-Menü befinden sich alle Nutzer, die aktuell online sind. Wenn hier ein Benutzer ausgewählt wird, kann er über Schaltfläche \textit{3.} entfernt werden.
+	\item Hier befindet sich die Benutzerliste. Dort erhalten Sie folgende Informationen über einen Benutzer:
+		\begin{itemize}
+			\item Benutzernamen
+			\item IP-Adresse
+			\item Seine Kontakte
+			\item Die Chaträume in denen er sich befindet
+		\end{itemize}
+	
+	\item Hier finden Sie die Chaträume und die Benutzer, die sich in dem jeweiligen Raum befinden.
+	\item In dem Feld unter dem Reiter \textit{Informationen} befinden sich Nachrichten des Servers über Ereignisse und Zustandsänderungen.
+	\item In dem Feld unter dem Reiter \textit{Fehler} finden sich Fehlermeldungen des Servers.
+	\item In diesem Feld befinden sich die Nachrichten der Benutzer in den einzelnen Chaträumen.
+\end{enumerate}
 \section{Probleme}
 Im Folgenden sind die Problemstellungen aufgeführt, die in den Augen des Projektteams gravierend waren und die Entwicklung merkbar gehemmt haben.
 
