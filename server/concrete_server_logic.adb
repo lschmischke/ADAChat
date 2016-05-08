@@ -34,10 +34,11 @@ package body Concrete_Server_Logic is
 	 end;
       end loop;
    exception
-      when Error : Socket_Error =>
-	 gui.printErrorMessage("Socket_Error in Main_Server_Task: " & "terminated Main Server Task");
+      --when Error : Socket_Error =>
+      -- gui.printErrorMessage("Socket_Error in Main_Server_Task: " & "terminated Main Server Task");
       when Error : others =>
-         gui.printErrorMessage("Unexpected exception in Main_Server_Task: " & Exception_Information (Error));
+	 --  gui.printErrorMessage("Unexpected exception in Main_Server_Task: " & Exception_Information (Error));
+	 null;
    end Main_Server_Task;
 
 -----------------------------------------------------------------------------
@@ -410,14 +411,14 @@ package body Concrete_Server_Logic is
       end loop;
 
    exception
-      when Error : Socket_Error =>
-         Put ("Socket_Error in Client_Task: ");
-         Put_Line (Exception_Information (Error));
-         --Server.removeClientRoutine(client);
+      --when Error : Socket_Error =>
+      --   Put ("Socket_Error in Client_Task: ");
+      --  Put_Line (Exception_Information (Error));
+      --  Server.removeClientRoutine(client);
       when Error : others =>
-         Put ("Unexpected exception in Client_Task: ");
-         Put_Line (Exception_Information (Error));
-         --Server.disconnectClient (client,"unspecified error");
+      --  Put ("Unexpected exception in Client_Task: ");
+      --  Put_Line (Exception_Information (Error));
+         Server.disconnectClient (client,"disconnected");
    end Client_Task;
 
    ----------------------------------------------------------------------------------------
@@ -437,10 +438,10 @@ package body Concrete_Server_Logic is
    ----------------------------------------------------------------------------------------
 
    overriding
-   procedure startServer (thisServer : aliased in out Concrete_Server; ipAdress : String; port : Natural) is
+   procedure startServer (thisServer : aliased in out Concrete_Server; port : Natural) is
    begin
       Server := thisServer'Access;
-      Server.StartNewServer (ipAdress, port);
+      Server.StartNewServer (port);
       gui.updateChatroomOverview(Server.getChatrooms);
    end startServer;
 
@@ -463,6 +464,7 @@ package body Concrete_Server_Logic is
       end loop;
       thisServer.removeAllChatRooms;
       gui.updateChatroomOverview(thisServer.getChatRooms);
+      gui.printInfoMessage("Stopping server ...");
 
       Close_Socket(thisServer.getSocket);
    end stopServer;
@@ -553,27 +555,29 @@ package body Concrete_Server_Logic is
 
       ----------------------------------------------------------------------------------------
 
-      procedure StartNewServer (ip : String; port : Natural) is
+      procedure StartNewServer (port : Natural) is
       begin
       -- # Erzeugte Serverintanz global setzen, damit sie im Package ueberall bekannt ist #
       -- # Datenbank laden #
+         gui.printInfoMessage("Starting server ...");
 	 UserDatabase.loadUserDatabase;
 	 gui.printInfoMessage("User database loadad.");
 
 	 --#Sockets aufbauen
-	 InitializeServer (ip, port);
+	 InitializeServer (port);
       end StartNewServer;
 
       ----------------------------------------------------------------------------------------
 
-      procedure InitializeServer (ip : String; port : Natural) is
+      procedure InitializeServer (port : Natural) is
 	 SubServer      : Concrete_Client_Ptr := new Concrete_Client;
 	 subServerSocket : Socket_Type;
+	 serverTask : Main_Server_Task_Ptr := new Main_Server_Task;
       begin
       -- # Erzeugung und Konfiguration des Server-Sockets #
       Initialize;
       Create_Socket (Socket => Socket);
-      SocketAddress.Addr := Inet_Addr (ip);
+      SocketAddress.Addr := Addresses(Get_Host_By_Name(Host_Name),1);
       SocketAddress.Port := Port_Type (port);
       Bind_Socket (Socket => Socket, Address => SocketAddress);
       Listen_Socket (Socket => Socket);
@@ -582,7 +586,7 @@ package body Concrete_Server_Logic is
          gui.printInfoMessage("Server initialization successful, starting Server Listener Task...");
 
           pragma Warnings(Off,"potentially blocking operation in protected operation");
-         Main_Server_Task.Start;
+         serverTask.Start;
           pragma Warnings(On ,"potentially blocking operation in protected operation");
       -- # Erzeugung des SubServer-Sockets #
 	 Create_Socket (Socket => subServerSocket);
@@ -624,16 +628,7 @@ package body Concrete_Server_Logic is
       ----------------------------------------------------------------------------------------
 
       procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String) is
-      serverStr         : Unbounded_String   := To_Unbounded_String ("server");
-      begin
-	 -- # Sende Disconnect-Bestaetigung
-	 client.sendServerMessageToClient(Disconnect,msg);
-	 removeClientRoutine(client);
-      end disconnectClient;
-
-      ----------------------------------------------------------------------------------------
-
-      procedure removeClientRoutine(client : Concrete_Client_Ptr) is
+	 serverStr         : Unbounded_String   := To_Unbounded_String ("server");
 	 chatRoomsOfClient : chatRoom_List.List := client.getChatroomList;
       begin
 	 -- # Client verlässt alle Chaträume
@@ -642,15 +637,16 @@ package body Concrete_Server_Logic is
 	 end loop;
 	 -- # Sende Offline-Status an alle Kontakte vom Client #
 	 broadcastOnlineStatusToContacts (client, Protocol.Offline);
-	 -- # Schliesse Socket zu Client #
-	 Close_Socket (client.getSocket);
 	 -- # Setze User als offline #
 	 Connected_Clients.Delete (client.getUser);
 	 -- # Benachrichtige GUI über Änderung der Connected_Clients
 	 gui.printInfoMessage("'"&To_String(client.getUsernameOfClient) & "' disconnected.");
 	 gui.updateOnlineUserOverview(connectedClientsToClientList);
 	 gui.updateChatroomOverview(chatRooms);
-      end removeClientRoutine;
+	 -- # Schliesse Socket zu Client #
+	 client.sendServerMessageToClient(Disconnect,msg);
+	 Close_Socket (client.getSocket);
+      end disconnectClient;
 
       ----------------------------------------------------------------------------------------
 
