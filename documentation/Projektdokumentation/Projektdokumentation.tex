@@ -428,7 +428,44 @@ Die Server-GUI dient als Oberfläche dazu, die Steuerung der Serverlogik einfach
 	\item In dem Feld unter dem Reiter \textit{Informationen} befinden sich Nachrichten des Servers über Ereignisse und Zustandsänderungen.
 	\item In dem Feld unter dem Reiter \textit{Fehler} finden sich Fehlermeldungen des Servers.
 	\item In diesem Feld befinden sich die Nachrichten der Benutzer in den einzelnen Chaträumen.
-	\item TEST
+\end{enumerate}
+\newpage
+\subsection{Client}
+Nach dem Server soll nun die Benutzeroberfläche der Clientanwendung beschrieben werden. Der Client besteht aus drei verschiedenen Oberflächen: Eine Loginoberfläche, ein Chatfenster und eine Übersichtsdarstellung.
+\subsubsection{Loginoberfläche}
+Die Loginoberfläche dient dazu einen vorhanden Benutzer beim Server anzumelden oder, falls der Benutzer noch nicht vorhanden ist, diesen zu registrieren.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/Client_Login.png}
+	
+\end{minipage}
+\vspace{1em}
+\begin{enumerate}
+	\item In diesem Feld wird die IP-Adresse des Rechners angegeben, auf dem der Server läuft.
+	\item Hier wird der Port angegeben, auf dem der Server lauscht. Der Standardport ist 12321. 
+	\item Hier wird der Benutzername eingegeben.
+	\item In dieses Feld wird das Passwort eingegeben
+	\item Mit einem Druck auf "Login" wird der Benutzer, falls die Benutzerdaten korrekt sind, beim Sever angemeldet.
+	\item Mit einem Druck auf "Register" wird ein Benutzer mit den eingegebenen Benutzerdaten beim Server registriert.
+\end{enumerate}
+\subsubsection{Chatoberfläche}
+Die Chatoberfläche ist das Fenster, in dem Chatnachrichten zwischen den Benutzern ausgetauscht werden.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/client_chat.png}
+	
+\end{minipage}
+\vspace{1em}
+\begin{enumerate}
+	\item In diesem Textfeld befindet sich eine Übersicht der bisher ausgetauschten Chatnachrichten.
+	\item Hier befinden sich die Teilnehmer des Chats.
+	\item In diesem Textfeld werden die Chatnachrichten eingegeben, die an die anderen Teilnehmer gesendet werden sollen.
+	\item Über diesen Button lassen sich Smileys einfügen.
+	\item Über diese Schaltfläche lassen sich Spiele mit den anderen Chatteilnehmern starten.
+	\item Hierüber kann man sich vergangene Konversationen ansehen.
+	\item Über diesen Button ist es möglich einen weiteren Teilnehmer zum Chat hinzuzufügen.
 \end{enumerate}
 \section{Probleme}
 Im Folgenden sind die Problemstellungen aufgeführt, die in den Augen des Projektteams gravierend waren und die Entwicklung merkbar gehemmt haben.
