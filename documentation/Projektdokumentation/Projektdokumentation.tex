@@ -471,7 +471,7 @@ Die Loginoberfläche dient dazu einen vorhanden Benutzer beim Server anzumelden 
 
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[width=1.0\linewidth]{img/Client_Login.png}
+	\includegraphics[width=0.85\linewidth]{img/Client_Login.png}
 	
 \end{minipage}
 \vspace{1em}
@@ -530,8 +530,18 @@ Rekursive Datenstrukturen - zum Beispiel ein Benutzer, der seine Kontakte in ein
 
 Außerdem war verwunderlich, dass das Einbinden von Spezifikationsdateien in eine Bodydatei (.adb) ein anderes Folgeverhalten bezüglich der zirkulären Abhängigkeiten aufweisen kann, als wenn diese in die dem Body zugehörige Spezifikationsdatei eingebunden werden. Manche zirkuläre Abhängigkeit konnte nur so aufgelöst werden.
 
-\subsection{Arbeiten mit GTK}
+\subsection{Arbeiten mit GtkAda}
+GtkAda ist eine Ada-Implementierung des erfolgreichen GTK+ Toolkits, mit dem sich grafische Oberflächen entwickeln lassen. Es ist neben Qt die Bibliothek zum entwickeln von GUIs. Während der Entwicklung traten einige Dinge besonders negativ in den Vordergrund.
 
+\begin{enumerate}
+	\item Dokumentation	\hfill \\
+	Wie auch schon Ada im allgemeinen ist die Dokumentations- und Informationslage zu GtkAda dürftig. Es gibt keine offizielle Dokumentation und wenige Beispiele, die leider auch meistens nur einen kleinen Umfang haben und nur einzelne Komponenten abdecken, nicht jedoch mehrere Komponenten im Zusammenspiel. Falls man nach Lösungen zu bestimmten Fragestellungen sucht, findet man meistens keine GtkAda spezifische Antwort, sondern muss oftmals Lösungen aus anderen Programmiersprachen (Python oder C) auf Ada übertragen. Dies lässt sich jedoch oftmals nicht ganz einfach umsetzen, da GtkAda manche Dinge anders handhabt bzw. benennt (Beispielsweise bei der Nutzung von \textit{Gtk\textunderscore Tree\textunderscore Model} und \textit{Gtk\textunderscore Tree\textunderscore Store}  ).
+	\item Glade \hfill \\
+	Glade ist ein Tool um sich grafische Oberflächen schnell zu erstellen und diese in eine \textit{.glade} Datei zu exportieren. Dabei handelt es sich um eine XML-strukturierte Datei, die die Oberfläche und Voreinstellungen enthält. Das Problem an Glade ist leider, das es nicht sonderlich stabil läuft und Portierungen für Windows und Mac OS X zu Darstellungsfehlern und Performanceeinbrüchen neigen.
+	\item GtkAda \& Tasks \hfill \\
+	Leider ist es mit GtkAda auch nicht möglich aus einem laufenden Task heraus dynamisch neue Objekte zu erzeugen und diese der Oberfläche hinzuzufügen. Dies verhindert beispielsweise einen einzelnen Task pro Konversationsfenster zu erstellen.
+	
+	\end{enumerate}
 \subsection{Merkwürdigkeiten in ADA (Endlosschleife durch If-Abfrage)}
 
 \subsection{Arbeiten mit GTK}
