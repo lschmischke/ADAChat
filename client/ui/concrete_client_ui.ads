@@ -17,7 +17,7 @@ package Concrete_Client_Ui is
       UserName : Unbounded_String; -- Set after Login
       Login_Window   : LoginWindow;
       Contact_Window   : WindowPtr;
-      Chat_Windows : ChatWindows.List;
+      Chat_Windows : Chat_Window_Manager.MapPtr := Chat_Window_Manager.MyWindows;
       Client : ClientPtr;
    end record;
 

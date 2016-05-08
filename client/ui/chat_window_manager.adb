@@ -16,16 +16,32 @@ package body Chat_Window_Manager is
 
    package Key_Press_Callbacks is new Gtk.Handlers.Return_Callback (Gtk_Entry_Record, Boolean);
 
-   procedure OpenNewChatWindow(This : in out ChatWindows.List; ChatName : String) is
+   procedure OpenNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String) is
       newWindow : ChatWindow_Ptr := new ChatWindow;
    begin
       newWindow.Init;
-      newWindow.Window.Set_Title(ChatName);
-      This.Append(newWindow);
+      newWindow.Window.Set_Title(To_String(ChatName));
+      if not MyRooms.Contains(ChatName) then
+         Concrete_Client_Logic.Instance.RequestChat(MyName, ChatName);
+      end if;
+      while not MyRooms.Contains(ChatName)
+      loop
+         null;
+      end loop;
+      newWindow.ChatID := MyRooms.Element(ChatName);
+      if This = null then
+         This := new ChatWindows.Map;
+      end if;
+      This.Insert(newWindow.ChatID, newWindow);
    end OpenNewChatWindow;
 
-   function ChatWindowOpen(This : in out ChatWindows.List; ChatName : String) return Boolean is
+   function ChatWindowOpen(ChatName : String) return Boolean is
    begin
+      if MyRooms.Contains(To_Unbounded_String(ChatName)) then
+         if MyWindows.Contains(MyRooms.Element(To_Unbounded_String(ChatName))) then
+            return true;
+         end if;
+      end if;
       return false;
    end ChatWindowOpen;
 
@@ -75,8 +91,12 @@ package body Chat_Window_Manager is
       Do_Connect(This.Builder);
 
       This.Window := Gtk_Window(This.Builder.Get_Object ("chat_window_client"));
-
+      This.ChatParticipants := Gtk_List_Store(This.Builder.Get_Object("Participants"));
       This.Window.Show_All;
+
+
+      Ada.Text_IO.Put("Ich bin ");
+      Ada.Text_IO.Put_Line(To_String(Chat_Window_Manager.MyUserName));
    end Init;
 
 
@@ -95,11 +115,20 @@ package body Chat_Window_Manager is
 
    procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class) is
       message : Gtk_Entry;
+      window : Gtk_Window;
    begin
       message := Gtk_Entry(Object.Get_Object("New_Message"));
-      Ada.Text_IO.Put_Line(message.Get_Text);
+      window := Gtk_Window(Object.Get_Object("chat_window_client"));
+      Concrete_Client_Logic.Instance.SendMessageToChat(Receiver => MyRooms.Element(To_Unbounded_String(window.Get_Title)),
+                                                       Username => MyUserName,
+                                                       Message  => To_Unbounded_String(message.Get_Text));
       message.Set_Text("");
    end Handle_Enter;
 
+   -----------------------------------------------------------------------------
+   function Hash (R : Natural) return Hash_Type is
+   begin
+      return Hash_Type (R);
+   end Hash;
 
 end Chat_Window_Manager;

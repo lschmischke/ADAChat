@@ -156,13 +156,16 @@
 \setcounter{section}{0}
 
 \section{Projektidee}
-Lastenheft etc.
+Das Ziel ist es einen Instant-Messaging-Dienst zu entwickeln, der es erlaubt mit anderen Nutzern einzeln oder in Gruppen in Echtzeit zu kommunizieren. Hierbei handelt es sich um ein Gruppenprojekt, dass im Rahmen des Kurses \textit{Entwicklung sicherer, hardwarenaher Anwendungen} in der Programmiersprache \textit{Ada} entwickelt wird.  
+
+Der Dienst ist in Client und Server unterteilt. Beide Komponenten können über grafische Benutzerschnittstellen bedient werden. Die des Servers informiert über alle Ereignisse die auf dem Server eintreten und erlaubt eine rudimentäre Verwaltung von angemeldeten Nutzern. 
+Die Benutzerscnittstelle des Clients gestattet das Registrieren und Einloggen am Server. Im Anschluss bekommt der Nutzer seine Kontaktliste angezeigt, in der er unter anderem andere Nutzer als Freunde hinzufügen oder löschen kann. Bei Doppelklick auf einen befreundeten Nutzer öffnet sich ein seprarates Chatfenster zur direkten Kommunikation. Diese kann zur Gruppenkommunikation erweitert werden, indem weitere Freunde zum Chat eingeladen werden.
 
 % ----------------------------------------------------------------------------------------------------------
 % Architektur
 % ----------------------------------------------------------------------------------------------------------
 \section{Architektur}
-bla bla
+Der Instant-Messaging-Dienst unterliegt dem Client-Server-Paradigma. Zur Kommunikation zwischen den Clients und dem Server ist ein Protokoll erforderlich, welches den Kommunikationsablauf und entsprechend das Verhalten der Kommunikationsteilnehmer regelt.
 
 \subsection{Kommunikationsprotokoll}
 Server und Client kommunizieren über Nachrichten. Eine Nachricht besteht aus vier Komponenten:
@@ -212,7 +215,13 @@ Wenn der Server die Nachricht empfängt, quittiert er den Erfolgsfall, indem ebe
 \subsubsection{Einloggen}
 Sobald ein Benutzer registriert wurde, kann sich der Client nun unter Angabe des Benutzernamens und Passworts beim Server per \textit{connect}-Nachricht einloggen. Da noch kein Chat zu diesem existiert, wird der Standard-Chatraum adressiert.
 
-%BILD 
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/connect1.png}
+	\label{fig:connect1}
+\end{minipage}
+\vspace{0.5em} 
 
 Der Verbindungsversuch hat zwei mögliche Resultate:
 \begin{itemize}
@@ -225,43 +234,78 @@ Der Verbindungsversuch hat zwei mögliche Resultate:
 	\begin{enumerate}
 		\item \textbf{der Benutzer ist unbekannt} \newline
 			Wird ein Benutzername übergeben, welcher dem Server nicht bekannt ist, schlägt das Einloggen fehl. Der Inhalt der Nachricht lautet dann \glqq user not found in database\grqq{}.
+			
+			\vspace{1em}
+			\begin{minipage}{\linewidth}
+				\centering
+				\includegraphics[width=0.7\linewidth]{img/connect2.png}
+				\label{fig:connect2}
+			\end{minipage} 	
 		\item \textbf{das Passwort ist nicht korrekt} \newline
 			Sollte das übergebene Passwort nicht mit dem in der Datenbank des Servers hinterlegtem Passwort des Benutzers übereinstimmen, kann der Client nicht eingeloggt werden. Der Inhalt der Nachricht lautet dann \glqq invalid password\grqq{}.
 		\item \textbf{der angegebene Benutzer ist schon eingeloggt} \newline
 			Hier ist bereits ein Benutzer mit dem angegebenen Benutzernamen mit dem Server eingeloggt. Der Inhalt der Nachricht lautet dann \glqq user already logged in\grqq.
 		\item \textbf{Client bereits eingeloggt} \newline
 		    Wenn der Client sich bereits als ein Benutzer zum Server verbunden hat, lehnt der Server ein erneutes Einloggen ab. Der Inhalt der Nachricht lautet dann \glqq you are already logged in to an account\grqq.
-	\end{enumerate} 
+	\end{enumerate}
 	
-	%BILD ?
 \end{itemize}
 
 \subsubsection{Kontaktanfrage}
-Sobald der Client eingeloggt ist, kann er nun mit Kontakten chatten. Kontakte sind beidseitig, das heißt, man kann nicht mit einem Benutzer kontaktiert sein, ohne gleichzeitig auch Kontakt des Benutzers zu sein.
+Sobald der Client eingeloggt ist, kann er nun mit Kontakten chatten. Kontakte sind beidseitig, das heißt, man kann nicht mit einem Benutzer befreundet sein, ohne gleichzeitig auch Kontakt des Benutzers zu sein.
 
 Diese Kontakte müssen vor dem Chatten angelegt werden. Eine \textit{addcontact}-Nachricht, adressiert an den Server, teilt diesem mit, dass dem im Inhalt der Nachricht genannten Benutzer eine Kontaktanfrage gestellt werden soll.
 
-%BILD 
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/addcontact1.png}
+	\label{fig:addcontact1}
+\end{minipage}
+\vspace{0.5em} 
 
 Der Server gibt diese Intention dem requestierten Benutzer weiter, sollte dieser eingeloggt sein.
 
-%BILD 
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.78\linewidth]{img/addcontact2.png}
+	\label{fig:addcontact2}
+\end{minipage}
+\vspace{0.5em}
 
 Eine Kontaktanfrage kann angenommen werden, indem man dem anfragenden User eine Kontaktanfrage zurück stellt.
 
-Um eine Kontaktanfrage abzulehnen, kann eine \texit{remcontact}-Nachricht an den Server gesendet werden. Als Inhalt ist der Benutzernamen des anfragenden Benutzers zu nennen.
+Um eine Kontaktanfrage abzulehnen, kann eine \textit{remcontact}-Nachricht an den Server gesendet werden. Als Inhalt ist der Benutzernamen des anfragenden Benutzers zu nennen.
 
-%BILD 
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/remcontact1.png}
+	\label{fig:remcontact1}
+\end{minipage}
+\vspace{0.5em} 
 
-Über eine Nachricht in dieser Form kann auch ein Kontakt entfernt werden. Dies quittiert der Server mit einer \texit{remcontact}-Nachricht, welche den Benutzernamen des entfernten Kontakts als Inhalt trägt. Eine analoge Nachricht wird auch den an entfernten Kontakt gesendet.
+Über eine Nachricht in dieser Form kann auch ein Kontakt entfernt werden. Dies quittiert der Server mit einer \textit{remcontact}-Nachricht, welche den Benutzernamen des entfernten Kontakts als Inhalt trägt. Eine analoge Nachricht wird auch den an entfernten Kontakt gesendet.
 
 Sollte der Client versuchen, einen Benutzer von seiner Kontaktliste zu entfernen, welcher sich nicht auf dieser befindet, oder versuchen, eine Kontaktanfrage von einem Benutzer abzulehnen, welcher keine Anfrage gestellt hat, wird die \textit{remcontact}-Nachricht vom Server mit einer \textit{refused}-Nachricht beantwortet und keine weiteren Aktionen ausgelöst. Der Inhalt der Nachricht lautet dann dementsprechend der Situation \glqq there is no contact request from '<username>' \grqq beziehungsweise \glqq there is no contact with name '<username>' \grq{}.
 
-%BILD?
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/remcontact2.png}
+	\label{fig:remcontact2}
+\end{minipage}
+\vspace{0.5em}
 
 Sollte sich der Online-Status des Benutzers ändern, durch Ein-/Ausloggen oder nach dem Hinzufügen eines Kontaktes, wird der neue Status allen Kontakt durch eine \textit{offline}- oder \textit{online}-Nachricht mitgeteilt.
 
-%BILD
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/status1.png}
+	\label{fig:status1}
+\end{minipage}
 
 \subsubsection{Kommunikation}
 
@@ -287,13 +331,36 @@ bla bla
 % Probleme
 % ----------------------------------------------------------------------------------------------------------
 \section{Probleme}
-Arbeiten mit GTK
+Im Folgenden sind die Problemstellungen aufgeführt, die in den Augen des Projektteams gravierend waren und die Entwicklung merkbar gehemmt haben.
 
-fehlende ausführliche Dokumentation für GTK und ADA (und Beispiele im Internet)
+\subsection{Dokumentation der Sprache Ada}
+Das schwerwiegenste Problem, dass das Team über das ganze Projekt begleitet hat, war die unzureichende bis nicht vorhandene Dokumentation der Sprache Ada bzw. ihrer API.
 
-Zirkuläre Abhängigkeiten
+Das Verhalten von bspw. Unterprogrammroutinen musste sich häufig allein durch die Bezeichnung und den Paramtern oder aus dem Kontext eines Programmierbeispiels von einem beliebigen Blog hergeleitet werden. Durch darauf folgendes mühsames und zeitintensives experimentieren konnte die fehlende Dokumentation dann meist kompensiert werden.
 
-Merkwürdigkeiten in ADA (Endlosschleife durch If-Abfrage)
+Es gibt zwar das Ada Reference Manual, welches sich jedoch meist nicht als sonderlich hilfreich erwies.
+
+Jedoch muss man erwähnen, dass die Code-Qualität trotz alledem  unmittelbar darunter gelitten hat. Denn dadurch dass die Bibliotheksroutinen nicht ausreichend dokumentiert sind, kann unser Programm nur beschränkt auf z.B. Fehlersituationen oder anderweitiges situationsbedingtes Verhalten reagieren.
+
+Abgesehen davon wird aus diesem Grund eine Beschäftigung mit der Spache über den Kurs hinaus kaum Anhang finden.
+
+\subsection{Zirkuläre Abhängigkeiten}
+Beim Aufbau von Datenstrukturen, wo die einen Bestandteil der anderen sind traten sehr oft Zirkuläre Abhängigkeitsprobleme auf. Da in Ada ein Identifier vor dessen Verwendung deklariert werden muss war es nicht einfach Protected Types, Types, Pointer Types, Interfaces frei miteinander zu kombinieren. 
+
+Zudem zeigte sich, dass das Einbinden von Spezifikationsdateien (.ads) in eine Bodydatei (.adb) ein anderes Folgeverhalten aufweisen kann als wenn diese in die dem Body zugehörige Spezifikationsdatei eingebunden werden. Manche zirkuläre Abhängigkeit konnte dadurch aufgelöst werden.
+
+\subsection{Arbeiten mit GTK}
+
+\subsection{Merkwürdigkeiten in ADA (Endlosschleife durch If-Abfrage)}
+
+\subsection{Arbeiten mit GTK}
+
+
+
+
+
+
+
 
 \subsection{dies und das}
 bla bla

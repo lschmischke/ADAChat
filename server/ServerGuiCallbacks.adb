@@ -120,13 +120,13 @@ OnlineUserTreeStore: Gtk_Tree_Store;
       end clicked_button_server_stop;
 
    procedure kickSelectedUser ( Object : access Gtkada_Builder_Record'Class) is
-      selection : Gtk_Tree_Selection;
-      selectedIter : Gtk_Tree_Iter;
-      selectedModel : Gtk_Tree_Model;
+
+      myString: String := "";
    begin
-      Put_Line(KickUserComboBox.Get_Active_Text);
-     selection := Gtk_Tree_Selection(Object.Get_Object("treeview-selection3"));
-      selection.Get_Selected(selectedModel, selectedIter);
+
+      myString :=  KickUserListStore.Get_String(Iter   => KickUserComboBox.Get_Active_Iter,
+                                   Column => 0);
+      Put_Line("String:" & myString);
 
 
    Put_Line("Kick!");

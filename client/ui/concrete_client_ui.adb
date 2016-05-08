@@ -1,4 +1,5 @@
 with Ada.Text_IO;
+with Ada.Characters.Latin_1;     use Ada.Characters.Latin_1;
 
 with Gtk;                use Gtk;
 with Gtk.Main;           use Gtk.Main;
@@ -17,6 +18,8 @@ with Gtk.List_Store;     use Gtk.List_Store;
 with Gtk.Tree_Model;     use Gtk.Tree_Model;
 with Gtk.Combo_Box_Text; use Gtk.Combo_Box_Text;
 with Gtk.Label;          use Gtk.Label;
+with Gtk.Text_View;      use Gtk.Text_View;
+with Gtk.Text_Iter;      use Gtk.Text_Iter;
 
 with System;
 
@@ -162,10 +165,10 @@ package body Concrete_Client_Ui is
 
       onlineList.Clear;
 
-      for E in Users.Iterate
+      for E of Users
       loop
          onlineList.Append(newItem);
-         onlineList.Set(newItem, 0, To_String(Client2Gui_Communication.Userlist.Element(E)));
+         onlineList.Set(newItem, 0, To_String(E));
       end loop;
 
    end SetOnlineUser;
@@ -216,20 +219,49 @@ package body Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
-
+      newItem : Gtk_Tree_Iter;
+      --length : Natural;
    begin
-      null;
+
+      if This.Chat_Windows = null then
+         This.Chat_Windows := new Chat_Window_Manager.ChatWindows.Map;
+      end if;
+      if This.Chat_Windows.Contains(Chatraum) then
+         This.Chat_Windows.Element(Chatraum).ChatParticipants.Clear;
+         for E of Participants
+         loop
+            This.Chat_Windows.Element(Chatraum).ChatParticipants.Append(newItem);
+            This.Chat_Windows.Element(Chatraum).ChatParticipants.Set(newItem, 0, To_String(E));
+         end loop;
+      else
+         --length := Integer(Participants.Length);
+         if Natural(Participants.Length) = 2 then
+            for E of Participants
+            loop
+               if E /= MyUserName then
+                  Chat_Window_Manager.MyRooms.Insert(E, ChatRaum);
+               end if;
+            end loop;
+         else
+            null; --TODO
+         end if;
+      end if;
 
    end ShowChatParticipants;
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatMessages(This : in out Concrete_Ui; ChatId : in Natural; Name : in Unbounded_String; Message : in Unbounded_String) is
-
+   procedure ShowChatMessages(This : in out Concrete_Ui; message : MessageObject) is
+      messages : Gtk_Text_View;
+      end_iter : Gtk_Text_Iter;
    begin
-
-      null;
-
+      if This.Chat_Windows.Contains(message.receiver) then
+         messages := Gtk_Text_View(This.Chat_Windows.Element(message.receiver).Builder.Get_Object("Messages"));
+         messages.Get_Buffer.Get_End_Iter(end_iter);
+         messages.Get_Buffer.Insert(end_iter, To_String(message.sender));
+         messages.Get_Buffer.Insert(end_iter, ": ");
+         messages.Get_Buffer.Insert(end_iter, To_String(message.content) & Ada.Characters.Latin_1.LF);
+      end if;
    end ShowChatMessages;
 
    -----------------------------------------------------------------------------
@@ -239,6 +271,7 @@ package body Concrete_Client_Ui is
    begin
       username := Gtk_Entry(This.Login_Window.Builder.Get_Object("Login_Username"));
       Instance.UserName := To_Unbounded_String(username.Get_Text);
+      Chat_Window_Manager.MyUserName := Instance.UserName;
       This.Login_Window.Window.Hide;
    end LoginSuccess;
 
@@ -284,13 +317,12 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : in  Natural; Name : in Unbounded_String) is
-
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String) is
    begin
-      null;
-      end UpdateChatRoomId;
+      Chat_window_Manager.MyRooms.Insert(Name, ChatId);
+--      Chat_window_Manager.MyUsers.Insert(To_Unbounded_String("tomi"), ChatId);
+   end UpdateChatRoomId;
 
    -----------------------------------------------------------------------------
-
 
 end Concrete_Client_Ui;
