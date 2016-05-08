@@ -25,7 +25,7 @@
 \usepackage{parskip}
 \usepackage{booktabs}
 \usepackage[right]{eurosym}
-\usepackage{picins}
+%\usepackage{picins}
 \usepackage[subfigure,titles]{tocloft}
 \usepackage[pdfpagelabels=true]{hyperref}
 \usepackage{listings}
@@ -156,10 +156,60 @@
 \setcounter{section}{0}
 
 \section{Projektidee}
-Das Ziel ist es einen Instant-Messaging-Dienst zu entwickeln, der es erlaubt mit anderen Nutzern einzeln oder in Gruppen in Echtzeit zu kommunizieren. Hierbei handelt es sich um ein Gruppenprojekt, dass im Rahmen des Kurses \textit{Entwicklung sicherer, hardwarenaher Anwendungen} in der Programmiersprache \textit{Ada} entwickelt wird.  
+Das Ziel ist es einen Instant-Messaging-Dienst zu entwickeln, der es erlaubt, mit anderen Nutzern einzeln oder in Gruppen in Echtzeit zu kommunizieren. Hierbei handelt es sich um ein Gruppenprojekt, dass im Rahmen des Kurses \textit{Entwicklung sicherer, hardwarenaher Anwendungen} in der Programmiersprache \textit{Ada} entwickelt wird.  
 
-Der Dienst ist in Client und Server unterteilt. Beide Komponenten können über grafische Benutzerschnittstellen bedient werden. Die des Servers informiert über alle Ereignisse die auf dem Server eintreten und erlaubt eine rudimentäre Verwaltung von angemeldeten Nutzern. 
-Die Benutzerscnittstelle des Clients gestattet das Registrieren und Einloggen am Server. Im Anschluss bekommt der Nutzer seine Kontaktliste angezeigt, in der er unter anderem andere Nutzer als Freunde hinzufügen oder löschen kann. Bei Doppelklick auf einen befreundeten Nutzer öffnet sich ein seprarates Chatfenster zur direkten Kommunikation. Diese kann zur Gruppenkommunikation erweitert werden, indem weitere Freunde zum Chat eingeladen werden.
+Der Dienst ist in Client und Server unterteilt. Beide Komponenten können über grafische Benutzerschnittstellen bedient werden. Die des Servers informiert über alle Ereignisse, die auf dem Server eintreten und erlaubt eine rudimentäre Verwaltung von angemeldeten Nutzern. 
+% rudimentär? downgradest uns ja selber :P
+Die Benutzerschnittstelle des Clients gestattet das Registrieren und Einloggen am Server. Im Anschluss bekommt der Nutzer seine Kontaktliste angezeigt, in der er unter anderem andere Nutzer als Freunde hinzufügen oder löschen kann. Bei Doppelklick auf einen befreundeten Nutzer öffnet sich ein seprarates Chatfenster zur direkten Kommunikation. Diese kann zur Gruppenkommunikation erweitert werden, indem weitere Freunde zum Chat eingeladen werden.
+
+
+% ----------------------------------------------------------------------------------------------------------
+% Vorgehen
+% ----------------------------------------------------------------------------------------------------------
+\section{Vorgehen}
+Nachdem die Projektidee gefunden war wurde das Projekt analysiert und systematisch eingeteilt. Hierzu wurde sich im Team Gedanken gemacht, was 
+der Instant-Messaging-Dienst im Einzelnen an Funktionaltität bereitstellen 
+soll. Die Gruppe definierte dazu genaue Pflichten und skizzierte anhand dieser die Benutzeroberflächen.
+
+Die daraus resultierenden Aufgabenbereiche wurde im Anschluss auf die Gruppenmitglieder verteilt: 
+\begin{description}
+	\item[Geschäftslogik Server:] Herr Kreck und Herr Schmischke
+	\item[Benutzeroberfläche Server:] Herr Iffland
+	\item[Geschäftslogik Client:] Herr Westbrock
+	\item[Benutzeroberfläche Client:] Herr Bayer 
+\end{description}
+
+Organisatorisch beschloss das Projektteam wöchentliche Treffen um die bisher
+entwickelte Funktionalität zusammenzuführen und zu testen. Des Weiteren wurden
+die Aufgaben für die nächste Woche besprochen und festgesetzt.
+
+\section{Pflichtenheft}
+Folgende Funktionalität wurden bzgl. des Clients festgelegt.
+Einem Nutzer soll es möglich sein:
+\begin{itemize}
+	\item sich durch eine Registrierung ein Konto zu erstellen. Hierfür muss ein freiwählbarer aber eindeutiger Benutzername ausgewählt und ein Passwort zum späteren Login festgelegt werden.
+	\item sich über einen Loginscreen mit seinem Benutzernamen und Passwort in den Chat einwählen zu können.
+	\item nach vorangegangenem Login seine Kontaktliste einsehen zu können, Kontakte daraus zu entfernen oder neue über einen Kontaktanfrage hinzuzufügen zu können.
+	\item über Kontaktanfragen selbstständig entscheiden zu dürfen, d.h. diese entweder annehmen oder ablehnen zu können. 
+	\item durch Interaktion mit der Kontaktliste mit seinen Kontakten kommunizieren zu können. Dieses soll er sowohl mit einem einzelnen Kommunikationspartner als auch mit mehreren gleichzeitig vollziehen können.
+\end{itemize}
+
+
+Folgende Funktionalität wurden bzgl. des Servers festgelegt.
+Einem Administrator soll es möglich sein:
+\begin{itemize}
+	\item den Server von der GUI aus zu starten und zu stoppen.
+	\item auszuwählen auf welchem Port der Server kommunizieren soll.
+	\item die momentan verbundenen Benutzer mit zusätzlichen Informationen einsehen zu können (Client-IP, Kontakte, offene Chaträume).
+	\item einen zuvor selektierten Benutzer zu kicken.
+	\item die Anzahl der momentan verbundenen Benutzer einsehen zu können.
+	\item die momentan zur Kommunikation genutzten Chaträume einsehen zu können.
+	\item einen Überblick über die Aktivitäten des Servers zu erlangen, indem 
+	dieser diese zur Kenntnissnahme wichtige Aktivitäten in Informations- und Fehlerfeldern ausgibt.
+	\item einen Mitschnitt über die momentan aublaufende Nutzerkommunikation angezeigt zu bekommen.
+\end{itemize} 
+
+Aus diesen für den Nutzer und Administrator zur Verfügung gestellten Funktionen resultiert unter anderem, dass die Geschäftslogik des Servers Nutzer, Chaträume, Kontaktanfragen usw. verwalten können muss und dass diese Daten beim Starten und Beenden der Serveranwendung persistent gespeichert bzw. aus einer Datebank geladen werden.
 
 % ----------------------------------------------------------------------------------------------------------
 % Architektur
@@ -179,7 +229,7 @@ Server und Client kommunizieren über Nachrichten. Eine Nachricht besteht aus vi
 \end{minipage}
 \vspace{0.5em}
 
-Die einzelnen Teile einer Nachricht werden durch ein definiertes Trennzeichen separiert. Hierbei handelt es sich um ein nicht druckbares Zeichen, um den Zeichenraum der Nutzer beim Chatten nicht unnötig einzuschränken.
+Die einzelnen Teile einer Nachricht werden durch ein definiertes Trennzeichen separiert. Hierbei handelt es sich um ein nicht druckbares Zeichen, um den Zeichenraum der Nutzer beim Chatten nicht unnötig einzuschränken. Ein anderes ebenso nicht druckbares Zeichen zeigt das Ende dieser Nachricht an.
 
 Während Bestandteile des Headers nicht mehr weiter unterteilbar sind, wird der Inhalt je nach Nachrichtentyp noch feiner strukturiert, indem in ihm das gleiche Trennzeichen wiederholt zur Anwendung kommt.
 
@@ -187,6 +237,8 @@ Der Nachrichtentyp wird durch die Definition eines Aufzählungstypen mit 13 zu u
 %TODO ist vielleicht zu system nah? das Protokoll ist ja eher auf einer abstrakten Schicht. Und steht mehr oder weniger unten nochmal
 
 Bei diesem Vorgehen nimmt der Standard-Chatraum mit der Nummer \textit{0} eine besondere Rolle ein. Jeder nicht verbundene Client befindet sich in einem individuellen Standard-Chatraum mit dem Server. Er ist die Anlaufstelle für eingehende Verbindungsanfragen, da erst im folgenden Schritt dem anfragenden Client dynamisch ein einzelner Chatraum zur Kommunikation mit dem Server zugewiesen werden kann. Nach dem Verbindungsaufbau verfügt demnach jeder Client über einen eigenen Server-Chatraum und ggf. wenn er die Kommunikation mit anderen Clients sucht, über jeweils einen Chatraum für jeden Kommunikationspartner. Diese werden zunächst als Einzelchats zwischen zwei Nutzern erzeugt, können aber durch Benutzerinteraktion um beliebig viele Teilnehmer erweitert werden, wodurch Gruppenkommunikation möglich ist.
+
+Das Protokoll lässt sich um beliebig viele weitere Funktionen erweitern. Hierzu muss nur ein neuer Nachrichtentyp eingeführt und die Kontrollstrukturen des Clients und Servers angepasst werden.
 
 \subsubsection{Registrierung}
 Ein Client meldet sich als ein Benutzer beim Server an. Dieser muss zuvor über eine Registrierung mit frei wählbarem Benutzernamen und Passwort angelegt.
@@ -233,21 +285,21 @@ Der Verbindungsversuch hat zwei mögliche Resultate:
 	Sollte das Verbinden nicht gelingen, wird vom Server eine an den Standard-Chatraum adressierte \textit{refused}-Nachricht versendet, deren Inhalt Aufschluss über die Hintergründe des Misserfolgs liefert. Hierfür existieren vier verschiedene Szenarien.
 	\begin{enumerate}
 		\item \textbf{der Benutzer ist unbekannt} \newline
-			Wird ein Benutzername übergeben, welcher dem Server nicht bekannt ist, schlägt das Einloggen fehl. Der Inhalt der Nachricht lautet dann \glqq user not found in database\grqq{}.
-			
-			\vspace{1em}
-			\begin{minipage}{\linewidth}
-				\centering
-				\includegraphics[width=0.7\linewidth]{img/connect2.png}
-				\label{fig:connect2}
-			\end{minipage} 	
+			Wird ein Benutzername übergeben, welcher dem Server nicht bekannt ist, schlägt das Einloggen fehl. Der Inhalt der Nachricht lautet dann \glqq user not found in database\grqq{}. 	
 		\item \textbf{das Passwort ist nicht korrekt} \newline
 			Sollte das übergebene Passwort nicht mit dem in der Datenbank des Servers hinterlegtem Passwort des Benutzers übereinstimmen, kann der Client nicht eingeloggt werden. Der Inhalt der Nachricht lautet dann \glqq invalid password\grqq{}.
 		\item \textbf{der angegebene Benutzer ist schon eingeloggt} \newline
 			Hier ist bereits ein Benutzer mit dem angegebenen Benutzernamen mit dem Server eingeloggt. Der Inhalt der Nachricht lautet dann \glqq user already logged in\grqq.
-		\item \textbf{Client bereits eingeloggt} \newline
+		\item \textbf{der Client ist bereits eingeloggt} \newline
 		    Wenn der Client sich bereits als ein Benutzer zum Server verbunden hat, lehnt der Server ein erneutes Einloggen ab. Der Inhalt der Nachricht lautet dann \glqq you are already logged in to an account\grqq.
 	\end{enumerate}
+	
+		\vspace{1em}
+		\begin{minipage}{\linewidth}
+			\centering
+			\includegraphics[width=0.7\linewidth]{img/connect2.png}
+			\label{fig:connect2}
+		\end{minipage}
 	
 \end{itemize}
 
@@ -269,7 +321,7 @@ Der Server gibt diese Intention dem requestierten Benutzer weiter, sollte dieser
 \vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[width=0.78\linewidth]{img/addcontact2.png}
+	\includegraphics[width=0.7\linewidth]{img/addcontact2.png}
 	\label{fig:addcontact2}
 \end{minipage}
 \vspace{0.5em}
@@ -288,7 +340,7 @@ Um eine Kontaktanfrage abzulehnen, kann eine \textit{remcontact}-Nachricht an de
 
 Über eine Nachricht in dieser Form kann auch ein Kontakt entfernt werden. Dies quittiert der Server mit einer \textit{remcontact}-Nachricht, welche den Benutzernamen des entfernten Kontakts als Inhalt trägt. Eine analoge Nachricht wird auch den an entfernten Kontakt gesendet.
 
-Sollte der Client versuchen, einen Benutzer von seiner Kontaktliste zu entfernen, welcher sich nicht auf dieser befindet, oder versuchen, eine Kontaktanfrage von einem Benutzer abzulehnen, welcher keine Anfrage gestellt hat, wird die \textit{remcontact}-Nachricht vom Server mit einer \textit{refused}-Nachricht beantwortet und keine weiteren Aktionen ausgelöst. Der Inhalt der Nachricht lautet dann dementsprechend der Situation \glqq there is no contact request from '<username>' \grqq beziehungsweise \glqq there is no contact with name '<username>' \grq{}.
+Sollte der Client versuchen, einen Benutzer von seiner Kontaktliste zu entfernen, welcher sich nicht auf dieser befindet, oder versuchen, eine Kontaktanfrage von einem Benutzer abzulehnen, welcher keine Anfrage gestellt hat, wird die \textit{remcontact}-Nachricht vom Server mit einer \textit{refused}-Nachricht beantwortet und keine weiteren Aktionen ausgelöst. Der Inhalt der Nachricht lautet dann dementsprechend der Situation \glqq there is no contact request from \grq\textless{}username\textgreater\grq \grqq{} beziehungsweise \glqq there is no contact with name \grq\textless{}username\textgreater\grq \grqq{}.
 
 \vspace{1em}
 \begin{minipage}{\linewidth}
@@ -298,7 +350,7 @@ Sollte der Client versuchen, einen Benutzer von seiner Kontaktliste zu entfernen
 \end{minipage}
 \vspace{0.5em}
 
-Sollte sich der Online-Status des Benutzers ändern, durch Ein-/Ausloggen oder nach dem Hinzufügen eines Kontaktes, wird der neue Status allen Kontakt durch eine \textit{offline}- oder \textit{online}-Nachricht mitgeteilt.
+Sollte sich der Online-Status eines Kontaktes ändern, durch Ein-/Ausloggen oder nach dem er als neuer Kontakt hinzugefügt wurde, wird der neue Status dem Benutzer durch eine \textit{offline}- oder \textit{online}-Nachricht mitgeteilt.
 
 \vspace{1em}
 \begin{minipage}{\linewidth}
@@ -307,29 +359,142 @@ Sollte sich der Online-Status des Benutzers ändern, durch Ein-/Ausloggen oder n
 	\label{fig:status1}
 \end{minipage}
 
-\subsubsection{Kommunikation}
+\subsubsection{Chatten}
+Jeder Form des Chattens findet in einem Chatraum statt. Dieser muss zuerst vom Server erstellt werden. Hierzu muss der Client eine \textit{chatrequest}-Nachricht an den Server senden. Adressiert wird diese an den Serverchatraum, der Inhalt gibt an, mit welchem eingeloggten Kontakt man chatten möchte. Mit Benutzern, die nicht Kontakt des Clients sind, kann nicht gechattet werden.
 
-\subsubsection{Verbindungsabbau}
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/chatrequest1.png}
+	\label{fig:chatrequest1}
+\end{minipage}
+\vspace{0.5em}
 
-\subsection{Klassendiagramm}
+Der Server verarbeitet die Anfrage, in dem er einen Chatraum mit einer einzigartigen ID erstellt und den anfragenden sowie den angefragten Benutzer zu dem Chatraum hinzufügt. Dem anfragenden Benutzer wird anschließend mit einer \textit{chatrequest}-Nachricht geantwortet, die als Empfänger-ID die Nummer des Chatraums trägt. Diese Nummer dient nun als Adresse aller \textit{chat}-Nachrichten, die in diesem Raum ausgetauscht werden. 
 
-% ----------------------------------------------------------------------------------------------------------
-% Vorgehen
-% ----------------------------------------------------------------------------------------------------------
-\section{Vorgehen}
-Usecases definiert
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/chat1.png}
+	\label{fig:chat1}
+\end{minipage}
+\vspace{0.5em}
 
-Skizzen für GUIs erstellt
+Möchte der Benutzer einen weiteren Kontakt zu diesem Chat hinzufügen, sendet er eine analoge \textit{chatrequest}-Nachricht mit der Chatraum-ID als Empfänger-ID.
 
-aufteilen des Klassendiagramms auf die Leute, wöchentliche Treffen
+Ändert sich die Teilnehmerliste eines Chats, indem ein neuer Benutzer hinzugefügt wurde oder ein Benutzer den Chat verlässt, teilt der Server dies allen übrigen Teilnehmern im Chat mit einer \textit{userlist}-Nachricht mit. Im Inhalt dieser an den jeweiligen Chatraum adressierten Nachricht befinden sich die Benutzernamen aller Teilnehmer, durch das vom Protokoll genutzte Trennzeichen jeweils separiert.
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/userlist1.png}
+	\label{fig:userlist1}
+\end{minipage}
+\vspace{0.5em}
+
+Ein Chatraum wird durch Versenden einer an den jeweiligen Chatraum adressierte \textit{leavechat}-Nachricht verlassen. Dem Benutzer steht es offen einen Abschiedstext anzugeben, der nach dem Verlassen im Chat angegeben wird.
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/leavechat1.png}
+	\label{fig:leavechat1}
+\end{minipage}
+\vspace{0.5em}
 
 
-\subsection{dies und das}
-bla bla
+\subsubsection{Ausloggen}
+Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn der Server diese durch eine weitere \textit{disconnect}-Nachricht dem Inhalt \glqq ok\grqq{}. bestätigt, wurde der Benutzer erfolgreich ausgeloggt.
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/disconnect.png}
+	\label{fig:disconnect}
+\end{minipage}
+\vspace{0.5em}
+
+
+
+\subsection{Implementierungslogik - Zustandsdiagramm}
+
+\subsection{Klassendiagramme}
 
 % ----------------------------------------------------------------------------------------------------------
 % Probleme
 % ----------------------------------------------------------------------------------------------------------
+
+\newpage
+\section{Benutzerhandbuch}
+Im Folgenden soll die Benutzung der Oberflächen erklärt werden, um dem Benutzer einen leichten Einstieg zu gewähren.
+\subsection{Server}
+Die Server-GUI dient als Oberfläche dazu, die Steuerung der Serverlogik einfach zu gestalten und somit eine effiziente Verwaltung zu gewährleisten.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/Server_GUI.png}
+
+\end{minipage}
+\vspace{1em}
+\begin{enumerate}
+	\item Mit diesem Button lässt sich der Server starten. Diese Schaltfläche ist nur aktiviert, wenn der Server nicht läuft.
+	\item Mit diesem Button lässt sich der Server stoppen. Diese Schaltfläche ist nur aktiviert, wenn der Server läuft.
+	\item Mit dieser Schaltfläche ist es möglich einen Benutzer aus dem Chat zu entfernen("kicken"). Der User, der entfernt werden soll, wird aus dem Drop-down-Menü unter \textit{7.} ausgewählt.
+	\item Mit der Schaltfläche ist es möglich das Fenster mit den Chatnachrichten zu leeren.
+	\item Hier wird der aktuelle Status des Servers angezeigt und die Anzahl der verbundenen Benutzer.
+	\item In diesem Textfeld lässt sich der Port einstellen. Diese Einstellung lässt sich nicht zur Laufzeit verändern, sondern nur vor dem Start des Servers.
+	\item In diesem Drop-down-Menü befinden sich alle Nutzer, die aktuell online sind. Wenn hier ein Benutzer ausgewählt wird, kann er über Schaltfläche \textit{3.} entfernt werden.
+	\item Hier befindet sich die Benutzerliste. Dort erhalten Sie folgende Informationen über einen Benutzer:
+		\begin{itemize}
+			\item Benutzernamen
+			\item IP-Adresse
+			\item Seine Kontakte
+			\item Die Chaträume in denen er sich befindet
+		\end{itemize}
+	
+	\item Hier finden Sie die Chaträume und die Benutzer, die sich in dem jeweiligen Raum befinden.
+	\item In dem Feld unter dem Reiter \textit{Informationen} befinden sich Nachrichten des Servers über Ereignisse und Zustandsänderungen.
+	\item In dem Feld unter dem Reiter \textit{Fehler} finden sich Fehlermeldungen des Servers.
+	\item In diesem Feld befinden sich die Nachrichten der Benutzer in den einzelnen Chaträumen.
+\end{enumerate}
+\newpage
+\subsection{Client}
+Nach dem Server soll nun die Benutzeroberfläche der Clientanwendung beschrieben werden. Der Client besteht aus drei verschiedenen Oberflächen: Eine Loginoberfläche, ein Chatfenster und eine Übersichtsdarstellung.
+\subsubsection{Loginoberfläche}
+Die Loginoberfläche dient dazu einen vorhanden Benutzer beim Server anzumelden oder, falls der Benutzer noch nicht vorhanden ist, diesen zu registrieren.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/Client_Login.png}
+	
+\end{minipage}
+\vspace{1em}
+\begin{enumerate}
+	\item In diesem Feld wird die IP-Adresse des Rechners angegeben, auf dem der Server läuft.
+	\item Hier wird der Port angegeben, auf dem der Server lauscht. Der Standardport ist 12321. 
+	\item Hier wird der Benutzername eingegeben.
+	\item In dieses Feld wird das Passwort eingegeben
+	\item Mit einem Druck auf "Login" wird der Benutzer, falls die Benutzerdaten korrekt sind, beim Sever angemeldet.
+	\item Mit einem Druck auf "Register" wird ein Benutzer mit den eingegebenen Benutzerdaten beim Server registriert.
+\end{enumerate}
+\subsubsection{Chatoberfläche}
+Die Chatoberfläche ist das Fenster, in dem Chatnachrichten zwischen den Benutzern ausgetauscht werden.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/client_chat.png}
+	
+\end{minipage}
+\vspace{1em}
+\begin{enumerate}
+	\item In diesem Textfeld befindet sich eine Übersicht der bisher ausgetauschten Chatnachrichten.
+	\item Hier befinden sich die Teilnehmer des Chats.
+	\item In diesem Textfeld werden die Chatnachrichten eingegeben, die an die anderen Teilnehmer gesendet werden sollen.
+	\item Über diesen Button lassen sich Smileys einfügen.
+	\item Über diese Schaltfläche lassen sich Spiele mit den anderen Chatteilnehmern starten.
+	\item Hierüber kann man sich vergangene Konversationen ansehen.
+	\item Über diesen Button ist es möglich einen weiteren Teilnehmer zum Chat hinzuzufügen.
+\end{enumerate}
 \section{Probleme}
 Im Folgenden sind die Problemstellungen aufgeführt, die in den Augen des Projektteams gravierend waren und die Entwicklung merkbar gehemmt haben.
 
@@ -345,9 +510,18 @@ Jedoch muss man erwähnen, dass die Code-Qualität trotz alledem  unmittelbar da
 Abgesehen davon wird aus diesem Grund eine Beschäftigung mit der Spache über den Kurs hinaus kaum Anhang finden.
 
 \subsection{Zirkuläre Abhängigkeiten}
-Beim Aufbau von Datenstrukturen, wo die einen Bestandteil der anderen sind traten sehr oft Zirkuläre Abhängigkeitsprobleme auf. Da in Ada ein Identifier vor dessen Verwendung deklariert werden muss war es nicht einfach Protected Types, Types, Pointer Types, Interfaces frei miteinander zu kombinieren. 
+Beim Aufbau von Datenstrukturen, wo die einen Bestandteil der anderen sind, traten des Öfteren zirkuläre Abhängigkeitsprobleme auf. Es wurden zwei Methoden verwendet, um diese Probleme zu beseitigen. Zum einen ist es möglich, alle Datentypen in einer gemeinsamen Spezifikationsdatei (.ads) zu definieren. Somit ist es nicht notwendig, andere Spezifikationen einzubinden, es existieren keine Abhängigkeiten nach außen. Da dies allerdings zu einer sehr unübersichtlichen Projektstruktur führt, wurde wenn möglich die umgekehrte Methodik verwendet und unabhängige Datenstrukturen jeweils in ihrem eigenen File beschrieben, welches dann von den zwei nutzenden Strukturen referenziert wird.
 
-Zudem zeigte sich, dass das Einbinden von Spezifikationsdateien (.ads) in eine Bodydatei (.adb) ein anderes Folgeverhalten aufweisen kann als wenn diese in die dem Body zugehörige Spezifikationsdatei eingebunden werden. Manche zirkuläre Abhängigkeit konnte dadurch aufgelöst werden.
+Ada 2005 bietet zur Beseitigung von zirkulären Abhängigkeiten die \glqq{}limited with\grqq{}-Klausel an. Da dies aber nur eine unvollständige Sicht auf das somit eingebundene Paket oder den somit eingebundenen Typen liefert, konnte dies nicht immer verwendet werden (siehe \url{http://www.adaic.org/resources/add_content/standards/05rat/html/Rat-1-3-3.html}).
+
+%link gescheit einbinden
+
+Rekursive Datenstrukturen - zum Beispiel ein Benutzer, der seine Kontakte in einer Liste aus Benutzern speichert - können in Ada nur definiert werden, in dem der Datentyp zuvor als unvollständiger Typ deklariert wurde. Dieses Prinzip ist zwar aus anderen Programmiersprachen wie C bekannt, zerstückelt den Quellcode aber dennoch und ist somit ein weiterer Nachteil dieser Sprache.
+
+%Da in Ada ein Bezeichner vor dessen Verwendung deklariert werden muss, war es nicht einfach %Protected Types, Types, Pointer Types, Interfaces frei miteinander zu kombinieren. 
+%was ist hier gemeint?
+
+Außerdem war verwunderlich, dass das Einbinden von Spezifikationsdateien in eine Bodydatei (.adb) ein anderes Folgeverhalten bezüglich der zirkulären Abhängigkeiten aufweisen kann, als wenn diese in die dem Body zugehörige Spezifikationsdatei eingebunden werden. Manche zirkuläre Abhängigkeit konnte nur so aufgelöst werden.
 
 \subsection{Arbeiten mit GTK}
 
@@ -759,13 +933,7 @@ Sobald alle 14 Bits eines Telegramms empfangen wurden und das neue Togglebit sic
 Nachdem es nun möglich ist, Kommandos über die Fernbedienung zu erhalten, müssen diese an die Steuerung eines Teatimer gekoppelt werden. Die grundlegenden Funktionen und der Aufbau eines Teatimers sind bei der Aufgabe \ref{VersuchTeatimer} aufgeführt.\newline
 Es wurde eine Zustandsmaschine entworfen, welche die einzelnen Aktionen nach Erhalt eines Kommandos festlegt.
 
-\vspace{1em}
-\begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[width=1\linewidth]{img/Zustandsdiagramm.pdf}
-	\captionof{figure}{Zustandsautomat des Teatimers}
-	\label{fig:StateMachine}
-\end{minipage}
+
 
 Wie der Abbildung \ref{fig:StateMachine} zu entnehmen ist, gibt es vier Zustände in denen sich der Teatimer befinden kann. Die Auswirkung der Zustände teilt sich in drei Aspekte auf:
 \begin{itemize}
