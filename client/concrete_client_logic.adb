@@ -5,400 +5,378 @@ with GNAT.String_Split; use GNAT.String_Split;
 
 package body Concrete_Client_Logic is
 
-   Client : Socket_Type;
-   Address : Sock_Addr_Type;
-   Channel : Stream_Access;
+   client : Socket_Type;
+   address : Sock_Addr_Type;
+   channel : Stream_Access;
 
-   procedure InitializeGUI(This : in out Concrete_Client; Ptr : in GUIPtr) is
+   procedure initializeGUI(this : in out Concrete_Client; ptr : in GUIPtr) is
 
    begin
 
-      This.GUI := Ptr;
+      this.gui := ptr;
 
    end InitializeGUI;
 
    -----------------------------------------------------------------------------
 
-   procedure InitializeSocket(This : in out Concrete_Client; ServerAdress : in Unbounded_String;
-                              ServerPort : in Port_Type) is
+   procedure initializeSocket(this : in out Concrete_Client; serverAdress : in Unbounded_String;
+                              serverPort : in Port_Type) is
 
    begin
       --#Socket initialisieren und erzeugen#
-      Create_Socket (Client);
-      Address.Addr := Inet_Addr(To_String(ServerAdress));
-      Address.Port := ServerPort;
-      This.Socket := Client;
-      Connect_Socket (Client, Address);
-      Channel := Stream (Client);
-      Server_Listener_Task.Start;
+      create_Socket (client);
+      address.Addr := inet_Addr(to_String(serverAdress));
+      address.Port := serverPort;
+      this.socket := client;
+      connect_Socket (client, address);
+      channel := stream (client);
+      server_Listener_Task.start;
    end InitializeSocket;
 
 
    -----------------------------------------------------------------------------
 
-   procedure ConnectToServer(This : in out Concrete_Client; UserName : in Unbounded_String;
-                             Password : in Unbounded_String) is
+   procedure connectToServer(this : in out Concrete_Client; userName : in Unbounded_String;
+                              password : in Unbounded_String) is
 
-      ConnectMessage : MessageObject;
+      connectMessage : MessageObject;
 
    begin
 
       --#ConnectMessage erzeugen#
-      ConnectMessage := createMessage(messagetype => Protocol.Connect,
-                                      sender      => UserName,
-                                      receiver    => ServerID,
-                                      content     => Password);
+      connectMessage := createMessage(messagetype => protocol.Connect,
+                                      sender      => userName,
+                                      receiver    => serverID,
+                                      content     => password);
 
       --#ConnectMessage nach Protokoll an Server#
-      writeMessageToStream(ClientSocket => Client,
-                           message      => ConnectMessage);
+      writeMessageToStream(clientSocket => client,
+                           message      => connectMessage);
 
-   end ConnectToServer;
+   end connectToServer;
 
    -----------------------------------------------------------------------------
 
-   procedure DisconnectFromServer(This : in out Concrete_Client; UserName : in Unbounded_String;
-                                  Msg : in Unbounded_String) is
+   procedure disconnectFromServer(this : in out Concrete_Client; userName : in Unbounded_String;
+                                  msg : in Unbounded_String) is
 
-      DisconnectMessage : MessageObject;
+      disconnectMessage : MessageObject;
 
    begin
 
       --#DisconnectMessage erzeugen#
-      DisconnectMessage := createMessage(messagetype => Protocol.Disconnect,
-                                         sender      => UserName,
-                                         receiver    => ServerID,
-                                         content     => Msg);
+      disconnectMessage := createMessage(messagetype => protocol.Disconnect,
+                                         sender      => userName,
+                                         receiver    => this.ServerRoomId,
+                                         content     => msg);
 
       --#DisconnectMessage nach Protokoll an Server#
-      WriteMessageToStream(ClientSocket => Client,
-                           message      => DisconnectMessage);
+      writeMessageToStream(clientSocket => client,
+                           message      => disconnectMessage);
 
-   end DisconnectFromServer;
+   end disconnectFromServer;
 
    -----------------------------------------------------------------------------
 
-   procedure RegisterAtServer(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
+   procedure registerAtServer(this : in out Concrete_Client; username : in Unbounded_String; password : in Unbounded_String) is
 
-      RegisterMessage : MessageObject;
+      registerMessage : MessageObject;
 
    begin
 
-      RegisterMessage := createMessage(messagetype => Register,
-                                       sender      => UserName,
-                                       receiver    => ServerID,
-                                       content     => Password);
+      registerMessage := createMessage(messagetype => register,
+                                       sender      => userName,
+                                       receiver    => serverID,
+                                       content     => password);
 
-      WriteMessageToStream(ClientSocket => Client,
-                           message      => RegisterMessage);
+      writeMessageToStream(clientSocket => client,
+                           message      => registerMessage);
 
-   end RegisterAtServer;
+   end registerAtServer;
 
    -----------------------------------------------------------------------------
 
-   procedure RequestChatroom(This : in out Concrete_Client; UserName : in Unbounded_String; Id_Receiver : in Integer;
-                             Participant : in Unbounded_String) is
+   procedure requestChatroom(this : in out Concrete_Client; userName : in Unbounded_String; id_Receiver : in Integer;
+                             participant : in Unbounded_String) is
 
-      RequestMessage : MessageObject;
+     requestMessage : MessageObject;
 
    begin
 
-      RequestMessage := createMessage(messagetype => Chatrequest,
-                                      sender      => UserName,
-                                      receiver    => Id_Receiver,
-                                      content     => Participant);
+      requestMessage := createMessage(messagetype => chatrequest,
+                                      sender      => userName,
+                                      receiver    => id_Receiver,
+                                      content     => participant);
 
-      WriteMessageToStream(ClientSocket => Client,
-                           message      => RequestMessage);
+      writeMessageToStream(clientSocket => client,
+                           message      => requestMessage);
 
-   end RequestChatroom;
+   end requestChatroom;
 
    -----------------------------------------------------------------------------
 
-   procedure LeaveChatroom(This : in out Concrete_Client; UserName : in Unbounded_String; Id_Receiver : in Integer;
+   procedure leaveChatroom(this : in out Concrete_Client; userName : in Unbounded_String; id_Receiver : in Integer;
                            Message : in Unbounded_String) is
 
-      LeaveMessage : MessageObject;
+      leaveMessage : MessageObject;
 
    begin
 
-      LeaveMessage := createMessage(messagetype => Leavechat,
-                                    sender      => UserName,
-                                    receiver    => Id_Receiver,
-                                    content     => Message);
+      leaveMessage := createMessage(messagetype => leavechat,
+                                    sender      => userName,
+                                    receiver    => id_Receiver,
+                                    content     => message);
 
-      WriteMessageToStream(ClientSocket => Client,
-                           message      => LeaveMessage);
+      writeMessageToStream(clientSocket => client,
+                           message      => leaveMessage);
 
-   end LeaveChatroom;
+   end leaveChatroom;
 
    -----------------------------------------------------------------------------
 
-   procedure SendTextMessage(This : in out Concrete_Client; Username : in Unbounded_String;
-                             Id_Receiver : in Integer; Msg : in Unbounded_String) is
+   procedure sendTextMessage(this : in out Concrete_Client; username : in Unbounded_String;
+                             id_Receiver : in Integer; msg : in Unbounded_String) is
 
-      Message : MessageObject;
+      message : MessageObject;
 
    begin
 
-      Message := createMessage(messagetype => Protocol.Chat,
-                               sender      => Username,
-                               receiver    => Id_Receiver,
-                               content     => Msg);
+      message := createMessage(messagetype => protocol.Chat,
+                               sender      => username,
+                               receiver    => id_Receiver,
+                               content     => msg);
 
-      WriteMessageToStream(ClientSocket => Client,
-                           message      => Message);
+      writeMessageToStream(ClientSocket => client,
+                           message      => message);
 
-   end SendTextMessage;
+   end sendTextMessage;
 
    -----------------------------------------------------------------------------
 
-   procedure SendMessageObject(This : in out Concrete_Client; Username : in Unbounded_String;
-                               Id_Receiver : in Integer; MsgObject : in MessageObject) is
+   procedure sendMessageObject(This : in out Concrete_Client; username : in Unbounded_String;
+                               id_Receiver : in Integer; msgObject : in MessageObject) is
 
 
    begin
 
-      WriteMessageToStream(ClientSocket => Client,
-                           message      => MsgObject);
+      writeMessageToStream(clientSocket => client,
+                           message      => msgObject);
 
-   end SendMessageObject;
+   end sendMessageObject;
 
    -----------------------------------------------------------------------------
 
-   procedure ReadFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) is
+   procedure readFromServer(This : in out Concrete_Client; ServerSocket : in Socket_Type) is
 
-      MsgObject : MessageObject;
-      Msg : Unbounded_String;
+      msgObject : MessageObject;
+      msg : Unbounded_String;
    begin
 
-      MsgObject := readMessageFromStream(ClientSocket => Client);
-      Protocol.printMessageToInfoConsole(MsgObject);
-      This.ProcessMessageObject(MsgObject);
+      msgObject := readMessageFromStream(clientSocket => client);
+      protocol.printMessageToInfoConsole(msgObject);
+      this.processMessageObject(msgObject);
 
-   end ReadFromServer;
+   end readFromServer;
 
    -----------------------------------------------------------------------------
 
-   procedure ProcessMessageObject(This : in out Concrete_Client; MsgObject : in MessageObject) is
+   procedure processMessageObject(this : in out Concrete_Client; msgObject : in MessageObject) is
 
    begin
       case MsgObject.Messagetype is
 
          when Connect =>
-            This.ServerRoomId := MsgObject.Receiver;
-            This.GUI.LoginSuccess;
+            this.serverRoomId := msgObject.receiver;
+            this.gui.loginSuccess;
          when Chat =>
 
             --#Ist ID bekannt, bin ich schon im Chatroom
             --#wenn ja, zeige Message in diesem Chatraum
             --#wenn nein, lege Chatraum an und oeffne guifenster
 
-            if This.ChatRoomIdSet.Contains(Item => MsgObject.Receiver) then
-               --#TODO#
-               --#zeige Message im Chatraum an
+            if this.ChatRoomIdSet.contains(item => msgObject.receiver) then
                null;
             else
-               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
-               This.GUI.UpdateChatRoomId(MsgObject.receiver, MsgObject.sender);
-               --#TODO
-               --#oeffne neues Chatfenster
+               this.ChatRoomIdSet.insert(new_Item => msgObject.receiver);
+               this.gui.updateChatRoomId(msgObject.receiver, msgObject.sender);
             end if;
-            This.GUI.ShowChatMessages(message => MsgObject);
+            this.gui.showChatMessages(message => msgObject);
 
          when Refused =>
             declare
-               Message: Unbounded_String;
+               message: Unbounded_String;
             begin
                --#1.refused wenn kein Serverconnect
                --#2. wenn name oder pw falsch
                --#3. user schon eingeloggt
                --#4. wenn Einladung in illegalem Chatraum
-               Message := To_Unbounded_String("Refused: ");
-               Append(Message, MsgObject.Content);
-               This.GUI.RefusedMessage(Reason => Message);
+               message := to_Unbounded_String("Refused: ");
+               append(message, MsgObject.Content);
+               this.gui.refusedMessage(reason => message);
             end;
 
          when Disconnect =>
             declare
-               Message : Unbounded_String;
+               message : Unbounded_String;
             begin
-               Close_Socket(Client);
+               close_Socket(Client);
 
                --#Userliste löschen#--
-               This.UsersOnline.Clear;
-               This.UsersOffline.Clear;
+               this.UsersOnline.Clear;
+               this.UsersOffline.Clear;
 
-               if MsgObject.Content = "ok"  then
-                  This.GUI.DisconnectReason(Status => To_Unbounded_String("Die Verbindung wurde beendet!"));
+               if msgObject.content = "ok"  then
+                  this.gui.disconnectReason(status => to_Unbounded_String("Die Verbindung wurde beendet!"));
                else
-                  Message := To_Unbounded_String("You were kicked: ");
-                  Append(Message, MsgObject.Content);
-                  This.GUI.DisconnectReason(Status => Message);
+                  message := To_Unbounded_String("You were kicked: ");
+                  append(Message, MsgObject.Content);
+                  this.gui.disconnectReason(status => message);
                end if;
             end;
 
          when Online =>
             declare
-               Message: Unbounded_String;
-               Position: Client2Gui_Communication.Userlist.Cursor;
+               message: Unbounded_String;
+               position: Client2Gui_Communication.Userlist.Cursor;
             begin
-               Message := MsgObject.Content;
-               Append(Message, " ist jetzt online!");
-               This.UsersOnline.Insert(MsgObject.Content);
-               if This.UsersOffline.Contains(Item => MsgObject.Content) then
-                  Position := This.UsersOffline.Find(Item => MsgObject.Content);
-                  This.UsersOffline.Delete(Position);
-                  This.GUI.SetOfflineUser(Users => This.UsersOffline);
+               message := MsgObject.Content;
+               append(Message, " ist jetzt online!");
+               this.UsersOnline.insert(msgObject.content);
+               if this.UsersOffline.contains(item => msgObject.content) then
+                  position := This.UsersOffline.Find(item => msgObject.content);
+                  this.UsersOffline.delete(position);
+                  this.gui.SetOfflineUser(users => this.UsersOffline);
                end if;
-               This.GUI.SetOnlineUser(Users => This.UsersOnline);
+               this.gui.setOnlineUser(Users => this.UsersOnline);
             end;
 
          when Offline =>
             declare
-               Message: Unbounded_String;
-               Position: Client2Gui_Communication.Userlist.Cursor;
+               message: Unbounded_String;
+               position: Client2Gui_Communication.Userlist.Cursor;
             begin
-               Message := MsgObject.Content;
-               Append(Message, " ist jetzt offline!");
-               This.UsersOffline.Insert(MsgObject.Content);
-               if This.UsersOnline.Contains(Item => MsgObject.Content) then
-                  Position := This.UsersOnline.Find(Item => MsgObject.Content);
-                  This.UsersOnline.Delete(Position);
-                  This.GUI.SetOnlineUser(Users => This.UsersOnline);
+               message := msgObject.content;
+               append(Message, " ist jetzt offline!");
+               this.UsersOffline.insert(msgObject.content);
+               if this.UsersOnline.contains(Item => msgObject.content) then
+                  position := this.UsersOnline.find(item => msgObject.content);
+                  this.UsersOnline.delete(position);
+                  this.gui.setOnlineUser(users => this.UsersOnline);
                end if;
-               This.GUI.SetOfflineUser(Users => This.UsersOffline);
+              this.gui.setOfflineUser(users => this.UsersOffline);
             end;
 
          when Chatrequest =>
             declare
-               Message: Unbounded_String;
+               message: Unbounded_String;
             begin
 
-               This.ChatRoomIdSet.Insert(New_Item => MsgObject.Receiver);
-               This.GUI.UpdateChatRoomId(ChatId => MsgObject.Receiver, Name => MsgObject.Content);
+               this.ChatRoomIdSet.insert(new_Item => msgObject.receiver);
+               this.gui.updateChatRoomId(chatId => msgObject.Receiver, name => msgObject.content);
 
             end;
 
          when Protocol.Userlist =>
             declare
-               Substrings : GNAT.String_Split.Slice_Set;
-               UserSet : Client2Gui_Communication.Userlist.Set;
+               substrings : GNAT.String_Split.Slice_Set;
+               userSet : Client2Gui_Communication.Userlist.Set;
             begin
-               GNAT.String_Split.Create (S => Substrings,
-                                         From       => To_String(MsgObject.Content),
-                                         Separators => Protocol.Seperator,
-                                         Mode       => GNAT.String_Split.Single);
+               GNAT.String_Split.create (s => substrings,
+                                         from       => To_String(MsgObject.Content),
+                                         separators => Protocol.Seperator,
+                                         mode       => GNAT.String_Split.Single);
 
-               for I in 1 .. GNAT.String_Split.Slice_Count (Substrings) loop
-                  UserSet.Insert(New_Item => To_Unbounded_String(GNAT.String_Split.Slice (Substrings, I)));
+               for i in 1 .. GNAT.String_Split.Slice_Count (substrings) loop
+                  UserSet.insert(new_Item => to_Unbounded_String(GNAT.String_Split.Slice (substrings, i)));
                end loop;
 
-               This.ChatRoomParticipants.Insert(Key      => MsgObject.Receiver,
-                                                New_Item => UserSet);
+               this.ChatRoomParticipants.insert(key      => msgObject.receiver,
+                                                new_Item => userSet);
 
-               This.GUI.ShowChatParticipants(Chatraum     => MsgObject.Receiver,
-                                             Participants => UserSet);
+               this.gui.showChatParticipants(chatraum     => msgObject.receiver,
+                                             participants => userSet);
             end;
 
          when AddContact =>
-            --#TODO
-            This.GUI.ContactRequest(Username => MsgObject.Content);
+            this.gui.contactRequest(username => msgObject.content);
 
          when RemContact =>
-            --#TODO
-            This.GUI.ContactRemove(Username => MsgObject.Content);
+            this.gui.ContactRemove(username => msgObject.content);
 
          when others =>
             null;
 
       end case;
-   end ProcessMessageObject;
+   end processMessageObject;
 
    -----------------------------------------------------------------------------
-
-   procedure RefreshUserlist(This : in out Concrete_Client; User : in Unbounded_String) is
-
-   begin
-      null;
-   end RefreshUserlist;
-
-   -----------------------------------------------------------------------------
-
-   function SearchFriendList(This : in out Concrete_Client; User : in Unbounded_String) return Boolean is
-
-   begin
-      return False;
-   end SearchFriendList;
-
-   -----------------------------------------------------------------------------
-   function Hash (R : Natural) return Hash_Type is
+   function hash (R : Natural) return Hash_Type is
    begin
       return Hash_Type (R);
-   end Hash;
+   end hash;
 
    -----------------------------------------------------------------------------
    -----------Implementierung des Gui2Client_Communication interfaces-----------
    -----------------------------------------------------------------------------
 
-   procedure LoginUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
+   procedure loginUser(this : in out Concrete_Client; username : in Unbounded_String; password : in Unbounded_String) is
 
    begin
-      This.ConnectToServer(UserName     => Username,
-                           Password     => Password);
-   end LoginUser;
+      this.connectToServer(userName     => username,
+                           password     => password);
+   end loginUser;
 
    -----------------------------------------------------------------------------
 
-   procedure DisconnectUser(This : in out Concrete_Client; Username : in Unbounded_String; Message : in Unbounded_String) is
+   procedure disconnectUser(this : in out Concrete_Client; username : in Unbounded_String; message : in Unbounded_String) is
 
    begin
-      This.DisconnectFromServer(UserName => Username,
-                                Msg      => Message);
+      this.disconnectFromServer(userName => username,
+                                msg      => message);
    end DisconnectUser;
 
    -----------------------------------------------------------------------------
 
-   procedure RegisterUser(This : in out Concrete_Client; Username : in Unbounded_String; Password : in Unbounded_String) is
+   procedure registerUser(this : in out Concrete_Client; username : in Unbounded_String; password : in Unbounded_String) is
 
    begin
-      This.RegisterAtServer(UserName => Username,
-                            Password => Password); --#TODO ENCODE EINFUEGEN
-   end RegisterUser;
+      this.registerAtServer(userName => username,
+                            password => password); --#TODO ENCODE EINFUEGEN#--
+   end registerUser;
 
    -----------------------------------------------------------------------------
 
-   procedure InviteToGroupChat(This : in out Concrete_Client; Username : in Unbounded_String; Receiver : in Integer;
-                               Participant : in Unbounded_String) is
+   procedure inviteToGroupChat(this : in out Concrete_Client; username : in Unbounded_String; receiver : in Integer;
+                               participant : in Unbounded_String) is
 
    begin
-      This.RequestChatroom(UserName    => Username,
-                           Id_Receiver => Receiver,
-                           Participant => Participant);
+      this.requestChatroom(userName    => username,
+                           id_Receiver => receiver,
+                           participant => participant);
    end InviteToGroupChat;
 
    -----------------------------------------------------------------------------
 
-   procedure SendMessageToChat(This : in out Concrete_Client; Receiver: in Integer; Username : in Unbounded_String;
-                               Message : in Unbounded_String) is
+   procedure sendMessageToChat(this : in out Concrete_Client; receiver: in Integer; username : in Unbounded_String;
+                               message : in Unbounded_String) is
 
    begin
 
-      This.SendTextMessage(Username    => Username,
-                           Id_Receiver => Receiver,
-                           Msg         => Message);
+      this.sendTextMessage(username    => username,
+                           id_Receiver => receiver,
+                           msg         => message);
    end SendMessageToChat;
    -----------------------------------------------------------------------------
 
-   procedure RequestChat(This : in out Concrete_Client; Username : in Unbounded_String;
-                         Participant : in Unbounded_String) is
+   procedure requestChat(this : in out Concrete_Client; username : in Unbounded_String;
+                         participant : in Unbounded_String) is
    begin
 
-      This.RequestChatroom(UserName    => Username,
-                           Id_Receiver => This.ServerRoomId,
-                           Participant => Participant);
+      this.requestChatroom(userName    => username,
+                           id_Receiver => this.ServerRoomId,
+                           participant => participant);
 
-   end RequestChat;
+   end requestChat;
 
    -----------------------------------------------------------------------------
 
@@ -407,7 +385,7 @@ package body Concrete_Client_Logic is
       accept Start;
       loop
          begin
-            Instance.ReadFromServer(Client);
+            Instance.readFromServer(client);
          end;
       end loop;
    end Server_Listener_Task;
