@@ -187,7 +187,7 @@ package body Concrete_Client_Ui is
       requestsFrame : Gtk_Frame;
    begin
       requestsList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("requests_list"));
-      requestsFrame := Gtk_Frame(This.Contact_Window.Builder.Get_Object("treeview4"));
+      requestsFrame := Gtk_Frame(This.Contact_Window.Builder.Get_Object("contact_requests_frame"));
       requestsList.Append(newItem);
       requestsList.Set(newItem, 0, To_String(Username));
       if not requestsFrame.Is_Visible then

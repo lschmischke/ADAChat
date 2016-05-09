@@ -19,7 +19,7 @@ with Gtk.Dialog; use Gtk.Dialog;
 with Gtk; use Gtk;
 with Concrete_Client_Ui; use Concrete_Client_Ui;
 with Chat_Window_Manager; use Chat_Window_Manager;
-
+with Gtk.Frame; use Gtk.Frame;
 
 package body Contact_Window is
 
@@ -127,14 +127,21 @@ package body Contact_Window is
       selectedIter : Gtk_Tree_Iter;
       selectedModel : Gtk_Tree_Model;
       onlineList : Gtk_List_Store;
+      clickedName : Unbounded_String;
       normal : Gint := 400;
    begin
       selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Online_Contact"));
       selection.Get_Selected(selectedModel, selectedIter);
       onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
-      if not ChatWindowOpen(onlineList.Get_String(selectedIter, 0)) then
-         OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, To_Unbounded_String(onlineList.Get_String(selectedIter, 0)));
+      clickedName := To_Unbounded_String(onlineList.Get_String(selectedIter, 0));
+      if not Chat_Window_Manager.MyRooms.Contains(clickedName) then
+         OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, clickedName);
          onlineList.Set(selectedIter, 1, normal);
+      else
+         if not MyWindows.Element(Chat_Window_Manager.MyRooms.Element(clickedName)).WindowOpen then
+            OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, clickedName);
+            onlineList.Set(selectedIter, 1, normal);
+         end if;
       end if;
    end Online_Contact_Action;
 
@@ -143,18 +150,21 @@ package body Contact_Window is
       selectedIter : Gtk_Tree_Iter;
       selectedModel : Gtk_Tree_Model;
       requestsList : Gtk_List_Store;
+      requestsFrame : Gtk_Frame;
       dialog : aliased Gtk_Message_Dialog;
       ret : Gtk_Response_Type;
+      empty : String :="";
    begin
       selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Contact_Request"));
       selection.Get_Selected(selectedModel, selectedIter);
       requestsList := Gtk_List_Store(Instance.Builder.Get_Object("requests_list"));
+      requestsFrame := Gtk_Frame(Instance.Builder.Get_Object("contact_requests_frame"));
       dialog := Gtk_Message_Dialog_New (Parent   => Instance.Window,
                                         Flags    => Destroy_With_Parent,
                                         The_Type => Message_Question,
                                         Buttons  => Buttons_Yes_No,
-                                        Message  => "Do you want to accept %s as a contact?",
-                                        Arg5     => requestsList.Get_String(selectedIter, 0)'Address);
+                                        Message  => "Do you want to accept " & requestsList.Get_String(selectedIter, 0) & " as a contact?",
+                                        Arg5     => empty'Address);
       ret := Run(Gtk_Dialog(dialog));
       if ret = Gtk_Response_Yes then
          Ada.Text_IO.Put_Line("TODO: Say Server I accept");
@@ -163,6 +173,10 @@ package body Contact_Window is
       end if;
       end if;
       dialog.Destroy;
+      requestsList.Remove(selectedIter);
+      if Integer(requestsList.N_Children) <= 0 then
+         requestsFrame.Set_Visible(False);
+      end if;
    end Request_Action;
 
    procedure Groupchat_Action (Object : access Gtkada_Builder_Record'Class) is null;

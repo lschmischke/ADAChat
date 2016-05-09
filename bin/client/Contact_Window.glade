@@ -4,6 +4,14 @@
   <object class="GtkAction" id="Add">
     <signal name="activate" handler="Add_Action" swapped="no"/>
   </object>
+  <object class="GtkListStore" id="groupchats_list">
+    <columns>
+      <!-- column-name group_names -->
+      <column type="gchararray"/>
+      <!-- column-name ChatID -->
+      <column type="gint"/>
+    </columns>
+  </object>
   <object class="GtkWindow" id="contact_window_client">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">AdaChat</property>
@@ -396,14 +404,6 @@
         </child>
       </object>
     </child>
-  </object>
-  <object class="GtkListStore" id="groupchats_list">
-    <columns>
-      <!-- column-name group_names -->
-      <column type="gchararray"/>
-      <!-- column-name ChatID -->
-      <column type="gint"/>
-    </columns>
   </object>
   <object class="GtkListStore" id="offlinecontacts_list">
     <columns>
