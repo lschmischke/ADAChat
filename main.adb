@@ -1,12 +1,7 @@
-with client_logic;
-with client_ui;
-with ServerGuiEntryPoint; use ServerGuiEntryPoint;
-with Ada.Strings.Unbounded;
-
+with ClientGUIEntrypoint;
 
 procedure main is
+
 begin
-
-   ServerGuiEntryPoint.ServerGuiEntryPoint;
-
+   ClientGUIEntrypoint.ClientGUIEntrypoint;
 end main;

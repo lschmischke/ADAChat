@@ -21,23 +21,11 @@ with DataTypes; use DataTypes;
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 package User_Databases is
 
-   --------------------------------------------------------------------------------------------------------------------------------------------------------
-   -- > Öffentliche Typen
-
-   type User_Database is tagged private;
+   --TODO
+   -- deleteUser
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
-   -- > Öffentliche Funktionen zum Typ User_Database
-
-   function registerUser(this : in out User_Database; username : in Unbounded_String; password : in Unbounded_String) return Boolean;
-   function getUser(database : in User_Database; username : in Unbounded_String) return UserPtr;
-
-   procedure saveUserDatabase(this : in User_Database); -- writes User Database to file
-   procedure loadUserDatabase(this : in out User_Database); -- loads user database from file
-
    --------------------------------------------------------------------------------------------------------------------------------------------------------
-
-private
 
    package User_Maps is new Hashed_Maps
      (Key_Type => Unbounded_String,
@@ -46,7 +34,48 @@ private
       Equivalent_Keys => "=");
    use User_Maps;
 
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
    package contactNamesList is new Doubly_Linked_Lists(Element_Type => Unbounded_String);
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Typ einer Benutzerdatenbank. Diese speichert alle registrierten Benutzer und ihre Informationen und ermöglicht es, weitere Benutzer
+   -- anzulegen und Benutzer zu löschen. Der Inhalt kann auf einem Speichermedium festgehalten werden, sodass die Daten auch noch verfügbar sind,
+   -- wenn ein Server beendet wird.
+   protected type User_Database is
+      -- Legt einen neuen Benutzer mit den übergebenen Daten an.
+      -- username => Benutzername des Benutzers
+      -- password => Passwort des Benutzers
+      -- success => gibt an, ob die Registrierung erfolgreich war. Sie kann fehlschlagen, wenn der gewählte Benutzernamen bereits verwendet wird
+      procedure registerUser(username : in Unbounded_String; password : in Unbounded_String; success : out Boolean);
+      -- Gibt eine Referenz auf den Benutzer mit dem übergebenen Benutzernamen zurück.
+      -- return => null, wenn kein passender Benutzer gefunden, sonst Referenz auf den Benutzer
+      function getUser(username : in Unbounded_String) return UserPtr;
+      -- Speichert die Datenbank in einem Textfile. Der Name des Textfiles ist Attribut der Datenbank.
+      procedure saveUserDatabase;
+      -- Lädt den Inhalt der Datenbank aus einem Textfile. Der Name des Textfiles ist Attribut der Datenbank.
+      procedure loadUserDatabase;
+   private
+      users : User_Maps.Map; -- # username -> userDataSet
+      databaseFileName: Unbounded_String := To_Unbounded_String("ADAChatDatabase.txt");
+   end User_Database;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   -- Referenztyp einer Benutzerdatenbank
+   type User_Database_Ptr is access User_Database;
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+private
+
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    package userToContactNamesMap is new Indefinite_Hashed_Maps
      (Key_Type => Unbounded_String,
@@ -57,20 +86,22 @@ private
    use userToContactNamesMap;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
-   -- > Öffentliche Funktionen zum Typ User_Database
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
+   -- Erstellt aus einem User eine eindeutige String-Repräsentation, die persistent gespeichert werden kann
    function userToUnboundedString(this : in out UserPtr) return Unbounded_String;
-   function StringToLonelyUser(inputLine : in String; database : in User_Database; contactNames : out contactNamesList.List  ) return UserPtr;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
-   -- > Öffentliche Typen
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   type User_Database is tagged record
-      users : User_Maps.Map; -- # username -> userDataSet
-      databaseFileName: Unbounded_String := To_Unbounded_String("ADAChatDatabase.txt");
-      maxSize : Integer := 1000000;
+   -- Erstellt aus einem String ein User, dessen Kontakte noch nicht gesetzt sind. ALlerdings werden die Namen der Kontakte in contactNames mitgeliefert.
+   -- inputLine => String, aus dem der User konstruiert wird
+   -- contactNames => Liste mit den Namen der Kontakte des Users
+   -- newUser => erstellter User, ohne seine Kontakte
+   procedure StringToLonelyUser(inputLine : in String; contactNames : out contactNamesList.List; newUser : out UserPtr);
 
-   end record;
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 end User_Databases;

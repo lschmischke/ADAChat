@@ -15,7 +15,9 @@ package body Protocol is
       MessagePart : Unbounded_String;
       Count : Slice_Number;
       newMessageObject : MessageObject;
-         begin
+   begin
+      Ada.Text_IO.Put_Line (To_String(message));
+
       -- Nachricht wird an definiertem Trennzeichen zerstückelt
       GNAT.String_Split.Create(S => MessageParts, From => Ada.Strings.Unbounded.To_String(message),
                                Separators => Seperator, Mode => GNAT.String_Split.Multiple);
@@ -26,11 +28,12 @@ package body Protocol is
          -- Einzelne Attribute des messageObjects werden gefüllt
          newMessageObject.messagetype := MessageTypeE'Value(GNAT.String_Split.Slice(MessageParts, 1));
          newMessageObject.sender := Ada.Strings.Unbounded.To_Unbounded_String(GNAT.String_Split.Slice(MessageParts, 2));
-         newMessageObject.receiver := Natural'Value(GNAT.String_Split.Slice(MessageParts, 3));
+	 newMessageObject.receiver := Natural'Value(GNAT.String_Split.Slice(MessageParts, 3));
+	 newMessageObject.content := To_Unbounded_String(GNAT.String_Split.Slice(MessageParts,4));
 
          -- Für das Content-Attribut wird die Zerstückelung, falls vorhanden, wieder rückgänging gemacht
-         for i in 4 .. GNAT.String_Split.Slice_Count(MessageParts) loop
-            newMessageObject.content := newMessageObject.content & GNAT.String_Split.Slice(MessageParts, i);
+         for i in 5 .. GNAT.String_Split.Slice_Count(MessageParts) loop
+            newMessageObject.content := newMessageObject.content & Protocol.Seperator & GNAT.String_Split.Slice(MessageParts, i);
          end loop;
       else
          Put_Line("Cannot convert String to MessageObject");
@@ -50,7 +53,7 @@ package body Protocol is
       result.messagetype := messagetype;
       result.sender := sender;
       result.receiver := receiver;
-      result.content := content;
+      result.content := content&Terminator;
       return result;
    end createMessage;
 
@@ -80,16 +83,16 @@ package body Protocol is
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    function readMessageFromStream (ClientSocket : in Socket_Type) return MessageObject is
-      incoming_data : Stream_Element_Array(1..4096);
-      incoming_data_size : Stream_Element_Offset;
+      InputChannel : Stream_Access;
       incoming_string : Ada.Strings.Unbounded.Unbounded_String;
+      c : Character;
    begin
+      InputChannel := Stream(ClientSocket);
       -- Eigehende Nachrichten lesen (blockierender Aufruf)
-          Receive_Socket(Socket => ClientSocket, Item => incoming_data, Last => incoming_data_size);
-
-      -- Eingegangene Nachricht aus Character-Array in String zusammebauen
-      for i in 1 .. incoming_data_size loop
-          incoming_string := incoming_string & Character'Val(incoming_data(i));
+      while true loop
+	 Character'Read(InputChannel,c);
+	 exit when c = Terminator;
+	 incoming_string := incoming_string & c;
       end loop;
 
       return stringToMessageObject(incoming_string);

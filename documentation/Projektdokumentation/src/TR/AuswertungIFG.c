@@ -1,0 +1,1 @@
+int interruptWert = P2IFG & (RED_BTN | YEL_BTN | GRE_BTN | BLU_BTN);

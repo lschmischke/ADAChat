@@ -1,18 +1,3 @@
-Lastenheft: PIS-Anforderungen +
-- Persistente Datenhaltung
-	+ Typ User
-		* UserID (UNIQUE)
-		* Username
-		* Userpasswort
-		* Kontaktliste (speichert IDs von anderen Usern)
-	Vorgehen: 	Server hält User-Datenbank (Map oder so), wenn Client einloggt =>
-				Client sendet seine ID, Server sucht zur ID Kontakte in Datenbank
-				und schickt ihm die Namen etc. zurueck zur Anzeige in GUI
-- Log-File Client von vergangenen Nachrichten (clientseitige Speicherung)
-- 
-
-
-
 Nachrichtmodell: 	ART	|MYUSERNAME	|EMPFÄNGER(CHATRAUM/Server)	|CONTENT
 			enum 	|string		|integer			|string
 Servername = server
@@ -102,6 +87,8 @@ a) remcontact:server:<serverRoomID>:<name of contact that got removed>
 b) Refused:server:<serverRoomID>:There is no contact request from <username>
    Es existiert kein Kontakt mit angegebenem Usernamen und es existiert keine Kontaktanfrage von einem User mit angegebenem Username
 
+there is no contact with name '<username>' muss noch rein
+
 Onlinestatus von Kontakten ermitteln
 Beim Einloggen wird der Status von jedem Kontakt in einer online- oder offline-Nachricht mitgeteilt
 <online> | <offline>:server:<serverRoomID>:<name of contact>
@@ -117,7 +104,7 @@ Einen Kontakt zu einem bestehendem Chatraum einladen mit
 chatrequest:<myusername>:<chatroomID>:<username of contact I want to invite to the chatroom>
 
 Der Server antwortet mit
-a) chatrequest:server:<ID of new Chatroom>:ok
+a) chatrequest:server:<ID of new Chatroom>:<user you are now chatting with>
    Der Chatraum wurde erstellt, Teilnehmer sind: der Server, der Benutzer, und der angegebene Kontakt
 b) refused:server:<serverRoomID>:invalid roomID in chatrequest, please use your serverRoomID for new chatrequests and the specific chatrommID for invites
    Wenn eine falsche ID als Empfänger angegeben wurde, d.h. nicht die ServerroomID für einen neuen Chatraum oder die ID eines bereits existenten Chatraums, kann die Anfrage nicht
@@ -156,38 +143,12 @@ Die Abmeldung wurde erfolgreich vollzogen
 
 
 
+Protokoll 
 
+Umsetzung: Klassendiagramm, welche Komponenten gibts, wie interagieren diese.
 
-
-	
-
-Ablauf:
-1. Client senden Anmeldung
-	connect:client:0:apfelkuchen			
-2. Server bestätigt Anmeldung (und fügt Client in den Server-Client Chatraum hinzu [9])
-	connect:server:9:ok
-	online:server:X:client --Broadcast an alle Kontakte von Client, Client ist jetzt online
-3. Server schickt online-Nachrichten an client
-	online:server:9:daniel 	--daniel ist online
-	online:server:9:paul 	--paul ist online
-4. Server schickt offline-Nachrichten
-	offline:server:9:sebastian --sebastian ist offline
- -- Kontaktliste jetzt vollständig angezeigt
-5. Client requestet Chatraum mit clientB
-	chat:client:9:clientB
-6. Server erstellt Chatraumm, fügt anfragenden Client in den Raum hinzu (ID: 12), Request wird bestätigt
-	chat:server:12:?
-7. Server setzt clientB als Teilnehmer des Raums
-
-8. Client sendet Nachricht an Chat 12
-	message:client:12: es hat geklappt
- -- erst jetzt sieht Client B den Chat 12
-9. Client C (Kontakt zu Client) kommt online
-	online:server:9:clientC --broadcast an alle kontakte von client C
-10. Client schliesst den Chat X
-	disconnect:client:12:tschüssi
-11. client meldet sich ab
-	disconnect:client:9:?
-
-User-Datenbank als File:
-username:passwort:kontaktA:kontaktB
+Vorgehen: wer macht was, wöchentliche treffen, Guis mit GTK (Gtk-erklärung)
+	Probleme: 	GTK
+			fehlende ausführliche Dokumentation für GTK und ADA
+			Zirkuläre Abhängigkeiten
+			Merkwürdigkeiten in ADA

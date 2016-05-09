@@ -74,6 +74,20 @@ begin
      (Builder      => Builder,
       Handler_Name => "clicked_button_server_stop",
       Handler      => ServerGuiCallbacks.clicked_button_server_stop'Access);
+      Register_Handler
+     (Builder      => Builder,
+      Handler_Name => "kickUser",
+      Handler      => ServerGuiCallbacks.kickSelectedUser'Access);
+      Register_Handler
+     (Builder      => Builder,
+      Handler_Name => "rowActivated",
+      Handler      => ServerGuiCallbacks.rowHandler'Access);
+      Register_Handler
+      (Builder      => Builder,
+      Handler_Name => "clearChat",
+      Handler      => ServerGuiCallbacks.clearChat'Access);
+
+
 
 
    Do_Connect (Builder);

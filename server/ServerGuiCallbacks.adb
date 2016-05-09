@@ -13,7 +13,7 @@ with Gtk.Frame; use Gtk.Frame;
 with Gtk.Cell_Renderer_Toggle; use Gtk.Cell_Renderer_Toggle;
 with Gtk.Text_View;
 
-use Gtk; with Gtk;
+with Gtk; use Gtk;
 with Gtk.Enums; use Gtk.Enums;
 with Gtk.List_Store; use Gtk.List_Store;
 with Gtk.Tree_View; use Gtk.Tree_View;
@@ -30,6 +30,15 @@ with Concrete_Server_Gui_Logic; use Concrete_Server_Gui_Logic;
 with Concrete_Server_Logic; use Concrete_Server_Logic;
 with GUI_to_Server_Communication; use GUI_to_Server_Communication;
 with Server_To_GUI_Communication; use Server_To_GUI_Communication;
+with Gtk.Text_View; use Gtk.Text_View;
+
+--------------------------------
+with Gtk.Text_Mark; use Gtk.Text_Mark;
+with Gtk.Text_Buffer; use Gtk.Text_Buffer;
+with Gtk.Text_Iter; use Gtk.Text_Iter;
+with Gtk.Combo_Box; use Gtk.Combo_Box;
+with Gtk.Label; use Gtk.Label;
+with Ada.Characters.Latin_1;
 package body ServerGuiCallbacks is
 
 
@@ -44,14 +53,32 @@ package body ServerGuiCallbacks is
    --Val: Gint;
    Toolbutton_Server_Stop: Gtk_Tool_Button;
    Toolbutton_Server_Start: Gtk_Tool_Button;
+   Port_Edit_Text: Gtk_Entry;
    MyServer: ServerPtr := new Concrete_Server;
    MyGui: GUIPtr := new Server_Gui;
+   OnlineUserTreeView: Gtk_Tree_View;
 
+
+OnlineUserTreeStore: Gtk_Tree_Store;
+
+   KickUserComboBox: Gtk_Combo_Box;
+    KickUserListStore: Gtk_List_Store;
+
+   LabelStats: Gtk_Label;
+    ChatMessageListStore: Gtk_List_Store;
 
 
    procedure InitializeGuiReferences(myBuilder: access Gtkada_Builder_Record'Class) is begin
       Toolbutton_Server_Start := Gtk_Tool_Button(myBuilder.Get_Object("toolbutton_start_server"));
       Toolbutton_Server_Stop := Gtk_Tool_Button(myBuilder.Get_Object("toolbutton_stop_server"));
+      Port_Edit_Text := Gtk_Entry(myBuilder.Get_Object("config_port"));
+     OnlineUserTreeView := Gtk_Tree_View(myBuilder.Get_Object("treeviewOnlineUser"));
+      OnlineUserTreeStore := Gtk_Tree_Store(myBuilder.Get_Object("treestoreOnlineUser"));
+       KickUserListStore := Gtk_List_Store(myBuilder.Get_Object("liststoreKickUser"));
+      KickUserComboBox := Gtk_Combo_Box(myBuilder.Get_Object("comboboxKickUser"));
+      LabelStats := Gtk_Label(myBuilder.Get_Object("labelStats"));
+      ChatMessageListStore := Gtk_List_Store(myBuilder.Get_Object("chatMessageListStore"));
+
       end InitializeGuiReferences;
 
 
@@ -74,30 +101,44 @@ package body ServerGuiCallbacks is
 
 
    procedure clicked_button_about ( Object : access Gtkada_Builder_Record'Class) is
+
    begin
-      Put_Line("about");
+
+Put_Line("About");
 
 
    end clicked_button_about;
 
-   procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class) is begin
-      MyServer.startServer(ipAdress => "127.0.0.1",
-                         port     => 12321);
-       MyGui.printInfoMessage("Server started!");
+   procedure clicked_button_server_start ( Object : access Gtkada_Builder_Record'Class) is
+   userCounter : Integer := 0;
+   begin
+      MyServer := new Concrete_Server;
+      MyServer.startServer(
+                         port     => Integer'Value(Port_Edit_Text.Get_Text));
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => True);
+
+      LabelStats.Set_Label(Str =>"Users online: 0" & Ada.Characters.Latin_1.LF &"Server is running" );
    end clicked_button_server_start;
 
    procedure clicked_button_server_stop ( Object : access Gtkada_Builder_Record'Class) is begin
        MyServer.stopServer;
-       MyGui.printInfoMessage("Server stopped!");
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => True);
       Toolbutton_Server_Stop.Set_Sensitive(Sensitive => False);
+       LabelStats.Set_Label(Str =>"Users online: 0" & Ada.Characters.Latin_1.LF &"Server not running" );
       end clicked_button_server_stop;
 
+   procedure kickSelectedUser ( Object : access Gtkada_Builder_Record'Class) is
 
 
+   begin
+      MyServer.kickUserWithName(username => KickUserListStore.Get_String(Iter   => KickUserComboBox.Get_Active_Iter,
+                                                Column => 0));
+         end kickSelectedUser;
 
+   procedure clearChat ( Object : access Gtkada_Builder_Record'Class) is begin
+      ChatMessageListStore.Clear;
+      end clearChat;
 
 
 

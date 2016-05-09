@@ -20,7 +20,8 @@ package Protocol is
 
    -- Trennzeichen für die zur Kommunikation verwendeten Strings, um in diesen inhaltlich getrennte Felder zu definieren
    -- Seperator : constant String := Character'Image(Character'Val(0));
-   Seperator : constant String :=":";
+   Seperator : constant String := ":";
+   Terminator : constant Character := ';';
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    -- > Typen
@@ -29,7 +30,7 @@ package Protocol is
    type MessageTypeE is (Connect, Chat, Refused, Disconnect, Online, Offline, Chatrequest,
                          Userlist, Leavechat, Invalid, Register, addContact, remContact);
 
-   -- Struktur einer Nachricht, Nachrichtentyp, Absender (Name des Users), Empfänger (ID des Chatraums), eigentlicher Inhalt
+   -- Struktur einer Nachricht: Nachrichtentyp, Absender (Name des Users), Empfänger (ID des Chatraums), eigentlicher Inhalt
    type MessageObject is record
       messagetype : MessageTypeE;
       sender : Unbounded_String;
