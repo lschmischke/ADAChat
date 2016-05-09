@@ -103,7 +103,7 @@
 	\vspace*{0.5cm}
 	Wintersemester 15/16\\
 	\vspace*{2cm}
-	\textbf{Stand: 30.04.2016}
+	\textbf{Stand: 10.05.2016}
 	
 	\normalsize
 	\vfill
@@ -166,6 +166,7 @@ Die Benutzerschnittstelle des Clients gestattet das Registrieren und Einloggen a
 % ----------------------------------------------------------------------------------------------------------
 % Vorgehen
 % ----------------------------------------------------------------------------------------------------------
+\newpage
 \section{Vorgehen}
 Nachdem die Projektidee gefunden war wurde das Projekt analysiert und systematisch eingeteilt. Hierzu wurde sich im Team Gedanken gemacht, was 
 der Instant-Messaging-Dienst im Einzelnen an Funktionaltität bereitstellen 
@@ -183,6 +184,7 @@ Organisatorisch beschloss das Projektteam wöchentliche Treffen um die bisher
 entwickelte Funktionalität zusammenzuführen und zu testen. Des Weiteren wurden
 die Aufgaben für die nächste Woche besprochen und festgesetzt.
 
+\newpage
 \section{Pflichtenheft}
 Folgende Funktionalität wurden bzgl. des Clients festgelegt.
 Einem Nutzer soll es möglich sein:
@@ -214,6 +216,7 @@ Aus diesen für den Nutzer und Administrator zur Verfügung gestellten Funktione
 % ----------------------------------------------------------------------------------------------------------
 % Architektur
 % ----------------------------------------------------------------------------------------------------------
+\newpage
 \section{Architektur}
 Der Instant-Messaging-Dienst unterliegt dem Client-Server-Paradigma. Zur Kommunikation zwischen den Clients und dem Server ist ein Protokoll erforderlich, welches den Kommunikationsablauf und entsprechend das Verhalten der Kommunikationsteilnehmer regelt.
 
@@ -415,6 +418,12 @@ Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn 
 
 
 \subsection{Implementierungslogik}
+In diesem Abschnitt soll beschrieben werden, wie das Programm von der Logik her arbeitet. Auf die konkreten Datenstrukturen, die zur Informationshaltung und -verwaltung genutzt werden wird nicht näher eingegangen. 
+
+Während des Elaboration Tasks erzeugt und konfiguriert der Server seinen Kommunikationssocket für eingehende Verbindungsanfragen auf der Transportschicht. Hierzu zählt beispielsweise die Initialisierung von IP-Adresse und Port, sowie das Binden des Socket an diese. Daraufhin erzeugt und startet er einen weiteren Task, folgend Main-Task genannt. 
+
+Der Main-Task hat die Aufgabe auf eingehende Verbindungsanfragen zu lauschen und eine Verbindung zwischen Client und Server auf der Transportschicht herzustellen. Zum Lauschen auf den Socket benutzt er eine blockierende Subroutine, die zurückkehrt, sobald Aktivität anliegt. Daraufhin erzeugt der Main-Task für diesen Client einen eigenen Socket und Task. Als letzte Aktion startet der Main-Task diesen Client-Task und fährt nach dessen Aktivierungsphase mit einem erneuten Lauschen auf den Server-Socket fort. Solch ein Client-Task wird für jeden Nutzer bzw. Client erzeugt. 
+
 \vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
@@ -423,9 +432,22 @@ Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn 
 \end{minipage}
 \vspace{0.5em}
 
+Ein Client-Task setzt in seinen Handlungsroutinen das Kommunikationsprotokoll um. Dies bedeutet, dass er auf seinem Socket auf eingehende Nachrichten horcht und sobald solch eine eintrifft, je nach Nachrichtentyp handelt. Dies beinhaltet ebenso den vom Protokoll vorgesehenen Verbindungsaufbau auf der Anwendungsschicht mittels einer \textit{connect}-Nachricht. Analog zum Server kehrt er nach solch einer Routine zum erneuten Horchen zurück. Sobald der Wunsch auf Verbindungsabbau von einem der beiden Seiten gestellt wird, typischerweise vom Client, wird der Client-Task verschiedene Verwaltungsakte durchführen. Dies beinhaltet z.B. dass er den Client aus dessen Chaträumen entfernt und den Socket schließt. Ist dies alles vollbracht, endet der Client-Task. Bei erneutem Verbindungsaufbau des Nutzers legt der Main-Task einen frischen Client-Task an, welcher analog verfährt.
+
+Die Clientseite des Chatprogramms arbeitet sehr ähnlich. Da diese aber zu jedem Zeitpunkt nur auf einen Socket lauschen muss, wird nur ein Task zum Abfragen der Socketverbindung verwendet, der Main-Task entfällt.
+
+\vspace{1em}
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=1\linewidth]{img/Implementierungslogik2.png}
+	\label{fig:Implementierungslogik Client}
+\end{minipage}
+\vspace{0.5em}
+
 \subsection{Klassendiagramme}
-Die Klassendiagramme können aufgrund ihrer Größe dem beigelegten Verzeichniss 
+Die Klassendiagramme können aufgrund ihrer Größe dem beigelegten Verzeichnis 
 \glqq Klassendiagramme\grqq{} entnommen werden.
+
 % ----------------------------------------------------------------------------------------------------------
 % Probleme
 % ----------------------------------------------------------------------------------------------------------
@@ -436,12 +458,13 @@ Im Folgenden soll die Benutzung der Oberflächen erklärt werden, um dem Benutze
 \subsection{Server}
 Die Server-GUI dient als Oberfläche dazu, die Steuerung der Serverlogik einfach zu gestalten und somit eine effiziente Verwaltung zu gewährleisten.
 
+\vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[width=1.0\linewidth]{img/Server_GUI.png}
-
+	\frame{\includegraphics[width=1.0\linewidth]{img/Server_GUI.png}}
 \end{minipage}
-\vspace{1em}
+\vspace{0.5em}
+
 \begin{enumerate}
 	\item Mit diesem Button lässt sich der Server starten. Diese Schaltfläche ist nur aktiviert, wenn der Server nicht läuft.
 	\item Mit diesem Button lässt sich der Server stoppen. Diese Schaltfläche ist nur aktiviert, wenn der Server läuft.
@@ -455,7 +478,7 @@ Die Server-GUI dient als Oberfläche dazu, die Steuerung der Serverlogik einfach
 			\item Benutzernamen
 			\item IP-Adresse
 			\item Seine Kontakte
-			\item Die Chaträume in denen er sich befindet
+			\item Die Chaträume, in denen er sich befindet
 		\end{itemize}
 	
 	\item Hier finden Sie die Chaträume und die Benutzer, die sich in dem jeweiligen Raum befinden.
@@ -469,15 +492,16 @@ Nach dem Server soll nun die Benutzeroberfläche der Clientanwendung beschrieben
 \subsubsection{Loginoberfläche}
 Die Loginoberfläche dient dazu einen vorhanden Benutzer beim Server anzumelden oder, falls der Benutzer noch nicht vorhanden ist, diesen zu registrieren.
 
+\vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[width=0.85\linewidth]{img/Client_Login.png}
-	
+	\frame{\includegraphics[width=0.5\linewidth]{img/Client_Login.png}}	
 \end{minipage}
-\vspace{1em}
+\vspace{0.5em}
+
 \begin{enumerate}
 	\item In diesem Feld wird die IP-Adresse des Rechners angegeben, auf dem der Server läuft.
-	\item Hier wird der Port angegeben, auf dem der Server lauscht. Der Standardport ist 12321. 
+	\item Hier wird der Port angegeben, auf dem der Server lauscht. Der Standardport ist 20000. 
 	\item Hier wird der Benutzername eingegeben.
 	\item In dieses Feld wird das Passwort eingegeben
 	\item Mit einem Druck auf "Login" wird der Benutzer, falls die Benutzerdaten korrekt sind, beim Sever angemeldet.
@@ -486,12 +510,13 @@ Die Loginoberfläche dient dazu einen vorhanden Benutzer beim Server anzumelden 
 \subsubsection{Chatoberfläche}
 Die Chatoberfläche ist das Fenster, in dem Chatnachrichten zwischen den Benutzern ausgetauscht werden.
 
+\vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[width=1.0\linewidth]{img/client_chat.png}
-	
+	\frame{\includegraphics[width=0.8\linewidth]{img/client_chat.png}}	
 \end{minipage}
-\vspace{1em}
+\vspace{0.5em}
+
 \begin{enumerate}
 	\item In diesem Textfeld befindet sich eine Übersicht der bisher ausgetauschten Chatnachrichten.
 	\item Hier befinden sich die Teilnehmer des Chats.
@@ -502,6 +527,7 @@ Die Chatoberfläche ist das Fenster, in dem Chatnachrichten zwischen den Benutze
 	\item Über diesen Button ist es möglich einen weiteren Teilnehmer zum Chat hinzuzufügen.
 \end{enumerate}
 
+\newpage
 \section{Hindernisse}
 Im Folgenden sind die Problemstellungen aufgeführt, die in den Augen des Projektteams gravierend waren und die Entwicklung merkbar gehemmt haben.
 
@@ -531,28 +557,24 @@ Rekursive Datenstrukturen - zum Beispiel ein Benutzer, der seine Kontakte in ein
 Außerdem war verwunderlich, dass das Einbinden von Spezifikationsdateien in eine Bodydatei (.adb) ein anderes Folgeverhalten bezüglich der zirkulären Abhängigkeiten aufweisen kann, als wenn diese in die dem Body zugehörige Spezifikationsdatei eingebunden werden. Manche zirkuläre Abhängigkeit konnte nur so aufgelöst werden.
 
 \subsection{Arbeiten mit GtkAda}
-GtkAda ist eine Ada-Implementierung des erfolgreichen GTK+ Toolkits, mit dem sich grafische Oberflächen entwickeln lassen. Es ist neben Qt die Bibliothek zum entwickeln von GUIs. Während der Entwicklung traten einige Dinge besonders negativ in den Vordergrund.
+GtkAda ist eine Ada-Implementierung des erfolgreichen GTK+ Toolkits, mit dem sich grafische Oberflächen entwickeln lassen. Es ist neben Qt die Bibliothek zum Entwickeln von GUIs. Während der Entwicklung von der Benutzerfläche zu diesem Programm traten einige Dinge besonders negativ in den Vordergrund.
 
 \begin{enumerate}
-	\item Dokumentation	\hfill \\
-	Wie auch schon Ada im allgemeinen ist die Dokumentations- und Informationslage zu GtkAda dürftig. Es gibt keine offizielle Dokumentation und wenige Beispiele, die leider auch meistens nur einen kleinen Umfang haben und nur einzelne Komponenten abdecken, nicht jedoch mehrere Komponenten im Zusammenspiel. Falls man nach Lösungen zu bestimmten Fragestellungen sucht, findet man meistens keine GtkAda spezifische Antwort, sondern muss oftmals Lösungen aus anderen Programmiersprachen (Python oder C) auf Ada übertragen. Dies lässt sich jedoch oftmals nicht ganz einfach umsetzen, da GtkAda manche Dinge anders handhabt bzw. benennt (Beispielsweise bei der Nutzung von \textit{Gtk\textunderscore Tree\textunderscore Model} und \textit{Gtk\textunderscore Tree\textunderscore Store}  ).
-	\item Glade \hfill \\
-	Glade ist ein Tool um sich grafische Oberflächen schnell zu erstellen und diese in eine \textit{.glade} Datei zu exportieren. Dabei handelt es sich um eine XML-strukturierte Datei, die die Oberfläche und Voreinstellungen enthält. Das Problem an Glade ist leider, das es nicht sonderlich stabil läuft und Portierungen für Windows und Mac OS X zu Darstellungsfehlern und Performanceeinbrüchen neigen.
-	\item GtkAda \& Tasks \hfill \\
-	Leider ist es mit GtkAda auch nicht möglich aus einem laufenden Task heraus dynamisch neue Objekte zu erzeugen und diese der Oberfläche hinzuzufügen. Dies verhindert beispielsweise einen einzelnen Task pro Konversationsfenster zu erstellen.
+	\item \textbf{Dokumentation}	\hfill \\
+	Wie auch schon Ada im Allgemeinen ist die Dokumentations- und Informationslage zu GtkAda dürftig. Es gibt keine offizielle Dokumentation und wenige Beispiele, die leider auch meistens nur einen kleinen Umfang haben und nur einzelne Komponenten abdecken, nicht jedoch mehrere Komponenten im Zusammenspiel. Falls man nach Lösungen zu bestimmten Fragestellungen sucht, findet man meistens keine GtkAda spezifische Antwort, sondern muss oftmals Lösungen aus anderen Programmiersprachen (Python oder C) auf Ada übertragen. Dies lässt sich jedoch oftmals nicht ohne Weiteres umsetzen, da GtkAda manche Dinge anders handhabt bzw. benennt (beispielsweise bei der Nutzung von \textit{Gtk\textunderscore Tree\textunderscore Model} und \textit{Gtk\textunderscore Tree\textunderscore Store}).
+	
+	\item \textbf{Glade} \hfill \\
+	Glade ist ein Tool, um sich grafische Oberflächen schnell zu erstellen und diese in eine \textit{.glade} Datei zu exportieren. Dabei handelt es sich um eine XML-strukturierte Datei, die die Oberfläche und Voreinstellungen enthält. Das Problem an Glade ist leider, das es nicht stabil läuft und die Portierungen für Windows und Mac OS X zu Darstellungsfehlern und Performanceeinbrüchen neigen.
+	
+	\item \textbf{GtkAda \& Tasks }\hfill \\	
+	Ebenfalls erlaubt es GtkAda nicht, aus einem Task, welcher nicht der GTK-Main-Task ist, dynamisch neue Fenster zu generieren ohne abzustürzen. Dem Öffnen eines neuen Chatfensters, beispielsweise nachdem eine Chat-Nachricht eingegangen ist, muss daher eine Benutzerinteraktion mit der grafischen Oberfläche vorausgehen. Diese Interaktion wird vom GTK-Main-Task verarbeitet, und führt dadurch nicht zum Absturz des Programms.
+	
+	Durch diese Unpraktikabilität des Frameworks muss der Benutzer durch das unkritische Transformieren eines bestehenden GUI-Elements (in diesem Fall das Fettdrucken des Namens des schreibenden Kontakts) darauf aufmerksam gemacht werden, dass eine Oberflächeninteraktion gefordert ist.
+	
+	Allgemein gilt die GTK-Implementierung für Ada unter Windows als nicht task-sicher, für andere Betriebssysteme existieren mehr oder minder aufwändige Workarounds, um das simultane Zugreifen auf diverse Gdk-Routinen zu erlauben (siehe \url{http://docs.adacore.com/gtkada-docs/gtkada_ug/_build/html/tasking.html}).
 	
 	\end{enumerate}
 
-
-
-
-
-
-
-
-
-\subsection{dies und das}
-bla bla
 
 \pagebreak
 
@@ -567,90 +589,5 @@ bla bla
 %\nocite{*}
 %\bibliography{bib/lit.bib}
 
-\pagebreak
-
-% ----------------------------------------------------------------------------------------------------------
-% Anhang
-% ----------------------------------------------------------------------------------------------------------
-\pagenumbering{Roman}
-\setcounter{page}{1}
-\lhead{Anhang \thesection}
-
-\begin{appendix}
-	\section*{Anhang}
-	\phantomsection
-	\addcontentsline{toc}{section}{Anhang}
-	\addtocontents{toc}{\vspace{-0.5em}}
-	
-	\section{Endfassung Lauflicht Quellcode}
-	\label{sec:Lauflicht}
-	Es folgt der vollständige Programm-Code:
-	\vspace{1em}
-	\lstinputlisting[caption=Lauflicht.c]{src/Lauflicht/blink-lauflicht_schleife.c}
-	
-	\pagebreak
-	
-	\section{Endfassung Taschenrechner Quellcode}
-	\label{sec:Taschenrechner}
-	Es folgt der vollständige Programm-Code:
-	\vspace{1em}
-	\lstinputlisting[caption=Taschenrechner.c]{src/TR/TRInterrupts.c}
-	
-	\pagebreak
-	
-	\section{Endfassung Teatimer Quellcode}
-	\label{sec:Teatimer}
-	Es folgt der vollständige Programm-Code:
-	
-	\vspace{1em}
-	\lstinputlisting[caption=Teatimer.c]{src/TeaTimer/Teatimer.c}
-	
-	\pagebreak
-	
-	\section{Motorsteuerung Quellcode}
-	\label{sec:Motorsteuerung}
-	Es folgt der vollständige Programm-Code:
-	
-	\vspace{1em}
-	\lstinputlisting[caption=Motorsteuerung.c]{src/Motorsteuerung/motorSteuerung.c}
-	
-	\pagebreak
-	
-	\section{Fernbedienung Quellcode}
-	\label{sec:Fernbedienung}
-	Es folgt der vollständige Programm-Code:
-	
-	\vspace{1em}
-	\lstinputlisting[caption=FernbedienungTeatimer.c]{src/Fernbedienung/FernbedienungTeaTimer.c}
-	
-	\pagebreak
-	
-\end{appendix}
-
-\pagebreak
-
-
-% ----------------------------------------------------------------------------------------------------------
-% Erklärung
-% ----------------------------------------------------------------------------------------------------------
-\thispagestyle{empty}
-\begin{center}
-	\vspace*{5em}
-	\huge\textbf{Erklärung}\\
-\end{center}
-\vspace{2em}
-Hiermit versicheren wir, dass wir unsere Praktikumsdokumentation selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt haben.
-
-\vspace{4em}
-\begin{minipage}{\linewidth}
-	\begin{tabular}{p{15em}p{15em}}
-		Datum: &  .......................................................\\
-		& \centering (Unterschrift)\\
-	\end{tabular}
-	\begin{tabular}{p{15em}p{15em}}
-		Datum: &  .......................................................\\
-		& \centering (Unterschrift)\\
-	\end{tabular}
-\end{minipage}
 
 \end{document}
