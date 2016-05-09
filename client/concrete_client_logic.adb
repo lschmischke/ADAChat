@@ -8,6 +8,7 @@ package body Concrete_Client_Logic is
    client : Socket_Type;
    address : Sock_Addr_Type;
    channel : Stream_Access;
+   SocketInitialized : Boolean := False;
 
    procedure initializeGUI(this : in out Concrete_Client; ptr : in GUIPtr) is
 
@@ -24,13 +25,16 @@ package body Concrete_Client_Logic is
 
    begin
       --#Socket initialisieren und erzeugen#
-      create_Socket (client);
-      address.Addr := inet_Addr(to_String(serverAdress));
-      address.Port := serverPort;
-      this.socket := client;
-      connect_Socket (client, address);
-      channel := stream (client);
-      server_Listener_Task.start;
+      if not SocketInitialized then
+         create_Socket (client);
+         address.Addr := inet_Addr(to_String(serverAdress));
+         address.Port := serverPort;
+         this.socket := client;
+         connect_Socket (client, address);
+         channel := stream (client);
+         server_Listener_Task.start;
+         SocketInitialized := True;
+      end if;
    end InitializeSocket;
 
 
@@ -289,6 +293,10 @@ package body Concrete_Client_Logic is
                for i in 1 .. GNAT.String_Split.Slice_Count (substrings) loop
                   UserSet.insert(new_Item => to_Unbounded_String(GNAT.String_Split.Slice (substrings, i)));
                end loop;
+
+               if this.ChatRoomParticipants.contains(msgObject.receiver) then
+                  this.ChatRoomParticipants.delete(msgObject.receiver);
+               end if;
 
                this.ChatRoomParticipants.insert(key      => msgObject.receiver,
                                                 new_Item => userSet);
