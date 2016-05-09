@@ -418,11 +418,11 @@ Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn 
 
 
 \subsection{Implementierungslogik}
-In diesem Abschnitt soll kurz und bündig beschrieben werden, wie das Programm von der Logik her arbeitet. Auf die Datenstrukturen die zur Informationshaltung und -verwaltung genutzt werden wird nicht näher eingegangen. 
+In diesem Abschnitt soll beschrieben werden, wie das Programm von der Logik her arbeitet. Auf die konkreten Datenstrukturen, die zur Informationshaltung und -verwaltung genutzt werden wird nicht näher eingegangen. 
 
-Zu Beginn erzeugt und konfiguriert der Server, während des Elaboration Tasks, seinen Kommunikationssocket für eingehende Verbindungsanfragen auf der Transportschicht. Hierzu zählt beispielsweise das Konfigurieren von IP-Adresse und Port, sowie das Binden des Socket an sie. Daraufhin erzeugt und startet er einen weiteren Task, folgend Main-Task genannt. 
+Während des Elaboration Tasks erzeugt und konfiguriert der Server seinen Kommunikationssocket für eingehende Verbindungsanfragen auf der Transportschicht. Hierzu zählt beispielsweise die Initialisierung von IP-Adresse und Port, sowie das Binden des Socket an diese. Daraufhin erzeugt und startet er einen weiteren Task, folgend Main-Task genannt. 
 
-Der Main-Task hat die Aufgabe auf eingehende Verbindungsanfragen zu lauschen und eine Verbindung zwischen Client und Server auf der Tansportschicht herzustellen. Zum Lauschen auf den Socket benutzt er eine blockierende Methode, die zurückkehrt sobald Aktivität anliegt. Daraufhin erzeugt der Main-Task für diesen Client einen eigenen Socket und Task. Als letzte Aktion startet er den Client-Task noch und fährt nach dessen Aktivierungsphase mit einem erneuten Lauschen auf den Server-Socket fort. Solch ein Client-Task wird für jeden Nutzer bzw. Client erzeugt. 
+Der Main-Task hat die Aufgabe auf eingehende Verbindungsanfragen zu lauschen und eine Verbindung zwischen Client und Server auf der Transportschicht herzustellen. Zum Lauschen auf den Socket benutzt er eine blockierende Subroutine, die zurückkehrt, sobald Aktivität anliegt. Daraufhin erzeugt der Main-Task für diesen Client einen eigenen Socket und Task. Als letzte Aktion startet der Main-Task diesen Client-Task und fährt nach dessen Aktivierungsphase mit einem erneuten Lauschen auf den Server-Socket fort. Solch ein Client-Task wird für jeden Nutzer bzw. Client erzeugt. 
 
 \vspace{1em}
 \begin{minipage}{\linewidth}
@@ -432,10 +432,12 @@ Der Main-Task hat die Aufgabe auf eingehende Verbindungsanfragen zu lauschen und
 \end{minipage}
 \vspace{0.5em}
 
-Ein Client-Task setzt in seinen Handlungsroutinen das Kommunikationsprotokoll um. Dies bedeutet, dass er auf seinem Socket auf eingehende Nachrichten horcht und sobald solch eine eintrifft je nach Nachrichtentyp handelt. Dies beinhaltet ebenso den vom Protokoll vorgesehenen Verbindungsaufbau auf der Anwendungsschicht mittels einer \textit{connect}-Nachricht. Analog zum Server kehrt er nach solch einer Routine zum erneuten Horchen zurück. Sobald der Wunsch auf Verbindungsabbau von einem der beiden Seiten gestellt wird, typischerweise vom Client, wird der Client-Task verschiedene Verwaltungsakte durchführen. Dies beinhaltet z.B. dass er sich aus seinen Chaträumen entfernt und den Socket schließt. Ist dies alles vollbracht endet der Client-Task und bei erneutem Verbindungsaufbau des Nutzers, wird ein frischer Client-Task im Main-Task angelegt, der ebenso verfährt.
+Ein Client-Task setzt in seinen Handlungsroutinen das Kommunikationsprotokoll um. Dies bedeutet, dass er auf seinem Socket auf eingehende Nachrichten horcht und sobald solch eine eintrifft, je nach Nachrichtentyp handelt. Dies beinhaltet ebenso den vom Protokoll vorgesehenen Verbindungsaufbau auf der Anwendungsschicht mittels einer \textit{connect}-Nachricht. Analog zum Server kehrt er nach solch einer Routine zum erneuten Horchen zurück. Sobald der Wunsch auf Verbindungsabbau von einem der beiden Seiten gestellt wird, typischerweise vom Client, wird der Client-Task verschiedene Verwaltungsakte durchführen. Dies beinhaltet z.B. dass er den Client aus dessen Chaträumen entfernt und den Socket schließt. Ist dies alles vollbracht, endet der Client-Task. Bei erneutem Verbindungsaufbau des Nutzers legt der Main-Task einen frischen Client-Task an, welcher analog verfährt.
+
+Die Clientseite des Chatprogramms arbeitet sehr ähnlich. Da diese aber zu jedem Zeitpunkt nur auf einen Socket lauschen muss, wird nur ein Task zum Abfragen der Socketverbindung verwendet, der Main-Task entfällt.
 
 \subsection{Klassendiagramme}
-Die Klassendiagramme können aufgrund ihrer Größe dem beigelegten Verzeichniss 
+Die Klassendiagramme können aufgrund ihrer Größe dem beigelegten Verzeichnis 
 \glqq Klassendiagramme\grqq{} entnommen werden.
 
 % ----------------------------------------------------------------------------------------------------------
@@ -448,12 +450,13 @@ Im Folgenden soll die Benutzung der Oberflächen erklärt werden, um dem Benutze
 \subsection{Server}
 Die Server-GUI dient als Oberfläche dazu, die Steuerung der Serverlogik einfach zu gestalten und somit eine effiziente Verwaltung zu gewährleisten.
 
+\vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[width=1.0\linewidth]{img/Server_GUI.png}
-
+	\frame{\includegraphics[width=1.0\linewidth]{img/Server_GUI.png}}
 \end{minipage}
-\vspace{1em}
+\vspace{0.5em}
+
 \begin{enumerate}
 	\item Mit diesem Button lässt sich der Server starten. Diese Schaltfläche ist nur aktiviert, wenn der Server nicht läuft.
 	\item Mit diesem Button lässt sich der Server stoppen. Diese Schaltfläche ist nur aktiviert, wenn der Server läuft.
@@ -481,12 +484,13 @@ Nach dem Server soll nun die Benutzeroberfläche der Clientanwendung beschrieben
 \subsubsection{Loginoberfläche}
 Die Loginoberfläche dient dazu einen vorhanden Benutzer beim Server anzumelden oder, falls der Benutzer noch nicht vorhanden ist, diesen zu registrieren.
 
+\vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[width=0.85\linewidth]{img/Client_Login.png}
-	
+	\frame{\includegraphics[width=0.5\linewidth]{img/Client_Login.png}}	
 \end{minipage}
-\vspace{1em}
+\vspace{0.5em}
+
 \begin{enumerate}
 	\item In diesem Feld wird die IP-Adresse des Rechners angegeben, auf dem der Server läuft.
 	\item Hier wird der Port angegeben, auf dem der Server lauscht. Der Standardport ist 20000. 
@@ -498,12 +502,13 @@ Die Loginoberfläche dient dazu einen vorhanden Benutzer beim Server anzumelden 
 \subsubsection{Chatoberfläche}
 Die Chatoberfläche ist das Fenster, in dem Chatnachrichten zwischen den Benutzern ausgetauscht werden.
 
+\vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[width=1.0\linewidth]{img/client_chat.png}
-	
+	\frame{\includegraphics[width=0.8\linewidth]{img/client_chat.png}}	
 \end{minipage}
-\vspace{1em}
+\vspace{0.5em}
+
 \begin{enumerate}
 	\item In diesem Textfeld befindet sich eine Übersicht der bisher ausgetauschten Chatnachrichten.
 	\item Hier befinden sich die Teilnehmer des Chats.
