@@ -93,7 +93,7 @@ package body ServerGuiCallbacks is
       -- Neue Serverinstanz erstellen
       MyServer := new Concrete_Server;
       -- Server starten und Port aus Oberfläche auslesen
-      MyServer.startServer(ipAdress => "127.0.0.1",
+      MyServer.startServer(
                            port     => Integer'Value(Port_Edit_Text.Get_Text));
       -- Start Button ausgrauen
       Toolbutton_Server_Start.Set_Sensitive(Sensitive => False);

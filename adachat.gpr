@@ -1,4 +1,5 @@
-with "E:\Programme\gtk\lib\gnat\gtkada.gpr";
+with "C:\GtkAda\lib\gnat\gtkada.gpr";
+
 
 project ADAChat is
 
