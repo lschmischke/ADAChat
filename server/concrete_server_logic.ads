@@ -41,13 +41,13 @@ package Concrete_Server_Logic is
       -- Gibt eine Kopie der Kontaktanfragen Map zurück. Diese enthält alle Kontaktfragen, gemappt auf den jeweiligen User, der die Anfrage gestellt hat
       function getContactRequests return userToUsersMap.Map;
       -- Startet den Server auf der übergebenen IP mit dem übergebenem Port
-      procedure StartNewServer (ip : String; port : Natural) ;
+      procedure StartNewServer (port : Natural) ;
       -- Diese Prozedur leitet die Initialisierung des Servers ein und startet
       -- diesen anschliessend. Dies bedeutet insbesondere, dass von nun an auf
       -- einkommende Verbindungsanfragen gelauscht wird und fuer neue Clients
       -- separate Tasks zur Verfuegung gestellt werden, die es ihnen ermoeglichen
       -- untereinander zu kommunizieren.
-      procedure InitializeServer (ip : String; port : Natural);
+      procedure InitializeServer (port : Natural);
       -- Erstellt einen neuen Chatraum, mit der übergebenen ID und fügt automatisch den übergebenen Client zu dem Chatraum hinzu.
       -- firstClient => Client, der direkt hinzugefügt wird
       -- room => Referenz auf den Chatraum, die rausgegeben wird
@@ -58,10 +58,6 @@ package Concrete_Server_Logic is
       procedure declineConnectionWithRefusedMessage (client : Concrete_Client_Ptr; messageContent : String);
       -- Unterbricht eine bestehende Verbindung mit dem Client.
       -- Dieser wird aus allen Chaträumen entfernt, anschließend wird die Verbindung getrennt und die Kontakte benachrichtigt.
-      -- Dann wird der Socket geschlossen.
-      -- cliet => Client, der enfernt werden soll
-      procedure removeClientRoutine (client : Concrete_Client_Ptr);
-      -- Ruft "removeClientRoutine" mit client auf und sendet zusätzlich eine "disconnect"-Nachricht an den Client.
       -- client => Client, der disconnected werden soll
       -- msg => Inhalt der "disconnect"-Nachricht, die an den Client geschickt wird
       procedure disconnectClient (client : in Concrete_Client_Ptr; msg : String);
@@ -90,6 +86,16 @@ package Concrete_Server_Logic is
       procedure addClientToConnectedClients(client : Concrete_Client_Ptr);
       -- Gibt den Client zu einem eingeloggten User zurück
       function getClientToConnectedUser ( user : UserPtr) return Concrete_Client_Ptr;
+      -- Entfernt den angegebenen Chatraum aus der Chatraum-Liste des Servers
+      procedure removeChatRoom (chatRoom : chatRoomPtr);
+      -- Entfernt alle Chaträume aus der Chatraum-Liste des Server
+      procedure removeAllChatRooms;
+      -- Entfernt einen Client aus dem angegebenen Chatraum, sofern beide Teil des Servers sind
+      procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr);
+      -- Entfernt einen Client aus dem angegebenen Chatraum, sofern beide Teil des Servers sind.
+      -- An die restlichen Teilnehmern in dem Chat wird die Abschiedsnachricht gesendet.
+      -- farewell => Abschiedsnachricht
+      procedure removeClientFromChatroom (client : Concrete_Client_Ptr; chatRoom : chatRoomPtr; farewell : String);
    private
       Socket : Socket_Type;
       SocketAddress : Sock_Addr_Type;
@@ -130,7 +136,7 @@ private
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    -------------------------------------------------# Implementierung ServerGUICommunication #-------------------------------------------------------------
 
-   procedure startServer(thisServer :  aliased in out  Concrete_Server; ipAdress: String; port : Natural);
+   procedure startServer(thisServer :  aliased in out  Concrete_Server; port : Natural);
    procedure stopServer(thisServer : aliased in out Concrete_Server);
    function loadDB(thisServer : aliased in out Concrete_Server; DataFile : File_type) return Boolean;
    procedure saveDB(thisServer : aliased in out Concrete_Server; DataFile : File_type);
@@ -147,9 +153,11 @@ private
    -- Die eigentliche Verbindungsanfrage (connect) wird ebenfalls erst in den
    -- Client-Tasks vorgenommen. Hier wird lediglich ein Kanal zur Erstkommunikation
    -- aufgebaut und zur Verfuegung gestellt. Es gibt nur eine Instanz von diesem Task.
-   task Main_Server_Task is
+   task type Main_Server_Task is
       entry Start;
    end;
+
+   type Main_Server_Task_Ptr is access Main_Server_Task;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
    --------------------------------------------------------------------------------------------------------------------------------------------------------

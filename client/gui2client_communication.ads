@@ -14,42 +14,48 @@ package Gui2Client_Communication is
 
    -- Registriert bzw. referenziert die GUI beim Client.
    -- Ptr => Pointer zur GUI
-   procedure InitializeGUI(This : in out Client; Ptr : in Client2Gui_Communication.GUIPtr) is abstract;
+   procedure initializeGUI(this : in out Client; ptr : in Client2Gui_Communication.GUIPtr) is abstract;
 
    -- Erzeugt eine Socketverbindung zum angegebenen Server.
    -- ServerAdress => Server Addresse(IP)
    -- ServerPort => Server Port
-   procedure InitializeSocket(This : in out Client; ServerAdress : in Unbounded_String;
-                              ServerPort : in Port_Type) is abstract;
+   procedure initializeSocket(this : in out Client; serverAdress : in Unbounded_String;
+                              serverPort : in Port_Type) is abstract;
 
    -- Loggt einen User auf dem Server ein.
    -- pre => Socketverbindung zum Server & entsprechender User muss registriert sein
    -- Username => Name des Users
    -- Password => Passwort des Users
-   procedure LoginUser (This : in out Client; Username : in Unbounded_String; Password : in Unbounded_String) is abstract;
+   procedure loginUser (this : in out Client; username : in Unbounded_String; password : in Unbounded_String) is abstract;
 
    -- Beendet die Verbindung zum Server.
    -- Username => Name des Users
    -- Message => Abschiedsnachricht
-   procedure DisconnectUser(This : in out Client; Username : in Unbounded_String; Message : in Unbounded_String) is abstract;
+   procedure disconnectUser(this : in out Client; username : in Unbounded_String; message : in Unbounded_String) is abstract;
 
    -- Registriert einen User beim Server.
    -- pre => Es muss eine Socketverbindung zum Server bestehen
    -- Username => Name des Users
    -- Password => Passwort des Users
-   procedure RegisterUser(This : in out Client; Username : in Unbounded_String; Password : in Unbounded_String) is abstract;
+   procedure registerUser(this : in out Client; username : in Unbounded_String; password : in Unbounded_String) is abstract;
 
    -- Sendet einem User eine Einladung zu einem Gruppenchat.
    -- Receiver => ID zum Server-Chat
    -- Participant => Name des Users, der eingeladen werden soll
-   procedure InviteToGroupChat(This : in out Client; Username : in Unbounded_String; Receiver : in Integer;
-                               Participant : in Unbounded_String) is abstract;
+   procedure inviteToGroupChat(this : in out Client; username : in Unbounded_String; receiver : in Integer;
+                               participant : in Unbounded_String) is abstract;
 
    -- Sendet eine Message zum angegebenen Chat.
    -- Receiver => ID zum Chat zu welchem die Nachricht gesendet werden soll
    -- Username => Name des sendenden Clients
    -- Message => Nachricht die gesendet werden soll
-   procedure SendMessageToChat(This : in out Client; Receiver: in Integer; Username : in Unbounded_String;
-                               Message : in Unbounded_String) is abstract;
+   procedure sendMessageToChat(this : in out Client; receiver: in Integer; username : in Unbounded_String;
+                               message : in Unbounded_String) is abstract;
+
+   -- Sendet einen Chatrequest an den Server, um einen Chat zu eröffnen.
+   -- Username => Name des sendenden Clients
+   -- Message => Name des Participant
+   procedure requestChat(this : in out Client; username : in Unbounded_String;
+                               participant : in Unbounded_String) is abstract;
 
 end Gui2Client_Communication;

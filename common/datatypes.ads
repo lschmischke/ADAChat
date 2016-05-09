@@ -72,6 +72,9 @@ package dataTypes is
       procedure addClientToChatroom (client : in Concrete_Client_Ptr);
       -- Entfernt einen Clienten aus dem Chatraum
       procedure removeClientFromChatroom (clientToRemove : in Concrete_Client_Ptr);
+      -- Entfernt einen Clienten aus dem Chatraum. An die restlichen Teilnehmern in dem Chat wird die Abschiedsnachricht gesendet
+      -- farewell => Abschiedsnachricht
+      procedure removeClientFromChatroom (clientToRemove : in Concrete_Client_Ptr; farewell : String);
       -- Gibt die ID des Chatraums zurück
       function getChatRoomID  return Natural;
       -- Gibt eine Kopie der Liste aller Clienten in dem Chatraum zurück

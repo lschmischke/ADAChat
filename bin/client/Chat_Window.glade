@@ -5,16 +5,15 @@
     <columns>
       <!-- column-name Chat_Participants -->
       <column type="gchararray"/>
+      <!-- column-name ChatID -->
+      <column type="gint"/>
     </columns>
   </object>
-  <object class="GtkImage" id="Smiley">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="tooltip_text" translatable="yes">Smileys</property>
-    <property name="pixbuf">smiley.png</property>
-  </object>
   <object class="GtkWindow" id="chat_window_client">
+    <property name="width_request">400</property>
+    <property name="height_request">100</property>
     <property name="can_focus">False</property>
+    <signal name="destroy" handler="Chat_Window_Close" swapped="no"/>
     <child>
       <object class="GtkGrid" id="chat_grid">
         <property name="visible">True</property>
@@ -41,11 +40,26 @@
               </packing>
             </child>
             <child>
-              <object class="GtkTextView" id="Messages">
+              <object class="GtkScrolledWindow" id="scrolledwindow1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="vexpand">True</property>
-                <property name="editable">False</property>
+                <property name="shadow_type">in</property>
+                <child>
+                  <object class="GtkViewport" id="viewport1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkTextView" id="Messages">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="vexpand">True</property>
+                        <property name="vscroll_policy">natural</property>
+                        <property name="editable">False</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -57,6 +71,7 @@
               <object class="GtkEntry" id="New_Message">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="hexpand">True</property>
                 <property name="invisible_char">●</property>
                 <property name="truncate_multiline">True</property>
                 <property name="placeholder_text">Send Message</property>
@@ -74,57 +89,17 @@
                 <property name="can_focus">False</property>
                 <property name="layout_style">start</property>
                 <child>
-                  <object class="GtkButton" id="Smiley_Button">
-                    <property name="use_action_appearance">False</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="use_action_appearance">False</property>
-                    <property name="image">Smiley</property>
-                    <property name="always_show_image">True</property>
-                    <signal name="clicked" handler="Smiley_Action" swapped="no"/>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">0</property>
-                  </packing>
+                  <placeholder/>
                 </child>
                 <child>
-                  <object class="GtkButton" id="Games_Button">
-                    <property name="label" translatable="yes">Games</property>
-                    <property name="use_action_appearance">False</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="use_action_appearance">False</property>
-                    <signal name="clicked" handler="Games_Action" swapped="no"/>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
+                  <placeholder/>
                 </child>
                 <child>
-                  <object class="GtkButton" id="History_Button">
-                    <property name="label" translatable="yes">History</property>
-                    <property name="use_action_appearance">False</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="use_action_appearance">False</property>
-                    <signal name="clicked" handler="History_Action" swapped="no"/>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">2</property>
-                  </packing>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkButton" id="GroupInvite_Button">
-                    <property name="label" translatable="yes">Invite to Group Chat</property>
+                    <property name="label" translatable="yes">Invite to Chat</property>
                     <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
