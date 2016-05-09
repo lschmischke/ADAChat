@@ -166,6 +166,7 @@ Die Benutzerschnittstelle des Clients gestattet das Registrieren und Einloggen a
 % ----------------------------------------------------------------------------------------------------------
 % Vorgehen
 % ----------------------------------------------------------------------------------------------------------
+\newpage
 \section{Vorgehen}
 Nachdem die Projektidee gefunden war wurde das Projekt analysiert und systematisch eingeteilt. Hierzu wurde sich im Team Gedanken gemacht, was 
 der Instant-Messaging-Dienst im Einzelnen an Funktionaltität bereitstellen 
@@ -183,6 +184,7 @@ Organisatorisch beschloss das Projektteam wöchentliche Treffen um die bisher
 entwickelte Funktionalität zusammenzuführen und zu testen. Des Weiteren wurden
 die Aufgaben für die nächste Woche besprochen und festgesetzt.
 
+\newpage
 \section{Pflichtenheft}
 Folgende Funktionalität wurden bzgl. des Clients festgelegt.
 Einem Nutzer soll es möglich sein:
@@ -214,6 +216,7 @@ Aus diesen für den Nutzer und Administrator zur Verfügung gestellten Funktione
 % ----------------------------------------------------------------------------------------------------------
 % Architektur
 % ----------------------------------------------------------------------------------------------------------
+\newpage
 \section{Architektur}
 Der Instant-Messaging-Dienst unterliegt dem Client-Server-Paradigma. Zur Kommunikation zwischen den Clients und dem Server ist ein Protokoll erforderlich, welches den Kommunikationsablauf und entsprechend das Verhalten der Kommunikationsteilnehmer regelt.
 
@@ -415,6 +418,12 @@ Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn 
 
 
 \subsection{Implementierungslogik}
+In diesem Abschnitt soll kurz und bündig beschrieben werden, wie das Programm von der Logik her arbeitet. Auf die Datenstrukturen die zur Informationshaltung und -verwaltung genutzt werden wird nicht näher eingegangen. 
+
+Zu Beginn erzeugt und konfiguriert der Server, während des Elaboration Tasks, seinen Kommunikationssocket für eingehende Verbindungsanfragen auf der Transportschicht. Hierzu zählt beispielsweise das Konfigurieren von IP-Adresse und Port, sowie das Binden des Socket an sie. Daraufhin erzeugt und startet er einen weiteren Task, folgend Main-Task genannt. 
+
+Der Main-Task hat die Aufgabe auf eingehende Verbindungsanfragen zu lauschen und eine Verbindung zwischen Client und Server auf der Tansportschicht herzustellen. Zum Lauschen auf den Socket benutzt er eine blockierende Methode, die zurückkehrt sobald Aktivität anliegt. Daraufhin erzeugt der Main-Task für diesen Client einen eigenen Socket und Task. Als letzte Aktion startet er den Client-Task noch und fährt nach dessen Aktivierungsphase mit einem erneuten Lauschen auf den Server-Socket fort. Solch ein Client-Task wird für jeden Nutzer bzw. Client erzeugt. 
+
 \vspace{1em}
 \begin{minipage}{\linewidth}
 	\centering
@@ -423,9 +432,12 @@ Das Ausloggen wird mit einer \textit{disconnect}-Nachricht bewerkstelligt. Wenn 
 \end{minipage}
 \vspace{0.5em}
 
+Ein Client-Task setzt in seinen Handlungsroutinen das Kommunikationsprotokoll um. Dies bedeutet, dass er auf seinem Socket auf eingehende Nachrichten horcht und sobald solch eine eintrifft je nach Nachrichtentyp handelt. Dies beinhaltet ebenso den vom Protokoll vorgesehenen Verbindungsaufbau auf der Anwendungsschicht mittels einer \textit{connect}-Nachricht. Analog zum Server kehrt er nach solch einer Routine zum erneuten Horchen zurück. Sobald der Wunsch auf Verbindungsabbau von einem der beiden Seiten gestellt wird, typischerweise vom Client, wird der Client-Task verschiedene Verwaltungsakte durchführen. Dies beinhaltet z.B. dass er sich aus seinen Chaträumen entfernt und den Socket schließt. Ist dies alles vollbracht endet der Client-Task und bei erneutem Verbindungsaufbau des Nutzers, wird ein frischer Client-Task im Main-Task angelegt, der ebenso verfährt.
+
 \subsection{Klassendiagramme}
 Die Klassendiagramme können aufgrund ihrer Größe dem beigelegten Verzeichniss 
 \glqq Klassendiagramme\grqq{} entnommen werden.
+
 % ----------------------------------------------------------------------------------------------------------
 % Probleme
 % ----------------------------------------------------------------------------------------------------------
@@ -502,6 +514,7 @@ Die Chatoberfläche ist das Fenster, in dem Chatnachrichten zwischen den Benutze
 	\item Über diesen Button ist es möglich einen weiteren Teilnehmer zum Chat hinzuzufügen.
 \end{enumerate}
 
+\newpage
 \section{Hindernisse}
 Im Folgenden sind die Problemstellungen aufgeführt, die in den Augen des Projektteams gravierend waren und die Entwicklung merkbar gehemmt haben.
 
