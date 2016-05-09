@@ -56,6 +56,7 @@ package Chat_Window_Manager is
    type MapPtr is access all ChatWindows.Map'Class;
 
    procedure OpenNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String);
+   procedure OpenNewGroupChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String; ChatID : Natural);
    procedure PrepareNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatID : Natural);
 
    procedure EnQueueChatMessage(This : in out ChatWindow; message : MessageObject);

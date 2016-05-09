@@ -11,6 +11,12 @@ with Gtkada.Builder;   use Gtkada.Builder;
 with Glib;             use Glib;
 with Glib.Error;       use Glib.Error;
 with Gtk.Window;       use Gtk.Window;
+with Gtk.Message_Dialog; use Gtk.Message_Dialog;
+with Gtk.Dialog;       use Gtk.Dialog;
+with Gtk.Tree_View;    use Gtk.Tree_View;
+with Gtk.Tree_Selection; use Gtk.Tree_Selection;
+
+with Contact_Window;
 
 package body Chat_Window_Manager is
 
@@ -37,6 +43,23 @@ package body Chat_Window_Manager is
          newWindow.printChatMessage(newWindow.DeQueueChatMessage);
       end loop;
    end OpenNewChatWindow;
+
+   procedure OpenNewGroupChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String; ChatID : Natural) is
+      newWindow : ChatWindow_Ptr := new ChatWindow;
+   begin
+      if This.Contains(ChatID) then
+         newWindow := This.Element(ChatID);
+      else
+         newWindow.ChatID := ChatID;
+         This.Insert(newWindow.ChatID, newWindow);
+      end if;
+      newWindow.Init;
+      newWindow.Window.Set_Title(To_String(ChatName));
+      while not newWindow.Messages.Is_Empty
+      loop
+         newWindow.printChatMessage(newWindow.DeQueueChatMessage);
+      end loop;
+   end OpenNewGroupChatWindow;
 
    procedure PrepareNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatID : Natural) is
       newWindow : ChatWindow_Ptr := new ChatWindow;
@@ -105,7 +128,46 @@ package body Chat_Window_Manager is
 
    procedure Check_RightClick  (Object : access Gtkada_Builder_Record'Class) is null;
 
-   procedure Invite_Action  (Object : access Gtkada_Builder_Record'Class) is null;
+   procedure Invite_Action  (Object : access Gtkada_Builder_Record'Class) is
+      selection : Gtk_Tree_Selection;
+      selectedIter : Gtk_Tree_Iter;
+      selectedModel : Gtk_Tree_Model;
+      cWindow : ChatWindow_Ptr;
+      liststore : Gtk_List_Store;
+      invitable : Gtk_List_Store;
+      onlineList : Gtk_List_Store;
+      dialog : aliased Gtk_Dialog;
+      ret : Gtk_Response_Type;
+      empty : String :="";
+      selected : Unbounded_String;
+      newItem : Gtk_Tree_Iter;
+      currentIter : Gtk_Tree_Iter;
+   begin
+      liststore := Gtk_List_Store(Object.Get_Object("Participants"));
+      cWindow := MyWindows.Element(Natural(liststore.Get_Int(liststore.Get_Iter_First, 1)));
+      dialog := Gtk_Dialog(Object.Get_Object("dialog1"));
+      invitable := Gtk_List_Store(Object.Get_Object("invitable_list"));
+      onlineList := Contact_Window.Instance.onlineList;
+      currentIter := onlineList.Get_Iter_First;
+      while onlineList.Iter_Is_Valid(currentIter)
+      loop
+         invitable.Append(newItem);
+         invitable.Set(newItem, 0, onlineList.Get_String(currentIter, 0));
+
+         onlineList.Next(currentIter);
+      end loop;
+      ret := Run(dialog);
+      if ret = Gtk_Response_OK then
+         selection := Gtk_Tree_Selection(Object.Get_Object("treeview-selection"));
+         selection.Get_Selected(selectedModel, selectedIter);
+         selected := To_Unbounded_String(invitable.Get_String(selectedIter, 0));
+         if selected /= "" then
+            Concrete_Client_Logic.instance.inviteToGroupChat(MyUserName, cWindow.ChatID, selected);
+         end if;
+      end if;
+      dialog.Hide;
+
+   end Invite_Action;
 
    procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class) is
       message : Gtk_Entry;
