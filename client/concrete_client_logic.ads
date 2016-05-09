@@ -28,13 +28,9 @@ package Concrete_Client_Logic is
 
    function hash (R : Natural) return Hash_Type;
 
-   --package ChatRoomIds is new Ada.Containers.Doubly_Linked_Lists(Element_Type        => Natural);
    package ChatRoomIds is new Ada.Containers.Hashed_Sets(Element_Type        => Natural,
                                                          Hash                => Hash,
                                                          Equivalent_Elements => "=");
-
-   --package ChatRoomUsers is new Ada.Containers.Indefinite_Doubly_Linked_Lists(Element_Type    => Client2Gui_Communication.Userlist.List,
-   --                                                                           "="             => Client2Gui_Communication.Userlist."=");
 
    package ChatRoomUsers is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
                                                                       Element_Type    => Client2Gui_Communication.Userlist.Set,
