@@ -14,27 +14,8 @@ with Gtk.Window;       use Gtk.Window;
 
 package body Chat_Window_Manager is
 
-   task body ChatQueueReader is
-      myWindow : ChatWindow_Ptr;
-   begin
-      accept Start (argWindow : in ChatWindow_Ptr) do
-         myWindow := argWindow;
-      end Start;
-      begin
-         while myWindow.Window /= null
-         loop
-            if not myWindow.Messages.Is_Empty then
-               myWindow.printChatMessage(myWindow.DeQueueChatMessage);
-            end if;
-            delay 2.0;
-         end loop;
-      end;
-   end ChatQueueReader;
-
-
    procedure OpenNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String) is
       newWindow : ChatWindow_Ptr := new ChatWindow;
-      newTask : ChatQueueReader_Ptr := new ChatQueueReader;
    begin
       if not MyRooms.Contains(ChatName) then
          Concrete_Client_Logic.Instance.RequestChat(MyName, ChatName);
@@ -51,7 +32,10 @@ package body Chat_Window_Manager is
       end if;
       newWindow.Init;
       newWindow.Window.Set_Title(To_String(ChatName));
-      newTask.Start(newWindow);
+      while not newWindow.Messages.Is_Empty
+      loop
+         newWindow.printChatMessage(newWindow.DeQueueChatMessage);
+      end loop;
    end OpenNewChatWindow;
 
    procedure PrepareNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatID : Natural) is
@@ -60,18 +44,6 @@ package body Chat_Window_Manager is
       newWindow.ChatID := ChatID;
       This.Insert(newWindow.ChatID, newWindow);
    end PrepareNewChatWindow;
-
-   function ChatWindowOpen(ChatName : String) return Boolean is
-   begin
-      if MyRooms.Contains(To_Unbounded_String(ChatName)) then
-         if MyWindows.Contains(MyRooms.Element(To_Unbounded_String(ChatName))) then
-            if MyWindows.Element(MyRooms.Element(To_Unbounded_String(ChatName))).Window /= null then
-               return true;
-            end if;
-         end if;
-      end if;
-      return false;
-   end ChatWindowOpen;
 
    procedure Init (This : in out ChatWindow) is
       ret : GUint;
@@ -121,7 +93,7 @@ package body Chat_Window_Manager is
       This.Window := Gtk_Window(This.Builder.Get_Object ("chat_window_client"));
       This.UpdateParticipants;
       This.Window.Show_All;
-
+      This.WindowOpen := True;
    end Init;
 
    procedure UpdateParticipants (This : in out ChatWindow) is
@@ -174,7 +146,11 @@ package body Chat_Window_Manager is
 
    procedure EnQueueChatMessage(This : in out ChatWindow; message : MessageObject) is
    begin
-      This.Messages.Prepend(message);
+      if This.WindowOpen then
+         This.printChatMessage(message);
+      else
+         This.Messages.Prepend(message);
+      end if;
    end EnQueueChatMessage;
 
    function DeQueueChatMessage (This : in out ChatWindow) return MessageObject is
@@ -192,7 +168,9 @@ package body Chat_Window_Manager is
       messages := Gtk_Text_View(This.Builder.Get_Object("Messages"));
       messages.Get_Buffer.Get_End_Iter(end_iter);
       messages.Get_Buffer.Insert(end_iter, To_String(message.sender));
+      messages.Get_Buffer.Get_End_Iter(end_iter);
       messages.Get_Buffer.Insert(end_iter, ": ");
+      messages.Get_Buffer.Get_End_Iter(end_iter);
       messages.Get_Buffer.Insert(end_iter, To_String(message.content) & Ada.Characters.Latin_1.LF);
    end printChatMessage;
 

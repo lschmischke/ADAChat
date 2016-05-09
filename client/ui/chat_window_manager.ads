@@ -15,6 +15,7 @@ with Gtk.Text_View;      use Gtk.Text_View;
 with Gtk.Text_Iter;      use Gtk.Text_Iter;
 with Gtk.Tree_Model;     use Gtk.Tree_Model;
 
+
 package Chat_Window_Manager is
 
    GladeFile : constant String := "client/Chat_Window.glade";
@@ -33,8 +34,6 @@ package Chat_Window_Manager is
 
    package Participants is new Ada.Containers.Doubly_Linked_Lists(Element_Type => Unbounded_String);
 
-   function ChatWindowOpen(ChatName : String) return Boolean;
-
    type ChatWindow is new Client_Window.Window with record
       Builder : Gtkada_Builder;
       Window : Gtk_Window;
@@ -42,16 +41,12 @@ package Chat_Window_Manager is
       ChatName : Unbounded_String;
       ChatParticipants : Participants.List;
       Messages : ChatMessages.List;
+      WindowOpen : Boolean := False;
    end record;
 
    type ChatWindow_Ptr is access ChatWindow;
 
    procedure UpdateParticipants (This : in out ChatWindow);
-
-   task type ChatQueueReader is
-      entry Start(argWindow : in ChatWindow_Ptr);
-   end ChatQueueReader;
-   type ChatQueueReader_Ptr is access ChatQueueReader;
 
    package ChatWindows is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
                                                                     Element_Type    => ChatWindow_Ptr,
