@@ -1,5 +1,7 @@
+with Glib; use Glib;
 with Gtkada.Builder; use Gtkada.Builder;
 with Gtk.Window;       use Gtk.Window;
+with Gtk.List_Store; use Gtk.List_Store;
 with Client_Window;
 limited with Concrete_Client_Logic;
 with Client2Gui_Communication; use Client2Gui_Communication;
@@ -12,6 +14,7 @@ package Contact_Window is
    type ContactWindow is new Client_Window.Window with record
       Builder : Gtkada_Builder;
       Window : Gtk_Window;
+      onlineList: Gtk_List_Store;
    end record;
    GladeFile : constant String := "client/Contact_Window.glade";
 
@@ -26,6 +29,7 @@ package Contact_Window is
    procedure Groupchat_Action (Object : access Gtkada_Builder_Record'Class);
 
    procedure Highlight(This : in out ContactWindow; sender : Unbounded_String);
+   procedure Highlight_Group(This : in out ContactWindow; receiver : Gint);
 
    Instance : WindowPtr;
 private
