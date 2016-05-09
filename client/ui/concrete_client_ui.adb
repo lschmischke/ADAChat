@@ -237,7 +237,7 @@ package body Concrete_Client_Ui is
             loop
                if Chat_Window_Manager.MyRooms.Contains(E) then
                   if  Chat_Window_Manager.MyRooms.Element(E) = Chatraum then
-                  Chat_Window_Manager.MyRooms.Delete(E);
+                     Chat_Window_Manager.MyRooms.Delete(E);
                   end if;
                end if;
             end loop;
@@ -245,6 +245,7 @@ package body Concrete_Client_Ui is
             groupchatsFrame := Gtk_Frame(This.Contact_Window.Builder.Get_Object("groupchat_frame"));
             groupchatsList.Append(newItem);
             groupchatsList.Set(newItem, 0, groupString);
+            groupchatsList.Set(newItem, 1, Gint(Chatraum));
             if not groupchatsFrame.Is_Visible then
                groupchatsFrame.Set_Visible(True);
                groupchatsFrame.Show_All;
@@ -258,10 +259,13 @@ package body Concrete_Client_Ui is
 
    procedure ShowChatMessages(This : in out Concrete_Ui; message : MessageObject) is
    begin
-      --if not This.Chat_Windows.Contains(message.receiver) then
-      --   null; -- TODO anlegen
-      --end if;
-      This.Contact_Window.Highlight(message.sender);
+      if Natural(This.Chat_Windows.Element(message.receiver).ChatParticipants.Length) = 2 then
+         This.Contact_Window.Highlight(message.sender);
+      else
+         if Natural(This.Chat_Windows.Element(message.receiver).ChatParticipants.Length) > 2 then
+           This.Contact_Window.Highlight_Group(Gint(message.receiver));
+         end if;
+      end if;
       This.Chat_Windows.Element(message.receiver).EnQueueChatMessage(message);
    end ShowChatMessages;
 
