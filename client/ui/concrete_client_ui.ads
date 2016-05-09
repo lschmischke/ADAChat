@@ -64,10 +64,6 @@ private
 
    -----------------------------------------------------------------------------
 
-   procedure InitializeStatus(This : in Concrete_Ui; Status : in Unbounded_String);
-
-   -----------------------------------------------------------------------------
-
    procedure DisconnectReason(This : in out Concrete_Ui; Status : in Unbounded_String);
 
    -----------------------------------------------------------------------------

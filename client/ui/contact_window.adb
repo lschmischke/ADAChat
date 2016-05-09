@@ -68,6 +68,18 @@ package body Contact_Window is
          Handler_Name => "Offline_Contact_Action",
          Handler => Offline_Contact_Action'Access);
 
+      Register_Handler
+        (Builder => This.Builder,
+         Handler_Name => "Request_Action",
+         Handler => Request_Action'Access);
+
+      Register_Handler
+        (Builder => This.Builder,
+         Handler_Name => "Groupchat_Action",
+         Handler => Groupchat_Action'Access);
+
+
+
       Do_Connect(This.Builder);
 
       This.Window := Gtk_Window(This.Builder.Get_Object ("contact_window_client"));
@@ -97,7 +109,7 @@ package body Contact_Window is
                                         Flags    => Destroy_With_Parent,
                                         The_Type => Message_Error,
                                         Buttons  => Buttons_Ok,
-                                        Message  => "Offline Nachrichten werden noch nicht vom Client unterstuetzt",
+                                        Message  => "Offline messages aren't supported by the client yet",
                                         Arg5     => empty'Address);
       ret := Run(Gtk_Dialog(dialog));
       dialog.Destroy;
@@ -120,11 +132,40 @@ package body Contact_Window is
       selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Online_Contact"));
       selection.Get_Selected(selectedModel, selectedIter);
       onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
-      if ChatWindowOpen(onlineList.Get_String(selectedIter, 0)) = False then
+      if not ChatWindowOpen(onlineList.Get_String(selectedIter, 0)) then
          OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, To_Unbounded_String(onlineList.Get_String(selectedIter, 0)));
          onlineList.Set(selectedIter, 1, normal);
       end if;
    end Online_Contact_Action;
+
+   procedure Request_Action (Object : access Gtkada_Builder_Record'Class) is
+      selection : Gtk_Tree_Selection;
+      selectedIter : Gtk_Tree_Iter;
+      selectedModel : Gtk_Tree_Model;
+      requestsList : Gtk_List_Store;
+      dialog : aliased Gtk_Message_Dialog;
+      ret : Gtk_Response_Type;
+   begin
+      selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Contact_Request"));
+      selection.Get_Selected(selectedModel, selectedIter);
+      requestsList := Gtk_List_Store(Instance.Builder.Get_Object("requests_list"));
+      dialog := Gtk_Message_Dialog_New (Parent   => Instance.Window,
+                                        Flags    => Destroy_With_Parent,
+                                        The_Type => Message_Question,
+                                        Buttons  => Buttons_Yes_No,
+                                        Message  => "Do you want to accept %s as a contact?",
+                                        Arg5     => requestsList.Get_String(selectedIter, 0)'Address);
+      ret := Run(Gtk_Dialog(dialog));
+      if ret = Gtk_Response_Yes then
+         Ada.Text_IO.Put_Line("TODO: Say Server I accept");
+      else if ret = Gtk_Response_No then
+         Ada.Text_IO.Put_Line("TODO: Say Server I decline");
+      end if;
+      end if;
+      dialog.Destroy;
+   end Request_Action;
+
+   procedure Groupchat_Action (Object : access Gtkada_Builder_Record'Class) is null;
 
    procedure Highlight(This : in out ContactWindow; sender : Unbounded_String) is
       onlineList : Gtk_List_Store;

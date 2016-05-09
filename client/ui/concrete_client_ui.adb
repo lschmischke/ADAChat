@@ -17,6 +17,7 @@ with Gtk.List_Store;     use Gtk.List_Store;
 with Gtk.Tree_Model;     use Gtk.Tree_Model;
 with Gtk.Combo_Box_Text; use Gtk.Combo_Box_Text;
 with Gtk.Label;          use Gtk.Label;
+with Gtk.Frame;          use Gtk.Frame;
 
 with System;
 
@@ -181,10 +182,18 @@ package body Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    procedure ContactRequest(This : in out Concrete_Ui; Username : in Unbounded_String) is
-
+      requestsList : Gtk_List_Store;
+      newItem : Gtk_Tree_Iter;
+      requestsFrame : Gtk_Frame;
    begin
-      null;
-
+      requestsList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("requests_list"));
+      requestsFrame := Gtk_Frame(This.Contact_Window.Builder.Get_Object("treeview4"));
+      requestsList.Append(newItem);
+      requestsList.Set(newItem, 0, To_String(Username));
+      if not requestsFrame.Is_Visible then
+         requestsFrame.Set_Visible(True);
+         requestsFrame.Show_All;
+      end if;
    end ContactRequest;
 
    -----------------------------------------------------------------------------
@@ -264,14 +273,6 @@ package body Concrete_Client_Ui is
 
       This.Error_Message(To_String(Reason));
    end RefusedMessage;
-
-   -----------------------------------------------------------------------------
-
-   procedure InitializeStatus(This : in Concrete_Ui; Status : in Unbounded_String) is
-
-   begin
-      null;
-   end InitializeStatus;
 
    -----------------------------------------------------------------------------
 

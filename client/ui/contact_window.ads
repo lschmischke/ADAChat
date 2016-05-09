@@ -22,6 +22,8 @@ package Contact_Window is
    procedure Add_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Offline_Contact_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Online_Contact_Action  (Object : access Gtkada_Builder_Record'Class);
+   procedure Request_Action (Object : access Gtkada_Builder_Record'Class);
+   procedure Groupchat_Action (Object : access Gtkada_Builder_Record'Class);
 
    procedure Highlight(This : in out ContactWindow; sender : Unbounded_String);
 
