@@ -70,21 +70,6 @@ package body Chat_Window_Manager is
 
       Register_Handler
         (Builder => This.Builder,
-         Handler_Name => "History_Action",
-         Handler => History_Action'Access);
-
-      Register_Handler
-        (Builder => This.Builder,
-         Handler_Name => "Games_Action",
-         Handler => Games_Action'Access);
-
-      Register_Handler
-        (Builder => This.Builder,
-         Handler_Name => "Smiley_Action",
-         Handler => Smiley_Action'Access);
-
-      Register_Handler
-        (Builder => This.Builder,
          Handler_Name => "Handle_Enter",
          Handler => Handle_Enter'Access);
 
@@ -115,15 +100,6 @@ package body Chat_Window_Manager is
    procedure Check_RightClick  (Object : access Gtkada_Builder_Record'Class) is null;
 
    procedure Invite_Action  (Object : access Gtkada_Builder_Record'Class) is null;
-
-   procedure History_Action  (Object : access Gtkada_Builder_Record'Class) is null;
-
-   procedure Games_Action  (Object : access Gtkada_Builder_Record'Class) is null;
-
-   procedure Smiley_Action  (Object : access Gtkada_Builder_Record'Class) is
-   begin
-      null;
-   end Smiley_Action;
 
    procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class) is
       message : Gtk_Entry;
@@ -172,6 +148,8 @@ package body Chat_Window_Manager is
       messages.Get_Buffer.Insert(end_iter, ": ");
       messages.Get_Buffer.Get_End_Iter(end_iter);
       messages.Get_Buffer.Insert(end_iter, To_String(message.content) & Ada.Characters.Latin_1.LF);
+      messages.Get_Buffer.Get_End_Iter(end_iter);
+      messages.Scroll_To_Iter(end_iter);
    end printChatMessage;
 
 end Chat_Window_Manager;
