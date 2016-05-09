@@ -155,6 +155,7 @@
                                           <object class="GtkCellRendererSpin" id="cellrendererspin2"/>
                                           <attributes>
                                             <attribute name="text">0</attribute>
+                                            <attribute name="weight">1</attribute>
                                           </attributes>
                                         </child>
                                       </object>
@@ -266,15 +267,13 @@
       <!-- column-name Offline_Contacts -->
       <column type="gchararray"/>
     </columns>
-    <data>
-    </data>
   </object>
   <object class="GtkListStore" id="onlinecontacts_list">
     <columns>
       <!-- column-name Online_Contacts -->
       <column type="gchararray"/>
+      <!-- column-name weight -->
+      <column type="gint"/>
     </columns>
-    <data>
-    </data>
   </object>
 </interface>

@@ -14,10 +14,12 @@ with Gtk.List_Store; use Gtk.List_Store;
 with Gtk.Tree_View; use Gtk.Tree_View;
 with Gtk.Tree_Model; use Gtk.Tree_Model;
 with Gtk.Tree_Selection; use Gtk.Tree_Selection;
+with Gtk.Message_Dialog; use Gtk.Message_Dialog;
+with Gtk.Dialog; use Gtk.Dialog;
+with Gtk; use Gtk;
 with Concrete_Client_Ui; use Concrete_Client_Ui;
 with Chat_Window_Manager; use Chat_Window_Manager;
 
-with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 
 package body Contact_Window is
 
@@ -83,17 +85,29 @@ package body Contact_Window is
    end Add_Action;
 
    procedure Offline_Contact_Action  (Object : access Gtkada_Builder_Record'Class) is
-      selection : Gtk_Tree_Selection;
-      selectedIter : Gtk_Tree_Iter;
-      selectedModel : Gtk_Tree_Model;
-      offlineList : Gtk_List_Store;
+      --selection : Gtk_Tree_Selection;
+      --selectedIter : Gtk_Tree_Iter;
+      --selectedModel : Gtk_Tree_Model;
+      --offlineList : Gtk_List_Store;
+      dialog : aliased Gtk_Message_Dialog;
+      ret : Gtk_Response_Type;
+      empty : String := "";
    begin
-      selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Offline_Contact"));
-      selection.Get_Selected(selectedModel, selectedIter);
-      offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
-      if ChatWindowOpen(offlineList.Get_String(selectedIter, 0)) = False then
-         OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, To_Unbounded_String(offlineList.Get_String(selectedIter, 0)));
-      end if;
+      dialog := Gtk_Message_Dialog_New (Parent   => Instance.Window,
+                                        Flags    => Destroy_With_Parent,
+                                        The_Type => Message_Error,
+                                        Buttons  => Buttons_Ok,
+                                        Message  => "Offline Nachrichten werden noch nicht vom Client unterstuetzt",
+                                        Arg5     => empty'Address);
+      ret := Run(Gtk_Dialog(dialog));
+      dialog.Destroy;
+
+      --selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Offline_Contact"));
+      --selection.Get_Selected(selectedModel, selectedIter);
+      --offlineList := Gtk_List_Store(Object.Get_Object("offlinecontacts_list"));
+      --if ChatWindowOpen(offlineList.Get_String(selectedIter, 0)) = False then
+      --   OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, To_Unbounded_String(offlineList.Get_String(selectedIter, 0)));
+      --end if;
    end Offline_Contact_Action;
 
    procedure Online_Contact_Action  (Object : access Gtkada_Builder_Record'Class) is
@@ -101,13 +115,32 @@ package body Contact_Window is
       selectedIter : Gtk_Tree_Iter;
       selectedModel : Gtk_Tree_Model;
       onlineList : Gtk_List_Store;
+      normal : Gint := 400;
    begin
       selection := Gtk_Tree_Selection(Object.Get_Object("Selected_Online_Contact"));
       selection.Get_Selected(selectedModel, selectedIter);
       onlineList := Gtk_List_Store(Object.Get_Object("onlinecontacts_list"));
       if ChatWindowOpen(onlineList.Get_String(selectedIter, 0)) = False then
          OpenNewChatWindow(Concrete_Client_Ui.Instance.Chat_Windows, Concrete_Client_Ui.Instance.UserName, To_Unbounded_String(onlineList.Get_String(selectedIter, 0)));
+         onlineList.Set(selectedIter, 1, normal);
       end if;
    end Online_Contact_Action;
+
+   procedure Highlight(This : in out ContactWindow; sender : Unbounded_String) is
+      onlineList : Gtk_List_Store;
+      currentIter : Gtk_Tree_Iter;
+      bold : Gint := 700;
+   begin
+      onlineList := Gtk_List_Store(This.Builder.Get_Object("onlinecontacts_list"));
+      currentIter := onlineList.Get_Iter_First;
+      while onlineList.Iter_Is_Valid(currentIter)
+      loop
+         if onlineList.Get_String(currentIter, 0) = sender then
+            onlineList.Set(currentIter, 1, bold);
+            return;
+         end if;
+         onlineList.Next(currentIter);
+      end loop;
+   end Highlight;
 
 end Contact_Window;

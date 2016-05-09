@@ -5,6 +5,8 @@ limited with Concrete_Client_Logic;
 with Client2Gui_Communication; use Client2Gui_Communication;
 with Gui2Client_Communication; use Gui2Client_Communication;
 
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+
 package Contact_Window is
 
    type ContactWindow is new Client_Window.Window with record
@@ -20,6 +22,8 @@ package Contact_Window is
    procedure Add_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Offline_Contact_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Online_Contact_Action  (Object : access Gtkada_Builder_Record'Class);
+
+   procedure Highlight(This : in out ContactWindow; sender : Unbounded_String);
 
    Instance : WindowPtr;
 private
