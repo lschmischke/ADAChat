@@ -209,9 +209,12 @@ package body Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
+      groupchatsList : Gtk_List_Store;
+      groupchatsFrame : Gtk_Frame;
       newItem : Gtk_Tree_Iter;
       --length : Natural;
-      notMe : Unbounded_String;
+      notMe : Chat_Window_Manager.Participants.List;
+      groupString : String := "Group #" & Natural'Image(Chatraum);
    begin
 
       if not This.Chat_Windows.Contains(Chatraum) then
@@ -222,13 +225,33 @@ package body Concrete_Client_Ui is
       loop
          This.Chat_Windows.Element(Chatraum).ChatParticipants.Append(E);
          if E /= This.UserName then
-            notMe := E;
+            notMe.Append(E);
          end if;
       end loop;
       This.Chat_Windows.Element(Chatraum).UpdateParticipants;
-      if Integer(Participants.Length) = 2 and not Chat_Window_Manager.MyRooms.Contains(notMe) then
-         Chat_Window_Manager.MyRooms.Insert(notMe, Chatraum);
+      if Integer(Participants.Length) = 2 and not Chat_Window_Manager.MyRooms.Contains(notMe.First_Element) then
+         Chat_Window_Manager.MyRooms.Insert(notMe.First_Element, Chatraum);
+      else
+         if Integer(Participants.Length) > 2 then
+            for E of notMe
+            loop
+               if Chat_Window_Manager.MyRooms.Contains(E) then
+                  if  Chat_Window_Manager.MyRooms.Element(E) = Chatraum then
+                  Chat_Window_Manager.MyRooms.Delete(E);
+                  end if;
+               end if;
+            end loop;
+            groupchatsList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("groupchats_list"));
+            groupchatsFrame := Gtk_Frame(This.Contact_Window.Builder.Get_Object("groupchat_frame"));
+            groupchatsList.Append(newItem);
+            groupchatsList.Set(newItem, 0, groupString);
+            if not groupchatsFrame.Is_Visible then
+               groupchatsFrame.Set_Visible(True);
+               groupchatsFrame.Show_All;
+            end if;
+         end if;
       end if;
+
    end ShowChatParticipants;
 
    -----------------------------------------------------------------------------
