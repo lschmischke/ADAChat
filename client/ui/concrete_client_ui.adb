@@ -1,5 +1,4 @@
 with Ada.Text_IO;
-with Ada.Characters.Latin_1;     use Ada.Characters.Latin_1;
 
 with Gtk;                use Gtk;
 with Gtk.Main;           use Gtk.Main;
@@ -18,8 +17,7 @@ with Gtk.List_Store;     use Gtk.List_Store;
 with Gtk.Tree_Model;     use Gtk.Tree_Model;
 with Gtk.Combo_Box_Text; use Gtk.Combo_Box_Text;
 with Gtk.Label;          use Gtk.Label;
-with Gtk.Text_View;      use Gtk.Text_View;
-with Gtk.Text_Iter;      use Gtk.Text_Iter;
+with Gtk.Frame;          use Gtk.Frame;
 
 with System;
 
@@ -37,36 +35,18 @@ package body Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    procedure Error_Message(This : in out Concrete_Ui; message : String) is
---      dialog : aliased Gtk_Message_Dialog;
---      ret : Gtk_Response_Type;
       label: Gtk_Label;
    begin
---      dialog := Gtk_Message_Dialog_New (Parent   => This.Login_Window.Window,
---                                        Flags    => Destroy_With_Parent,
---                                        The_Type => Message_Error,
---                                        Buttons  => Buttons_Ok,
---                                        Message  => "Error: %s",
---                                        Arg5     => message'Address);
---      ret := Run(Gtk_Dialog(dialog));
---      dialog.Destroy;
       label := Gtk_Label(This.Login_Window.Builder.Get_Object("Login_Error_Label"));
       label.Set_Text(message);
-      This.Contact_Window.Window.Hide;
+      if This.Contact_Window /= null then
+         This.Contact_Window.Window.Hide;
+      end if;
    end Error_Message;
 
    procedure Info_Message(This : in out Concrete_Ui; message : String) is
-      --dialog : aliased Gtk_Message_Dialog;
-      --ret : Gtk_Response_Type;
       label: Gtk_Label;
    begin
-      --dialog := Gtk_Message_Dialog_New (Parent   => This.Login_Window.Window,
-      --                                  Flags    => Destroy_With_Parent,
-      --                                  The_Type => Message_Info,
-      --                                  Buttons  => Buttons_Ok,
-      --                                  Message  => "%s",
-      --                                  Arg5     => message'Address);
-      --ret := Run(Gtk_Dialog(dialog));
-      --dialog.Destroy;
       label := Gtk_Label(This.Login_Window.Builder.Get_Object("Register_Info_Label"));
       label.Set_Text(message);
    end Info_Message;
@@ -160,6 +140,7 @@ package body Concrete_Client_Ui is
    procedure SetOnlineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.Set) is
       onlineList : Gtk_List_Store;
       newItem : Gtk_Tree_Iter;
+      normal : Gint := 400;
    begin
       onlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("onlinecontacts_list"));
 
@@ -169,6 +150,7 @@ package body Concrete_Client_Ui is
       loop
          onlineList.Append(newItem);
          onlineList.Set(newItem, 0, To_String(E));
+         onlineList.Set(newItem, 1, normal);
       end loop;
 
    end SetOnlineUser;
@@ -200,10 +182,18 @@ package body Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    procedure ContactRequest(This : in out Concrete_Ui; Username : in Unbounded_String) is
-
+      requestsList : Gtk_List_Store;
+      newItem : Gtk_Tree_Iter;
+      requestsFrame : Gtk_Frame;
    begin
-      null;
-
+      requestsList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("requests_list"));
+      requestsFrame := Gtk_Frame(This.Contact_Window.Builder.Get_Object("treeview4"));
+      requestsList.Append(newItem);
+      requestsList.Set(newItem, 0, To_String(Username));
+      if not requestsFrame.Is_Visible then
+         requestsFrame.Set_Visible(True);
+         requestsFrame.Show_All;
+      end if;
    end ContactRequest;
 
    -----------------------------------------------------------------------------
@@ -221,47 +211,35 @@ package body Concrete_Client_Ui is
    procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
       newItem : Gtk_Tree_Iter;
       --length : Natural;
+      notMe : Unbounded_String;
    begin
 
-      if This.Chat_Windows = null then
-         This.Chat_Windows := new Chat_Window_Manager.ChatWindows.Map;
+      if not This.Chat_Windows.Contains(Chatraum) then
+         Chat_Window_Manager.PrepareNewChatWindow(This.Chat_Windows, This.UserName, Chatraum);
       end if;
-      if This.Chat_Windows.Contains(Chatraum) then
-         This.Chat_Windows.Element(Chatraum).ChatParticipants.Clear;
-         for E of Participants
-         loop
-            This.Chat_Windows.Element(Chatraum).ChatParticipants.Append(newItem);
-            This.Chat_Windows.Element(Chatraum).ChatParticipants.Set(newItem, 0, To_String(E));
-         end loop;
-      else
-         --length := Integer(Participants.Length);
-         if Natural(Participants.Length) = 2 then
-            for E of Participants
-            loop
-               if E /= MyUserName then
-                  Chat_Window_Manager.MyRooms.Insert(E, ChatRaum);
-               end if;
-            end loop;
-         else
-            null; --TODO
+      This.Chat_Windows.Element(Chatraum).ChatParticipants.Clear;
+      for E of Participants
+      loop
+         This.Chat_Windows.Element(Chatraum).ChatParticipants.Append(E);
+         if E /= This.UserName then
+            notMe := E;
          end if;
+      end loop;
+      This.Chat_Windows.Element(Chatraum).UpdateParticipants;
+      if Integer(Participants.Length) = 2 and not Chat_Window_Manager.MyRooms.Contains(notMe) then
+         Chat_Window_Manager.MyRooms.Insert(notMe, Chatraum);
       end if;
-
    end ShowChatParticipants;
 
    -----------------------------------------------------------------------------
 
    procedure ShowChatMessages(This : in out Concrete_Ui; message : MessageObject) is
-      messages : Gtk_Text_View;
-      end_iter : Gtk_Text_Iter;
    begin
-      if This.Chat_Windows.Contains(message.receiver) then
-         messages := Gtk_Text_View(This.Chat_Windows.Element(message.receiver).Builder.Get_Object("Messages"));
-         messages.Get_Buffer.Get_End_Iter(end_iter);
-         messages.Get_Buffer.Insert(end_iter, To_String(message.sender));
-         messages.Get_Buffer.Insert(end_iter, ": ");
-         messages.Get_Buffer.Insert(end_iter, To_String(message.content) & Ada.Characters.Latin_1.LF);
-      end if;
+      --if not This.Chat_Windows.Contains(message.receiver) then
+      --   null; -- TODO anlegen
+      --end if;
+      This.Contact_Window.Highlight(message.sender);
+      This.Chat_Windows.Element(message.receiver).EnQueueChatMessage(message);
    end ShowChatMessages;
 
    -----------------------------------------------------------------------------
@@ -298,14 +276,6 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure InitializeStatus(This : in Concrete_Ui; Status : in Unbounded_String) is
-
-   begin
-      null;
-   end InitializeStatus;
-
-   -----------------------------------------------------------------------------
-
    procedure DisconnectReason(This : in out Concrete_Ui; Status : in Unbounded_String) is
       onlineStatus : Gtk_Combo_Box_Text;
    begin
@@ -319,8 +289,9 @@ package body Concrete_Client_Ui is
 
    procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String) is
    begin
-      Chat_window_Manager.MyRooms.Insert(Name, ChatId);
---      Chat_window_Manager.MyUsers.Insert(To_Unbounded_String("tomi"), ChatId);
+      if not Chat_window_Manager.MyRooms.Contains(Name) then
+         Chat_window_Manager.MyRooms.Insert(Name, ChatId);
+      end if;
    end UpdateChatRoomId;
 
    -----------------------------------------------------------------------------

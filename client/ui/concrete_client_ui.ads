@@ -51,7 +51,7 @@ private
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatMessages(This : in out Concrete_Ui; ChatId : in Natural; Name : in Unbounded_String; Message : in Unbounded_String);
+   procedure ShowChatMessages(This : in out Concrete_Ui; message : in MessageObject);
 
    -----------------------------------------------------------------------------
 
@@ -61,10 +61,6 @@ private
    -----------------------------------------------------------------------------
 
    procedure RefusedMessage(This : in out Concrete_Ui; Reason : in Unbounded_String);
-
-   -----------------------------------------------------------------------------
-
-   procedure InitializeStatus(This : in Concrete_Ui; Status : in Unbounded_String);
 
    -----------------------------------------------------------------------------
 

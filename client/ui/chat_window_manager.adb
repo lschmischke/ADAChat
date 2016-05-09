@@ -14,13 +14,28 @@ with Gtk.Window;       use Gtk.Window;
 
 package body Chat_Window_Manager is
 
-   package Key_Press_Callbacks is new Gtk.Handlers.Return_Callback (Gtk_Entry_Record, Boolean);
+   task body ChatQueueReader is
+      myWindow : ChatWindow_Ptr;
+   begin
+      accept Start (argWindow : in ChatWindow_Ptr) do
+         myWindow := argWindow;
+      end Start;
+      begin
+         while myWindow.Window /= null
+         loop
+            if not myWindow.Messages.Is_Empty then
+               myWindow.printChatMessage(myWindow.DeQueueChatMessage);
+            end if;
+            delay 2.0;
+         end loop;
+      end;
+   end ChatQueueReader;
+
 
    procedure OpenNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String) is
       newWindow : ChatWindow_Ptr := new ChatWindow;
+      newTask : ChatQueueReader_Ptr := new ChatQueueReader;
    begin
-      newWindow.Init;
-      newWindow.Window.Set_Title(To_String(ChatName));
       if not MyRooms.Contains(ChatName) then
          Concrete_Client_Logic.Instance.RequestChat(MyName, ChatName);
       end if;
@@ -28,18 +43,31 @@ package body Chat_Window_Manager is
       loop
          null;
       end loop;
-      newWindow.ChatID := MyRooms.Element(ChatName);
-      if This = null then
-         This := new ChatWindows.Map;
+      if This.Contains(MyRooms.Element(ChatName)) then
+         newWindow := This.Element(MyRooms.Element(ChatName));
+      else
+         newWindow.ChatID := MyRooms.Element(ChatName);
+         This.Insert(newWindow.ChatID, newWindow);
       end if;
-      This.Insert(newWindow.ChatID, newWindow);
+      newWindow.Init;
+      newWindow.Window.Set_Title(To_String(ChatName));
+      newTask.Start(newWindow);
    end OpenNewChatWindow;
+
+   procedure PrepareNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatID : Natural) is
+      newWindow : ChatWindow_Ptr := new ChatWindow;
+   begin
+      newWindow.ChatID := ChatID;
+      This.Insert(newWindow.ChatID, newWindow);
+   end PrepareNewChatWindow;
 
    function ChatWindowOpen(ChatName : String) return Boolean is
    begin
       if MyRooms.Contains(To_Unbounded_String(ChatName)) then
          if MyWindows.Contains(MyRooms.Element(To_Unbounded_String(ChatName))) then
-            return true;
+            if MyWindows.Element(MyRooms.Element(To_Unbounded_String(ChatName))).Window /= null then
+               return true;
+            end if;
          end if;
       end if;
       return false;
@@ -91,13 +119,25 @@ package body Chat_Window_Manager is
       Do_Connect(This.Builder);
 
       This.Window := Gtk_Window(This.Builder.Get_Object ("chat_window_client"));
-      This.ChatParticipants := Gtk_List_Store(This.Builder.Get_Object("Participants"));
+      This.UpdateParticipants;
       This.Window.Show_All;
 
-
-      Ada.Text_IO.Put("Ich bin ");
-      Ada.Text_IO.Put_Line(To_String(Chat_Window_Manager.MyUserName));
    end Init;
+
+   procedure UpdateParticipants (This : in out ChatWindow) is
+      tempParticipant : Gtk_Tree_Iter;
+      liststore : Gtk_List_Store;
+   begin
+      if This.Builder /= null then
+         liststore := Gtk_List_Store(This.Builder.Get_Object("Participants"));
+         liststore.Clear;
+         for E of This.ChatParticipants
+         loop
+            liststore.Append(tempParticipant);
+            liststore.Set(tempParticipant, 0, To_String(E));
+         end loop;
+      end if;
+   end UpdateParticipants;
 
 
    procedure Check_RightClick  (Object : access Gtkada_Builder_Record'Class) is null;
@@ -126,9 +166,34 @@ package body Chat_Window_Manager is
    end Handle_Enter;
 
    -----------------------------------------------------------------------------
+
    function Hash (R : Natural) return Hash_Type is
    begin
       return Hash_Type (R);
    end Hash;
+
+   procedure EnQueueChatMessage(This : in out ChatWindow; message : MessageObject) is
+   begin
+      This.Messages.Prepend(message);
+   end EnQueueChatMessage;
+
+   function DeQueueChatMessage (This : in out ChatWindow) return MessageObject is
+      returnElement : MessageObject;
+   begin
+      returnElement := This.Messages.Last_Element;
+      This.Messages.Delete_Last;
+      return returnElement;
+   end DeQueueChatMessage;
+
+   procedure printChatMessage(This : in out ChatWindow; message : MessageObject) is
+      messages : Gtk_Text_View;
+      end_iter : Gtk_Text_Iter;
+   begin
+      messages := Gtk_Text_View(This.Builder.Get_Object("Messages"));
+      messages.Get_Buffer.Get_End_Iter(end_iter);
+      messages.Get_Buffer.Insert(end_iter, To_String(message.sender));
+      messages.Get_Buffer.Insert(end_iter, ": ");
+      messages.Get_Buffer.Insert(end_iter, To_String(message.content) & Ada.Characters.Latin_1.LF);
+   end printChatMessage;
 
 end Chat_Window_Manager;

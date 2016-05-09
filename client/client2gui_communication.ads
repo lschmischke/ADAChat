@@ -23,49 +23,47 @@ package Client2Gui_Communication is
 
    -- Registriert bzw. referenziert den Client bei der GUI.
    -- Client_Instance => Referenz der Client-Logik
-   procedure initClientUI(This : in out GUI; Client_Instance : Gui2Client_Communication.ClientPtr) is abstract;
+   procedure initClientUI(this : in out GUI; client_instance : Gui2Client_Communication.ClientPtr) is abstract;
 
    -- Zeigt die empfangene Chatnachricht.
-   -- ChatId => Id in welchem Chatraum Nachricht empfangen wurde
-   -- Name => Name des Senders
    -- Message => Nachricht
-   procedure ShowChatMessages(This : in out GUI; ChatId : in Natural; Name : in Unbounded_String; Message : in Unbounded_String) is abstract;
+   procedure showChatMessages(This : in out GUI; message : in MessageObject) is abstract;
 
    -- Teilt der GUI mit, dass ein erfolgreicher Login stattgefunden hat.
-   procedure LoginSuccess(This : in out GUI) is abstract;
+   procedure loginSuccess(This : in out GUI) is abstract;
 
    -- Teilt der GUI mit, dass eine Refused-Message empfangen wurde.
    -- Reason => Grund der Nachricht
-   procedure RefusedMessage(This : in out GUI; Reason : in Unbounded_String) is abstract;
+   procedure refusedMessage(this : in out GUI; reason : in Unbounded_String) is abstract;
 
    -- Teilt der GUI mit, dass die Verbindung zum Server beendet wurde.
    -- Status => Grund des Disconnects
-   procedure DisconnectReason(This : in out GUI; Status : in Unbounded_String) is abstract;
+   procedure disconnectReason(this : in out GUI; status : in Unbounded_String) is abstract;
 
    -- Zeigt die aktuellen Chat-Teilnehmer eines Raumes.
    -- Chatraum => ID des Chatraums
    -- Participants => Liste der Teilnehmer im Chatraum
-   procedure ShowChatParticipants(This : in out GUI; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is abstract;
+   procedure showChatParticipants(this : in out GUI; chatraum : in Natural; participants : in Client2Gui_Communication.Userlist.Set) is abstract;
 
    -- Fuegt den angegebenen User der Offline Liste hinzu.
    -- Users => Liste der Online User
-   procedure SetOnlineUser(This : in out GUI; Users : in Client2Gui_Communication.Userlist.Set) is abstract;
+   procedure setOnlineUser(this : in out GUI; users : in Client2Gui_Communication.Userlist.Set) is abstract;
 
    -- Fuegt den angegebenen User der Online Liste hinzu.
    -- Users => Liste des Offline User
-   procedure SetOfflineUser(This : in out GUI; Users : in Client2Gui_Communication.Userlist.Set) is abstract;
+   procedure setOfflineUser(this : in out GUI; users : in Client2Gui_Communication.Userlist.Set) is abstract;
 
    -- Stellt eine Kontaktanfrage an einen User.
    -- Username => Name des anzufragenden Users
-   procedure ContactRequest(This : in out GUI; Username : in Unbounded_String) is abstract;
+   procedure contactRequest(this : in out GUI; username : in Unbounded_String) is abstract;
 
    -- Entfernt den angegebenen User aus der Kontaktliste.
    -- Username => Name des zu entfernenden Users
-   procedure ContactRemove(This : in out GUI; Username : in Unbounded_String) is abstract;
+   procedure contactRemove(this : in out GUI; username : in Unbounded_String) is abstract;
 
    -- Uebermittelt der GUI von dem geforderten Chatrequest die Id
    -- ChatId => Id des Chatraums
    -- Name => Name des angeforderten Chatpartners
-   procedure UpdateChatRoomId(This : in out GUI; ChatId : in  Natural; Name : in Unbounded_String) is abstract;
+   procedure updateChatRoomId(this : in out GUI; chatId : in  Natural; name : in Unbounded_String) is abstract;
 
 end Client2Gui_Communication;

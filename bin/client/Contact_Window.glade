@@ -155,6 +155,7 @@
                                           <object class="GtkCellRendererSpin" id="cellrendererspin2"/>
                                           <attributes>
                                             <attribute name="text">0</attribute>
+                                            <attribute name="weight">1</attribute>
                                           </attributes>
                                         </child>
                                       </object>
@@ -240,6 +241,141 @@
                             <property name="position">2</property>
                           </packing>
                         </child>
+                        <child>
+                          <object class="GtkSeparator" id="contactlist_separator2">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator" id="contactlist_separator3">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFrame" id="groupchat_frame">
+                            <property name="can_focus">False</property>
+                            <property name="no_show_all">True</property>
+                            <property name="label_xalign">0</property>
+                            <property name="shadow_type">none</property>
+                            <child>
+                              <object class="GtkAlignment" id="alignment1">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="left_padding">12</property>
+                                <child>
+                                  <object class="GtkTreeView" id="treeview3">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="model">groupchats_list</property>
+                                    <property name="headers_visible">False</property>
+                                    <signal name="row-activated" handler="Groupchat_Action" swapped="no"/>
+                                    <child internal-child="selection">
+                                      <object class="GtkTreeSelection" id="treeview-selection3"/>
+                                    </child>
+                                    <child>
+                                      <object class="GtkTreeViewColumn" id="treeviewcolumn3">
+                                        <property name="title" translatable="yes">Group Chats</property>
+                                        <child>
+                                          <object class="GtkCellRendererSpin" id="cellrendererspin3"/>
+                                          <attributes>
+                                            <attribute name="text">0</attribute>
+                                          </attributes>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child type="label">
+                              <object class="GtkLabel" id="groupchat_label">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">&lt;b&gt;Group Chats&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                              </object>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator" id="separator1">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">6</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFrame" id="contact_requests_frame">
+                            <property name="can_focus">False</property>
+                            <property name="no_show_all">True</property>
+                            <property name="label_xalign">0</property>
+                            <property name="shadow_type">none</property>
+                            <child>
+                              <object class="GtkAlignment" id="alignment2">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="left_padding">12</property>
+                                <child>
+                                  <object class="GtkTreeView" id="treeview4">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="model">requests_list</property>
+                                    <property name="headers_visible">False</property>
+                                    <signal name="row-activated" handler="Request_Action" swapped="no"/>
+                                    <child internal-child="selection">
+                                      <object class="GtkTreeSelection" id="Selected_Contact_Request"/>
+                                    </child>
+                                    <child>
+                                      <object class="GtkTreeViewColumn" id="treeviewcolumn4">
+                                        <property name="title" translatable="yes">Contact Requests</property>
+                                        <child>
+                                          <object class="GtkCellRendererSpin" id="cellrendererspin4"/>
+                                          <attributes>
+                                            <attribute name="text">0</attribute>
+                                          </attributes>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child type="label">
+                              <object class="GtkLabel" id="request_label">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">&lt;b&gt;Contact Request&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                              </object>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">7</property>
+                          </packing>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -261,20 +397,32 @@
       </object>
     </child>
   </object>
+  <object class="GtkListStore" id="groupchats_list">
+    <columns>
+      <!-- column-name group_names -->
+      <column type="gchararray"/>
+      <!-- column-name ChatID -->
+      <column type="gint"/>
+    </columns>
+  </object>
   <object class="GtkListStore" id="offlinecontacts_list">
     <columns>
       <!-- column-name Offline_Contacts -->
       <column type="gchararray"/>
     </columns>
-    <data>
-    </data>
   </object>
   <object class="GtkListStore" id="onlinecontacts_list">
     <columns>
       <!-- column-name Online_Contacts -->
       <column type="gchararray"/>
+      <!-- column-name weight -->
+      <column type="gint"/>
     </columns>
-    <data>
-    </data>
+  </object>
+  <object class="GtkListStore" id="requests_list">
+    <columns>
+      <!-- column-name new_contact_names -->
+      <column type="gchararray"/>
+    </columns>
   </object>
 </interface>
