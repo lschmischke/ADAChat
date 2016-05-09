@@ -73,6 +73,11 @@ package body Chat_Window_Manager is
          Handler_Name => "Handle_Enter",
          Handler => Handle_Enter'Access);
 
+      Register_Handler
+        (Builder => This.Builder,
+         Handler_Name => "Chat_Window_Close",
+         Handler => Chat_Window_Close'Access);
+
       Do_Connect(This.Builder);
 
       This.Window := Gtk_Window(This.Builder.Get_Object ("chat_window_client"));
@@ -92,6 +97,7 @@ package body Chat_Window_Manager is
          loop
             liststore.Append(tempParticipant);
             liststore.Set(tempParticipant, 0, To_String(E));
+            liststore.Set(tempParticipant, 1, Gint(This.ChatID));
          end loop;
       end if;
    end UpdateParticipants;
@@ -103,16 +109,22 @@ package body Chat_Window_Manager is
 
    procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class) is
       message : Gtk_Entry;
-      window : Gtk_Window;
+      liststore : Gtk_List_Store;
    begin
       message := Gtk_Entry(Object.Get_Object("New_Message"));
-      window := Gtk_Window(Object.Get_Object("chat_window_client"));
-      Concrete_Client_Logic.Instance.SendMessageToChat(Receiver => MyRooms.Element(To_Unbounded_String(window.Get_Title)),
+      liststore := Gtk_List_Store(Object.Get_Object("Participants"));
+      Concrete_Client_Logic.Instance.SendMessageToChat(Receiver => Natural(liststore.Get_Int(liststore.Get_Iter_First, 1)),
                                                        Username => MyUserName,
                                                        Message  => To_Unbounded_String(message.Get_Text));
       message.Set_Text("");
    end Handle_Enter;
 
+   procedure Chat_Window_Close (Object : access Gtkada_Builder_Record'Class) is
+      liststore : Gtk_List_Store;
+   begin
+      liststore := Gtk_List_Store(Object.Get_Object("Participants"));
+      MyWindows.Element(Natural(liststore.Get_Int(liststore.Get_Iter_First, 1))).WindowOpen := False;
+   end Chat_Window_Close;
    -----------------------------------------------------------------------------
 
    function Hash (R : Natural) return Hash_Type is
@@ -148,8 +160,6 @@ package body Chat_Window_Manager is
       messages.Get_Buffer.Insert(end_iter, ": ");
       messages.Get_Buffer.Get_End_Iter(end_iter);
       messages.Get_Buffer.Insert(end_iter, To_String(message.content) & Ada.Characters.Latin_1.LF);
-      messages.Get_Buffer.Get_End_Iter(end_iter);
-      messages.Scroll_To_Iter(end_iter);
    end printChatMessage;
 
 end Chat_Window_Manager;

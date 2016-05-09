@@ -78,5 +78,6 @@ private
    procedure Check_RightClick  (Object : access Gtkada_Builder_Record'Class);
    procedure Invite_Action  (Object : access Gtkada_Builder_Record'Class);
    procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class);
+   procedure Chat_Window_Close (Object : access Gtkada_Builder_Record'Class);
 
 end Chat_Window_Manager;
