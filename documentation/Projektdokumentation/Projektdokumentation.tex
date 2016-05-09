@@ -103,7 +103,7 @@
 	\vspace*{0.5cm}
 	Wintersemester 15/16\\
 	\vspace*{2cm}
-	\textbf{Stand: 30.04.2016}
+	\textbf{Stand: 10.05.2016}
 	
 	\normalsize
 	\vfill
@@ -477,7 +477,7 @@ Die Loginoberfläche dient dazu einen vorhanden Benutzer beim Server anzumelden 
 \vspace{1em}
 \begin{enumerate}
 	\item In diesem Feld wird die IP-Adresse des Rechners angegeben, auf dem der Server läuft.
-	\item Hier wird der Port angegeben, auf dem der Server lauscht. Der Standardport ist 12321. 
+	\item Hier wird der Port angegeben, auf dem der Server lauscht. Der Standardport ist 20000. 
 	\item Hier wird der Benutzername eingegeben.
 	\item In dieses Feld wird das Passwort eingegeben
 	\item Mit einem Druck auf "Login" wird der Benutzer, falls die Benutzerdaten korrekt sind, beim Sever angemeldet.
@@ -567,90 +567,5 @@ bla bla
 %\nocite{*}
 %\bibliography{bib/lit.bib}
 
-\pagebreak
-
-% ----------------------------------------------------------------------------------------------------------
-% Anhang
-% ----------------------------------------------------------------------------------------------------------
-\pagenumbering{Roman}
-\setcounter{page}{1}
-\lhead{Anhang \thesection}
-
-\begin{appendix}
-	\section*{Anhang}
-	\phantomsection
-	\addcontentsline{toc}{section}{Anhang}
-	\addtocontents{toc}{\vspace{-0.5em}}
-	
-	\section{Endfassung Lauflicht Quellcode}
-	\label{sec:Lauflicht}
-	Es folgt der vollständige Programm-Code:
-	\vspace{1em}
-	\lstinputlisting[caption=Lauflicht.c]{src/Lauflicht/blink-lauflicht_schleife.c}
-	
-	\pagebreak
-	
-	\section{Endfassung Taschenrechner Quellcode}
-	\label{sec:Taschenrechner}
-	Es folgt der vollständige Programm-Code:
-	\vspace{1em}
-	\lstinputlisting[caption=Taschenrechner.c]{src/TR/TRInterrupts.c}
-	
-	\pagebreak
-	
-	\section{Endfassung Teatimer Quellcode}
-	\label{sec:Teatimer}
-	Es folgt der vollständige Programm-Code:
-	
-	\vspace{1em}
-	\lstinputlisting[caption=Teatimer.c]{src/TeaTimer/Teatimer.c}
-	
-	\pagebreak
-	
-	\section{Motorsteuerung Quellcode}
-	\label{sec:Motorsteuerung}
-	Es folgt der vollständige Programm-Code:
-	
-	\vspace{1em}
-	\lstinputlisting[caption=Motorsteuerung.c]{src/Motorsteuerung/motorSteuerung.c}
-	
-	\pagebreak
-	
-	\section{Fernbedienung Quellcode}
-	\label{sec:Fernbedienung}
-	Es folgt der vollständige Programm-Code:
-	
-	\vspace{1em}
-	\lstinputlisting[caption=FernbedienungTeatimer.c]{src/Fernbedienung/FernbedienungTeaTimer.c}
-	
-	\pagebreak
-	
-\end{appendix}
-
-\pagebreak
-
-
-% ----------------------------------------------------------------------------------------------------------
-% Erklärung
-% ----------------------------------------------------------------------------------------------------------
-\thispagestyle{empty}
-\begin{center}
-	\vspace*{5em}
-	\huge\textbf{Erklärung}\\
-\end{center}
-\vspace{2em}
-Hiermit versicheren wir, dass wir unsere Praktikumsdokumentation selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt haben.
-
-\vspace{4em}
-\begin{minipage}{\linewidth}
-	\begin{tabular}{p{15em}p{15em}}
-		Datum: &  .......................................................\\
-		& \centering (Unterschrift)\\
-	\end{tabular}
-	\begin{tabular}{p{15em}p{15em}}
-		Datum: &  .......................................................\\
-		& \centering (Unterschrift)\\
-	\end{tabular}
-\end{minipage}
 
 \end{document}
