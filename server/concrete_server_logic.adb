@@ -226,7 +226,13 @@ package body Concrete_Server_Logic is
 			chatRoom : chatRoomPtr;
 		     begin
 			--# TODO: getUser Fehler abfangen
-			--# Pruefe, ob Kontakt zu angegebenem User besteht
+   --# Pruefe, ob Kontakt zu angegebenem User besteht
+                        if (userToAdd = null ) then
+                           client.sendServerMessageToClient(Refused,"contact not online");
+                           goto Continue;
+                        end if;
+
+
                         if (user.getContacts.Contains (userToAdd)) then
 			   --# Pruefe, ob Chat mit dieser Nummer bereits existiert
 			   if not Server.getChatrooms.Contains (incoming_message.receiver) then
@@ -416,8 +422,8 @@ package body Concrete_Server_Logic is
       --  Put_Line (Exception_Information (Error));
       --  Server.removeClientRoutine(client);
       when Error : others =>
-      --  Put ("Unexpected exception in Client_Task: ");
-      --  Put_Line (Exception_Information (Error));
+        Put ("Unexpected exception in Client_Task: ");
+        Put_Line (Exception_Information (Error));
          Server.disconnectClient (client,"disconnected");
    end Client_Task;
 

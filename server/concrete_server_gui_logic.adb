@@ -205,7 +205,7 @@ package body Concrete_Server_Gui_Logic is
 
       -- In dieser Funktion werden die Referenzen anhand ihrer Bezeichnungen abgeholt und gesetzt.
       portGEntry := Gtk_GEntry(myBuilder.Get_Object("config_port"));
-      portGEntry.Set_Text("12321");
+      portGEntry.Set_Text("20000");
 
       chatMessageTreeView := Gtk_Tree_View(myBuilder.Get_Object("chatMessagesTreeView"));
       chatMessageListStore := Gtk_List_Store(myBuilder.Get_Object("chatMessageListStore"));
