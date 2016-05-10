@@ -14,7 +14,7 @@ package Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    type Concrete_Ui is new Client2Gui_Communication.GUI with record
-      UserName : Unbounded_String; -- Set after Login
+      UserName : Unbounded_String; -- Gesetzt nach dem Login
       Login_Window   : LoginWindow;
       Contact_Window   : WindowPtr;
       Chat_Windows : Chat_Window_Manager.MapPtr := Chat_Window_Manager.MyWindows;
@@ -29,11 +29,16 @@ package Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   -- general callbacks
+   -- Callback für das Schließen des Login oder Kontakt Fensters
+   -- Object => Builder des Fensters, das den Callback ausgelöst hat
    procedure Quit (Object : access Gtkada_Builder_Record'Class);
 
-   -- login window callbacks
+   -- Callback für den Button zum Registrieren
+   -- Object => Builder des Fensters, das den Callback ausgelöst hat
    procedure Register_Action (Object : access Gtkada_Builder_Record'Class);
+   
+   -- Callback für den Button zum Einloggen
+   -- Object => Builder des Fensters, das den Callback ausgelöst hat
    procedure Login_Action (Object : access Gtkada_Builder_Record'Class);
 
    -----------------------------------------------------------------------------
@@ -42,60 +47,51 @@ private
 
    -----------------------------------------------------------------------------
 
-   -- Must be called before using Concrete_Ui
+   -- Muss ausgeführt werden, bevor Concrete_Ui verwendet werden kann
+   -- This => Objekt, das initialisiert werden soll
+   -- Client_Instance => Zugehörige Client Logik
    procedure initClientUI(This : in out Concrete_Ui; Client_Instance : ClientPtr);
 
    -----------------------------------------------------------------------------
 
+   -- Aktualisiert die Teilnehmer eines Chatraums
+   -- This => Objekt der Client Ui Instanz
+   -- Chatraum => ID des Chatraums, dessen Teilnehmer aktualisiert werden
+   -- Participants => Neue Teilnehmer Liste
    procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set);
 
    -----------------------------------------------------------------------------
 
+   -- Zeigt eine eingegangene Nachricht
+   -- This => Objekt der Client Ui Instanz
+   -- message => Empfangene Nachricht
    procedure ShowChatMessages(This : in out Concrete_Ui; message : in MessageObject);
-
+   
    -----------------------------------------------------------------------------
 
-   --#Implementierung des Client2Gui_Communication interfaces
-   procedure LoginSuccess(This : in out Concrete_Ui);
-
-   -----------------------------------------------------------------------------
-
-   procedure RefusedMessage(This : in out Concrete_Ui; Reason : in Unbounded_String);
-
-   -----------------------------------------------------------------------------
-
-   procedure DisconnectReason(This : in out Concrete_Ui; Status : in Unbounded_String);
-
-   -----------------------------------------------------------------------------
-
-   -- Fügt den User der Online Liste hinzu und entfernt ihn aus der Offline Liste (falls vorhanden)
-   procedure SetOnlineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
-
-   -----------------------------------------------------------------------------
-
-   -- Fügt den User der Offline Liste hinzu und entfernt ihn aus der Online Liste (falls vorhanden)
-   procedure SetOfflineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
-
-   -----------------------------------------------------------------------------
-
-   procedure ContactRequest(This : in out Concrete_Ui; Username : in Unbounded_String);
-
-   -----------------------------------------------------------------------------
-
-   procedure ContactRemove(This : in out Concrete_Ui; Username : in Unbounded_String);
-
-   -----------------------------------------------------------------------------
-
+   -- Zeigt einen Fehlertext (rot) auf dem Login Fenster an
+   -- This => Objekt der Client Ui Instanz
+   -- message => Fehlermeldung
    procedure Error_Message(This : in out Concrete_Ui; message : String);
 
    -----------------------------------------------------------------------------
 
+   -- Zeigt einen Infotext (blau) auf dem Login Fenster an
+   -- This => Objekt der Client Ui Instanz
+   -- message => Infomeldung
    procedure Info_Message(This : in out Concrete_Ui; message : String);
 
    -----------------------------------------------------------------------------
-
-   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : in  Natural; Name : in Unbounded_String);
-
+   -----------Implementierung des Client2Gui_Communication interfaces-----------
    -----------------------------------------------------------------------------
-
+   procedure LoginSuccess(This : in out Concrete_Ui);
+   procedure RefusedMessage(This : in out Concrete_Ui; Reason : in Unbounded_String);
+   procedure DisconnectReason(This : in out Concrete_Ui; Status : in Unbounded_String);
+   procedure SetOnlineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
+   procedure SetOfflineUser(This : in out Concrete_Ui; Users : in Client2Gui_Communication.Userlist.Set);
+   procedure ContactRequest(This : in out Concrete_Ui; Username : in Unbounded_String);
+   procedure ContactRemove(This : in out Concrete_Ui; Username : in Unbounded_String);
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : in  Natural; Name : in Unbounded_String);
+   -----------------------------------------------------------------------------
+   
 end Concrete_Client_Ui;

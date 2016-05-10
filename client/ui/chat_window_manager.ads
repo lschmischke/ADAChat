@@ -18,6 +18,7 @@ with Gtk.Tree_Model;     use Gtk.Tree_Model;
 
 package Chat_Window_Manager is
 
+   --#GladeFile aus der das Fenster generiert wird
    GladeFile : constant String := "client/Chat_Window.glade";
 
    function Hash (R : Natural) return Hash_Type;
@@ -46,6 +47,8 @@ package Chat_Window_Manager is
 
    type ChatWindow_Ptr is access ChatWindow;
 
+   -- Aktualisiert die angezeigte Liste der Teilnehmer in dem Chat
+   -- This => Fenster, in dem die Liste aktualisiert werden soll
    procedure UpdateParticipants (This : in out ChatWindow);
 
    package ChatWindows is new Ada.Containers.Indefinite_Hashed_Maps(Key_Type        => Natural,
@@ -55,11 +58,34 @@ package Chat_Window_Manager is
                                                                     "="             => "=");
    type MapPtr is access all ChatWindows.Map'Class;
 
+   -- Öffnet ein Chat Fenster für einen Kontakt, sendet einen Chatrequest, falls noch kein Chatraum mit dem Nutzer besteht
+   -- This => Map, in der das neue Fenster abgelegt werden soll
+   -- MyName => Name des eingeloggten Nutzers
+   -- ChatName => Name des Kontakts, mit dem gechattet werden soll
    procedure OpenNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String);
+   
+   -- Öffnet ein Chat Fenster für eine Gruppe
+   -- This => Map, in der das neue Fenster abgelegt werden soll
+   -- MyName => Name des eingeloggten Nutzers
+   -- ChatName => Name des Chatraums
+   -- ChatID => ID des Chatraums
    procedure OpenNewGroupChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatName : Unbounded_String; ChatID : Natural);
+   
+   -- Fügt ein neues Chat Fenster für eine eingehende Chatrequest hinzu, ohne es zu öffnen
+   -- This => Map, in der das neue Fenster abgelegt werden soll
+   -- MyName => Name des eingeloggten Nutzers
+   -- ChatID => ID des Chatraums
    procedure PrepareNewChatWindow(This : in out MapPtr; MyName: Unbounded_String; ChatID : Natural);
 
+   -- Fenster geschlossen: Schreibt eingehende Chatnachrichten in eine Liste
+   -- Fenster offen: Schreibt eingehende Chatnachrichten direkt auf das Fenster
+   -- This => Fenster, das die Nachricht empfangen soll
+   -- message => Empfangene Nachricht
    procedure EnQueueChatMessage(This : in out ChatWindow; message : MessageObject);
+   
+   -- Liest Chatnachrichten aus der Liste und löscht es
+   -- This => Fenster, das die Liste enthält
+   -- Returns Älteste Nachricht in der Liste
    function DeQueueChatMessage (This : in out ChatWindow) return MessageObject;
 
    MyRooms : PrivateChatRooms.Map;
@@ -70,15 +96,29 @@ package Chat_Window_Manager is
 
 private
 
-
-
+   -- Muss ausgeführt werden, bevor Window verwendet werden kann
+   -- This => Fenster, das initialisiert werden soll
    procedure Init(This : in out ChatWindow);
+   
+   -- Schreibt eingehende Chatnachrichten auf das Fenster
+   -- This => Fenster, das die Nachricht anzeigen soll
+   -- message => Anzuzeigende Nachricht
    procedure printChatMessage(This : in out ChatWindow; message : MessageObject);
 
-
-   procedure Check_RightClick  (Object : access Gtkada_Builder_Record'Class);
+   -- Callback für das Rechtsklicken eines Elements in der Teilnehmer Liste (nicht implementiert)
+   -- Object => Builder des Fensters, das den Callback ausgelöst hat
+      procedure Check_RightClick  (Object : access Gtkada_Builder_Record'Class);
+	  
+   -- Callback für den Invite Button im Chatfenster
+   -- Object => Builder des Fensters, das den Callback ausgelöst hat
    procedure Invite_Action  (Object : access Gtkada_Builder_Record'Class);
+   
+   -- Callback für das Drücken von Enter in der eingegebenen Nachricht (soll Absenden auslösen)
+   -- Object => Builder des Fensters, das den Callback ausgelöst hat
    procedure Handle_Enter  (Object : access Gtkada_Builder_Record'Class);
+   
+   -- Callback für das Schließen eines Chatfensters (soll im ChatWindow Objekt eintragen, dass es geschlossen wurde)
+   -- Object => Builder des Fensters, das den Callback ausgelöst hat
    procedure Chat_Window_Close (Object : access Gtkada_Builder_Record'Class);
 
 end Chat_Window_Manager;

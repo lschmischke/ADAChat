@@ -5,6 +5,7 @@ with Gui2Client_Communication; use Gui2Client_Communication;
 with Gtk.Main;
 with Gtkada.Builder; use Gtkada.Builder;
 
+-- Einstiegsklasse für die Client GUI
 package ClientGUIEntrypoint is
    procedure ClientGUIEntrypoint;
 end ClientGUIEntrypoint;
