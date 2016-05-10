@@ -17,7 +17,7 @@ package GUI_to_Server_Communication is
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 
    -- Startet den Server unter der übergebenen IP-Adresse und dem übergebenen Port
-   procedure startServer(thisServer : aliased in out  Server; ipAdress: String; port : Natural) is abstract;
+   procedure startServer(thisServer : aliased in out  Server;port : Natural) is abstract;
 
    --------------------------------------------------------------------------------------------------------------------------------------------------------
 

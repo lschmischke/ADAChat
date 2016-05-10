@@ -194,7 +194,14 @@ package body dataTypes is
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 
       procedure removeClientFromChatroom (clientToRemove : in Concrete_Client_Ptr) is
-         pos                              : Client_List.Cursor := clientList.Find (Item => clientToRemove);
+      begin
+	 removeClientFromChatroom(clientToRemove,"");
+      end removeClientFromChatroom;
+
+      --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      procedure removeClientFromChatroom (clientToRemove : in Concrete_Client_Ptr; farewell : String) is
+	 pos                              : Client_List.Cursor := clientList.Find (Item => clientToRemove);
          userlistMessage, userleftMessage : MessageObject;
          userleftText                     : Unbounded_String   := clientToRemove.getUsernameOfClient;
       begin
@@ -205,7 +212,11 @@ package body dataTypes is
                -- # broadcaste die neue Userlist und teile dem Chat mit, dass der Benutzer diesen verlassen hat
                userlistMessage := generateUserlistMessage;
                broadcastToChatRoom (userlistMessage);
-               Ada.Strings.Unbounded.Append (userleftText, To_Unbounded_String (" left the chat."));
+	       Ada.Strings.Unbounded.Append (userleftText, To_Unbounded_String (" left the chat."));
+	       -- Füge Abschiedstext hinzu
+	       if farewell'Length>1 then
+		  Ada.Strings.Unbounded.Append (userleftText, To_Unbounded_String ("("&farewell&")"));
+	       end if;
                userleftMessage :=
                  createMessage
                    (messagetype => Protocol.Chat,
@@ -217,8 +228,8 @@ package body dataTypes is
                -- # TODO: lösche den chatraum
                null;
             end if;
-         end if;
-      end removeClientFromChatroom;
+	 end if;
+	 end removeClientFromChatroom;
 
       --------------------------------------------------------------------------------------------------------------------------------------------------------
 

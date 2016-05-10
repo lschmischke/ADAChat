@@ -29,7 +29,7 @@
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
                     <property name="invisible_char">●</property>
-                    <property name="text" translatable="yes">127.0.0.1</property>
+                    <property name="text" translatable="yes">192.168.2.105</property>
                     <property name="caps_lock_warning">False</property>
                     <property name="placeholder_text">Server IP</property>
                   </object>
@@ -45,7 +45,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="invisible_char">●</property>
-                    <property name="text" translatable="yes">12321</property>
+                    <property name="text" translatable="yes">20000</property>
                     <property name="caps_lock_warning">False</property>
                     <property name="placeholder_text">Server Port</property>
                   </object>
@@ -128,6 +128,20 @@
             <property name="can_focus">False</property>
             <property name="layout_style">center</property>
             <child>
+              <object class="GtkLabel" id="Login_Error_Label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <attributes>
+                  <attribute name="foreground" value="#ffff00000000"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkButton" id="Login_Button">
                 <property name="label" translatable="yes">Login</property>
                 <property name="use_action_appearance">False</property>
@@ -140,7 +154,7 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">0</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
@@ -156,7 +170,21 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="Register_Info_Label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <attributes>
+                  <attribute name="foreground" value="#00000000ffff"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
               </packing>
             </child>
           </object>

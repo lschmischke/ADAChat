@@ -16,6 +16,8 @@ with GNAT.Sockets;       use GNAT.Sockets;
 with Gtk.List_Store;     use Gtk.List_Store;
 with Gtk.Tree_Model;     use Gtk.Tree_Model;
 with Gtk.Combo_Box_Text; use Gtk.Combo_Box_Text;
+with Gtk.Label;          use Gtk.Label;
+with Gtk.Frame;          use Gtk.Frame;
 
 with System;
 
@@ -33,31 +35,20 @@ package body Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    procedure Error_Message(This : in out Concrete_Ui; message : String) is
-      dialog : aliased Gtk_Message_Dialog;
-      ret : Gtk_Response_Type;
+      label: Gtk_Label;
    begin
-      dialog := Gtk_Message_Dialog_New (Parent   => This.Login_Window.Window,
-                                        Flags    => Destroy_With_Parent,
-                                        The_Type => Message_Error,
-                                        Buttons  => Buttons_Ok,
-                                        Message  => "Error: %s",
-                                        Arg5     => message'Address);
-      ret := Run(Gtk_Dialog(dialog));
-      dialog.Destroy;
+      label := Gtk_Label(This.Login_Window.Builder.Get_Object("Login_Error_Label"));
+      label.Set_Text(message);
+      if This.Contact_Window /= null then
+         This.Contact_Window.Window.Hide;
+      end if;
    end Error_Message;
 
    procedure Info_Message(This : in out Concrete_Ui; message : String) is
-      dialog : aliased Gtk_Message_Dialog;
-      ret : Gtk_Response_Type;
+      label: Gtk_Label;
    begin
-      dialog := Gtk_Message_Dialog_New (Parent   => This.Login_Window.Window,
-                                        Flags    => Destroy_With_Parent,
-                                        The_Type => Message_Info,
-                                        Buttons  => Buttons_Ok,
-                                        Message  => "%s",
-                                        Arg5     => message'Address);
-      ret := Run(Gtk_Dialog(dialog));
-      dialog.Destroy;
+      label := Gtk_Label(This.Login_Window.Builder.Get_Object("Register_Info_Label"));
+      label.Set_Text(message);
    end Info_Message;
 
    procedure Register_Action (Object : access Gtkada_Builder_Record'Class) is
@@ -80,20 +71,22 @@ package body Concrete_Client_Ui is
                                        ServerPort   => Port_Type'Value(serverport.Get_Text));
       Instance.Client.RegisterUser    (Username => To_Unbounded_String(username.Get_Text),
                                        Password => To_Unbounded_String(password.Get_Text));
+
+      return;
    exception
       when Error : Socket_Error =>
-         Instance.Error_Message(message => "Socket_Error in InitializeSocket");
          username.Set_Editable(true);
          password.Set_Editable(true);
          serverIP.Set_Editable(true);
          serverport.Set_Editable(true);
+         Instance.Error_Message(message => "Socket_Error in InitializeSocket");
 
       when Error : others =>
-         Instance.Error_Message(message => "Unexpected exception in InitializeSocket");
          username.Set_Editable(true);
          password.Set_Editable(true);
          serverIP.Set_Editable(true);
          serverport.Set_Editable(true);
+         Instance.Error_Message(message => "Unexpected exception in InitializeSocket");
 
    end Register_Action;
 
@@ -117,47 +110,52 @@ package body Concrete_Client_Ui is
 
       Instance.Client.InitializeSocket (ServerAdress => To_Unbounded_String(serverIP.Get_Text),
                                         ServerPort   => Port_Type'Value(serverport.Get_Text));
+      Contact_Window.Instance := new ContactWindow;
+      Instance.Contact_Window := Contact_Window.Instance;
+      Instance.Contact_Window.Init;
       Instance.Client.LoginUser        (Username => To_Unbounded_String(username.Get_Text),
                                         Password => To_Unbounded_String(password.Get_Text));
-      Instance.Contact_Window.Init;
       onlineStatus := Gtk_Combo_Box_Text(Instance.Contact_Window.Builder.Get_Object("Status_Combo"));
 
       onlineStatus.Set_Active(0);
 
+      return;
    exception
       when Error : Socket_Error =>
-         Instance.Error_Message(message => "Socket_Error in InitializeSocket");
          username.Set_Editable(true);
          password.Set_Editable(true);
          serverIP.Set_Editable(true);
          serverport.Set_Editable(true);
+         Instance.Error_Message(message => "Socket_Error in InitializeSocket");
 
       when Error : others =>
-         Instance.Error_Message("Unexpected exception in InitializeSocket");
          username.Set_Editable(true);
          password.Set_Editable(true);
          serverIP.Set_Editable(true);
          serverport.Set_Editable(true);
+         Instance.Error_Message("Unexpected exception in InitializeSocket");
 
    end Login_Action;
 
-   procedure SetOnlineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.List) is
+   procedure SetOnlineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.Set) is
       onlineList : Gtk_List_Store;
       newItem : Gtk_Tree_Iter;
+      normal : Gint := 400;
    begin
       onlineList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("onlinecontacts_list"));
 
       onlineList.Clear;
 
-      for E in Users.Iterate
+      for E of Users
       loop
          onlineList.Append(newItem);
-         onlineList.Set(newItem, 0, To_String(Client2Gui_Communication.Userlist.Element(E)));
+         onlineList.Set(newItem, 0, To_String(E));
+         onlineList.Set(newItem, 1, normal);
       end loop;
 
    end SetOnlineUser;
 
-   procedure SetOfflineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.List) is
+   procedure SetOfflineUser(This : in out Concrete_Ui; Users : Client2Gui_Communication.Userlist.Set) is
       offlineList : Gtk_List_Store;
       newItem : Gtk_Tree_Iter;
    begin
@@ -169,7 +167,6 @@ package body Concrete_Client_Ui is
       loop
          offlineList.Append(newItem);
          offlineList.Set(newItem, 0, To_String(E));
-         Ada.Text_IO.Put_Line(To_String(E));
       end loop;
    end SetOfflineUser;
 
@@ -185,10 +182,18 @@ package body Concrete_Client_Ui is
    -----------------------------------------------------------------------------
 
    procedure ContactRequest(This : in out Concrete_Ui; Username : in Unbounded_String) is
-
+      requestsList : Gtk_List_Store;
+      newItem : Gtk_Tree_Iter;
+      requestsFrame : Gtk_Frame;
    begin
-      null;
-
+      requestsList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("requests_list"));
+      requestsFrame := Gtk_Frame(This.Contact_Window.Builder.Get_Object("contact_requests_frame"));
+      requestsList.Append(newItem);
+      requestsList.Set(newItem, 0, To_String(Username));
+      if not requestsFrame.Is_Visible then
+         requestsFrame.Set_Visible(True);
+         requestsFrame.Show_All;
+      end if;
    end ContactRequest;
 
    -----------------------------------------------------------------------------
@@ -199,26 +204,65 @@ package body Concrete_Client_Ui is
       Instance.Client.DisconnectUser(Username => Instance.UserName,
                                      Message  => To_Unbounded_String("Bye"));
       Gtk.Main.Main_Quit;
-
    end Quit;
 
    -----------------------------------------------------------------------------
 
-   procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.List) is
-
+   procedure ShowChatParticipants(This : in out Concrete_Ui; Chatraum : in Natural; Participants : in Client2Gui_Communication.Userlist.Set) is
+      groupchatsList : Gtk_List_Store;
+      groupchatsFrame : Gtk_Frame;
+      newItem : Gtk_Tree_Iter;
+      --length : Natural;
+      notMe : Chat_Window_Manager.Participants.List;
+      groupString : String := "Group #" & Natural'Image(Chatraum);
    begin
-      null;
+
+      if not This.Chat_Windows.Contains(Chatraum) then
+         Chat_Window_Manager.PrepareNewChatWindow(This.Chat_Windows, This.UserName, Chatraum);
+      end if;
+      This.Chat_Windows.Element(Chatraum).ChatParticipants.Clear;
+      for E of Participants
+      loop
+         This.Chat_Windows.Element(Chatraum).ChatParticipants.Append(E);
+         if E /= This.UserName then
+            notMe.Append(E);
+         end if;
+      end loop;
+      This.Chat_Windows.Element(Chatraum).UpdateParticipants;
+      if Integer(Participants.Length) = 2 and not Chat_Window_Manager.MyRooms.Contains(notMe.First_Element) then
+         Chat_Window_Manager.MyRooms.Insert(notMe.First_Element, Chatraum);
+      else
+         if Integer(Participants.Length) > 2 then
+            for E of notMe
+            loop
+               if Chat_Window_Manager.MyRooms.Contains(E) then
+                  if  Chat_Window_Manager.MyRooms.Element(E) = Chatraum then
+                  Chat_Window_Manager.MyRooms.Delete(E);
+                  end if;
+               end if;
+            end loop;
+            groupchatsList := Gtk_List_Store(This.Contact_Window.Builder.Get_Object("groupchats_list"));
+            groupchatsFrame := Gtk_Frame(This.Contact_Window.Builder.Get_Object("groupchat_frame"));
+            groupchatsList.Append(newItem);
+            groupchatsList.Set(newItem, 0, groupString);
+            if not groupchatsFrame.Is_Visible then
+               groupchatsFrame.Set_Visible(True);
+               groupchatsFrame.Show_All;
+            end if;
+         end if;
+      end if;
 
    end ShowChatParticipants;
 
    -----------------------------------------------------------------------------
 
    procedure ShowChatMessages(This : in out Concrete_Ui; message : MessageObject) is
-
    begin
-
-      null;
-
+      --if not This.Chat_Windows.Contains(message.receiver) then
+      --   null; -- TODO anlegen
+      --end if;
+      This.Contact_Window.Highlight(message.sender);
+      This.Chat_Windows.Element(message.receiver).EnQueueChatMessage(message);
    end ShowChatMessages;
 
    -----------------------------------------------------------------------------
@@ -228,6 +272,7 @@ package body Concrete_Client_Ui is
    begin
       username := Gtk_Entry(This.Login_Window.Builder.Get_Object("Login_Username"));
       Instance.UserName := To_Unbounded_String(username.Get_Text);
+      Chat_Window_Manager.MyUserName := Instance.UserName;
       This.Login_Window.Window.Hide;
    end LoginSuccess;
 
@@ -254,14 +299,6 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
-   procedure InitializeStatus(This : in Concrete_Ui; Status : in Unbounded_String) is
-
-   begin
-      null;
-   end InitializeStatus;
-
-   -----------------------------------------------------------------------------
-
    procedure DisconnectReason(This : in out Concrete_Ui; Status : in Unbounded_String) is
       onlineStatus : Gtk_Combo_Box_Text;
    begin
@@ -273,5 +310,13 @@ package body Concrete_Client_Ui is
 
    -----------------------------------------------------------------------------
 
+   procedure UpdateChatRoomId(This : in out Concrete_Ui; ChatId : Natural; Name : Unbounded_String) is
+   begin
+      if not Chat_window_Manager.MyRooms.Contains(Name) then
+         Chat_window_Manager.MyRooms.Insert(Name, ChatId);
+      end if;
+   end UpdateChatRoomId;
+
+   -----------------------------------------------------------------------------
 
 end Concrete_Client_Ui;
